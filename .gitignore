@@ -1,1 +1,6 @@
-.class
+*.class
+.settings
+.project
+.classpath
+.metadata
+.svn

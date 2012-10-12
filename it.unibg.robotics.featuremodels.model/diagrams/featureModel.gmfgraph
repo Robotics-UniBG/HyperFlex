@@ -34,7 +34,7 @@
     <figures
         xsi:type="gmfgraph:CustomDecoration"
         name="MANDATORY_Decoration"
-        qualifiedClassName="featureModel.diagram.figures.CircleDecoration">
+        qualifiedClassName="it.unibg.robotics.featuremodels.model.diagram.figures.CircleDecoration">
       <backgroundColor
           xsi:type="gmfgraph:ConstantColor"
           value="black"/>
@@ -42,7 +42,7 @@
     <figures
         xsi:type="gmfgraph:CustomDecoration"
         name="ALTERNATIVE_Decoration"
-        qualifiedClassName="featureModel.diagram.figures.CircleDecoration"/>
+        qualifiedClassName="it.unibg.robotics.featuremodels.model.diagram.figures.CircleDecoration"/>
     <descriptors
         name="FeatureBox">
       <actualFigure
