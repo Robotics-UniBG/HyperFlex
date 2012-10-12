@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+Feature Model Plugin
+
+Copyright (c) 2011
+All rights reserved.
+
+Luca Gherardi
+University of Bergamo
+Dept. of Information Technology and Mathematics
+
+***********************************************************************************************
+
+Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+
+Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+
+***********************************************************************************************
+
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+
+-->
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="featuremodel_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="featuremodel_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditorID"
+         name="%editorName"
+         icon="icons/fd.ico"
+         extensions="featuremodel_diagram"
+         default="true"
+         class="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditor"
+         matchingStrategy="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelMatchingStrategy"
+         contributorClass="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="it.unibg.robotics.featuremodels.model.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/fd.ico"
+  	     category="it.robotics.unibg.featuremodels.wizard.category"
+  	     class="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelCreationWizard"
+  	     id="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="it.unibg.robotics.featuremodels.diagram.InitDiagram"
+            nameFilter="*.featuremodel"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="it.unibg.robotics.featuremodels.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="FeatureModelPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="FeatureModelPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="FeatureModelRender">
+         <Priority name="Lowest"/>
+         <ViewId id="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="it.unibg.robotics.featuremodels.model.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="it.unibg.robotics.featuremodels.diagram.general"
+            name="%prefpage.it.unibg.robotics.featuremodels.diagram.general"
+            class="it.unibg.robotics.featuremodels.model.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="it.unibg.robotics.featuremodels.diagram.appearance"
+            name="%prefpage.it.unibg.robotics.featuremodels.diagram.appearance"
+            category="it.unibg.robotics.featuremodels.diagram.general"
+            class="it.unibg.robotics.featuremodels.model.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="it.unibg.robotics.featuremodels.diagram.connections"
+            name="%prefpage.it.unibg.robotics.featuremodels.diagram.connections"
+            category="it.unibg.robotics.featuremodels.diagram.general"
+            class="it.unibg.robotics.featuremodels.model.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="it.unibg.robotics.featuremodels.diagram.printing"
+            name="%prefpage.it.unibg.robotics.featuremodels.diagram.printing"
+            category="it.unibg.robotics.featuremodels.diagram.general"
+            class="it.unibg.robotics.featuremodels.model.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="it.unibg.robotics.featuremodels.diagram.rulersAndGrid"
+            name="%prefpage.it.unibg.robotics.featuremodels.diagram.rulersAndGrid"
+            category="it.unibg.robotics.featuremodels.diagram.general"
+            class="it.unibg.robotics.featuremodels.model.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="it.unibg.robotics.featuremodels.diagram"
+            labelProvider="it.unibg.robotics.featuremodels.model.diagram.sheet.FeatureModelSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="it.unibg.robotics.featuremodels.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="it.unibg.robotics.featuremodels.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="it.unibg.robotics.featuremodels.model.diagram.sheet.FeatureModelPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="it.unibg.robotics.featuremodels.model.diagram.providers.FeatureModelViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="FeatureModel"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005,4006"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="it.unibg.robotics.featuremodels.model.diagram.providers.FeatureModelEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="FeatureModel"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,2003,2004"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002,4003,4004,4005,4006"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5001,5002,5003,5004"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value=""/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="it.unibg.robotics.featuremodels.model.diagram.providers.FeatureModelModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart" id="FeatureModel_1000"/>
+         <object class="it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureEditPart" id="Feature_2001"/>
+         <object class="it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart" id="Feature_2002"/>
+         <object class="it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureEditPart" id="CompositeFeature_2003"/>
+         <object class="it.unibg.robotics.featuremodels.model.diagram.edit.parts.SimpleAttributeEditPart" id="SimpleAttribute_2004"/>
+         <context elements="FeatureModel_1000,Feature_2001,Feature_2002,CompositeFeature_2003,SimpleAttribute_2004,"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="it.unibg.robotics.featuremodels.model.diagram.providers.FeatureModelIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="it.unibg.robotics.featuremodels.model.diagram.providers.FeatureModelParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://robotics.unibg.it/featureModel">
+         <metamodelType
+               id="it.unibg.robotics.featuremodels.diagram.FeatureModel_1000"
+               name="%metatype.name.FeatureModel_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="FeatureModel"
+               edithelper="it.unibg.robotics.featuremodels.model.diagram.edit.helpers.FeatureModelEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://robotics.unibg.it/featureModel">
+         <metamodelType
+               id="it.unibg.robotics.featuremodels.diagram.Feature_2001"
+               name="%metatype.name.Feature_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Feature"
+               edithelper="it.unibg.robotics.featuremodels.model.diagram.edit.helpers.FeatureEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://robotics.unibg.it/featureModel">
+         <specializationType
+               id="it.unibg.robotics.featuremodels.diagram.Feature_2002"
+               name="%metatype.name.Feature_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="it.unibg.robotics.featuremodels.diagram.Feature_2001"/>
+            <param name="semanticHint" value="2002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://robotics.unibg.it/featureModel">
+         <metamodelType
+               id="it.unibg.robotics.featuremodels.diagram.CompositeFeature_2003"
+               name="%metatype.name.CompositeFeature_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CompositeFeature"
+               edithelper="it.unibg.robotics.featuremodels.model.diagram.edit.helpers.CompositeFeatureEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://robotics.unibg.it/featureModel">
+         <metamodelType
+               id="it.unibg.robotics.featuremodels.diagram.SimpleAttribute_2004"
+               name="%metatype.name.SimpleAttribute_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="SimpleAttribute"
+               edithelper="it.unibg.robotics.featuremodels.model.diagram.edit.helpers.SimpleAttributeEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://robotics.unibg.it/featureModel">
+         <specializationType
+               id="it.unibg.robotics.featuremodels.diagram.FeatureSubFeatures_4001"
+               name="%metatype.name.FeatureSubFeatures_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://robotics.unibg.it/featureModel">
+         <specializationType
+               id="it.unibg.robotics.featuremodels.diagram.FeatureSubFeatures_4002"
+               name="%metatype.name.FeatureSubFeatures_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://robotics.unibg.it/featureModel">
+         <specializationType
+               id="it.unibg.robotics.featuremodels.diagram.CompositeFeatureSubFeatures_4003"
+               name="%metatype.name.CompositeFeatureSubFeatures_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://robotics.unibg.it/featureModel">
+         <specializationType
+               id="it.unibg.robotics.featuremodels.diagram.CompositeFeatureSubFeatures_4004"
+               name="%metatype.name.CompositeFeatureSubFeatures_4004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://robotics.unibg.it/featureModel">
+         <specializationType
+               id="it.unibg.robotics.featuremodels.diagram.FeatureSubCompositeFeatures_4005"
+               name="%metatype.name.FeatureSubCompositeFeatures_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://robotics.unibg.it/featureModel">
+         <specializationType
+               id="it.unibg.robotics.featuremodels.diagram.FeatureAttributes_4006"
+               name="%metatype.name.FeatureAttributes_4006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4006"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="it.unibg.robotics.featuremodels.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="it.unibg.robotics.featuremodels.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="it.unibg.robotics.featuremodels.diagram.TypeContext">
+         <elementType ref="it.unibg.robotics.featuremodels.diagram.FeatureModel_1000"/>
+         <elementType ref="it.unibg.robotics.featuremodels.diagram.Feature_2001"/>
+         <elementType ref="it.unibg.robotics.featuremodels.diagram.Feature_2002"/>
+         <elementType ref="it.unibg.robotics.featuremodels.diagram.CompositeFeature_2003"/>
+         <elementType ref="it.unibg.robotics.featuremodels.diagram.SimpleAttribute_2004"/>
+         <elementType ref="it.unibg.robotics.featuremodels.diagram.FeatureSubFeatures_4001"/>
+         <elementType ref="it.unibg.robotics.featuremodels.diagram.FeatureSubFeatures_4002"/>
+         <elementType ref="it.unibg.robotics.featuremodels.diagram.CompositeFeatureSubFeatures_4003"/>
+         <elementType ref="it.unibg.robotics.featuremodels.diagram.CompositeFeatureSubFeatures_4004"/>
+         <elementType ref="it.unibg.robotics.featuremodels.diagram.FeatureSubCompositeFeatures_4005"/>
+         <elementType ref="it.unibg.robotics.featuremodels.diagram.FeatureAttributes_4006"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="it.unibg.robotics.featuremodels.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="it.unibg.robotics.featuremodels.diagram"
+           properties="isURIEditorInput"
+           class="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="it.unibg.robotics.featuremodels.diagram.resourceContent"/>
+			<contentExtension pattern="it.unibg.robotics.featuremodels.diagram.domainResourceContent"/>
+            <contentExtension pattern="it.unibg.robotics.featuremodels.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="it.unibg.robotics.featuremodels.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="it.unibg.robotics.featuremodels.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelNavigatorContentProvider" 
+            labelProvider="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelNavigatorLabelProvider"
+            icon="icons/obj16/featureModelDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="featuremodel_diagram"/>
+               </and>
+               <instanceof value="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelAbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelAbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="it.unibg.robotics.featuremodels.diagram.navigatorSorter" 
+               class="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="featuremodel_diagram"/>
+                  </and>
+                  <instanceof value="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="it.unibg.robotics.featuremodels.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelDomainNavigatorContentProvider" 
+            labelProvider="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelDomainNavigatorLabelProvider"
+            icon="icons/obj16/featureModelDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="featuremodel"/>
+               </and>
+               <instanceof value="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="it.unibg.robotics.featuremodels.diagram.navigatorActionProvider"
+            class="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelAbstractNavigatorItem"/>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="it.unibg.robotics.featuremodels.diagram.navigatorLinkHelper"
+            class="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="it.unibg.robotics.featuremodels.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="it.unibg.robotics.featuremodels.model.diagram.navigator.FeatureModelAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="it.unibg.robotics.featuremodels.model.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="it.unibg.robotics.featuremodels.model.diagram.updateDiagram"
+         contextId="it.unibg.robotics.featuremodels.model.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="it.unibg.robotics.featuremodels.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="it.unibg.robotics.featuremodels.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditorID"
+         defaultHandler="it.unibg.robotics.featuremodels.model.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>
