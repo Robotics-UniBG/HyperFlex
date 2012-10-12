@@ -1,4 +1,4 @@
-/*
+/**
  * Feature Model Plugin
  * 
  * Copyright (c) 2011
@@ -42,7 +42,7 @@ public abstract class FeatureModelAbstractNavigatorItem extends PlatformObject {
 		final Class[] supportedTypes = new Class[] { ITabbedPropertySheetPageContributor.class };
 		final ITabbedPropertySheetPageContributor propertySheetPageContributor = new ITabbedPropertySheetPageContributor() {
 			public String getContributorId() {
-				return "it.unibg.robotics.featuremodels.diagram"; //$NON-NLS-1$
+				return "it.unibg.robotics.featuremodels.model.diagram"; //$NON-NLS-1$
 			}
 		};
 		Platform.getAdapterManager().registerAdapters(

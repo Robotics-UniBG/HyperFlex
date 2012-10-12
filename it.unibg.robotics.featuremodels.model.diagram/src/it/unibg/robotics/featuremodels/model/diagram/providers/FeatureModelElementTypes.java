@@ -1,4 +1,4 @@
-/*
+/**
  * Feature Model Plugin
  * 
  * Copyright (c) 2011
@@ -83,47 +83,47 @@ public class FeatureModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType FeatureModel_1000 = getElementType("it.unibg.robotics.featuremodels.diagram.FeatureModel_1000"); //$NON-NLS-1$
+	public static final IElementType FeatureModel_1000 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureModel_1000"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType Feature_2001 = getElementType("it.unibg.robotics.featuremodels.diagram.Feature_2001"); //$NON-NLS-1$
+	public static final IElementType Feature_2001 = getElementType("it.unibg.robotics.featuremodels.model.diagram.Feature_2001"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType Feature_2002 = getElementType("it.unibg.robotics.featuremodels.diagram.Feature_2002"); //$NON-NLS-1$
+	public static final IElementType Feature_2002 = getElementType("it.unibg.robotics.featuremodels.model.diagram.Feature_2002"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeFeature_2003 = getElementType("it.unibg.robotics.featuremodels.diagram.CompositeFeature_2003"); //$NON-NLS-1$
+	public static final IElementType CompositeFeature_2003 = getElementType("it.unibg.robotics.featuremodels.model.diagram.CompositeFeature_2003"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType SimpleAttribute_2004 = getElementType("it.unibg.robotics.featuremodels.diagram.SimpleAttribute_2004"); //$NON-NLS-1$
+	public static final IElementType SimpleAttribute_2004 = getElementType("it.unibg.robotics.featuremodels.model.diagram.SimpleAttribute_2004"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType FeatureSubFeatures_4001 = getElementType("it.unibg.robotics.featuremodels.diagram.FeatureSubFeatures_4001"); //$NON-NLS-1$
+	public static final IElementType FeatureSubFeatures_4001 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureSubFeatures_4001"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType FeatureSubFeatures_4002 = getElementType("it.unibg.robotics.featuremodels.diagram.FeatureSubFeatures_4002"); //$NON-NLS-1$
+	public static final IElementType FeatureSubFeatures_4002 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureSubFeatures_4002"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeFeatureSubFeatures_4003 = getElementType("it.unibg.robotics.featuremodels.diagram.CompositeFeatureSubFeatures_4003"); //$NON-NLS-1$
+	public static final IElementType CompositeFeatureSubFeatures_4003 = getElementType("it.unibg.robotics.featuremodels.model.diagram.CompositeFeatureSubFeatures_4003"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeFeatureSubFeatures_4004 = getElementType("it.unibg.robotics.featuremodels.diagram.CompositeFeatureSubFeatures_4004"); //$NON-NLS-1$
+	public static final IElementType CompositeFeatureSubFeatures_4004 = getElementType("it.unibg.robotics.featuremodels.model.diagram.CompositeFeatureSubFeatures_4004"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType FeatureSubCompositeFeatures_4005 = getElementType("it.unibg.robotics.featuremodels.diagram.FeatureSubCompositeFeatures_4005"); //$NON-NLS-1$
+	public static final IElementType FeatureSubCompositeFeatures_4005 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureSubCompositeFeatures_4005"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType FeatureAttributes_4006 = getElementType("it.unibg.robotics.featuremodels.diagram.FeatureAttributes_4006"); //$NON-NLS-1$
+	public static final IElementType FeatureAttributes_4006 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureAttributes_4006"); //$NON-NLS-1$
 
 	/**
 	 * @generated

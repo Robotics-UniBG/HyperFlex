@@ -32,6 +32,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference featureModel.ecore#//FeatureModel/rootFeature"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference featureModel.ecore#//FeatureModel/constraints"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference featureModel.ecore#//FeatureModel/instances"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute featureModel.ecore#//FeatureModel/name"/>
     </genClasses>
     <genClasses ecoreClass="featureModel.ecore#//Constraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute featureModel.ecore#//Constraint/name"/>

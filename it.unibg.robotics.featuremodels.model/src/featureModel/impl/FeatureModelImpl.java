@@ -58,6 +58,7 @@ import featureModel.featureModelPackage;
  *   <li>{@link featureModel.impl.FeatureModelImpl#getRootFeature <em>Root Feature</em>}</li>
  *   <li>{@link featureModel.impl.FeatureModelImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link featureModel.impl.FeatureModelImpl#getInstances <em>Instances</em>}</li>
+ *   <li>{@link featureModel.impl.FeatureModelImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -103,6 +104,25 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 	 * @ordered
 	 */
 	protected EList<Instance> instances;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -195,6 +215,27 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, featureModelPackage.FEATURE_MODEL__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -222,6 +263,8 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 				return getConstraints();
 			case featureModelPackage.FEATURE_MODEL__INSTANCES:
 				return getInstances();
+			case featureModelPackage.FEATURE_MODEL__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -246,6 +289,9 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 				getInstances().clear();
 				getInstances().addAll((Collection<? extends Instance>)newValue);
 				return;
+			case featureModelPackage.FEATURE_MODEL__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -267,6 +313,9 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 			case featureModelPackage.FEATURE_MODEL__INSTANCES:
 				getInstances().clear();
 				return;
+			case featureModelPackage.FEATURE_MODEL__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -285,10 +334,28 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 				return constraints != null && !constraints.isEmpty();
 			case featureModelPackage.FEATURE_MODEL__INSTANCES:
 				return instances != null && !instances.isEmpty();
+			case featureModelPackage.FEATURE_MODEL__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
+
 	/**
 	 * @generated NOT
 	 */

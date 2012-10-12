@@ -281,13 +281,22 @@ public interface featureModelPackage extends EPackage {
 	int FEATURE_MODEL__INSTANCES = 2;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL__NAME = 3;
+
+	/**
 	 * The number of structural features of the '<em>Feature Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_MODEL_FEATURE_COUNT = 3;
+	int FEATURE_MODEL_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link featureModel.impl.ConstraintImpl <em>Constraint</em>}' class.
@@ -684,6 +693,17 @@ public interface featureModelPackage extends EPackage {
 	EReference getFeatureModel_Instances();
 
 	/**
+	 * Returns the meta object for the attribute '{@link featureModel.FeatureModel#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see featureModel.FeatureModel#getName()
+	 * @see #getFeatureModel()
+	 * @generated
+	 */
+	EAttribute getFeatureModel_Name();
+
+	/**
 	 * Returns the meta object for class '{@link featureModel.Constraint <em>Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1019,6 +1039,14 @@ public interface featureModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FEATURE_MODEL__INSTANCES = eINSTANCE.getFeatureModel_Instances();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FEATURE_MODEL__NAME = eINSTANCE.getFeatureModel_Name();
 
 		/**
 		 * The meta object literal for the '{@link featureModel.impl.ConstraintImpl <em>Constraint</em>}' class.

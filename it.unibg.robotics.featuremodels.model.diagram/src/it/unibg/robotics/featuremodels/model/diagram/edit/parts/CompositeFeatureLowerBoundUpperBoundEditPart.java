@@ -1,4 +1,4 @@
-/*
+/**
  * Feature Model Plugin
  * 
  * Copyright (c) 2011
@@ -231,7 +231,8 @@ public class CompositeFeatureLowerBoundUpperBoundEditPart extends
 		String text = null;
 		EObject parserElement = getParserElement();
 		if (parserElement != null && getParser() != null) {
-			text = getParser().getPrintString(new EObjectAdapter(parserElement),
+			text = getParser().getPrintString(
+					new EObjectAdapter(parserElement),
 					getParserOptions().intValue());
 		}
 		if (text == null || text.length() == 0) {
@@ -473,7 +474,8 @@ public class CompositeFeatureLowerBoundUpperBoundEditPart extends
 				NotationPackage.eINSTANCE.getFontStyle());
 		if (style != null) {
 			FontData fontData = new FontData(style.getFontName(),
-					style.getFontHeight() + 3, (style.isBold() ? SWT.BOLD : SWT.NORMAL)
+					style.getFontHeight() + 3, (style.isBold() ? SWT.BOLD
+							: SWT.NORMAL)
 							| (style.isItalic() ? SWT.ITALIC : SWT.NORMAL));
 			setFont(fontData);
 		}

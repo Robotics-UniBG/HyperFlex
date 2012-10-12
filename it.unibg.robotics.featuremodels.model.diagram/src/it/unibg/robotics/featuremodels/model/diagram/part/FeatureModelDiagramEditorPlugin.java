@@ -1,4 +1,4 @@
-/*
+/**
  * Feature Model Plugin
  * 
  * Copyright (c) 2011
@@ -57,7 +57,7 @@ public class FeatureModelDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
-	public static final String ID = "it.unibg.robotics.featuremodels.diagram"; //$NON-NLS-1$
+	public static final String ID = "it.unibg.robotics.featuremodels.model.diagram"; //$NON-NLS-1$
 
 	/**
 	 * @generated

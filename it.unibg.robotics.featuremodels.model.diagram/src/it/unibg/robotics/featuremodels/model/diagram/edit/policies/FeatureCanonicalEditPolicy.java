@@ -1,4 +1,4 @@
-/*
+/**
  * Feature Model Plugin
  * 
  * Copyright (c) 2011
@@ -116,10 +116,9 @@ public class FeatureCanonicalEditPolicy extends CanonicalEditPolicy {
 		// to answer isOrphaned == true will be used for the domain element representation, see #cleanCanonicalSemanticChildren()
 		for (Iterator<FeatureModelNodeDescriptor> descriptorsIterator = childDescriptors
 				.iterator(); descriptorsIterator.hasNext();) {
-			FeatureModelNodeDescriptor next = descriptorsIterator
-					.next();
-			String hint = FeatureModelVisualIDRegistry
-					.getType(next.getVisualID());
+			FeatureModelNodeDescriptor next = descriptorsIterator.next();
+			String hint = FeatureModelVisualIDRegistry.getType(next
+					.getVisualID());
 			LinkedList<View> perfectMatch = new LinkedList<View>(); // both semanticElement and hint match that of NodeDescriptor
 			for (View childView : getViewChildren()) {
 				EObject semanticElement = childView.getElement();
@@ -145,8 +144,8 @@ public class FeatureCanonicalEditPolicy extends CanonicalEditPolicy {
 		ArrayList<CreateViewRequest.ViewDescriptor> viewDescriptors = new ArrayList<CreateViewRequest.ViewDescriptor>(
 				childDescriptors.size());
 		for (FeatureModelNodeDescriptor next : childDescriptors) {
-			String hint = FeatureModelVisualIDRegistry
-					.getType(next.getVisualID());
+			String hint = FeatureModelVisualIDRegistry.getType(next
+					.getVisualID());
 			IAdaptable elementAdapter = new CanonicalElementAdapter(
 					next.getModelElement(), hint);
 			CreateViewRequest.ViewDescriptor descriptor = new CreateViewRequest.ViewDescriptor(

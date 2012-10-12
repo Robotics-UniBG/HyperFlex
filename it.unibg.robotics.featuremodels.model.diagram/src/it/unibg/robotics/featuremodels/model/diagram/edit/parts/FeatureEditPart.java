@@ -1,4 +1,4 @@
-/*
+/**
  * Feature Model Plugin
  * 
  * Copyright (c) 2011
@@ -375,7 +375,7 @@ public class FeatureEditPart extends ShapeNodeEditPart {
 		}
 		return types;
 	}
-	
+
 	/**
 	 * @generated NOT
 	 */
@@ -435,7 +435,7 @@ public class FeatureEditPart extends ShapeNodeEditPart {
 		public WrappingLabel getFigureFeatureLabel() {
 			return fFigureFeatureLabel;
 		}
-		
+
 		/**
 		 * @generated NOT
 		 */
@@ -452,7 +452,7 @@ public class FeatureEditPart extends ShapeNodeEditPart {
 		}
 
 	}
-	
+
 	/**
 	 * @generated NOT
 	 */
@@ -466,6 +466,5 @@ public class FeatureEditPart extends ShapeNodeEditPart {
 	public FeatureModel getFeatureModel() {
 		return getFeature().getFeatureModel();
 	}
-
 
 }

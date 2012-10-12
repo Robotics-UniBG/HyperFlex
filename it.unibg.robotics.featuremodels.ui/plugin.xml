@@ -79,6 +79,7 @@
       <wizard
             category="it.robotics.unibg.featuremodels.wizard.category"
             class="it.unibg.robotics.featuremodels.ui.wizards.FMProjectWizard"
+            descriptionImage="icons/fm.ico"
             finalPerspective="it.unibg.robotics.featuremodels.ui.perspective"
             icon="icons/fm.ico"
             id="it.robotics.unibg.featuremodels.wizard.featuremodel.project"

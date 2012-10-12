@@ -1,4 +1,4 @@
-/*
+/**
  * Feature Model Plugin
  * 
  * Copyright (c) 2011
@@ -186,7 +186,7 @@ public class FeatureModelDocumentProvider extends AbstractDocumentProvider
 		TransactionalEditingDomain editingDomain = DiagramEditingDomainFactory
 				.getInstance().createEditingDomain();
 		editingDomain
-				.setID("it.unibg.robotics.featuremodels.diagram.EditingDomain"); //$NON-NLS-1$
+				.setID("it.unibg.robotics.featuremodels.model.diagram.EditingDomain"); //$NON-NLS-1$
 		final NotificationFilter diagramResourceModifiedFilter = NotificationFilter
 				.createNotifierFilter(editingDomain.getResourceSet())
 				.and(NotificationFilter.createEventTypeFilter(Notification.ADD))

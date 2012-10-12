@@ -1,4 +1,4 @@
-/*
+/**
  * Feature Model Plugin
  * 
  * Copyright (c) 2011
@@ -55,7 +55,7 @@ public class FeatureModelVisualIDRegistry {
 	/**
 	 * @generated
 	 */
-	private static final String DEBUG_KEY = "it.unibg.robotics.featuremodels.diagram/debug/visualID"; //$NON-NLS-1$
+	private static final String DEBUG_KEY = "it.unibg.robotics.featuremodels.model.diagram/debug/visualID"; //$NON-NLS-1$
 
 	/**
 	 * @generated
