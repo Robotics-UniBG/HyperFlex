@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Feature Models Views"
+            id="it.unibg.robotics.featuremodels.ui.views">
+      </category>
+      <view
+            allowMultiple="false"
+            category="it.unibg.robotics.featuremodels.ui.views"
+            class="it.unibg.robotics.featuremodels.ui.views.InstanceView"
+            icon="icons/fm.ico"
+            id="it.unibg.robotics.featuremodels.ui.views.instanceview"
+            name="Instance View">
+      </view>
+      <view
+            allowMultiple="false"
+            category="it.unibg.robotics.featuremodels.ui.views"
+            class="it.unibg.robotics.featuremodels.ui.views.ConstraintView"
+            icon="icons/fm.ico"
+            id="it.unibg.robotics.featuremodels.ui.views.constraintview"
+            name="Constraint View">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="it.unibg.robotics.featuremodels.ui.perspectives.FMPerspective"
+            icon="icons/fm.ico"
+            id="it.unibg.robotics.featuremodels.ui.perspective"
+            name="Feature Models Perspective">
+         <description>
+            Feature Models Perspective
+         </description>
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="it.unibg.robotics.it.featuremodels.ui.perspective">
+         <view
+               id="it.unibg.robotics.featuremodels.ui.views.instanceview"
+               ratio="0.5"
+               relationship="right"
+               showTitle="true"
+               visible="true">
+         </view>
+         <view
+               id="it.unibg.robotics.featuremodels.ui.views.constraintview"
+               ratio="0.5"
+               relationship="right"
+               showTitle="true"
+               visible="true">
+         </view>
+         <view
+               id="org.eclipse.ui.views.PropertySheet"
+               minimized="false"
+               relationship="right"
+               showTitle="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         id="it.unibg.robotics.featuremodels.wizard"
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="it.robotics.unibg.featuremodels.wizard.category"
+            name="Feature Models">
+      </category>
+      <wizard
+            category="it.robotics.unibg.featuremodels.wizard.category"
+            class="it.unibg.robotics.featuremodels.ui.wizards.FMProjectWizard"
+            finalPerspective="it.unibg.robotics.featuremodels.ui.perspective"
+            icon="icons/fm.ico"
+            id="it.robotics.unibg.featuremodels.wizard.featuremodel.project"
+            name="Feature Models Project"
+            project="true">
+         <description>
+            Feature Models Project
+         </description>
+      </wizard>
+   </extension>
+
+</plugin>

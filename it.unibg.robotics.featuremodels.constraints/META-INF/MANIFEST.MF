@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Utils
+Bundle-SymbolicName: it.unibg.robotics.featuremodels.constraints
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .,lib/mvel2-2.0.19.jar
+Bundle-Activator: it.unibg.robotics.featuremodels.constraints.utils.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ it.unibg.robotics.featuremodels.model;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: it.unibg.robotics.featuremodels.constraints.utility
