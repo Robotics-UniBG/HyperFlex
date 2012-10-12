@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Feature Model Plugin
+ 
+ Copyright (c) 2011
+ All rights reserved.
+ 
+ Luca Gherardi
+ University of Bergamo
+ Dept. of Information Technology and Mathematics
+ 
+ ***********************************************************************************************
+ 
+ Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ 
+ Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ 
+ ***********************************************************************************************
+ 
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ 
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <wizard
+            id="it.robotics.unibg.featuremodels.wizard.featuremodel.model"
+            name="%_UI_featureModelModelWizard_label"
+            class="featureModel.presentation.featureModelModelWizard"
+            category="it.robotics.unibg.featuremodels.wizard.category"
+            icon="icons/fm.ico">
+         <description>%_UI_featureModelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="featureModel.presentation.featureModelEditorID"
+            name="%_UI_featureModelEditor_label"
+            icon="icons/fm.ico"
+            extensions="featuremodel"
+            class="featureModel.presentation.featureModelEditor"
+            contributorClass="featureModel.presentation.featureModelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
