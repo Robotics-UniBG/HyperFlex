@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Utils
+Bundle-Name: Feature Model Constraints
 Bundle-SymbolicName: it.unibg.robotics.featuremodels.constraints
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .,lib/mvel2-2.0.19.jar
@@ -11,3 +11,4 @@ Require-Bundle: org.eclipse.ui,
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: it.unibg.robotics.featuremodels.constraints.utility
+Bundle-Vendor: Luca Gherardi
