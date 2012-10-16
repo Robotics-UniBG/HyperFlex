@@ -1,7 +1,5 @@
 *.class
 .settings
-.project
-.classpath
 .metadata
 .svn
 .DS_Store
