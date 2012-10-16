@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/it.unibg.robotics.featuremodels.feature_1.0.0.201210161806.jar" id="it.unibg.robotics.featuremodels.feature" version="1.0.0.201210161806">
+   <feature url="features/it.unibg.robotics.featuremodels.feature_1.0.0.201210161909.jar" id="it.unibg.robotics.featuremodels.feature" version="1.0.0.201210161909">
       <category name="it.unibg.robotics.featuremodels.updatesite.category"/>
    </feature>
    <category-def name="it.unibg.robotics.featuremodels.updatesite.category" label="Feature Models">
