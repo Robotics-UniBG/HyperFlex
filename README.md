@@ -7,4 +7,4 @@ In order to execute it uou need to install
 
 Once you have imported our projects in the workspace right click on it.unibg.robotics.featuremodels.ui and select run as -> Eclipse application
 
-The plugin can also be isntalled from the update site: robotics-unibg.github.com/FeatureModels/update_site
+The plugin can also be isntalled from the update site: http://robotics-unibg.github.com/FeatureModels/update_site
