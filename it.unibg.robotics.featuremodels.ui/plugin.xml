@@ -31,7 +31,7 @@
             class="it.unibg.robotics.featuremodels.ui.perspectives.FMPerspective"
             icon="icons/fm.ico"
             id="it.unibg.robotics.featuremodels.ui.perspective"
-            name="Feature Models Perspective">
+            name="Feature Models">
          <description>
             Feature Models Perspective
          </description>
