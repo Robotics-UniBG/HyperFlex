@@ -25,6 +25,8 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.commands;
 
+import it.unibg.robotics.featuremodels.CompositeFeature;
+import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.model.diagram.edit.policies.FeatureModelBaseItemSemanticEditPolicy;
 
 import org.eclipse.core.commands.ExecutionException;
@@ -68,11 +70,10 @@ public class FeatureSubCompositeFeaturesCreateCommand extends
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof featureModel.Feature) {
+		if (source != null && false == source instanceof Feature) {
 			return false;
 		}
-		if (target != null
-				&& false == target instanceof featureModel.CompositeFeature) {
+		if (target != null && false == target instanceof CompositeFeature) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -80,7 +81,7 @@ public class FeatureSubCompositeFeaturesCreateCommand extends
 		}
 		// target may be null here but it's possible to check constraint
 		return FeatureModelBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateFeatureSubCompositeFeatures_4005(getSource(),
+				.canCreateFeatureSubCompositeFeatures_4011(getSource(),
 						getTarget());
 	}
 
@@ -112,14 +113,14 @@ public class FeatureSubCompositeFeaturesCreateCommand extends
 	/**
 	 * @generated
 	 */
-	protected featureModel.Feature getSource() {
-		return (featureModel.Feature) source;
+	protected Feature getSource() {
+		return (Feature) source;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected featureModel.CompositeFeature getTarget() {
-		return (featureModel.CompositeFeature) target;
+	protected CompositeFeature getTarget() {
+		return (CompositeFeature) target;
 	}
 }

@@ -68,10 +68,10 @@ public class FeatureModelModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof FeatureModelEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(FeatureModelElementTypes.Feature_2001);
-			types.add(FeatureModelElementTypes.Feature_2002);
-			types.add(FeatureModelElementTypes.CompositeFeature_2003);
-			types.add(FeatureModelElementTypes.SimpleAttribute_2004);
+			types.add(FeatureModelElementTypes.Feature_2005);
+			types.add(FeatureModelElementTypes.Feature_2006);
+			types.add(FeatureModelElementTypes.CompositeFeature_2007);
+			types.add(FeatureModelElementTypes.SimpleAttribute_2008);
 			return types;
 		}
 		return Collections.EMPTY_LIST;

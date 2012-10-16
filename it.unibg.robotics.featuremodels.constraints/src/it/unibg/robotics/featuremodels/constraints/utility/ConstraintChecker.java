@@ -25,22 +25,22 @@
  */
 package it.unibg.robotics.featuremodels.constraints.utility;
 
+import it.unibg.robotics.featuremodels.CompositeFeature;
+import it.unibg.robotics.featuremodels.Constraint;
+import it.unibg.robotics.featuremodels.ConstraintType;
+import it.unibg.robotics.featuremodels.Feature;
+import it.unibg.robotics.featuremodels.FeatureModel;
+import it.unibg.robotics.featuremodels.Instance;
+import it.unibg.robotics.featuremodels.featuremodelsFactory;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.mvel2.MVEL;
 
-import featureModel.CompositeFeature;
-import featureModel.Constraint;
-import featureModel.ConstraintType;
-import featureModel.Feature;
-import featureModel.FeatureModel;
-import featureModel.Instance;
-import featureModel.featureModelFactory;
 
 
 
@@ -61,7 +61,7 @@ public class ConstraintChecker {
 
 		currentInstance = model.getSelectedInstance();
 		if(currentInstance == null){
-			currentInstance = featureModelFactory.eINSTANCE.createInstance();
+			currentInstance = featuremodelsFactory.eINSTANCE.createInstance();
 		}
 		selectedFeaturesNames = new ArrayList<String>();
 		for(Feature feature : currentInstance.getSelectedFeatures()){

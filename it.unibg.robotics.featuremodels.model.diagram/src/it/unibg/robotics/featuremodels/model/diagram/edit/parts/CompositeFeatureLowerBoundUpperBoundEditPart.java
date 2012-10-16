@@ -83,7 +83,7 @@ public class CompositeFeatureLowerBoundUpperBoundEditPart extends
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5003;
+	public static final int VISUAL_ID = 5007;
 
 	/**
 	 * @generated
@@ -332,7 +332,7 @@ public class CompositeFeatureLowerBoundUpperBoundEditPart extends
 		if (parser == null) {
 			parser = FeatureModelParserProvider
 					.getParser(
-							FeatureModelElementTypes.CompositeFeature_2003,
+							FeatureModelElementTypes.CompositeFeature_2007,
 							getParserElement(),
 							FeatureModelVisualIDRegistry
 									.getType(it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureLowerBoundUpperBoundEditPart.VISUAL_ID));

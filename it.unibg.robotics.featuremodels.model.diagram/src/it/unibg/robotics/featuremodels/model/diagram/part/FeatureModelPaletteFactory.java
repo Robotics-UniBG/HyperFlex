@@ -84,13 +84,13 @@ public class FeatureModelPaletteFactory {
 	 */
 	private ToolEntry createFeature1CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(FeatureModelElementTypes.Feature_2001);
-		types.add(FeatureModelElementTypes.Feature_2002);
+		types.add(FeatureModelElementTypes.Feature_2005);
+		types.add(FeatureModelElementTypes.Feature_2006);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Feature1CreationTool_title, null, types);
 		entry.setId("createFeature1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(FeatureModelElementTypes
-				.getImageDescriptor(FeatureModelElementTypes.Feature_2001));
+				.getImageDescriptor(FeatureModelElementTypes.Feature_2005));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -103,10 +103,10 @@ public class FeatureModelPaletteFactory {
 				Messages.CompositeFeature2CreationTool_title,
 				null,
 				Collections
-						.singletonList(FeatureModelElementTypes.CompositeFeature_2003));
+						.singletonList(FeatureModelElementTypes.CompositeFeature_2007));
 		entry.setId("createCompositeFeature2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(FeatureModelElementTypes
-				.getImageDescriptor(FeatureModelElementTypes.CompositeFeature_2003));
+				.getImageDescriptor(FeatureModelElementTypes.CompositeFeature_2007));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -119,10 +119,10 @@ public class FeatureModelPaletteFactory {
 				Messages.Attribute3CreationTool_title,
 				Messages.Attribute3CreationTool_desc,
 				Collections
-						.singletonList(FeatureModelElementTypes.SimpleAttribute_2004));
+						.singletonList(FeatureModelElementTypes.SimpleAttribute_2008));
 		entry.setId("createAttribute3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(FeatureModelElementTypes
-				.getImageDescriptor(FeatureModelElementTypes.SimpleAttribute_2004));
+				.getImageDescriptor(FeatureModelElementTypes.SimpleAttribute_2008));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -132,17 +132,17 @@ public class FeatureModelPaletteFactory {
 	 */
 	private ToolEntry createConnection1CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(6);
-		types.add(FeatureModelElementTypes.FeatureSubFeatures_4001);
-		types.add(FeatureModelElementTypes.FeatureSubFeatures_4002);
-		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4003);
-		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4004);
-		types.add(FeatureModelElementTypes.FeatureSubCompositeFeatures_4005);
-		types.add(FeatureModelElementTypes.FeatureAttributes_4006);
+		types.add(FeatureModelElementTypes.FeatureSubFeatures_4007);
+		types.add(FeatureModelElementTypes.FeatureSubFeatures_4008);
+		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4009);
+		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4010);
+		types.add(FeatureModelElementTypes.FeatureSubCompositeFeatures_4011);
+		types.add(FeatureModelElementTypes.FeatureAttributes_4012);
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.Connection1CreationTool_title, null, types);
 		entry.setId("createConnection1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(FeatureModelElementTypes
-				.getImageDescriptor(FeatureModelElementTypes.FeatureSubFeatures_4001));
+				.getImageDescriptor(FeatureModelElementTypes.FeatureSubFeatures_4007));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

@@ -25,6 +25,8 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.commands;
 
+import it.unibg.robotics.featuremodels.Attribute;
+import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.model.diagram.edit.policies.FeatureModelBaseItemSemanticEditPolicy;
 
 import org.eclipse.core.commands.ExecutionException;
@@ -77,7 +79,7 @@ public class FeatureAttributesReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	public boolean canExecute() {
-		if (false == referenceOwner instanceof featureModel.Feature) {
+		if (false == referenceOwner instanceof Feature) {
 			return false;
 		}
 		if (reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
@@ -93,22 +95,22 @@ public class FeatureAttributesReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof featureModel.Attribute && newEnd instanceof featureModel.Feature)) {
+		if (!(oldEnd instanceof Attribute && newEnd instanceof Feature)) {
 			return false;
 		}
 		return FeatureModelBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistFeatureAttributes_4006(getNewSource(), getOldTarget());
+				.canExistFeatureAttributes_4012(getNewSource(), getOldTarget());
 	}
 
 	/**
 	 * @generated
 	 */
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof featureModel.Attribute && newEnd instanceof featureModel.Attribute)) {
+		if (!(oldEnd instanceof Attribute && newEnd instanceof Attribute)) {
 			return false;
 		}
 		return FeatureModelBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistFeatureAttributes_4006(getOldSource(), getNewTarget());
+				.canExistFeatureAttributes_4012(getOldSource(), getNewTarget());
 	}
 
 	/**
@@ -150,28 +152,28 @@ public class FeatureAttributesReorientCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected featureModel.Feature getOldSource() {
-		return (featureModel.Feature) referenceOwner;
+	protected Feature getOldSource() {
+		return (Feature) referenceOwner;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected featureModel.Feature getNewSource() {
-		return (featureModel.Feature) newEnd;
+	protected Feature getNewSource() {
+		return (Feature) newEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected featureModel.Attribute getOldTarget() {
-		return (featureModel.Attribute) oldEnd;
+	protected Attribute getOldTarget() {
+		return (Attribute) oldEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected featureModel.Attribute getNewTarget() {
-		return (featureModel.Attribute) newEnd;
+	protected Attribute getNewTarget() {
+		return (Attribute) newEnd;
 	}
 }

@@ -68,7 +68,7 @@ public class CompositeFeatureEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2003;
+	public static final int VISUAL_ID = 2007;
 
 	/**
 	 * @generated
@@ -290,8 +290,8 @@ public class CompositeFeatureEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4003);
-		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4004);
+		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4009);
+		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4010);
 		return types;
 	}
 
@@ -302,16 +302,16 @@ public class CompositeFeatureEditPart extends ShapeNodeEditPart {
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof FeatureEditPart) {
-			types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4003);
+			types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4009);
 		}
 		if (targetEditPart instanceof Feature2EditPart) {
-			types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4003);
+			types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4009);
 		}
 		if (targetEditPart instanceof FeatureEditPart) {
-			types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4004);
+			types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4010);
 		}
 		if (targetEditPart instanceof Feature2EditPart) {
-			types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4004);
+			types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4010);
 		}
 		return types;
 	}
@@ -321,12 +321,12 @@ public class CompositeFeatureEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == FeatureModelElementTypes.CompositeFeatureSubFeatures_4003) {
-			types.add(FeatureModelElementTypes.Feature_2001);
-			types.add(FeatureModelElementTypes.Feature_2002);
-		} else if (relationshipType == FeatureModelElementTypes.CompositeFeatureSubFeatures_4004) {
-			types.add(FeatureModelElementTypes.Feature_2001);
-			types.add(FeatureModelElementTypes.Feature_2002);
+		if (relationshipType == FeatureModelElementTypes.CompositeFeatureSubFeatures_4009) {
+			types.add(FeatureModelElementTypes.Feature_2005);
+			types.add(FeatureModelElementTypes.Feature_2006);
+		} else if (relationshipType == FeatureModelElementTypes.CompositeFeatureSubFeatures_4010) {
+			types.add(FeatureModelElementTypes.Feature_2005);
+			types.add(FeatureModelElementTypes.Feature_2006);
 		}
 		return types;
 	}
@@ -336,7 +336,7 @@ public class CompositeFeatureEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnTarget() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(FeatureModelElementTypes.FeatureSubCompositeFeatures_4005);
+		types.add(FeatureModelElementTypes.FeatureSubCompositeFeatures_4011);
 		return types;
 	}
 
@@ -345,9 +345,9 @@ public class CompositeFeatureEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == FeatureModelElementTypes.FeatureSubCompositeFeatures_4005) {
-			types.add(FeatureModelElementTypes.Feature_2001);
-			types.add(FeatureModelElementTypes.Feature_2002);
+		if (relationshipType == FeatureModelElementTypes.FeatureSubCompositeFeatures_4011) {
+			types.add(FeatureModelElementTypes.Feature_2005);
+			types.add(FeatureModelElementTypes.Feature_2006);
 		}
 		return types;
 	}

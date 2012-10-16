@@ -5,6 +5,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel"
     packageNamePrefix="it.unibg.robotics.featuremodels.model.diagram"
+    diagramFileExtension="featuremodel_diagram"
+    domainFileExtension="featuremodel"
     templateDirectory=""
     copyrightText="Feature Model Plugin&#xA;&#xA;Copyright (c) 2011&#xA;All rights reserved.&#xA;&#xA;Luca Gherardi&#xA;University of Bergamo&#xA;Dept. of Information Technology and Mathematics&#xA;&#xA;***********************************************************************************************&#xA;&#xA;Author: &lt;A HREF=&quot;mailto:luca.gherardi@unibg.it&quot;>Luca Gherardi&lt;/A>&#xA;&#xA;Supervised by: &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;>Davide Brugali&lt;/A>&#xA;&#xA;***********************************************************************************************&#xA;&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;"
     pluginDirectory="/it.unibg.robotics.featuremodels.model.diagram/src">
@@ -26,9 +28,9 @@
         xsi:type="gmfgen:FigureViewmap"
         figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
     <domainDiagramElement
-        href="../models/featureModel.genmodel#//featureModel/FeatureModel"/>
+        href="../models/featureModel.genmodel#//featuremodels/FeatureModel"/>
     <topLevelNodes
-        visualID="2001"
+        visualID="2005"
         editPartClassName="FeatureEditPart"
         itemSemanticEditPolicyClassName="FeatureItemSemanticEditPolicy"
         notationViewFactoryClassName="FeatureViewFactory"
@@ -55,14 +57,14 @@
       <modelFacet
           modelElementSelector="//@expressionProviders/@providers.0/@expressions.0">
         <metaClass
-            href="../models/featureModel.genmodel#//featureModel/Feature"/>
+            href="../models/featureModel.genmodel#//featuremodels/Feature"/>
         <containmentMetaFeature
-            href="../models/featureModel.genmodel#//featureModel/FeatureModel/rootFeature"/>
+            href="../models/featureModel.genmodel#//featuremodels/FeatureModel/rootFeature"/>
         <childMetaFeature
-            href="../models/featureModel.genmodel#//featureModel/FeatureModel/rootFeature"/>
+            href="../models/featureModel.genmodel#//featuremodels/FeatureModel/rootFeature"/>
       </modelFacet>
       <labels
-          visualID="5001"
+          visualID="5005"
           editPartClassName="FeatureNameEditPart"
           itemSemanticEditPolicyClassName="FeatureNameItemSemanticEditPolicy"
           notationViewFactoryClassName="FeatureNameViewFactory">
@@ -76,14 +78,14 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../models/featureModel.genmodel#//featureModel/Feature/name"/>
+              href="../models/featureModel.genmodel#//featuremodels/Feature/name"/>
           <editableMetaFeatures
-              href="../models/featureModel.genmodel#//featureModel/Feature/name"/>
+              href="../models/featureModel.genmodel#//featuremodels/Feature/name"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
     <topLevelNodes
-        visualID="2002"
+        visualID="2006"
         editPartClassName="Feature2EditPart"
         itemSemanticEditPolicyClassName="Feature2ItemSemanticEditPolicy"
         notationViewFactoryClassName="FeatureViewFactory"
@@ -112,10 +114,10 @@
       <modelFacet
           modelElementSelector="//@expressionProviders/@providers.0/@expressions.1">
         <metaClass
-            href="../models/featureModel.genmodel#//featureModel/Feature"/>
+            href="../models/featureModel.genmodel#//featuremodels/Feature"/>
       </modelFacet>
       <labels
-          visualID="5002"
+          visualID="5006"
           editPartClassName="FeatureName2EditPart"
           itemSemanticEditPolicyClassName="FeatureName2ItemSemanticEditPolicy"
           notationViewFactoryClassName="FeatureNameViewFactory">
@@ -129,14 +131,14 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../models/featureModel.genmodel#//featureModel/Feature/name"/>
+              href="../models/featureModel.genmodel#//featuremodels/Feature/name"/>
           <editableMetaFeatures
-              href="../models/featureModel.genmodel#//featureModel/Feature/name"/>
+              href="../models/featureModel.genmodel#//featuremodels/Feature/name"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
     <topLevelNodes
-        visualID="2003"
+        visualID="2007"
         editPartClassName="CompositeFeatureEditPart"
         itemSemanticEditPolicyClassName="CompositeFeatureItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeFeatureViewFactory"
@@ -163,10 +165,10 @@
       <modelFacet
           modelElementSelector="//@expressionProviders/@providers.0/@expressions.2">
         <metaClass
-            href="../models/featureModel.genmodel#//featureModel/CompositeFeature"/>
+            href="../models/featureModel.genmodel#//featuremodels/CompositeFeature"/>
       </modelFacet>
       <labels
-          visualID="5003"
+          visualID="5007"
           editPartClassName="CompositeFeatureLowerBoundUpperBoundEditPart"
           itemSemanticEditPolicyClassName="CompositeFeatureLowerBoundUpperBoundItemSemanticEditPolicy"
           notationViewFactoryClassName="CompositeFeatureLowerBoundUpperBoundViewFactory"
@@ -182,14 +184,14 @@
             parser="//@labelParsers/@implementations.0"
             viewPattern="{0} ... {1}">
           <metaFeatures
-              href="../models/featureModel.genmodel#//featureModel/CompositeFeature/lowerBound"/>
+              href="../models/featureModel.genmodel#//featuremodels/CompositeFeature/lowerBound"/>
           <metaFeatures
-              href="../models/featureModel.genmodel#//featureModel/CompositeFeature/upperBound"/>
+              href="../models/featureModel.genmodel#//featuremodels/CompositeFeature/upperBound"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
     <topLevelNodes
-        visualID="2004"
+        visualID="2008"
         editPartClassName="SimpleAttributeEditPart"
         itemSemanticEditPolicyClassName="SimpleAttributeItemSemanticEditPolicy"
         notationViewFactoryClassName="SimpleAttributeViewFactory"
@@ -215,10 +217,10 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../models/featureModel.genmodel#//featureModel/SimpleAttribute"/>
+            href="../models/featureModel.genmodel#//featuremodels/SimpleAttribute"/>
       </modelFacet>
       <labels
-          visualID="5004"
+          visualID="5008"
           editPartClassName="SimpleAttributeNameEditPart"
           itemSemanticEditPolicyClassName="SimpleAttributeNameItemSemanticEditPolicy"
           notationViewFactoryClassName="SimpleAttributeNameViewFactory">
@@ -232,12 +234,12 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../models/featureModel.genmodel#//featureModel/Attribute/name"/>
+              href="../models/featureModel.genmodel#//featuremodels/Attribute/name"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
     <links
-        visualID="4001"
+        visualID="4007"
         editPartClassName="FeatureSubFeaturesEditPart"
         itemSemanticEditPolicyClassName="FeatureSubFeaturesItemSemanticEditPolicy"
         notationViewFactoryClassName="FeatureSubFeaturesViewFactory"
@@ -254,14 +256,14 @@
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
-            href="../models/featureModel.genmodel#//featureModel/Feature/subFeatures"/>
+            href="../models/featureModel.genmodel#//featuremodels/Feature/subFeatures"/>
       </modelFacet>
       <creationConstraints
           sourceEnd="//@expressionProviders/@providers.0/@expressions.3"
           targetEnd="//@expressionProviders/@providers.0/@expressions.4"/>
     </links>
     <links
-        visualID="4002"
+        visualID="4008"
         editPartClassName="FeatureSubFeatures2EditPart"
         itemSemanticEditPolicyClassName="FeatureSubFeatures2ItemSemanticEditPolicy"
         notationViewFactoryClassName="FeatureSubFeaturesViewFactory"
@@ -278,14 +280,14 @@
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
-            href="../models/featureModel.genmodel#//featureModel/Feature/subFeatures"/>
+            href="../models/featureModel.genmodel#//featuremodels/Feature/subFeatures"/>
       </modelFacet>
       <creationConstraints
           sourceEnd="//@expressionProviders/@providers.0/@expressions.5"
           targetEnd="//@expressionProviders/@providers.0/@expressions.6"/>
     </links>
     <links
-        visualID="4003"
+        visualID="4009"
         editPartClassName="CompositeFeatureSubFeaturesEditPart"
         itemSemanticEditPolicyClassName="CompositeFeatureSubFeaturesItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeFeatureSubFeaturesViewFactory"
@@ -302,14 +304,14 @@
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
-            href="../models/featureModel.genmodel#//featureModel/CompositeFeature/subFeatures"/>
+            href="../models/featureModel.genmodel#//featuremodels/CompositeFeature/subFeatures"/>
       </modelFacet>
       <creationConstraints
           sourceEnd="//@expressionProviders/@providers.0/@expressions.7"
           targetEnd="//@expressionProviders/@providers.0/@expressions.8"/>
     </links>
     <links
-        visualID="4004"
+        visualID="4010"
         editPartClassName="CompositeFeatureSubFeatures2EditPart"
         itemSemanticEditPolicyClassName="CompositeFeatureSubFeatures2ItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeFeatureSubFeaturesViewFactory"
@@ -326,14 +328,14 @@
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
-            href="../models/featureModel.genmodel#//featureModel/CompositeFeature/subFeatures"/>
+            href="../models/featureModel.genmodel#//featuremodels/CompositeFeature/subFeatures"/>
       </modelFacet>
       <creationConstraints
           sourceEnd="//@expressionProviders/@providers.0/@expressions.9"
           targetEnd="//@expressionProviders/@providers.0/@expressions.10"/>
     </links>
     <links
-        visualID="4005"
+        visualID="4011"
         editPartClassName="FeatureSubCompositeFeaturesEditPart"
         itemSemanticEditPolicyClassName="FeatureSubCompositeFeaturesItemSemanticEditPolicy"
         notationViewFactoryClassName="FeatureSubCompositeFeaturesViewFactory"
@@ -349,13 +351,13 @@
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
-            href="../models/featureModel.genmodel#//featureModel/Feature/subCompositeFeatures"/>
+            href="../models/featureModel.genmodel#//featuremodels/Feature/subCompositeFeatures"/>
       </modelFacet>
       <creationConstraints
           sourceEnd="//@expressionProviders/@providers.0/@expressions.11"/>
     </links>
     <links
-        visualID="4006"
+        visualID="4012"
         editPartClassName="FeatureAttributesEditPart"
         itemSemanticEditPolicyClassName="FeatureAttributesItemSemanticEditPolicy"
         notationViewFactoryClassName="FeatureAttributesViewFactory"
@@ -371,7 +373,7 @@
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
-            href="../models/featureModel.genmodel#//featureModel/Feature/attributes"/>
+            href="../models/featureModel.genmodel#//featuremodels/Feature/attributes"/>
       </modelFacet>
       <creationConstraints
           sourceEnd="//@expressionProviders/@providers.0/@expressions.12"/>

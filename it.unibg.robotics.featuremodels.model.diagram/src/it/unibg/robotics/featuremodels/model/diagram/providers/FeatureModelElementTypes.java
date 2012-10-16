@@ -87,43 +87,52 @@ public class FeatureModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Feature_2001 = getElementType("it.unibg.robotics.featuremodels.model.diagram.Feature_2001"); //$NON-NLS-1$
+	public static final IElementType Feature_2005 = getElementType("it.unibg.robotics.featuremodels.model.diagram.Feature_2005"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Feature_2002 = getElementType("it.unibg.robotics.featuremodels.model.diagram.Feature_2002"); //$NON-NLS-1$
+	public static final IElementType Feature_2006 = getElementType("it.unibg.robotics.featuremodels.model.diagram.Feature_2006"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeFeature_2003 = getElementType("it.unibg.robotics.featuremodels.model.diagram.CompositeFeature_2003"); //$NON-NLS-1$
+	public static final IElementType CompositeFeature_2007 = getElementType("it.unibg.robotics.featuremodels.model.diagram.CompositeFeature_2007"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType SimpleAttribute_2004 = getElementType("it.unibg.robotics.featuremodels.model.diagram.SimpleAttribute_2004"); //$NON-NLS-1$
+	public static final IElementType SimpleAttribute_2008 = getElementType("it.unibg.robotics.featuremodels.model.diagram.SimpleAttribute_2008"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType FeatureSubFeatures_4001 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureSubFeatures_4001"); //$NON-NLS-1$
+	public static final IElementType FeatureSubFeatures_4007 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureSubFeatures_4007"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType FeatureSubFeatures_4002 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureSubFeatures_4002"); //$NON-NLS-1$
+	public static final IElementType FeatureSubFeatures_4008 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureSubFeatures_4008"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeFeatureSubFeatures_4003 = getElementType("it.unibg.robotics.featuremodels.model.diagram.CompositeFeatureSubFeatures_4003"); //$NON-NLS-1$
+	public static final IElementType CompositeFeatureSubFeatures_4009 = getElementType("it.unibg.robotics.featuremodels.model.diagram.CompositeFeatureSubFeatures_4009"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeFeatureSubFeatures_4004 = getElementType("it.unibg.robotics.featuremodels.model.diagram.CompositeFeatureSubFeatures_4004"); //$NON-NLS-1$
+	public static final IElementType CompositeFeatureSubFeatures_4010 = getElementType("it.unibg.robotics.featuremodels.model.diagram.CompositeFeatureSubFeatures_4010"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType FeatureSubCompositeFeatures_4005 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureSubCompositeFeatures_4005"); //$NON-NLS-1$
+	public static final IElementType FeatureSubCompositeFeatures_4011 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureSubCompositeFeatures_4011"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType FeatureAttributes_4006 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureAttributes_4006"); //$NON-NLS-1$
+	public static final IElementType FeatureAttributes_4012 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureAttributes_4012"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -236,46 +245,59 @@ public class FeatureModelElementTypes {
 		if (elements == null) {
 			elements = new IdentityHashMap<IElementType, ENamedElement>();
 
-			elements.put(FeatureModel_1000,
-					featureModel.featureModelPackage.eINSTANCE
+			elements.put(
+					FeatureModel_1000,
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 							.getFeatureModel());
 
-			elements.put(Feature_2001,
-					featureModel.featureModelPackage.eINSTANCE.getFeature());
+			elements.put(
+					Feature_2005,
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+							.getFeature());
 
-			elements.put(Feature_2002,
-					featureModel.featureModelPackage.eINSTANCE.getFeature());
+			elements.put(
+					Feature_2006,
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+							.getFeature());
 
-			elements.put(CompositeFeature_2003,
-					featureModel.featureModelPackage.eINSTANCE
+			elements.put(
+					CompositeFeature_2007,
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 							.getCompositeFeature());
 
-			elements.put(SimpleAttribute_2004,
-					featureModel.featureModelPackage.eINSTANCE
+			elements.put(
+					SimpleAttribute_2008,
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 							.getSimpleAttribute());
 
-			elements.put(FeatureSubFeatures_4001,
-					featureModel.featureModelPackage.eINSTANCE
+			elements.put(
+					FeatureSubFeatures_4007,
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 							.getFeature_SubFeatures());
 
-			elements.put(FeatureSubFeatures_4002,
-					featureModel.featureModelPackage.eINSTANCE
+			elements.put(
+					FeatureSubFeatures_4008,
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 							.getFeature_SubFeatures());
 
-			elements.put(CompositeFeatureSubFeatures_4003,
-					featureModel.featureModelPackage.eINSTANCE
+			elements.put(
+					CompositeFeatureSubFeatures_4009,
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 							.getCompositeFeature_SubFeatures());
 
-			elements.put(CompositeFeatureSubFeatures_4004,
-					featureModel.featureModelPackage.eINSTANCE
+			elements.put(
+					CompositeFeatureSubFeatures_4010,
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 							.getCompositeFeature_SubFeatures());
 
-			elements.put(FeatureSubCompositeFeatures_4005,
-					featureModel.featureModelPackage.eINSTANCE
+			elements.put(
+					FeatureSubCompositeFeatures_4011,
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 							.getFeature_SubCompositeFeatures());
 
-			elements.put(FeatureAttributes_4006,
-					featureModel.featureModelPackage.eINSTANCE
+			elements.put(
+					FeatureAttributes_4012,
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 							.getFeature_Attributes());
 		}
 		return (ENamedElement) elements.get(type);
@@ -295,16 +317,16 @@ public class FeatureModelElementTypes {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(FeatureModel_1000);
-			KNOWN_ELEMENT_TYPES.add(Feature_2001);
-			KNOWN_ELEMENT_TYPES.add(Feature_2002);
-			KNOWN_ELEMENT_TYPES.add(CompositeFeature_2003);
-			KNOWN_ELEMENT_TYPES.add(SimpleAttribute_2004);
-			KNOWN_ELEMENT_TYPES.add(FeatureSubFeatures_4001);
-			KNOWN_ELEMENT_TYPES.add(FeatureSubFeatures_4002);
-			KNOWN_ELEMENT_TYPES.add(CompositeFeatureSubFeatures_4003);
-			KNOWN_ELEMENT_TYPES.add(CompositeFeatureSubFeatures_4004);
-			KNOWN_ELEMENT_TYPES.add(FeatureSubCompositeFeatures_4005);
-			KNOWN_ELEMENT_TYPES.add(FeatureAttributes_4006);
+			KNOWN_ELEMENT_TYPES.add(Feature_2005);
+			KNOWN_ELEMENT_TYPES.add(Feature_2006);
+			KNOWN_ELEMENT_TYPES.add(CompositeFeature_2007);
+			KNOWN_ELEMENT_TYPES.add(SimpleAttribute_2008);
+			KNOWN_ELEMENT_TYPES.add(FeatureSubFeatures_4007);
+			KNOWN_ELEMENT_TYPES.add(FeatureSubFeatures_4008);
+			KNOWN_ELEMENT_TYPES.add(CompositeFeatureSubFeatures_4009);
+			KNOWN_ELEMENT_TYPES.add(CompositeFeatureSubFeatures_4010);
+			KNOWN_ELEMENT_TYPES.add(FeatureSubCompositeFeatures_4011);
+			KNOWN_ELEMENT_TYPES.add(FeatureAttributes_4012);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -317,25 +339,25 @@ public class FeatureModelElementTypes {
 		case FeatureModelEditPart.VISUAL_ID:
 			return FeatureModel_1000;
 		case FeatureEditPart.VISUAL_ID:
-			return Feature_2001;
+			return Feature_2005;
 		case Feature2EditPart.VISUAL_ID:
-			return Feature_2002;
+			return Feature_2006;
 		case CompositeFeatureEditPart.VISUAL_ID:
-			return CompositeFeature_2003;
+			return CompositeFeature_2007;
 		case SimpleAttributeEditPart.VISUAL_ID:
-			return SimpleAttribute_2004;
+			return SimpleAttribute_2008;
 		case FeatureSubFeaturesEditPart.VISUAL_ID:
-			return FeatureSubFeatures_4001;
+			return FeatureSubFeatures_4007;
 		case FeatureSubFeatures2EditPart.VISUAL_ID:
-			return FeatureSubFeatures_4002;
+			return FeatureSubFeatures_4008;
 		case CompositeFeatureSubFeaturesEditPart.VISUAL_ID:
-			return CompositeFeatureSubFeatures_4003;
+			return CompositeFeatureSubFeatures_4009;
 		case CompositeFeatureSubFeatures2EditPart.VISUAL_ID:
-			return CompositeFeatureSubFeatures_4004;
+			return CompositeFeatureSubFeatures_4010;
 		case FeatureSubCompositeFeaturesEditPart.VISUAL_ID:
-			return FeatureSubCompositeFeatures_4005;
+			return FeatureSubCompositeFeatures_4011;
 		case FeatureAttributesEditPart.VISUAL_ID:
-			return FeatureAttributes_4006;
+			return FeatureAttributes_4012;
 		}
 		return null;
 	}

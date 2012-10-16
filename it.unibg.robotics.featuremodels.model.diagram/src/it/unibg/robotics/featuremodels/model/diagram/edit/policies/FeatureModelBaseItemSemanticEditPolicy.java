@@ -25,6 +25,9 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.policies;
 
+import it.unibg.robotics.featuremodels.Attribute;
+import it.unibg.robotics.featuremodels.CompositeFeature;
+import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.model.diagram.expressions.FeatureModelOCLFactory;
 import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditorPlugin;
 import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelVisualIDRegistry;
@@ -351,8 +354,8 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateFeatureSubFeatures_4001(
-				featureModel.Feature source, featureModel.Feature target) {
+		public boolean canCreateFeatureSubFeatures_4007(Feature source,
+				Feature target) {
 			if (source != null) {
 				if (source.getSubFeatures().contains(target)) {
 					return false;
@@ -365,14 +368,14 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				return false;
 			}
 
-			return canExistFeatureSubFeatures_4001(source, target);
+			return canExistFeatureSubFeatures_4007(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateFeatureSubFeatures_4002(
-				featureModel.Feature source, featureModel.Feature target) {
+		public boolean canCreateFeatureSubFeatures_4008(Feature source,
+				Feature target) {
 			if (source != null) {
 				if (source.getSubFeatures().contains(target)) {
 					return false;
@@ -385,15 +388,14 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				return false;
 			}
 
-			return canExistFeatureSubFeatures_4002(source, target);
+			return canExistFeatureSubFeatures_4008(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateCompositeFeatureSubFeatures_4003(
-				featureModel.CompositeFeature source,
-				featureModel.Feature target) {
+		public boolean canCreateCompositeFeatureSubFeatures_4009(
+				CompositeFeature source, Feature target) {
 			if (source != null) {
 				if (source.getSubFeatures().contains(target)) {
 					return false;
@@ -406,15 +408,14 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				return false;
 			}
 
-			return canExistCompositeFeatureSubFeatures_4003(source, target);
+			return canExistCompositeFeatureSubFeatures_4009(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateCompositeFeatureSubFeatures_4004(
-				featureModel.CompositeFeature source,
-				featureModel.Feature target) {
+		public boolean canCreateCompositeFeatureSubFeatures_4010(
+				CompositeFeature source, Feature target) {
 			if (source != null) {
 				if (source.getSubFeatures().contains(target)) {
 					return false;
@@ -427,15 +428,14 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				return false;
 			}
 
-			return canExistCompositeFeatureSubFeatures_4004(source, target);
+			return canExistCompositeFeatureSubFeatures_4010(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateFeatureSubCompositeFeatures_4005(
-				featureModel.Feature source,
-				featureModel.CompositeFeature target) {
+		public boolean canCreateFeatureSubCompositeFeatures_4011(
+				Feature source, CompositeFeature target) {
 			if (source != null) {
 				if (source.getSubCompositeFeatures().contains(target)) {
 					return false;
@@ -448,14 +448,14 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				return false;
 			}
 
-			return canExistFeatureSubCompositeFeatures_4005(source, target);
+			return canExistFeatureSubCompositeFeatures_4011(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateFeatureAttributes_4006(
-				featureModel.Feature source, featureModel.Attribute target) {
+		public boolean canCreateFeatureAttributes_4012(Feature source,
+				Attribute target) {
 			if (source != null) {
 				if (source.getAttributes().contains(target)) {
 					return false;
@@ -465,26 +465,29 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				}
 			}
 
-			return canExistFeatureAttributes_4006(source, target);
+			return canExistFeatureAttributes_4012(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canExistFeatureSubFeatures_4001(
-				featureModel.Feature source, featureModel.Feature target) {
+		public boolean canExistFeatureSubFeatures_4007(Feature source,
+				Feature target) {
 			try {
 				if (source == null) {
 					return true;
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", featureModel.featureModelPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
-					Object sourceVal = FeatureModelOCLFactory.getExpression(
-							3,
-							featureModel.featureModelPackage.eINSTANCE
-									.getFeature(), env).evaluate(source,
-							Collections.singletonMap("oppositeEnd", target)); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
+					Object sourceVal = FeatureModelOCLFactory
+							.getExpression(
+									3,
+									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+											.getFeature(), env).evaluate(
+									source,
+									Collections.singletonMap(
+											"oppositeEnd", target)); //$NON-NLS-1$
 					if (false == sourceVal instanceof Boolean
 							|| !((Boolean) sourceVal).booleanValue()) {
 						return false;
@@ -495,12 +498,15 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", featureModel.featureModelPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
-					Object targetVal = FeatureModelOCLFactory.getExpression(
-							4,
-							featureModel.featureModelPackage.eINSTANCE
-									.getFeature(), env).evaluate(target,
-							Collections.singletonMap("oppositeEnd", source)); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
+					Object targetVal = FeatureModelOCLFactory
+							.getExpression(
+									4,
+									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+											.getFeature(), env).evaluate(
+									target,
+									Collections.singletonMap(
+											"oppositeEnd", source)); //$NON-NLS-1$
 					if (false == targetVal instanceof Boolean
 							|| !((Boolean) targetVal).booleanValue()) {
 						return false;
@@ -517,20 +523,23 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistFeatureSubFeatures_4002(
-				featureModel.Feature source, featureModel.Feature target) {
+		public boolean canExistFeatureSubFeatures_4008(Feature source,
+				Feature target) {
 			try {
 				if (source == null) {
 					return true;
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", featureModel.featureModelPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
-					Object sourceVal = FeatureModelOCLFactory.getExpression(
-							5,
-							featureModel.featureModelPackage.eINSTANCE
-									.getFeature(), env).evaluate(source,
-							Collections.singletonMap("oppositeEnd", target)); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
+					Object sourceVal = FeatureModelOCLFactory
+							.getExpression(
+									5,
+									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+											.getFeature(), env).evaluate(
+									source,
+									Collections.singletonMap(
+											"oppositeEnd", target)); //$NON-NLS-1$
 					if (false == sourceVal instanceof Boolean
 							|| !((Boolean) sourceVal).booleanValue()) {
 						return false;
@@ -541,12 +550,15 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", featureModel.featureModelPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
-					Object targetVal = FeatureModelOCLFactory.getExpression(
-							6,
-							featureModel.featureModelPackage.eINSTANCE
-									.getFeature(), env).evaluate(target,
-							Collections.singletonMap("oppositeEnd", source)); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
+					Object targetVal = FeatureModelOCLFactory
+							.getExpression(
+									6,
+									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+											.getFeature(), env).evaluate(
+									target,
+									Collections.singletonMap(
+											"oppositeEnd", source)); //$NON-NLS-1$
 					if (false == targetVal instanceof Boolean
 							|| !((Boolean) targetVal).booleanValue()) {
 						return false;
@@ -563,22 +575,24 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistCompositeFeatureSubFeatures_4003(
-				featureModel.CompositeFeature source,
-				featureModel.Feature target) {
+		public boolean canExistCompositeFeatureSubFeatures_4009(
+				CompositeFeature source, Feature target) {
 			try {
 				if (source == null) {
 					return true;
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", featureModel.featureModelPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
-					Object sourceVal = FeatureModelOCLFactory.getExpression(
-							7,
-							featureModel.featureModelPackage.eINSTANCE
-									.getCompositeFeature(), env).evaluate(
-							source,
-							Collections.singletonMap("oppositeEnd", target)); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
+					Object sourceVal = FeatureModelOCLFactory
+							.getExpression(
+									7,
+									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+											.getCompositeFeature(), env)
+							.evaluate(
+									source,
+									Collections.singletonMap(
+											"oppositeEnd", target)); //$NON-NLS-1$
 					if (false == sourceVal instanceof Boolean
 							|| !((Boolean) sourceVal).booleanValue()) {
 						return false;
@@ -589,12 +603,15 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", featureModel.featureModelPackage.eINSTANCE.getCompositeFeature()); //$NON-NLS-1$
-					Object targetVal = FeatureModelOCLFactory.getExpression(
-							8,
-							featureModel.featureModelPackage.eINSTANCE
-									.getFeature(), env).evaluate(target,
-							Collections.singletonMap("oppositeEnd", source)); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getCompositeFeature()); //$NON-NLS-1$
+					Object targetVal = FeatureModelOCLFactory
+							.getExpression(
+									8,
+									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+											.getFeature(), env).evaluate(
+									target,
+									Collections.singletonMap(
+											"oppositeEnd", source)); //$NON-NLS-1$
 					if (false == targetVal instanceof Boolean
 							|| !((Boolean) targetVal).booleanValue()) {
 						return false;
@@ -611,22 +628,24 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistCompositeFeatureSubFeatures_4004(
-				featureModel.CompositeFeature source,
-				featureModel.Feature target) {
+		public boolean canExistCompositeFeatureSubFeatures_4010(
+				CompositeFeature source, Feature target) {
 			try {
 				if (source == null) {
 					return true;
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", featureModel.featureModelPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
-					Object sourceVal = FeatureModelOCLFactory.getExpression(
-							9,
-							featureModel.featureModelPackage.eINSTANCE
-									.getCompositeFeature(), env).evaluate(
-							source,
-							Collections.singletonMap("oppositeEnd", target)); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
+					Object sourceVal = FeatureModelOCLFactory
+							.getExpression(
+									9,
+									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+											.getCompositeFeature(), env)
+							.evaluate(
+									source,
+									Collections.singletonMap(
+											"oppositeEnd", target)); //$NON-NLS-1$
 					if (false == sourceVal instanceof Boolean
 							|| !((Boolean) sourceVal).booleanValue()) {
 						return false;
@@ -637,12 +656,15 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", featureModel.featureModelPackage.eINSTANCE.getCompositeFeature()); //$NON-NLS-1$
-					Object targetVal = FeatureModelOCLFactory.getExpression(
-							10,
-							featureModel.featureModelPackage.eINSTANCE
-									.getFeature(), env).evaluate(target,
-							Collections.singletonMap("oppositeEnd", source)); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getCompositeFeature()); //$NON-NLS-1$
+					Object targetVal = FeatureModelOCLFactory
+							.getExpression(
+									10,
+									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+											.getFeature(), env).evaluate(
+									target,
+									Collections.singletonMap(
+											"oppositeEnd", source)); //$NON-NLS-1$
 					if (false == targetVal instanceof Boolean
 							|| !((Boolean) targetVal).booleanValue()) {
 						return false;
@@ -659,21 +681,23 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistFeatureSubCompositeFeatures_4005(
-				featureModel.Feature source,
-				featureModel.CompositeFeature target) {
+		public boolean canExistFeatureSubCompositeFeatures_4011(Feature source,
+				CompositeFeature target) {
 			try {
 				if (source == null) {
 					return true;
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", featureModel.featureModelPackage.eINSTANCE.getCompositeFeature()); //$NON-NLS-1$
-					Object sourceVal = FeatureModelOCLFactory.getExpression(
-							11,
-							featureModel.featureModelPackage.eINSTANCE
-									.getFeature(), env).evaluate(source,
-							Collections.singletonMap("oppositeEnd", target)); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getCompositeFeature()); //$NON-NLS-1$
+					Object sourceVal = FeatureModelOCLFactory
+							.getExpression(
+									11,
+									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+											.getFeature(), env).evaluate(
+									source,
+									Collections.singletonMap(
+											"oppositeEnd", target)); //$NON-NLS-1$
 					if (false == sourceVal instanceof Boolean
 							|| !((Boolean) sourceVal).booleanValue()) {
 						return false;
@@ -690,20 +714,23 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistFeatureAttributes_4006(
-				featureModel.Feature source, featureModel.Attribute target) {
+		public boolean canExistFeatureAttributes_4012(Feature source,
+				Attribute target) {
 			try {
 				if (source == null) {
 					return true;
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", featureModel.featureModelPackage.eINSTANCE.getAttribute()); //$NON-NLS-1$
-					Object sourceVal = FeatureModelOCLFactory.getExpression(
-							12,
-							featureModel.featureModelPackage.eINSTANCE
-									.getFeature(), env).evaluate(source,
-							Collections.singletonMap("oppositeEnd", target)); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getAttribute()); //$NON-NLS-1$
+					Object sourceVal = FeatureModelOCLFactory
+							.getExpression(
+									12,
+									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+											.getFeature(), env).evaluate(
+									source,
+									Collections.singletonMap(
+											"oppositeEnd", target)); //$NON-NLS-1$
 					if (false == sourceVal instanceof Boolean
 							|| !((Boolean) sourceVal).booleanValue()) {
 						return false;

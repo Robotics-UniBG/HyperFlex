@@ -45,7 +45,7 @@ public class FeatureSubFeaturesEditPart extends ConnectionNodeEditPart
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 4001;
+	public static final int VISUAL_ID = 4007;
 
 	/**
 	 * @generated

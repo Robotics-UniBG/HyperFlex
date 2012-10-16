@@ -25,6 +25,7 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.commands;
 
+import it.unibg.robotics.featuremodels.CompositeFeature;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -82,7 +83,7 @@ public class CompositeFeatureCreateCommand extends EditElementCommand {
 		// 	return null;
 		// }
 		Resource resource = getElementToEdit().eResource();
-		featureModel.CompositeFeature newElement = featureModel.featureModelFactory.eINSTANCE
+		CompositeFeature newElement = it.unibg.robotics.featuremodels.featuremodelsFactory.eINSTANCE
 				.createCompositeFeature();
 
 		resource.getContents().add(newElement);
@@ -96,7 +97,7 @@ public class CompositeFeatureCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(featureModel.CompositeFeature newElement,
+	protected void doConfigure(CompositeFeature newElement,
 			IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())

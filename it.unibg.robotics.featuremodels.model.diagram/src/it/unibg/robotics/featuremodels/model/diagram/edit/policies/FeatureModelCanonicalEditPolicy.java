@@ -25,8 +25,8 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.policies;
 
-import featureModel.impl.CompositeFeatureImpl;
-import featureModel.impl.FeatureImpl;
+import it.unibg.robotics.featuremodels.impl.CompositeFeatureImpl;
+import it.unibg.robotics.featuremodels.impl.FeatureImpl;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeaturesEditPart;
@@ -101,7 +101,7 @@ public class FeatureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 	 * @generated
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return featureModel.featureModelPackage.eINSTANCE
+		return it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 				.getFeatureModel_RootFeature();
 	}
 
@@ -398,7 +398,7 @@ public class FeatureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case FeatureEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(FeatureModelDiagramUpdater
-						.getFeature_2001ContainedLinks(view));
+						.getFeature_2005ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -406,7 +406,7 @@ public class FeatureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case Feature2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(FeatureModelDiagramUpdater
-						.getFeature_2002ContainedLinks(view));
+						.getFeature_2006ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -414,7 +414,7 @@ public class FeatureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeFeatureEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(FeatureModelDiagramUpdater
-						.getCompositeFeature_2003ContainedLinks(view));
+						.getCompositeFeature_2007ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -422,7 +422,7 @@ public class FeatureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case SimpleAttributeEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(FeatureModelDiagramUpdater
-						.getSimpleAttribute_2004ContainedLinks(view));
+						.getSimpleAttribute_2008ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

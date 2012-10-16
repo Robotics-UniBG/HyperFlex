@@ -25,6 +25,8 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.commands;
 
+import it.unibg.robotics.featuremodels.Feature;
+import it.unibg.robotics.featuremodels.FeatureModel;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -66,7 +68,7 @@ public class FeatureCreateCommand extends EditElementCommand {
 	 * @generated
 	 */
 	public boolean canExecute() {
-		featureModel.FeatureModel container = (featureModel.FeatureModel) getElementToEdit();
+		FeatureModel container = (FeatureModel) getElementToEdit();
 		if (container.getRootFeature() != null) {
 			return false;
 		}
@@ -79,10 +81,10 @@ public class FeatureCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		featureModel.Feature newElement = featureModel.featureModelFactory.eINSTANCE
+		it.unibg.robotics.featuremodels.Feature newElement = it.unibg.robotics.featuremodels.featuremodelsFactory.eINSTANCE
 				.createFeature();
 
-		featureModel.FeatureModel owner = (featureModel.FeatureModel) getElementToEdit();
+		it.unibg.robotics.featuremodels.FeatureModel owner = (it.unibg.robotics.featuremodels.FeatureModel) getElementToEdit();
 		owner.setRootFeature(newElement);
 		newElement.setRoot(true);
 
@@ -95,9 +97,8 @@ public class FeatureCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(featureModel.Feature newElement,
-			IProgressMonitor monitor, IAdaptable info)
-			throws ExecutionException {
+	protected void doConfigure(Feature newElement, IProgressMonitor monitor,
+			IAdaptable info) throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())
 				.getElementType();
 		ConfigureRequest configureRequest = new ConfigureRequest(

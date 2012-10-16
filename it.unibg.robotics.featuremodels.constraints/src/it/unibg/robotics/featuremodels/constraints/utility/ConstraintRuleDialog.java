@@ -25,6 +25,9 @@
  */
 package it.unibg.robotics.featuremodels.constraints.utility;
 
+import it.unibg.robotics.featuremodels.Feature;
+import it.unibg.robotics.featuremodels.FeatureModel;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -46,8 +49,6 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
-import featureModel.Feature;
-import featureModel.FeatureModel;
 
 public class ConstraintRuleDialog extends Dialog implements Listener, MouseListener, KeyListener{
 

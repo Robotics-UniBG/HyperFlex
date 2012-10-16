@@ -31,8 +31,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http://robotics.unibg.it/featureModel"
-            class="featureModel.provider.featureModelItemProviderAdapterFactory"
+            uri="http://robotics.unibg.it/featuremodels"
+            class="it.unibg.robotics.featuremodels.provider.featuremodelsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

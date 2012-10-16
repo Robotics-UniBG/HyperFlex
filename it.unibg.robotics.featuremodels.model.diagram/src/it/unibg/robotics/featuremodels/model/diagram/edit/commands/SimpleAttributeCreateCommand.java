@@ -25,6 +25,7 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.commands;
 
+import it.unibg.robotics.featuremodels.SimpleAttribute;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -82,7 +83,7 @@ public class SimpleAttributeCreateCommand extends EditElementCommand {
 		// 	return null;
 		// }
 		Resource resource = getElementToEdit().eResource();
-		featureModel.SimpleAttribute newElement = featureModel.featureModelFactory.eINSTANCE
+		SimpleAttribute newElement = it.unibg.robotics.featuremodels.featuremodelsFactory.eINSTANCE
 				.createSimpleAttribute();
 
 		resource.getContents().add(newElement);
@@ -96,7 +97,7 @@ public class SimpleAttributeCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(featureModel.SimpleAttribute newElement,
+	protected void doConfigure(SimpleAttribute newElement,
 			IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())

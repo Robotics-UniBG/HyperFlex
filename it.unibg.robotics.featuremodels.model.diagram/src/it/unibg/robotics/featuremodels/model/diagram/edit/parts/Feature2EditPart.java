@@ -25,9 +25,9 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.parts;
 
-import featureModel.Feature;
-import featureModel.FeatureModel;
-import featureModel.Instance;
+import it.unibg.robotics.featuremodels.Feature;
+import it.unibg.robotics.featuremodels.FeatureModel;
+import it.unibg.robotics.featuremodels.Instance;
 import it.unibg.robotics.featuremodels.model.diagram.edit.policies.Feature2CanonicalEditPolicy;
 import it.unibg.robotics.featuremodels.model.diagram.edit.policies.Feature2ItemSemanticEditPolicy;
 import it.unibg.robotics.featuremodels.model.diagram.edit.policies.FeatureModelCanonicalEditPolicy;
@@ -78,7 +78,7 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2002;
+	public static final int VISUAL_ID = 2006;
 
 	/**
 	 * @generated
@@ -301,10 +301,10 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-		types.add(FeatureModelElementTypes.FeatureSubFeatures_4001);
-		types.add(FeatureModelElementTypes.FeatureSubFeatures_4002);
-		types.add(FeatureModelElementTypes.FeatureSubCompositeFeatures_4005);
-		types.add(FeatureModelElementTypes.FeatureAttributes_4006);
+		types.add(FeatureModelElementTypes.FeatureSubFeatures_4007);
+		types.add(FeatureModelElementTypes.FeatureSubFeatures_4008);
+		types.add(FeatureModelElementTypes.FeatureSubCompositeFeatures_4011);
+		types.add(FeatureModelElementTypes.FeatureAttributes_4012);
 		return types;
 	}
 
@@ -315,22 +315,22 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof FeatureEditPart) {
-			types.add(FeatureModelElementTypes.FeatureSubFeatures_4001);
+			types.add(FeatureModelElementTypes.FeatureSubFeatures_4007);
 		}
 		if (targetEditPart instanceof it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart) {
-			types.add(FeatureModelElementTypes.FeatureSubFeatures_4001);
+			types.add(FeatureModelElementTypes.FeatureSubFeatures_4007);
 		}
 		if (targetEditPart instanceof FeatureEditPart) {
-			types.add(FeatureModelElementTypes.FeatureSubFeatures_4002);
+			types.add(FeatureModelElementTypes.FeatureSubFeatures_4008);
 		}
 		if (targetEditPart instanceof it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart) {
-			types.add(FeatureModelElementTypes.FeatureSubFeatures_4002);
+			types.add(FeatureModelElementTypes.FeatureSubFeatures_4008);
 		}
 		if (targetEditPart instanceof CompositeFeatureEditPart) {
-			types.add(FeatureModelElementTypes.FeatureSubCompositeFeatures_4005);
+			types.add(FeatureModelElementTypes.FeatureSubCompositeFeatures_4011);
 		}
 		if (targetEditPart instanceof SimpleAttributeEditPart) {
-			types.add(FeatureModelElementTypes.FeatureAttributes_4006);
+			types.add(FeatureModelElementTypes.FeatureAttributes_4012);
 		}
 		return types;
 	}
@@ -340,16 +340,16 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == FeatureModelElementTypes.FeatureSubFeatures_4001) {
-			types.add(FeatureModelElementTypes.Feature_2001);
-			types.add(FeatureModelElementTypes.Feature_2002);
-		} else if (relationshipType == FeatureModelElementTypes.FeatureSubFeatures_4002) {
-			types.add(FeatureModelElementTypes.Feature_2001);
-			types.add(FeatureModelElementTypes.Feature_2002);
-		} else if (relationshipType == FeatureModelElementTypes.FeatureSubCompositeFeatures_4005) {
-			types.add(FeatureModelElementTypes.CompositeFeature_2003);
-		} else if (relationshipType == FeatureModelElementTypes.FeatureAttributes_4006) {
-			types.add(FeatureModelElementTypes.SimpleAttribute_2004);
+		if (relationshipType == FeatureModelElementTypes.FeatureSubFeatures_4007) {
+			types.add(FeatureModelElementTypes.Feature_2005);
+			types.add(FeatureModelElementTypes.Feature_2006);
+		} else if (relationshipType == FeatureModelElementTypes.FeatureSubFeatures_4008) {
+			types.add(FeatureModelElementTypes.Feature_2005);
+			types.add(FeatureModelElementTypes.Feature_2006);
+		} else if (relationshipType == FeatureModelElementTypes.FeatureSubCompositeFeatures_4011) {
+			types.add(FeatureModelElementTypes.CompositeFeature_2007);
+		} else if (relationshipType == FeatureModelElementTypes.FeatureAttributes_4012) {
+			types.add(FeatureModelElementTypes.SimpleAttribute_2008);
 		}
 		return types;
 	}
@@ -359,10 +359,10 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnTarget() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-		types.add(FeatureModelElementTypes.FeatureSubFeatures_4001);
-		types.add(FeatureModelElementTypes.FeatureSubFeatures_4002);
-		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4003);
-		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4004);
+		types.add(FeatureModelElementTypes.FeatureSubFeatures_4007);
+		types.add(FeatureModelElementTypes.FeatureSubFeatures_4008);
+		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4009);
+		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4010);
 		return types;
 	}
 
@@ -371,16 +371,16 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == FeatureModelElementTypes.FeatureSubFeatures_4001) {
-			types.add(FeatureModelElementTypes.Feature_2001);
-			types.add(FeatureModelElementTypes.Feature_2002);
-		} else if (relationshipType == FeatureModelElementTypes.FeatureSubFeatures_4002) {
-			types.add(FeatureModelElementTypes.Feature_2001);
-			types.add(FeatureModelElementTypes.Feature_2002);
-		} else if (relationshipType == FeatureModelElementTypes.CompositeFeatureSubFeatures_4003) {
-			types.add(FeatureModelElementTypes.CompositeFeature_2003);
-		} else if (relationshipType == FeatureModelElementTypes.CompositeFeatureSubFeatures_4004) {
-			types.add(FeatureModelElementTypes.CompositeFeature_2003);
+		if (relationshipType == FeatureModelElementTypes.FeatureSubFeatures_4007) {
+			types.add(FeatureModelElementTypes.Feature_2005);
+			types.add(FeatureModelElementTypes.Feature_2006);
+		} else if (relationshipType == FeatureModelElementTypes.FeatureSubFeatures_4008) {
+			types.add(FeatureModelElementTypes.Feature_2005);
+			types.add(FeatureModelElementTypes.Feature_2006);
+		} else if (relationshipType == FeatureModelElementTypes.CompositeFeatureSubFeatures_4009) {
+			types.add(FeatureModelElementTypes.CompositeFeature_2007);
+		} else if (relationshipType == FeatureModelElementTypes.CompositeFeatureSubFeatures_4010) {
+			types.add(FeatureModelElementTypes.CompositeFeature_2007);
 		}
 		return types;
 	}

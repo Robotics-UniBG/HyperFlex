@@ -77,7 +77,7 @@ public class Feature2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public Feature2ItemSemanticEditPolicy() {
-		super(FeatureModelElementTypes.Feature_2002);
+		super(FeatureModelElementTypes.Feature_2006);
 	}
 
 	/**
@@ -289,30 +289,30 @@ public class Feature2ItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (FeatureModelElementTypes.FeatureSubFeatures_4001 == req
+		if (FeatureModelElementTypes.FeatureSubFeatures_4007 == req
 				.getElementType()) {
 			return getGEFWrapper(new FeatureSubFeaturesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.FeatureSubFeatures_4002 == req
+		if (FeatureModelElementTypes.FeatureSubFeatures_4008 == req
 				.getElementType()) {
 			return getGEFWrapper(new FeatureSubFeatures2CreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4003 == req
+		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4009 == req
 				.getElementType()) {
 			return null;
 		}
-		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4004 == req
+		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4010 == req
 				.getElementType()) {
 			return null;
 		}
-		if (FeatureModelElementTypes.FeatureSubCompositeFeatures_4005 == req
+		if (FeatureModelElementTypes.FeatureSubCompositeFeatures_4011 == req
 				.getElementType()) {
 			return getGEFWrapper(new FeatureSubCompositeFeaturesCreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.FeatureAttributes_4006 == req
+		if (FeatureModelElementTypes.FeatureAttributes_4012 == req
 				.getElementType()) {
 			return getGEFWrapper(new FeatureAttributesCreateCommand(req,
 					req.getSource(), req.getTarget()));
@@ -325,31 +325,31 @@ public class Feature2ItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (FeatureModelElementTypes.FeatureSubFeatures_4001 == req
+		if (FeatureModelElementTypes.FeatureSubFeatures_4007 == req
 				.getElementType()) {
 			return getGEFWrapper(new FeatureSubFeaturesCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.FeatureSubFeatures_4002 == req
+		if (FeatureModelElementTypes.FeatureSubFeatures_4008 == req
 				.getElementType()) {
 			return getGEFWrapper(new FeatureSubFeatures2CreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4003 == req
+		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4009 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeFeatureSubFeaturesCreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4004 == req
+		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4010 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeFeatureSubFeatures2CreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.FeatureSubCompositeFeatures_4005 == req
+		if (FeatureModelElementTypes.FeatureSubCompositeFeatures_4011 == req
 				.getElementType()) {
 			return null;
 		}
-		if (FeatureModelElementTypes.FeatureAttributes_4006 == req
+		if (FeatureModelElementTypes.FeatureAttributes_4012 == req
 				.getElementType()) {
 			return null;
 		}

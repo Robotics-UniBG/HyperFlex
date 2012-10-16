@@ -146,7 +146,7 @@ public class FeatureModelDiagramEditorPlugin extends AbstractUIPlugin {
 	 */
 	protected void fillItemProviderFactories(List<AdapterFactory> factories) {
 		factories
-				.add(new featureModel.provider.featureModelItemProviderAdapterFactory());
+				.add(new it.unibg.robotics.featuremodels.provider.featuremodelsItemProviderAdapterFactory());
 		factories.add(new ResourceItemProviderAdapterFactory());
 		factories.add(new ReflectiveItemProviderAdapterFactory());
 	}

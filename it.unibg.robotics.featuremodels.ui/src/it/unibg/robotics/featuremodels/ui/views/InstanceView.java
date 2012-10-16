@@ -1,6 +1,11 @@
 package it.unibg.robotics.featuremodels.ui.views;
 
 
+import it.unibg.robotics.featuremodels.CompositeFeature;
+import it.unibg.robotics.featuremodels.Feature;
+import it.unibg.robotics.featuremodels.FeatureModel;
+import it.unibg.robotics.featuremodels.Instance;
+import it.unibg.robotics.featuremodels.featuremodelsFactory;
 import it.unibg.robotics.featuremodels.constraints.utility.ConstraintChecker;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
@@ -52,11 +57,6 @@ import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
-import featureModel.CompositeFeature;
-import featureModel.Feature;
-import featureModel.FeatureModel;
-import featureModel.Instance;
-import featureModel.featureModelFactory;
 
 
 /**
@@ -392,7 +392,7 @@ public class InstanceView extends ViewPart implements ISelectionListener, Proper
 			@SuppressWarnings("unchecked")
 			@Override
 			protected void doExecute() {
-				Instance instance = featureModelFactory.eINSTANCE.createInstance();
+				Instance instance = featuremodelsFactory.eINSTANCE.createInstance();
 				model.getInstances().add(instance);
 				instance.setId(id);
 				instance.setDescritpion(instDescription);

@@ -25,6 +25,9 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.part;
 
+import it.unibg.robotics.featuremodels.CompositeFeature;
+import it.unibg.robotics.featuremodels.Feature;
+import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureLowerBoundUpperBoundEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
@@ -118,9 +121,9 @@ public class FeatureModelVisualIDRegistry {
 		if (domainElement == null) {
 			return -1;
 		}
-		if (featureModel.featureModelPackage.eINSTANCE.getFeatureModel()
-				.isSuperTypeOf(domainElement.eClass())
-				&& isDiagram((featureModel.FeatureModel) domainElement)) {
+		if (it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+				.getFeatureModel().isSuperTypeOf(domainElement.eClass())
+				&& isDiagram((FeatureModel) domainElement)) {
 			return FeatureModelEditPart.VISUAL_ID;
 		}
 		return -1;
@@ -151,24 +154,24 @@ public class FeatureModelVisualIDRegistry {
 		}
 		switch (containerVisualID) {
 		case FeatureModelEditPart.VISUAL_ID:
-			if (featureModel.featureModelPackage.eINSTANCE.getFeature()
-					.isSuperTypeOf(domainElement.eClass())
-					&& isFeature_2001((featureModel.Feature) domainElement)) {
+			if (it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+					.getFeature().isSuperTypeOf(domainElement.eClass())
+					&& isFeature_2005((Feature) domainElement)) {
 				return FeatureEditPart.VISUAL_ID;
 			}
-			if (featureModel.featureModelPackage.eINSTANCE.getFeature()
-					.isSuperTypeOf(domainElement.eClass())
-					&& isFeature_2002((featureModel.Feature) domainElement)) {
+			if (it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+					.getFeature().isSuperTypeOf(domainElement.eClass())
+					&& isFeature_2006((Feature) domainElement)) {
 				return Feature2EditPart.VISUAL_ID;
 			}
-			if (featureModel.featureModelPackage.eINSTANCE
+			if (it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 					.getCompositeFeature()
 					.isSuperTypeOf(domainElement.eClass())
-					&& isCompositeFeature_2003((featureModel.CompositeFeature) domainElement)) {
+					&& isCompositeFeature_2007((CompositeFeature) domainElement)) {
 				return CompositeFeatureEditPart.VISUAL_ID;
 			}
-			if (featureModel.featureModelPackage.eINSTANCE.getSimpleAttribute()
-					.isSuperTypeOf(domainElement.eClass())) {
+			if (it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+					.getSimpleAttribute().isSuperTypeOf(domainElement.eClass())) {
 				return SimpleAttributeEditPart.VISUAL_ID;
 			}
 			break;
@@ -251,38 +254,40 @@ public class FeatureModelVisualIDRegistry {
 	 * 
 	 * @generated
 	 */
-	private static boolean isDiagram(featureModel.FeatureModel element) {
+	private static boolean isDiagram(FeatureModel element) {
 		return true;
 	}
 
 	/**
 	 * @generated
 	 */
-	private static boolean isFeature_2001(featureModel.Feature domainElement) {
-		Object result = FeatureModelOCLFactory.getExpression(0,
-				featureModel.featureModelPackage.eINSTANCE.getFeature(), null)
-				.evaluate(domainElement);
+	private static boolean isFeature_2005(Feature domainElement) {
+		Object result = FeatureModelOCLFactory.getExpression(
+				0,
+				it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+						.getFeature(), null).evaluate(domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 
 	/**
 	 * @generated
 	 */
-	private static boolean isFeature_2002(featureModel.Feature domainElement) {
-		Object result = FeatureModelOCLFactory.getExpression(1,
-				featureModel.featureModelPackage.eINSTANCE.getFeature(), null)
-				.evaluate(domainElement);
+	private static boolean isFeature_2006(Feature domainElement) {
+		Object result = FeatureModelOCLFactory.getExpression(
+				1,
+				it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+						.getFeature(), null).evaluate(domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 
 	/**
 	 * @generated
 	 */
-	private static boolean isCompositeFeature_2003(
-			featureModel.CompositeFeature domainElement) {
+	private static boolean isCompositeFeature_2007(
+			CompositeFeature domainElement) {
 		Object result = FeatureModelOCLFactory.getExpression(
 				2,
-				featureModel.featureModelPackage.eINSTANCE
+				it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 						.getCompositeFeature(), null).evaluate(domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}

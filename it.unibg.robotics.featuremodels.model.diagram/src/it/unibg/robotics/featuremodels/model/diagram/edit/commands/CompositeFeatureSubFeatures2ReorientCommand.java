@@ -25,6 +25,8 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.commands;
 
+import it.unibg.robotics.featuremodels.CompositeFeature;
+import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.model.diagram.edit.policies.FeatureModelBaseItemSemanticEditPolicy;
 
 import org.eclipse.core.commands.ExecutionException;
@@ -78,7 +80,7 @@ public class CompositeFeatureSubFeatures2ReorientCommand extends
 	 * @generated
 	 */
 	public boolean canExecute() {
-		if (false == referenceOwner instanceof featureModel.CompositeFeature) {
+		if (false == referenceOwner instanceof CompositeFeature) {
 			return false;
 		}
 		if (reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
@@ -94,11 +96,11 @@ public class CompositeFeatureSubFeatures2ReorientCommand extends
 	 * @generated
 	 */
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof featureModel.Feature && newEnd instanceof featureModel.CompositeFeature)) {
+		if (!(oldEnd instanceof Feature && newEnd instanceof CompositeFeature)) {
 			return false;
 		}
 		return FeatureModelBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistCompositeFeatureSubFeatures_4004(getNewSource(),
+				.canExistCompositeFeatureSubFeatures_4010(getNewSource(),
 						getOldTarget());
 	}
 
@@ -106,11 +108,11 @@ public class CompositeFeatureSubFeatures2ReorientCommand extends
 	 * @generated
 	 */
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof featureModel.Feature && newEnd instanceof featureModel.Feature)) {
+		if (!(oldEnd instanceof Feature && newEnd instanceof Feature)) {
 			return false;
 		}
 		return FeatureModelBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistCompositeFeatureSubFeatures_4004(getOldSource(),
+				.canExistCompositeFeatureSubFeatures_4010(getOldSource(),
 						getNewTarget());
 	}
 
@@ -153,28 +155,28 @@ public class CompositeFeatureSubFeatures2ReorientCommand extends
 	/**
 	 * @generated
 	 */
-	protected featureModel.CompositeFeature getOldSource() {
-		return (featureModel.CompositeFeature) referenceOwner;
+	protected CompositeFeature getOldSource() {
+		return (CompositeFeature) referenceOwner;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected featureModel.CompositeFeature getNewSource() {
-		return (featureModel.CompositeFeature) newEnd;
+	protected CompositeFeature getNewSource() {
+		return (CompositeFeature) newEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected featureModel.Feature getOldTarget() {
-		return (featureModel.Feature) oldEnd;
+	protected Feature getOldTarget() {
+		return (Feature) oldEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected featureModel.Feature getNewTarget() {
-		return (featureModel.Feature) newEnd;
+	protected Feature getNewTarget() {
+		return (Feature) newEnd;
 	}
 }

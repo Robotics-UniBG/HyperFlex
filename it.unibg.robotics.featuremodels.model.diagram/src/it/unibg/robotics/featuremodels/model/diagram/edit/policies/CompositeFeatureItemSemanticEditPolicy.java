@@ -68,7 +68,7 @@ public class CompositeFeatureItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public CompositeFeatureItemSemanticEditPolicy() {
-		super(FeatureModelElementTypes.CompositeFeature_2003);
+		super(FeatureModelElementTypes.CompositeFeature_2007);
 	}
 
 	/**
@@ -175,17 +175,17 @@ public class CompositeFeatureItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4003 == req
+		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4009 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeFeatureSubFeaturesCreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4004 == req
+		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4010 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeFeatureSubFeatures2CreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.FeatureSubCompositeFeatures_4005 == req
+		if (FeatureModelElementTypes.FeatureSubCompositeFeatures_4011 == req
 				.getElementType()) {
 			return null;
 		}
@@ -197,15 +197,15 @@ public class CompositeFeatureItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4003 == req
+		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4009 == req
 				.getElementType()) {
 			return null;
 		}
-		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4004 == req
+		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4010 == req
 				.getElementType()) {
 			return null;
 		}
-		if (FeatureModelElementTypes.FeatureSubCompositeFeatures_4005 == req
+		if (FeatureModelElementTypes.FeatureSubCompositeFeatures_4011 == req
 				.getElementType()) {
 			return getGEFWrapper(new FeatureSubCompositeFeaturesCreateCommand(
 					req, req.getSource(), req.getTarget()));

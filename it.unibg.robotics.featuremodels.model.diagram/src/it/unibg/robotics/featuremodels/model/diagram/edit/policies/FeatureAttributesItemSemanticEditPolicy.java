@@ -47,7 +47,7 @@ public class FeatureAttributesItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public FeatureAttributesItemSemanticEditPolicy() {
-		super(FeatureModelElementTypes.FeatureAttributes_4006);
+		super(FeatureModelElementTypes.FeatureAttributes_4012);
 	}
 
 	/**

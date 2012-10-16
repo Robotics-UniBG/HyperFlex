@@ -1,6 +1,11 @@
 package it.unibg.robotics.featuremodels.ui.views;
 
 
+import it.unibg.robotics.featuremodels.Constraint;
+import it.unibg.robotics.featuremodels.ConstraintType;
+import it.unibg.robotics.featuremodels.FeatureModel;
+import it.unibg.robotics.featuremodels.Instance;
+import it.unibg.robotics.featuremodels.featuremodelsFactory;
 import it.unibg.robotics.featuremodels.constraints.utility.ConstraintChecker;
 import it.unibg.robotics.featuremodels.constraints.utility.ConstraintRuleDialog;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
@@ -45,11 +50,6 @@ import org.eclipse.ui.IWorkbenchActionConstants;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
-import featureModel.Constraint;
-import featureModel.ConstraintType;
-import featureModel.FeatureModel;
-import featureModel.Instance;
-import featureModel.featureModelFactory;
 
 
 /**
@@ -355,7 +355,7 @@ public class ConstraintView extends ViewPart implements PropertyChangeListener{
 				@SuppressWarnings("unchecked")
 				@Override
 				protected void doExecute() {
-					Constraint newConstraint = featureModelFactory.eINSTANCE.createConstraint();
+					Constraint newConstraint = featuremodelsFactory.eINSTANCE.createConstraint();
 					newConstraint.setRule(rule);
 					newConstraint.setName(name);
 					if (rule.contains("REQUIRES"))

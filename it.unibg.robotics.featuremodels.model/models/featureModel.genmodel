@@ -5,7 +5,8 @@
     modelName="FeatureModel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
     copyrightFields="false" language="English">
   <foreignModel>featureModel.ecore</foreignModel>
-  <genPackages prefix="featureModel" disposableProviderFactory="true" ecorePackage="featureModel.ecore#/">
+  <genPackages prefix="featuremodels" basePackage="it.unibg.robotics" disposableProviderFactory="true"
+      fileExtensions="featuremodel" ecorePackage="featureModel.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="featureModel.ecore#//ConstraintType">
       <genEnumLiterals ecoreEnumLiteral="featureModel.ecore#//ConstraintType/EXCLUDES"/>
       <genEnumLiterals ecoreEnumLiteral="featureModel.ecore#//ConstraintType/REQUIRES"/>

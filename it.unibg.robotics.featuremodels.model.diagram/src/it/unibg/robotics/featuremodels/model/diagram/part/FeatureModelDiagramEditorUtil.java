@@ -25,6 +25,7 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.part;
 
+import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
 
 import java.io.IOException;
@@ -198,7 +199,7 @@ public class FeatureModelDiagramEditorUtil {
 			protected CommandResult doExecuteWithResult(
 					IProgressMonitor monitor, IAdaptable info)
 					throws ExecutionException {
-				featureModel.FeatureModel model = createInitialModel();
+				FeatureModel model = createInitialModel();
 				attachModelToResource(model, modelResource);
 
 				Diagram diagram = ViewService
@@ -245,8 +246,9 @@ public class FeatureModelDiagramEditorUtil {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static featureModel.FeatureModel createInitialModel() {
-		return featureModel.featureModelFactory.eINSTANCE.createFeatureModel();
+	private static FeatureModel createInitialModel() {
+		return it.unibg.robotics.featuremodels.featuremodelsFactory.eINSTANCE
+				.createFeatureModel();
 	}
 
 	/**
@@ -255,7 +257,7 @@ public class FeatureModelDiagramEditorUtil {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static void attachModelToResource(featureModel.FeatureModel model,
+	private static void attachModelToResource(FeatureModel model,
 			Resource resource) {
 		resource.getContents().add(model);
 	}

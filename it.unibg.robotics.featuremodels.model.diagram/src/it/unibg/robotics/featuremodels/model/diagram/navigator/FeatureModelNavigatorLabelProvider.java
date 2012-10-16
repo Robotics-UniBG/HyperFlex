@@ -25,6 +25,7 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.navigator;
 
+import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureLowerBoundUpperBoundEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeatures2EditPart;
@@ -120,39 +121,39 @@ public class FeatureModelNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (FeatureModelVisualIDRegistry.getVisualID(view)) {
-		case FeatureEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://robotics.unibg.it/featureModel?Feature", FeatureModelElementTypes.Feature_2001); //$NON-NLS-1$
-		case CompositeFeatureSubFeatures2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://robotics.unibg.it/featureModel?CompositeFeature?subFeatures", FeatureModelElementTypes.CompositeFeatureSubFeatures_4004); //$NON-NLS-1$
-		case FeatureSubFeaturesEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://robotics.unibg.it/featureModel?Feature?subFeatures", FeatureModelElementTypes.FeatureSubFeatures_4001); //$NON-NLS-1$
-		case SimpleAttributeEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://robotics.unibg.it/featureModel?SimpleAttribute", FeatureModelElementTypes.SimpleAttribute_2004); //$NON-NLS-1$
-		case CompositeFeatureEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://robotics.unibg.it/featureModel?CompositeFeature", FeatureModelElementTypes.CompositeFeature_2003); //$NON-NLS-1$
-		case Feature2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://robotics.unibg.it/featureModel?Feature", FeatureModelElementTypes.Feature_2002); //$NON-NLS-1$
-		case CompositeFeatureSubFeaturesEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://robotics.unibg.it/featureModel?CompositeFeature?subFeatures", FeatureModelElementTypes.CompositeFeatureSubFeatures_4003); //$NON-NLS-1$
-		case FeatureAttributesEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://robotics.unibg.it/featureModel?Feature?attributes", FeatureModelElementTypes.FeatureAttributes_4006); //$NON-NLS-1$
-		case FeatureSubCompositeFeaturesEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://robotics.unibg.it/featureModel?Feature?subCompositeFeatures", FeatureModelElementTypes.FeatureSubCompositeFeatures_4005); //$NON-NLS-1$
 		case FeatureModelEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Diagram?http://robotics.unibg.it/featureModel?FeatureModel", FeatureModelElementTypes.FeatureModel_1000); //$NON-NLS-1$
+					"Navigator?Diagram?http://robotics.unibg.it/featuremodels?FeatureModel", FeatureModelElementTypes.FeatureModel_1000); //$NON-NLS-1$
+		case CompositeFeatureSubFeatures2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://robotics.unibg.it/featuremodels?CompositeFeature?subFeatures", FeatureModelElementTypes.CompositeFeatureSubFeatures_4010); //$NON-NLS-1$
+		case Feature2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://robotics.unibg.it/featuremodels?Feature", FeatureModelElementTypes.Feature_2006); //$NON-NLS-1$
+		case CompositeFeatureSubFeaturesEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://robotics.unibg.it/featuremodels?CompositeFeature?subFeatures", FeatureModelElementTypes.CompositeFeatureSubFeatures_4009); //$NON-NLS-1$
+		case FeatureAttributesEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://robotics.unibg.it/featuremodels?Feature?attributes", FeatureModelElementTypes.FeatureAttributes_4012); //$NON-NLS-1$
+		case FeatureSubCompositeFeaturesEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://robotics.unibg.it/featuremodels?Feature?subCompositeFeatures", FeatureModelElementTypes.FeatureSubCompositeFeatures_4011); //$NON-NLS-1$
+		case FeatureSubFeaturesEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://robotics.unibg.it/featuremodels?Feature?subFeatures", FeatureModelElementTypes.FeatureSubFeatures_4007); //$NON-NLS-1$
+		case SimpleAttributeEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://robotics.unibg.it/featuremodels?SimpleAttribute", FeatureModelElementTypes.SimpleAttribute_2008); //$NON-NLS-1$
+		case FeatureEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://robotics.unibg.it/featuremodels?Feature", FeatureModelElementTypes.Feature_2005); //$NON-NLS-1$
+		case CompositeFeatureEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://robotics.unibg.it/featuremodels?CompositeFeature", FeatureModelElementTypes.CompositeFeature_2007); //$NON-NLS-1$
 		case FeatureSubFeatures2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://robotics.unibg.it/featureModel?Feature?subFeatures", FeatureModelElementTypes.FeatureSubFeatures_4002); //$NON-NLS-1$
+					"Navigator?Link?http://robotics.unibg.it/featuremodels?Feature?subFeatures", FeatureModelElementTypes.FeatureSubFeatures_4008); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -205,28 +206,28 @@ public class FeatureModelNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (FeatureModelVisualIDRegistry.getVisualID(view)) {
-		case FeatureEditPart.VISUAL_ID:
-			return getFeature_2001Text(view);
-		case CompositeFeatureSubFeatures2EditPart.VISUAL_ID:
-			return getCompositeFeatureSubFeatures_4004Text(view);
-		case FeatureSubFeaturesEditPart.VISUAL_ID:
-			return getFeatureSubFeatures_4001Text(view);
-		case SimpleAttributeEditPart.VISUAL_ID:
-			return getSimpleAttribute_2004Text(view);
-		case CompositeFeatureEditPart.VISUAL_ID:
-			return getCompositeFeature_2003Text(view);
-		case Feature2EditPart.VISUAL_ID:
-			return getFeature_2002Text(view);
-		case CompositeFeatureSubFeaturesEditPart.VISUAL_ID:
-			return getCompositeFeatureSubFeatures_4003Text(view);
-		case FeatureAttributesEditPart.VISUAL_ID:
-			return getFeatureAttributes_4006Text(view);
-		case FeatureSubCompositeFeaturesEditPart.VISUAL_ID:
-			return getFeatureSubCompositeFeatures_4005Text(view);
 		case FeatureModelEditPart.VISUAL_ID:
 			return getFeatureModel_1000Text(view);
+		case CompositeFeatureSubFeatures2EditPart.VISUAL_ID:
+			return getCompositeFeatureSubFeatures_4010Text(view);
+		case Feature2EditPart.VISUAL_ID:
+			return getFeature_2006Text(view);
+		case CompositeFeatureSubFeaturesEditPart.VISUAL_ID:
+			return getCompositeFeatureSubFeatures_4009Text(view);
+		case FeatureAttributesEditPart.VISUAL_ID:
+			return getFeatureAttributes_4012Text(view);
+		case FeatureSubCompositeFeaturesEditPart.VISUAL_ID:
+			return getFeatureSubCompositeFeatures_4011Text(view);
+		case FeatureSubFeaturesEditPart.VISUAL_ID:
+			return getFeatureSubFeatures_4007Text(view);
+		case SimpleAttributeEditPart.VISUAL_ID:
+			return getSimpleAttribute_2008Text(view);
+		case FeatureEditPart.VISUAL_ID:
+			return getFeature_2005Text(view);
+		case CompositeFeatureEditPart.VISUAL_ID:
+			return getCompositeFeature_2007Text(view);
 		case FeatureSubFeatures2EditPart.VISUAL_ID:
-			return getFeatureSubFeatures_4002Text(view);
+			return getFeatureSubFeatures_4008Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -234,9 +235,30 @@ public class FeatureModelNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getFeature_2001Text(View view) {
+	private String getFeatureSubFeatures_4007Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getFeatureAttributes_4012Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getFeatureSubFeatures_4008Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getFeature_2005Text(View view) {
 		IParser parser = FeatureModelParserProvider.getParser(
-				FeatureModelElementTypes.Feature_2001,
+				FeatureModelElementTypes.Feature_2005,
 				view.getElement() != null ? view.getElement() : view,
 				FeatureModelVisualIDRegistry
 						.getType(FeatureNameEditPart.VISUAL_ID));
@@ -246,7 +268,7 @@ public class FeatureModelNavigatorLabelProvider extends LabelProvider implements
 					ParserOptions.NONE.intValue());
 		} else {
 			FeatureModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5001); //$NON-NLS-1$
+					"Parser was not found for label " + 5005); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -254,56 +276,15 @@ public class FeatureModelNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getSimpleAttribute_2004Text(View view) {
-		IParser parser = FeatureModelParserProvider.getParser(
-				FeatureModelElementTypes.SimpleAttribute_2004, view
-						.getElement() != null ? view.getElement() : view,
-				FeatureModelVisualIDRegistry
-						.getType(SimpleAttributeNameEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			FeatureModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5004); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getCompositeFeatureSubFeatures_4004Text(View view) {
+	private String getCompositeFeatureSubFeatures_4010Text(View view) {
 		return ""; //$NON-NLS-1$
 	}
 
 	/**
 	 * @generated
 	 */
-	private String getFeature_2002Text(View view) {
-		IParser parser = FeatureModelParserProvider.getParser(
-				FeatureModelElementTypes.Feature_2002,
-				view.getElement() != null ? view.getElement() : view,
-				FeatureModelVisualIDRegistry
-						.getType(FeatureName2EditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			FeatureModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5002); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
 	private String getFeatureModel_1000Text(View view) {
-		featureModel.FeatureModel domainModelElement = (featureModel.FeatureModel) view
-				.getElement();
+		FeatureModel domainModelElement = (FeatureModel) view.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
@@ -316,38 +297,10 @@ public class FeatureModelNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getFeatureAttributes_4006Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getFeatureSubFeatures_4002Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getFeatureSubFeatures_4001Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getFeatureSubCompositeFeatures_4005Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getCompositeFeature_2003Text(View view) {
+	private String getCompositeFeature_2007Text(View view) {
 		IParser parser = FeatureModelParserProvider
 				.getParser(
-						FeatureModelElementTypes.CompositeFeature_2003,
+						FeatureModelElementTypes.CompositeFeature_2007,
 						view.getElement() != null ? view.getElement() : view,
 						FeatureModelVisualIDRegistry
 								.getType(CompositeFeatureLowerBoundUpperBoundEditPart.VISUAL_ID));
@@ -357,7 +310,7 @@ public class FeatureModelNavigatorLabelProvider extends LabelProvider implements
 					ParserOptions.NONE.intValue());
 		} else {
 			FeatureModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5003); //$NON-NLS-1$
+					"Parser was not found for label " + 5007); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -365,7 +318,54 @@ public class FeatureModelNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getCompositeFeatureSubFeatures_4003Text(View view) {
+	private String getFeatureSubCompositeFeatures_4011Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getSimpleAttribute_2008Text(View view) {
+		IParser parser = FeatureModelParserProvider.getParser(
+				FeatureModelElementTypes.SimpleAttribute_2008, view
+						.getElement() != null ? view.getElement() : view,
+				FeatureModelVisualIDRegistry
+						.getType(SimpleAttributeNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FeatureModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5008); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getFeature_2006Text(View view) {
+		IParser parser = FeatureModelParserProvider.getParser(
+				FeatureModelElementTypes.Feature_2006,
+				view.getElement() != null ? view.getElement() : view,
+				FeatureModelVisualIDRegistry
+						.getType(FeatureName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			FeatureModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5006); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getCompositeFeatureSubFeatures_4009Text(View view) {
 		return ""; //$NON-NLS-1$
 	}
 

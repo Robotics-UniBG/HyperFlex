@@ -67,7 +67,7 @@ public class SimpleAttributeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2004;
+	public static final int VISUAL_ID = 2008;
 
 	/**
 	 * @generated
@@ -288,7 +288,7 @@ public class SimpleAttributeEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnTarget() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(FeatureModelElementTypes.FeatureAttributes_4006);
+		types.add(FeatureModelElementTypes.FeatureAttributes_4012);
 		return types;
 	}
 
@@ -297,9 +297,9 @@ public class SimpleAttributeEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == FeatureModelElementTypes.FeatureAttributes_4006) {
-			types.add(FeatureModelElementTypes.Feature_2001);
-			types.add(FeatureModelElementTypes.Feature_2002);
+		if (relationshipType == FeatureModelElementTypes.FeatureAttributes_4012) {
+			types.add(FeatureModelElementTypes.Feature_2005);
+			types.add(FeatureModelElementTypes.Feature_2006);
 		}
 		return types;
 	}

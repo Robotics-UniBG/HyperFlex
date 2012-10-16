@@ -32,7 +32,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://robotics.unibg.it/featureModel"
-            class="featureModel.featureModelPackage"
+            class="it.unibg.robotics.featuremodels.featuremodelsPackage"
             genModel="models/featureModel.genmodel"/>
    </extension>
 

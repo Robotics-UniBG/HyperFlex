@@ -55,17 +55,17 @@ public class FeatureModelItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (FeatureModelElementTypes.Feature_2001 == req.getElementType()) {
+		if (FeatureModelElementTypes.Feature_2005 == req.getElementType()) {
 			return getGEFWrapper(new FeatureCreateCommand(req));
 		}
-		if (FeatureModelElementTypes.Feature_2002 == req.getElementType()) {
+		if (FeatureModelElementTypes.Feature_2006 == req.getElementType()) {
 			return getGEFWrapper(new Feature2CreateCommand(req));
 		}
-		if (FeatureModelElementTypes.CompositeFeature_2003 == req
+		if (FeatureModelElementTypes.CompositeFeature_2007 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeFeatureCreateCommand(req));
 		}
-		if (FeatureModelElementTypes.SimpleAttribute_2004 == req
+		if (FeatureModelElementTypes.SimpleAttribute_2008 == req
 				.getElementType()) {
 			return getGEFWrapper(new SimpleAttributeCreateCommand(req));
 		}

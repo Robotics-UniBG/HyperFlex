@@ -253,16 +253,16 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		}
 		switch (visualID) {
 		case FeatureEditPart.VISUAL_ID:
-			return createFeature_2001(domainElement, containerView, index,
+			return createFeature_2005(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case Feature2EditPart.VISUAL_ID:
-			return createFeature_2002(domainElement, containerView, index,
+			return createFeature_2006(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case CompositeFeatureEditPart.VISUAL_ID:
-			return createCompositeFeature_2003(domainElement, containerView,
+			return createCompositeFeature_2007(domainElement, containerView,
 					index, persisted, preferencesHint);
 		case SimpleAttributeEditPart.VISUAL_ID:
-			return createSimpleAttribute_2004(domainElement, containerView,
+			return createSimpleAttribute_2008(domainElement, containerView,
 					index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
@@ -279,22 +279,22 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		String elementTypeHint = ((IHintedType) elementType).getSemanticHint();
 		switch (FeatureModelVisualIDRegistry.getVisualID(elementTypeHint)) {
 		case FeatureSubFeaturesEditPart.VISUAL_ID:
-			return createFeatureSubFeatures_4001(containerView, index,
+			return createFeatureSubFeatures_4007(containerView, index,
 					persisted, preferencesHint);
 		case FeatureSubFeatures2EditPart.VISUAL_ID:
-			return createFeatureSubFeatures_4002(containerView, index,
+			return createFeatureSubFeatures_4008(containerView, index,
 					persisted, preferencesHint);
 		case CompositeFeatureSubFeaturesEditPart.VISUAL_ID:
-			return createCompositeFeatureSubFeatures_4003(containerView, index,
+			return createCompositeFeatureSubFeatures_4009(containerView, index,
 					persisted, preferencesHint);
 		case CompositeFeatureSubFeatures2EditPart.VISUAL_ID:
-			return createCompositeFeatureSubFeatures_4004(containerView, index,
+			return createCompositeFeatureSubFeatures_4010(containerView, index,
 					persisted, preferencesHint);
 		case FeatureSubCompositeFeaturesEditPart.VISUAL_ID:
-			return createFeatureSubCompositeFeatures_4005(containerView, index,
+			return createFeatureSubCompositeFeatures_4011(containerView, index,
 					persisted, preferencesHint);
 		case FeatureAttributesEditPart.VISUAL_ID:
-			return createFeatureAttributes_4006(containerView, index,
+			return createFeatureAttributes_4012(containerView, index,
 					persisted, preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
@@ -304,7 +304,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createFeature_2001(EObject domainElement, View containerView,
+	public Node createFeature_2005(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
 		node.getStyles()
@@ -340,7 +340,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5001 = createLabel(node,
+		Node label5005 = createLabel(node,
 				FeatureModelVisualIDRegistry
 						.getType(FeatureNameEditPart.VISUAL_ID));
 		return node;
@@ -349,7 +349,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createFeature_2002(EObject domainElement, View containerView,
+	public Node createFeature_2006(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
 		node.getStyles()
@@ -387,7 +387,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5002 = createLabel(node,
+		Node label5006 = createLabel(node,
 				FeatureModelVisualIDRegistry
 						.getType(FeatureName2EditPart.VISUAL_ID));
 		return node;
@@ -396,7 +396,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createCompositeFeature_2003(EObject domainElement,
+	public Node createCompositeFeature_2007(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -433,7 +433,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5003 = createLabel(
+		Node label5007 = createLabel(
 				node,
 				FeatureModelVisualIDRegistry
 						.getType(CompositeFeatureLowerBoundUpperBoundEditPart.VISUAL_ID));
@@ -443,7 +443,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createSimpleAttribute_2004(EObject domainElement,
+	public Node createSimpleAttribute_2008(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -480,7 +480,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5004 = createLabel(node,
+		Node label5008 = createLabel(node,
 				FeatureModelVisualIDRegistry
 						.getType(SimpleAttributeNameEditPart.VISUAL_ID));
 		return node;
@@ -489,7 +489,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createFeatureSubFeatures_4001(View containerView, int index,
+	public Edge createFeatureSubFeatures_4007(View containerView, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
@@ -541,7 +541,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createFeatureSubFeatures_4002(View containerView, int index,
+	public Edge createFeatureSubFeatures_4008(View containerView, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
@@ -593,7 +593,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createCompositeFeatureSubFeatures_4003(View containerView,
+	public Edge createCompositeFeatureSubFeatures_4009(View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
@@ -645,7 +645,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createCompositeFeatureSubFeatures_4004(View containerView,
+	public Edge createCompositeFeatureSubFeatures_4010(View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
@@ -697,7 +697,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createFeatureSubCompositeFeatures_4005(View containerView,
+	public Edge createFeatureSubCompositeFeatures_4011(View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
@@ -749,7 +749,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createFeatureAttributes_4006(View containerView, int index,
+	public Edge createFeatureAttributes_4012(View containerView, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());

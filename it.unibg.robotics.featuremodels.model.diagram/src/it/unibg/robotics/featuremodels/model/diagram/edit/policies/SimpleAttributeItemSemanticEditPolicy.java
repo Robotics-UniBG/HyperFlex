@@ -62,7 +62,7 @@ public class SimpleAttributeItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public SimpleAttributeItemSemanticEditPolicy() {
-		super(FeatureModelElementTypes.SimpleAttribute_2004);
+		super(FeatureModelElementTypes.SimpleAttribute_2008);
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class SimpleAttributeItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (FeatureModelElementTypes.FeatureAttributes_4006 == req
+		if (FeatureModelElementTypes.FeatureAttributes_4012 == req
 				.getElementType()) {
 			return null;
 		}
@@ -136,7 +136,7 @@ public class SimpleAttributeItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (FeatureModelElementTypes.FeatureAttributes_4006 == req
+		if (FeatureModelElementTypes.FeatureAttributes_4012 == req
 				.getElementType()) {
 			return getGEFWrapper(new FeatureAttributesCreateCommand(req,
 					req.getSource(), req.getTarget()));

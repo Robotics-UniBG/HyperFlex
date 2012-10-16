@@ -25,6 +25,7 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.commands;
 
+import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.model.diagram.edit.policies.FeatureModelBaseItemSemanticEditPolicy;
 
 import org.eclipse.core.commands.ExecutionException;
@@ -67,10 +68,10 @@ public class FeatureSubFeatures2CreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof featureModel.Feature) {
+		if (source != null && false == source instanceof Feature) {
 			return false;
 		}
-		if (target != null && false == target instanceof featureModel.Feature) {
+		if (target != null && false == target instanceof Feature) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -78,7 +79,7 @@ public class FeatureSubFeatures2CreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return FeatureModelBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateFeatureSubFeatures_4002(getSource(), getTarget());
+				.canCreateFeatureSubFeatures_4008(getSource(), getTarget());
 	}
 
 	/**
@@ -109,14 +110,14 @@ public class FeatureSubFeatures2CreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected featureModel.Feature getSource() {
-		return (featureModel.Feature) source;
+	protected Feature getSource() {
+		return (Feature) source;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected featureModel.Feature getTarget() {
-		return (featureModel.Feature) target;
+	protected Feature getTarget() {
+		return (Feature) target;
 	}
 }

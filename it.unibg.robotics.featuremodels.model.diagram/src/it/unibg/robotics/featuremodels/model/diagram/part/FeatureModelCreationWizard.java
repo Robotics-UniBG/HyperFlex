@@ -118,7 +118,7 @@ public class FeatureModelCreationWizard extends Wizard implements INewWizard {
 		this.selection = selection;
 		setWindowTitle(Messages.FeatureModelCreationWizardTitle);
 		setDefaultPageImageDescriptor(FeatureModelDiagramEditorPlugin
-				.getBundledImageDescriptor("icons/wizban/NewfeatureModelWizard.gif")); //$NON-NLS-1$
+				.getBundledImageDescriptor("icons/wizban/NewfeaturemodelsWizard.gif")); //$NON-NLS-1$
 		setNeedsProgressMonitor(true);
 	}
 

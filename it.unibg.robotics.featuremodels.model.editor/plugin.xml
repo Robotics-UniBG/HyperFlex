@@ -31,24 +31,24 @@
 
    <extension point="org.eclipse.ui.newWizards">
       <wizard
-            id="it.robotics.unibg.featuremodels.wizard.featuremodel.model"
-            name="%_UI_featureModelModelWizard_label"
-            class="featureModel.presentation.featureModelModelWizard"
+            id="it.unibg.robotics.featuremodels.presentation.featuremodelsModelWizardID"
+            name="%_UI_featuremodelsModelWizard_label"
+            class="it.unibg.robotics.featuremodels.presentation.featuremodelsModelWizard"
             category="it.robotics.unibg.featuremodels.wizard.category"
             icon="icons/fm.ico">
-         <description>%_UI_featureModelModelWizard_description</description>
+         <description>%_UI_featuremodelsModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="featureModel.presentation.featureModelEditorID"
-            name="%_UI_featureModelEditor_label"
+            id="it.unibg.robotics.featuremodels.presentation.featuremodelsEditorID"
+            name="%_UI_featuremodelsEditor_label"
             icon="icons/fm.ico"
             extensions="featuremodel"
-            class="featureModel.presentation.featureModelEditor"
-            contributorClass="featureModel.presentation.featureModelActionBarContributor">
+            class="it.unibg.robotics.featuremodels.presentation.featuremodelsEditor"
+            contributorClass="it.unibg.robotics.featuremodels.presentation.featuremodelsActionBarContributor">
       </editor>
    </extension>
 

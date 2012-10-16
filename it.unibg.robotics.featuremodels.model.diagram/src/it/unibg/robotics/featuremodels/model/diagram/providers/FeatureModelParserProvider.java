@@ -54,85 +54,85 @@ public class FeatureModelParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser featureName_5001Parser;
+	private IParser featureName_5005Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getFeatureName_5001Parser() {
-		if (featureName_5001Parser == null) {
-			EAttribute[] features = new EAttribute[] { featureModel.featureModelPackage.eINSTANCE
+	private IParser getFeatureName_5005Parser() {
+		if (featureName_5005Parser == null) {
+			EAttribute[] features = new EAttribute[] { it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 					.getFeature_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { featureModel.featureModelPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 					.getFeature_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
-			featureName_5001Parser = parser;
+			featureName_5005Parser = parser;
 		}
-		return featureName_5001Parser;
+		return featureName_5005Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser featureName_5002Parser;
+	private IParser featureName_5006Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getFeatureName_5002Parser() {
-		if (featureName_5002Parser == null) {
-			EAttribute[] features = new EAttribute[] { featureModel.featureModelPackage.eINSTANCE
+	private IParser getFeatureName_5006Parser() {
+		if (featureName_5006Parser == null) {
+			EAttribute[] features = new EAttribute[] { it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 					.getFeature_Name() };
-			EAttribute[] editableFeatures = new EAttribute[] { featureModel.featureModelPackage.eINSTANCE
+			EAttribute[] editableFeatures = new EAttribute[] { it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 					.getFeature_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
-			featureName_5002Parser = parser;
+			featureName_5006Parser = parser;
 		}
-		return featureName_5002Parser;
+		return featureName_5006Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser compositeFeatureLowerBoundUpperBound_5003Parser;
+	private IParser compositeFeatureLowerBoundUpperBound_5007Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getCompositeFeatureLowerBoundUpperBound_5003Parser() {
-		if (compositeFeatureLowerBoundUpperBound_5003Parser == null) {
+	private IParser getCompositeFeatureLowerBoundUpperBound_5007Parser() {
+		if (compositeFeatureLowerBoundUpperBound_5007Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					featureModel.featureModelPackage.eINSTANCE
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 							.getCompositeFeature_LowerBound(),
-					featureModel.featureModelPackage.eINSTANCE
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 							.getCompositeFeature_UpperBound() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			parser.setViewPattern("{0} ... {1}"); //$NON-NLS-1$
 			parser.setEditorPattern("{0} ... {1}"); //$NON-NLS-1$
 			parser.setEditPattern("{0} ... {1}"); //$NON-NLS-1$
-			compositeFeatureLowerBoundUpperBound_5003Parser = parser;
+			compositeFeatureLowerBoundUpperBound_5007Parser = parser;
 		}
-		return compositeFeatureLowerBoundUpperBound_5003Parser;
+		return compositeFeatureLowerBoundUpperBound_5007Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser simpleAttributeName_5004Parser;
+	private IParser simpleAttributeName_5008Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getSimpleAttributeName_5004Parser() {
-		if (simpleAttributeName_5004Parser == null) {
-			EAttribute[] features = new EAttribute[] { featureModel.featureModelPackage.eINSTANCE
+	private IParser getSimpleAttributeName_5008Parser() {
+		if (simpleAttributeName_5008Parser == null) {
+			EAttribute[] features = new EAttribute[] { it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 					.getAttribute_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			simpleAttributeName_5004Parser = parser;
+			simpleAttributeName_5008Parser = parser;
 		}
-		return simpleAttributeName_5004Parser;
+		return simpleAttributeName_5008Parser;
 	}
 
 	/**
@@ -141,13 +141,13 @@ public class FeatureModelParserProvider extends AbstractProvider implements
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case FeatureNameEditPart.VISUAL_ID:
-			return getFeatureName_5001Parser();
+			return getFeatureName_5005Parser();
 		case FeatureName2EditPart.VISUAL_ID:
-			return getFeatureName_5002Parser();
+			return getFeatureName_5006Parser();
 		case CompositeFeatureLowerBoundUpperBoundEditPart.VISUAL_ID:
-			return getCompositeFeatureLowerBoundUpperBound_5003Parser();
+			return getCompositeFeatureLowerBoundUpperBound_5007Parser();
 		case SimpleAttributeNameEditPart.VISUAL_ID:
-			return getSimpleAttributeName_5004Parser();
+			return getSimpleAttributeName_5008Parser();
 		}
 		return null;
 	}

@@ -47,7 +47,7 @@ public class CompositeFeatureSubFeatures2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public CompositeFeatureSubFeatures2ItemSemanticEditPolicy() {
-		super(FeatureModelElementTypes.CompositeFeatureSubFeatures_4004);
+		super(FeatureModelElementTypes.CompositeFeatureSubFeatures_4010);
 	}
 
 	/**

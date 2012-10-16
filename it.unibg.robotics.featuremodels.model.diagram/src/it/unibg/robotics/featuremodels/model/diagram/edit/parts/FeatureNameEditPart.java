@@ -83,7 +83,7 @@ public class FeatureNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5001;
+	public static final int VISUAL_ID = 5005;
 
 	/**
 	 * @generated
@@ -329,7 +329,7 @@ public class FeatureNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = FeatureModelParserProvider
 					.getParser(
-							FeatureModelElementTypes.Feature_2001,
+							FeatureModelElementTypes.Feature_2005,
 							getParserElement(),
 							FeatureModelVisualIDRegistry
 									.getType(it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureNameEditPart.VISUAL_ID));

@@ -25,6 +25,8 @@
  */
 package it.unibg.robotics.featuremodels.commands.featureselection.handlers;
 
+import it.unibg.robotics.featuremodels.Feature;
+import it.unibg.robotics.featuremodels.Instance;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditor;
 
@@ -39,8 +41,6 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import featureModel.Feature;
-import featureModel.Instance;
 
 /**
  * Our sample handler extends AbstractHandler, an IHandler base class.
