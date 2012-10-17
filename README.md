@@ -1,4 +1,4 @@
-### [Feature Models Plugin](robotics-unibg.github.com/FeatureModels/)
+### [Feature Models Plugin](http://robotics-unibg.github.com/FeatureModels/)
 
 The Feature Models Plugin allows the user to design Feature Models by means of a graphical editor.
 
