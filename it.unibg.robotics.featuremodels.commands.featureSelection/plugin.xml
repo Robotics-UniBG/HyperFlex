@@ -6,12 +6,12 @@
          point="org.eclipse.ui.commands">
       <category
             name="Feature Model Commands"
-            id="it.robotics.unibg.featuremodels.commands.featureSelection.category">
+            id="it.unibg.robotics.featuremodels.commands.featureSelection.category">
       </category>
       <command
             category="Feature Model Commands"
-            categoryId="it.robotics.unibg.featuremodels.commands.featureSelection.category"
-            id="it.robotics.unibg.featuremodels.commands.featureSelection.selection"
+            categoryId="it.unibg.robotics.featuremodels.commands.featureSelection.category"
+            id="it.unibg.robotics.featuremodels.commands.featureSelection.selection"
             name="Feature Selection Command">
       </command>
    </extension>
@@ -19,7 +19,7 @@
          point="org.eclipse.ui.handlers">
       <handler
             class="it.unibg.robotics.featuremodels.commands.featureselection.handlers.FeatureSelectionHandler"
-            commandId="it.robotics.unibg.featuremodels.commands.featureSelection.selection">
+            commandId="it.unibg.robotics.featuremodels.commands.featureSelection.selection">
          <enabledWhen>
             <reference
                   definitionId="oneFeatureSelected">
@@ -31,8 +31,8 @@
          point="org.eclipse.ui.commands">
       <command
             category="Feature Model Commands"
-            categoryId="it.robotics.unibg.featuremodels.commands.featureSelection.category"
-            id="it.robotics.unibg.featuremodels.commands.featureSelection.deselection"
+            categoryId="it.unibg.robotics.featuremodels.commands.featureSelection.category"
+            id="it.unibg.robotics.featuremodels.commands.featureSelection.deselection"
             name="Feature Deselection Command">
       </command>
    </extension>
@@ -40,7 +40,7 @@
          point="org.eclipse.ui.handlers">
       <handler
             class="it.unibg.robotics.featuremodels.commands.featureselection.handlers.FeatureDeselectionHandler"
-            commandId="it.robotics.unibg.featuremodels.commands.featureSelection.deselection">
+            commandId="it.unibg.robotics.featuremodels.commands.featureSelection.deselection">
          <enabledWhen>
             <reference
                   definitionId="oneFeatureSelected">
@@ -51,13 +51,13 @@
    <extension
          point="org.eclipse.ui.bindings">
       <key
-            commandId="it.robotics.unibg.featuremodels.commands.featureSelection.selection"
+            commandId="it.unibg.robotics.featuremodels.commands.featureSelection.selection"
             contextId="org.eclipse.ui.contexts.window"
             sequence="M1+6"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
       </key>
       <key
-            commandId="it.robotics.unibg.featuremodels.commands.featureSelection.deselection"
+            commandId="it.unibg.robotics.featuremodels.commands.featureSelection.deselection"
             contextId="org.eclipse.ui.contexts.window"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
             sequence="M1+7">
@@ -72,14 +72,14 @@
                id="Feature Model"
                label="FeatureModel">
             <command
-                  commandId="it.robotics.unibg.featuremodels.commands.featureSelection.selection"
+                  commandId="it.unibg.robotics.featuremodels.commands.featureSelection.selection"
                   icon="icons/signed_yes.gif"
                   label="Add Feature To Instance"
                   style="push"
                   tooltip="Add Feature To Instance">
             </command>
             <command
-                  commandId="it.robotics.unibg.featuremodels.commands.featureSelection.deselection"
+                  commandId="it.unibg.robotics.featuremodels.commands.featureSelection.deselection"
                   icon="icons/signed_no.gif"
                   label="Remove Feature From Instance"
                   style="push"
@@ -93,7 +93,7 @@
          <toolbar
                id="it.robotics.unibg.featureModel.commands.featureSelection.toolbar1">
             <command
-                  commandId="it.robotics.unibg.featuremodels.commands.featureSelection.selection"
+                  commandId="it.unibg.robotics.featuremodels.commands.featureSelection.selection"
                   icon="icons/signed_yes.gif"
                   id="AddFeatureToInstanceButton"
                   label="Add Feature To Instance"
@@ -101,7 +101,7 @@
                   tooltip="Add Feature To Instance">
             </command>
             <command
-                  commandId="it.robotics.unibg.featuremodels.commands.featureSelection.deselection"
+                  commandId="it.unibg.robotics.featuremodels.commands.featureSelection.deselection"
                   icon="icons/signed_no.gif"
                   id="RemoveFeatureFromInstanceButton"
                   label="Remove Feature From Instance"
