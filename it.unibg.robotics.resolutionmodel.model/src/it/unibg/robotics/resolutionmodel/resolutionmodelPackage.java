@@ -162,13 +162,31 @@ public interface resolutionmodelPackage extends EPackage {
 	int RM_RESOLUTION_ELEMENT__FEATURE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RM_RESOLUTION_ELEMENT__NAME = 4;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RM_RESOLUTION_ELEMENT__DESCRIPTION = 5;
+
+	/**
 	 * The number of structural features of the '<em>RM Resolution Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RM_RESOLUTION_ELEMENT_FEATURE_COUNT = 4;
+	int RM_RESOLUTION_ELEMENT_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodel.impl.RMAbstractTransformationImpl <em>RM Abstract Transformation</em>}' class.
@@ -471,6 +489,28 @@ public interface resolutionmodelPackage extends EPackage {
 	EReference getRMResolutionElement_Feature();
 
 	/**
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see it.unibg.robotics.resolutionmodel.RMResolutionElement#getName()
+	 * @see #getRMResolutionElement()
+	 * @generated
+	 */
+	EAttribute getRMResolutionElement_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see it.unibg.robotics.resolutionmodel.RMResolutionElement#getDescription()
+	 * @see #getRMResolutionElement()
+	 * @generated
+	 */
+	EAttribute getRMResolutionElement_Description();
+
+	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodel.RMAbstractTransformation <em>RM Abstract Transformation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -674,6 +714,22 @@ public interface resolutionmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RM_RESOLUTION_ELEMENT__FEATURE = eINSTANCE.getRMResolutionElement_Feature();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RM_RESOLUTION_ELEMENT__NAME = eINSTANCE.getRMResolutionElement_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RM_RESOLUTION_ELEMENT__DESCRIPTION = eINSTANCE.getRMResolutionElement_Description();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodel.impl.RMAbstractTransformationImpl <em>RM Abstract Transformation</em>}' class.

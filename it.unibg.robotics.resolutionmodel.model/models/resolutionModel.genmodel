@@ -16,6 +16,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resolutionModel.ecore#//RMResolutionElement/requiredComponents"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resolutionModel.ecore#//RMResolutionElement/requiredConnections"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference resolutionModel.ecore#//RMResolutionElement/feature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resolutionModel.ecore#//RMResolutionElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resolutionModel.ecore#//RMResolutionElement/description"/>
     </genClasses>
     <genClasses image="false" ecoreClass="resolutionModel.ecore#//RMAbstractTransformation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resolutionModel.ecore#//RMAbstractTransformation/name"/>

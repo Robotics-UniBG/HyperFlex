@@ -59,7 +59,7 @@
                      ifEmpty="false"
                      operator="or">
                   <instanceof
-                        value="it.unibg.robotics.resolutionmodel.provider.ResolutionModelItemProvider">
+                        value="it.unibg.robotics.resolutionmodel.ResolutionModel">
                   </instanceof>
                </iterate>
             </and>
@@ -84,6 +84,11 @@
       <handler
             class="it.unibg.robotics.resolutionmodel.rtt.commands.resolution.handlers.RTTResolutionHandler"
             commandId="it.unbig.robotics.resolutionmodel.commands.resolution.rttResolution">
+         <enabledWhen>
+            <reference
+                  definitionId="resolutionModelSelected">
+            </reference>
+         </enabledWhen>
       </handler>
    </extension>
 

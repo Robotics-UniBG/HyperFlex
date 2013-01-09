@@ -249,6 +249,24 @@ public class resolutionmodelPackageImpl extends EPackageImpl implements resoluti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRMResolutionElement_Name() {
+		return (EAttribute)rmResolutionElementEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRMResolutionElement_Description() {
+		return (EAttribute)rmResolutionElementEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRMAbstractTransformation() {
 		return rmAbstractTransformationEClass;
 	}
@@ -380,6 +398,8 @@ public class resolutionmodelPackageImpl extends EPackageImpl implements resoluti
 		createEReference(rmResolutionElementEClass, RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS);
 		createEReference(rmResolutionElementEClass, RM_RESOLUTION_ELEMENT__REQUIRED_CONNECTIONS);
 		createEReference(rmResolutionElementEClass, RM_RESOLUTION_ELEMENT__FEATURE);
+		createEAttribute(rmResolutionElementEClass, RM_RESOLUTION_ELEMENT__NAME);
+		createEAttribute(rmResolutionElementEClass, RM_RESOLUTION_ELEMENT__DESCRIPTION);
 
 		rmAbstractTransformationEClass = createEClass(RM_ABSTRACT_TRANSFORMATION);
 		createEAttribute(rmAbstractTransformationEClass, RM_ABSTRACT_TRANSFORMATION__NAME);
@@ -444,6 +464,8 @@ public class resolutionmodelPackageImpl extends EPackageImpl implements resoluti
 		initEReference(getRMResolutionElement_RequiredComponents(), this.getRMRequiredComponent(), null, "requiredComponents", null, 0, -1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRMResolutionElement_RequiredConnections(), this.getRMRequiredConnection(), null, "requiredConnections", null, 0, -1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRMResolutionElement_Feature(), thefeaturemodelsPackage.getFeature(), null, "feature", null, 1, 1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRMResolutionElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRMResolutionElement_Description(), ecorePackage.getEString(), "description", null, 0, 1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rmAbstractTransformationEClass, RMAbstractTransformation.class, "RMAbstractTransformation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRMAbstractTransformation_Name(), ecorePackage.getEString(), "name", null, 1, 1, RMAbstractTransformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

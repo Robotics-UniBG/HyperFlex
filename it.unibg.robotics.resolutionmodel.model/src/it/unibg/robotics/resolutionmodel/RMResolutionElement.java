@@ -43,6 +43,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getRequiredComponents <em>Required Components</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getRequiredConnections <em>Required Connections</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getFeature <em>Feature</em>}</li>
+ *   <li>{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getName <em>Name</em>}</li>
+ *   <li>{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
@@ -124,5 +126,57 @@ public interface RMResolutionElement extends EObject {
 	 * @generated
 	 */
 	void setFeature(Feature value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see it.unibg.robotics.resolutionmodel.resolutionmodelPackage#getRMResolutionElement_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see it.unibg.robotics.resolutionmodel.resolutionmodelPackage#getRMResolutionElement_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 } // RMResolutionElement

@@ -47,6 +47,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -86,6 +87,8 @@ public class RMResolutionElementItemProvider
 			super.getPropertyDescriptors(object);
 
 			addFeaturePropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -108,6 +111,50 @@ public class RMResolutionElementItemProvider
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RMResolutionElement_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RMResolutionElement_name_feature", "_UI_RMResolutionElement_type"),
+				 resolutionmodelPackage.Literals.RM_RESOLUTION_ELEMENT__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RMResolutionElement_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RMResolutionElement_description_feature", "_UI_RMResolutionElement_type"),
+				 resolutionmodelPackage.Literals.RM_RESOLUTION_ELEMENT__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -163,7 +210,10 @@ public class RMResolutionElementItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_RMResolutionElement_type");
+		String label = ((RMResolutionElement)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_RMResolutionElement_type") :
+			getString("_UI_RMResolutionElement_type") + " " + label;
 	}
 
 	/**
@@ -178,6 +228,10 @@ public class RMResolutionElementItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RMResolutionElement.class)) {
+			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__NAME:
+			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__DESCRIPTION:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__TRANSFORMATIONS:
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS:
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_CONNECTIONS:
