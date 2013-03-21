@@ -135,7 +135,7 @@ public interface resolutionmodelPackage extends EPackage {
 	int RM_RESOLUTION_ELEMENT__TRANSFORMATIONS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Required Components</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Required Components</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -144,7 +144,7 @@ public interface resolutionmodelPackage extends EPackage {
 	int RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Required Connections</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Required Connections</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -226,42 +226,42 @@ public interface resolutionmodelPackage extends EPackage {
 	int RM_ABSTRACT_TRANSFORMATION_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodel.impl.RMRequiredComponentImpl <em>RM Required Component</em>}' class.
+	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodel.impl.RMRequiredComponentsImpl <em>RM Required Components</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodel.impl.RMRequiredComponentImpl
-	 * @see it.unibg.robotics.resolutionmodel.impl.resolutionmodelPackageImpl#getRMRequiredComponent()
+	 * @see it.unibg.robotics.resolutionmodel.impl.RMRequiredComponentsImpl
+	 * @see it.unibg.robotics.resolutionmodel.impl.resolutionmodelPackageImpl#getRMRequiredComponents()
 	 * @generated
 	 */
-	int RM_REQUIRED_COMPONENT = 3;
+	int RM_REQUIRED_COMPONENTS = 3;
 
 	/**
-	 * The number of structural features of the '<em>RM Required Component</em>' class.
+	 * The number of structural features of the '<em>RM Required Components</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RM_REQUIRED_COMPONENT_FEATURE_COUNT = 0;
+	int RM_REQUIRED_COMPONENTS_FEATURE_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodel.impl.RMRequiredConnectionImpl <em>RM Required Connection</em>}' class.
+	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodel.impl.RMRequiredConnectionsImpl <em>RM Required Connections</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodel.impl.RMRequiredConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodel.impl.resolutionmodelPackageImpl#getRMRequiredConnection()
+	 * @see it.unibg.robotics.resolutionmodel.impl.RMRequiredConnectionsImpl
+	 * @see it.unibg.robotics.resolutionmodel.impl.resolutionmodelPackageImpl#getRMRequiredConnections()
 	 * @generated
 	 */
-	int RM_REQUIRED_CONNECTION = 4;
+	int RM_REQUIRED_CONNECTIONS = 4;
 
 	/**
-	 * The number of structural features of the '<em>RM Required Connection</em>' class.
+	 * The number of structural features of the '<em>RM Required Connections</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RM_REQUIRED_CONNECTION_FEATURE_COUNT = 0;
+	int RM_REQUIRED_CONNECTIONS_FEATURE_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodel.impl.RMTransfImplementationImpl <em>RM Transf Implementation</em>}' class.
@@ -456,10 +456,10 @@ public interface resolutionmodelPackage extends EPackage {
 	EReference getRMResolutionElement_Transformations();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getRequiredComponents <em>Required Components</em>}'.
+	 * Returns the meta object for the containment reference '{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getRequiredComponents <em>Required Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Required Components</em>'.
+	 * @return the meta object for the containment reference '<em>Required Components</em>'.
 	 * @see it.unibg.robotics.resolutionmodel.RMResolutionElement#getRequiredComponents()
 	 * @see #getRMResolutionElement()
 	 * @generated
@@ -467,10 +467,10 @@ public interface resolutionmodelPackage extends EPackage {
 	EReference getRMResolutionElement_RequiredComponents();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getRequiredConnections <em>Required Connections</em>}'.
+	 * Returns the meta object for the containment reference '{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getRequiredConnections <em>Required Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Required Connections</em>'.
+	 * @return the meta object for the containment reference '<em>Required Connections</em>'.
 	 * @see it.unibg.robotics.resolutionmodel.RMResolutionElement#getRequiredConnections()
 	 * @see #getRMResolutionElement()
 	 * @generated
@@ -543,24 +543,24 @@ public interface resolutionmodelPackage extends EPackage {
 	EAttribute getRMAbstractTransformation_Description();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodel.RMRequiredComponent <em>RM Required Component</em>}'.
+	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodel.RMRequiredComponents <em>RM Required Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>RM Required Component</em>'.
-	 * @see it.unibg.robotics.resolutionmodel.RMRequiredComponent
+	 * @return the meta object for class '<em>RM Required Components</em>'.
+	 * @see it.unibg.robotics.resolutionmodel.RMRequiredComponents
 	 * @generated
 	 */
-	EClass getRMRequiredComponent();
+	EClass getRMRequiredComponents();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodel.RMRequiredConnection <em>RM Required Connection</em>}'.
+	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodel.RMRequiredConnections <em>RM Required Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>RM Required Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodel.RMRequiredConnection
+	 * @return the meta object for class '<em>RM Required Connections</em>'.
+	 * @see it.unibg.robotics.resolutionmodel.RMRequiredConnections
 	 * @generated
 	 */
-	EClass getRMRequiredConnection();
+	EClass getRMRequiredConnections();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodel.RMTransfImplementation <em>RM Transf Implementation</em>}'.
@@ -692,7 +692,7 @@ public interface resolutionmodelPackage extends EPackage {
 		EReference RM_RESOLUTION_ELEMENT__TRANSFORMATIONS = eINSTANCE.getRMResolutionElement_Transformations();
 
 		/**
-		 * The meta object literal for the '<em><b>Required Components</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Required Components</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -700,7 +700,7 @@ public interface resolutionmodelPackage extends EPackage {
 		EReference RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS = eINSTANCE.getRMResolutionElement_RequiredComponents();
 
 		/**
-		 * The meta object literal for the '<em><b>Required Connections</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Required Connections</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -758,24 +758,24 @@ public interface resolutionmodelPackage extends EPackage {
 		EAttribute RM_ABSTRACT_TRANSFORMATION__DESCRIPTION = eINSTANCE.getRMAbstractTransformation_Description();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodel.impl.RMRequiredComponentImpl <em>RM Required Component</em>}' class.
+		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodel.impl.RMRequiredComponentsImpl <em>RM Required Components</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodel.impl.RMRequiredComponentImpl
-		 * @see it.unibg.robotics.resolutionmodel.impl.resolutionmodelPackageImpl#getRMRequiredComponent()
+		 * @see it.unibg.robotics.resolutionmodel.impl.RMRequiredComponentsImpl
+		 * @see it.unibg.robotics.resolutionmodel.impl.resolutionmodelPackageImpl#getRMRequiredComponents()
 		 * @generated
 		 */
-		EClass RM_REQUIRED_COMPONENT = eINSTANCE.getRMRequiredComponent();
+		EClass RM_REQUIRED_COMPONENTS = eINSTANCE.getRMRequiredComponents();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodel.impl.RMRequiredConnectionImpl <em>RM Required Connection</em>}' class.
+		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodel.impl.RMRequiredConnectionsImpl <em>RM Required Connections</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodel.impl.RMRequiredConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodel.impl.resolutionmodelPackageImpl#getRMRequiredConnection()
+		 * @see it.unibg.robotics.resolutionmodel.impl.RMRequiredConnectionsImpl
+		 * @see it.unibg.robotics.resolutionmodel.impl.resolutionmodelPackageImpl#getRMRequiredConnections()
 		 * @generated
 		 */
-		EClass RM_REQUIRED_CONNECTION = eINSTANCE.getRMRequiredConnection();
+		EClass RM_REQUIRED_CONNECTIONS = eINSTANCE.getRMRequiredConnections();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodel.impl.RMTransfImplementationImpl <em>RM Transf Implementation</em>}' class.

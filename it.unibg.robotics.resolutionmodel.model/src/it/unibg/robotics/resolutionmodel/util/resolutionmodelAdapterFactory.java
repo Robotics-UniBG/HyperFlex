@@ -103,12 +103,12 @@ public class resolutionmodelAdapterFactory extends AdapterFactoryImpl {
 				return createRMAbstractTransformationAdapter();
 			}
 			@Override
-			public Adapter caseRMRequiredComponent(RMRequiredComponent object) {
-				return createRMRequiredComponentAdapter();
+			public Adapter caseRMRequiredComponents(RMRequiredComponents object) {
+				return createRMRequiredComponentsAdapter();
 			}
 			@Override
-			public Adapter caseRMRequiredConnection(RMRequiredConnection object) {
-				return createRMRequiredConnectionAdapter();
+			public Adapter caseRMRequiredConnections(RMRequiredConnections object) {
+				return createRMRequiredConnectionsAdapter();
 			}
 			@Override
 			public Adapter caseRMTransfImplementation(RMTransfImplementation object) {
@@ -185,30 +185,30 @@ public class resolutionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodel.RMRequiredComponent <em>RM Required Component</em>}'.
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodel.RMRequiredComponents <em>RM Required Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodel.RMRequiredComponent
+	 * @see it.unibg.robotics.resolutionmodel.RMRequiredComponents
 	 * @generated
 	 */
-	public Adapter createRMRequiredComponentAdapter() {
+	public Adapter createRMRequiredComponentsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodel.RMRequiredConnection <em>RM Required Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodel.RMRequiredConnections <em>RM Required Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodel.RMRequiredConnection
+	 * @see it.unibg.robotics.resolutionmodel.RMRequiredConnections
 	 * @generated
 	 */
-	public Adapter createRMRequiredConnectionAdapter() {
+	public Adapter createRMRequiredConnectionsAdapter() {
 		return null;
 	}
 

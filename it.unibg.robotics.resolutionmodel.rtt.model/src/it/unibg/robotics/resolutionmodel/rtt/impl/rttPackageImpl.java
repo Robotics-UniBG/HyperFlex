@@ -28,6 +28,8 @@ package it.unibg.robotics.resolutionmodel.rtt.impl;
 import it.unibg.robotics.resolutionmodel.resolutionmodelPackage;
 
 import it.unibg.robotics.resolutionmodel.rtt.RTTConnection;
+import it.unibg.robotics.resolutionmodel.rtt.RTTRequiredComponents;
+import it.unibg.robotics.resolutionmodel.rtt.RTTRequiredConnections;
 import it.unibg.robotics.resolutionmodel.rtt.RTTTransfConnection;
 import it.unibg.robotics.resolutionmodel.rtt.RTTTransfImplementation;
 import it.unibg.robotics.resolutionmodel.rtt.RTTTransfProperty;
@@ -77,6 +79,20 @@ public class rttPackageImpl extends EPackageImpl implements rttPackage {
 	 * @generated
 	 */
 	private EClass rttConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rttRequiredComponentsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rttRequiredConnectionsEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -265,6 +281,42 @@ public class rttPackageImpl extends EPackageImpl implements rttPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRTTRequiredComponents() {
+		return rttRequiredComponentsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRTTRequiredComponents_RTTTaskContexts() {
+		return (EReference)rttRequiredComponentsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRTTRequiredConnections() {
+		return rttRequiredConnectionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRTTRequiredConnections_RTTConnectionPolicies() {
+		return (EReference)rttRequiredConnectionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public rttFactory getrttFactory() {
 		return (rttFactory)getEFactoryInstance();
 	}
@@ -304,6 +356,12 @@ public class rttPackageImpl extends EPackageImpl implements rttPackage {
 		createEAttribute(rttConnectionEClass, RTT_CONNECTION__BUFFER_SIZE);
 		createEReference(rttConnectionEClass, RTT_CONNECTION__INPUT_PORT);
 		createEReference(rttConnectionEClass, RTT_CONNECTION__OUTPUT_PORT);
+
+		rttRequiredComponentsEClass = createEClass(RTT_REQUIRED_COMPONENTS);
+		createEReference(rttRequiredComponentsEClass, RTT_REQUIRED_COMPONENTS__RTT_TASK_CONTEXTS);
+
+		rttRequiredConnectionsEClass = createEClass(RTT_REQUIRED_CONNECTIONS);
+		createEReference(rttRequiredConnectionsEClass, RTT_REQUIRED_CONNECTIONS__RTT_CONNECTION_POLICIES);
 	}
 
 	/**
@@ -341,6 +399,8 @@ public class rttPackageImpl extends EPackageImpl implements rttPackage {
 		rttTransfImplementationEClass.getESuperTypes().add(theresolutionmodelPackage.getRMTransfImplementation());
 		rttTransfPropertyEClass.getESuperTypes().add(theresolutionmodelPackage.getRMTransfProperty());
 		rttTransfConnectionEClass.getESuperTypes().add(theresolutionmodelPackage.getRMTransfConnection());
+		rttRequiredComponentsEClass.getESuperTypes().add(theresolutionmodelPackage.getRMRequiredComponents());
+		rttRequiredConnectionsEClass.getESuperTypes().add(theresolutionmodelPackage.getRMRequiredConnections());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(rttTransfImplementationEClass, RTTTransfImplementation.class, "RTTTransfImplementation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -359,6 +419,12 @@ public class rttPackageImpl extends EPackageImpl implements rttPackage {
 		initEAttribute(getRTTConnection_BufferSize(), ecorePackage.getEShort(), "bufferSize", null, 1, 1, RTTConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRTTConnection_InputPort(), theRttPackage.getInputPort(), null, "inputPort", null, 1, 1, RTTConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRTTConnection_OutputPort(), theRttPackage.getOutputPort(), null, "outputPort", null, 1, 1, RTTConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(rttRequiredComponentsEClass, RTTRequiredComponents.class, "RTTRequiredComponents", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRTTRequiredComponents_RTTTaskContexts(), theRttPackage.getTaskContext(), null, "RTTTaskContexts", null, 1, -1, RTTRequiredComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(rttRequiredConnectionsEClass, RTTRequiredConnections.class, "RTTRequiredConnections", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRTTRequiredConnections_RTTConnectionPolicies(), theRttPackage.getConnectionPolicy(), null, "RTTConnectionPolicies", null, 1, -1, RTTRequiredConnections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -29,13 +29,13 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>RM Required Connection</b></em>'.
+ * A representation of the model object '<em><b>RM Required Connections</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see it.unibg.robotics.resolutionmodel.resolutionmodelPackage#getRMRequiredConnection()
+ * @see it.unibg.robotics.resolutionmodel.resolutionmodelPackage#getRMRequiredConnections()
  * @model abstract="true"
  * @generated
  */
-public interface RMRequiredConnection extends EObject {
-} // RMRequiredConnection
+public interface RMRequiredConnections extends EObject {
+} // RMRequiredConnections

@@ -26,6 +26,8 @@
 package it.unibg.robotics.resolutionmodel.rtt.util;
 
 import it.unibg.robotics.resolutionmodel.RMAbstractTransformation;
+import it.unibg.robotics.resolutionmodel.RMRequiredComponents;
+import it.unibg.robotics.resolutionmodel.RMRequiredConnections;
 import it.unibg.robotics.resolutionmodel.RMTransfConnection;
 import it.unibg.robotics.resolutionmodel.RMTransfImplementation;
 import it.unibg.robotics.resolutionmodel.RMTransfProperty;
@@ -124,6 +126,20 @@ public class rttSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case rttPackage.RTT_REQUIRED_COMPONENTS: {
+				RTTRequiredComponents rttRequiredComponents = (RTTRequiredComponents)theEObject;
+				T result = caseRTTRequiredComponents(rttRequiredComponents);
+				if (result == null) result = caseRMRequiredComponents(rttRequiredComponents);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case rttPackage.RTT_REQUIRED_CONNECTIONS: {
+				RTTRequiredConnections rttRequiredConnections = (RTTRequiredConnections)theEObject;
+				T result = caseRTTRequiredConnections(rttRequiredConnections);
+				if (result == null) result = caseRMRequiredConnections(rttRequiredConnections);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -189,6 +205,36 @@ public class rttSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>RTT Required Components</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>RTT Required Components</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRTTRequiredComponents(RTTRequiredComponents object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>RTT Required Connections</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>RTT Required Connections</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRTTRequiredConnections(RTTRequiredConnections object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>RM Abstract Transformation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -245,6 +291,36 @@ public class rttSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRMTransfConnection(RMTransfConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>RM Required Components</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>RM Required Components</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRMRequiredComponents(RMRequiredComponents object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>RM Required Connections</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>RM Required Connections</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRMRequiredConnections(RMRequiredConnections object) {
 		return null;
 	}
 

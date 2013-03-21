@@ -107,15 +107,15 @@ public class resolutionmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case resolutionmodelPackage.RM_REQUIRED_COMPONENT: {
-				RMRequiredComponent rmRequiredComponent = (RMRequiredComponent)theEObject;
-				T result = caseRMRequiredComponent(rmRequiredComponent);
+			case resolutionmodelPackage.RM_REQUIRED_COMPONENTS: {
+				RMRequiredComponents rmRequiredComponents = (RMRequiredComponents)theEObject;
+				T result = caseRMRequiredComponents(rmRequiredComponents);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case resolutionmodelPackage.RM_REQUIRED_CONNECTION: {
-				RMRequiredConnection rmRequiredConnection = (RMRequiredConnection)theEObject;
-				T result = caseRMRequiredConnection(rmRequiredConnection);
+			case resolutionmodelPackage.RM_REQUIRED_CONNECTIONS: {
+				RMRequiredConnections rmRequiredConnections = (RMRequiredConnections)theEObject;
+				T result = caseRMRequiredConnections(rmRequiredConnections);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -190,32 +190,32 @@ public class resolutionmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>RM Required Component</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>RM Required Components</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>RM Required Component</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>RM Required Components</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRMRequiredComponent(RMRequiredComponent object) {
+	public T caseRMRequiredComponents(RMRequiredComponents object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>RM Required Connection</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>RM Required Connections</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>RM Required Connection</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>RM Required Connections</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRMRequiredConnection(RMRequiredConnection object) {
+	public T caseRMRequiredConnections(RMRequiredConnections object) {
 		return null;
 	}
 

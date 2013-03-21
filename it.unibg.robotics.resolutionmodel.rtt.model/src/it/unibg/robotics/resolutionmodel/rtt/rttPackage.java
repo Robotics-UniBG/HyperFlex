@@ -320,6 +320,63 @@ public interface rttPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodel.rtt.impl.RTTRequiredComponentsImpl <em>RTT Required Components</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see it.unibg.robotics.resolutionmodel.rtt.impl.RTTRequiredComponentsImpl
+	 * @see it.unibg.robotics.resolutionmodel.rtt.impl.rttPackageImpl#getRTTRequiredComponents()
+	 * @generated
+	 */
+	int RTT_REQUIRED_COMPONENTS = 4;
+
+	/**
+	 * The feature id for the '<em><b>RTT Task Contexts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTT_REQUIRED_COMPONENTS__RTT_TASK_CONTEXTS = resolutionmodelPackage.RM_REQUIRED_COMPONENTS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>RTT Required Components</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTT_REQUIRED_COMPONENTS_FEATURE_COUNT = resolutionmodelPackage.RM_REQUIRED_COMPONENTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodel.rtt.impl.RTTRequiredConnectionsImpl <em>RTT Required Connections</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see it.unibg.robotics.resolutionmodel.rtt.impl.RTTRequiredConnectionsImpl
+	 * @see it.unibg.robotics.resolutionmodel.rtt.impl.rttPackageImpl#getRTTRequiredConnections()
+	 * @generated
+	 */
+	int RTT_REQUIRED_CONNECTIONS = 5;
+
+	/**
+	 * The feature id for the '<em><b>RTT Connection Policies</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTT_REQUIRED_CONNECTIONS__RTT_CONNECTION_POLICIES = resolutionmodelPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>RTT Required Connections</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTT_REQUIRED_CONNECTIONS_FEATURE_COUNT = resolutionmodelPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 1;
+
+
+	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodel.rtt.RTTTransfImplementation <em>RTT Transf Implementation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -459,6 +516,48 @@ public interface rttPackage extends EPackage {
 	EReference getRTTConnection_OutputPort();
 
 	/**
+	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodel.rtt.RTTRequiredComponents <em>RTT Required Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>RTT Required Components</em>'.
+	 * @see it.unibg.robotics.resolutionmodel.rtt.RTTRequiredComponents
+	 * @generated
+	 */
+	EClass getRTTRequiredComponents();
+
+	/**
+	 * Returns the meta object for the reference list '{@link it.unibg.robotics.resolutionmodel.rtt.RTTRequiredComponents#getRTTTaskContexts <em>RTT Task Contexts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>RTT Task Contexts</em>'.
+	 * @see it.unibg.robotics.resolutionmodel.rtt.RTTRequiredComponents#getRTTTaskContexts()
+	 * @see #getRTTRequiredComponents()
+	 * @generated
+	 */
+	EReference getRTTRequiredComponents_RTTTaskContexts();
+
+	/**
+	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodel.rtt.RTTRequiredConnections <em>RTT Required Connections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>RTT Required Connections</em>'.
+	 * @see it.unibg.robotics.resolutionmodel.rtt.RTTRequiredConnections
+	 * @generated
+	 */
+	EClass getRTTRequiredConnections();
+
+	/**
+	 * Returns the meta object for the reference list '{@link it.unibg.robotics.resolutionmodel.rtt.RTTRequiredConnections#getRTTConnectionPolicies <em>RTT Connection Policies</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>RTT Connection Policies</em>'.
+	 * @see it.unibg.robotics.resolutionmodel.rtt.RTTRequiredConnections#getRTTConnectionPolicies()
+	 * @see #getRTTRequiredConnections()
+	 * @generated
+	 */
+	EReference getRTTRequiredConnections_RTTConnectionPolicies();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -591,6 +690,42 @@ public interface rttPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RTT_CONNECTION__OUTPUT_PORT = eINSTANCE.getRTTConnection_OutputPort();
+
+		/**
+		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodel.rtt.impl.RTTRequiredComponentsImpl <em>RTT Required Components</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.unibg.robotics.resolutionmodel.rtt.impl.RTTRequiredComponentsImpl
+		 * @see it.unibg.robotics.resolutionmodel.rtt.impl.rttPackageImpl#getRTTRequiredComponents()
+		 * @generated
+		 */
+		EClass RTT_REQUIRED_COMPONENTS = eINSTANCE.getRTTRequiredComponents();
+
+		/**
+		 * The meta object literal for the '<em><b>RTT Task Contexts</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RTT_REQUIRED_COMPONENTS__RTT_TASK_CONTEXTS = eINSTANCE.getRTTRequiredComponents_RTTTaskContexts();
+
+		/**
+		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodel.rtt.impl.RTTRequiredConnectionsImpl <em>RTT Required Connections</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.unibg.robotics.resolutionmodel.rtt.impl.RTTRequiredConnectionsImpl
+		 * @see it.unibg.robotics.resolutionmodel.rtt.impl.rttPackageImpl#getRTTRequiredConnections()
+		 * @generated
+		 */
+		EClass RTT_REQUIRED_CONNECTIONS = eINSTANCE.getRTTRequiredConnections();
+
+		/**
+		 * The meta object literal for the '<em><b>RTT Connection Policies</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RTT_REQUIRED_CONNECTIONS__RTT_CONNECTION_POLICIES = eINSTANCE.getRTTRequiredConnections_RTTConnectionPolicies();
 
 	}
 

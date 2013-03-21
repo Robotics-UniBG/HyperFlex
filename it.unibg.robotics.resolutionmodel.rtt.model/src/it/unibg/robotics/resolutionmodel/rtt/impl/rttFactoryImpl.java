@@ -83,6 +83,8 @@ public class rttFactoryImpl extends EFactoryImpl implements rttFactory {
 			case rttPackage.RTT_TRANSF_PROPERTY: return createRTTTransfProperty();
 			case rttPackage.RTT_TRANSF_CONNECTION: return createRTTTransfConnection();
 			case rttPackage.RTT_CONNECTION: return createRTTConnection();
+			case rttPackage.RTT_REQUIRED_COMPONENTS: return createRTTRequiredComponents();
+			case rttPackage.RTT_REQUIRED_CONNECTIONS: return createRTTRequiredConnections();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -126,6 +128,26 @@ public class rttFactoryImpl extends EFactoryImpl implements rttFactory {
 	public RTTConnection createRTTConnection() {
 		RTTConnectionImpl rttConnection = new RTTConnectionImpl();
 		return rttConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RTTRequiredComponents createRTTRequiredComponents() {
+		RTTRequiredComponentsImpl rttRequiredComponents = new RTTRequiredComponentsImpl();
+		return rttRequiredComponents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RTTRequiredConnections createRTTRequiredConnections() {
+		RTTRequiredConnectionsImpl rttRequiredConnections = new RTTRequiredConnectionsImpl();
+		return rttRequiredConnections;
 	}
 
 	/**

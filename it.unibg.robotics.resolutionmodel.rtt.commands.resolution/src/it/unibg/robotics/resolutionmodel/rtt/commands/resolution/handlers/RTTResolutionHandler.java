@@ -29,16 +29,13 @@ import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.Instance;
 import it.unibg.robotics.featuremodels.featuremodelsPackage;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditor;
 import it.unibg.robotics.resolutionmodel.RMAbstractTransformation;
-import it.unibg.robotics.resolutionmodel.RMRequiredComponent;
-import it.unibg.robotics.resolutionmodel.RMRequiredConnection;
 import it.unibg.robotics.resolutionmodel.RMResolutionElement;
 import it.unibg.robotics.resolutionmodel.ResolutionModel;
-import it.unibg.robotics.resolutionmodel.impl.resolutionmodelFactoryImpl;
 import it.unibg.robotics.resolutionmodel.presentation.resolutionmodelEditor;
 import it.unibg.robotics.resolutionmodel.rtt.RTTConnection;
+import it.unibg.robotics.resolutionmodel.rtt.RTTRequiredComponents;
+import it.unibg.robotics.resolutionmodel.rtt.RTTRequiredConnections;
 import it.unibg.robotics.resolutionmodel.rtt.RTTTransfConnection;
 import it.unibg.robotics.resolutionmodel.rtt.RTTTransfImplementation;
 import it.unibg.robotics.resolutionmodel.rtt.RTTTransfProperty;
@@ -46,9 +43,8 @@ import it.unibg.robotics.resolutionmodel.rtt.RTTTransfProperty;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream.GetField;
+import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.Iterator;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
@@ -57,21 +53,18 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.gmf.runtime.diagram.core.services.ViewService;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.jface.viewers.TreeSelection;
+import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
@@ -79,8 +72,10 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IWorkbenchPage;
-import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.dialogs.ElementListSelectionDialog;
+import org.eclipse.ui.dialogs.ListDialog;
+import org.eclipse.ui.dialogs.SelectionDialog;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.ui.part.FileEditorInput;
 import org.orocos.model.rtt.Activity;
@@ -96,7 +91,6 @@ import org.orocos.model.rtt.TaskContext;
 import org.orocos.model.rtt.diagram.edit.parts.PackageEditPart;
 import org.orocos.model.rtt.diagram.part.RttDiagramEditor;
 import org.orocos.model.rtt.diagram.part.RttDiagramEditorPlugin;
-import org.orocos.model.rtt.diagram.part.RttDiagramEditorUtil;
 import org.orocos.model.rtt.impl.RttFactoryImpl;
 
 
@@ -108,22 +102,24 @@ import org.orocos.model.rtt.impl.RttFactoryImpl;
  */
 public class RTTResolutionHandler extends AbstractHandler {
 
-	private Hashtable<String, InputPort> inputPortHashTable;
-	private Hashtable<String, OutputPort> outputPortHashTable;
-	private Hashtable<String, TaskContext> taskContextHashTable;
-	private Hashtable<String, Property> propertyHashTable;
-	private Hashtable<String, ConnectionPolicy> connectionHashTable;
-
-	//	private Hashtable<InputPort, TaskContext> sourceInputPortTaskContextHashTable;
-	//	private Hashtable<OutputPort, TaskContext> sourceOutputPortTaskContextHashTable;
-	//	
-	//	private Hashtable<InputPort, TaskContext> targetInputPortTaskContextHashTable;
-	//	private Hashtable<OutputPort, TaskContext> targetOutputPortTaskContextHashTable;
+	private Hashtable<InputPort, InputPort> inputPortHashTable;
+	private Hashtable<OutputPort, OutputPort> outputPortHashTable;
+	private Hashtable<TaskContext, TaskContext> taskContextHashTable;
+	private Hashtable<Property, Property> propertyHashTable;
+	private Hashtable<ConnectionPolicy, ConnectionPolicy> connectionHashTable;
 
 	private Package targetOrocosModel = null;
 	private Package sourceRttModel = null;
 	private FeatureModel sourceFeatureModel = null;
 	private ResolutionModel resolutionModel = null;
+
+	/*
+	 * We don't use treeSet because there is a problem due to the fact that TaskContext
+	 * doesn't implement comparable
+	 */
+	private ArrayList<TaskContext> requiredComponents;
+	private ArrayList<ConnectionPolicy> requiredConnections;
+
 
 	/**
 	 * The constructor.
@@ -136,7 +132,7 @@ public class RTTResolutionHandler extends AbstractHandler {
 	 * from the application context.
 	 */
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		
+
 		resolutionmodelEditor resolutionModelEditor = null;
 
 		IEditorPart activeEditor = HandlerUtil.getActiveEditor(event);
@@ -155,20 +151,33 @@ public class RTTResolutionHandler extends AbstractHandler {
 
 				sourceRttModel =  getSourceRttModel();
 				cloneRttPackage(sourceRttModel);
+
+				/* 
+				 * Creating a copy is not enough
+				 * We have to fill the hashtables
+				 */ 
+				//				targetOrocosModel = EcoreUtil.copy(sourceRttModel);
+
+
+				Instance instance;
 				
-				// Creating a copy is not enough
-				// We have to fill the hashtables
-				//targetOrocosModel = EcoreUtil.copy(sourceRttModel);
-
-
-				Instance instance = sourceFeatureModel.getInstances().get(0);
-
-				if(instance == null){
+				if(sourceFeatureModel.getInstances().size() < 1){
 					MessageDialog.openWarning(null, "Warning", 
-							"You have to select an instance!!!");
+							"You have to create at least an instance!!!");
 					return null;
 				}
 
+				ElementListSelectionDialog instanceDialog = 
+						new ElementListSelectionDialog(
+								PlatformUI.getWorkbench().getDisplay().getActiveShell(), new LabelProvider());
+				instanceDialog.setTitle("Instance Selection");
+				instanceDialog.setMessage("Select the desired instance");
+				instanceDialog.setElements(sourceFeatureModel.getInstances().toArray());
+				if(instanceDialog.open() != Window.OK){
+					return null;
+				}
+				instance = (Instance)instanceDialog.getResult()[0];
+				
 				doTransformation(instance);
 
 				// Create a resource set to hold the resources.
@@ -196,7 +205,7 @@ public class RTTResolutionHandler extends AbstractHandler {
 					IProject currentProject = fileEditorInput.getFile().getProject();
 
 					String tmp = fileEditorInput.getFile().getLocation().toOSString();
-					tmp = tmp.substring(0,modelfilePath.lastIndexOf('/')+1) + targetOrocosModel.getName();
+					tmp = tmp.substring(0,modelfilePath.lastIndexOf('/')+1) + instance.getId();
 					modelfilePath = tmp + "-configured.rtt";
 					diagramfilePath = tmp + "-configured.rtt_diagram";
 					IPath modelLocation = new Path(modelfilePath);
@@ -278,28 +287,76 @@ public class RTTResolutionHandler extends AbstractHandler {
 
 	private void doTransformation(Instance featureModelInstance){
 
-		//ResolutionModel resolutionModel = resolutionmodelFactoryImpl.eINSTANCE.createResolutionModel();
+		requiredComponents = new ArrayList<TaskContext>();
+		requiredConnections = new ArrayList<ConnectionPolicy>();
+
 
 		for(RMResolutionElement currentResElem : resolutionModel.getResolutionElements()){
+
+			if(! featureModelInstance.getSelectedFeatures().contains(currentResElem.getFeature())){
+
+				// The feature associated to the resolution element is not selected
+				continue;
+
+			}
+
+			if(currentResElem.getRequiredComponents() != null){ 
+				if(currentResElem.getRequiredComponents() instanceof RTTRequiredComponents){
+					RTTRequiredComponents requiredTaskContextsTmp = (RTTRequiredComponents)currentResElem.getRequiredComponents();
+					for(TaskContext tc : requiredTaskContextsTmp.getRTTTaskContexts()){
+						if(! requiredComponents.contains(tc)){
+							requiredComponents.add(taskContextHashTable.get(tc));
+						}
+					}
+				}else{
+					MessageDialog.openError(null, "Error", 
+							"The RTT resolution element " + currentResElem.getName() + 
+							" contains a " + currentResElem.getRequiredComponents().getClass()
+							+ "instance!!!");
+					return;
+				}
+			}
+
+			if(currentResElem.getRequiredConnections() != null){
+				if(currentResElem.getRequiredConnections() instanceof RTTRequiredConnections){
+					RTTRequiredConnections requiredConnectionsTmp = (RTTRequiredConnections)currentResElem.getRequiredConnections();
+					for(ConnectionPolicy cp : requiredConnectionsTmp.getRTTConnectionPolicies()){
+						if(! requiredConnections.contains(cp)){
+							requiredConnections.add(connectionHashTable.get(cp));
+						}
+					}
+				}else{
+					MessageDialog.openError(null, "Error", 
+							"The RTT resolution element " + currentResElem.getName() + 
+							" contains a " + currentResElem.getRequiredConnections().getClass()
+							+ "instance!!!");
+					return;
+				}
+
+			}
 
 			for(RMAbstractTransformation currentTransf : currentResElem.getTransformations()){
 
 				if(currentTransf instanceof RTTTransfImplementation){
+
 					RTTTransfImplementation transf = (RTTTransfImplementation)currentTransf;
-					TaskContext targetTaskContext = taskContextHashTable.get(getTaskContextHashTableKey(transf.getTargetTaskContext()));
+
+					TaskContext targetTaskContext = taskContextHashTable.get(transf.getTargetTaskContext());
+
 					targetTaskContext.setNamespace(transf.getClassNamespace());
 					targetTaskContext.setType(transf.getClassName());
 
+					// add the target task context to the required components list
+					// it should be already there,
+					// This is done for the case in which the user forget to add it
+					if(! requiredComponents.contains(targetTaskContext)){
+						requiredComponents.add(targetTaskContext);
+					}
+
+
 				}else if(currentTransf instanceof RTTTransfConnection){
+
 					RTTTransfConnection transf = (RTTTransfConnection)currentTransf;
-
-					// It's not anymore necessary remove connections, because they are removed later when
-					// required elements are iterated
-
-					//ConnectionPolicy connection = connectionHashTable.get(getConnectionPolicyHashTableKey(transf.getOldConnection()));
-					//connection.setInputPort(null);
-					//connection.setOutputPort(null);
-					//targetOrocosModel.getConnectionPolicy().remove(connection);
 
 					for(RTTConnection newRttConnection : transf.getNewConnections()){
 
@@ -309,41 +366,87 @@ public class RTTResolutionHandler extends AbstractHandler {
 						newConnection.setType(newRttConnection.getType());
 						newConnection.setBufferSize(newRttConnection.getBufferSize());
 
-						InputPort targetInputPort = inputPortHashTable.get(getPortHashTableKey(
-								(TaskContext)newRttConnection.getInputPort().eContainer(), 
-								newRttConnection.getInputPort().getName()));
+						InputPort targetInputPort = inputPortHashTable.get(newRttConnection.getInputPort());
 						targetInputPort.setInputConnectionPolicy(newConnection);
 
-						OutputPort targetOutputPort = outputPortHashTable.get(getPortHashTableKey(
-								(TaskContext)newRttConnection.getOutputPort().eContainer(), 
-								newRttConnection.getOutputPort().getName()));
+						OutputPort targetOutputPort = outputPortHashTable.get(newRttConnection.getOutputPort());
 						targetOutputPort.setOutputConnectionPolicy(newConnection);
 
 						newConnection.setInputPort(targetInputPort);
 						newConnection.setOutputPort(targetOutputPort);
 
 						targetOrocosModel.getConnectionPolicy().add(newConnection);
+
+						// add the new connection to the required connections list
+						if(! requiredConnections.contains(newConnection)){
+							requiredConnections.add(newConnection);
+						}
+						// we add also the connected components
+						if(! requiredComponents.contains((TaskContext)newConnection.getInputPort().eContainer())){
+							requiredComponents.add((TaskContext)newConnection.getInputPort().eContainer());
+						}
+						if(! requiredComponents.contains((TaskContext)newConnection.getOutputPort().eContainer())){
+							requiredComponents.add((TaskContext)newConnection.getOutputPort().eContainer());
+						}
+
+
 					}
 
 				}else if(currentTransf instanceof RTTTransfProperty){
+
+
 					RTTTransfProperty transf = (RTTTransfProperty)currentTransf;
 
-					Property targetProperty = propertyHashTable.get(getPropertyHashTableKey(transf.getTargetProperty()));
+					Property targetProperty = propertyHashTable.get(transf.getTargetProperty());
 					targetProperty.setValue(transf.getValue());
+
+					// add the target task context to the required components list
+					// it should be already there,
+					// This is done for the case in which the user forget to add it
+					if(! requiredComponents.contains((TaskContext)targetProperty.eContainer())){
+						requiredComponents.add((TaskContext)targetProperty.eContainer());
+					}
 
 				}
 
 			}
 		}
 
-		// Here we should check and remove components that are not anymore used
+		/*
+		 *  Here we check and remove connections and components that are not anymore used
+		 *  We first create an array of the elements that have to be removed, than we remove them
+		 *  If we directly remove during the iteration an exception is thrown
+		 */
+		ArrayList<ConnectionPolicy> unusedConnection = new ArrayList<ConnectionPolicy>();
 
+		for(ConnectionPolicy connection : targetOrocosModel.getConnectionPolicy()){
 
-		//		for(TaskContext taskContext : targetOrocosModel.getTaskContext()){
-		//			if(! isConnected(taskContext)){
-		//				targetOrocosModel.getTaskContext().remove(taskContext);
-		//			}
-		//		}
+			if(! requiredConnections.contains(connection)){
+				unusedConnection.add(connection);
+			}
+
+		}
+
+		for(ConnectionPolicy connection : unusedConnection){
+			connection.getInputPort().setInputConnectionPolicy(null);
+			connection.getOutputPort().setOutputConnectionPolicy(null);
+
+			targetOrocosModel.getConnectionPolicy().remove(connection);
+		}
+
+		ArrayList<TaskContext> unusedTaskContext = new ArrayList<TaskContext>();
+
+		for(TaskContext taskContext : targetOrocosModel.getTaskContext()){
+
+			if(! requiredComponents.contains(taskContext)){
+				unusedTaskContext.add(taskContext);
+			}
+
+		}
+
+		for(TaskContext taskContext : unusedTaskContext){
+			targetOrocosModel.getTaskContext().remove(taskContext);
+		}
 
 	}
 
@@ -354,19 +457,16 @@ public class RTTResolutionHandler extends AbstractHandler {
 
 		targetOrocosModel.setName(source.getName());
 
-		taskContextHashTable = new Hashtable<String, TaskContext>();
-		inputPortHashTable = new Hashtable<String, InputPort>();
-		//		targetInputPortTaskContextHashTable = new Hashtable<InputPort, TaskContext>();
-		//		sourceInputPortTaskContextHashTable = new Hashtable<InputPort, TaskContext>();
-		outputPortHashTable  = new Hashtable<String, OutputPort>();
-		//		targetOutputPortTaskContextHashTable = new Hashtable<OutputPort, TaskContext>();
-		//		sourceOutputPortTaskContextHashTable = new Hashtable<OutputPort, TaskContext>();
-		propertyHashTable = new Hashtable<String, Property>();
+		taskContextHashTable = new Hashtable<TaskContext, TaskContext>();
+		inputPortHashTable = new Hashtable<InputPort, InputPort>();
+		outputPortHashTable  = new Hashtable<OutputPort, OutputPort>();
+		propertyHashTable = new Hashtable<Property, Property>();
+		connectionHashTable = new Hashtable<ConnectionPolicy, ConnectionPolicy>();
+
 		for (TaskContext sourceTaskContext : source.getTaskContext()) {
 			targetOrocosModel.getTaskContext().add(cloneRttTaskContext(sourceTaskContext));
 		}
 
-		connectionHashTable = new Hashtable<String, ConnectionPolicy>();
 		for (ConnectionPolicy sourceConnPolicy : source.getConnectionPolicy()) {
 			targetOrocosModel.getConnectionPolicy().add(cloneRttConnectionPolicy(sourceConnPolicy));
 		}
@@ -386,12 +486,11 @@ public class RTTResolutionHandler extends AbstractHandler {
 		target.setType(source.getType());
 
 		for(InputPort sourceInputPort : source.getInputPort()){
-			target.getInputPort().add(cloneRttInputPort(sourceInputPort, source, target));
+			target.getInputPort().add(cloneRttInputPort(sourceInputPort, target));
 		}
 
 		for(OutputPort sourceOutputPort : source.getOutputPort()){
-			target.getOutputPort().add(cloneRttOutputPort(sourceOutputPort, source, target));
-
+			target.getOutputPort().add(cloneRttOutputPort(sourceOutputPort, target));
 		}
 
 		for(Property sourceProperty : source.getProperty()){
@@ -402,13 +501,13 @@ public class RTTResolutionHandler extends AbstractHandler {
 			target.getOperacion().add(cloneRttOperation(sourceOperation));
 		}
 
-		taskContextHashTable.put(getTaskContextHashTableKey(source), target);
+		taskContextHashTable.put(source, target);
 
 		return target;
 
 	}
 
-	private InputPort cloneRttInputPort(InputPort source, TaskContext sourceOwner, TaskContext targetOwner){
+	private InputPort cloneRttInputPort(InputPort source, TaskContext targetOwner){
 
 		InputPort target = RttFactoryImpl.eINSTANCE.createInputPort();
 
@@ -416,24 +515,20 @@ public class RTTResolutionHandler extends AbstractHandler {
 		target.setIsEventPort(source.getIsEventPort());
 		target.setType(source.getType());
 
-		inputPortHashTable.put(getPortHashTableKey(sourceOwner, source.getName()), target);
-		//		targetInputPortTaskContextHashTable.put(target, targetOwner);
-		//		sourceInputPortTaskContextHashTable.put(source, sourceOwner);
+		inputPortHashTable.put(source, target);
 
 		return target;
 
 	}
 
-	private OutputPort cloneRttOutputPort(OutputPort source, TaskContext sourceOwner, TaskContext targetOwner){
+	private OutputPort cloneRttOutputPort(OutputPort source, TaskContext targetOwner){
 
 		OutputPort target = RttFactoryImpl.eINSTANCE.createOutputPort();
 
 		target.setName(source.getName());
 		target.setType(source.getType());
 
-		outputPortHashTable.put(getPortHashTableKey(sourceOwner, source.getName()), target);
-		//		targetOutputPortTaskContextHashTable.put(target, targetOwner);
-		//		sourceOutputPortTaskContextHashTable.put(source, sourceOwner);
+		outputPortHashTable.put(source, target);
 
 		return target;
 
@@ -448,7 +543,7 @@ public class RTTResolutionHandler extends AbstractHandler {
 		target.setType(source.getType());
 		target.setValue(source.getValue());
 
-		propertyHashTable.put(getPropertyHashTableKey(source), target);
+		propertyHashTable.put(source, target);
 
 		return target;
 
@@ -476,20 +571,18 @@ public class RTTResolutionHandler extends AbstractHandler {
 		target.setBufferSize(source.getBufferSize());
 
 		InputPort sourceInputPort = source.getInputPort();
-		//		TaskContext sourceInputPortOwner1 = sourceInputPortTaskContextHashTable.get(sourceInputPort);
-		TaskContext sourceInputPortOwner = (TaskContext)sourceInputPort.eContainer();
-		InputPort targetInputPort = inputPortHashTable.get(getPortHashTableKey(sourceInputPortOwner, sourceInputPort.getName()));
+		InputPort targetInputPort = inputPortHashTable.get(sourceInputPort);
+
 		targetInputPort.setInputConnectionPolicy(target);
 		target.setInputPort(targetInputPort);
 
 		OutputPort sourceOutputPort = source.getOutputPort();
-		//		TaskContext sourceOutputPortOwner1 = targetOutputPortTaskContextHashTable.get(sourceOutputPort);
-		TaskContext sourceOutputPortOwner = (TaskContext)sourceOutputPort.eContainer();
-		OutputPort targetOutputPort = outputPortHashTable.get(getPortHashTableKey(sourceOutputPortOwner, sourceOutputPort.getName()));
+		OutputPort targetOutputPort = outputPortHashTable.get(sourceOutputPort);
+
 		targetOutputPort.setOutputConnectionPolicy(target);
 		target.setOutputPort(targetOutputPort);
 
-		connectionHashTable.put(getConnectionPolicyHashTableKey(source), target);
+		connectionHashTable.put(source, target);
 
 		return target;
 
@@ -505,7 +598,6 @@ public class RTTResolutionHandler extends AbstractHandler {
 		// the first call of this method always enter the else branch
 		// for the slave activities contained in the activity this method
 		// will enter the if branch
-
 		if(source instanceof Activity){
 			target = RttFactoryImpl.eINSTANCE.createActivity();
 			Activity sourceActivity = (Activity)source;
@@ -525,141 +617,106 @@ public class RTTResolutionHandler extends AbstractHandler {
 		}
 
 		target.setName(source.getName());
-		target.setTaskContext(taskContextHashTable.get(getTaskContextHashTableKey(sourceOwner)));
+
+		target.setTaskContext(taskContextHashTable.get(sourceOwner));
+
 
 
 		return target;
 
 	}
 
-	private String getPortHashTableKey(TaskContext owner, String portName){
-		return getTaskContextHashTableKey(owner) + ":" + portName;
-	}
-
-	private String getTaskContextHashTableKey(TaskContext taskContext){
-		return taskContext.getNamespace() + ":" + taskContext.getType() + ":" + taskContext.getName();
-	}
-
-	private String getPropertyHashTableKey(Property property){
-		return getTaskContextHashTableKey((TaskContext)property.eContainer()) + ":" + property.getName();
-	}
-
-	private String getConnectionPolicyHashTableKey(ConnectionPolicy connection){
-		return connection.getName() + ":" + connection.getInputPort().getName() + 
-				":" + connection.getOutputPort().getName();
-	}
-
-	private String printModel(Package model){
-
-		String result = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
-		result += "<rtt:Package xmi:version=\"2.0\" xmlns:xmi=\"http://www.omg.org/XMI\" " +
-				"xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:rtt=\"http://rtt/1.0\" name=\"" +
-				model.getName() + "\">\n";
-
-		for(TaskContext tc : model.getTaskContext()){
-			result += printTaskContext(tc);
-		}
-
-		for(ConnectionPolicy cp : model.getConnectionPolicy()){
-			result += printConnectionPolicy(cp);
-		}
-
-		for(IActivity a : model.getActivity()){
-			result += printIActivity(a);
-		}
-
-		result += "</rtt:Package>\n";
-
-		return result;
-
-	}
-
-	private String printTaskContext(TaskContext tc){
-
-		String result = "\t" + "<taskContext name=\"" + tc.getName() + "\" namespace=\"" +
-				tc.getNamespace() + "\" type=\"" + tc.getType() + "\">\n";
-
-
-		for(InputPort ip : tc.getInputPort()){
-			result += printInputPort(ip);
-		}
-
-		for(OutputPort op : tc.getOutputPort()){
-			result += printOutputPort(op);
-		}
-
-		for(Property p : tc.getProperty()){
-			result += printProperty(p);
-		}
-
-		for(Operation o : tc.getOperacion()){
-			result += printOperation(o);
-		}
-
-		return result;
-	}
-
-	private String printInputPort(InputPort ip){
-
-		return "\t\t" + "<inputPort isEventPort=\"" + ip.getIsEventPort() + "\" name=\"" + ip.getName() +
-				"\" type=\"" + ip.getType().toString() + "\" inputConnectionPolicy=\"" + 
-				ip.getInputConnectionPolicy().getName() + "\"/>\n"; //@connectionPolicy.0"/>;
-
-	}
-
-	private String printOutputPort(OutputPort op){
-
-		return "\t\t" + "<oututPort name=\"" + op.getName() +	"\" type=\"" + op.getType().toString() + 
-				"\" inputConnectionPolicy=\"" +op.getOutputConnectionPolicy().getName() + "\"/>\n"; //@connectionPolicy.0"/>;
-
-	}
-
-	private String printProperty(Property p){
-		return "\t\t" + "<property name=\"" + p.getName() + "\" description=\"" + p.getDescription() + "\" type=\"" +
-				p.getType().toString() + "\" value=\"" + p.getValue() + "\"/>\n";
-	}
-
-	private String printOperation(Operation o){
-		return "";
-	}
-
-	private String printConnectionPolicy(ConnectionPolicy cp){
-		return "\t" + "<connectionPolicy inputPort=\"" + cp.getInputPort().getName() + //@taskContext.2/@inputPort.0
-				"\" outputPort=\"" + cp.getOutputPort().getName() + //@taskContext.0/@outputPort.0
-				"\" bufferSize=\"" + cp.getBufferSize() + "\" name=\"" + cp.getName() + 
-				"\" lockPolicy=\"" + cp.getLockPolicy().toString() + "\" type=\"" + cp.getType().toString() + "\"/>\n";
-	}
-
-	private String printIActivity(IActivity ia){
-		if(ia instanceof Activity){
-			Activity a = (Activity)ia;
-			return "\t" + "<activity xsi:type=\"rtt:Activity\" name=\"" + a.getName() + "\" taskContext=\"" +
-			a.getTaskContext().getName() + //@taskContext.0
-			"\" scheduler=\"" + a.getScheduler().toString() + "\" cpuAffinity=\"" + a.getCpuAffinity() + 
-			"\" period=\"" + a.getPeriod() + "\" priority=\"" + a.getPriority() + "\"/>\n";
-		}else 
-			return "";
-	}
-
-	private boolean isConnected(TaskContext taskContext){
-
-		for (Iterator<InputPort> iterator = taskContext.getInputPort().iterator(); iterator.hasNext();) {
-			InputPort port = (InputPort) iterator.next();
-			if(port.getInputConnectionPolicy() != null){
-				return true;
-			}
-		}
-
-		for (Iterator<OutputPort> iterator = taskContext.getOutputPort().iterator(); iterator.hasNext();) {
-			OutputPort port = (OutputPort) iterator.next();
-			if(port.getOutputConnectionPolicy() != null){
-				return true;
-			}
-		}
-
-		return false;
-
-	}
+	//	private String printModel(Package model){
+	//
+	//		String result = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+	//		result += "<rtt:Package xmi:version=\"2.0\" xmlns:xmi=\"http://www.omg.org/XMI\" " +
+	//				"xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:rtt=\"http://rtt/1.0\" name=\"" +
+	//				model.getName() + "\">\n";
+	//
+	//		for(TaskContext tc : model.getTaskContext()){
+	//			result += printTaskContext(tc);
+	//		}
+	//
+	//		for(ConnectionPolicy cp : model.getConnectionPolicy()){
+	//			result += printConnectionPolicy(cp);
+	//		}
+	//
+	//		for(IActivity a : model.getActivity()){
+	//			result += printIActivity(a);
+	//		}
+	//
+	//		result += "</rtt:Package>\n";
+	//
+	//		return result;
+	//
+	//	}
+	//
+	//	private String printTaskContext(TaskContext tc){
+	//
+	//		String result = "\t" + "<taskContext name=\"" + tc.getName() + "\" namespace=\"" +
+	//				tc.getNamespace() + "\" type=\"" + tc.getType() + "\">\n";
+	//
+	//
+	//		for(InputPort ip : tc.getInputPort()){
+	//			result += printInputPort(ip);
+	//		}
+	//
+	//		for(OutputPort op : tc.getOutputPort()){
+	//			result += printOutputPort(op);
+	//		}
+	//
+	//		for(Property p : tc.getProperty()){
+	//			result += printProperty(p);
+	//		}
+	//
+	//		for(Operation o : tc.getOperacion()){
+	//			result += printOperation(o);
+	//		}
+	//
+	//		return result;
+	//	}
+	//
+	//	private String printInputPort(InputPort ip){
+	//
+	//		return "\t\t" + "<inputPort isEventPort=\"" + ip.getIsEventPort() + "\" name=\"" + ip.getName() +
+	//				"\" type=\"" + ip.getType().toString() + "\" inputConnectionPolicy=\"" + 
+	//				ip.getInputConnectionPolicy().getName() + "\"/>\n"; //@connectionPolicy.0"/>;
+	//
+	//	}
+	//
+	//	private String printOutputPort(OutputPort op){
+	//
+	//		return "\t\t" + "<oututPort name=\"" + op.getName() +	"\" type=\"" + op.getType().toString() + 
+	//				"\" inputConnectionPolicy=\"" +op.getOutputConnectionPolicy().getName() + "\"/>\n"; //@connectionPolicy.0"/>;
+	//
+	//	}
+	//
+	//	private String printProperty(Property p){
+	//		return "\t\t" + "<property name=\"" + p.getName() + "\" description=\"" + p.getDescription() + "\" type=\"" +
+	//				p.getType().toString() + "\" value=\"" + p.getValue() + "\"/>\n";
+	//	}
+	//
+	//	private String printOperation(Operation o){
+	//		return "";
+	//	}
+	//
+	//	private String printConnectionPolicy(ConnectionPolicy cp){
+	//		return "\t" + "<connectionPolicy inputPort=\"" + cp.getInputPort().getName() + //@taskContext.2/@inputPort.0
+	//				"\" outputPort=\"" + cp.getOutputPort().getName() + //@taskContext.0/@outputPort.0
+	//				"\" bufferSize=\"" + cp.getBufferSize() + "\" name=\"" + cp.getName() + 
+	//				"\" lockPolicy=\"" + cp.getLockPolicy().toString() + "\" type=\"" + cp.getType().toString() + "\"/>\n";
+	//	}
+	//
+	//	private String printIActivity(IActivity ia){
+	//		if(ia instanceof Activity){
+	//			Activity a = (Activity)ia;
+	//			return "\t" + "<activity xsi:type=\"rtt:Activity\" name=\"" + a.getName() + "\" taskContext=\"" +
+	//			a.getTaskContext().getName() + //@taskContext.0
+	//			"\" scheduler=\"" + a.getScheduler().toString() + "\" cpuAffinity=\"" + a.getCpuAffinity() + 
+	//			"\" period=\"" + a.getPeriod() + "\" priority=\"" + a.getPriority() + "\"/>\n";
+	//		}else 
+	//			return "";
+	//	}
 
 	private FeatureModel getSourceFeatureModel(){
 
@@ -705,18 +762,27 @@ public class RTTResolutionHandler extends AbstractHandler {
 
 			}
 
-			for(RMRequiredComponent currentReqComp : currentResElem.getRequiredComponents()){
+			if(currentResElem.getRequiredComponents() instanceof RTTRequiredComponents){
 
-				//TODO
+				RTTRequiredComponents rttReqComponenents = (RTTRequiredComponents)currentResElem.getRequiredComponents();
+				for(TaskContext currentReqComp : rttReqComponenents.getRTTTaskContexts()){
+
+					return (Package)currentReqComp.eContainer();
+
+				}
 
 			}
 
-			for(RMRequiredConnection currentReqConn : currentResElem.getRequiredConnections()){
+			if(currentResElem.getRequiredConnections() instanceof RTTRequiredConnections){
 
-				//TODO
+				RTTRequiredConnections rttReqConnections = (RTTRequiredConnections)currentResElem.getRequiredConnections();
+				for(ConnectionPolicy currentReqConn : rttReqConnections.getRTTConnectionPolicies()){
+
+					return (Package)currentReqConn.eContainer();
+
+				}
 
 			}
-
 
 
 		}

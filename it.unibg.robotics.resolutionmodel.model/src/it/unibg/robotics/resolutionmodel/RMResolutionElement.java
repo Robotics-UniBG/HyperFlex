@@ -70,36 +70,56 @@ public interface RMResolutionElement extends EObject {
 	EList<RMAbstractTransformation> getTransformations();
 
 	/**
-	 * Returns the value of the '<em><b>Required Components</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.resolutionmodel.RMRequiredComponent}.
+	 * Returns the value of the '<em><b>Required Components</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Required Components</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required Components</em>' containment reference list.
+	 * @return the value of the '<em>Required Components</em>' containment reference.
+	 * @see #setRequiredComponents(RMRequiredComponents)
 	 * @see it.unibg.robotics.resolutionmodel.resolutionmodelPackage#getRMResolutionElement_RequiredComponents()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<RMRequiredComponent> getRequiredComponents();
+	RMRequiredComponents getRequiredComponents();
 
 	/**
-	 * Returns the value of the '<em><b>Required Connections</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.resolutionmodel.RMRequiredConnection}.
+	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getRequiredComponents <em>Required Components</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Required Components</em>' containment reference.
+	 * @see #getRequiredComponents()
+	 * @generated
+	 */
+	void setRequiredComponents(RMRequiredComponents value);
+
+	/**
+	 * Returns the value of the '<em><b>Required Connections</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Required Connections</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required Connections</em>' containment reference list.
+	 * @return the value of the '<em>Required Connections</em>' containment reference.
+	 * @see #setRequiredConnections(RMRequiredConnections)
 	 * @see it.unibg.robotics.resolutionmodel.resolutionmodelPackage#getRMResolutionElement_RequiredConnections()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<RMRequiredConnection> getRequiredConnections();
+	RMRequiredConnections getRequiredConnections();
+
+	/**
+	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodel.RMResolutionElement#getRequiredConnections <em>Required Connections</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Required Connections</em>' containment reference.
+	 * @see #getRequiredConnections()
+	 * @generated
+	 */
+	void setRequiredConnections(RMRequiredConnections value);
 
 	/**
 	 * Returns the value of the '<em><b>Feature</b></em>' reference.

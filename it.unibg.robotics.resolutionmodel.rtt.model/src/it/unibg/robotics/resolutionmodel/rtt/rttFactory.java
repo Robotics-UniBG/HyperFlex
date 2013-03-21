@@ -81,6 +81,24 @@ public interface rttFactory extends EFactory {
 	RTTConnection createRTTConnection();
 
 	/**
+	 * Returns a new object of class '<em>RTT Required Components</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>RTT Required Components</em>'.
+	 * @generated
+	 */
+	RTTRequiredComponents createRTTRequiredComponents();
+
+	/**
+	 * Returns a new object of class '<em>RTT Required Connections</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>RTT Required Connections</em>'.
+	 * @generated
+	 */
+	RTTRequiredConnections createRTTRequiredConnections();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

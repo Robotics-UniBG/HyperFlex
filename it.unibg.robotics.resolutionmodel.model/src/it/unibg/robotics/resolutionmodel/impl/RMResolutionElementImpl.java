@@ -26,10 +26,9 @@
 package it.unibg.robotics.resolutionmodel.impl;
 
 import it.unibg.robotics.featuremodels.Feature;
-
 import it.unibg.robotics.resolutionmodel.RMAbstractTransformation;
-import it.unibg.robotics.resolutionmodel.RMRequiredComponent;
-import it.unibg.robotics.resolutionmodel.RMRequiredConnection;
+import it.unibg.robotics.resolutionmodel.RMRequiredComponents;
+import it.unibg.robotics.resolutionmodel.RMRequiredConnections;
 import it.unibg.robotics.resolutionmodel.RMResolutionElement;
 import it.unibg.robotics.resolutionmodel.resolutionmodelPackage;
 
@@ -37,15 +36,11 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -79,24 +74,24 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 	protected EList<RMAbstractTransformation> transformations;
 
 	/**
-	 * The cached value of the '{@link #getRequiredComponents() <em>Required Components</em>}' containment reference list.
+	 * The cached value of the '{@link #getRequiredComponents() <em>Required Components</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRequiredComponents()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RMRequiredComponent> requiredComponents;
+	protected RMRequiredComponents requiredComponents;
 
 	/**
-	 * The cached value of the '{@link #getRequiredConnections() <em>Required Connections</em>}' containment reference list.
+	 * The cached value of the '{@link #getRequiredConnections() <em>Required Connections</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRequiredConnections()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RMRequiredConnection> requiredConnections;
+	protected RMRequiredConnections requiredConnections;
 
 	/**
 	 * The cached value of the '{@link #getFeature() <em>Feature</em>}' reference.
@@ -184,10 +179,7 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RMRequiredComponent> getRequiredComponents() {
-		if (requiredComponents == null) {
-			requiredComponents = new EObjectContainmentEList<RMRequiredComponent>(RMRequiredComponent.class, this, resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS);
-		}
+	public RMRequiredComponents getRequiredComponents() {
 		return requiredComponents;
 	}
 
@@ -196,11 +188,76 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RMRequiredConnection> getRequiredConnections() {
-		if (requiredConnections == null) {
-			requiredConnections = new EObjectContainmentEList<RMRequiredConnection>(RMRequiredConnection.class, this, resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_CONNECTIONS);
+	public NotificationChain basicSetRequiredComponents(RMRequiredComponents newRequiredComponents, NotificationChain msgs) {
+		RMRequiredComponents oldRequiredComponents = requiredComponents;
+		requiredComponents = newRequiredComponents;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS, oldRequiredComponents, newRequiredComponents);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRequiredComponents(RMRequiredComponents newRequiredComponents) {
+		if (newRequiredComponents != requiredComponents) {
+			NotificationChain msgs = null;
+			if (requiredComponents != null)
+				msgs = ((InternalEObject)requiredComponents).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS, null, msgs);
+			if (newRequiredComponents != null)
+				msgs = ((InternalEObject)newRequiredComponents).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS, null, msgs);
+			msgs = basicSetRequiredComponents(newRequiredComponents, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS, newRequiredComponents, newRequiredComponents));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RMRequiredConnections getRequiredConnections() {
 		return requiredConnections;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRequiredConnections(RMRequiredConnections newRequiredConnections, NotificationChain msgs) {
+		RMRequiredConnections oldRequiredConnections = requiredConnections;
+		requiredConnections = newRequiredConnections;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_CONNECTIONS, oldRequiredConnections, newRequiredConnections);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRequiredConnections(RMRequiredConnections newRequiredConnections) {
+		if (newRequiredConnections != requiredConnections) {
+			NotificationChain msgs = null;
+			if (requiredConnections != null)
+				msgs = ((InternalEObject)requiredConnections).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_CONNECTIONS, null, msgs);
+			if (newRequiredConnections != null)
+				msgs = ((InternalEObject)newRequiredConnections).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_CONNECTIONS, null, msgs);
+			msgs = basicSetRequiredConnections(newRequiredConnections, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_CONNECTIONS, newRequiredConnections, newRequiredConnections));
 	}
 
 	/**
@@ -294,9 +351,9 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__TRANSFORMATIONS:
 				return ((InternalEList<?>)getTransformations()).basicRemove(otherEnd, msgs);
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS:
-				return ((InternalEList<?>)getRequiredComponents()).basicRemove(otherEnd, msgs);
+				return basicSetRequiredComponents(null, msgs);
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_CONNECTIONS:
-				return ((InternalEList<?>)getRequiredConnections()).basicRemove(otherEnd, msgs);
+				return basicSetRequiredConnections(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -340,12 +397,10 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 				getTransformations().addAll((Collection<? extends RMAbstractTransformation>)newValue);
 				return;
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS:
-				getRequiredComponents().clear();
-				getRequiredComponents().addAll((Collection<? extends RMRequiredComponent>)newValue);
+				setRequiredComponents((RMRequiredComponents)newValue);
 				return;
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_CONNECTIONS:
-				getRequiredConnections().clear();
-				getRequiredConnections().addAll((Collection<? extends RMRequiredConnection>)newValue);
+				setRequiredConnections((RMRequiredConnections)newValue);
 				return;
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__FEATURE:
 				setFeature((Feature)newValue);
@@ -372,10 +427,10 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 				getTransformations().clear();
 				return;
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS:
-				getRequiredComponents().clear();
+				setRequiredComponents((RMRequiredComponents)null);
 				return;
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_CONNECTIONS:
-				getRequiredConnections().clear();
+				setRequiredConnections((RMRequiredConnections)null);
 				return;
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__FEATURE:
 				setFeature((Feature)null);
@@ -401,9 +456,9 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__TRANSFORMATIONS:
 				return transformations != null && !transformations.isEmpty();
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS:
-				return requiredComponents != null && !requiredComponents.isEmpty();
+				return requiredComponents != null;
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__REQUIRED_CONNECTIONS:
-				return requiredConnections != null && !requiredConnections.isEmpty();
+				return requiredConnections != null;
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__FEATURE:
 				return feature != null;
 			case resolutionmodelPackage.RM_RESOLUTION_ELEMENT__NAME:

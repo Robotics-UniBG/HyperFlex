@@ -24,5 +24,11 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rttResolutionModel.ecore#//RTTConnection/inputPort"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rttResolutionModel.ecore#//RTTConnection/outputPort"/>
     </genClasses>
+    <genClasses ecoreClass="rttResolutionModel.ecore#//RTTRequiredComponents">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rttResolutionModel.ecore#//RTTRequiredComponents/RTTTaskContexts"/>
+    </genClasses>
+    <genClasses ecoreClass="rttResolutionModel.ecore#//RTTRequiredConnections">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rttResolutionModel.ecore#//RTTRequiredConnections/RTTConnectionPolicies"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

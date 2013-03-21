@@ -23,8 +23,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resolutionModel.ecore#//RMAbstractTransformation/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resolutionModel.ecore#//RMAbstractTransformation/description"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="resolutionModel.ecore#//RMRequiredComponent"/>
-    <genClasses image="false" ecoreClass="resolutionModel.ecore#//RMRequiredConnection"/>
+    <genClasses image="false" ecoreClass="resolutionModel.ecore#//RMRequiredComponents"/>
+    <genClasses image="false" ecoreClass="resolutionModel.ecore#//RMRequiredConnections"/>
     <genClasses image="false" ecoreClass="resolutionModel.ecore#//RMTransfImplementation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resolutionModel.ecore#//RMTransfImplementation/classNamespace"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resolutionModel.ecore#//RMTransfImplementation/className"/>

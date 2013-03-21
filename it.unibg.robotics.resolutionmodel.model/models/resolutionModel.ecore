@@ -10,10 +10,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="RMResolutionElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="transformations" upperBound="-1"
         eType="#//RMAbstractTransformation" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredComponents" upperBound="-1"
-        eType="#//RMRequiredComponent" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredConnections" upperBound="-1"
-        eType="#//RMRequiredConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredComponents" eType="#//RMRequiredComponents"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredConnections" eType="#//RMRequiredConnections"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="feature" lowerBound="1"
         eType="ecore:EClass ../../it.unibg.robotics.featuremodels.model/models/featureModel.ecore#//Feature"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -23,8 +23,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RMRequiredComponent" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RMRequiredConnection" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RMRequiredComponents" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RMRequiredConnections" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="RMTransfImplementation" abstract="true"
       eSuperTypes="#//RMAbstractTransformation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classNamespace" lowerBound="1"

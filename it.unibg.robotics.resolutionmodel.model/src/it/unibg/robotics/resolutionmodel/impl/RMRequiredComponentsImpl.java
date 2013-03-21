@@ -25,29 +25,28 @@
  */
 package it.unibg.robotics.resolutionmodel.impl;
 
-import it.unibg.robotics.resolutionmodel.RMRequiredConnection;
+import it.unibg.robotics.resolutionmodel.RMRequiredComponents;
 import it.unibg.robotics.resolutionmodel.resolutionmodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>RM Required Connection</b></em>'.
+ * An implementation of the model object '<em><b>RM Required Components</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public abstract class RMRequiredConnectionImpl extends EObjectImpl implements RMRequiredConnection {
+public abstract class RMRequiredComponentsImpl extends EObjectImpl implements RMRequiredComponents {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RMRequiredConnectionImpl() {
+	protected RMRequiredComponentsImpl() {
 		super();
 	}
 
@@ -58,7 +57,7 @@ public abstract class RMRequiredConnectionImpl extends EObjectImpl implements RM
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return resolutionmodelPackage.Literals.RM_REQUIRED_CONNECTION;
+		return resolutionmodelPackage.Literals.RM_REQUIRED_COMPONENTS;
 	}
 
-} //RMRequiredConnectionImpl
+} //RMRequiredComponentsImpl

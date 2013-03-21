@@ -204,6 +204,52 @@ public class rttItemProviderAdapterFactory extends rttAdapterFactory implements 
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodel.rtt.RTTRequiredComponents} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RTTRequiredComponentsItemProvider rttRequiredComponentsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodel.rtt.RTTRequiredComponents}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRTTRequiredComponentsAdapter() {
+		if (rttRequiredComponentsItemProvider == null) {
+			rttRequiredComponentsItemProvider = new RTTRequiredComponentsItemProvider(this);
+		}
+
+		return rttRequiredComponentsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodel.rtt.RTTRequiredConnections} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RTTRequiredConnectionsItemProvider rttRequiredConnectionsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodel.rtt.RTTRequiredConnections}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRTTRequiredConnectionsAdapter() {
+		if (rttRequiredConnectionsItemProvider == null) {
+			rttRequiredConnectionsItemProvider = new RTTRequiredConnectionsItemProvider(this);
+		}
+
+		return rttRequiredConnectionsItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -306,6 +352,8 @@ public class rttItemProviderAdapterFactory extends rttAdapterFactory implements 
 		if (rttTransfPropertyItemProvider != null) rttTransfPropertyItemProvider.dispose();
 		if (rttTransfConnectionItemProvider != null) rttTransfConnectionItemProvider.dispose();
 		if (rttConnectionItemProvider != null) rttConnectionItemProvider.dispose();
+		if (rttRequiredComponentsItemProvider != null) rttRequiredComponentsItemProvider.dispose();
+		if (rttRequiredConnectionsItemProvider != null) rttRequiredConnectionsItemProvider.dispose();
 	}
 
 	/**
@@ -369,6 +417,16 @@ public class rttItemProviderAdapterFactory extends rttAdapterFactory implements 
 					(createChildParameter
 						(resolutionmodelPackage.Literals.RM_RESOLUTION_ELEMENT__TRANSFORMATIONS,
 						 rttFactory.eINSTANCE.createRTTTransfConnection()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(resolutionmodelPackage.Literals.RM_RESOLUTION_ELEMENT__REQUIRED_COMPONENTS,
+						 rttFactory.eINSTANCE.createRTTRequiredComponents()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(resolutionmodelPackage.Literals.RM_RESOLUTION_ELEMENT__REQUIRED_CONNECTIONS,
+						 rttFactory.eINSTANCE.createRTTRequiredConnections()));
 
 				return null;
 			}

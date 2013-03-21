@@ -25,4 +25,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputPort" lowerBound="1"
         eType="ecore:EClass ../../org.orocos.model.rtt/model/rtt.ecore#//OutputPort"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RTTRequiredComponents" eSuperTypes="../../it.unibg.robotics.resolutionmodel.model/models/resolutionModel.ecore#//RMRequiredComponents">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RTTTaskContexts" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass ../../org.orocos.model.rtt/model/rtt.ecore#//TaskContext"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RTTRequiredConnections" eSuperTypes="../../it.unibg.robotics.resolutionmodel.model/models/resolutionModel.ecore#//RMRequiredConnections">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RTTConnectionPolicies"
+        lowerBound="1" upperBound="-1" eType="ecore:EClass ../../org.orocos.model.rtt/model/rtt.ecore#//ConnectionPolicy"/>
+  </eClassifiers>
 </ecore:EPackage>

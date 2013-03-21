@@ -26,10 +26,9 @@
 package it.unibg.robotics.resolutionmodel.impl;
 
 import it.unibg.robotics.featuremodels.featuremodelsPackage;
-
 import it.unibg.robotics.resolutionmodel.RMAbstractTransformation;
-import it.unibg.robotics.resolutionmodel.RMRequiredComponent;
-import it.unibg.robotics.resolutionmodel.RMRequiredConnection;
+import it.unibg.robotics.resolutionmodel.RMRequiredComponents;
+import it.unibg.robotics.resolutionmodel.RMRequiredConnections;
 import it.unibg.robotics.resolutionmodel.RMResolutionElement;
 import it.unibg.robotics.resolutionmodel.RMTransfConnection;
 import it.unibg.robotics.resolutionmodel.RMTransfImplementation;
@@ -42,7 +41,6 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -78,14 +76,14 @@ public class resolutionmodelPackageImpl extends EPackageImpl implements resoluti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass rmRequiredComponentEClass = null;
+	private EClass rmRequiredComponentsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass rmRequiredConnectionEClass = null;
+	private EClass rmRequiredConnectionsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -294,8 +292,8 @@ public class resolutionmodelPackageImpl extends EPackageImpl implements resoluti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRMRequiredComponent() {
-		return rmRequiredComponentEClass;
+	public EClass getRMRequiredComponents() {
+		return rmRequiredComponentsEClass;
 	}
 
 	/**
@@ -303,8 +301,8 @@ public class resolutionmodelPackageImpl extends EPackageImpl implements resoluti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRMRequiredConnection() {
-		return rmRequiredConnectionEClass;
+	public EClass getRMRequiredConnections() {
+		return rmRequiredConnectionsEClass;
 	}
 
 	/**
@@ -405,9 +403,9 @@ public class resolutionmodelPackageImpl extends EPackageImpl implements resoluti
 		createEAttribute(rmAbstractTransformationEClass, RM_ABSTRACT_TRANSFORMATION__NAME);
 		createEAttribute(rmAbstractTransformationEClass, RM_ABSTRACT_TRANSFORMATION__DESCRIPTION);
 
-		rmRequiredComponentEClass = createEClass(RM_REQUIRED_COMPONENT);
+		rmRequiredComponentsEClass = createEClass(RM_REQUIRED_COMPONENTS);
 
-		rmRequiredConnectionEClass = createEClass(RM_REQUIRED_CONNECTION);
+		rmRequiredConnectionsEClass = createEClass(RM_REQUIRED_CONNECTIONS);
 
 		rmTransfImplementationEClass = createEClass(RM_TRANSF_IMPLEMENTATION);
 		createEAttribute(rmTransfImplementationEClass, RM_TRANSF_IMPLEMENTATION__CLASS_NAMESPACE);
@@ -461,8 +459,8 @@ public class resolutionmodelPackageImpl extends EPackageImpl implements resoluti
 
 		initEClass(rmResolutionElementEClass, RMResolutionElement.class, "RMResolutionElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRMResolutionElement_Transformations(), this.getRMAbstractTransformation(), null, "transformations", null, 0, -1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRMResolutionElement_RequiredComponents(), this.getRMRequiredComponent(), null, "requiredComponents", null, 0, -1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRMResolutionElement_RequiredConnections(), this.getRMRequiredConnection(), null, "requiredConnections", null, 0, -1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRMResolutionElement_RequiredComponents(), this.getRMRequiredComponents(), null, "requiredComponents", null, 0, 1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRMResolutionElement_RequiredConnections(), this.getRMRequiredConnections(), null, "requiredConnections", null, 0, 1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRMResolutionElement_Feature(), thefeaturemodelsPackage.getFeature(), null, "feature", null, 1, 1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRMResolutionElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRMResolutionElement_Description(), ecorePackage.getEString(), "description", null, 0, 1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -471,9 +469,9 @@ public class resolutionmodelPackageImpl extends EPackageImpl implements resoluti
 		initEAttribute(getRMAbstractTransformation_Name(), ecorePackage.getEString(), "name", null, 1, 1, RMAbstractTransformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRMAbstractTransformation_Description(), ecorePackage.getEString(), "description", null, 0, 1, RMAbstractTransformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(rmRequiredComponentEClass, RMRequiredComponent.class, "RMRequiredComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(rmRequiredComponentsEClass, RMRequiredComponents.class, "RMRequiredComponents", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(rmRequiredConnectionEClass, RMRequiredConnection.class, "RMRequiredConnection", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(rmRequiredConnectionsEClass, RMRequiredConnections.class, "RMRequiredConnections", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(rmTransfImplementationEClass, RMTransfImplementation.class, "RMTransfImplementation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRMTransfImplementation_ClassNamespace(), ecorePackage.getEString(), "classNamespace", null, 1, 1, RMTransfImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

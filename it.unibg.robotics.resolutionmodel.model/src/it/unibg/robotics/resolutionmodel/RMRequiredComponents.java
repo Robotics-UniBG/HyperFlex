@@ -23,42 +23,19 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodel.impl;
+package it.unibg.robotics.resolutionmodel;
 
-import it.unibg.robotics.resolutionmodel.RMRequiredComponent;
-import it.unibg.robotics.resolutionmodel.resolutionmodelPackage;
-
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>RM Required Component</b></em>'.
+ * A representation of the model object '<em><b>RM Required Components</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
+ *
+ * @see it.unibg.robotics.resolutionmodel.resolutionmodelPackage#getRMRequiredComponents()
+ * @model abstract="true"
  * @generated
  */
-public abstract class RMRequiredComponentImpl extends EObjectImpl implements RMRequiredComponent {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RMRequiredComponentImpl() {
-		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return resolutionmodelPackage.Literals.RM_REQUIRED_COMPONENT;
-	}
-
-} //RMRequiredComponentImpl
+public interface RMRequiredComponents extends EObject {
+} // RMRequiredComponents

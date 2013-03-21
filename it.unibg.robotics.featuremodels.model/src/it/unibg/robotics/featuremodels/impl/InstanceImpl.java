@@ -261,19 +261,21 @@ public class InstanceImpl extends EObjectImpl implements Instance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(", descritpion: ");
-		result.append(descritpion);
-		result.append(')');
-		return result.toString();
+//		if (eIsProxy()) return super.toString();
+//
+//		StringBuffer result = new StringBuffer(super.toString());
+//		result.append(" (id: ");
+//		result.append(id);
+//		result.append(", descritpion: ");
+//		result.append(descritpion);
+//		result.append(')');
+//		return result.toString();
+		
+		return id + " (" + descritpion + ")";
 	}
 
 } //InstanceImpl
