@@ -15,18 +15,18 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:org.eclipse.ui.main.menu">
+            locationURI="menu:it.unibg.robotics.resolutionmodel.ui.menuEntry">
+         <command
+               commandId="it.unbig.robotics.resolutionmodel.commands.resolution.rttResolution"
+               icon="icons/start_task.gif"
+               id="ResolveRTTsModelButton"
+               label="Resolve RTT Model"
+               style="push"
+               tooltip="Resolve RTT Model">
+         </command>
          <menu
                id="Variability Resolution"
                label="Variability Resolution">
-            <command
-                  commandId="it.unbig.robotics.resolutionmodel.commands.resolution.rttResolution"
-                  icon="icons/start_task.gif"
-                  id="ResolveRTTsModelButton"
-                  label="Resolve RTT Model"
-                  style="push"
-                  tooltip="Resolve RTT Model">
-            </command>
          </menu>
       </menuContribution>
       <menuContribution
@@ -46,27 +46,6 @@
       </menuContribution>
    </extension>
    <extension
-         point="org.eclipse.core.expressions.definitions">
-      <definition
-            id="resolutionModelSelected">
-         <with
-               variable="selection">
-            <and>
-               <count
-                     value="1">
-               </count>
-               <iterate
-                     ifEmpty="false"
-                     operator="or">
-                  <instanceof
-                        value="it.unibg.robotics.resolutionmodel.ResolutionModel">
-                  </instanceof>
-               </iterate>
-            </and>
-         </with>
-      </definition>
-   </extension>
-   <extension
          point="org.eclipse.ui.commands">
       <command
             category="Resolution Model Commands"
@@ -74,10 +53,6 @@
             id="it.unbig.robotics.resolutionmodel.commands.resolution.rttResolution"
             name="RTT Resolution Command">
       </command>
-      <category
-            id="it.unibg.robotics.resolutionmodel.commands.resolution.category"
-            name="Resolution Model Commands">
-      </category>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
@@ -86,7 +61,7 @@
             commandId="it.unbig.robotics.resolutionmodel.commands.resolution.rttResolution">
          <enabledWhen>
             <reference
-                  definitionId="resolutionModelSelected">
+                  definitionId="it.unibg.robotics.resolutionmodel.expressions.resolutionModelSelected">
             </reference>
          </enabledWhen>
       </handler>

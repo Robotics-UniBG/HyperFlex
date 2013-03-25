@@ -17,7 +17,8 @@ Require-Bundle: org.eclipse.ui,
  it.unibg.robotics.featuremodels.model;bundle-version="1.0.0",
  it.unibg.robotics.resolutionmodel.rtt.model;bundle-version="1.0.0",
  it.unibg.robotics.featuremodels.model.diagram;bundle-version="1.0.0",
- it.unibg.robotics.resolutionmodel.model.editor;bundle-version="1.0.0"
+ it.unibg.robotics.resolutionmodel.model.editor;bundle-version="1.0.0",
+ it.unibg.robotics.resolutionmodel.ui;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: Luca Gherardi

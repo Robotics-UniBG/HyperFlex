@@ -26,6 +26,7 @@
 package it.unibg.robotics.featuremodels.model.diagram.edit.commands;
 
 import it.unibg.robotics.featuremodels.CompositeFeature;
+
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
