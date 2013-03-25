@@ -27,7 +27,6 @@ package it.unibg.robotics.resolutionmodel.ros.provider;
 
 
 import it.unibg.robotics.resolutionmodel.provider.RMRequiredConnectionsItemProvider;
-
 import it.unibg.robotics.resolutionmodel.ros.rosPackage;
 
 import java.util.Collection;
@@ -35,9 +34,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -81,25 +78,71 @@ public class ROSRequiredConnectionsItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addROSConnectionsPropertyDescriptor(object);
+			addRequiredTopicConnectionsPropertyDescriptor(object);
+			addRequiredServiceConnectionsPropertyDescriptor(object);
+			addRequiredActionConnectionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the ROS Connections feature.
+	 * This adds a property descriptor for the Required Topic Connections feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addROSConnectionsPropertyDescriptor(Object object) {
+	protected void addRequiredTopicConnectionsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ROSRequiredConnections_ROSConnections_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ROSRequiredConnections_ROSConnections_feature", "_UI_ROSRequiredConnections_type"),
-				 rosPackage.Literals.ROS_REQUIRED_CONNECTIONS__ROS_CONNECTIONS,
+				 getString("_UI_ROSRequiredConnections_requiredTopicConnections_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ROSRequiredConnections_requiredTopicConnections_feature", "_UI_ROSRequiredConnections_type"),
+				 rosPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Required Service Connections feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRequiredServiceConnectionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ROSRequiredConnections_requiredServiceConnections_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ROSRequiredConnections_requiredServiceConnections_feature", "_UI_ROSRequiredConnections_type"),
+				 rosPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Required Action Connections feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRequiredActionConnectionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ROSRequiredConnections_requiredActionConnections_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ROSRequiredConnections_requiredActionConnections_feature", "_UI_ROSRequiredConnections_type"),
+				 rosPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS,
 				 true,
 				 false,
 				 true,

@@ -18,6 +18,13 @@
                label="Variability Resolution">
          </menu>
       </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="it.robotics.unibg.featuremodels.commands.resolution.toolbar1">
+         </toolbar>
+      </menuContribution>
    </extension>
    <extension
          point="org.eclipse.core.expressions.definitions">

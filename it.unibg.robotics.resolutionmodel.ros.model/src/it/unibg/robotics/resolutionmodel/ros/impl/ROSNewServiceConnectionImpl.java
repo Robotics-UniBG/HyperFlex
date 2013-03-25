@@ -29,12 +29,9 @@ import it.unibg.robotics.resolutionmodel.ros.ROSNewServiceConnection;
 import it.unibg.robotics.resolutionmodel.ros.rosPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.ros.model.ros.ServiceClient;
 import org.ros.model.ros.ServiceServer;
 
@@ -304,6 +301,37 @@ public class ROSNewServiceConnectionImpl extends ROSAbstractConnectionImpl imple
 		result.append(serviceName);
 		result.append(')');
 		return result.toString();
+	}
+	
+	/**
+	 * @generated NOT
+	 */
+	@Override
+	public boolean equals(Object arg0) {
+		
+		if(arg0 instanceof ROSNewServiceConnectionImpl){
+			ROSNewServiceConnectionImpl connection = (ROSNewServiceConnectionImpl)arg0;
+			
+			ServiceServer ssA = connection.getServiceServer();
+			ServiceServer ssB = this.getServiceServer();
+
+			ServiceClient scA = connection.getServiceClient();
+			ServiceClient scB = this.getServiceClient();
+
+			String nA = connection.getServiceName();
+			String nB = this.getServiceName();
+
+			if(ssA == ssB && scA == scB && nA == nB){
+				return true;
+			}else{
+				return false;
+			}
+			
+			
+		}else{
+			return false;
+		}
+		
 	}
 
 } //ROSNewServiceConnectionImpl

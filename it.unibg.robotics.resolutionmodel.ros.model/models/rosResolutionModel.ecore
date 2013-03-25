@@ -68,7 +68,11 @@
         upperBound="-1" eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//Node"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ROSRequiredConnections" eSuperTypes="../../it.unibg.robotics.resolutionmodel.model/models/resolutionModel.ecore#//RMRequiredConnections">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ROSConnections" lowerBound="1"
-        upperBound="-1" eType="#//ROSAbstractConnection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredTopicConnections"
+        upperBound="-1" eType="#//ROSTopicConnection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredServiceConnections"
+        upperBound="-1" eType="#//ROSServiceConnection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredActionConnections"
+        upperBound="-1" eType="#//ROSActionConnection"/>
   </eClassifiers>
 </ecore:EPackage>

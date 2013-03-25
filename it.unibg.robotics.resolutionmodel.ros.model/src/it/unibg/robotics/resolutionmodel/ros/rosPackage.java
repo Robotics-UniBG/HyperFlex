@@ -642,13 +642,31 @@ public interface rosPackage extends EPackage {
 	int ROS_REQUIRED_CONNECTIONS = 11;
 
 	/**
-	 * The feature id for the '<em><b>ROS Connections</b></em>' reference list.
+	 * The feature id for the '<em><b>Required Topic Connections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_REQUIRED_CONNECTIONS__ROS_CONNECTIONS = resolutionmodelPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 0;
+	int ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS = resolutionmodelPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Required Service Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS = resolutionmodelPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Required Action Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS = resolutionmodelPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>ROS Required Connections</em>' class.
@@ -657,7 +675,7 @@ public interface rosPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_REQUIRED_CONNECTIONS_FEATURE_COUNT = resolutionmodelPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 1;
+	int ROS_REQUIRED_CONNECTIONS_FEATURE_COUNT = resolutionmodelPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 3;
 
 
 	/**
@@ -1034,15 +1052,37 @@ public interface rosPackage extends EPackage {
 	EClass getROSRequiredConnections();
 
 	/**
-	 * Returns the meta object for the reference list '{@link it.unibg.robotics.resolutionmodel.ros.ROSRequiredConnections#getROSConnections <em>ROS Connections</em>}'.
+	 * Returns the meta object for the reference list '{@link it.unibg.robotics.resolutionmodel.ros.ROSRequiredConnections#getRequiredTopicConnections <em>Required Topic Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>ROS Connections</em>'.
-	 * @see it.unibg.robotics.resolutionmodel.ros.ROSRequiredConnections#getROSConnections()
+	 * @return the meta object for the reference list '<em>Required Topic Connections</em>'.
+	 * @see it.unibg.robotics.resolutionmodel.ros.ROSRequiredConnections#getRequiredTopicConnections()
 	 * @see #getROSRequiredConnections()
 	 * @generated
 	 */
-	EReference getROSRequiredConnections_ROSConnections();
+	EReference getROSRequiredConnections_RequiredTopicConnections();
+
+	/**
+	 * Returns the meta object for the reference list '{@link it.unibg.robotics.resolutionmodel.ros.ROSRequiredConnections#getRequiredServiceConnections <em>Required Service Connections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Required Service Connections</em>'.
+	 * @see it.unibg.robotics.resolutionmodel.ros.ROSRequiredConnections#getRequiredServiceConnections()
+	 * @see #getROSRequiredConnections()
+	 * @generated
+	 */
+	EReference getROSRequiredConnections_RequiredServiceConnections();
+
+	/**
+	 * Returns the meta object for the reference list '{@link it.unibg.robotics.resolutionmodel.ros.ROSRequiredConnections#getRequiredActionConnections <em>Required Action Connections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Required Action Connections</em>'.
+	 * @see it.unibg.robotics.resolutionmodel.ros.ROSRequiredConnections#getRequiredActionConnections()
+	 * @see #getROSRequiredConnections()
+	 * @generated
+	 */
+	EReference getROSRequiredConnections_RequiredActionConnections();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1371,12 +1411,28 @@ public interface rosPackage extends EPackage {
 		EClass ROS_REQUIRED_CONNECTIONS = eINSTANCE.getROSRequiredConnections();
 
 		/**
-		 * The meta object literal for the '<em><b>ROS Connections</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Required Topic Connections</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROS_REQUIRED_CONNECTIONS__ROS_CONNECTIONS = eINSTANCE.getROSRequiredConnections_ROSConnections();
+		EReference ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS = eINSTANCE.getROSRequiredConnections_RequiredTopicConnections();
+
+		/**
+		 * The meta object literal for the '<em><b>Required Service Connections</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS = eINSTANCE.getROSRequiredConnections_RequiredServiceConnections();
+
+		/**
+		 * The meta object literal for the '<em><b>Required Action Connections</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS = eINSTANCE.getROSRequiredConnections_RequiredActionConnections();
 
 	}
 

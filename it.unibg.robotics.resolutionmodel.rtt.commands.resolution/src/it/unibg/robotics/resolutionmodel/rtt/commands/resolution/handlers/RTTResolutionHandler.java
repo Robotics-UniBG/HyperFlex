@@ -148,6 +148,12 @@ public class RTTResolutionHandler extends AbstractHandler {
 				sourceFeatureModel = getSourceFeatureModel();
 
 				sourceRttModel =  getSourceRttModel();
+				if(sourceRttModel == null){
+					MessageDialog.openError(null, "Error", 
+							"It wasn't possible to find the Template System Model!!!");
+					return null;
+				}
+				
 				cloneRttPackage(sourceRttModel);
 
 				/* 
@@ -754,6 +760,13 @@ public class RTTResolutionHandler extends AbstractHandler {
 
 					RTTTransfProperty transfProperty = (RTTTransfProperty) currentTransf;
 					TaskContext taskContext = (TaskContext)transfProperty.getTargetProperty().eContainer();
+					return (Package)taskContext.eContainer();
+
+				}else if(currentTransf instanceof RTTTransfConnection){
+
+					RTTTransfConnection transfConn = (RTTTransfConnection) currentTransf;
+					TaskContext taskContext = (TaskContext)transfConn.getNewConnections().get(0)
+							.getInputPort().eContainer();
 					return (Package)taskContext.eContainer();
 
 				}

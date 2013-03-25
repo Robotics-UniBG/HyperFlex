@@ -26,7 +26,6 @@
 package it.unibg.robotics.resolutionmodel.ros.impl;
 
 import it.unibg.robotics.resolutionmodel.resolutionmodelPackage;
-
 import it.unibg.robotics.resolutionmodel.ros.ROSAbstractConnection;
 import it.unibg.robotics.resolutionmodel.ros.ROSActionConnection;
 import it.unibg.robotics.resolutionmodel.ros.ROSNewActionConnection;
@@ -46,11 +45,8 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.ros.model.ros.RosPackage;
-
 import org.ros.model.smach.SmachPackage;
 
 /**
@@ -530,8 +526,26 @@ public class rosPackageImpl extends EPackageImpl implements rosPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getROSRequiredConnections_ROSConnections() {
+	public EReference getROSRequiredConnections_RequiredTopicConnections() {
 		return (EReference)rosRequiredConnectionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getROSRequiredConnections_RequiredServiceConnections() {
+		return (EReference)rosRequiredConnectionsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getROSRequiredConnections_RequiredActionConnections() {
+		return (EReference)rosRequiredConnectionsEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -608,7 +622,9 @@ public class rosPackageImpl extends EPackageImpl implements rosPackage {
 		createEReference(rosRequiredComponentsEClass, ROS_REQUIRED_COMPONENTS__ROS_NODES);
 
 		rosRequiredConnectionsEClass = createEClass(ROS_REQUIRED_CONNECTIONS);
-		createEReference(rosRequiredConnectionsEClass, ROS_REQUIRED_CONNECTIONS__ROS_CONNECTIONS);
+		createEReference(rosRequiredConnectionsEClass, ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS);
+		createEReference(rosRequiredConnectionsEClass, ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS);
+		createEReference(rosRequiredConnectionsEClass, ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS);
 	}
 
 	/**
@@ -702,7 +718,9 @@ public class rosPackageImpl extends EPackageImpl implements rosPackage {
 		initEReference(getROSRequiredComponents_ROSNodes(), theRosPackage.getNode(), null, "ROSNodes", null, 1, -1, ROSRequiredComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rosRequiredConnectionsEClass, ROSRequiredConnections.class, "ROSRequiredConnections", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getROSRequiredConnections_ROSConnections(), this.getROSAbstractConnection(), null, "ROSConnections", null, 1, -1, ROSRequiredConnections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getROSRequiredConnections_RequiredTopicConnections(), this.getROSTopicConnection(), null, "requiredTopicConnections", null, 0, -1, ROSRequiredConnections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getROSRequiredConnections_RequiredServiceConnections(), this.getROSServiceConnection(), null, "requiredServiceConnections", null, 0, -1, ROSRequiredConnections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getROSRequiredConnections_RequiredActionConnections(), this.getROSActionConnection(), null, "requiredActionConnections", null, 0, -1, ROSRequiredConnections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

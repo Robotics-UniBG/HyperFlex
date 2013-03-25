@@ -29,12 +29,9 @@ import it.unibg.robotics.resolutionmodel.ros.ROSNewTopicConnection;
 import it.unibg.robotics.resolutionmodel.ros.rosPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.ros.model.ros.Publisher;
 import org.ros.model.ros.Subscriber;
 
@@ -304,6 +301,37 @@ public class ROSNewTopicConnectionImpl extends ROSAbstractConnectionImpl impleme
 		result.append(topicName);
 		result.append(')');
 		return result.toString();
+	}
+	
+	/**
+	 * @generated NOT
+	 */
+	@Override
+	public boolean equals(Object arg0) {
+		
+		if(arg0 instanceof ROSNewTopicConnectionImpl){
+			ROSNewTopicConnectionImpl connection = (ROSNewTopicConnectionImpl)arg0;
+			
+			Publisher pubA = connection.getPublisher();
+			Publisher pubB = this.getPublisher();
+
+			Subscriber subA = connection.getSubscriber();
+			Subscriber subB = this.getSubscriber();
+
+			String nA = connection.getTopicName();
+			String nB = this.getTopicName();
+
+			if(pubA == pubB && subA == subB && nA == nB){
+				return true;
+			}else{
+				return false;
+			}
+			
+			
+		}else{
+			return false;
+		}
+		
 	}
 
 } //ROSNewTopicConnectionImpl

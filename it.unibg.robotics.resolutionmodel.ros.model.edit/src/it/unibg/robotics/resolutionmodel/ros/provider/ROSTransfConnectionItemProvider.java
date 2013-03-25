@@ -27,7 +27,6 @@ package it.unibg.robotics.resolutionmodel.ros.provider;
 
 
 import it.unibg.robotics.resolutionmodel.provider.RMTransfConnectionItemProvider;
-
 import it.unibg.robotics.resolutionmodel.ros.ROSTransfConnection;
 import it.unibg.robotics.resolutionmodel.ros.rosFactory;
 import it.unibg.robotics.resolutionmodel.ros.rosPackage;
@@ -37,11 +36,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;

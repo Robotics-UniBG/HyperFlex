@@ -29,12 +29,9 @@ import it.unibg.robotics.resolutionmodel.ros.ROSNewActionConnection;
 import it.unibg.robotics.resolutionmodel.ros.rosPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.ros.model.ros.ActionClient;
 import org.ros.model.ros.ActionServer;
 
@@ -304,6 +301,37 @@ public class ROSNewActionConnectionImpl extends ROSAbstractConnectionImpl implem
 		result.append(actionName);
 		result.append(')');
 		return result.toString();
+	}
+	
+	/**
+	 * @generated NOT
+	 */
+	@Override
+	public boolean equals(Object arg0) {
+		
+		if(arg0 instanceof ROSNewActionConnectionImpl){
+			ROSNewActionConnectionImpl connection = (ROSNewActionConnectionImpl)arg0;
+			
+			ActionServer asA = connection.getActionServer();
+			ActionServer asB = this.getActionServer();
+
+			ActionClient acA = connection.getActionClient();
+			ActionClient acB = this.getActionClient();
+
+			String nA = connection.getActionName();
+			String nB = this.getActionName();
+
+			if(asA == asB && acA == acB && nA == nB){
+				return true;
+			}else{
+				return false;
+			}
+			
+			
+		}else{
+			return false;
+		}
+		
 	}
 
 } //ROSNewActionConnectionImpl

@@ -5,7 +5,7 @@
    <extension
          point="org.eclipse.ui.bindings">
       <key
-            commandId="it.unbig.robotics.resolutionmodel.commands.resolution.rttResolution"
+            commandId="it.unbig.robotics.resolutionmodel.commands.resolution.rosResolution"
             contextId="org.eclipse.ui.contexts.window"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
             sequence="M1+8">
@@ -17,24 +17,24 @@
             allPopups="false"
             locationURI="menu:it.unibg.robotics.resolutionmodel.ui.menuEntry">
          <command
-               commandId="it.unibg.robotics.resolutionmodel.commands.resolution.rttResolution"
+               commandId="it.unibg.robotics.resolutionmodel.commands.resolution.rosResolution"
                icon="icons/start_task.gif"
-               id="ResolveRTTsModelButton"
-               label="Resolve RTT Model"
+               id="ResolveROSModelButton"
+               label="Resolve ROS Model"
                style="push"
-               tooltip="Resolve RTT Model">
+               tooltip="Resolve ROS Model">
          </command>
       </menuContribution>
       <menuContribution
             allPopups="false"
             locationURI="toolbar:it.robotics.unibg.featuremodels.commands.resolution.toolbar1">
          <command
-               commandId="it.unibg.robotics.resolutionmodel.commands.resolution.rttResolution"
+               commandId="it.unibg.robotics.resolutionmodel.commands.resolution.rosResolution"
                icon="icons/start_task.gif"
-               id="ResolveRTTModelButton"
-               label="Resolve RTT Model"
+               id="ResolveROSModelButton"
+               label="Resolve ROS Model"
                style="push"
-               tooltip="Resolve RTT Model">
+               tooltip="Resolve ROS Model">
          </command>
       </menuContribution>
    </extension>
@@ -43,15 +43,15 @@
       <command
             category="Resolution Model Commands"
             categoryId="it.unibg.robotics.resolutionmodel.commands.resolution.category"
-            id="it.unibg.robotics.resolutionmodel.commands.resolution.rttResolution"
-            name="RTT Resolution Command">
+            id="it.unibg.robotics.resolutionmodel.commands.resolution.rosResolution"
+            name="ROS Resolution Command">
       </command>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="it.unibg.robotics.resolutionmodel.rtt.commands.resolution.handlers.RTTResolutionHandler"
-            commandId="it.unibg.robotics.resolutionmodel.commands.resolution.rttResolution">
+            class="it.unibg.robotics.resolutionmodel.ros.commands.resolution.handlers.ROSResolutionHandler"
+            commandId="it.unibg.robotics.resolutionmodel.commands.resolution.rosResolution">
          <enabledWhen>
             <reference
                   definitionId="it.unibg.robotics.resolutionmodel.expressions.resolutionModelSelected">

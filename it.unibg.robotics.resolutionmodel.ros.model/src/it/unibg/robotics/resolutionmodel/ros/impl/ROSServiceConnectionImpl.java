@@ -299,4 +299,37 @@ public class ROSServiceConnectionImpl extends ROSAbstractConnectionImpl implemen
 		return super.eIsSet(featureID);
 	}
 
+	/**
+	 * @generated NOT
+	 */
+	@Override
+	public boolean equals(Object arg0) {
+		
+		if(arg0 instanceof ROSServiceConnectionImpl){
+			ROSServiceConnectionImpl connection = (ROSServiceConnectionImpl)arg0;
+			
+			ServiceServer ssA = connection.getServiceServer();
+			ServiceServer ssB = this.getServiceServer();
+
+			ServiceClient scA = connection.getServiceClient();
+			ServiceClient scB = this.getServiceClient();
+
+			Service sA = connection.getService();
+			Service sB = this.getService();
+
+			if(ssA == ssB && scA == scB && sA == sB){
+				return true;
+			}else{
+				return false;
+			}
+			
+			
+		}else{
+			return false;
+		}
+		
+	}
+	
+	
+
 } //ROSServiceConnectionImpl
