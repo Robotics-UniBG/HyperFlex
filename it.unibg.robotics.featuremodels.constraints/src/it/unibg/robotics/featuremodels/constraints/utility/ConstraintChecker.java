@@ -108,11 +108,18 @@ public class ConstraintChecker {
 
 	private boolean checkCardinalityConstraints(){
 
+		EList<Feature> selectedFeature = currentInstance.getSelectedFeatures();
+		
 		boolean satisfied = true;
 		for (CompositeFeature cf : model.getAllCompositeFeatures()) {
+			
+			if( ! selectedFeature.contains(cf.getParent())){
+				continue;
+			}
+			
 			int numSelected = 0;
 			for(Feature feature : cf.getSubFeatures()){
-				if(currentInstance.getSelectedFeatures().contains(feature)){
+				if(selectedFeature.contains(feature)){
 					numSelected++;
 				}
 			}

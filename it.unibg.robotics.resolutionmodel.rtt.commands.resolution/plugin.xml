@@ -8,7 +8,7 @@
             commandId="it.unibg.robotics.resolutionmodel.commands.resolution.rttResolution"
             contextId="org.eclipse.ui.contexts.window"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
-            sequence="M1+8">
+            sequence="M1+9">
       </key>
    </extension>
    <extension

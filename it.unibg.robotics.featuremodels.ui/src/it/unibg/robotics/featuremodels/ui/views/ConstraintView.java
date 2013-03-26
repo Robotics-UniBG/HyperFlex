@@ -4,7 +4,6 @@ package it.unibg.robotics.featuremodels.ui.views;
 import it.unibg.robotics.featuremodels.Constraint;
 import it.unibg.robotics.featuremodels.ConstraintType;
 import it.unibg.robotics.featuremodels.FeatureModel;
-import it.unibg.robotics.featuremodels.Instance;
 import it.unibg.robotics.featuremodels.featuremodelsFactory;
 import it.unibg.robotics.featuremodels.constraints.utility.ConstraintChecker;
 import it.unibg.robotics.featuremodels.constraints.utility.ConstraintRuleDialog;
@@ -89,7 +88,7 @@ public class ConstraintView extends ViewPart implements PropertyChangeListener{
 
 	//private FeatureModelDiagramEditor lastEditor;
 
-	private Instance currentInstance = null;
+	//private Instance currentInstance = null;
 
 	/*
 	 * The content provider class is responsible for
@@ -440,7 +439,7 @@ public class ConstraintView extends ViewPart implements PropertyChangeListener{
 
 		String propertyName = event.getPropertyName();
 		if(propertyName.equals(FeatureModel.INSTANCE_SELECTED_PROPERTY) || propertyName.equals(FeatureModel.INSTANCE_UPDATED_PROPERTY)){
-			currentInstance = (Instance)event.getNewValue();
+			//currentInstance = (Instance)event.getNewValue();
 			viewer.refresh();
 		}
 

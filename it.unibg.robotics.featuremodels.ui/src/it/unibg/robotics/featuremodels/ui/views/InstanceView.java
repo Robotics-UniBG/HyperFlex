@@ -496,6 +496,7 @@ public class InstanceView extends ViewPart implements ISelectionListener, Proper
 
 	}
 	private void updateAllFigures(){
+		@SuppressWarnings("unchecked")
 		Iterator<EditPart> it = modelEditPart.getChildren().iterator();
 		while(it.hasNext()){
 			EditPart ep = it.next();

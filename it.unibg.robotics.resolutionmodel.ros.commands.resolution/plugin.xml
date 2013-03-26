@@ -52,11 +52,47 @@
             class="it.unibg.robotics.resolutionmodel.ros.commands.resolution.handlers.ROSResolutionHandler"
             commandId="it.unibg.robotics.resolutionmodel.commands.resolution.rosResolution">
          <enabledWhen>
-            <reference
-                  definitionId="it.unibg.robotics.resolutionmodel.expressions.resolutionModelSelected">
-            </reference>
+            <and>
+               <reference
+                     definitionId="it.unibg.robotics.resolutionmodel.expressions.resolutionModelSelected">
+               </reference>
+               <reference
+                     definitionId="it.unibg.robotics.resolutionmodel.ros.commands.resolution.definition1">
+               </reference>
+            </and>
          </enabledWhen>
       </handler>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="it.unibg.robotics.resolutionmodel.ros.commands.resolution.definition1">
+         <with
+               variable="selection">
+            <and>
+               <count
+                     value="1">
+               </count>
+               <iterate
+                     ifEmpty="false"
+                     operator="or">
+                  <adapt
+                        type="it.unibg.robotics.resolutionmodel.ResolutionModel">
+                     <with
+                           variable="resolutionElements">
+                        <iterate
+                              ifEmpty="false"
+                              operator="or">
+                           <instanceof
+                                 value="it.unibg.robotics.resolutionmodel.RMResolutionElement">
+                           </instanceof>
+                        </iterate>
+                     </with>
+                  </adapt>
+               </iterate>
+            </and>
+         </with>
+      </definition>
    </extension>
 
 </plugin>

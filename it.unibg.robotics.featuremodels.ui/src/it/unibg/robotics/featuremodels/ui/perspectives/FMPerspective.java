@@ -15,7 +15,7 @@ public class FMPerspective implements IPerspectiveFactory {
 
 		IFolderLayout folder = layout.createFolder("left", IPageLayout.LEFT, 0.25f, editorArea); //$NON-NLS-1$
 		folder.addView("org.eclipse.ui.navigator.ProjectExplorer"); //$NON-NLS-1$
-		folder.addPlaceholder(IPageLayout.ID_RES_NAV);
+		folder.addPlaceholder(IPageLayout.ID_PROJECT_EXPLORER);
 
 		IFolderLayout outputfolder = layout.createFolder("bottom", IPageLayout.BOTTOM, 0.75f, editorArea); //$NON-NLS-1$
 		outputfolder.addView(IPageLayout.ID_PROP_SHEET);
@@ -31,7 +31,7 @@ public class FMPerspective implements IPerspectiveFactory {
 		// views - standard workbench
 		layout.addShowViewShortcut(IPageLayout.ID_OUTLINE);
 		layout.addShowViewShortcut(IPageLayout.ID_PROBLEM_VIEW);
-		layout.addShowViewShortcut(IPageLayout.ID_RES_NAV);
+		layout.addShowViewShortcut(IPageLayout.ID_PROJECT_EXPLORER);
 		layout.addShowViewShortcut(IPageLayout.ID_TASK_LIST);
 		layout.addShowViewShortcut(IProgressConstants.PROGRESS_VIEW_ID);
 		layout.addShowViewShortcut(InstanceView.ID);
