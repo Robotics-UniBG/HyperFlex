@@ -30,9 +30,6 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
       <wizard
             id="it.unibg.robotics.resolutionmodel.rtt.presentation.rttModelWizardID"
             name="%_UI_rttModelWizard_label"

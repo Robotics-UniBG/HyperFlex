@@ -30,15 +30,12 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
       <wizard
             id="it.unibg.robotics.resolutionmodel.presentation.resolutionmodelModelWizardID"
             name="%_UI_resolutionmodelModelWizard_label"
             class="it.unibg.robotics.resolutionmodel.presentation.resolutionmodelModelWizard"
             category="it.robotics.unibg.featuremodels.wizard.category"
-            icon="icons/full/obj16/resolutionmodelModelFile.gif">
+            icon="icons/rm.ico">
          <description>%_UI_resolutionmodelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
@@ -48,7 +45,7 @@
       <editor
             id="it.unibg.robotics.resolutionmodel.presentation.resolutionmodelEditorID"
             name="%_UI_resolutionmodelEditor_label"
-            icon="icons/full/obj16/resolutionmodelModelFile.gif"
+            icon="icons/rm.ico"
             extensions="resolutionmodel"
             class="it.unibg.robotics.resolutionmodel.presentation.resolutionmodelEditor"
             contributorClass="it.unibg.robotics.resolutionmodel.presentation.resolutionmodelActionBarContributor">
