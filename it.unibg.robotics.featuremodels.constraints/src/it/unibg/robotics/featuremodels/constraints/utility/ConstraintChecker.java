@@ -35,7 +35,6 @@ import it.unibg.robotics.featuremodels.featuremodelsFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.jface.dialogs.MessageDialog;
@@ -262,30 +261,30 @@ public class ConstraintChecker {
 	}
 
 	public static void main(String[] args) {
-		String term = "A && (C && D ^ (B && ! A)) && (! C)";
-		String term2 = "1-0 ^ (Bday)";
-		//		ConstraintChecker cc = new ConstraintChecker(null);
-		//		ArrayList<String> terms = cc.checkBracket(term);
-		//		for (Iterator iterator = terms.iterator(); iterator.hasNext();) {
-		//			System.out.println( (String) iterator.next());
-		//			
-		//		}
-
-
-		Map<String, Boolean> vars = new HashMap<String, Boolean>();
-		vars.put("A", true);
-		vars.put("B", true);
-		vars.put("C", false);
-		vars.put("D", true);
-
-		Map<String, Integer> vars2 = new HashMap<String, Integer>();
-		vars2.put("Email", 0);
-		vars2.put("Bday", 1);
-		// Executes the compiled expression
-		boolean result =  (Boolean)MVEL.eval(term,vars);  
-		//		System.out.println(result);
-		int result2 =  (Integer)MVEL.eval(term2,vars2);  
-		//		System.out.println(result2);
+//		String term = "A && (C && D ^ (B && ! A)) && (! C)";
+//		String term2 = "1-0 ^ (Bday)";
+//		//		ConstraintChecker cc = new ConstraintChecker(null);
+//		//		ArrayList<String> terms = cc.checkBracket(term);
+//		//		for (Iterator iterator = terms.iterator(); iterator.hasNext();) {
+//		//			System.out.println( (String) iterator.next());
+//		//			
+//		//		}
+//
+//
+//		Map<String, Boolean> vars = new HashMap<String, Boolean>();
+//		vars.put("A", true);
+//		vars.put("B", true);
+//		vars.put("C", false);
+//		vars.put("D", true);
+//
+//		Map<String, Integer> vars2 = new HashMap<String, Integer>();
+//		vars2.put("Email", 0);
+//		vars2.put("Bday", 1);
+//		// Executes the compiled expression
+//		boolean result =  (Boolean)MVEL.eval(term,vars);  
+//		//		System.out.println(result);
+//		int result2 =  (Integer)MVEL.eval(term2,vars2);  
+//		//		System.out.println(result2);
 
 
 	}

@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Feature Model Plugin Ui
 Bundle-SymbolicName: it.unibg.robotics.featuremodels.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-ClassPath: .,lib/mvel2-2.0.19.jar
+Bundle-ClassPath: .
 Bundle-Activator: it.unibg.robotics.featuremodels.ui.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,

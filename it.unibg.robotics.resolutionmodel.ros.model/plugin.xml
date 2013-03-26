@@ -32,7 +32,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://robotics.unibg.it/resolutionmodel.ros"
-            class="it.unibg.robotics.resolutionmodel.ros.rosPackage"
+            class="it.unibg.robotics.resolutionmodel.rosresolutionmodel.rosresolutionmodelPackage"
             genModel="models/rosResolutionModel.genmodel"/>
    </extension>
 

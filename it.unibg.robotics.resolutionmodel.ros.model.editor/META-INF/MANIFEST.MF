@@ -4,11 +4,11 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: it.unibg.robotics.resolutionmodel.ros.model.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: it.unibg.robotics.resolutionmodel.ros.presentation.RosResolutionModelEditorPlugin$Implementation
+Bundle-Activator: it.unibg.robotics.resolutionmodel.rosresolutionmodel.presentation.RosResolutionModelEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: it.unibg.robotics.resolutionmodel.ros.presentation
+Export-Package: it.unibg.robotics.resolutionmodel.rosresolutionmodel.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  it.unibg.robotics.resolutionmodel.ros.model.edit;visibility:=reexport,

@@ -40,7 +40,7 @@
    <extension
          point="org.eclipse.ui.perspectiveExtensions">
       <perspectiveExtension
-            targetID="it.unibg.robotics.it.featuremodels.ui.perspective">
+            targetID="it.unibg.robotics.featuremodels.ui.perspective">
          <view
                id="it.unibg.robotics.featuremodels.ui.views.instanceview"
                ratio="0.5"

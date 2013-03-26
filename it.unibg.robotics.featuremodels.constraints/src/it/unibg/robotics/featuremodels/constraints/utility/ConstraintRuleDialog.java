@@ -55,7 +55,6 @@ public class ConstraintRuleDialog extends Dialog implements Listener, MouseListe
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 7039951254579557077L;
 	private int openBracket = 0;
 	private boolean ruleKeyWordInserted = false;
 	

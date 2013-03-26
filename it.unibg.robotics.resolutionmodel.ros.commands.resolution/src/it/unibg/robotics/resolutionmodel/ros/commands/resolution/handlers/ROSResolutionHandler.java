@@ -33,19 +33,19 @@ import it.unibg.robotics.resolutionmodel.RMAbstractTransformation;
 import it.unibg.robotics.resolutionmodel.RMResolutionElement;
 import it.unibg.robotics.resolutionmodel.ResolutionModel;
 import it.unibg.robotics.resolutionmodel.presentation.resolutionmodelEditor;
-import it.unibg.robotics.resolutionmodel.ros.ROSAbstractConnection;
-import it.unibg.robotics.resolutionmodel.ros.ROSActionConnection;
-import it.unibg.robotics.resolutionmodel.ros.ROSNewActionConnection;
-import it.unibg.robotics.resolutionmodel.ros.ROSNewServiceConnection;
-import it.unibg.robotics.resolutionmodel.ros.ROSNewTopicConnection;
-import it.unibg.robotics.resolutionmodel.ros.ROSRequiredComponents;
-import it.unibg.robotics.resolutionmodel.ros.ROSRequiredConnections;
-import it.unibg.robotics.resolutionmodel.ros.ROSServiceConnection;
-import it.unibg.robotics.resolutionmodel.ros.ROSTopicConnection;
-import it.unibg.robotics.resolutionmodel.ros.ROSTransfConnection;
-import it.unibg.robotics.resolutionmodel.ros.ROSTransfImplementation;
-import it.unibg.robotics.resolutionmodel.ros.ROSTransfProperty;
-import it.unibg.robotics.resolutionmodel.ros.impl.rosFactoryImpl;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.ROSAbstractConnection;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.ROSActionConnection;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.ROSNewActionConnection;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.ROSNewServiceConnection;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.ROSNewTopicConnection;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.ROSRequiredComponents;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.ROSRequiredConnections;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.ROSServiceConnection;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.ROSTopicConnection;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.ROSTransfConnection;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.ROSTransfImplementation;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.ROSTransfProperty;
+import it.unibg.robotics.resolutionmodel.rosresolutionmodel.impl.rosresolutionmodelFactoryImpl;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -185,7 +185,6 @@ public class ROSResolutionHandler extends AbstractHandler {
 				}
 
 				
-				System.err.println("////////" + sourceRosArchModel);
 				cloneRosArchitecture(sourceRosArchModel, sourceRosPackModels);
 
 				/* 
@@ -366,7 +365,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 					
 					for(ROSTopicConnection conn : requiredConnectionsTmp.getRequiredTopicConnections()){
 						
-						ROSTopicConnection newConnection = rosFactoryImpl.eINSTANCE.createROSTopicConnection();
+						ROSTopicConnection newConnection = rosresolutionmodelFactoryImpl.eINSTANCE.createROSTopicConnection();
 						newConnection.setPublisher(publisherHashTable.get(conn.getPublisher()));
 						newConnection.setSubscriber(subscriberHashTable.get(conn.getSubscriber()));
 						newConnection.setTopic(topicHashTable.get(conn.getTopic()));
@@ -378,7 +377,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 					
 					for(ROSServiceConnection conn : requiredConnectionsTmp.getRequiredServiceConnections()){
 						
-						ROSServiceConnection newConnection = rosFactoryImpl.eINSTANCE.createROSServiceConnection();
+						ROSServiceConnection newConnection = rosresolutionmodelFactoryImpl.eINSTANCE.createROSServiceConnection();
 						newConnection.setServiceServer(serviceServerHashTable.get(conn.getServiceServer()));
 						newConnection.setServiceClient(serviceClientHashTable.get(conn.getServiceClient()));
 						newConnection.setService(serviceHashTable.get(conn.getService()));
@@ -389,7 +388,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 					
 					for(ROSActionConnection conn : requiredConnectionsTmp.getRequiredActionConnections()){
 					
-						ROSActionConnection newConnection = rosFactoryImpl.eINSTANCE.createROSActionConnection();
+						ROSActionConnection newConnection = rosresolutionmodelFactoryImpl.eINSTANCE.createROSActionConnection();
 						newConnection.setActionServer(actionServerHashTable.get(conn.getActionServer()));
 						newConnection.setActionClient(actionClientHashTable.get(conn.getActionClient()));
 						newConnection.setAction(actionHashTable.get(conn.getAction()));
@@ -471,7 +470,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 							}
 
 							// add the new connection to the required connections list
-							ROSTopicConnection newRequiredConn = rosFactoryImpl.eINSTANCE.createROSTopicConnection();
+							ROSTopicConnection newRequiredConn = rosresolutionmodelFactoryImpl.eINSTANCE.createROSTopicConnection();
 							newRequiredConn.setTopic(targetTopic);
 							newRequiredConn.setPublisher(pub);
 							newRequiredConn.setSubscriber(sub);
@@ -534,7 +533,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 							}
 
 							// add the new connection to the required connections list
-							ROSServiceConnection newRequiredConn = rosFactoryImpl.eINSTANCE.createROSServiceConnection();
+							ROSServiceConnection newRequiredConn = rosresolutionmodelFactoryImpl.eINSTANCE.createROSServiceConnection();
 							newRequiredConn.setService(targetService);
 							newRequiredConn.setServiceServer(ss);
 							newRequiredConn.setServiceClient(sc);
@@ -588,7 +587,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 							}
 
 							// add the new connection to the required connections list
-							ROSActionConnection newRequiredConn = rosFactoryImpl.eINSTANCE.createROSActionConnection();
+							ROSActionConnection newRequiredConn = rosresolutionmodelFactoryImpl.eINSTANCE.createROSActionConnection();
 							newRequiredConn.setAction(targetAction);
 							newRequiredConn.setActionServer(as);
 							newRequiredConn.setActionClient(ac);
@@ -642,17 +641,10 @@ public class ROSResolutionHandler extends AbstractHandler {
 		// Remove unused topics
 		
 		ArrayList<Topic> usedTopics = new ArrayList<Topic>();
-		System.err.println(targetRosArchModel.getTopic().size());
-		System.err.println(requiredTopicConnections.size());
 		for(Topic topic : targetRosArchModel.getTopic()){
 
 			for(ROSTopicConnection conn : requiredTopicConnections){
 
-				System.err.println("..........." + conn);
-				System.err.println("..........." + conn.getPublisher());
-				System.err.println("..........." + conn.getSubscriber());
-				System.err.println("..........." + conn.getTopic());
-				
 				if(conn.getTopic().equals(topic)){
 					usedTopics.add(topic);
 					break;
@@ -706,8 +698,6 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 			for(ROSActionConnection conn : requiredActionConnections){
 
-				System.out.println("Test action: " + action.getName() + " - " + conn.getAction().getName());
-				
 				if(conn.getAction().equals(action)){
 					usedActions.add(action);
 					break;
@@ -801,13 +791,6 @@ public class ROSResolutionHandler extends AbstractHandler {
 			}
 			
 		}
-
-		System.out.println("---------- " + sourceRosPackModels.size());
-		for(Package pack : sourceRosPackModels){
-			System.out.println("---------- " + pack.getName());
-		}
-		System.out.println("---------- Architecture " + targetRosArchModel);
-
 
 	}
 
@@ -1149,12 +1132,6 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 
 		}
-
-		System.out.println("********** " + sourceRosPackModels.size());
-		for(Package pack : sourceRosPackModels){
-			System.out.println("********** " + pack.getName());
-		}
-		System.out.println("********** Architecture " + sourceRosArchModel);
 
 	}
 

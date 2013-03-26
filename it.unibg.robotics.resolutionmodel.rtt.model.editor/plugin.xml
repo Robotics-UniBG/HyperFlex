@@ -33,7 +33,7 @@
       <wizard
             id="it.unibg.robotics.resolutionmodel.rtt.presentation.rttModelWizardID"
             name="%_UI_rttModelWizard_label"
-            class="it.unibg.robotics.resolutionmodel.rtt.presentation.rttModelWizard"
+            class="it.unibg.robotics.resolutionmodel.rttresolutionmodel.presentation.rttresolutionmodelModelWizard"
             category="it.robotics.unibg.featuremodels.wizard.category"
             icon="icons/full/obj16/rttModelFile.gif">
          <description>%_UI_rttModelWizard_description</description>
@@ -47,8 +47,8 @@
             name="%_UI_rttEditor_label"
             icon="icons/full/obj16/rttModelFile.gif"
             extensions="rttresolutionmodel"
-            class="it.unibg.robotics.resolutionmodel.rtt.presentation.rttEditor"
-            contributorClass="it.unibg.robotics.resolutionmodel.rtt.presentation.rttActionBarContributor">
+            class="it.unibg.robotics.resolutionmodel.rttresolutionmodel.presentation.rttresolutionmodelEditor"
+            contributorClass="it.unibg.robotics.resolutionmodel.rttresolutionmodel.presentation.rttresolutionmodelActionBarContributor">
       </editor>
    </extension>
 

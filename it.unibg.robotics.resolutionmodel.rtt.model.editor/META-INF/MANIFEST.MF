@@ -4,11 +4,11 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: it.unibg.robotics.resolutionmodel.rtt.model.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: it.unibg.robotics.resolutionmodel.rtt.presentation.RttResolutionModelEditorPlugin$Implementation
+Bundle-Activator: it.unibg.robotics.resolutionmodel.rttresolutionmodel.presentation.RttResolutionModelEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: it.unibg.robotics.resolutionmodel.rtt.presentation
+Export-Package: it.unibg.robotics.resolutionmodel.rttresolutionmodel.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  it.unibg.robotics.resolutionmodel.rtt.model.edit;visibility:=reexport,

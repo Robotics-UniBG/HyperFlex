@@ -14,6 +14,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtext;bundle-version="2.2.1",
  org.ros.model.ros;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
-Export-Package: it.unibg.robotics.resolutionmodel.ros,
- it.unibg.robotics.resolutionmodel.ros.impl,
- it.unibg.robotics.resolutionmodel.ros.util
+Export-Package: it.unibg.robotics.resolutionmodel.rosresolutionmodel,
+ it.unibg.robotics.resolutionmodel.rosresolutionmodel.impl,
+ it.unibg.robotics.resolutionmodel.rosresolutionmodel.util

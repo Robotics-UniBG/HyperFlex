@@ -25,7 +25,6 @@
  */
 package it.unibg.robotics.featuremodels.impl;
 
-import it.unibg.robotics.featuremodels.*;
 import it.unibg.robotics.featuremodels.CompositeFeature;
 import it.unibg.robotics.featuremodels.Constraint;
 import it.unibg.robotics.featuremodels.ConstraintType;

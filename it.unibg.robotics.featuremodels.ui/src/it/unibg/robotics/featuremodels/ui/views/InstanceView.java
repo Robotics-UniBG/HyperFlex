@@ -389,7 +389,6 @@ public class InstanceView extends ViewPart implements ISelectionListener, Proper
 		final String instDescription = descriptionDialog.getValue();
 
 		editingDomain.getCommandStack().execute(new RecordingCommand(editingDomain){
-			@SuppressWarnings("unchecked")
 			@Override
 			protected void doExecute() {
 				Instance instance = featuremodelsFactory.eINSTANCE.createInstance();
@@ -416,7 +415,6 @@ public class InstanceView extends ViewPart implements ISelectionListener, Proper
 			if(structuredSel.getFirstElement() instanceof Instance){
 				final Instance instance = (Instance)structuredSel.getFirstElement();
 				editingDomain.getCommandStack().execute(new RecordingCommand(editingDomain){
-					@SuppressWarnings("unchecked")
 					@Override
 					protected void doExecute() {
 						model.getInstances().remove(instance);

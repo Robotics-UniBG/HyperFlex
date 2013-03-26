@@ -9,7 +9,6 @@
             id="it.unibg.robotics.featuremodels.commands.featureSelection.category">
       </category>
       <command
-            category="Feature Model Commands"
             categoryId="it.unibg.robotics.featuremodels.commands.featureSelection.category"
             id="it.unibg.robotics.featuremodels.commands.featureSelection.selection"
             name="Feature Selection Command">
@@ -30,7 +29,6 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            category="Feature Model Commands"
             categoryId="it.unibg.robotics.featuremodels.commands.featureSelection.category"
             id="it.unibg.robotics.featuremodels.commands.featureSelection.deselection"
             name="Feature Deselection Command">

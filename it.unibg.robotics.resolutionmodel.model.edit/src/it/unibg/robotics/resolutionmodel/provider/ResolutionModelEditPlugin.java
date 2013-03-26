@@ -28,7 +28,6 @@ package it.unibg.robotics.resolutionmodel.provider;
 import it.unibg.robotics.featuremodels.provider.FeatureModelEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**

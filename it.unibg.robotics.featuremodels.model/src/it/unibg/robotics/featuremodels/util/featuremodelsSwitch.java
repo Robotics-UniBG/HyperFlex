@@ -25,11 +25,17 @@
  */
 package it.unibg.robotics.featuremodels.util;
 
-import it.unibg.robotics.featuremodels.*;
+import it.unibg.robotics.featuremodels.Attribute;
+import it.unibg.robotics.featuremodels.CompositeFeature;
+import it.unibg.robotics.featuremodels.Constraint;
+import it.unibg.robotics.featuremodels.Feature;
+import it.unibg.robotics.featuremodels.FeatureModel;
+import it.unibg.robotics.featuremodels.Instance;
+import it.unibg.robotics.featuremodels.SimpleAttribute;
+import it.unibg.robotics.featuremodels.featuremodelsPackage;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
 
 /**

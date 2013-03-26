@@ -7,9 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: it.unibg.robotics.resolutionmodel.rtt,
- it.unibg.robotics.resolutionmodel.rtt.impl,
- it.unibg.robotics.resolutionmodel.rtt.util
+Export-Package: it.unibg.robotics.resolutionmodel.rttresolutionmodel,
+ it.unibg.robotics.resolutionmodel.rttresolutionmodel.impl,
+ it.unibg.robotics.resolutionmodel.rttresolutionmodel.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  it.unibg.robotics.featuremodels.model;visibility:=reexport,

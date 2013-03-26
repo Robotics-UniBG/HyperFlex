@@ -25,7 +25,6 @@
  */
 package it.unibg.robotics.featuremodels;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->

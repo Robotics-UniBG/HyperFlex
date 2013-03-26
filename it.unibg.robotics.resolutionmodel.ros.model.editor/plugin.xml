@@ -33,7 +33,7 @@
       <wizard
             id="it.unibg.robotics.resolutionmodel.ros.presentation.rosModelWizardID"
             name="%_UI_rosModelWizard_label"
-            class="it.unibg.robotics.resolutionmodel.ros.presentation.rosModelWizard"
+            class="it.unibg.robotics.resolutionmodel.rosresolutionmodel.presentation.rosresolutionmodelModelWizard"
             category="it.robotics.unibg.featuremodels.wizard.category"
             icon="icons/full/obj16/rosModelFile.gif">
          <description>%_UI_rosModelWizard_description</description>
@@ -47,8 +47,8 @@
             name="%_UI_rosEditor_label"
             icon="icons/full/obj16/rosModelFile.gif"
             extensions="rosresolutionmodel"
-            class="it.unibg.robotics.resolutionmodel.ros.presentation.rosEditor"
-            contributorClass="it.unibg.robotics.resolutionmodel.ros.presentation.rosActionBarContributor">
+            class="it.unibg.robotics.resolutionmodel.rosresolutionmodel.presentation.rosresolutionmodelEditor"
+            contributorClass="it.unibg.robotics.resolutionmodel.rosresolutionmodel.presentation.rosresolutionmodelActionBarContributor">
       </editor>
    </extension>
 

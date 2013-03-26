@@ -86,7 +86,6 @@ public class FeatureDeselectionHandler extends AbstractHandler {
 				}
 				TransactionalEditingDomain editingDomain = featureEditor.getEditingDomain();
 				editingDomain.getCommandStack().execute(new RecordingCommand(editingDomain){
-					@SuppressWarnings("unchecked")
 					@Override
 					protected void doExecute() {
 						//instance.getSelectedFeatures().remove(feature);

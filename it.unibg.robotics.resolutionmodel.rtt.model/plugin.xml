@@ -32,7 +32,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://robotics.unibg.it/resolutionmodel.rtt"
-            class="it.unibg.robotics.resolutionmodel.rtt.rttPackage"
+            class="it.unibg.robotics.resolutionmodel.rttresolutionmodel.rttresolutionmodelPackage"
             genModel="models/rttResolutionModel.genmodel"/>
    </extension>
 

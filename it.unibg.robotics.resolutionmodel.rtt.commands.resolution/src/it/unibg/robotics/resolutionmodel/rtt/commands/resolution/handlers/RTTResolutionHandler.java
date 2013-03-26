@@ -33,12 +33,12 @@ import it.unibg.robotics.resolutionmodel.RMAbstractTransformation;
 import it.unibg.robotics.resolutionmodel.RMResolutionElement;
 import it.unibg.robotics.resolutionmodel.ResolutionModel;
 import it.unibg.robotics.resolutionmodel.presentation.resolutionmodelEditor;
-import it.unibg.robotics.resolutionmodel.rtt.RTTConnection;
-import it.unibg.robotics.resolutionmodel.rtt.RTTRequiredComponents;
-import it.unibg.robotics.resolutionmodel.rtt.RTTRequiredConnections;
-import it.unibg.robotics.resolutionmodel.rtt.RTTTransfConnection;
-import it.unibg.robotics.resolutionmodel.rtt.RTTTransfImplementation;
-import it.unibg.robotics.resolutionmodel.rtt.RTTTransfProperty;
+import it.unibg.robotics.resolutionmodel.rttresolutionmodel.RTTConnection;
+import it.unibg.robotics.resolutionmodel.rttresolutionmodel.RTTRequiredComponents;
+import it.unibg.robotics.resolutionmodel.rttresolutionmodel.RTTRequiredConnections;
+import it.unibg.robotics.resolutionmodel.rttresolutionmodel.RTTTransfConnection;
+import it.unibg.robotics.resolutionmodel.rttresolutionmodel.RTTTransfImplementation;
+import it.unibg.robotics.resolutionmodel.rttresolutionmodel.RTTTransfProperty;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -448,9 +448,7 @@ public class RTTResolutionHandler extends AbstractHandler {
 
 		}
 
-		for(TaskContext taskContext : unusedTaskContext){
-			targetOrocosModel.getTaskContext().remove(taskContext);
-		}
+		targetOrocosModel.getTaskContext().removeAll(unusedTaskContext);
 
 	}
 

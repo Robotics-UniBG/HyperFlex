@@ -32,7 +32,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http://robotics.unibg.it/resolutionmodel.rtt"
-            class="it.unibg.robotics.resolutionmodel.rtt.provider.rttItemProviderAdapterFactory"
+            class="it.unibg.robotics.resolutionmodel.rttresolutionmodel.provider.rttresolutionmodelItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -44,7 +44,7 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
             uri="http://robotics.unibg.it/resolutionmodel"
-            class="it.unibg.robotics.resolutionmodel.rtt.provider.rttItemProviderAdapterFactory$resolutionmodelChildCreationExtender"/>
+            class="it.unibg.robotics.resolutionmodel.rttresolutionmodel.provider.rttresolutionmodelItemProviderAdapterFactory$resolutionmodelChildCreationExtender"/>
    </extension>
 
 </plugin>

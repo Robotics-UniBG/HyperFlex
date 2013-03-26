@@ -8,8 +8,9 @@
     editorPluginID="it.unibg.robotics.resolutionmodel.ros.model.editor" language="English"
     usedGenPackages="../../it.unibg.robotics.featuremodels.model/models/featureModel.genmodel#//featuremodels ../../it.unibg.robotics.resolutionmodel.model/models/resolutionModel.genmodel#//resolutionmodel ../../org.ros.model.ros/model/ros.genmodel#//ros ../../org.ros.model.ros/model/ros.genmodel#//smach">
   <foreignModel>rosResolutionModel.ecore</foreignModel>
-  <genPackages prefix="ros" basePackage="it.unibg.robotics.resolutionmodel" disposableProviderFactory="true"
-      childCreationExtenders="true" fileExtensions="rosresolutionmodel" ecorePackage="rosResolutionModel.ecore#/">
+  <genPackages prefix="rosresolutionmodel" basePackage="it.unibg.robotics.resolutionmodel"
+      disposableProviderFactory="true" childCreationExtenders="true" fileExtensions="rosresolutionmodel"
+      ecorePackage="rosResolutionModel.ecore#/">
     <genClasses ecoreClass="rosResolutionModel.ecore#//ROSTransfImplementation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosResolutionModel.ecore#//ROSTransfImplementation/targetNode"/>
     </genClasses>

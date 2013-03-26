@@ -87,7 +87,7 @@ public class ConstraintView extends ViewPart implements PropertyChangeListener{
 	private TransactionalEditingDomain editingDomain;
 	private ConstraintChecker constraintChecker;
 
-	private FeatureModelDiagramEditor lastEditor;
+	//private FeatureModelDiagramEditor lastEditor;
 
 	private Instance currentInstance = null;
 
@@ -352,7 +352,6 @@ public class ConstraintView extends ViewPart implements PropertyChangeListener{
 			final String rule = dialog.getRule();
 			final String name = dialog.getName();
 			editingDomain.getCommandStack().execute(new RecordingCommand(editingDomain){
-				@SuppressWarnings("unchecked")
 				@Override
 				protected void doExecute() {
 					Constraint newConstraint = featuremodelsFactory.eINSTANCE.createConstraint();
@@ -388,7 +387,6 @@ public class ConstraintView extends ViewPart implements PropertyChangeListener{
 
 				if(answer==IDialogConstants.OK_ID){
 					editingDomain.getCommandStack().execute(new RecordingCommand(editingDomain){
-						@SuppressWarnings("unchecked")
 						@Override
 						protected void doExecute() {
 							constraint.setRule(rule);
@@ -416,7 +414,6 @@ public class ConstraintView extends ViewPart implements PropertyChangeListener{
 			if(structuredSel.getFirstElement() instanceof Constraint){
 				final Constraint constraint = (Constraint)structuredSel.getFirstElement();
 				editingDomain.getCommandStack().execute(new RecordingCommand(editingDomain){
-					@SuppressWarnings("unchecked")
 					@Override
 					protected void doExecute() {
 						model.getConstraints().remove(constraint);
