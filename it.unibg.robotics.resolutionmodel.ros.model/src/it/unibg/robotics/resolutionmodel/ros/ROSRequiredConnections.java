@@ -52,7 +52,7 @@ import org.ros.model.ros.Topic;
  */
 public interface ROSRequiredConnections extends RMRequiredConnections {
 	/**
-	 * Returns the value of the '<em><b>Required Topic Connections</b></em>' reference list.
+	 * Returns the value of the '<em><b>Required Topic Connections</b></em>' containment reference list.
 	 * The list contents are of type {@link it.unibg.robotics.resolutionmodel.ros.ROSTopicConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -60,15 +60,15 @@ public interface ROSRequiredConnections extends RMRequiredConnections {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required Topic Connections</em>' reference list.
+	 * @return the value of the '<em>Required Topic Connections</em>' containment reference list.
 	 * @see it.unibg.robotics.resolutionmodel.ros.rosPackage#getROSRequiredConnections_RequiredTopicConnections()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<ROSTopicConnection> getRequiredTopicConnections();
 
 	/**
-	 * Returns the value of the '<em><b>Required Service Connections</b></em>' reference list.
+	 * Returns the value of the '<em><b>Required Service Connections</b></em>' containment reference list.
 	 * The list contents are of type {@link it.unibg.robotics.resolutionmodel.ros.ROSServiceConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -76,15 +76,15 @@ public interface ROSRequiredConnections extends RMRequiredConnections {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required Service Connections</em>' reference list.
+	 * @return the value of the '<em>Required Service Connections</em>' containment reference list.
 	 * @see it.unibg.robotics.resolutionmodel.ros.rosPackage#getROSRequiredConnections_RequiredServiceConnections()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<ROSServiceConnection> getRequiredServiceConnections();
 
 	/**
-	 * Returns the value of the '<em><b>Required Action Connections</b></em>' reference list.
+	 * Returns the value of the '<em><b>Required Action Connections</b></em>' containment reference list.
 	 * The list contents are of type {@link it.unibg.robotics.resolutionmodel.ros.ROSActionConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -92,9 +92,9 @@ public interface ROSRequiredConnections extends RMRequiredConnections {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required Action Connections</em>' reference list.
+	 * @return the value of the '<em>Required Action Connections</em>' containment reference list.
 	 * @see it.unibg.robotics.resolutionmodel.ros.rosPackage#getROSRequiredConnections_RequiredActionConnections()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<ROSActionConnection> getRequiredActionConnections();

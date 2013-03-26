@@ -718,9 +718,9 @@ public class rosPackageImpl extends EPackageImpl implements rosPackage {
 		initEReference(getROSRequiredComponents_ROSNodes(), theRosPackage.getNode(), null, "ROSNodes", null, 1, -1, ROSRequiredComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rosRequiredConnectionsEClass, ROSRequiredConnections.class, "ROSRequiredConnections", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getROSRequiredConnections_RequiredTopicConnections(), this.getROSTopicConnection(), null, "requiredTopicConnections", null, 0, -1, ROSRequiredConnections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getROSRequiredConnections_RequiredServiceConnections(), this.getROSServiceConnection(), null, "requiredServiceConnections", null, 0, -1, ROSRequiredConnections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getROSRequiredConnections_RequiredActionConnections(), this.getROSActionConnection(), null, "requiredActionConnections", null, 0, -1, ROSRequiredConnections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getROSRequiredConnections_RequiredTopicConnections(), this.getROSTopicConnection(), null, "requiredTopicConnections", null, 0, -1, ROSRequiredConnections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getROSRequiredConnections_RequiredServiceConnections(), this.getROSServiceConnection(), null, "requiredServiceConnections", null, 0, -1, ROSRequiredConnections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getROSRequiredConnections_RequiredActionConnections(), this.getROSActionConnection(), null, "requiredActionConnections", null, 0, -1, ROSRequiredConnections.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

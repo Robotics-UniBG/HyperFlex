@@ -69,10 +69,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ROSRequiredConnections" eSuperTypes="../../it.unibg.robotics.resolutionmodel.model/models/resolutionModel.ecore#//RMRequiredConnections">
     <eStructuralFeatures xsi:type="ecore:EReference" name="requiredTopicConnections"
-        upperBound="-1" eType="#//ROSTopicConnection"/>
+        upperBound="-1" eType="#//ROSTopicConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requiredServiceConnections"
-        upperBound="-1" eType="#//ROSServiceConnection"/>
+        upperBound="-1" eType="#//ROSServiceConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requiredActionConnections"
-        upperBound="-1" eType="#//ROSActionConnection"/>
+        upperBound="-1" eType="#//ROSActionConnection" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

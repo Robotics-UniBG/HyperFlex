@@ -56,9 +56,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosResolutionModel.ecore#//ROSRequiredComponents/ROSNodes"/>
     </genClasses>
     <genClasses ecoreClass="rosResolutionModel.ecore#//ROSRequiredConnections">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosResolutionModel.ecore#//ROSRequiredConnections/requiredTopicConnections"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosResolutionModel.ecore#//ROSRequiredConnections/requiredServiceConnections"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosResolutionModel.ecore#//ROSRequiredConnections/requiredActionConnections"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference rosResolutionModel.ecore#//ROSRequiredConnections/requiredTopicConnections"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference rosResolutionModel.ecore#//ROSRequiredConnections/requiredServiceConnections"/>
+      <genFeatures children="true" createChild="true" propertyCategory="" propertySortChoices="true"
+          ecoreFeature="ecore:EReference rosResolutionModel.ecore#//ROSRequiredConnections/requiredActionConnections"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

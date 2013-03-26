@@ -34,8 +34,12 @@ import it.unibg.robotics.resolutionmodel.ros.rosPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.ros.model.ros.Action;
 
@@ -56,7 +60,7 @@ import org.ros.model.ros.Action;
  */
 public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implements ROSRequiredConnections {
 	/**
-	 * The cached value of the '{@link #getRequiredTopicConnections() <em>Required Topic Connections</em>}' reference list.
+	 * The cached value of the '{@link #getRequiredTopicConnections() <em>Required Topic Connections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRequiredTopicConnections()
@@ -65,7 +69,7 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	 */
 	protected EList<ROSTopicConnection> requiredTopicConnections;
 	/**
-	 * The cached value of the '{@link #getRequiredServiceConnections() <em>Required Service Connections</em>}' reference list.
+	 * The cached value of the '{@link #getRequiredServiceConnections() <em>Required Service Connections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRequiredServiceConnections()
@@ -74,7 +78,7 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	 */
 	protected EList<ROSServiceConnection> requiredServiceConnections;
 	/**
-	 * The cached value of the '{@link #getRequiredActionConnections() <em>Required Action Connections</em>}' reference list.
+	 * The cached value of the '{@link #getRequiredActionConnections() <em>Required Action Connections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRequiredActionConnections()
@@ -108,7 +112,7 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	 */
 	public EList<ROSTopicConnection> getRequiredTopicConnections() {
 		if (requiredTopicConnections == null) {
-			requiredTopicConnections = new EObjectResolvingEList<ROSTopicConnection>(ROSTopicConnection.class, this, rosPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS);
+			requiredTopicConnections = new EObjectContainmentEList<ROSTopicConnection>(ROSTopicConnection.class, this, rosPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS);
 		}
 		return requiredTopicConnections;
 	}
@@ -120,7 +124,7 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	 */
 	public EList<ROSServiceConnection> getRequiredServiceConnections() {
 		if (requiredServiceConnections == null) {
-			requiredServiceConnections = new EObjectResolvingEList<ROSServiceConnection>(ROSServiceConnection.class, this, rosPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS);
+			requiredServiceConnections = new EObjectContainmentEList<ROSServiceConnection>(ROSServiceConnection.class, this, rosPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS);
 		}
 		return requiredServiceConnections;
 	}
@@ -132,9 +136,27 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	 */
 	public EList<ROSActionConnection> getRequiredActionConnections() {
 		if (requiredActionConnections == null) {
-			requiredActionConnections = new EObjectResolvingEList<ROSActionConnection>(ROSActionConnection.class, this, rosPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS);
+			requiredActionConnections = new EObjectContainmentEList<ROSActionConnection>(ROSActionConnection.class, this, rosPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS);
 		}
 		return requiredActionConnections;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case rosPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS:
+				return ((InternalEList<?>)getRequiredTopicConnections()).basicRemove(otherEnd, msgs);
+			case rosPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS:
+				return ((InternalEList<?>)getRequiredServiceConnections()).basicRemove(otherEnd, msgs);
+			case rosPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS:
+				return ((InternalEList<?>)getRequiredActionConnections()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

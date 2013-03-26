@@ -27,6 +27,9 @@ package it.unibg.robotics.resolutionmodel.ros.provider;
 
 
 import it.unibg.robotics.resolutionmodel.provider.RMRequiredConnectionsItemProvider;
+
+import it.unibg.robotics.resolutionmodel.ros.ROSRequiredConnections;
+import it.unibg.robotics.resolutionmodel.ros.rosFactory;
 import it.unibg.robotics.resolutionmodel.ros.rosPackage;
 
 import java.util.Collection;
@@ -34,7 +37,10 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -42,6 +48,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link it.unibg.robotics.resolutionmodel.ros.ROSRequiredConnections} object.
@@ -152,6 +159,38 @@ public class ROSRequiredConnectionsItemProvider
 	}
 
 	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(rosPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS);
+			childrenFeatures.add(rosPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS);
+			childrenFeatures.add(rosPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
 	 * This returns ROSRequiredConnections.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -183,6 +222,14 @@ public class ROSRequiredConnectionsItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(ROSRequiredConnections.class)) {
+			case rosPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS:
+			case rosPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS:
+			case rosPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -196,6 +243,21 @@ public class ROSRequiredConnectionsItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(rosPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS,
+				 rosFactory.eINSTANCE.createROSTopicConnection()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(rosPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS,
+				 rosFactory.eINSTANCE.createROSServiceConnection()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(rosPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS,
+				 rosFactory.eINSTANCE.createROSActionConnection()));
 	}
 
 	/**
