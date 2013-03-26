@@ -52,47 +52,40 @@
             class="it.unibg.robotics.resolutionmodel.ros.commands.resolution.handlers.ROSResolutionHandler"
             commandId="it.unibg.robotics.resolutionmodel.commands.resolution.rosResolution">
          <enabledWhen>
-            <and>
-               <reference
-                     definitionId="it.unibg.robotics.resolutionmodel.expressions.resolutionModelSelected">
-               </reference>
-               <reference
-                     definitionId="it.unibg.robotics.resolutionmodel.ros.commands.resolution.definition1">
-               </reference>
-            </and>
+            <reference
+                  definitionId="it.unibg.robotics.resolutionmodel.ros.commands.resolution.isROSResModelSelected">
+            </reference>
          </enabledWhen>
       </handler>
    </extension>
    <extension
          point="org.eclipse.core.expressions.definitions">
       <definition
-            id="it.unibg.robotics.resolutionmodel.ros.commands.resolution.definition1">
+            id="it.unibg.robotics.resolutionmodel.ros.commands.resolution.isROSResModelSelected">
          <with
                variable="selection">
             <and>
                <count
                      value="1">
                </count>
-               <iterate
-                     ifEmpty="false"
-                     operator="or">
-                  <adapt
-                        type="it.unibg.robotics.resolutionmodel.ResolutionModel">
-                     <with
-                           variable="resolutionElements">
-                        <iterate
-                              ifEmpty="false"
-                              operator="or">
-                           <instanceof
-                                 value="it.unibg.robotics.resolutionmodel.RMResolutionElement">
-                           </instanceof>
-                        </iterate>
-                     </with>
-                  </adapt>
-               </iterate>
-            </and>
+               <iterate>
+                  <test
+                        forcePluginActivation="true"
+                        property="it.unibg.robotics.resolutionmodel.ros.expressions.resolutionModelType.is_a_ROS_resolution_model">
+                  </test>
+               </iterate> </and>
          </with>
       </definition>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="it.unibg.robotics.resolutionmodel.ros.commands.resolution.expressions.ROSResolutionModelTypeTester"
+            id="it.unibg.robotics.resolutionmodel.ros.expressions.resolutionModelPropertyTester"
+            namespace="it.unibg.robotics.resolutionmodel.ros.expressions.resolutionModelType"
+            properties="is_a_ROS_resolution_model"
+            type="it.unibg.robotics.resolutionmodel.ResolutionModel">
+      </propertyTester>
    </extension>
 
 </plugin>

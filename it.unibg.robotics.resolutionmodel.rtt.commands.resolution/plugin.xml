@@ -53,10 +53,39 @@
             commandId="it.unibg.robotics.resolutionmodel.commands.resolution.rttResolution">
          <enabledWhen>
             <reference
-                  definitionId="it.unibg.robotics.resolutionmodel.expressions.resolutionModelSelected">
+                  definitionId="it.unibg.robotics.resolutionmodel.rtt.commands.resolution.isRTTResModelSelected">
             </reference>
          </enabledWhen>
       </handler>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="it.unibg.robotics.resolutionmodel.rtt.commands.resolution.isRTTResModelSelected">
+         <with
+               variable="selection">
+            <and>
+               <count
+                     value="1">
+               </count>
+               <iterate>
+                  <test
+                        forcePluginActivation="true"
+                        property="it.unibg.robotics.resolutionmodel.rtt.expressions.resolutionModelType.is_a_RTT_resolution_model">
+                  </test>
+               </iterate> </and>
+         </with>
+      </definition>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="it.unibg.robotics.resolutionmodel.rtt.commands.resolution.expressions.RTTResolutionModelTypeTester"
+            id="it.unibg.robotics.resolutionmodel.rtt.expressions.resolutionModelPropertyTester"
+            namespace="it.unibg.robotics.resolutionmodel.rtt.expressions.resolutionModelType"
+            properties="is_a_RTT_resolution_model"
+            type="it.unibg.robotics.resolutionmodel.ResolutionModel">
+      </propertyTester>
    </extension>
 
 </plugin>
