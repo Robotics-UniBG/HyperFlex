@@ -68,8 +68,14 @@
                <count
                      value="1">
                </count>
-               <iterate>
-                  <test
+               <iterate
+                     ifEmpty="false"
+                     operator="and">
+                  
+                     <instanceof
+                           value="it.unibg.robotics.resolutionmodel.ResolutionModel">
+                     </instanceof>
+                     <test
                         forcePluginActivation="true"
                         property="it.unibg.robotics.resolutionmodel.rtt.expressions.resolutionModelType.is_a_RTT_resolution_model">
                   </test>

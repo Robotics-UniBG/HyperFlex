@@ -68,11 +68,18 @@
                <count
                      value="1">
                </count>
-               <iterate>
-                  <test
-                        forcePluginActivation="true"
-                        property="it.unibg.robotics.resolutionmodel.ros.expressions.resolutionModelType.is_a_ROS_resolution_model">
-                  </test>
+               <iterate
+                     ifEmpty="false"
+                     operator="and">
+                  
+                     <instanceof
+                           value="it.unibg.robotics.resolutionmodel.ResolutionModel">
+                     </instanceof>
+                     <test
+                           forcePluginActivation="true"
+                           property="it.unibg.robotics.resolutionmodel.ros.expressions.resolutionModelType.is_a_ROS_resolution_model">
+                     </test>
+                  
                </iterate> </and>
          </with>
       </definition>
