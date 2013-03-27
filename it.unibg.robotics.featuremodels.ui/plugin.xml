@@ -90,5 +90,22 @@
          </description>
       </wizard>
    </extension>
+   <extension
+         id="it.unibg.robotics.featuremodels.ui.natures.FMProjectNature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="it.unibg.robotics.featuremodels.ui.natures.FMProjectNature">
+         </run>
+      </runtime>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.projectNatureImages">
+      <image
+            icon="icons/fm_nature.ico"
+            id="it.unibg.robotics.featuremodels.ui.natures.FMProjectNatureImage"
+            natureId="it.unibg.robotics.featuremodels.ui.natures.FMProjectNature">
+      </image>
+   </extension>
 
 </plugin>
