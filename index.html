@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Varp by Robotics-UniBG</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Varp</h1>
+        <p>Variability Analysis and Resolution Plugin</p>
+        <p class="view"><a href="https://github.com/Robotics-UniBG/VARP">View the Project on GitHub <small>Robotics-UniBG/VARP</small></a></p>
+        <ul>
+          <li><a href="https://github.com/Robotics-UniBG/VARP/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Robotics-UniBG/VARP/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Robotics-UniBG/VARP">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>Variability Analysis and Resolution Plugin</h3>
+
+<p>The Variability Analysis and Resolution Plugin allows the user to design Feature Models by means of a graphical editor.</p>
+
+<h3>Feature Models</h3>
+
+<p>A Feature represents an increment in a system’s functionalities and can be mandatory or optional. Mandatory features have to be present in all possible configuration of the software system. They are graphically depicted with a black circle on the top. Optional features instead are selected according to the application requirements. They are depicted with a white circle on the top. A feature model is a hierarchical composition of features and is organized as a tree. Parent features are connected to children features by means of edges, which represent containment relationships. The parent feature is a variation point, while the children are the possible variants. The or containment (represented with a white arc) indicates that at least one variant needs to be present in the software system, while the x-or containment (represented with a black arc) indicates that only one variant can be present in the software system. Selecting a subset of all the variants of a feature model corresponds to select a specific configuration of the system. This selection is called an instance of the feature model. Two kinds of constraints between variant features can be specified. The requires constraint indicates that if a feature A is selected then also a feature B has to be selected. The excludes constraint instead indicates that if a feature A is selected then a feature B cannot be selected. A feature model instance is valid if the feature selection satisfies all the constraints.</p>
+
+<p>Feature models were proposed for the first time in 1990 in the context of the Feature Oriented Domain Analysis (FODA) approach. FODA aims to identify the properties and the functionality of a software, which are commonly present in applications of a specific domain, and separate them in two groups: those that are always present (stable point) and those that are present only in some applications (variation points and their variants). For representing these properties and functionality FODA proposes a formal method: the feature model. </p>
+
+<h3>How to install the Plugin</h3>
+
+<p>The plugin can be installed from source (by accessing the <a href="https://github.com/Robotics-UniBG/FeatureModels">github repository</a> ) or by means of the <a href="robotics-unibg.github.com/FeatureModels/update_site">update site</a>.</p>
+
+<p>In order to install the plugin from source you need to setup the following environment:</p>
+
+<ul>
+<li><a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/junosr1">Eclipse Modeling Tools</a></li>
+<li>with the Graphical Modeling Tooling <a href="http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/">update site</a> </li>
+</ul><h3>Developers</h3>
+
+<p>Luca Gherardi, University of Bergamo
+Supervised by Davide Brugali, University of Bergamo</p>
+
+<h3>More information</h3>
+
+<p>More information can be found on the following papers:</p>
+
+<ul>
+<li>L. Gherardi, D. Brugali. <a href="http://www.best-of-robotics.org/pages/publications/UniBergamo_EclipseIT2011.pdf">An eclipse-based Feature Models toolchain</a>. <em>In Proc. of the 6th Workshop of the Italian Eclipse Community (<a href="http://2011.eclipse-it.org/home/">Eclipse-IT 2011</a>)</em>, September 22-23, 2011, Milano, Italy.</li>
+</ul>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/Robotics-UniBG">Robotics-UniBG</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
