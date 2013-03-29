@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: it.unibg.robotics.resolutionmodels.model.edit;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: it.unibg.robotics.resolutionmodels.provider.ResolutionModelEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: it.unibg.robotics.resolutionmodels.provider
+Require-Bundle: org.eclipse.core.runtime,
+ it.unibg.robotics.resolutionmodels.model;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport,
+ it.unibg.robotics.featuremodels.model;visibility:=reexport,
+ it.unibg.robotics.featuremodels.model.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy
