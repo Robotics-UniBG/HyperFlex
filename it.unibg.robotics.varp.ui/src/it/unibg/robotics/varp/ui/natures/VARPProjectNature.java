@@ -1,12 +1,12 @@
-package it.unibg.robotics.featuremodels.ui.natures;
+package it.unibg.robotics.varp.ui.natures;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectNature;
 import org.eclipse.core.runtime.CoreException;
 
-public class FMProjectNature implements IProjectNature {
+public class VARPProjectNature implements IProjectNature {
 
-	public static final String NATURE_ID = "it.unibg.robotics.featuremodels.ui.natures.FMProjectNature";
+	public static final String NATURE_ID = "it.unibg.robotics.varp.ui.natures.VARPProjectNature";
 	
 	@Override
 	public void configure() throws CoreException {

@@ -34,7 +34,7 @@
             id="it.unibg.robotics.featuremodels.presentation.featuremodelsModelWizardID"
             name="%_UI_featuremodelsModelWizard_label"
             class="it.unibg.robotics.featuremodels.presentation.featuremodelsModelWizard"
-            category="it.robotics.unibg.featuremodels.wizard.category"
+            category="it.robotics.unibg.varp.wizard.category"
             icon="icons/fm.ico">
          <description>%_UI_featuremodelsModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>

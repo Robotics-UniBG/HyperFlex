@@ -1,4 +1,4 @@
-package it.unibg.robotics.featuremodels.ui.messages;
+package it.unibg.robotics.varp.ui.messages;
 
 import org.eclipse.osgi.util.NLS;
 

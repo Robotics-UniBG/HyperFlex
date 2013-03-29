@@ -34,7 +34,7 @@
             id="it.unibg.robotics.resolutionmodel.ros.presentation.rosModelWizardID"
             name="%_UI_rosModelWizard_label"
             class="it.unibg.robotics.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsModelWizard"
-            category="it.robotics.unibg.featuremodels.wizard.category"
+            category="it.robotics.unibg.varp.wizard.category"
             icon="icons/full/obj16/rosModelFile.gif">
          <description>%_UI_rosModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>

@@ -1,8 +1,8 @@
-package it.unibg.robotics.featuremodels.ui.wizards;
+package it.unibg.robotics.varp.ui.wizards;
 
 
-import it.unibg.robotics.featuremodels.ui.messages.Messages;
-import it.unibg.robotics.featuremodels.ui.natures.FMProjectNature;
+import it.unibg.robotics.varp.ui.messages.Messages;
+import it.unibg.robotics.varp.ui.natures.VARPProjectNature;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
@@ -37,7 +37,7 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 import org.eclipse.ui.wizards.newresource.BasicNewProjectResourceWizard;
 
 
-public class FMProjectWizard extends Wizard implements INewWizard, IExecutableExtension {
+public class VARPProjectWizard extends Wizard implements INewWizard, IExecutableExtension {
 
 	private IProject project;
 
@@ -51,7 +51,7 @@ public class FMProjectWizard extends Wizard implements INewWizard, IExecutableEx
 
 	private WizardNewProjectCreationPage projectPage;
 
-	public FMProjectWizard() {
+	public VARPProjectWizard() {
 		super();
 		setNeedsProgressMonitor(true);
 	}
@@ -170,12 +170,12 @@ public class FMProjectWizard extends Wizard implements INewWizard, IExecutableEx
 	}
 	
 	private static void addNature(IProject project) throws CoreException {
-        if (!project.hasNature(FMProjectNature.NATURE_ID)) {
+        if (!project.hasNature(VARPProjectNature.NATURE_ID)) {
             IProjectDescription description = project.getDescription();
             String[] prevNatures = description.getNatureIds();
             String[] newNatures = new String[prevNatures.length + 1];
             System.arraycopy(prevNatures, 0, newNatures, 0, prevNatures.length);
-            newNatures[prevNatures.length] = FMProjectNature.NATURE_ID;
+            newNatures[prevNatures.length] = VARPProjectNature.NATURE_ID;
             description.setNatureIds(newNatures);
  
             IProgressMonitor monitor = null;

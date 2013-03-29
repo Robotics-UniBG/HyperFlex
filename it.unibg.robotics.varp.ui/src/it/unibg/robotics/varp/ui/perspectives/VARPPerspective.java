@@ -1,4 +1,5 @@
-package it.unibg.robotics.featuremodels.ui.perspectives;
+package it.unibg.robotics.varp.ui.perspectives;
+
 
 import it.unibg.robotics.featuremodels.ui.views.ConstraintView;
 import it.unibg.robotics.featuremodels.ui.views.InstanceView;
@@ -8,7 +9,7 @@ import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 import org.eclipse.ui.progress.IProgressConstants;
 
-public class FMPerspective implements IPerspectiveFactory {
+public class VARPPerspective implements IPerspectiveFactory {
 
 	public void createInitialLayout(IPageLayout layout) {
 		String editorArea = layout.getEditorArea();

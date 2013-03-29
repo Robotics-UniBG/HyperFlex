@@ -34,7 +34,7 @@
             id="it.unibg.robotics.resolutionmodels.rtt.presentation.rttModelWizardID"
             name="%_UI_rttModelWizard_label"
             class="it.unibg.robotics.resolutionmodels.rttresolutionmodels.presentation.rttresolutionmodelsModelWizard"
-            category="it.robotics.unibg.featuremodels.wizard.category"
+            category="it.robotics.unibg.varp.wizard.category"
             icon="icons/full/obj16/rttModelFile.gif">
          <description>%_UI_rttModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>

@@ -34,7 +34,7 @@
             id="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelModelWizardID"
             name="%_UI_resolutionmodelModelWizard_label"
             class="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelsModelWizard"
-            category="it.robotics.unibg.featuremodels.wizard.category"
+            category="it.robotics.unibg.varp.wizard.category"
             icon="icons/rm.ico">
          <description>%_UI_resolutionmodelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
