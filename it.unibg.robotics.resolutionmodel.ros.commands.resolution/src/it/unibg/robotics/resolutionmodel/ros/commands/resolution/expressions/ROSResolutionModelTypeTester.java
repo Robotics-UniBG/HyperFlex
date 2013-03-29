@@ -20,8 +20,6 @@ public class ROSResolutionModelTypeTester extends PropertyTester{
 		if (property.equals("is_a_ROS_resolution_model")) {
 			ResolutionModel model = (ResolutionModel)receiver;
 			
-			System.out.println(model);
-			
 			for(RMResolutionElement resElem : model.getResolutionElements()){
 				
 				if(resElem.getRequiredComponents() instanceof ROSRequiredComponents){
