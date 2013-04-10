@@ -14,6 +14,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  it.unibg.robotics.featuremodels.model;visibility:=reexport,
  it.unibg.robotics.resolutionmodels.model;visibility:=reexport,
- org.orocos.model.rtt;visibility:=reexport,
- org.eclipse.xtext;bundle-version="2.2.1"
+ org.orocos.model.rtt;visibility:=reexport
 Bundle-ActivationPolicy: lazy

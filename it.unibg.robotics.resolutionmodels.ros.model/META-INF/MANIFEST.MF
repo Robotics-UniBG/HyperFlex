@@ -11,7 +11,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  it.unibg.robotics.featuremodels.model;visibility:=reexport,
  it.unibg.robotics.resolutionmodels.model;visibility:=reexport,
- org.eclipse.xtext;bundle-version="2.2.1",
  org.ros.model.ros;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: it.unibg.robotics.resolutionmodels.rosresolutionmodels,

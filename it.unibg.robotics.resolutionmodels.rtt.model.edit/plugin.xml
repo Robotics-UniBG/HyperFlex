@@ -43,7 +43,7 @@
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
-            uri="http://robotics.unibg.it/resolutionmodel"
+            uri="http://robotics.unibg.it/resolutionmodels"
             class="it.unibg.robotics.resolutionmodels.rttresolutionmodels.provider.rttresolutionmodelsItemProviderAdapterFactory$resolutionmodelsChildCreationExtender"/>
    </extension>
 
