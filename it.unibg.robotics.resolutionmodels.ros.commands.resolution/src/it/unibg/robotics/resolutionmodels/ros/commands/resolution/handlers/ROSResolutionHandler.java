@@ -335,9 +335,13 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 		for(RMResolutionElement currentResElem : resolutionModel.getResolutionElements()){
 
-			if(! featureModelInstance.getSelectedFeatures().contains(currentResElem.getFeature())){
+			boolean isActive = featureModelInstance.getSelectedFeatures().contains(currentResElem.getFeature()) &&
+					currentResElem.isExecutedWhenFeatureIsSelected();
+			
+			if( ! isActive ){
 
 				// The feature associated to the resolution element is not selected
+				// or the resolution element has to be applied when the feature is not selected
 				continue;
 
 			}

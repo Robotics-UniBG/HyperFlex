@@ -89,6 +89,7 @@ public class RMResolutionElementItemProvider
 			addFeaturePropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
+			addExecutedWhenFeatureIsSelectedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -155,6 +156,28 @@ public class RMResolutionElementItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Executed When Feature Is Selected feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addExecutedWhenFeatureIsSelectedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RMResolutionElement_executedWhenFeatureIsSelected_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RMResolutionElement_executedWhenFeatureIsSelected_feature", "_UI_RMResolutionElement_type"),
+				 resolutionmodelsPackage.Literals.RM_RESOLUTION_ELEMENT__EXECUTED_WHEN_FEATURE_IS_SELECTED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -230,6 +253,7 @@ public class RMResolutionElementItemProvider
 		switch (notification.getFeatureID(RMResolutionElement.class)) {
 			case resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__NAME:
 			case resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__DESCRIPTION:
+			case resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__EXECUTED_WHEN_FEATURE_IS_SELECTED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__TRANSFORMATIONS:

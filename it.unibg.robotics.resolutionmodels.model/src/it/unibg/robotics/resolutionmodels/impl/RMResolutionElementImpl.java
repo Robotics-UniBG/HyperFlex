@@ -57,6 +57,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link it.unibg.robotics.resolutionmodels.impl.RMResolutionElementImpl#getFeature <em>Feature</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodels.impl.RMResolutionElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodels.impl.RMResolutionElementImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link it.unibg.robotics.resolutionmodels.impl.RMResolutionElementImpl#isExecutedWhenFeatureIsSelected <em>Executed When Feature Is Selected</em>}</li>
  * </ul>
  * </p>
  *
@@ -142,6 +143,26 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isExecutedWhenFeatureIsSelected() <em>Executed When Feature Is Selected</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isExecutedWhenFeatureIsSelected()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean EXECUTED_WHEN_FEATURE_IS_SELECTED_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isExecutedWhenFeatureIsSelected() <em>Executed When Feature Is Selected</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isExecutedWhenFeatureIsSelected()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean executedWhenFeatureIsSelected = EXECUTED_WHEN_FEATURE_IS_SELECTED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -345,6 +366,27 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isExecutedWhenFeatureIsSelected() {
+		return executedWhenFeatureIsSelected;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExecutedWhenFeatureIsSelected(boolean newExecutedWhenFeatureIsSelected) {
+		boolean oldExecutedWhenFeatureIsSelected = executedWhenFeatureIsSelected;
+		executedWhenFeatureIsSelected = newExecutedWhenFeatureIsSelected;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__EXECUTED_WHEN_FEATURE_IS_SELECTED, oldExecutedWhenFeatureIsSelected, executedWhenFeatureIsSelected));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -379,6 +421,8 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 				return getName();
 			case resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__DESCRIPTION:
 				return getDescription();
+			case resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__EXECUTED_WHEN_FEATURE_IS_SELECTED:
+				return isExecutedWhenFeatureIsSelected();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -411,6 +455,9 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 			case resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
+			case resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__EXECUTED_WHEN_FEATURE_IS_SELECTED:
+				setExecutedWhenFeatureIsSelected((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -441,6 +488,9 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 			case resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__EXECUTED_WHEN_FEATURE_IS_SELECTED:
+				setExecutedWhenFeatureIsSelected(EXECUTED_WHEN_FEATURE_IS_SELECTED_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -465,6 +515,8 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case resolutionmodelsPackage.RM_RESOLUTION_ELEMENT__EXECUTED_WHEN_FEATURE_IS_SELECTED:
+				return executedWhenFeatureIsSelected != EXECUTED_WHEN_FEATURE_IS_SELECTED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -483,6 +535,8 @@ public class RMResolutionElementImpl extends EObjectImpl implements RMResolution
 		result.append(name);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", executedWhenFeatureIsSelected: ");
+		result.append(executedWhenFeatureIsSelected);
 		result.append(')');
 		return result.toString();
 	}

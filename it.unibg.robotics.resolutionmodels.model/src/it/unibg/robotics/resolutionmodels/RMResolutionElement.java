@@ -45,6 +45,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link it.unibg.robotics.resolutionmodels.RMResolutionElement#getFeature <em>Feature</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodels.RMResolutionElement#getName <em>Name</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodels.RMResolutionElement#getDescription <em>Description</em>}</li>
+ *   <li>{@link it.unibg.robotics.resolutionmodels.RMResolutionElement#isExecutedWhenFeatureIsSelected <em>Executed When Feature Is Selected</em>}</li>
  * </ul>
  * </p>
  *
@@ -198,5 +199,32 @@ public interface RMResolutionElement extends EObject {
 	 * @generated
 	 */
 	void setDescription(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Executed When Feature Is Selected</b></em>' attribute.
+	 * The default value is <code>"TRUE"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Executed When Feature Is Selected</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Executed When Feature Is Selected</em>' attribute.
+	 * @see #setExecutedWhenFeatureIsSelected(boolean)
+	 * @see it.unibg.robotics.resolutionmodels.resolutionmodelsPackage#getRMResolutionElement_ExecutedWhenFeatureIsSelected()
+	 * @model default="TRUE" required="true"
+	 * @generated
+	 */
+	boolean isExecutedWhenFeatureIsSelected();
+
+	/**
+	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.RMResolutionElement#isExecutedWhenFeatureIsSelected <em>Executed When Feature Is Selected</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Executed When Feature Is Selected</em>' attribute.
+	 * @see #isExecutedWhenFeatureIsSelected()
+	 * @generated
+	 */
+	void setExecutedWhenFeatureIsSelected(boolean value);
 
 } // RMResolutionElement

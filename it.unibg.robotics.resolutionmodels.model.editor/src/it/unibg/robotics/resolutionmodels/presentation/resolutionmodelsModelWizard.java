@@ -29,6 +29,7 @@ package it.unibg.robotics.resolutionmodels.presentation;
 import it.unibg.robotics.resolutionmodels.resolutionmodelsFactory;
 import it.unibg.robotics.resolutionmodels.resolutionmodelsPackage;
 
+import it.unibg.robotics.resolutionmodels.provider.ResolutionModelEditPlugin;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -393,8 +394,7 @@ public class resolutionmodelsModelWizard extends Wizard implements INewWizard {
 		 * @generated
 		 */
 		public void createControl(Composite parent) {
-			Composite composite = new Composite(parent, SWT.NONE);
-			{
+			Composite composite = new Composite(parent, SWT.NONE); {
 				GridLayout layout = new GridLayout();
 				layout.numColumns = 1;
 				layout.verticalSpacing = 12;
@@ -534,7 +534,7 @@ public class resolutionmodelsModelWizard extends Wizard implements INewWizard {
 		 */
 		protected String getLabel(String typeName) {
 			try {
-				return ResolutionModelEditorPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
+				return ResolutionModelEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
 			}
 			catch(MissingResourceException mre) {
 				ResolutionModelEditorPlugin.INSTANCE.log(mre);

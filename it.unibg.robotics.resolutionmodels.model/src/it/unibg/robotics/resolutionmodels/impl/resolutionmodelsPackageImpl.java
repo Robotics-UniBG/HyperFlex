@@ -265,6 +265,15 @@ public class resolutionmodelsPackageImpl extends EPackageImpl implements resolut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRMResolutionElement_ExecutedWhenFeatureIsSelected() {
+		return (EAttribute)rmResolutionElementEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRMAbstractTransformation() {
 		return rmAbstractTransformationEClass;
 	}
@@ -398,6 +407,7 @@ public class resolutionmodelsPackageImpl extends EPackageImpl implements resolut
 		createEReference(rmResolutionElementEClass, RM_RESOLUTION_ELEMENT__FEATURE);
 		createEAttribute(rmResolutionElementEClass, RM_RESOLUTION_ELEMENT__NAME);
 		createEAttribute(rmResolutionElementEClass, RM_RESOLUTION_ELEMENT__DESCRIPTION);
+		createEAttribute(rmResolutionElementEClass, RM_RESOLUTION_ELEMENT__EXECUTED_WHEN_FEATURE_IS_SELECTED);
 
 		rmAbstractTransformationEClass = createEClass(RM_ABSTRACT_TRANSFORMATION);
 		createEAttribute(rmAbstractTransformationEClass, RM_ABSTRACT_TRANSFORMATION__NAME);
@@ -464,6 +474,7 @@ public class resolutionmodelsPackageImpl extends EPackageImpl implements resolut
 		initEReference(getRMResolutionElement_Feature(), thefeaturemodelsPackage.getFeature(), null, "feature", null, 1, 1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRMResolutionElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRMResolutionElement_Description(), ecorePackage.getEString(), "description", null, 0, 1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRMResolutionElement_ExecutedWhenFeatureIsSelected(), ecorePackage.getEBoolean(), "executedWhenFeatureIsSelected", "TRUE", 1, 1, RMResolutionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rmAbstractTransformationEClass, RMAbstractTransformation.class, "RMAbstractTransformation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRMAbstractTransformation_Name(), ecorePackage.getEString(), "name", null, 1, 1, RMAbstractTransformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

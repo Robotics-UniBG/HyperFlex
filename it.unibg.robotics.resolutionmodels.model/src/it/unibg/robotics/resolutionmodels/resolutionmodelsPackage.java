@@ -180,13 +180,22 @@ public interface resolutionmodelsPackage extends EPackage {
 	int RM_RESOLUTION_ELEMENT__DESCRIPTION = 5;
 
 	/**
+	 * The feature id for the '<em><b>Executed When Feature Is Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RM_RESOLUTION_ELEMENT__EXECUTED_WHEN_FEATURE_IS_SELECTED = 6;
+
+	/**
 	 * The number of structural features of the '<em>RM Resolution Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RM_RESOLUTION_ELEMENT_FEATURE_COUNT = 6;
+	int RM_RESOLUTION_ELEMENT_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.impl.RMAbstractTransformationImpl <em>RM Abstract Transformation</em>}' class.
@@ -511,6 +520,17 @@ public interface resolutionmodelsPackage extends EPackage {
 	EAttribute getRMResolutionElement_Description();
 
 	/**
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodels.RMResolutionElement#isExecutedWhenFeatureIsSelected <em>Executed When Feature Is Selected</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Executed When Feature Is Selected</em>'.
+	 * @see it.unibg.robotics.resolutionmodels.RMResolutionElement#isExecutedWhenFeatureIsSelected()
+	 * @see #getRMResolutionElement()
+	 * @generated
+	 */
+	EAttribute getRMResolutionElement_ExecutedWhenFeatureIsSelected();
+
+	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.RMAbstractTransformation <em>RM Abstract Transformation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -730,6 +750,14 @@ public interface resolutionmodelsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RM_RESOLUTION_ELEMENT__DESCRIPTION = eINSTANCE.getRMResolutionElement_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Executed When Feature Is Selected</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RM_RESOLUTION_ELEMENT__EXECUTED_WHEN_FEATURE_IS_SELECTED = eINSTANCE.getRMResolutionElement_ExecutedWhenFeatureIsSelected();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.impl.RMAbstractTransformationImpl <em>RM Abstract Transformation</em>}' class.
