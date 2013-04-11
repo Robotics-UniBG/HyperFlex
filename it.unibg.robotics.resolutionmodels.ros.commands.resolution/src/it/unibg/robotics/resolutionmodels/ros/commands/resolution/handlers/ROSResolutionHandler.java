@@ -213,7 +213,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 				}
 				instance = (Instance)instanceDialog.getResult()[0];
 
-				doTransformation(instance);
+				//doTransformation(instance);
 
 				// Create a resource set to hold the resources.
 				ResourceSet resourceSet = new ResourceSetImpl();
