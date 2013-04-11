@@ -213,7 +213,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 				}
 				instance = (Instance)instanceDialog.getResult()[0];
 
-				//doTransformation(instance);
+				doTransformation(instance);
 
 				// Create a resource set to hold the resources.
 				ResourceSet resourceSet = new ResourceSetImpl();
@@ -335,7 +335,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 		for(RMResolutionElement currentResElem : resolutionModel.getResolutionElements()){
 
-			boolean isActive = featureModelInstance.getSelectedFeatures().contains(currentResElem.getFeature()) &&
+			boolean isActive = featureModelInstance.getSelectedFeatures().contains(currentResElem.getFeature()) ==
 					currentResElem.isExecutedWhenFeatureIsSelected();
 			
 			if( ! isActive ){

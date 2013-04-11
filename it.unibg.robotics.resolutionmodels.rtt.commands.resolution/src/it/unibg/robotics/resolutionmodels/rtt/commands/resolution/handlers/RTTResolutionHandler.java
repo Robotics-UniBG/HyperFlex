@@ -297,7 +297,7 @@ public class RTTResolutionHandler extends AbstractHandler {
 
 		for(RMResolutionElement currentResElem : resolutionModel.getResolutionElements()){
 
-			boolean isActive = featureModelInstance.getSelectedFeatures().contains(currentResElem.getFeature()) &&
+			boolean isActive = featureModelInstance.getSelectedFeatures().contains(currentResElem.getFeature()) ==
 					currentResElem.isExecutedWhenFeatureIsSelected();
 			
 			if( ! isActive ){
