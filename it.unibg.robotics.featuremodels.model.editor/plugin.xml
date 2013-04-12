@@ -35,7 +35,7 @@
             name="%_UI_featuremodelsModelWizard_label"
             class="it.unibg.robotics.featuremodels.presentation.featuremodelsModelWizard"
             category="it.robotics.unibg.varp.wizard.category"
-            icon="icons/fm.ico">
+            icon="icons/fm.gif">
          <description>%_UI_featuremodelsModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
@@ -45,7 +45,7 @@
       <editor
             id="it.unibg.robotics.featuremodels.presentation.featuremodelsEditorID"
             name="%_UI_featuremodelsEditor_label"
-            icon="icons/fm.ico"
+            icon="icons/fm.gif"
             extensions="featuremodel"
             class="it.unibg.robotics.featuremodels.presentation.featuremodelsEditor"
             contributorClass="it.unibg.robotics.featuremodels.presentation.featuremodelsActionBarContributor">
