@@ -8,7 +8,7 @@
             allowMultiple="false"
             category="it.unibg.robotics.varp.ui.views"
             class="it.unibg.robotics.featuremodels.ui.views.InstanceView"
-            icon="icons/fm.gif"
+            icon="icons/fm.ico"
             id="it.unibg.robotics.featuremodels.ui.views.instanceview"
             name="Instance View">
       </view>
@@ -16,7 +16,7 @@
             allowMultiple="false"
             category="it.unibg.robotics.varp.ui.views"
             class="it.unibg.robotics.featuremodels.ui.views.ConstraintView"
-            icon="icons/fm.gif"
+            icon="icons/fm.ico"
             id="it.unibg.robotics.featuremodels.ui.views.constraintview"
             name="Constraint View">
       </view>

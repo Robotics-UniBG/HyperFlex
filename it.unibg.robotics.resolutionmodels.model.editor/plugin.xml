@@ -35,7 +35,7 @@
             name="%_UI_resolutionmodelModelWizard_label"
             class="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelsModelWizard"
             category="it.robotics.unibg.varp.wizard.category"
-            icon="icons/rm.gif">
+            icon="icons/rm.ico">
          <description>%_UI_resolutionmodelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
@@ -45,7 +45,7 @@
       <editor
             id="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelEditorID"
             name="%_UI_resolutionmodelEditor_label"
-            icon="icons/rm.gif"
+            icon="icons/rm.ico"
             extensions="resolutionmodel"
             class="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelsEditor"
             contributorClass="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelsActionBarContributor">

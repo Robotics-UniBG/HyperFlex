@@ -31,7 +31,7 @@
 
    <extension point="org.eclipse.ui.newWizards">
       <wizard
-            id="it.unibg.robotics.resolutionmodel.ros.presentation.rosModelWizardID"
+            id="it.unibg.robotics.resolutionmodels.ros.presentation.rosModelWizardID"
             name="%_UI_rosModelWizard_label"
             class="it.unibg.robotics.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsModelWizard"
             category="it.robotics.unibg.varp.wizard.category"
@@ -43,7 +43,7 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="it.unibg.robotics.resolutionmodel.ros.presentation.rosEditorID"
+            id="it.unibg.robotics.resolutionmodels.ros.presentation.rosEditorID"
             name="%_UI_rosEditor_label"
             icon="icons/full/obj16/rosModelFile.gif"
             extensions="rosresolutionmodel"

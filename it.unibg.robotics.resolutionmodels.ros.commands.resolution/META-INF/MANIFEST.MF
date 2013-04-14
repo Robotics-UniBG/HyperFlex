@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Ros Resolution Transformations
+Bundle-Name: ROS Resolution Transformations
 Bundle-SymbolicName: it.unibg.robotics.resolutionmodels.ros.commands.resolution;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: it.unibg.robotics.resolutionmodels.ros.commands.resolution.Activator

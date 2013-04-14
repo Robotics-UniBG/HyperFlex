@@ -31,7 +31,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http://robotics.unibg.it/resolutionmodel.rtt"
+            uri="http://robotics.unibg.it/resolutionmodels.rtt"
             class="it.unibg.robotics.resolutionmodels.rttresolutionmodels.provider.rttresolutionmodelsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
