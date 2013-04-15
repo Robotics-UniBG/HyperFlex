@@ -32,11 +32,11 @@
    <extension point="org.eclipse.ui.newWizards">
       <wizard
             id="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelModelWizardID"
-            name="%_UI_resolutionmodelModelWizard_label"
+            name="%_UI_resolutionmodelsModelWizard_label"
             class="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelsModelWizard"
             category="it.robotics.unibg.varp.wizard.category"
             icon="icons/rm.ico">
-         <description>%_UI_resolutionmodelModelWizard_description</description>
+         <description>%_UI_resolutionmodelsModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -44,7 +44,7 @@
    <extension point="org.eclipse.ui.editors">
       <editor
             id="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelEditorID"
-            name="%_UI_resolutionmodelEditor_label"
+            name="%_UI_resolutionmodelsEditor_label"
             icon="icons/rm.ico"
             extensions="resolutionmodel"
             class="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelsEditor"
