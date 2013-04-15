@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="it.unibg.robotics.varp.feature"
-      label="Variability Analysis and Resolution Plugin"
+      id="it.unibg.robotics.featuremodels.feature"
+      label="Variability Analysis Plugin"
       version="1.0.0.qualifier"
       provider-name="Luca Gherardi">
 
    <description url="http://robotics-unibg.github.com/FeatureModels/">
-      The Variability Analysis and Resolution plugin
+      The Variability Analysis plugin
    </description>
 
    <copyright>
@@ -32,7 +32,7 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <url>
-      <discovery label="Feature Model Plugin on github" url="http://robotics-unibg.github.com/FeatureModels/"/>
+      <discovery label="VARP on github" url="http://robotics-unibg.github.com/VARP/"/>
    </url>
 
    <requires>

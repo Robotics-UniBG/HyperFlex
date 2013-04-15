@@ -3,6 +3,6 @@
 .metadata
 .svn
 .DS_Store
-it.unibg.robotics.featuremodels.updatesite/features/
-it.unibg.robotics.featuremodels.updatesite/plugins/
+it.unibg.robotics.varp.updatesite/features/
+it.unibg.robotics.varp.updatesite/plugins/
 it.unibg.robotics.resolutionmodels.dsl*

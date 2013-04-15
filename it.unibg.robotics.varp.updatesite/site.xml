@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/it.unibg.robotics.featuremodels.feature_1.0.0.qualifier.jar" id="it.unibg.robotics.featuremodels.feature" version="1.0.0.qualifier">
+      <category name="it.unibg.robotics.varp.updatesite.category"/>
+   </feature>
+   <feature url="features/it.unibg.robotics.resolutionmodels.feature_1.0.0.qualifier.jar" id="it.unibg.robotics.resolutionmodels.feature" version="1.0.0.qualifier">
+      <category name="it.unibg.robotics.varp.updatesite.category"/>
+   </feature>
+   <feature url="features/it.unibg.robotics.resolutionmodels.ros.feature_1.0.0.qualifier.jar" id="it.unibg.robotics.resolutionmodels.ros.feature" version="1.0.0.qualifier">
+      <category name="it.unibg.robotics.varp.updatesite.category"/>
+   </feature>
+   <feature url="features/it.unibg.robotics.resolutionmodels.rtt.feature_1.0.0.qualifier.jar" id="it.unibg.robotics.resolutionmodels.rtt.feature" version="1.0.0.qualifier">
+      <category name="it.unibg.robotics.varp.updatesite.category"/>
+   </feature>
+   <category-def name="it.unibg.robotics.varp.updatesite.category" label="Variability Analysis and Resolution Plugins">
+      <description>
+         Variability Analysis and Resolution Plugins
+      </description>
+   </category-def>
+</site>
