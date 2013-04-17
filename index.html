@@ -27,31 +27,40 @@
         </ul>
       </header>
       <section>
-        <h3>Variability Analysis and Resolution Plugin</h3>
+        <h2><a href="http://robotics-unibg.github.com/VARP/">Variability Analysis and Resolution Plugin (VARP)</a></h2>
 
-<p>The Variability Analysis and Resolution Plugin allows the user to design Feature Models by means of a graphical editor.</p>
+<p>VARP is a collection of Eclipse plugins that support the development of robotics software product lines, a family of similar applications that are built reusing a set of software components and share the same architecture. The SPL life cycle consists in three main phases: domain analysis, product line development, and product derivation.</p>
 
-<h3>Feature Models</h3>
+<h3>Domain Analysis</h3>
 
-<p>A Feature represents an increment in a system’s functionalities and can be mandatory or optional. Mandatory features have to be present in all possible configuration of the software system. They are graphically depicted with a black circle on the top. Optional features instead are selected according to the application requirements. They are depicted with a white circle on the top. A feature model is a hierarchical composition of features and is organized as a tree. Parent features are connected to children features by means of edges, which represent containment relationships. The parent feature is a variation point, while the children are the possible variants. The or containment (represented with a white arc) indicates that at least one variant needs to be present in the software system, while the x-or containment (represented with a black arc) indicates that only one variant can be present in the software system. Selecting a subset of all the variants of a feature model corresponds to select a specific configuration of the system. This selection is called an instance of the feature model. Two kinds of constraints between variant features can be specified. The requires constraint indicates that if a feature A is selected then also a feature B has to be selected. The excludes constraint instead indicates that if a feature A is selected then a feature B cannot be selected. A feature model instance is valid if the feature selection satisfies all the constraints.</p>
+<p>VARP provides a tool for the analysis and the modeling of the variability in terms of a Feature Model.</p>
 
-<p>Feature models were proposed for the first time in 1990 in the context of the Feature Oriented Domain Analysis (FODA) approach. FODA aims to identify the properties and the functionality of a software, which are commonly present in applications of a specific domain, and separate them in two groups: those that are always present (stable point) and those that are present only in some applications (variation points and their variants). For representing these properties and functionality FODA proposes a formal method: the feature model. </p>
+<h3>Product line Development</h3>
 
-<h3>How to install the Plugin</h3>
+<p>VARP has been integrated with <a href="http://www.best-of-robotics.org/bride/">BRIDE</a>, wihch allows the design of software product line architectures for ROS and Orocos.</p>
 
-<p>The plugin can be installed from source (by accessing the <a href="https://github.com/Robotics-UniBG/FeatureModels">github repository</a> ) or by means of the <a href="robotics-unibg.github.com/FeatureModels/update_site">update site</a>.</p>
+<p>VARP provides a tool for defining variability resolution patterns.</p>
+
+<h3>Product Derivation</h3>
+
+<p>VARP provides a tool for selecting the desired functionalities of an application and automatically generating its architectural model.</p>
+
+<h2>How to install the Plugin</h2>
+
+<p>The plugin can be installed from source (by accessing the <a href="https://github.com/Robotics-UniBG/VARP">github repository</a> ) or by means of the <a href="http://">update site</a> (coming soon).</p>
 
 <p>In order to install the plugin from source you need to setup the following environment:</p>
 
 <ul>
 <li><a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/junosr1">Eclipse Modeling Tools</a></li>
 <li>with the Graphical Modeling Tooling <a href="http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/">update site</a> </li>
-</ul><h3>Developers</h3>
+</ul><h2>Developers</h2>
 
-<p>Luca Gherardi, University of Bergamo
-Supervised by Davide Brugali, University of Bergamo</p>
+<p>Luca Gherardi (luca dot gherardi at unibg dot it), University of Bergamo.</p>
 
-<h3>More information</h3>
+<p>Supervisor: Davide Brugali, University of Bergamo.</p>
+
+<h2>More information</h2>
 
 <p>More information can be found on the following papers:</p>
 
@@ -65,6 +74,16 @@ Supervised by Davide Brugali, University of Bergamo</p>
       <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
     </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-40202086-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
