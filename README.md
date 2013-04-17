@@ -29,9 +29,9 @@ In order to install the plugin from source you need to setup the following envir
 
 ## Developers
 
-[Luca Gherardi](http://www.lucagherardi.it), University of Bergamo.
+Luca Gherardi (luca dot gherardi at unibg dot it), University of Bergamo.
 
-Supervisor: Davide Brugali.
+Supervisor: Davide Brugali, University of Bergamo.
 
 ## More information
 
