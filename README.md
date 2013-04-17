@@ -1,12 +1,25 @@
-### [Feature Models Plugin](http://robotics-unibg.github.com/FeatureModels/)
+### [Variability Analysis and Resolution Plugin (VARP)](http://robotics-unibg.github.com/VARP/)
 
-The Feature Models Plugin allows the user to design Feature Models by means of a graphical editor.
+VARP is a collection of Eclipse plugins that support the development of robotics software product lines, a family of similar applications that are built reusing a set of software components and share the same architecture. The SPL life cycle consists in three main phases: domain analysis, product line development, and product derivation.
 
-Feature models were proposed for the first time in 1990 in the context of the Feature Oriented Domain Analysis (FODA) approach. FODA aims to identify the properties and the functionality of a software, which are commonly present in applications of a specific domain, and separate them in two groups: those that are always present (stable point) and those that are present only in some applications (variation points and their variants). For representing these properties and functionality FODA proposes a formal method: the feature model. 
+
+## Domain Analysis
+
+VARP provides a tool for the analysis and the modeling of the variability in terms of a Feature Model.
+
+## Product line Development
+
+VARP has been integrated with [BRIDE](http://www.best-of-robotics.org/bride/), wihch allows the design of software product line architectures for ROS and Orocos.
+
+VARP provides a tool for defining variability resolution patterns.
+
+## Product Derivation
+
+VARP provides a tool for selecting the desired functionalties of an application and automatically generating its architectural model.
 
 ### How to install the Plugin
 
-The plugin can be installed from source (by accessing the [github repository](https://github.com/Robotics-UniBG/FeatureModels) ) or by means of the [update site](robotics-unibg.github.com/FeatureModels/update_site).
+The plugin can be installed from source (by accessing the [github repository](https://github.com/Robotics-UniBG/VARP) ) or by means of the [update site](http://) (coming soon).
 
 In order to install the plugin from source you need to setup the following environment:
 
@@ -16,6 +29,9 @@ In order to install the plugin from source you need to setup the following envir
 
 ### Developers
 
+[Luca Gherardi](http://www.lucagherardi.it), University of Bergamo.
+
+Supervisor: Davide Brugali.
 
 ### More information
 
