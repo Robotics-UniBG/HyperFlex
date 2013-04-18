@@ -91,5 +91,38 @@
             natureId="it.unibg.robotics.varp.ui.natures.VARPProjectNature">
       </image>
    </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:common.new.menu?after=additions">
+         <separator
+               name="it.unibg.robotics.varp.menu.new.separatorProjects"
+               visible="true">
+         </separator>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:common.new.menu?after=it.unibg.robotics.varp.menu.new.separatorProjects">
+         <separator
+               name="it.unibg.robotics.varp.menu.new.separatorModels"
+               visible="true">
+         </separator>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:common.new.menu?start=it.unibg.robotics.varp.menu.new.separatorProjects">
+         <command
+               commandId="org.eclipse.ui.newWizard"
+               icon="icons/vp.ico"
+               label="VARP Project"
+               style="push">
+            <parameter
+                  name="newWizardId"
+                  value="it.robotics.unibg.varp.wizard.varp.project">
+            </parameter>
+         </command>
+      </menuContribution>
+   </extension>
 
 </plugin>

@@ -28,8 +28,8 @@ package it.unibg.robotics.resolutionmodels.presentation;
 
 import it.unibg.robotics.resolutionmodels.resolutionmodelsFactory;
 import it.unibg.robotics.resolutionmodels.resolutionmodelsPackage;
-
 import it.unibg.robotics.resolutionmodels.provider.ResolutionModelEditPlugin;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;

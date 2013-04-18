@@ -592,6 +592,23 @@ http://www.eclipse.org/legal/epl-v10.html
    <extension point="org.eclipse.ui.handlers" id="menu-handlers">
       <?gmfgen generated="true"?>
    </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:common.new.menu?after=it.unibg.robotics.varp.menu.new.separatorModels">
+         <command
+               commandId="org.eclipse.ui.newWizard"
+               icon="icons/fd.ico"
+               label="Feature Model Diagram"
+               style="push">
+            <parameter
+                  name="newWizardId"
+                  value="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelCreationWizardID">
+            </parameter>
+         </command>
+      </menuContribution>
+   </extension>
 
    <!-- optionally, specify keybindings -->
 </plugin>

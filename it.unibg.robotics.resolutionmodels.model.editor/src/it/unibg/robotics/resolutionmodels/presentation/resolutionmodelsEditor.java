@@ -27,7 +27,7 @@ package it.unibg.robotics.resolutionmodels.presentation;
 
 
 import it.unibg.robotics.featuremodels.provider.featuremodelsItemProviderAdapterFactory;
-import it.unibg.robotics.resolutionmodels.provider.*;
+import it.unibg.robotics.resolutionmodels.provider.resolutionmodelsItemProviderAdapterFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -90,7 +90,6 @@ import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
 import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
-import it.unibg.robotics.resolutionmodels.provider.resolutionmodelsItemProviderAdapterFactory;
 import org.eclipse.jface.action.IMenuListener;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IStatusLineManager;

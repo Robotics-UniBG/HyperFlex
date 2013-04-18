@@ -25,7 +25,6 @@
  */
 package it.unibg.robotics.resolutionmodels.impl;
 
-import it.unibg.robotics.resolutionmodels.*;
 import it.unibg.robotics.resolutionmodels.RMResolutionElement;
 import it.unibg.robotics.resolutionmodels.ResolutionModel;
 import it.unibg.robotics.resolutionmodels.resolutionmodelsFactory;

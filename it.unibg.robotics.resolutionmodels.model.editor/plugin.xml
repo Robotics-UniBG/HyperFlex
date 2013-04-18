@@ -51,5 +51,22 @@
             contributorClass="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelsActionBarContributor">
       </editor>
    </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:common.new.menu?after=it.unibg.robotics.varp.menu.new.separatorModels">
+         <command
+               commandId="org.eclipse.ui.newWizard"
+               icon="icons/rm.ico"
+               label="Resolution Model"
+               style="push">
+            <parameter
+                  name="newWizardId"
+                  value="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelModelWizardID">
+            </parameter>
+         </command>
+      </menuContribution>
+   </extension>
 
 </plugin>
