@@ -27,7 +27,7 @@ package it.unibg.robotics.featuremodels.impl;
 
 
 import it.unibg.robotics.featuremodels.Attribute;
-import it.unibg.robotics.featuremodels.CompositeFeature;
+import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.featuremodelsPackage;
@@ -57,9 +57,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link it.unibg.robotics.featuremodels.impl.FeatureImpl#isRoot <em>Root</em>}</li>
  *   <li>{@link it.unibg.robotics.featuremodels.impl.FeatureImpl#isRequired <em>Required</em>}</li>
  *   <li>{@link it.unibg.robotics.featuremodels.impl.FeatureImpl#getSubFeatures <em>Sub Features</em>}</li>
- *   <li>{@link it.unibg.robotics.featuremodels.impl.FeatureImpl#getSimpleParent <em>Simple Parent</em>}</li>
- *   <li>{@link it.unibg.robotics.featuremodels.impl.FeatureImpl#getSubCompositeFeatures <em>Sub Composite Features</em>}</li>
- *   <li>{@link it.unibg.robotics.featuremodels.impl.FeatureImpl#getCompositeParent <em>Composite Parent</em>}</li>
+ *   <li>{@link it.unibg.robotics.featuremodels.impl.FeatureImpl#getFeatureParent <em>Feature Parent</em>}</li>
+ *   <li>{@link it.unibg.robotics.featuremodels.impl.FeatureImpl#getContainers <em>Containers</em>}</li>
+ *   <li>{@link it.unibg.robotics.featuremodels.impl.FeatureImpl#getContainerParent <em>Container Parent</em>}</li>
  *   <li>{@link it.unibg.robotics.featuremodels.impl.FeatureImpl#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link it.unibg.robotics.featuremodels.impl.FeatureImpl#getUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link it.unibg.robotics.featuremodels.impl.FeatureImpl#getAttributes <em>Attributes</em>}</li>
@@ -140,14 +140,14 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 	protected EList<Feature> subFeatures;
 
 	/**
-	 * The cached value of the '{@link #getSubCompositeFeatures() <em>Sub Composite Features</em>}' containment reference list.
+	 * The cached value of the '{@link #getContainers() <em>Containers</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubCompositeFeatures()
+	 * @see #getContainers()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<CompositeFeature> subCompositeFeatures;
+	protected EList<ContainmentAssociation> containers;
 
 	/**
 	 * The default value of the '{@link #getLowerBound() <em>Lower Bound</em>}' attribute.
@@ -277,7 +277,7 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 	 */
 	public void setRequired(boolean newRequired) {
 		boolean oldRequired = required;
-		if(getCompositeParent()!=null && getCompositeParent().getUpperBound() == 1){
+		if(getContainerParent()!=null && getContainerParent().getUpperBound() == 1){
 			newRequired = false;
 		}
 		required = newRequired;
@@ -292,7 +292,7 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 	 */
 	public EList<Feature> getSubFeatures() {
 		if (subFeatures == null) {
-			subFeatures = new EObjectContainmentWithInverseEList<Feature>(Feature.class, this, featuremodelsPackage.FEATURE__SUB_FEATURES, featuremodelsPackage.FEATURE__SIMPLE_PARENT);
+			subFeatures = new EObjectContainmentWithInverseEList<Feature>(Feature.class, this, featuremodelsPackage.FEATURE__SUB_FEATURES, featuremodelsPackage.FEATURE__FEATURE_PARENT);
 		}
 		return subFeatures;
 	}
@@ -302,8 +302,8 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Feature getSimpleParent() {
-		if (eContainerFeatureID() != featuremodelsPackage.FEATURE__SIMPLE_PARENT) return null;
+	public Feature getFeatureParent() {
+		if (eContainerFeatureID() != featuremodelsPackage.FEATURE__FEATURE_PARENT) return null;
 		return (Feature)eContainer();
 	}
 
@@ -312,8 +312,8 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSimpleParent(Feature newSimpleParent, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newSimpleParent, featuremodelsPackage.FEATURE__SIMPLE_PARENT, msgs);
+	public NotificationChain basicSetFeatureParent(Feature newFeatureParent, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newFeatureParent, featuremodelsPackage.FEATURE__FEATURE_PARENT, msgs);
 		return msgs;
 	}
 
@@ -322,20 +322,20 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSimpleParent(Feature newSimpleParent) {
-		if (newSimpleParent != eInternalContainer() || (eContainerFeatureID() != featuremodelsPackage.FEATURE__SIMPLE_PARENT && newSimpleParent != null)) {
-			if (EcoreUtil.isAncestor(this, newSimpleParent))
+	public void setFeatureParent(Feature newFeatureParent) {
+		if (newFeatureParent != eInternalContainer() || (eContainerFeatureID() != featuremodelsPackage.FEATURE__FEATURE_PARENT && newFeatureParent != null)) {
+			if (EcoreUtil.isAncestor(this, newFeatureParent))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
-			if (newSimpleParent != null)
-				msgs = ((InternalEObject)newSimpleParent).eInverseAdd(this, featuremodelsPackage.FEATURE__SUB_FEATURES, Feature.class, msgs);
-			msgs = basicSetSimpleParent(newSimpleParent, msgs);
+			if (newFeatureParent != null)
+				msgs = ((InternalEObject)newFeatureParent).eInverseAdd(this, featuremodelsPackage.FEATURE__SUB_FEATURES, Feature.class, msgs);
+			msgs = basicSetFeatureParent(newFeatureParent, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, featuremodelsPackage.FEATURE__SIMPLE_PARENT, newSimpleParent, newSimpleParent));
+			eNotify(new ENotificationImpl(this, Notification.SET, featuremodelsPackage.FEATURE__FEATURE_PARENT, newFeatureParent, newFeatureParent));
 	}
 
 	/**
@@ -343,11 +343,11 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<CompositeFeature> getSubCompositeFeatures() {
-		if (subCompositeFeatures == null) {
-			subCompositeFeatures = new EObjectContainmentWithInverseEList<CompositeFeature>(CompositeFeature.class, this, featuremodelsPackage.FEATURE__SUB_COMPOSITE_FEATURES, featuremodelsPackage.COMPOSITE_FEATURE__PARENT);
+	public EList<ContainmentAssociation> getContainers() {
+		if (containers == null) {
+			containers = new EObjectContainmentWithInverseEList<ContainmentAssociation>(ContainmentAssociation.class, this, featuremodelsPackage.FEATURE__CONTAINERS, featuremodelsPackage.CONTAINMENT_ASSOCIATION__PARENT);
 		}
-		return subCompositeFeatures;
+		return containers;
 	}
 
 	/**
@@ -355,9 +355,9 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CompositeFeature getCompositeParent() {
-		if (eContainerFeatureID() != featuremodelsPackage.FEATURE__COMPOSITE_PARENT) return null;
-		return (CompositeFeature)eContainer();
+	public ContainmentAssociation getContainerParent() {
+		if (eContainerFeatureID() != featuremodelsPackage.FEATURE__CONTAINER_PARENT) return null;
+		return (ContainmentAssociation)eContainer();
 	}
 
 	/**
@@ -365,8 +365,8 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCompositeParent(CompositeFeature newCompositeParent, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newCompositeParent, featuremodelsPackage.FEATURE__COMPOSITE_PARENT, msgs);
+	public NotificationChain basicSetContainerParent(ContainmentAssociation newContainerParent, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newContainerParent, featuremodelsPackage.FEATURE__CONTAINER_PARENT, msgs);
 		return msgs;
 	}
 
@@ -375,20 +375,20 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCompositeParent(CompositeFeature newCompositeParent) {
-		if (newCompositeParent != eInternalContainer() || (eContainerFeatureID() != featuremodelsPackage.FEATURE__COMPOSITE_PARENT && newCompositeParent != null)) {
-			if (EcoreUtil.isAncestor(this, newCompositeParent))
+	public void setContainerParent(ContainmentAssociation newContainerParent) {
+		if (newContainerParent != eInternalContainer() || (eContainerFeatureID() != featuremodelsPackage.FEATURE__CONTAINER_PARENT && newContainerParent != null)) {
+			if (EcoreUtil.isAncestor(this, newContainerParent))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
-			if (newCompositeParent != null)
-				msgs = ((InternalEObject)newCompositeParent).eInverseAdd(this, featuremodelsPackage.COMPOSITE_FEATURE__SUB_FEATURES, CompositeFeature.class, msgs);
-			msgs = basicSetCompositeParent(newCompositeParent, msgs);
+			if (newContainerParent != null)
+				msgs = ((InternalEObject)newContainerParent).eInverseAdd(this, featuremodelsPackage.CONTAINMENT_ASSOCIATION__SUB_FEATURES, ContainmentAssociation.class, msgs);
+			msgs = basicSetContainerParent(newContainerParent, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, featuremodelsPackage.FEATURE__COMPOSITE_PARENT, newCompositeParent, newCompositeParent));
+			eNotify(new ENotificationImpl(this, Notification.SET, featuremodelsPackage.FEATURE__CONTAINER_PARENT, newContainerParent, newContainerParent));
 	}
 
 	/**
@@ -456,16 +456,16 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 		switch (featureID) {
 			case featuremodelsPackage.FEATURE__SUB_FEATURES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSubFeatures()).basicAdd(otherEnd, msgs);
-			case featuremodelsPackage.FEATURE__SIMPLE_PARENT:
+			case featuremodelsPackage.FEATURE__FEATURE_PARENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetSimpleParent((Feature)otherEnd, msgs);
-			case featuremodelsPackage.FEATURE__SUB_COMPOSITE_FEATURES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSubCompositeFeatures()).basicAdd(otherEnd, msgs);
-			case featuremodelsPackage.FEATURE__COMPOSITE_PARENT:
+				return basicSetFeatureParent((Feature)otherEnd, msgs);
+			case featuremodelsPackage.FEATURE__CONTAINERS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContainers()).basicAdd(otherEnd, msgs);
+			case featuremodelsPackage.FEATURE__CONTAINER_PARENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetCompositeParent((CompositeFeature)otherEnd, msgs);
+				return basicSetContainerParent((ContainmentAssociation)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -480,12 +480,12 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 		switch (featureID) {
 			case featuremodelsPackage.FEATURE__SUB_FEATURES:
 				return ((InternalEList<?>)getSubFeatures()).basicRemove(otherEnd, msgs);
-			case featuremodelsPackage.FEATURE__SIMPLE_PARENT:
-				return basicSetSimpleParent(null, msgs);
-			case featuremodelsPackage.FEATURE__SUB_COMPOSITE_FEATURES:
-				return ((InternalEList<?>)getSubCompositeFeatures()).basicRemove(otherEnd, msgs);
-			case featuremodelsPackage.FEATURE__COMPOSITE_PARENT:
-				return basicSetCompositeParent(null, msgs);
+			case featuremodelsPackage.FEATURE__FEATURE_PARENT:
+				return basicSetFeatureParent(null, msgs);
+			case featuremodelsPackage.FEATURE__CONTAINERS:
+				return ((InternalEList<?>)getContainers()).basicRemove(otherEnd, msgs);
+			case featuremodelsPackage.FEATURE__CONTAINER_PARENT:
+				return basicSetContainerParent(null, msgs);
 			case featuremodelsPackage.FEATURE__ATTRIBUTES:
 				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
 		}
@@ -500,10 +500,10 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case featuremodelsPackage.FEATURE__SIMPLE_PARENT:
+			case featuremodelsPackage.FEATURE__FEATURE_PARENT:
 				return eInternalContainer().eInverseRemove(this, featuremodelsPackage.FEATURE__SUB_FEATURES, Feature.class, msgs);
-			case featuremodelsPackage.FEATURE__COMPOSITE_PARENT:
-				return eInternalContainer().eInverseRemove(this, featuremodelsPackage.COMPOSITE_FEATURE__SUB_FEATURES, CompositeFeature.class, msgs);
+			case featuremodelsPackage.FEATURE__CONTAINER_PARENT:
+				return eInternalContainer().eInverseRemove(this, featuremodelsPackage.CONTAINMENT_ASSOCIATION__SUB_FEATURES, ContainmentAssociation.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -524,12 +524,12 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 				return isRequired();
 			case featuremodelsPackage.FEATURE__SUB_FEATURES:
 				return getSubFeatures();
-			case featuremodelsPackage.FEATURE__SIMPLE_PARENT:
-				return getSimpleParent();
-			case featuremodelsPackage.FEATURE__SUB_COMPOSITE_FEATURES:
-				return getSubCompositeFeatures();
-			case featuremodelsPackage.FEATURE__COMPOSITE_PARENT:
-				return getCompositeParent();
+			case featuremodelsPackage.FEATURE__FEATURE_PARENT:
+				return getFeatureParent();
+			case featuremodelsPackage.FEATURE__CONTAINERS:
+				return getContainers();
+			case featuremodelsPackage.FEATURE__CONTAINER_PARENT:
+				return getContainerParent();
 			case featuremodelsPackage.FEATURE__LOWER_BOUND:
 				return getLowerBound();
 			case featuremodelsPackage.FEATURE__UPPER_BOUND:
@@ -562,15 +562,15 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 				getSubFeatures().clear();
 				getSubFeatures().addAll((Collection<? extends Feature>)newValue);
 				return;
-			case featuremodelsPackage.FEATURE__SIMPLE_PARENT:
-				setSimpleParent((Feature)newValue);
+			case featuremodelsPackage.FEATURE__FEATURE_PARENT:
+				setFeatureParent((Feature)newValue);
 				return;
-			case featuremodelsPackage.FEATURE__SUB_COMPOSITE_FEATURES:
-				getSubCompositeFeatures().clear();
-				getSubCompositeFeatures().addAll((Collection<? extends CompositeFeature>)newValue);
+			case featuremodelsPackage.FEATURE__CONTAINERS:
+				getContainers().clear();
+				getContainers().addAll((Collection<? extends ContainmentAssociation>)newValue);
 				return;
-			case featuremodelsPackage.FEATURE__COMPOSITE_PARENT:
-				setCompositeParent((CompositeFeature)newValue);
+			case featuremodelsPackage.FEATURE__CONTAINER_PARENT:
+				setContainerParent((ContainmentAssociation)newValue);
 				return;
 			case featuremodelsPackage.FEATURE__LOWER_BOUND:
 				setLowerBound((Integer)newValue);
@@ -606,14 +606,14 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 			case featuremodelsPackage.FEATURE__SUB_FEATURES:
 				getSubFeatures().clear();
 				return;
-			case featuremodelsPackage.FEATURE__SIMPLE_PARENT:
-				setSimpleParent((Feature)null);
+			case featuremodelsPackage.FEATURE__FEATURE_PARENT:
+				setFeatureParent((Feature)null);
 				return;
-			case featuremodelsPackage.FEATURE__SUB_COMPOSITE_FEATURES:
-				getSubCompositeFeatures().clear();
+			case featuremodelsPackage.FEATURE__CONTAINERS:
+				getContainers().clear();
 				return;
-			case featuremodelsPackage.FEATURE__COMPOSITE_PARENT:
-				setCompositeParent((CompositeFeature)null);
+			case featuremodelsPackage.FEATURE__CONTAINER_PARENT:
+				setContainerParent((ContainmentAssociation)null);
 				return;
 			case featuremodelsPackage.FEATURE__LOWER_BOUND:
 				setLowerBound(LOWER_BOUND_EDEFAULT);
@@ -644,12 +644,12 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 				return required != REQUIRED_EDEFAULT;
 			case featuremodelsPackage.FEATURE__SUB_FEATURES:
 				return subFeatures != null && !subFeatures.isEmpty();
-			case featuremodelsPackage.FEATURE__SIMPLE_PARENT:
-				return getSimpleParent() != null;
-			case featuremodelsPackage.FEATURE__SUB_COMPOSITE_FEATURES:
-				return subCompositeFeatures != null && !subCompositeFeatures.isEmpty();
-			case featuremodelsPackage.FEATURE__COMPOSITE_PARENT:
-				return getCompositeParent() != null;
+			case featuremodelsPackage.FEATURE__FEATURE_PARENT:
+				return getFeatureParent() != null;
+			case featuremodelsPackage.FEATURE__CONTAINERS:
+				return containers != null && !containers.isEmpty();
+			case featuremodelsPackage.FEATURE__CONTAINER_PARENT:
+				return getContainerParent() != null;
 			case featuremodelsPackage.FEATURE__LOWER_BOUND:
 				return lowerBound != LOWER_BOUND_EDEFAULT;
 			case featuremodelsPackage.FEATURE__UPPER_BOUND:
@@ -693,7 +693,7 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 		}else if(this.eContainer instanceof Feature){
 			if(((Feature)this.eContainer).getFeatureModel() != null)
 				return ((Feature)this.eContainer).getFeatureModel();
-		}else if(this.eContainer instanceof CompositeFeature){
+		}else if(this.eContainer instanceof ContainmentAssociation){
 			if(((Feature)this.eContainer.eContainer()).getFeatureModel() != null)
 				return ((Feature)this.eContainer.eContainer()).getFeatureModel();
 		}

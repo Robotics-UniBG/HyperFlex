@@ -1,7 +1,7 @@
 package it.unibg.robotics.featuremodels.ui.views;
 
 
-import it.unibg.robotics.featuremodels.CompositeFeature;
+import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.Instance;
@@ -487,9 +487,9 @@ public class InstanceView extends ViewPart implements ISelectionListener, Proper
 		for(Iterator<Feature> it = feature.getSubFeatures().iterator(); it.hasNext();){
 			addSubMandatoryFeatures(instance, it.next());
 		}
-		for(Iterator<CompositeFeature> cfIt = feature.getSubCompositeFeatures().iterator(); cfIt.hasNext();){
-			CompositeFeature cf = cfIt.next();
-			for(Iterator<Feature> fIt = cf.getSubFeatures().iterator();fIt.hasNext();){
+		for(Iterator<ContainmentAssociation> containersIt = feature.getContainers().iterator(); containersIt.hasNext();){
+			ContainmentAssociation container = containersIt.next();
+			for(Iterator<Feature> fIt = container.getSubFeatures().iterator();fIt.hasNext();){
 				addSubMandatoryFeatures(instance, fIt.next());
 			}
 		}

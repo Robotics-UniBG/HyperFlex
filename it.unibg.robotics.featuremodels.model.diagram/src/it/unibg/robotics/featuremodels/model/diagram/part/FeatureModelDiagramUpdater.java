@@ -26,18 +26,18 @@
 package it.unibg.robotics.featuremodels.model.diagram.part;
 
 import it.unibg.robotics.featuremodels.Attribute;
-import it.unibg.robotics.featuremodels.CompositeFeature;
+import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.SimpleAttribute;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeatures2EditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeaturesEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeatures2EditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureAttributesEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureContainersEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubCompositeFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.SimpleAttributeEditPart;
@@ -106,9 +106,9 @@ public class FeatureModelDiagramUpdater {
 				continue;
 			}
 			if (FeatureModelVisualIDRegistry
-					.getNodeVisualID(view, childElement) == CompositeFeatureEditPart.VISUAL_ID) {
+					.getNodeVisualID(view, childElement) == ContainmentAssociationEditPart.VISUAL_ID) {
 				result.add(new FeatureModelNodeDescriptor(childElement,
-						CompositeFeatureEditPart.VISUAL_ID));
+						ContainmentAssociationEditPart.VISUAL_ID));
 				continue;
 			}
 			if (FeatureModelVisualIDRegistry
@@ -139,8 +139,8 @@ public class FeatureModelDiagramUpdater {
 			return getFeature_2005ContainedLinks(view);
 		case Feature2EditPart.VISUAL_ID:
 			return getFeature_2006ContainedLinks(view);
-		case CompositeFeatureEditPart.VISUAL_ID:
-			return getCompositeFeature_2007ContainedLinks(view);
+		case ContainmentAssociationEditPart.VISUAL_ID:
+			return getContainmentAssociation_2009ContainedLinks(view);
 		case SimpleAttributeEditPart.VISUAL_ID:
 			return getSimpleAttribute_2008ContainedLinks(view);
 		}
@@ -156,8 +156,8 @@ public class FeatureModelDiagramUpdater {
 			return getFeature_2005IncomingLinks(view);
 		case Feature2EditPart.VISUAL_ID:
 			return getFeature_2006IncomingLinks(view);
-		case CompositeFeatureEditPart.VISUAL_ID:
-			return getCompositeFeature_2007IncomingLinks(view);
+		case ContainmentAssociationEditPart.VISUAL_ID:
+			return getContainmentAssociation_2009IncomingLinks(view);
 		case SimpleAttributeEditPart.VISUAL_ID:
 			return getSimpleAttribute_2008IncomingLinks(view);
 		}
@@ -173,8 +173,8 @@ public class FeatureModelDiagramUpdater {
 			return getFeature_2005OutgoingLinks(view);
 		case Feature2EditPart.VISUAL_ID:
 			return getFeature_2006OutgoingLinks(view);
-		case CompositeFeatureEditPart.VISUAL_ID:
-			return getCompositeFeature_2007OutgoingLinks(view);
+		case ContainmentAssociationEditPart.VISUAL_ID:
+			return getContainmentAssociation_2009OutgoingLinks(view);
 		case SimpleAttributeEditPart.VISUAL_ID:
 			return getSimpleAttribute_2008OutgoingLinks(view);
 		}
@@ -198,7 +198,7 @@ public class FeatureModelDiagramUpdater {
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_SubFeatures_4007(modelElement));
 		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_SubFeatures_4008(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_SubCompositeFeatures_4011(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_Containers_4015(modelElement));
 		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_Attributes_4012(modelElement));
 		return result;
 	}
@@ -212,7 +212,7 @@ public class FeatureModelDiagramUpdater {
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_SubFeatures_4007(modelElement));
 		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_SubFeatures_4008(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_SubCompositeFeatures_4011(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_Containers_4015(modelElement));
 		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_Attributes_4012(modelElement));
 		return result;
 	}
@@ -220,12 +220,13 @@ public class FeatureModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FeatureModelLinkDescriptor> getCompositeFeature_2007ContainedLinks(
+	public static List<FeatureModelLinkDescriptor> getContainmentAssociation_2009ContainedLinks(
 			View view) {
-		CompositeFeature modelElement = (CompositeFeature) view.getElement();
+		ContainmentAssociation modelElement = (ContainmentAssociation) view
+				.getElement();
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeFeature_SubFeatures_4009(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeFeature_SubFeatures_4010(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_ContainmentAssociation_SubFeatures_4013(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_ContainmentAssociation_SubFeatures_4014(modelElement));
 		return result;
 	}
 
@@ -250,9 +251,9 @@ public class FeatureModelDiagramUpdater {
 				modelElement, crossReferences));
 		result.addAll(getIncomingFeatureModelFacetLinks_Feature_SubFeatures_4008(
 				modelElement, crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_CompositeFeature_SubFeatures_4009(
+		result.addAll(getIncomingFeatureModelFacetLinks_ContainmentAssociation_SubFeatures_4013(
 				modelElement, crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_CompositeFeature_SubFeatures_4010(
+		result.addAll(getIncomingFeatureModelFacetLinks_ContainmentAssociation_SubFeatures_4014(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -270,9 +271,9 @@ public class FeatureModelDiagramUpdater {
 				modelElement, crossReferences));
 		result.addAll(getIncomingFeatureModelFacetLinks_Feature_SubFeatures_4008(
 				modelElement, crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_CompositeFeature_SubFeatures_4009(
+		result.addAll(getIncomingFeatureModelFacetLinks_ContainmentAssociation_SubFeatures_4013(
 				modelElement, crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_CompositeFeature_SubFeatures_4010(
+		result.addAll(getIncomingFeatureModelFacetLinks_ContainmentAssociation_SubFeatures_4014(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -280,13 +281,14 @@ public class FeatureModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FeatureModelLinkDescriptor> getCompositeFeature_2007IncomingLinks(
+	public static List<FeatureModelLinkDescriptor> getContainmentAssociation_2009IncomingLinks(
 			View view) {
-		CompositeFeature modelElement = (CompositeFeature) view.getElement();
+		ContainmentAssociation modelElement = (ContainmentAssociation) view
+				.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
-		result.addAll(getIncomingFeatureModelFacetLinks_Feature_SubCompositeFeatures_4011(
+		result.addAll(getIncomingFeatureModelFacetLinks_Feature_Containers_4015(
 				modelElement, crossReferences));
 		return result;
 	}
@@ -314,7 +316,7 @@ public class FeatureModelDiagramUpdater {
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_SubFeatures_4007(modelElement));
 		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_SubFeatures_4008(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_SubCompositeFeatures_4011(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_Containers_4015(modelElement));
 		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_Attributes_4012(modelElement));
 		return result;
 	}
@@ -328,7 +330,7 @@ public class FeatureModelDiagramUpdater {
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_SubFeatures_4007(modelElement));
 		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_SubFeatures_4008(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_SubCompositeFeatures_4011(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_Containers_4015(modelElement));
 		result.addAll(getOutgoingFeatureModelFacetLinks_Feature_Attributes_4012(modelElement));
 		return result;
 	}
@@ -336,12 +338,13 @@ public class FeatureModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<FeatureModelLinkDescriptor> getCompositeFeature_2007OutgoingLinks(
+	public static List<FeatureModelLinkDescriptor> getContainmentAssociation_2009OutgoingLinks(
 			View view) {
-		CompositeFeature modelElement = (CompositeFeature) view.getElement();
+		ContainmentAssociation modelElement = (ContainmentAssociation) view
+				.getElement();
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeFeature_SubFeatures_4009(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeFeature_SubFeatures_4010(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_ContainmentAssociation_SubFeatures_4013(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_ContainmentAssociation_SubFeatures_4014(modelElement));
 		return result;
 	}
 
@@ -398,7 +401,7 @@ public class FeatureModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<FeatureModelLinkDescriptor> getIncomingFeatureModelFacetLinks_CompositeFeature_SubFeatures_4009(
+	private static Collection<FeatureModelLinkDescriptor> getIncomingFeatureModelFacetLinks_ContainmentAssociation_SubFeatures_4013(
 			Feature target,
 			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
@@ -406,12 +409,12 @@ public class FeatureModelDiagramUpdater {
 				.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
 			if (setting.getEStructuralFeature() == it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-					.getCompositeFeature_SubFeatures()) {
+					.getContainmentAssociation_SubFeatures()) {
 				result.add(new FeatureModelLinkDescriptor(
 						setting.getEObject(),
 						target,
-						FeatureModelElementTypes.CompositeFeatureSubFeatures_4009,
-						CompositeFeatureSubFeaturesEditPart.VISUAL_ID));
+						FeatureModelElementTypes.ContainmentAssociationSubFeatures_4013,
+						ContainmentAssociationSubFeaturesEditPart.VISUAL_ID));
 			}
 		}
 		return result;
@@ -420,7 +423,7 @@ public class FeatureModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<FeatureModelLinkDescriptor> getIncomingFeatureModelFacetLinks_CompositeFeature_SubFeatures_4010(
+	private static Collection<FeatureModelLinkDescriptor> getIncomingFeatureModelFacetLinks_ContainmentAssociation_SubFeatures_4014(
 			Feature target,
 			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
@@ -428,12 +431,12 @@ public class FeatureModelDiagramUpdater {
 				.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
 			if (setting.getEStructuralFeature() == it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-					.getCompositeFeature_SubFeatures()) {
+					.getContainmentAssociation_SubFeatures()) {
 				result.add(new FeatureModelLinkDescriptor(
 						setting.getEObject(),
 						target,
-						FeatureModelElementTypes.CompositeFeatureSubFeatures_4010,
-						CompositeFeatureSubFeatures2EditPart.VISUAL_ID));
+						FeatureModelElementTypes.ContainmentAssociationSubFeatures_4014,
+						ContainmentAssociationSubFeatures2EditPart.VISUAL_ID));
 			}
 		}
 		return result;
@@ -442,20 +445,19 @@ public class FeatureModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<FeatureModelLinkDescriptor> getIncomingFeatureModelFacetLinks_Feature_SubCompositeFeatures_4011(
-			CompositeFeature target,
+	private static Collection<FeatureModelLinkDescriptor> getIncomingFeatureModelFacetLinks_Feature_Containers_4015(
+			ContainmentAssociation target,
 			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
 		Collection<EStructuralFeature.Setting> settings = crossReferences
 				.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
 			if (setting.getEStructuralFeature() == it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-					.getFeature_SubCompositeFeatures()) {
-				result.add(new FeatureModelLinkDescriptor(
-						setting.getEObject(),
+					.getFeature_Containers()) {
+				result.add(new FeatureModelLinkDescriptor(setting.getEObject(),
 						target,
-						FeatureModelElementTypes.FeatureSubCompositeFeatures_4011,
-						FeatureSubCompositeFeaturesEditPart.VISUAL_ID));
+						FeatureModelElementTypes.FeatureContainers_4015,
+						FeatureContainersEditPart.VISUAL_ID));
 			}
 		}
 		return result;
@@ -517,15 +519,17 @@ public class FeatureModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<FeatureModelLinkDescriptor> getOutgoingFeatureModelFacetLinks_CompositeFeature_SubFeatures_4009(
-			CompositeFeature source) {
+	private static Collection<FeatureModelLinkDescriptor> getOutgoingFeatureModelFacetLinks_ContainmentAssociation_SubFeatures_4013(
+			ContainmentAssociation source) {
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
 		for (Iterator<?> destinations = source.getSubFeatures().iterator(); destinations
 				.hasNext();) {
 			Feature destination = (Feature) destinations.next();
-			result.add(new FeatureModelLinkDescriptor(source, destination,
-					FeatureModelElementTypes.CompositeFeatureSubFeatures_4009,
-					CompositeFeatureSubFeaturesEditPart.VISUAL_ID));
+			result.add(new FeatureModelLinkDescriptor(
+					source,
+					destination,
+					FeatureModelElementTypes.ContainmentAssociationSubFeatures_4013,
+					ContainmentAssociationSubFeaturesEditPart.VISUAL_ID));
 		}
 		return result;
 	}
@@ -533,15 +537,17 @@ public class FeatureModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<FeatureModelLinkDescriptor> getOutgoingFeatureModelFacetLinks_CompositeFeature_SubFeatures_4010(
-			CompositeFeature source) {
+	private static Collection<FeatureModelLinkDescriptor> getOutgoingFeatureModelFacetLinks_ContainmentAssociation_SubFeatures_4014(
+			ContainmentAssociation source) {
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
 		for (Iterator<?> destinations = source.getSubFeatures().iterator(); destinations
 				.hasNext();) {
 			Feature destination = (Feature) destinations.next();
-			result.add(new FeatureModelLinkDescriptor(source, destination,
-					FeatureModelElementTypes.CompositeFeatureSubFeatures_4010,
-					CompositeFeatureSubFeatures2EditPart.VISUAL_ID));
+			result.add(new FeatureModelLinkDescriptor(
+					source,
+					destination,
+					FeatureModelElementTypes.ContainmentAssociationSubFeatures_4014,
+					ContainmentAssociationSubFeatures2EditPart.VISUAL_ID));
 		}
 		return result;
 	}
@@ -549,16 +555,16 @@ public class FeatureModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<FeatureModelLinkDescriptor> getOutgoingFeatureModelFacetLinks_Feature_SubCompositeFeatures_4011(
+	private static Collection<FeatureModelLinkDescriptor> getOutgoingFeatureModelFacetLinks_Feature_Containers_4015(
 			Feature source) {
 		LinkedList<FeatureModelLinkDescriptor> result = new LinkedList<FeatureModelLinkDescriptor>();
-		for (Iterator<?> destinations = source.getSubCompositeFeatures()
-				.iterator(); destinations.hasNext();) {
-			CompositeFeature destination = (CompositeFeature) destinations
+		for (Iterator<?> destinations = source.getContainers().iterator(); destinations
+				.hasNext();) {
+			ContainmentAssociation destination = (ContainmentAssociation) destinations
 					.next();
 			result.add(new FeatureModelLinkDescriptor(source, destination,
-					FeatureModelElementTypes.FeatureSubCompositeFeatures_4011,
-					FeatureSubCompositeFeaturesEditPart.VISUAL_ID));
+					FeatureModelElementTypes.FeatureContainers_4015,
+					FeatureContainersEditPart.VISUAL_ID));
 		}
 		return result;
 	}

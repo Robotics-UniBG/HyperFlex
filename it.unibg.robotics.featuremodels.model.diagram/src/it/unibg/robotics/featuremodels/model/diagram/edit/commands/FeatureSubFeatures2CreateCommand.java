@@ -94,7 +94,7 @@ public class FeatureSubFeatures2CreateCommand extends EditElementCommand {
 
 		if (getSource() != null && getTarget() != null) {
 			getSource().getSubFeatures().add(getTarget());
-			getTarget().setSimpleParent(getSource());
+			getTarget().setFeatureParent(getSource());
 		}
 		return CommandResult.newOKCommandResult();
 

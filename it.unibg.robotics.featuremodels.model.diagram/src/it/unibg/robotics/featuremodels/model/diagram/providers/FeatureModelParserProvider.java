@@ -25,7 +25,7 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.providers;
 
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureLowerBoundUpperBoundEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationLowerBoundUpperBoundEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureName2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureNameEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.SimpleAttributeNameEditPart;
@@ -96,25 +96,25 @@ public class FeatureModelParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser compositeFeatureLowerBoundUpperBound_5007Parser;
+	private IParser containmentAssociationLowerBoundUpperBound_5009Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getCompositeFeatureLowerBoundUpperBound_5007Parser() {
-		if (compositeFeatureLowerBoundUpperBound_5007Parser == null) {
+	private IParser getContainmentAssociationLowerBoundUpperBound_5009Parser() {
+		if (containmentAssociationLowerBoundUpperBound_5009Parser == null) {
 			EAttribute[] features = new EAttribute[] {
 					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-							.getCompositeFeature_LowerBound(),
+							.getContainmentAssociation_LowerBound(),
 					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-							.getCompositeFeature_UpperBound() };
+							.getContainmentAssociation_UpperBound() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			parser.setViewPattern("{0} ... {1}"); //$NON-NLS-1$
 			parser.setEditorPattern("{0} ... {1}"); //$NON-NLS-1$
 			parser.setEditPattern("{0} ... {1}"); //$NON-NLS-1$
-			compositeFeatureLowerBoundUpperBound_5007Parser = parser;
+			containmentAssociationLowerBoundUpperBound_5009Parser = parser;
 		}
-		return compositeFeatureLowerBoundUpperBound_5007Parser;
+		return containmentAssociationLowerBoundUpperBound_5009Parser;
 	}
 
 	/**
@@ -144,8 +144,8 @@ public class FeatureModelParserProvider extends AbstractProvider implements
 			return getFeatureName_5005Parser();
 		case FeatureName2EditPart.VISUAL_ID:
 			return getFeatureName_5006Parser();
-		case CompositeFeatureLowerBoundUpperBoundEditPart.VISUAL_ID:
-			return getCompositeFeatureLowerBoundUpperBound_5007Parser();
+		case ContainmentAssociationLowerBoundUpperBoundEditPart.VISUAL_ID:
+			return getContainmentAssociationLowerBoundUpperBound_5009Parser();
 		case SimpleAttributeNameEditPart.VISUAL_ID:
 			return getSimpleAttributeName_5008Parser();
 		}

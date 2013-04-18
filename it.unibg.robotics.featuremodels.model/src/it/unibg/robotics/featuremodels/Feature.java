@@ -40,9 +40,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link it.unibg.robotics.featuremodels.Feature#isRoot <em>Root</em>}</li>
  *   <li>{@link it.unibg.robotics.featuremodels.Feature#isRequired <em>Required</em>}</li>
  *   <li>{@link it.unibg.robotics.featuremodels.Feature#getSubFeatures <em>Sub Features</em>}</li>
- *   <li>{@link it.unibg.robotics.featuremodels.Feature#getSimpleParent <em>Simple Parent</em>}</li>
- *   <li>{@link it.unibg.robotics.featuremodels.Feature#getSubCompositeFeatures <em>Sub Composite Features</em>}</li>
- *   <li>{@link it.unibg.robotics.featuremodels.Feature#getCompositeParent <em>Composite Parent</em>}</li>
+ *   <li>{@link it.unibg.robotics.featuremodels.Feature#getFeatureParent <em>Feature Parent</em>}</li>
+ *   <li>{@link it.unibg.robotics.featuremodels.Feature#getContainers <em>Containers</em>}</li>
+ *   <li>{@link it.unibg.robotics.featuremodels.Feature#getContainerParent <em>Container Parent</em>}</li>
  *   <li>{@link it.unibg.robotics.featuremodels.Feature#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link it.unibg.robotics.featuremodels.Feature#getUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link it.unibg.robotics.featuremodels.Feature#getAttributes <em>Attributes</em>}</li>
@@ -138,7 +138,7 @@ public interface Feature extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Sub Features</b></em>' containment reference list.
 	 * The list contents are of type {@link it.unibg.robotics.featuremodels.Feature}.
-	 * It is bidirectional and its opposite is '{@link it.unibg.robotics.featuremodels.Feature#getSimpleParent <em>Simple Parent</em>}'.
+	 * It is bidirectional and its opposite is '{@link it.unibg.robotics.featuremodels.Feature#getFeatureParent <em>Feature Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sub Features</em>' containment reference list isn't clear,
@@ -147,85 +147,85 @@ public interface Feature extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sub Features</em>' containment reference list.
 	 * @see it.unibg.robotics.featuremodels.featuremodelsPackage#getFeature_SubFeatures()
-	 * @see it.unibg.robotics.featuremodels.Feature#getSimpleParent
-	 * @model opposite="simpleParent" containment="true"
+	 * @see it.unibg.robotics.featuremodels.Feature#getFeatureParent
+	 * @model opposite="featureParent" containment="true"
 	 * @generated
 	 */
 	EList<Feature> getSubFeatures();
 
 	/**
-	 * Returns the value of the '<em><b>Simple Parent</b></em>' container reference.
+	 * Returns the value of the '<em><b>Feature Parent</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link it.unibg.robotics.featuremodels.Feature#getSubFeatures <em>Sub Features</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Simple Parent</em>' container reference isn't clear,
+	 * If the meaning of the '<em>Feature Parent</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Simple Parent</em>' container reference.
-	 * @see #setSimpleParent(Feature)
-	 * @see it.unibg.robotics.featuremodels.featuremodelsPackage#getFeature_SimpleParent()
+	 * @return the value of the '<em>Feature Parent</em>' container reference.
+	 * @see #setFeatureParent(Feature)
+	 * @see it.unibg.robotics.featuremodels.featuremodelsPackage#getFeature_FeatureParent()
 	 * @see it.unibg.robotics.featuremodels.Feature#getSubFeatures
 	 * @model opposite="subFeatures" transient="false"
 	 * @generated
 	 */
-	Feature getSimpleParent();
+	Feature getFeatureParent();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.featuremodels.Feature#getSimpleParent <em>Simple Parent</em>}' container reference.
+	 * Sets the value of the '{@link it.unibg.robotics.featuremodels.Feature#getFeatureParent <em>Feature Parent</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Simple Parent</em>' container reference.
-	 * @see #getSimpleParent()
+	 * @param value the new value of the '<em>Feature Parent</em>' container reference.
+	 * @see #getFeatureParent()
 	 * @generated
 	 */
-	void setSimpleParent(Feature value);
+	void setFeatureParent(Feature value);
 
 	/**
-	 * Returns the value of the '<em><b>Sub Composite Features</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.featuremodels.CompositeFeature}.
-	 * It is bidirectional and its opposite is '{@link it.unibg.robotics.featuremodels.CompositeFeature#getParent <em>Parent</em>}'.
+	 * Returns the value of the '<em><b>Containers</b></em>' containment reference list.
+	 * The list contents are of type {@link it.unibg.robotics.featuremodels.ContainmentAssociation}.
+	 * It is bidirectional and its opposite is '{@link it.unibg.robotics.featuremodels.ContainmentAssociation#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sub Composite Features</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Containers</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sub Composite Features</em>' containment reference list.
-	 * @see it.unibg.robotics.featuremodels.featuremodelsPackage#getFeature_SubCompositeFeatures()
-	 * @see it.unibg.robotics.featuremodels.CompositeFeature#getParent
+	 * @return the value of the '<em>Containers</em>' containment reference list.
+	 * @see it.unibg.robotics.featuremodels.featuremodelsPackage#getFeature_Containers()
+	 * @see it.unibg.robotics.featuremodels.ContainmentAssociation#getParent
 	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<CompositeFeature> getSubCompositeFeatures();
+	EList<ContainmentAssociation> getContainers();
 
 	/**
-	 * Returns the value of the '<em><b>Composite Parent</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link it.unibg.robotics.featuremodels.CompositeFeature#getSubFeatures <em>Sub Features</em>}'.
+	 * Returns the value of the '<em><b>Container Parent</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link it.unibg.robotics.featuremodels.ContainmentAssociation#getSubFeatures <em>Sub Features</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Composite Parent</em>' container reference isn't clear,
+	 * If the meaning of the '<em>Container Parent</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Composite Parent</em>' container reference.
-	 * @see #setCompositeParent(CompositeFeature)
-	 * @see it.unibg.robotics.featuremodels.featuremodelsPackage#getFeature_CompositeParent()
-	 * @see it.unibg.robotics.featuremodels.CompositeFeature#getSubFeatures
+	 * @return the value of the '<em>Container Parent</em>' container reference.
+	 * @see #setContainerParent(ContainmentAssociation)
+	 * @see it.unibg.robotics.featuremodels.featuremodelsPackage#getFeature_ContainerParent()
+	 * @see it.unibg.robotics.featuremodels.ContainmentAssociation#getSubFeatures
 	 * @model opposite="subFeatures" transient="false"
 	 * @generated
 	 */
-	CompositeFeature getCompositeParent();
+	ContainmentAssociation getContainerParent();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.featuremodels.Feature#getCompositeParent <em>Composite Parent</em>}' container reference.
+	 * Sets the value of the '{@link it.unibg.robotics.featuremodels.Feature#getContainerParent <em>Container Parent</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Composite Parent</em>' container reference.
-	 * @see #getCompositeParent()
+	 * @param value the new value of the '<em>Container Parent</em>' container reference.
+	 * @see #getContainerParent()
 	 * @generated
 	 */
-	void setCompositeParent(CompositeFeature value);
+	void setContainerParent(ContainmentAssociation value);
 
 	/**
 	 * Returns the value of the '<em><b>Lower Bound</b></em>' attribute.

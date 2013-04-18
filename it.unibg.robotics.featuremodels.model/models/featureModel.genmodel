@@ -16,18 +16,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute featureModel.ecore#//Feature/root"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute featureModel.ecore#//Feature/required"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference featureModel.ecore#//Feature/subFeatures"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference featureModel.ecore#//Feature/simpleParent"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference featureModel.ecore#//Feature/subCompositeFeatures"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference featureModel.ecore#//Feature/compositeParent"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference featureModel.ecore#//Feature/featureParent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference featureModel.ecore#//Feature/containers"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference featureModel.ecore#//Feature/containerParent"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute featureModel.ecore#//Feature/lowerBound"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute featureModel.ecore#//Feature/upperBound"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference featureModel.ecore#//Feature/attributes"/>
     </genClasses>
-    <genClasses ecoreClass="featureModel.ecore#//CompositeFeature">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference featureModel.ecore#//CompositeFeature/subFeatures"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference featureModel.ecore#//CompositeFeature/parent"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute featureModel.ecore#//CompositeFeature/upperBound"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute featureModel.ecore#//CompositeFeature/lowerBound"/>
+    <genClasses ecoreClass="featureModel.ecore#//ContainmentAssociation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference featureModel.ecore#//ContainmentAssociation/subFeatures"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference featureModel.ecore#//ContainmentAssociation/parent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute featureModel.ecore#//ContainmentAssociation/upperBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute featureModel.ecore#//ContainmentAssociation/lowerBound"/>
     </genClasses>
     <genClasses ecoreClass="featureModel.ecore#//FeatureModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference featureModel.ecore#//FeatureModel/rootFeature"/>

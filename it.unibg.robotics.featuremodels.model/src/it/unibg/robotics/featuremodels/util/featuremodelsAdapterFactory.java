@@ -26,8 +26,8 @@
 package it.unibg.robotics.featuremodels.util;
 
 import it.unibg.robotics.featuremodels.Attribute;
-import it.unibg.robotics.featuremodels.CompositeFeature;
 import it.unibg.robotics.featuremodels.Constraint;
+import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.Instance;
@@ -100,8 +100,8 @@ public class featuremodelsAdapterFactory extends AdapterFactoryImpl {
 				return createFeatureAdapter();
 			}
 			@Override
-			public Adapter caseCompositeFeature(CompositeFeature object) {
-				return createCompositeFeatureAdapter();
+			public Adapter caseContainmentAssociation(ContainmentAssociation object) {
+				return createContainmentAssociationAdapter();
 			}
 			@Override
 			public Adapter caseFeatureModel(FeatureModel object) {
@@ -158,16 +158,16 @@ public class featuremodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.featuremodels.CompositeFeature <em>Composite Feature</em>}'.
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.featuremodels.ContainmentAssociation <em>Containment Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.featuremodels.CompositeFeature
+	 * @see it.unibg.robotics.featuremodels.ContainmentAssociation
 	 * @generated
 	 */
-	public Adapter createCompositeFeatureAdapter() {
+	public Adapter createContainmentAssociationAdapter() {
 		return null;
 	}
 

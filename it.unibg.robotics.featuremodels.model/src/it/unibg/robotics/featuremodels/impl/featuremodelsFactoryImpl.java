@@ -25,9 +25,9 @@
  */
 package it.unibg.robotics.featuremodels.impl;
 
-import it.unibg.robotics.featuremodels.CompositeFeature;
 import it.unibg.robotics.featuremodels.Constraint;
 import it.unibg.robotics.featuremodels.ConstraintType;
+import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.Instance;
@@ -87,7 +87,7 @@ public class featuremodelsFactoryImpl extends EFactoryImpl implements featuremod
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case featuremodelsPackage.FEATURE: return createFeature();
-			case featuremodelsPackage.COMPOSITE_FEATURE: return createCompositeFeature();
+			case featuremodelsPackage.CONTAINMENT_ASSOCIATION: return createContainmentAssociation();
 			case featuremodelsPackage.FEATURE_MODEL: return createFeatureModel();
 			case featuremodelsPackage.CONSTRAINT: return createConstraint();
 			case featuremodelsPackage.INSTANCE: return createInstance();
@@ -142,9 +142,9 @@ public class featuremodelsFactoryImpl extends EFactoryImpl implements featuremod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CompositeFeature createCompositeFeature() {
-		CompositeFeatureImpl compositeFeature = new CompositeFeatureImpl();
-		return compositeFeature;
+	public ContainmentAssociation createContainmentAssociation() {
+		ContainmentAssociationImpl containmentAssociation = new ContainmentAssociationImpl();
+		return containmentAssociation;
 	}
 
 	/**

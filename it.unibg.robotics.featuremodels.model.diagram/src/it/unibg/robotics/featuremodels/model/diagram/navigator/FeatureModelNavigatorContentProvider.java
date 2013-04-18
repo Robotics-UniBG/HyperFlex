@@ -25,14 +25,14 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.navigator;
 
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeatures2EditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeaturesEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeatures2EditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureAttributesEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureContainersEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubCompositeFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.SimpleAttributeEditPart;
@@ -253,196 +253,6 @@ public class FeatureModelNavigatorContentProvider implements
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (FeatureModelVisualIDRegistry.getVisualID(view)) {
 
-		case FeatureModelEditPart.VISUAL_ID: {
-			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
-			Diagram sv = (Diagram) view;
-			FeatureModelNavigatorGroup links = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_FeatureModel_1000_links,
-					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(Feature2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(CompositeFeatureEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(SimpleAttributeEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureSubFeaturesEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureSubFeatures2EditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(CompositeFeatureSubFeaturesEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(CompositeFeatureSubFeatures2EditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureSubCompositeFeaturesEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureAttributesEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			if (!links.isEmpty()) {
-				result.add(links);
-			}
-			return result.toArray();
-		}
-
-		case CompositeFeatureSubFeatures2EditPart.VISUAL_ID: {
-			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			FeatureModelNavigatorGroup target = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeFeatureSubFeatures_4010_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			FeatureModelNavigatorGroup source = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeFeatureSubFeatures_4010_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(Feature2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(CompositeFeatureEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case Feature2EditPart.VISUAL_ID: {
-			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			FeatureModelNavigatorGroup incominglinks = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_Feature_2006_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			FeatureModelNavigatorGroup outgoinglinks = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_Feature_2006_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureSubFeaturesEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureSubFeaturesEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureSubFeatures2EditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureSubFeatures2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(CompositeFeatureSubFeaturesEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(CompositeFeatureSubFeatures2EditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureSubCompositeFeaturesEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureAttributesEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case CompositeFeatureSubFeaturesEditPart.VISUAL_ID: {
-			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			FeatureModelNavigatorGroup target = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeFeatureSubFeatures_4009_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			FeatureModelNavigatorGroup source = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeFeatureSubFeatures_4009_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(Feature2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(CompositeFeatureEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
 		case FeatureAttributesEditPart.VISUAL_ID: {
 			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
@@ -477,19 +287,92 @@ public class FeatureModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case FeatureSubCompositeFeaturesEditPart.VISUAL_ID: {
+		case ContainmentAssociationSubFeatures2EditPart.VISUAL_ID: {
 			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			FeatureModelNavigatorGroup target = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_FeatureSubCompositeFeatures_4011_target,
+					Messages.NavigatorGroupName_ContainmentAssociationSubFeatures_4014_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			FeatureModelNavigatorGroup source = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_FeatureSubCompositeFeatures_4011_source,
+					Messages.NavigatorGroupName_ContainmentAssociationSubFeatures_4014_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					FeatureModelVisualIDRegistry
-							.getType(CompositeFeatureEditPart.VISUAL_ID));
+							.getType(FeatureEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(Feature2EditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(ContainmentAssociationEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
+			return result.toArray();
+		}
+
+		case ContainmentAssociationSubFeaturesEditPart.VISUAL_ID: {
+			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			FeatureModelNavigatorGroup target = new FeatureModelNavigatorGroup(
+					Messages.NavigatorGroupName_ContainmentAssociationSubFeatures_4013_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			FeatureModelNavigatorGroup source = new FeatureModelNavigatorGroup(
+					Messages.NavigatorGroupName_ContainmentAssociationSubFeatures_4013_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(Feature2EditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(ContainmentAssociationEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
+			return result.toArray();
+		}
+
+		case FeatureSubFeatures2EditPart.VISUAL_ID: {
+			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			FeatureModelNavigatorGroup target = new FeatureModelNavigatorGroup(
+					Messages.NavigatorGroupName_FeatureSubFeatures_4008_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			FeatureModelNavigatorGroup source = new FeatureModelNavigatorGroup(
+					Messages.NavigatorGroupName_FeatureSubFeatures_4008_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(Feature2EditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
@@ -507,6 +390,126 @@ public class FeatureModelNavigatorContentProvider implements
 			}
 			if (!source.isEmpty()) {
 				result.add(source);
+			}
+			return result.toArray();
+		}
+
+		case FeatureEditPart.VISUAL_ID: {
+			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			FeatureModelNavigatorGroup incominglinks = new FeatureModelNavigatorGroup(
+					Messages.NavigatorGroupName_Feature_2005_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			FeatureModelNavigatorGroup outgoinglinks = new FeatureModelNavigatorGroup(
+					Messages.NavigatorGroupName_Feature_2005_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureSubFeaturesEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureSubFeaturesEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureSubFeatures2EditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureSubFeatures2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(ContainmentAssociationSubFeaturesEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(ContainmentAssociationSubFeatures2EditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureContainersEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureAttributesEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case FeatureModelEditPart.VISUAL_ID: {
+			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
+			Diagram sv = (Diagram) view;
+			FeatureModelNavigatorGroup links = new FeatureModelNavigatorGroup(
+					Messages.NavigatorGroupName_FeatureModel_1000_links,
+					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(Feature2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(ContainmentAssociationEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(SimpleAttributeEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureSubFeaturesEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureSubFeatures2EditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(
+					Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(ContainmentAssociationSubFeaturesEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(
+					Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(ContainmentAssociationSubFeatures2EditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureContainersEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureAttributesEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			if (!links.isEmpty()) {
+				result.add(links);
 			}
 			return result.toArray();
 		}
@@ -550,6 +553,76 @@ public class FeatureModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
+		case ContainmentAssociationEditPart.VISUAL_ID: {
+			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			FeatureModelNavigatorGroup outgoinglinks = new FeatureModelNavigatorGroup(
+					Messages.NavigatorGroupName_ContainmentAssociation_2009_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			FeatureModelNavigatorGroup incominglinks = new FeatureModelNavigatorGroup(
+					Messages.NavigatorGroupName_ContainmentAssociation_2009_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(ContainmentAssociationSubFeaturesEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(ContainmentAssociationSubFeatures2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureContainersEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case FeatureContainersEditPart.VISUAL_ID: {
+			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			FeatureModelNavigatorGroup target = new FeatureModelNavigatorGroup(
+					Messages.NavigatorGroupName_FeatureContainers_4015_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			FeatureModelNavigatorGroup source = new FeatureModelNavigatorGroup(
+					Messages.NavigatorGroupName_FeatureContainers_4015_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(ContainmentAssociationEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(FeatureEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					FeatureModelVisualIDRegistry
+							.getType(Feature2EditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
+			return result.toArray();
+		}
+
 		case SimpleAttributeEditPart.VISUAL_ID: {
 			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
@@ -568,14 +641,14 @@ public class FeatureModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case FeatureEditPart.VISUAL_ID: {
+		case Feature2EditPart.VISUAL_ID: {
 			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			FeatureModelNavigatorGroup incominglinks = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_Feature_2005_incominglinks,
+					Messages.NavigatorGroupName_Feature_2006_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			FeatureModelNavigatorGroup outgoinglinks = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_Feature_2005_outgoinglinks,
+					Messages.NavigatorGroupName_Feature_2006_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -601,19 +674,18 @@ public class FeatureModelNavigatorContentProvider implements
 			connectedViews = getIncomingLinksByType(
 					Collections.singleton(sv),
 					FeatureModelVisualIDRegistry
-							.getType(CompositeFeatureSubFeaturesEditPart.VISUAL_ID));
+							.getType(ContainmentAssociationSubFeaturesEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews,
 					incominglinks, true));
 			connectedViews = getIncomingLinksByType(
 					Collections.singleton(sv),
 					FeatureModelVisualIDRegistry
-							.getType(CompositeFeatureSubFeatures2EditPart.VISUAL_ID));
+							.getType(ContainmentAssociationSubFeatures2EditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews,
 					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					FeatureModelVisualIDRegistry
-							.getType(FeatureSubCompositeFeaturesEditPart.VISUAL_ID));
+							.getType(FeatureContainersEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
 					outgoinglinks, true));
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -626,82 +698,6 @@ public class FeatureModelNavigatorContentProvider implements
 			}
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case CompositeFeatureEditPart.VISUAL_ID: {
-			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			FeatureModelNavigatorGroup outgoinglinks = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeFeature_2007_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			FeatureModelNavigatorGroup incominglinks = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeFeature_2007_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(CompositeFeatureSubFeaturesEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(CompositeFeatureSubFeatures2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureSubCompositeFeaturesEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case FeatureSubFeatures2EditPart.VISUAL_ID: {
-			LinkedList<FeatureModelAbstractNavigatorItem> result = new LinkedList<FeatureModelAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			FeatureModelNavigatorGroup target = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_FeatureSubFeatures_4008_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			FeatureModelNavigatorGroup source = new FeatureModelNavigatorGroup(
-					Messages.NavigatorGroupName_FeatureSubFeatures_4008_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(Feature2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(FeatureEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					FeatureModelVisualIDRegistry
-							.getType(Feature2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
 			}
 			return result.toArray();
 		}

@@ -62,7 +62,7 @@ public class FeatureModelPaletteFactory {
 				Messages.Nodes1Group_title);
 		paletteContainer.setId("createNodes1Group"); //$NON-NLS-1$
 		paletteContainer.add(createFeature1CreationTool());
-		paletteContainer.add(createCompositeFeature2CreationTool());
+		paletteContainer.add(createContainmentAssociation2CreationTool());
 		paletteContainer.add(createAttribute3CreationTool());
 		return paletteContainer;
 	}
@@ -98,15 +98,15 @@ public class FeatureModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createCompositeFeature2CreationTool() {
+	private ToolEntry createContainmentAssociation2CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.CompositeFeature2CreationTool_title,
+				Messages.ContainmentAssociation2CreationTool_title,
 				null,
 				Collections
-						.singletonList(FeatureModelElementTypes.CompositeFeature_2007));
-		entry.setId("createCompositeFeature2CreationTool"); //$NON-NLS-1$
+						.singletonList(FeatureModelElementTypes.ContainmentAssociation_2009));
+		entry.setId("createContainmentAssociation2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(FeatureModelElementTypes
-				.getImageDescriptor(FeatureModelElementTypes.CompositeFeature_2007));
+				.getImageDescriptor(FeatureModelElementTypes.ContainmentAssociation_2009));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -134,9 +134,9 @@ public class FeatureModelPaletteFactory {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(6);
 		types.add(FeatureModelElementTypes.FeatureSubFeatures_4007);
 		types.add(FeatureModelElementTypes.FeatureSubFeatures_4008);
-		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4009);
-		types.add(FeatureModelElementTypes.CompositeFeatureSubFeatures_4010);
-		types.add(FeatureModelElementTypes.FeatureSubCompositeFeatures_4011);
+		types.add(FeatureModelElementTypes.ContainmentAssociationSubFeatures_4013);
+		types.add(FeatureModelElementTypes.ContainmentAssociationSubFeatures_4014);
+		types.add(FeatureModelElementTypes.FeatureContainers_4015);
 		types.add(FeatureModelElementTypes.FeatureAttributes_4012);
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.Connection1CreationTool_title, null, types);

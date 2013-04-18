@@ -138,22 +138,21 @@
       </labels>
     </topLevelNodes>
     <topLevelNodes
-        visualID="2007"
-        editPartClassName="CompositeFeatureEditPart"
-        itemSemanticEditPolicyClassName="CompositeFeatureItemSemanticEditPolicy"
-        notationViewFactoryClassName="CompositeFeatureViewFactory"
-        canonicalEditPolicyClassName="CompositeFeatureCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="CompositeFeatureGraphicalNodeEditPolicy"
-        createCommandClassName="CompositeFeatureCreateCommand">
+        visualID="2009"
+        editPartClassName="ContainmentAssociationEditPart"
+        itemSemanticEditPolicyClassName="ContainmentAssociationItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="ContainmentAssociationCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="ContainmentAssociationGraphicalNodeEditPolicy"
+        createCommandClassName="ContainmentAssociationCreateCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="CompositeFeatureEditHelper"/>
+          editHelperClassName="ContainmentAssociationEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
-          className="CompositeFeatureBox"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class CompositeFeatureBox extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureCompositeFeatureLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public CompositeFeatureBox() {&#xA;&#x9;&#x9;this.setLayoutManager(new org.eclipse.draw2d.StackLayout());&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightGray);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(100)&#xA;, getMapMode().DPtoLP(35)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureCompositeFeatureLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureCompositeFeatureLabel.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureCompositeFeatureLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureCompositeFeatureLabel() {&#xA;&#x9;&#x9;return fFigureCompositeFeatureLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          className="ContainmentAssociationBox"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ContainmentAssociationBox extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureContainmentAssociationLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ContainmentAssociationBox() {&#xA;&#x9;&#x9;this.setLayoutManager(new org.eclipse.draw2d.StackLayout());&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightGray);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(100)&#xA;, getMapMode().DPtoLP(35)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureContainmentAssociationLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureContainmentAssociationLabel.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureContainmentAssociationLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureContainmentAssociationLabel() {&#xA;&#x9;&#x9;return fFigureContainmentAssociationLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
             fixedBackground="true"/>
@@ -165,28 +164,27 @@
       <modelFacet
           modelElementSelector="//@expressionProviders/@providers.0/@expressions.2">
         <metaClass
-            href="../models/featureModel.genmodel#//featuremodels/CompositeFeature"/>
+            href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation"/>
       </modelFacet>
       <labels
-          visualID="5007"
-          editPartClassName="CompositeFeatureLowerBoundUpperBoundEditPart"
-          itemSemanticEditPolicyClassName="CompositeFeatureLowerBoundUpperBoundItemSemanticEditPolicy"
-          notationViewFactoryClassName="CompositeFeatureLowerBoundUpperBoundViewFactory"
+          visualID="5009"
+          editPartClassName="ContainmentAssociationLowerBoundUpperBoundEditPart"
+          itemSemanticEditPolicyClassName="ContainmentAssociationLowerBoundUpperBoundItemSemanticEditPolicy"
           readOnly="true">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
-            getterName="getFigureCompositeFeatureLabel"
+            getterName="getFigureContainmentAssociationLabel"
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0"
             viewPattern="{0} ... {1}">
           <metaFeatures
-              href="../models/featureModel.genmodel#//featuremodels/CompositeFeature/lowerBound"/>
+              href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation/lowerBound"/>
           <metaFeatures
-              href="../models/featureModel.genmodel#//featuremodels/CompositeFeature/upperBound"/>
+              href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation/upperBound"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -287,12 +285,11 @@
           targetEnd="//@expressionProviders/@providers.0/@expressions.6"/>
     </links>
     <links
-        visualID="4009"
-        editPartClassName="CompositeFeatureSubFeaturesEditPart"
-        itemSemanticEditPolicyClassName="CompositeFeatureSubFeaturesItemSemanticEditPolicy"
-        notationViewFactoryClassName="CompositeFeatureSubFeaturesViewFactory"
-        createCommandClassName="CompositeFeatureSubFeaturesCreateCommand"
-        reorientCommandClassName="CompositeFeatureSubFeaturesReorientCommand">
+        visualID="4013"
+        editPartClassName="ContainmentAssociationSubFeaturesEditPart"
+        itemSemanticEditPolicyClassName="ContainmentAssociationSubFeaturesItemSemanticEditPolicy"
+        createCommandClassName="ContainmentAssociationSubFeaturesCreateCommand"
+        reorientCommandClassName="ContainmentAssociationSubFeaturesReorientCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
       <elementType
@@ -304,19 +301,18 @@
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
-            href="../models/featureModel.genmodel#//featuremodels/CompositeFeature/subFeatures"/>
+            href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation/subFeatures"/>
       </modelFacet>
       <creationConstraints
           sourceEnd="//@expressionProviders/@providers.0/@expressions.7"
           targetEnd="//@expressionProviders/@providers.0/@expressions.8"/>
     </links>
     <links
-        visualID="4010"
-        editPartClassName="CompositeFeatureSubFeatures2EditPart"
-        itemSemanticEditPolicyClassName="CompositeFeatureSubFeatures2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="CompositeFeatureSubFeaturesViewFactory"
-        createCommandClassName="CompositeFeatureSubFeatures2CreateCommand"
-        reorientCommandClassName="CompositeFeatureSubFeatures2ReorientCommand">
+        visualID="4014"
+        editPartClassName="ContainmentAssociationSubFeatures2EditPart"
+        itemSemanticEditPolicyClassName="ContainmentAssociationSubFeatures2ItemSemanticEditPolicy"
+        createCommandClassName="ContainmentAssociationSubFeatures2CreateCommand"
+        reorientCommandClassName="ContainmentAssociationSubFeatures2ReorientCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
       <elementType
@@ -328,19 +324,18 @@
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
-            href="../models/featureModel.genmodel#//featuremodels/CompositeFeature/subFeatures"/>
+            href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation/subFeatures"/>
       </modelFacet>
       <creationConstraints
           sourceEnd="//@expressionProviders/@providers.0/@expressions.9"
           targetEnd="//@expressionProviders/@providers.0/@expressions.10"/>
     </links>
     <links
-        visualID="4011"
-        editPartClassName="FeatureSubCompositeFeaturesEditPart"
-        itemSemanticEditPolicyClassName="FeatureSubCompositeFeaturesItemSemanticEditPolicy"
-        notationViewFactoryClassName="FeatureSubCompositeFeaturesViewFactory"
-        createCommandClassName="FeatureSubCompositeFeaturesCreateCommand"
-        reorientCommandClassName="FeatureSubCompositeFeaturesReorientCommand">
+        visualID="4015"
+        editPartClassName="FeatureContainersEditPart"
+        itemSemanticEditPolicyClassName="FeatureContainersItemSemanticEditPolicy"
+        createCommandClassName="FeatureContainersCreateCommand"
+        reorientCommandClassName="FeatureContainersReorientCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
       <elementType
@@ -351,7 +346,7 @@
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
-            href="../models/featureModel.genmodel#//featuremodels/Feature/subCompositeFeatures"/>
+            href="../models/featureModel.genmodel#//featuremodels/Feature/containers"/>
       </modelFacet>
       <creationConstraints
           sourceEnd="//@expressionProviders/@providers.0/@expressions.11"/>
@@ -387,7 +382,7 @@
             genNodes="//@diagram/@topLevelNodes.0 //@diagram/@topLevelNodes.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="CompositeFeature"
+            title="Containment Association"
             genNodes="//@diagram/@topLevelNodes.2"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
@@ -756,16 +751,16 @@
           body="root = false"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="oclIsTypeOf(CompositeFeature)"/>
+          body="oclIsTypeOf(ContainmentAssociation)"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="simpleParent &lt;> null or root = true"/>
+          body="featureParent &lt;> null or root = true"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
           body="required = false"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="simpleParent &lt;> null or root = true"/>
+          body="featureParent &lt;> null or root = true"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
           body="required = true "/>
@@ -783,10 +778,10 @@
           body="required = true"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="compositeParent &lt;> null or simpleParent &lt;> null"/>
+          body="containerParent &lt;> null or featureParent &lt;> null"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="compositeParent &lt;> null or simpleParent &lt;> null"/>
+          body="containerParent &lt;> null or featureParent &lt;> null"/>
     </providers>
   </expressionProviders>
   <labelParsers

@@ -33,7 +33,6 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -118,26 +117,26 @@ public class featuremodelsItemProviderAdapterFactory extends featuremodelsAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.featuremodels.CompositeFeature} instances.
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.featuremodels.ContainmentAssociation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CompositeFeatureItemProvider compositeFeatureItemProvider;
+	protected ContainmentAssociationItemProvider containmentAssociationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.featuremodels.CompositeFeature}.
+	 * This creates an adapter for a {@link it.unibg.robotics.featuremodels.ContainmentAssociation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCompositeFeatureAdapter() {
-		if (compositeFeatureItemProvider == null) {
-			compositeFeatureItemProvider = new CompositeFeatureItemProvider(this);
+	public Adapter createContainmentAssociationAdapter() {
+		if (containmentAssociationItemProvider == null) {
+			containmentAssociationItemProvider = new ContainmentAssociationItemProvider(this);
 		}
 
-		return compositeFeatureItemProvider;
+		return containmentAssociationItemProvider;
 	}
 
 	/**
@@ -332,7 +331,7 @@ public class featuremodelsItemProviderAdapterFactory extends featuremodelsAdapte
 	 */
 	public void dispose() {
 		if (featureItemProvider != null) featureItemProvider.dispose();
-		if (compositeFeatureItemProvider != null) compositeFeatureItemProvider.dispose();
+		if (containmentAssociationItemProvider != null) containmentAssociationItemProvider.dispose();
 		if (featureModelItemProvider != null) featureModelItemProvider.dispose();
 		if (constraintItemProvider != null) constraintItemProvider.dispose();
 		if (instanceItemProvider != null) instanceItemProvider.dispose();

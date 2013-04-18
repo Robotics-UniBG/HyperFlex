@@ -26,7 +26,7 @@
 package it.unibg.robotics.featuremodels.model.diagram.edit.policies;
 
 import it.unibg.robotics.featuremodels.Attribute;
-import it.unibg.robotics.featuremodels.CompositeFeature;
+import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.model.diagram.expressions.FeatureModelOCLFactory;
 import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditorPlugin;
@@ -364,7 +364,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 					return false;
 				}
 			}
-			if (target != null && (target.getSimpleParent() != null)) {
+			if (target != null && (target.getFeatureParent() != null)) {
 				return false;
 			}
 
@@ -384,7 +384,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 					return false;
 				}
 			}
-			if (target != null && (target.getSimpleParent() != null)) {
+			if (target != null && (target.getFeatureParent() != null)) {
 				return false;
 			}
 
@@ -394,8 +394,8 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateCompositeFeatureSubFeatures_4009(
-				CompositeFeature source, Feature target) {
+		public boolean canCreateContainmentAssociationSubFeatures_4013(
+				ContainmentAssociation source, Feature target) {
 			if (source != null) {
 				if (source.getSubFeatures().contains(target)) {
 					return false;
@@ -404,18 +404,19 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 					return false;
 				}
 			}
-			if (target != null && (target.getCompositeParent() != null)) {
+			if (target != null && (target.getContainerParent() != null)) {
 				return false;
 			}
 
-			return canExistCompositeFeatureSubFeatures_4009(source, target);
+			return canExistContainmentAssociationSubFeatures_4013(source,
+					target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateCompositeFeatureSubFeatures_4010(
-				CompositeFeature source, Feature target) {
+		public boolean canCreateContainmentAssociationSubFeatures_4014(
+				ContainmentAssociation source, Feature target) {
 			if (source != null) {
 				if (source.getSubFeatures().contains(target)) {
 					return false;
@@ -424,20 +425,21 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 					return false;
 				}
 			}
-			if (target != null && (target.getCompositeParent() != null)) {
+			if (target != null && (target.getContainerParent() != null)) {
 				return false;
 			}
 
-			return canExistCompositeFeatureSubFeatures_4010(source, target);
+			return canExistContainmentAssociationSubFeatures_4014(source,
+					target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateFeatureSubCompositeFeatures_4011(
-				Feature source, CompositeFeature target) {
+		public boolean canCreateFeatureContainers_4015(Feature source,
+				ContainmentAssociation target) {
 			if (source != null) {
-				if (source.getSubCompositeFeatures().contains(target)) {
+				if (source.getContainers().contains(target)) {
 					return false;
 				}
 				if (source == target) {
@@ -448,7 +450,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				return false;
 			}
 
-			return canExistFeatureSubCompositeFeatures_4011(source, target);
+			return canExistFeatureContainers_4015(source, target);
 		}
 
 		/**
@@ -575,8 +577,8 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistCompositeFeatureSubFeatures_4009(
-				CompositeFeature source, Feature target) {
+		public boolean canExistContainmentAssociationSubFeatures_4013(
+				ContainmentAssociation source, Feature target) {
 			try {
 				if (source == null) {
 					return true;
@@ -588,7 +590,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 							.getExpression(
 									7,
 									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-											.getCompositeFeature(), env)
+											.getContainmentAssociation(), env)
 							.evaluate(
 									source,
 									Collections.singletonMap(
@@ -603,7 +605,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getCompositeFeature()); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getContainmentAssociation()); //$NON-NLS-1$
 					Object targetVal = FeatureModelOCLFactory
 							.getExpression(
 									8,
@@ -628,8 +630,8 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistCompositeFeatureSubFeatures_4010(
-				CompositeFeature source, Feature target) {
+		public boolean canExistContainmentAssociationSubFeatures_4014(
+				ContainmentAssociation source, Feature target) {
 			try {
 				if (source == null) {
 					return true;
@@ -641,7 +643,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 							.getExpression(
 									9,
 									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-											.getCompositeFeature(), env)
+											.getContainmentAssociation(), env)
 							.evaluate(
 									source,
 									Collections.singletonMap(
@@ -656,7 +658,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getCompositeFeature()); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getContainmentAssociation()); //$NON-NLS-1$
 					Object targetVal = FeatureModelOCLFactory
 							.getExpression(
 									10,
@@ -681,15 +683,15 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistFeatureSubCompositeFeatures_4011(Feature source,
-				CompositeFeature target) {
+		public boolean canExistFeatureContainers_4015(Feature source,
+				ContainmentAssociation target) {
 			try {
 				if (source == null) {
 					return true;
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getCompositeFeature()); //$NON-NLS-1$
+									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getContainmentAssociation()); //$NON-NLS-1$
 					Object sourceVal = FeatureModelOCLFactory
 							.getExpression(
 									11,

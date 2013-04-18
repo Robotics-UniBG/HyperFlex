@@ -35,11 +35,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -218,7 +215,7 @@ public class FeatureItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(featuremodelsPackage.Literals.FEATURE__SUB_FEATURES);
-			childrenFeatures.add(featuremodelsPackage.Literals.FEATURE__SUB_COMPOSITE_FEATURES);
+			childrenFeatures.add(featuremodelsPackage.Literals.FEATURE__CONTAINERS);
 			childrenFeatures.add(featuremodelsPackage.Literals.FEATURE__ATTRIBUTES);
 		}
 		return childrenFeatures;
@@ -282,7 +279,7 @@ public class FeatureItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case featuremodelsPackage.FEATURE__SUB_FEATURES:
-			case featuremodelsPackage.FEATURE__SUB_COMPOSITE_FEATURES:
+			case featuremodelsPackage.FEATURE__CONTAINERS:
 			case featuremodelsPackage.FEATURE__ATTRIBUTES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -308,8 +305,8 @@ public class FeatureItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(featuremodelsPackage.Literals.FEATURE__SUB_COMPOSITE_FEATURES,
-				 featuremodelsFactory.eINSTANCE.createCompositeFeature()));
+				(featuremodelsPackage.Literals.FEATURE__CONTAINERS,
+				 featuremodelsFactory.eINSTANCE.createContainmentAssociation()));
 
 		newChildDescriptors.add
 			(createChildParameter

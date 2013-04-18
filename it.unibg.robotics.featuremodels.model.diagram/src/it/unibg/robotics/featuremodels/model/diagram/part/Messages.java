@@ -283,7 +283,7 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String CompositeFeature2CreationTool_title;
+	public static String ContainmentAssociation2CreationTool_title;
 
 	/**
 	 * @generated
@@ -318,12 +318,52 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String NavigatorGroupName_ContainmentAssociation_2009_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ContainmentAssociation_2009_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_FeatureContainers_4015_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_FeatureContainers_4015_source;
+
+	/**
+	 * @generated
+	 */
 	public static String NavigatorGroupName_FeatureAttributes_4012_target;
 
 	/**
 	 * @generated
 	 */
 	public static String NavigatorGroupName_FeatureAttributes_4012_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ContainmentAssociationSubFeatures_4014_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ContainmentAssociationSubFeatures_4014_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ContainmentAssociationSubFeatures_4013_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ContainmentAssociationSubFeatures_4013_source;
 
 	/**
 	 * @generated
@@ -348,37 +388,7 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeFeatureSubFeatures_4010_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_CompositeFeatureSubFeatures_4010_source;
-
-	/**
-	 * @generated
-	 */
 	public static String NavigatorGroupName_FeatureModel_1000_links;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_CompositeFeature_2007_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_CompositeFeature_2007_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_FeatureSubCompositeFeatures_4011_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_FeatureSubCompositeFeatures_4011_source;
 
 	/**
 	 * @generated
@@ -394,16 +404,6 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Feature_2006_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_CompositeFeatureSubFeatures_4009_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_CompositeFeatureSubFeatures_4009_source;
 
 	/**
 	 * @generated

@@ -25,14 +25,14 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.providers;
 
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeatures2EditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeaturesEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeatures2EditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureAttributesEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureContainersEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubCompositeFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.SimpleAttributeEditPart;
@@ -97,7 +97,7 @@ public class FeatureModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeFeature_2007 = getElementType("it.unibg.robotics.featuremodels.model.diagram.CompositeFeature_2007"); //$NON-NLS-1$
+	public static final IElementType ContainmentAssociation_2009 = getElementType("it.unibg.robotics.featuremodels.model.diagram.ContainmentAssociation_2009"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -117,17 +117,17 @@ public class FeatureModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeFeatureSubFeatures_4009 = getElementType("it.unibg.robotics.featuremodels.model.diagram.CompositeFeatureSubFeatures_4009"); //$NON-NLS-1$
+	public static final IElementType ContainmentAssociationSubFeatures_4013 = getElementType("it.unibg.robotics.featuremodels.model.diagram.ContainmentAssociationSubFeatures_4013"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeFeatureSubFeatures_4010 = getElementType("it.unibg.robotics.featuremodels.model.diagram.CompositeFeatureSubFeatures_4010"); //$NON-NLS-1$
+	public static final IElementType ContainmentAssociationSubFeatures_4014 = getElementType("it.unibg.robotics.featuremodels.model.diagram.ContainmentAssociationSubFeatures_4014"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType FeatureSubCompositeFeatures_4011 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureSubCompositeFeatures_4011"); //$NON-NLS-1$
+	public static final IElementType FeatureContainers_4015 = getElementType("it.unibg.robotics.featuremodels.model.diagram.FeatureContainers_4015"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -261,9 +261,9 @@ public class FeatureModelElementTypes {
 							.getFeature());
 
 			elements.put(
-					CompositeFeature_2007,
+					ContainmentAssociation_2009,
 					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-							.getCompositeFeature());
+							.getContainmentAssociation());
 
 			elements.put(
 					SimpleAttribute_2008,
@@ -281,19 +281,19 @@ public class FeatureModelElementTypes {
 							.getFeature_SubFeatures());
 
 			elements.put(
-					CompositeFeatureSubFeatures_4009,
+					ContainmentAssociationSubFeatures_4013,
 					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-							.getCompositeFeature_SubFeatures());
+							.getContainmentAssociation_SubFeatures());
 
 			elements.put(
-					CompositeFeatureSubFeatures_4010,
+					ContainmentAssociationSubFeatures_4014,
 					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-							.getCompositeFeature_SubFeatures());
+							.getContainmentAssociation_SubFeatures());
 
 			elements.put(
-					FeatureSubCompositeFeatures_4011,
+					FeatureContainers_4015,
 					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-							.getFeature_SubCompositeFeatures());
+							.getFeature_Containers());
 
 			elements.put(
 					FeatureAttributes_4012,
@@ -319,13 +319,13 @@ public class FeatureModelElementTypes {
 			KNOWN_ELEMENT_TYPES.add(FeatureModel_1000);
 			KNOWN_ELEMENT_TYPES.add(Feature_2005);
 			KNOWN_ELEMENT_TYPES.add(Feature_2006);
-			KNOWN_ELEMENT_TYPES.add(CompositeFeature_2007);
+			KNOWN_ELEMENT_TYPES.add(ContainmentAssociation_2009);
 			KNOWN_ELEMENT_TYPES.add(SimpleAttribute_2008);
 			KNOWN_ELEMENT_TYPES.add(FeatureSubFeatures_4007);
 			KNOWN_ELEMENT_TYPES.add(FeatureSubFeatures_4008);
-			KNOWN_ELEMENT_TYPES.add(CompositeFeatureSubFeatures_4009);
-			KNOWN_ELEMENT_TYPES.add(CompositeFeatureSubFeatures_4010);
-			KNOWN_ELEMENT_TYPES.add(FeatureSubCompositeFeatures_4011);
+			KNOWN_ELEMENT_TYPES.add(ContainmentAssociationSubFeatures_4013);
+			KNOWN_ELEMENT_TYPES.add(ContainmentAssociationSubFeatures_4014);
+			KNOWN_ELEMENT_TYPES.add(FeatureContainers_4015);
 			KNOWN_ELEMENT_TYPES.add(FeatureAttributes_4012);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
@@ -342,20 +342,20 @@ public class FeatureModelElementTypes {
 			return Feature_2005;
 		case Feature2EditPart.VISUAL_ID:
 			return Feature_2006;
-		case CompositeFeatureEditPart.VISUAL_ID:
-			return CompositeFeature_2007;
+		case ContainmentAssociationEditPart.VISUAL_ID:
+			return ContainmentAssociation_2009;
 		case SimpleAttributeEditPart.VISUAL_ID:
 			return SimpleAttribute_2008;
 		case FeatureSubFeaturesEditPart.VISUAL_ID:
 			return FeatureSubFeatures_4007;
 		case FeatureSubFeatures2EditPart.VISUAL_ID:
 			return FeatureSubFeatures_4008;
-		case CompositeFeatureSubFeaturesEditPart.VISUAL_ID:
-			return CompositeFeatureSubFeatures_4009;
-		case CompositeFeatureSubFeatures2EditPart.VISUAL_ID:
-			return CompositeFeatureSubFeatures_4010;
-		case FeatureSubCompositeFeaturesEditPart.VISUAL_ID:
-			return FeatureSubCompositeFeatures_4011;
+		case ContainmentAssociationSubFeaturesEditPart.VISUAL_ID:
+			return ContainmentAssociationSubFeatures_4013;
+		case ContainmentAssociationSubFeatures2EditPart.VISUAL_ID:
+			return ContainmentAssociationSubFeatures_4014;
+		case FeatureContainersEditPart.VISUAL_ID:
+			return FeatureContainers_4015;
 		case FeatureAttributesEditPart.VISUAL_ID:
 			return FeatureAttributes_4012;
 		}

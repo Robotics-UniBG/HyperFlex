@@ -62,11 +62,12 @@ public class FeatureModelEditPartFactory implements EditPartFactory {
 			case FeatureName2EditPart.VISUAL_ID:
 				return new FeatureName2EditPart(view);
 
-			case CompositeFeatureEditPart.VISUAL_ID:
-				return new CompositeFeatureEditPart(view);
+			case ContainmentAssociationEditPart.VISUAL_ID:
+				return new ContainmentAssociationEditPart(view);
 
-			case CompositeFeatureLowerBoundUpperBoundEditPart.VISUAL_ID:
-				return new CompositeFeatureLowerBoundUpperBoundEditPart(view);
+			case ContainmentAssociationLowerBoundUpperBoundEditPart.VISUAL_ID:
+				return new ContainmentAssociationLowerBoundUpperBoundEditPart(
+						view);
 
 			case SimpleAttributeEditPart.VISUAL_ID:
 				return new SimpleAttributeEditPart(view);
@@ -80,14 +81,14 @@ public class FeatureModelEditPartFactory implements EditPartFactory {
 			case FeatureSubFeatures2EditPart.VISUAL_ID:
 				return new FeatureSubFeatures2EditPart(view);
 
-			case CompositeFeatureSubFeaturesEditPart.VISUAL_ID:
-				return new CompositeFeatureSubFeaturesEditPart(view);
+			case ContainmentAssociationSubFeaturesEditPart.VISUAL_ID:
+				return new ContainmentAssociationSubFeaturesEditPart(view);
 
-			case CompositeFeatureSubFeatures2EditPart.VISUAL_ID:
-				return new CompositeFeatureSubFeatures2EditPart(view);
+			case ContainmentAssociationSubFeatures2EditPart.VISUAL_ID:
+				return new ContainmentAssociationSubFeatures2EditPart(view);
 
-			case FeatureSubCompositeFeaturesEditPart.VISUAL_ID:
-				return new FeatureSubCompositeFeaturesEditPart(view);
+			case FeatureContainersEditPart.VISUAL_ID:
+				return new FeatureContainersEditPart(view);
 
 			case FeatureAttributesEditPart.VISUAL_ID:
 				return new FeatureAttributesEditPart(view);

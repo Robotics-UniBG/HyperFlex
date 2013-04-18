@@ -37,7 +37,7 @@ public class FeatureModelNavigatorSorter extends ViewerSorter {
 	/**
 	 * @generated
 	 */
-	private static final int GROUP_CATEGORY = 4014;
+	private static final int GROUP_CATEGORY = 4017;
 
 	/**
 	 * @generated

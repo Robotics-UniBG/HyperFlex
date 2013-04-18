@@ -294,7 +294,6 @@ public class RTTResolutionHandler extends AbstractHandler {
 		requiredComponents = new ArrayList<TaskContext>();
 		requiredConnections = new ArrayList<ConnectionPolicy>();
 
-
 		for(RMResolutionElement currentResElem : resolutionModel.getResolutionElements()){
 
 			boolean isActive = featureModelInstance.getSelectedFeatures().contains(currentResElem.getFeature()) ==

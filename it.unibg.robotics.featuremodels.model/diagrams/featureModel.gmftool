@@ -15,7 +15,7 @@
           title="Feature"/>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="CompositeFeature"/>
+          title="Containment Association"/>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Attribute"

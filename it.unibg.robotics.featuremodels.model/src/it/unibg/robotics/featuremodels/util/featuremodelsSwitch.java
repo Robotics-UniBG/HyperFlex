@@ -26,8 +26,8 @@
 package it.unibg.robotics.featuremodels.util;
 
 import it.unibg.robotics.featuremodels.Attribute;
-import it.unibg.robotics.featuremodels.CompositeFeature;
 import it.unibg.robotics.featuremodels.Constraint;
+import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.Instance;
@@ -101,9 +101,9 @@ public class featuremodelsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case featuremodelsPackage.COMPOSITE_FEATURE: {
-				CompositeFeature compositeFeature = (CompositeFeature)theEObject;
-				T result = caseCompositeFeature(compositeFeature);
+			case featuremodelsPackage.CONTAINMENT_ASSOCIATION: {
+				ContainmentAssociation containmentAssociation = (ContainmentAssociation)theEObject;
+				T result = caseContainmentAssociation(containmentAssociation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -158,17 +158,17 @@ public class featuremodelsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Composite Feature</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Containment Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Composite Feature</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Containment Association</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCompositeFeature(CompositeFeature object) {
+	public T caseContainmentAssociation(ContainmentAssociation object) {
 		return null;
 	}
 

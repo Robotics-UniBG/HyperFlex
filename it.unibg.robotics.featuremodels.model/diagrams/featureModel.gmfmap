@@ -56,25 +56,25 @@
   <nodes>
     <ownedChild>
       <domainMetaElement
-          href="../models/featureModel.ecore#//CompositeFeature"/>
+          href="../models/featureModel.ecore#//ContainmentAssociation"/>
       <domainSpecialization
-          body="oclIsTypeOf(CompositeFeature)"/>
+          body="oclIsTypeOf(ContainmentAssociation)"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping"
           readOnly="true"
           viewPattern="{0} ... {1}">
         <diagramLabel
-            href="featureModel.gmfgraph#CompositeFatureLabel"/>
+            href="featureModel.gmfgraph#ContainmentAssociationLabel"/>
         <features
-            href="../models/featureModel.ecore#//CompositeFeature/lowerBound"/>
+            href="../models/featureModel.ecore#//ContainmentAssociation/lowerBound"/>
         <features
-            href="../models/featureModel.ecore#//CompositeFeature/upperBound"/>
+            href="../models/featureModel.ecore#//ContainmentAssociation/upperBound"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="featureModel.gmftool#//@palette/@tools.0/@tools.1"/>
       <diagramNode
-          href="featureModel.gmfgraph#CompositeFeature"/>
+          href="featureModel.gmfgraph#ContainmentAssociation"/>
     </ownedChild>
   </nodes>
   <nodes>
@@ -106,7 +106,7 @@
         href="../models/featureModel.ecore#//Feature/subFeatures"/>
     <creationConstraints>
       <sourceEnd
-          body="simpleParent &lt;> null or root = true"/>
+          body="featureParent &lt;> null or root = true"/>
       <targetEnd
           body="required = false"/>
     </creationConstraints>
@@ -122,7 +122,7 @@
         href="../models/featureModel.ecore#//Feature/subFeatures"/>
     <creationConstraints>
       <sourceEnd
-          body="simpleParent &lt;> null or root = true"/>
+          body="featureParent &lt;> null or root = true"/>
       <targetEnd
           body="required = true "/>
     </creationConstraints>
@@ -135,7 +135,7 @@
         href="featureModel.gmfgraph#FEATURE_ALTERNATIVE_Connection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="../models/featureModel.ecore#//CompositeFeature/subFeatures"/>
+        href="../models/featureModel.ecore#//ContainmentAssociation/subFeatures"/>
     <creationConstraints>
       <sourceEnd
           body="parent &lt;> null"/>
@@ -151,7 +151,7 @@
         href="featureModel.gmfgraph#FEATURE_MANDATORY_Connection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="../models/featureModel.ecore#//CompositeFeature/subFeatures"/>
+        href="../models/featureModel.ecore#//ContainmentAssociation/subFeatures"/>
     <creationConstraints>
       <sourceEnd
           body="parent &lt;> null"/>
@@ -167,10 +167,10 @@
         href="featureModel.gmfgraph#FEATURE_COMPOSITE_Connection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="../models/featureModel.ecore#//Feature/subCompositeFeatures"/>
+        href="../models/featureModel.ecore#//Feature/containers"/>
     <creationConstraints>
       <sourceEnd
-          body="compositeParent &lt;> null or simpleParent &lt;> null"/>
+          body="containerParent &lt;> null or featureParent &lt;> null"/>
     </creationConstraints>
   </links>
   <links>
@@ -184,7 +184,7 @@
         href="../models/featureModel.ecore#//Feature/attributes"/>
     <creationConstraints>
       <sourceEnd
-          body="compositeParent &lt;> null or simpleParent &lt;> null"/>
+          body="containerParent &lt;> null or featureParent &lt;> null"/>
     </creationConstraints>
   </links>
   <diagram>

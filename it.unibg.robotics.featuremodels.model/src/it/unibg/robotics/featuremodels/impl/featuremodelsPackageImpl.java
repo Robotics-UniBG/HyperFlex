@@ -26,9 +26,9 @@
 package it.unibg.robotics.featuremodels.impl;
 
 import it.unibg.robotics.featuremodels.Attribute;
-import it.unibg.robotics.featuremodels.CompositeFeature;
 import it.unibg.robotics.featuremodels.Constraint;
 import it.unibg.robotics.featuremodels.ConstraintType;
+import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.Instance;
@@ -62,7 +62,7 @@ public class featuremodelsPackageImpl extends EPackageImpl implements featuremod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass compositeFeatureEClass = null;
+	private EClass containmentAssociationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -217,7 +217,7 @@ public class featuremodelsPackageImpl extends EPackageImpl implements featuremod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFeature_SimpleParent() {
+	public EReference getFeature_FeatureParent() {
 		return (EReference)featureEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -226,7 +226,7 @@ public class featuremodelsPackageImpl extends EPackageImpl implements featuremod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFeature_SubCompositeFeatures() {
+	public EReference getFeature_Containers() {
 		return (EReference)featureEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -235,7 +235,7 @@ public class featuremodelsPackageImpl extends EPackageImpl implements featuremod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFeature_CompositeParent() {
+	public EReference getFeature_ContainerParent() {
 		return (EReference)featureEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -271,8 +271,8 @@ public class featuremodelsPackageImpl extends EPackageImpl implements featuremod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCompositeFeature() {
-		return compositeFeatureEClass;
+	public EClass getContainmentAssociation() {
+		return containmentAssociationEClass;
 	}
 
 	/**
@@ -280,8 +280,8 @@ public class featuremodelsPackageImpl extends EPackageImpl implements featuremod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCompositeFeature_SubFeatures() {
-		return (EReference)compositeFeatureEClass.getEStructuralFeatures().get(0);
+	public EReference getContainmentAssociation_SubFeatures() {
+		return (EReference)containmentAssociationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -289,8 +289,8 @@ public class featuremodelsPackageImpl extends EPackageImpl implements featuremod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCompositeFeature_Parent() {
-		return (EReference)compositeFeatureEClass.getEStructuralFeatures().get(1);
+	public EReference getContainmentAssociation_Parent() {
+		return (EReference)containmentAssociationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -298,8 +298,8 @@ public class featuremodelsPackageImpl extends EPackageImpl implements featuremod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCompositeFeature_UpperBound() {
-		return (EAttribute)compositeFeatureEClass.getEStructuralFeatures().get(2);
+	public EAttribute getContainmentAssociation_UpperBound() {
+		return (EAttribute)containmentAssociationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -307,8 +307,8 @@ public class featuremodelsPackageImpl extends EPackageImpl implements featuremod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCompositeFeature_LowerBound() {
-		return (EAttribute)compositeFeatureEClass.getEStructuralFeatures().get(3);
+	public EAttribute getContainmentAssociation_LowerBound() {
+		return (EAttribute)containmentAssociationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -515,18 +515,18 @@ public class featuremodelsPackageImpl extends EPackageImpl implements featuremod
 		createEAttribute(featureEClass, FEATURE__ROOT);
 		createEAttribute(featureEClass, FEATURE__REQUIRED);
 		createEReference(featureEClass, FEATURE__SUB_FEATURES);
-		createEReference(featureEClass, FEATURE__SIMPLE_PARENT);
-		createEReference(featureEClass, FEATURE__SUB_COMPOSITE_FEATURES);
-		createEReference(featureEClass, FEATURE__COMPOSITE_PARENT);
+		createEReference(featureEClass, FEATURE__FEATURE_PARENT);
+		createEReference(featureEClass, FEATURE__CONTAINERS);
+		createEReference(featureEClass, FEATURE__CONTAINER_PARENT);
 		createEAttribute(featureEClass, FEATURE__LOWER_BOUND);
 		createEAttribute(featureEClass, FEATURE__UPPER_BOUND);
 		createEReference(featureEClass, FEATURE__ATTRIBUTES);
 
-		compositeFeatureEClass = createEClass(COMPOSITE_FEATURE);
-		createEReference(compositeFeatureEClass, COMPOSITE_FEATURE__SUB_FEATURES);
-		createEReference(compositeFeatureEClass, COMPOSITE_FEATURE__PARENT);
-		createEAttribute(compositeFeatureEClass, COMPOSITE_FEATURE__UPPER_BOUND);
-		createEAttribute(compositeFeatureEClass, COMPOSITE_FEATURE__LOWER_BOUND);
+		containmentAssociationEClass = createEClass(CONTAINMENT_ASSOCIATION);
+		createEReference(containmentAssociationEClass, CONTAINMENT_ASSOCIATION__SUB_FEATURES);
+		createEReference(containmentAssociationEClass, CONTAINMENT_ASSOCIATION__PARENT);
+		createEAttribute(containmentAssociationEClass, CONTAINMENT_ASSOCIATION__UPPER_BOUND);
+		createEAttribute(containmentAssociationEClass, CONTAINMENT_ASSOCIATION__LOWER_BOUND);
 
 		featureModelEClass = createEClass(FEATURE_MODEL);
 		createEReference(featureModelEClass, FEATURE_MODEL__ROOT_FEATURE);
@@ -590,19 +590,19 @@ public class featuremodelsPackageImpl extends EPackageImpl implements featuremod
 		initEAttribute(getFeature_Name(), ecorePackage.getEString(), "name", "", 1, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeature_Root(), ecorePackage.getEBoolean(), "root", "FALSE", 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeature_Required(), ecorePackage.getEBoolean(), "required", "FALSE", 1, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeature_SubFeatures(), this.getFeature(), this.getFeature_SimpleParent(), "subFeatures", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeature_SimpleParent(), this.getFeature(), this.getFeature_SubFeatures(), "simpleParent", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeature_SubCompositeFeatures(), this.getCompositeFeature(), this.getCompositeFeature_Parent(), "subCompositeFeatures", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeature_CompositeParent(), this.getCompositeFeature(), this.getCompositeFeature_SubFeatures(), "compositeParent", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeature_SubFeatures(), this.getFeature(), this.getFeature_FeatureParent(), "subFeatures", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeature_FeatureParent(), this.getFeature(), this.getFeature_SubFeatures(), "featureParent", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeature_Containers(), this.getContainmentAssociation(), this.getContainmentAssociation_Parent(), "containers", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeature_ContainerParent(), this.getContainmentAssociation(), this.getContainmentAssociation_SubFeatures(), "containerParent", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeature_LowerBound(), ecorePackage.getEInt(), "lowerBound", null, 1, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeature_UpperBound(), ecorePackage.getEInt(), "upperBound", "1", 1, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFeature_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(compositeFeatureEClass, CompositeFeature.class, "CompositeFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCompositeFeature_SubFeatures(), this.getFeature(), this.getFeature_CompositeParent(), "subFeatures", null, 0, -1, CompositeFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCompositeFeature_Parent(), this.getFeature(), this.getFeature_SubCompositeFeatures(), "parent", null, 0, 1, CompositeFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCompositeFeature_UpperBound(), ecorePackage.getEInt(), "upperBound", "-1", 1, 1, CompositeFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCompositeFeature_LowerBound(), ecorePackage.getEInt(), "lowerBound", "1", 1, 1, CompositeFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(containmentAssociationEClass, ContainmentAssociation.class, "ContainmentAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getContainmentAssociation_SubFeatures(), this.getFeature(), this.getFeature_ContainerParent(), "subFeatures", null, 0, -1, ContainmentAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContainmentAssociation_Parent(), this.getFeature(), this.getFeature_Containers(), "parent", null, 0, 1, ContainmentAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContainmentAssociation_UpperBound(), ecorePackage.getEInt(), "upperBound", "-1", 1, 1, ContainmentAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContainmentAssociation_LowerBound(), ecorePackage.getEInt(), "lowerBound", "1", 1, 1, ContainmentAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(featureModelEClass, FeatureModel.class, "FeatureModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFeatureModel_RootFeature(), this.getFeature(), null, "rootFeature", null, 1, 1, FeatureModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -67,7 +67,7 @@
           figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
-        name="CompositeFeatureBox">
+        name="ContainmentAssociationBox">
       <actualFigure
           xsi:type="gmfgraph:RoundedRectangle"
           name="">
@@ -85,10 +85,11 @@
             right="5"/>
         <children
             xsi:type="gmfgraph:Label"
-            name="CompositeFeatureLabel"
+            name="ContainmentAssociationLabel"
             text=""/>
       </actualFigure>
       <accessors
+          accessor="getFigureContainmentAssociationLabel"
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
@@ -196,8 +197,8 @@
       name="Feature"
       figure="FeatureBox"/>
   <nodes
-      name="CompositeFeature"
-      figure="CompositeFeatureBox"/>
+      name="ContainmentAssociation"
+      figure="ContainmentAssociationBox"/>
   <nodes
       name="Constraint"
       figure="ConstraintBox"/>
@@ -234,8 +235,8 @@
       elementIcon="false"
       accessor="//@figures.0/@descriptors.0/@accessors.0"/>
   <labels
-      name="CompositeFatureLabel"
-      figure="CompositeFeatureBox"
+      name="ContainmentAssociationLabel"
+      figure="ContainmentAssociationBox"
       elementIcon="false"
       accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels

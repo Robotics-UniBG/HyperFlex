@@ -25,9 +25,9 @@
  */
 package it.unibg.robotics.featuremodels.constraints.utility;
 
-import it.unibg.robotics.featuremodels.CompositeFeature;
 import it.unibg.robotics.featuremodels.Constraint;
 import it.unibg.robotics.featuremodels.ConstraintType;
+import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.Instance;
@@ -111,22 +111,22 @@ public class ConstraintChecker {
 		EList<Feature> selectedFeature = currentInstance.getSelectedFeatures();
 		
 		boolean satisfied = true;
-		for (CompositeFeature cf : model.getAllCompositeFeatures()) {
+		for (ContainmentAssociation container : model.getAllContainmentAssociations()) {
 			
-			if( ! selectedFeature.contains(cf.getParent())){
+			if( ! selectedFeature.contains(container.getParent())){
 				continue;
 			}
 			
 			int numSelected = 0;
-			for(Feature feature : cf.getSubFeatures()){
+			for(Feature feature : container.getSubFeatures()){
 				if(selectedFeature.contains(feature)){
 					numSelected++;
 				}
 			}
-			if(numSelected < cf.getLowerBound() || (cf.getUpperBound() != -1 &&
-					numSelected > cf.getUpperBound())){
+			if(numSelected < container.getLowerBound() || (container.getUpperBound() != -1 &&
+					numSelected > container.getUpperBound())){
 				String subFeatures = "";
-				EList<Feature> features = cf.getSubFeatures();
+				EList<Feature> features = container.getSubFeatures();
 				for (int i = 0; i < features.size(); i++) {
 					if(i!=0){
 						subFeatures += ", ";
@@ -136,10 +136,10 @@ public class ConstraintChecker {
 				}
 				MessageDialog.openError(null, "ERROR", 
 						"The number of selected sub-feature doesn't respect the cardinality constraints\n\n" +
-								"Feature: " + cf.getParent().getName() + "\n" +
+								"Feature: " + container.getParent().getName() + "\n" +
 								"Possible Sub-Feature: " + subFeatures + "\n" +
-								"Lower bound: " + cf.getLowerBound() + "\n" +
-								"Upper bound: " + cf.getUpperBound() + "\n" +
+								"Lower bound: " + container.getLowerBound() + "\n" +
+								"Upper bound: " + container.getUpperBound() + "\n" +
 								"Selected sub-feature: " + numSelected + "\n" );
 				satisfied = false;
 			}

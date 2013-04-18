@@ -25,7 +25,7 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.providers;
 
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
@@ -70,7 +70,7 @@ public class FeatureModelModelingAssistantProvider extends
 			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
 			types.add(FeatureModelElementTypes.Feature_2005);
 			types.add(FeatureModelElementTypes.Feature_2006);
-			types.add(FeatureModelElementTypes.CompositeFeature_2007);
+			types.add(FeatureModelElementTypes.ContainmentAssociation_2009);
 			types.add(FeatureModelElementTypes.SimpleAttribute_2008);
 			return types;
 		}
@@ -89,8 +89,8 @@ public class FeatureModelModelingAssistantProvider extends
 		if (sourceEditPart instanceof Feature2EditPart) {
 			return ((Feature2EditPart) sourceEditPart).getMARelTypesOnSource();
 		}
-		if (sourceEditPart instanceof CompositeFeatureEditPart) {
-			return ((CompositeFeatureEditPart) sourceEditPart)
+		if (sourceEditPart instanceof ContainmentAssociationEditPart) {
+			return ((ContainmentAssociationEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
 		return Collections.EMPTY_LIST;
@@ -108,8 +108,8 @@ public class FeatureModelModelingAssistantProvider extends
 		if (targetEditPart instanceof Feature2EditPart) {
 			return ((Feature2EditPart) targetEditPart).getMARelTypesOnTarget();
 		}
-		if (targetEditPart instanceof CompositeFeatureEditPart) {
-			return ((CompositeFeatureEditPart) targetEditPart)
+		if (targetEditPart instanceof ContainmentAssociationEditPart) {
+			return ((ContainmentAssociationEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
 		if (targetEditPart instanceof SimpleAttributeEditPart) {
@@ -136,8 +136,8 @@ public class FeatureModelModelingAssistantProvider extends
 			return ((Feature2EditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
-		if (sourceEditPart instanceof CompositeFeatureEditPart) {
-			return ((CompositeFeatureEditPart) sourceEditPart)
+		if (sourceEditPart instanceof ContainmentAssociationEditPart) {
+			return ((ContainmentAssociationEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
 		return Collections.EMPTY_LIST;
@@ -158,8 +158,8 @@ public class FeatureModelModelingAssistantProvider extends
 			return ((Feature2EditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
-		if (targetEditPart instanceof CompositeFeatureEditPart) {
-			return ((CompositeFeatureEditPart) targetEditPart)
+		if (targetEditPart instanceof ContainmentAssociationEditPart) {
+			return ((ContainmentAssociationEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
 		if (targetEditPart instanceof SimpleAttributeEditPart) {
@@ -184,8 +184,8 @@ public class FeatureModelModelingAssistantProvider extends
 			return ((Feature2EditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
-		if (sourceEditPart instanceof CompositeFeatureEditPart) {
-			return ((CompositeFeatureEditPart) sourceEditPart)
+		if (sourceEditPart instanceof ContainmentAssociationEditPart) {
+			return ((ContainmentAssociationEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		return Collections.EMPTY_LIST;

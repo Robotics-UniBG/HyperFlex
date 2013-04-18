@@ -25,22 +25,22 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.policies;
 
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.CompositeFeatureSubFeatures2CreateCommand;
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.CompositeFeatureSubFeatures2ReorientCommand;
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.CompositeFeatureSubFeaturesCreateCommand;
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.CompositeFeatureSubFeaturesReorientCommand;
+import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationSubFeatures2CreateCommand;
+import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationSubFeatures2ReorientCommand;
+import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationSubFeaturesCreateCommand;
+import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationSubFeaturesReorientCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureAttributesCreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureAttributesReorientCommand;
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubCompositeFeaturesCreateCommand;
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubCompositeFeaturesReorientCommand;
+import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureContainersCreateCommand;
+import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureContainersReorientCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubFeatures2CreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubFeatures2ReorientCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubFeaturesCreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubFeaturesReorientCommand;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeatures2EditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeaturesEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeatures2EditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureAttributesEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubCompositeFeaturesEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureContainersEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelVisualIDRegistry;
@@ -132,7 +132,7 @@ public class Feature2ItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (FeatureModelVisualIDRegistry.getVisualID(incomingLink) == CompositeFeatureSubFeaturesEditPart.VISUAL_ID) {
+			if (FeatureModelVisualIDRegistry.getVisualID(incomingLink) == ContainmentAssociationSubFeaturesEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						incomingLink.getSource().getElement(), null,
 						incomingLink.getTarget().getElement(), false);
@@ -153,7 +153,7 @@ public class Feature2ItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (FeatureModelVisualIDRegistry.getVisualID(incomingLink) == CompositeFeatureSubFeatures2EditPart.VISUAL_ID) {
+			if (FeatureModelVisualIDRegistry.getVisualID(incomingLink) == ContainmentAssociationSubFeatures2EditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						incomingLink.getSource().getElement(), null,
 						incomingLink.getTarget().getElement(), false);
@@ -219,7 +219,7 @@ public class Feature2ItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
-			if (FeatureModelVisualIDRegistry.getVisualID(outgoingLink) == FeatureSubCompositeFeaturesEditPart.VISUAL_ID) {
+			if (FeatureModelVisualIDRegistry.getVisualID(outgoingLink) == FeatureContainersEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						outgoingLink.getSource().getElement(), null,
 						outgoingLink.getTarget().getElement(), false);
@@ -299,18 +299,18 @@ public class Feature2ItemSemanticEditPolicy extends
 			return getGEFWrapper(new FeatureSubFeatures2CreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4009 == req
+		if (FeatureModelElementTypes.ContainmentAssociationSubFeatures_4013 == req
 				.getElementType()) {
 			return null;
 		}
-		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4010 == req
+		if (FeatureModelElementTypes.ContainmentAssociationSubFeatures_4014 == req
 				.getElementType()) {
 			return null;
 		}
-		if (FeatureModelElementTypes.FeatureSubCompositeFeatures_4011 == req
+		if (FeatureModelElementTypes.FeatureContainers_4015 == req
 				.getElementType()) {
-			return getGEFWrapper(new FeatureSubCompositeFeaturesCreateCommand(
-					req, req.getSource(), req.getTarget()));
+			return getGEFWrapper(new FeatureContainersCreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		if (FeatureModelElementTypes.FeatureAttributes_4012 == req
 				.getElementType()) {
@@ -335,17 +335,17 @@ public class Feature2ItemSemanticEditPolicy extends
 			return getGEFWrapper(new FeatureSubFeatures2CreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4009 == req
+		if (FeatureModelElementTypes.ContainmentAssociationSubFeatures_4013 == req
 				.getElementType()) {
-			return getGEFWrapper(new CompositeFeatureSubFeaturesCreateCommand(
+			return getGEFWrapper(new ContainmentAssociationSubFeaturesCreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.CompositeFeatureSubFeatures_4010 == req
+		if (FeatureModelElementTypes.ContainmentAssociationSubFeatures_4014 == req
 				.getElementType()) {
-			return getGEFWrapper(new CompositeFeatureSubFeatures2CreateCommand(
+			return getGEFWrapper(new ContainmentAssociationSubFeatures2CreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.FeatureSubCompositeFeatures_4011 == req
+		if (FeatureModelElementTypes.FeatureContainers_4015 == req
 				.getElementType()) {
 			return null;
 		}
@@ -369,15 +369,14 @@ public class Feature2ItemSemanticEditPolicy extends
 			return getGEFWrapper(new FeatureSubFeaturesReorientCommand(req));
 		case FeatureSubFeatures2EditPart.VISUAL_ID:
 			return getGEFWrapper(new FeatureSubFeatures2ReorientCommand(req));
-		case CompositeFeatureSubFeaturesEditPart.VISUAL_ID:
-			return getGEFWrapper(new CompositeFeatureSubFeaturesReorientCommand(
+		case ContainmentAssociationSubFeaturesEditPart.VISUAL_ID:
+			return getGEFWrapper(new ContainmentAssociationSubFeaturesReorientCommand(
 					req));
-		case CompositeFeatureSubFeatures2EditPart.VISUAL_ID:
-			return getGEFWrapper(new CompositeFeatureSubFeatures2ReorientCommand(
+		case ContainmentAssociationSubFeatures2EditPart.VISUAL_ID:
+			return getGEFWrapper(new ContainmentAssociationSubFeatures2ReorientCommand(
 					req));
-		case FeatureSubCompositeFeaturesEditPart.VISUAL_ID:
-			return getGEFWrapper(new FeatureSubCompositeFeaturesReorientCommand(
-					req));
+		case FeatureContainersEditPart.VISUAL_ID:
+			return getGEFWrapper(new FeatureContainersReorientCommand(req));
 		case FeatureAttributesEditPart.VISUAL_ID:
 			return getGEFWrapper(new FeatureAttributesReorientCommand(req));
 		}

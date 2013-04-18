@@ -1221,6 +1221,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 				MessageDialog.openError(null, "Error", 
 						"You are using at least two system models!!!");
+				return;
 
 			}else{
 				sourceRosArchModel = arch;

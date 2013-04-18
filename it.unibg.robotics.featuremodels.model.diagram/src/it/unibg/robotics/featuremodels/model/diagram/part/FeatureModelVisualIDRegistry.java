@@ -25,11 +25,11 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.part;
 
-import it.unibg.robotics.featuremodels.CompositeFeature;
+import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureLowerBoundUpperBoundEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationLowerBoundUpperBoundEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
@@ -165,10 +165,10 @@ public class FeatureModelVisualIDRegistry {
 				return Feature2EditPart.VISUAL_ID;
 			}
 			if (it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-					.getCompositeFeature()
-					.isSuperTypeOf(domainElement.eClass())
-					&& isCompositeFeature_2007((CompositeFeature) domainElement)) {
-				return CompositeFeatureEditPart.VISUAL_ID;
+					.getContainmentAssociation().isSuperTypeOf(
+							domainElement.eClass())
+					&& isContainmentAssociation_2009((ContainmentAssociation) domainElement)) {
+				return ContainmentAssociationEditPart.VISUAL_ID;
 			}
 			if (it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 					.getSimpleAttribute().isSuperTypeOf(domainElement.eClass())) {
@@ -207,7 +207,7 @@ public class FeatureModelVisualIDRegistry {
 			if (Feature2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (CompositeFeatureEditPart.VISUAL_ID == nodeVisualID) {
+			if (ContainmentAssociationEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (SimpleAttributeEditPart.VISUAL_ID == nodeVisualID) {
@@ -224,8 +224,8 @@ public class FeatureModelVisualIDRegistry {
 				return true;
 			}
 			break;
-		case CompositeFeatureEditPart.VISUAL_ID:
-			if (CompositeFeatureLowerBoundUpperBoundEditPart.VISUAL_ID == nodeVisualID) {
+		case ContainmentAssociationEditPart.VISUAL_ID:
+			if (ContainmentAssociationLowerBoundUpperBoundEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -283,12 +283,13 @@ public class FeatureModelVisualIDRegistry {
 	/**
 	 * @generated
 	 */
-	private static boolean isCompositeFeature_2007(
-			CompositeFeature domainElement) {
+	private static boolean isContainmentAssociation_2009(
+			ContainmentAssociation domainElement) {
 		Object result = FeatureModelOCLFactory.getExpression(
 				2,
 				it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-						.getCompositeFeature(), null).evaluate(domainElement);
+						.getContainmentAssociation(), null).evaluate(
+				domainElement);
 		return result instanceof Boolean && ((Boolean) result).booleanValue();
 	}
 
@@ -321,8 +322,8 @@ public class FeatureModelVisualIDRegistry {
 			return false;
 		case FeatureEditPart.VISUAL_ID:
 		case Feature2EditPart.VISUAL_ID:
-		case CompositeFeatureEditPart.VISUAL_ID:
 		case SimpleAttributeEditPart.VISUAL_ID:
+		case ContainmentAssociationEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

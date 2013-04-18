@@ -25,15 +25,15 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.policies;
 
-import it.unibg.robotics.featuremodels.impl.CompositeFeatureImpl;
+import it.unibg.robotics.featuremodels.impl.ContainmentAssociationImpl;
 import it.unibg.robotics.featuremodels.impl.FeatureImpl;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeatures2EditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeaturesEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeatures2EditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureContainersEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubCompositeFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.SimpleAttributeEditPart;
@@ -137,7 +137,7 @@ public class FeatureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		switch (visualID) {
 		case FeatureEditPart.VISUAL_ID:
 		case Feature2EditPart.VISUAL_ID:
-		case CompositeFeatureEditPart.VISUAL_ID:
+		case ContainmentAssociationEditPart.VISUAL_ID:
 		case SimpleAttributeEditPart.VISUAL_ID:
 			return true;
 		}
@@ -337,16 +337,16 @@ public class FeatureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 							linkDescriptorsIterator.remove();
 							remove = true;
 						}
-					} else if (nextLinkDescriptor.getSource() instanceof CompositeFeatureImpl) {
-						CompositeFeatureImpl dest = (CompositeFeatureImpl) nextLinkDescriptor
+					} else if (nextLinkDescriptor.getSource() instanceof ContainmentAssociationImpl) {
+						ContainmentAssociationImpl dest = (ContainmentAssociationImpl) nextLinkDescriptor
 								.getDestination();
-						if (visualId != FeatureSubCompositeFeaturesEditPart.VISUAL_ID) {
+						if (visualId != FeatureContainersEditPart.VISUAL_ID) {
 							linkDescriptorsIterator.remove();
 							remove = true;
 						}
 					}
-				} else if (nextLinkDescriptor.getSource() instanceof CompositeFeatureImpl) {
-					CompositeFeatureImpl src = (CompositeFeatureImpl) nextLinkDescriptor
+				} else if (nextLinkDescriptor.getSource() instanceof ContainmentAssociationImpl) {
+					ContainmentAssociationImpl src = (ContainmentAssociationImpl) nextLinkDescriptor
 							.getSource();
 					FeatureImpl dest = (FeatureImpl) nextLinkDescriptor
 							.getDestination();
@@ -355,12 +355,12 @@ public class FeatureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 					int ub = src.getUpperBound();
 					boolean req = dest.isRequired();
 					if (req == false) {
-						if (visualId != CompositeFeatureSubFeaturesEditPart.VISUAL_ID) {
+						if (visualId != ContainmentAssociationSubFeaturesEditPart.VISUAL_ID) {
 							linkDescriptorsIterator.remove();
 							remove = true;
 						}
 					} else {
-						if (visualId != CompositeFeatureSubFeatures2EditPart.VISUAL_ID) {
+						if (visualId != ContainmentAssociationSubFeatures2EditPart.VISUAL_ID) {
 							linkDescriptorsIterator.remove();
 							remove = true;
 						}
@@ -411,10 +411,10 @@ public class FeatureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case CompositeFeatureEditPart.VISUAL_ID: {
+		case ContainmentAssociationEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(FeatureModelDiagramUpdater
-						.getCompositeFeature_2007ContainedLinks(view));
+						.getContainmentAssociation_2009ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

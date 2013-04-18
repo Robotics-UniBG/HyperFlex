@@ -69,7 +69,7 @@ http://www.eclipse.org/legal/epl-v10.html
   	  <wizard
   	     name="%newWizardName"
   	     icon="icons/fd.ico"
-  	     category="it.robotics.unibg.varp.wizard.category"
+  	     category="it.robotics.unibg.featuremodels.wizard.category"
   	     class="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelCreationWizard"
   	     id="it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelCreationWizardID">
   	  	 <description>%newWizardDesc</description>  
@@ -242,8 +242,8 @@ http://www.eclipse.org/legal/epl-v10.html
       <viewProvider class="it.unibg.robotics.featuremodels.model.diagram.providers.FeatureModelViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="FeatureModel"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2005,2006,2007,2008"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4007,4008,4009,4010,4011,4012"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2005,2006,2009,2008"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4007,4008,4013,4014,4015,4012"/>
       </viewProvider>
    </extension>
 
@@ -255,13 +255,13 @@ http://www.eclipse.org/legal/epl-v10.html
             <method name="getType()" value="FeatureModel"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2005,2006,2007,2008"/>
+            <method name="getType()" value="2005,2006,2009,2008"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4007,4008,4009,4010,4011,4012"/>
+            <method name="getType()" value="4007,4008,4013,4014,4015,4012"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5005,5006,5007,5008"/>
+            <method name="getType()" value="5005,5006,5009,5008"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value=""/>
@@ -277,9 +277,9 @@ http://www.eclipse.org/legal/epl-v10.html
          <object class="it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart" id="FeatureModel_1000"/>
          <object class="it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureEditPart" id="Feature_2005"/>
          <object class="it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart" id="Feature_2006"/>
-         <object class="it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureEditPart" id="CompositeFeature_2007"/>
+         <object class="it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationEditPart" id="ContainmentAssociation_2009"/>
          <object class="it.unibg.robotics.featuremodels.model.diagram.edit.parts.SimpleAttributeEditPart" id="SimpleAttribute_2008"/>
-         <context elements="FeatureModel_1000,Feature_2005,Feature_2006,CompositeFeature_2007,SimpleAttribute_2008,"/>
+         <context elements="FeatureModel_1000,Feature_2005,Feature_2006,ContainmentAssociation_2009,SimpleAttribute_2008,"/>
       </modelingAssistantProvider>
    </extension>
 
@@ -330,12 +330,12 @@ http://www.eclipse.org/legal/epl-v10.html
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/featuremodels">
          <metamodelType
-               id="it.unibg.robotics.featuremodels.model.diagram.CompositeFeature_2007"
-               name="%metatype.name.CompositeFeature_2007"
+               id="it.unibg.robotics.featuremodels.model.diagram.ContainmentAssociation_2009"
+               name="%metatype.name.ContainmentAssociation_2009"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="CompositeFeature"
-               edithelper="it.unibg.robotics.featuremodels.model.diagram.edit.helpers.CompositeFeatureEditHelper">
-            <param name="semanticHint" value="2007"/>
+               eclass="ContainmentAssociation"
+               edithelper="it.unibg.robotics.featuremodels.model.diagram.edit.helpers.ContainmentAssociationEditHelper">
+            <param name="semanticHint" value="2009"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/featuremodels">
@@ -368,29 +368,29 @@ http://www.eclipse.org/legal/epl-v10.html
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/featuremodels">
          <specializationType
-               id="it.unibg.robotics.featuremodels.model.diagram.CompositeFeatureSubFeatures_4009"
-               name="%metatype.name.CompositeFeatureSubFeatures_4009"
+               id="it.unibg.robotics.featuremodels.model.diagram.ContainmentAssociationSubFeatures_4013"
+               name="%metatype.name.ContainmentAssociationSubFeatures_4013"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4009"/>
+            <param name="semanticHint" value="4013"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/featuremodels">
          <specializationType
-               id="it.unibg.robotics.featuremodels.model.diagram.CompositeFeatureSubFeatures_4010"
-               name="%metatype.name.CompositeFeatureSubFeatures_4010"
+               id="it.unibg.robotics.featuremodels.model.diagram.ContainmentAssociationSubFeatures_4014"
+               name="%metatype.name.ContainmentAssociationSubFeatures_4014"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4010"/>
+            <param name="semanticHint" value="4014"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/featuremodels">
          <specializationType
-               id="it.unibg.robotics.featuremodels.model.diagram.FeatureSubCompositeFeatures_4011"
-               name="%metatype.name.FeatureSubCompositeFeatures_4011"
+               id="it.unibg.robotics.featuremodels.model.diagram.FeatureContainers_4015"
+               name="%metatype.name.FeatureContainers_4015"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4011"/>
+            <param name="semanticHint" value="4015"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/featuremodels">
@@ -417,13 +417,13 @@ http://www.eclipse.org/legal/epl-v10.html
          <elementType ref="it.unibg.robotics.featuremodels.model.diagram.FeatureModel_1000"/>
          <elementType ref="it.unibg.robotics.featuremodels.model.diagram.Feature_2005"/>
          <elementType ref="it.unibg.robotics.featuremodels.model.diagram.Feature_2006"/>
-         <elementType ref="it.unibg.robotics.featuremodels.model.diagram.CompositeFeature_2007"/>
+         <elementType ref="it.unibg.robotics.featuremodels.model.diagram.ContainmentAssociation_2009"/>
          <elementType ref="it.unibg.robotics.featuremodels.model.diagram.SimpleAttribute_2008"/>
          <elementType ref="it.unibg.robotics.featuremodels.model.diagram.FeatureSubFeatures_4007"/>
          <elementType ref="it.unibg.robotics.featuremodels.model.diagram.FeatureSubFeatures_4008"/>
-         <elementType ref="it.unibg.robotics.featuremodels.model.diagram.CompositeFeatureSubFeatures_4009"/>
-         <elementType ref="it.unibg.robotics.featuremodels.model.diagram.CompositeFeatureSubFeatures_4010"/>
-         <elementType ref="it.unibg.robotics.featuremodels.model.diagram.FeatureSubCompositeFeatures_4011"/>
+         <elementType ref="it.unibg.robotics.featuremodels.model.diagram.ContainmentAssociationSubFeatures_4013"/>
+         <elementType ref="it.unibg.robotics.featuremodels.model.diagram.ContainmentAssociationSubFeatures_4014"/>
+         <elementType ref="it.unibg.robotics.featuremodels.model.diagram.FeatureContainers_4015"/>
          <elementType ref="it.unibg.robotics.featuremodels.model.diagram.FeatureAttributes_4012"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>

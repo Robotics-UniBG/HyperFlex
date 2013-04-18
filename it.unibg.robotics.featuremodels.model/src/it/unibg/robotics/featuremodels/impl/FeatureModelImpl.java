@@ -25,8 +25,8 @@
  */
 package it.unibg.robotics.featuremodels.impl;
 
-import it.unibg.robotics.featuremodels.CompositeFeature;
 import it.unibg.robotics.featuremodels.Constraint;
+import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.Instance;
@@ -380,11 +380,11 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 				searchSubFeatures(subFeature, list);
 			}
 		}
-		if(feature.getSubCompositeFeatures().size()!=0){
-			EList<CompositeFeature> subCompositeFeatures = feature.getSubCompositeFeatures();
-			for (Iterator<CompositeFeature> iterator = subCompositeFeatures.iterator(); iterator.hasNext();) {
-				CompositeFeature compositeFeature = iterator.next();
-				searchSubFeatures(compositeFeature, list);
+		if(feature.getContainers().size()!=0){
+			EList<ContainmentAssociation> containers = feature.getContainers();
+			for (Iterator<ContainmentAssociation> iterator = containers.iterator(); iterator.hasNext();) {
+				ContainmentAssociation container = iterator.next();
+				searchSubFeatures(container, list);
 			}
 		}
 	}
@@ -392,11 +392,11 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 	/**
 	 * @generated NOT
 	 */
-	private void searchSubFeatures(CompositeFeature compositeFeature, ArrayList<Feature> list){
-		if(compositeFeature.getSubFeatures().size()==0){
+	private void searchSubFeatures(ContainmentAssociation container, ArrayList<Feature> list){
+		if(container.getSubFeatures().size()==0){
 			return;
 		}else{
-			EList<Feature> subFeatures = compositeFeature.getSubFeatures();
+			EList<Feature> subFeatures = container.getSubFeatures();
 			for (Iterator<Feature> iterator = subFeatures.iterator(); iterator.hasNext();) {
 				Feature subFeature = iterator.next();
 				searchSubFeatures(subFeature, list);
@@ -407,30 +407,30 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 	/**
 	 * @generated NOT
 	 */
-	public ArrayList<CompositeFeature> getAllCompositeFeatures(){
-		ArrayList<CompositeFeature> list = new ArrayList<CompositeFeature>();
+	public ArrayList<ContainmentAssociation> getAllContainmentAssociations(){
+		ArrayList<ContainmentAssociation> list = new ArrayList<ContainmentAssociation>();
 		Feature root = getRootFeature();
-		searchSubCompositeFeatures(root, list);
+		searchContainmentAssociations(root, list);
 		return list;
 	}
 
 	/**
 	 * @generated NOT
 	 */
-	private void searchSubCompositeFeatures(Feature feature, ArrayList<CompositeFeature> list){
+	private void searchContainmentAssociations(Feature feature, ArrayList<ContainmentAssociation> list){
 		if(feature.getSubFeatures().size()!=0){
 			EList<Feature> subFeatures = feature.getSubFeatures();
 			for (Iterator<Feature> iterator = subFeatures.iterator(); iterator.hasNext();) {
 				Feature subFeature = iterator.next();
-				searchSubCompositeFeatures(subFeature, list);
+				searchContainmentAssociations(subFeature, list);
 			}
 		}
-		if(feature.getSubCompositeFeatures().size()!=0){
-			EList<CompositeFeature> subCompositeFeatures = feature.getSubCompositeFeatures();
-			for (Iterator<CompositeFeature> iterator = subCompositeFeatures.iterator(); iterator.hasNext();) {
-				CompositeFeature compositeFeature = iterator.next();
-				list.add(compositeFeature);
-				searchSubCompositeFeatures(compositeFeature, list);
+		if(feature.getContainers().size()!=0){
+			EList<ContainmentAssociation> containers = feature.getContainers();
+			for (Iterator<ContainmentAssociation> iterator = containers.iterator(); iterator.hasNext();) {
+				ContainmentAssociation container = iterator.next();
+				list.add(container);
+				searchContainmentAssociations(container, list);
 			}
 		}
 	}
@@ -438,14 +438,14 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 	/**
 	 * @generated NOT
 	 */
-	private void searchSubCompositeFeatures(CompositeFeature compositeFeature, ArrayList<CompositeFeature> list){
-		if(compositeFeature.getSubFeatures().size()==0){
+	private void searchContainmentAssociations(ContainmentAssociation container, ArrayList<ContainmentAssociation> list){
+		if(container.getSubFeatures().size()==0){
 			return;
 		}else{
-			EList<Feature> subFeatures = compositeFeature.getSubFeatures();
+			EList<Feature> subFeatures = container.getSubFeatures();
 			for (Iterator<Feature> iterator = subFeatures.iterator(); iterator.hasNext();) {
 				Feature subFeature = iterator.next();
-				searchSubCompositeFeatures(subFeature, list);
+				searchContainmentAssociations(subFeature, list);
 			}
 		}
 	}
@@ -473,11 +473,11 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 				searchRequiredSubFeatures(subFeature, list);
 			}
 		}
-		if(feature.getSubCompositeFeatures().size()!=0){
-			EList<CompositeFeature> subCompositeFeatures = feature.getSubCompositeFeatures();
-			for (Iterator<CompositeFeature> iterator = subCompositeFeatures.iterator(); iterator.hasNext();) {
-				CompositeFeature compositeFeature = iterator.next();
-				searchRequiredSubFeatures(compositeFeature, list);
+		if(feature.getContainers().size()!=0){
+			EList<ContainmentAssociation> subCompositeFeatures = feature.getContainers();
+			for (Iterator<ContainmentAssociation> iterator = subCompositeFeatures.iterator(); iterator.hasNext();) {
+				ContainmentAssociation container = iterator.next();
+				searchRequiredSubFeatures(container, list);
 			}
 		}
 	}
@@ -485,11 +485,11 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 	/**
 	 * @generated NOT
 	 */
-	private void searchRequiredSubFeatures(CompositeFeature compositeFeature, ArrayList<Feature> list){
-		if(compositeFeature.getSubFeatures().size()==0){
+	private void searchRequiredSubFeatures(ContainmentAssociation container, ArrayList<Feature> list){
+		if(container.getSubFeatures().size()==0){
 			return;
 		}else{
-			EList<Feature> subFeatures = compositeFeature.getSubFeatures();
+			EList<Feature> subFeatures = container.getSubFeatures();
 			for (Iterator<Feature> iterator = subFeatures.iterator(); iterator.hasNext();) {
 				Feature subFeature = iterator.next();
 				searchRequiredSubFeatures(subFeature, list);

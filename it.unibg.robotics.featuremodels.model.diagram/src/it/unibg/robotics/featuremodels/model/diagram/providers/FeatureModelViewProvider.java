@@ -25,17 +25,17 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.providers;
 
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureLowerBoundUpperBoundEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeatures2EditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.CompositeFeatureSubFeaturesEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationLowerBoundUpperBoundEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeatures2EditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureAttributesEditPart;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureContainersEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureName2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureNameEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubCompositeFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.SimpleAttributeEditPart;
@@ -176,7 +176,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 				}
 				switch (visualID) {
 				case FeatureEditPart.VISUAL_ID:
-				case CompositeFeatureEditPart.VISUAL_ID:
+				case ContainmentAssociationEditPart.VISUAL_ID:
 				case SimpleAttributeEditPart.VISUAL_ID:
 				case Feature2EditPart.VISUAL_ID:
 					if (domainElement == null
@@ -193,7 +193,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		}
 		return FeatureEditPart.VISUAL_ID == visualID
 				|| Feature2EditPart.VISUAL_ID == visualID
-				|| CompositeFeatureEditPart.VISUAL_ID == visualID
+				|| ContainmentAssociationEditPart.VISUAL_ID == visualID
 				|| SimpleAttributeEditPart.VISUAL_ID == visualID;
 	}
 
@@ -258,9 +258,9 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		case Feature2EditPart.VISUAL_ID:
 			return createFeature_2006(domainElement, containerView, index,
 					persisted, preferencesHint);
-		case CompositeFeatureEditPart.VISUAL_ID:
-			return createCompositeFeature_2007(domainElement, containerView,
-					index, persisted, preferencesHint);
+		case ContainmentAssociationEditPart.VISUAL_ID:
+			return createContainmentAssociation_2009(domainElement,
+					containerView, index, persisted, preferencesHint);
 		case SimpleAttributeEditPart.VISUAL_ID:
 			return createSimpleAttribute_2008(domainElement, containerView,
 					index, persisted, preferencesHint);
@@ -284,14 +284,14 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		case FeatureSubFeatures2EditPart.VISUAL_ID:
 			return createFeatureSubFeatures_4008(containerView, index,
 					persisted, preferencesHint);
-		case CompositeFeatureSubFeaturesEditPart.VISUAL_ID:
-			return createCompositeFeatureSubFeatures_4009(containerView, index,
-					persisted, preferencesHint);
-		case CompositeFeatureSubFeatures2EditPart.VISUAL_ID:
-			return createCompositeFeatureSubFeatures_4010(containerView, index,
-					persisted, preferencesHint);
-		case FeatureSubCompositeFeaturesEditPart.VISUAL_ID:
-			return createFeatureSubCompositeFeatures_4011(containerView, index,
+		case ContainmentAssociationSubFeaturesEditPart.VISUAL_ID:
+			return createContainmentAssociationSubFeatures_4013(containerView,
+					index, persisted, preferencesHint);
+		case ContainmentAssociationSubFeatures2EditPart.VISUAL_ID:
+			return createContainmentAssociationSubFeatures_4014(containerView,
+					index, persisted, preferencesHint);
+		case FeatureContainersEditPart.VISUAL_ID:
+			return createFeatureContainers_4015(containerView, index,
 					persisted, preferencesHint);
 		case FeatureAttributesEditPart.VISUAL_ID:
 			return createFeatureAttributes_4012(containerView, index,
@@ -396,7 +396,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createCompositeFeature_2007(EObject domainElement,
+	public Node createContainmentAssociation_2009(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -406,7 +406,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(FeatureModelVisualIDRegistry
-				.getType(CompositeFeatureEditPart.VISUAL_ID));
+				.getType(ContainmentAssociationEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -433,10 +433,10 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5007 = createLabel(
+		Node label5009 = createLabel(
 				node,
 				FeatureModelVisualIDRegistry
-						.getType(CompositeFeatureLowerBoundUpperBoundEditPart.VISUAL_ID));
+						.getType(ContainmentAssociationLowerBoundUpperBoundEditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -593,8 +593,9 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createCompositeFeatureSubFeatures_4009(View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
+	public Edge createContainmentAssociationSubFeatures_4013(
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
@@ -607,7 +608,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(FeatureModelVisualIDRegistry
-				.getType(CompositeFeatureSubFeaturesEditPart.VISUAL_ID));
+				.getType(ContainmentAssociationSubFeaturesEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -645,8 +646,9 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createCompositeFeatureSubFeatures_4010(View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
+	public Edge createContainmentAssociationSubFeatures_4014(
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
@@ -659,7 +661,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(FeatureModelVisualIDRegistry
-				.getType(CompositeFeatureSubFeatures2EditPart.VISUAL_ID));
+				.getType(ContainmentAssociationSubFeatures2EditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -697,8 +699,8 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createFeatureSubCompositeFeatures_4011(View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
+	public Edge createFeatureContainers_4015(View containerView, int index,
+			boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
@@ -711,7 +713,7 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(FeatureModelVisualIDRegistry
-				.getType(FeatureSubCompositeFeaturesEditPart.VISUAL_ID));
+				.getType(FeatureContainersEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint

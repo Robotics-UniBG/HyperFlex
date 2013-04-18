@@ -65,17 +65,17 @@ public class FeatureModelOCLFactory {
 		this.expressions = new FeatureModelAbstractExpression[13];
 		this.expressionBodies = new String[] { "root = true", //$NON-NLS-1$
 				"root = false", //$NON-NLS-1$
-				"oclIsTypeOf(CompositeFeature)", //$NON-NLS-1$
-				"simpleParent <> null or root = true", //$NON-NLS-1$
+				"oclIsTypeOf(ContainmentAssociation)", //$NON-NLS-1$
+				"featureParent <> null or root = true", //$NON-NLS-1$
 				"required = false", //$NON-NLS-1$
-				"simpleParent <> null or root = true", //$NON-NLS-1$
+				"featureParent <> null or root = true", //$NON-NLS-1$
 				"required = true ", //$NON-NLS-1$
 				"parent <> null", //$NON-NLS-1$
 				"required = false", //$NON-NLS-1$
 				"parent <> null", //$NON-NLS-1$
 				"required = true", //$NON-NLS-1$
-				"compositeParent <> null or simpleParent <> null", //$NON-NLS-1$
-				"compositeParent <> null or simpleParent <> null", //$NON-NLS-1$
+				"containerParent <> null or featureParent <> null", //$NON-NLS-1$
+				"containerParent <> null or featureParent <> null", //$NON-NLS-1$
 		};
 	}
 

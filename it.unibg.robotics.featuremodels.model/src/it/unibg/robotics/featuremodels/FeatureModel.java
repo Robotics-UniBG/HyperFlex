@@ -154,7 +154,7 @@ public interface FeatureModel extends EObject {
 	/**
 	 * @generated NOT
 	 */
-	public ArrayList<CompositeFeature> getAllCompositeFeatures();
+	public ArrayList<ContainmentAssociation> getAllContainmentAssociations();
 	
 	/**
 	 * @generated NOT

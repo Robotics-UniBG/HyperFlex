@@ -54,13 +54,13 @@ public interface featuremodelsFactory extends EFactory {
 	Feature createFeature();
 
 	/**
-	 * Returns a new object of class '<em>Composite Feature</em>'.
+	 * Returns a new object of class '<em>Containment Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Composite Feature</em>'.
+	 * @return a new object of class '<em>Containment Association</em>'.
 	 * @generated
 	 */
-	CompositeFeature createCompositeFeature();
+	ContainmentAssociation createContainmentAssociation();
 
 	/**
 	 * Returns a new object of class '<em>Feature Model</em>'.

@@ -126,31 +126,31 @@ public interface featuremodelsPackage extends EPackage {
 	int FEATURE__SUB_FEATURES = 3;
 
 	/**
-	 * The feature id for the '<em><b>Simple Parent</b></em>' container reference.
+	 * The feature id for the '<em><b>Feature Parent</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__SIMPLE_PARENT = 4;
+	int FEATURE__FEATURE_PARENT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Sub Composite Features</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Containers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__SUB_COMPOSITE_FEATURES = 5;
+	int FEATURE__CONTAINERS = 5;
 
 	/**
-	 * The feature id for the '<em><b>Composite Parent</b></em>' container reference.
+	 * The feature id for the '<em><b>Container Parent</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE__COMPOSITE_PARENT = 6;
+	int FEATURE__CONTAINER_PARENT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Lower Bound</b></em>' attribute.
@@ -189,14 +189,14 @@ public interface featuremodelsPackage extends EPackage {
 	int FEATURE_FEATURE_COUNT = 10;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.featuremodels.impl.CompositeFeatureImpl <em>Composite Feature</em>}' class.
+	 * The meta object id for the '{@link it.unibg.robotics.featuremodels.impl.ContainmentAssociationImpl <em>Containment Association</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.featuremodels.impl.CompositeFeatureImpl
-	 * @see it.unibg.robotics.featuremodels.impl.featuremodelsPackageImpl#getCompositeFeature()
+	 * @see it.unibg.robotics.featuremodels.impl.ContainmentAssociationImpl
+	 * @see it.unibg.robotics.featuremodels.impl.featuremodelsPackageImpl#getContainmentAssociation()
 	 * @generated
 	 */
-	int COMPOSITE_FEATURE = 1;
+	int CONTAINMENT_ASSOCIATION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Sub Features</b></em>' containment reference list.
@@ -205,7 +205,7 @@ public interface featuremodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_FEATURE__SUB_FEATURES = 0;
+	int CONTAINMENT_ASSOCIATION__SUB_FEATURES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -214,7 +214,7 @@ public interface featuremodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_FEATURE__PARENT = 1;
+	int CONTAINMENT_ASSOCIATION__PARENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Upper Bound</b></em>' attribute.
@@ -223,7 +223,7 @@ public interface featuremodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_FEATURE__UPPER_BOUND = 2;
+	int CONTAINMENT_ASSOCIATION__UPPER_BOUND = 2;
 
 	/**
 	 * The feature id for the '<em><b>Lower Bound</b></em>' attribute.
@@ -232,16 +232,16 @@ public interface featuremodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_FEATURE__LOWER_BOUND = 3;
+	int CONTAINMENT_ASSOCIATION__LOWER_BOUND = 3;
 
 	/**
-	 * The number of structural features of the '<em>Composite Feature</em>' class.
+	 * The number of structural features of the '<em>Containment Association</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_FEATURE_FEATURE_COUNT = 4;
+	int CONTAINMENT_ASSOCIATION_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.featuremodels.impl.FeatureModelImpl <em>Feature Model</em>}' class.
@@ -530,37 +530,37 @@ public interface featuremodelsPackage extends EPackage {
 	EReference getFeature_SubFeatures();
 
 	/**
-	 * Returns the meta object for the container reference '{@link it.unibg.robotics.featuremodels.Feature#getSimpleParent <em>Simple Parent</em>}'.
+	 * Returns the meta object for the container reference '{@link it.unibg.robotics.featuremodels.Feature#getFeatureParent <em>Feature Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Simple Parent</em>'.
-	 * @see it.unibg.robotics.featuremodels.Feature#getSimpleParent()
+	 * @return the meta object for the container reference '<em>Feature Parent</em>'.
+	 * @see it.unibg.robotics.featuremodels.Feature#getFeatureParent()
 	 * @see #getFeature()
 	 * @generated
 	 */
-	EReference getFeature_SimpleParent();
+	EReference getFeature_FeatureParent();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.featuremodels.Feature#getSubCompositeFeatures <em>Sub Composite Features</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.featuremodels.Feature#getContainers <em>Containers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub Composite Features</em>'.
-	 * @see it.unibg.robotics.featuremodels.Feature#getSubCompositeFeatures()
+	 * @return the meta object for the containment reference list '<em>Containers</em>'.
+	 * @see it.unibg.robotics.featuremodels.Feature#getContainers()
 	 * @see #getFeature()
 	 * @generated
 	 */
-	EReference getFeature_SubCompositeFeatures();
+	EReference getFeature_Containers();
 
 	/**
-	 * Returns the meta object for the container reference '{@link it.unibg.robotics.featuremodels.Feature#getCompositeParent <em>Composite Parent</em>}'.
+	 * Returns the meta object for the container reference '{@link it.unibg.robotics.featuremodels.Feature#getContainerParent <em>Container Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Composite Parent</em>'.
-	 * @see it.unibg.robotics.featuremodels.Feature#getCompositeParent()
+	 * @return the meta object for the container reference '<em>Container Parent</em>'.
+	 * @see it.unibg.robotics.featuremodels.Feature#getContainerParent()
 	 * @see #getFeature()
 	 * @generated
 	 */
-	EReference getFeature_CompositeParent();
+	EReference getFeature_ContainerParent();
 
 	/**
 	 * Returns the meta object for the attribute '{@link it.unibg.robotics.featuremodels.Feature#getLowerBound <em>Lower Bound</em>}'.
@@ -596,58 +596,58 @@ public interface featuremodelsPackage extends EPackage {
 	EReference getFeature_Attributes();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.featuremodels.CompositeFeature <em>Composite Feature</em>}'.
+	 * Returns the meta object for class '{@link it.unibg.robotics.featuremodels.ContainmentAssociation <em>Containment Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Composite Feature</em>'.
-	 * @see it.unibg.robotics.featuremodels.CompositeFeature
+	 * @return the meta object for class '<em>Containment Association</em>'.
+	 * @see it.unibg.robotics.featuremodels.ContainmentAssociation
 	 * @generated
 	 */
-	EClass getCompositeFeature();
+	EClass getContainmentAssociation();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.featuremodels.CompositeFeature#getSubFeatures <em>Sub Features</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.featuremodels.ContainmentAssociation#getSubFeatures <em>Sub Features</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Sub Features</em>'.
-	 * @see it.unibg.robotics.featuremodels.CompositeFeature#getSubFeatures()
-	 * @see #getCompositeFeature()
+	 * @see it.unibg.robotics.featuremodels.ContainmentAssociation#getSubFeatures()
+	 * @see #getContainmentAssociation()
 	 * @generated
 	 */
-	EReference getCompositeFeature_SubFeatures();
+	EReference getContainmentAssociation_SubFeatures();
 
 	/**
-	 * Returns the meta object for the container reference '{@link it.unibg.robotics.featuremodels.CompositeFeature#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the container reference '{@link it.unibg.robotics.featuremodels.ContainmentAssociation#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see it.unibg.robotics.featuremodels.CompositeFeature#getParent()
-	 * @see #getCompositeFeature()
+	 * @see it.unibg.robotics.featuremodels.ContainmentAssociation#getParent()
+	 * @see #getContainmentAssociation()
 	 * @generated
 	 */
-	EReference getCompositeFeature_Parent();
+	EReference getContainmentAssociation_Parent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.featuremodels.CompositeFeature#getUpperBound <em>Upper Bound</em>}'.
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.featuremodels.ContainmentAssociation#getUpperBound <em>Upper Bound</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Upper Bound</em>'.
-	 * @see it.unibg.robotics.featuremodels.CompositeFeature#getUpperBound()
-	 * @see #getCompositeFeature()
+	 * @see it.unibg.robotics.featuremodels.ContainmentAssociation#getUpperBound()
+	 * @see #getContainmentAssociation()
 	 * @generated
 	 */
-	EAttribute getCompositeFeature_UpperBound();
+	EAttribute getContainmentAssociation_UpperBound();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.featuremodels.CompositeFeature#getLowerBound <em>Lower Bound</em>}'.
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.featuremodels.ContainmentAssociation#getLowerBound <em>Lower Bound</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Lower Bound</em>'.
-	 * @see it.unibg.robotics.featuremodels.CompositeFeature#getLowerBound()
-	 * @see #getCompositeFeature()
+	 * @see it.unibg.robotics.featuremodels.ContainmentAssociation#getLowerBound()
+	 * @see #getContainmentAssociation()
 	 * @generated
 	 */
-	EAttribute getCompositeFeature_LowerBound();
+	EAttribute getContainmentAssociation_LowerBound();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.featuremodels.FeatureModel <em>Feature Model</em>}'.
@@ -917,28 +917,28 @@ public interface featuremodelsPackage extends EPackage {
 		EReference FEATURE__SUB_FEATURES = eINSTANCE.getFeature_SubFeatures();
 
 		/**
-		 * The meta object literal for the '<em><b>Simple Parent</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Feature Parent</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FEATURE__SIMPLE_PARENT = eINSTANCE.getFeature_SimpleParent();
+		EReference FEATURE__FEATURE_PARENT = eINSTANCE.getFeature_FeatureParent();
 
 		/**
-		 * The meta object literal for the '<em><b>Sub Composite Features</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Containers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FEATURE__SUB_COMPOSITE_FEATURES = eINSTANCE.getFeature_SubCompositeFeatures();
+		EReference FEATURE__CONTAINERS = eINSTANCE.getFeature_Containers();
 
 		/**
-		 * The meta object literal for the '<em><b>Composite Parent</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Container Parent</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FEATURE__COMPOSITE_PARENT = eINSTANCE.getFeature_CompositeParent();
+		EReference FEATURE__CONTAINER_PARENT = eINSTANCE.getFeature_ContainerParent();
 
 		/**
 		 * The meta object literal for the '<em><b>Lower Bound</b></em>' attribute feature.
@@ -965,14 +965,14 @@ public interface featuremodelsPackage extends EPackage {
 		EReference FEATURE__ATTRIBUTES = eINSTANCE.getFeature_Attributes();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.featuremodels.impl.CompositeFeatureImpl <em>Composite Feature</em>}' class.
+		 * The meta object literal for the '{@link it.unibg.robotics.featuremodels.impl.ContainmentAssociationImpl <em>Containment Association</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.featuremodels.impl.CompositeFeatureImpl
-		 * @see it.unibg.robotics.featuremodels.impl.featuremodelsPackageImpl#getCompositeFeature()
+		 * @see it.unibg.robotics.featuremodels.impl.ContainmentAssociationImpl
+		 * @see it.unibg.robotics.featuremodels.impl.featuremodelsPackageImpl#getContainmentAssociation()
 		 * @generated
 		 */
-		EClass COMPOSITE_FEATURE = eINSTANCE.getCompositeFeature();
+		EClass CONTAINMENT_ASSOCIATION = eINSTANCE.getContainmentAssociation();
 
 		/**
 		 * The meta object literal for the '<em><b>Sub Features</b></em>' containment reference list feature.
@@ -980,7 +980,7 @@ public interface featuremodelsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPOSITE_FEATURE__SUB_FEATURES = eINSTANCE.getCompositeFeature_SubFeatures();
+		EReference CONTAINMENT_ASSOCIATION__SUB_FEATURES = eINSTANCE.getContainmentAssociation_SubFeatures();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
@@ -988,7 +988,7 @@ public interface featuremodelsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPOSITE_FEATURE__PARENT = eINSTANCE.getCompositeFeature_Parent();
+		EReference CONTAINMENT_ASSOCIATION__PARENT = eINSTANCE.getContainmentAssociation_Parent();
 
 		/**
 		 * The meta object literal for the '<em><b>Upper Bound</b></em>' attribute feature.
@@ -996,7 +996,7 @@ public interface featuremodelsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPOSITE_FEATURE__UPPER_BOUND = eINSTANCE.getCompositeFeature_UpperBound();
+		EAttribute CONTAINMENT_ASSOCIATION__UPPER_BOUND = eINSTANCE.getContainmentAssociation_UpperBound();
 
 		/**
 		 * The meta object literal for the '<em><b>Lower Bound</b></em>' attribute feature.
@@ -1004,7 +1004,7 @@ public interface featuremodelsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPOSITE_FEATURE__LOWER_BOUND = eINSTANCE.getCompositeFeature_LowerBound();
+		EAttribute CONTAINMENT_ASSOCIATION__LOWER_BOUND = eINSTANCE.getContainmentAssociation_LowerBound();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.featuremodels.impl.FeatureModelImpl <em>Feature Model</em>}' class.
