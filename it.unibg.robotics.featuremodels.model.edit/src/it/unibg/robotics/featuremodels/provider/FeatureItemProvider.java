@@ -128,7 +128,7 @@ public class FeatureItemProvider
 				 getString("_UI_Feature_root_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Feature_root_feature", "_UI_Feature_type"),
 				 featuremodelsPackage.Literals.FEATURE__ROOT,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,

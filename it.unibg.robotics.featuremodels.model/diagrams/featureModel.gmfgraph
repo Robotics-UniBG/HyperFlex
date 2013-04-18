@@ -177,7 +177,7 @@
             xsi:type="gmfgraph:StackLayout"/>
         <backgroundColor
             xsi:type="gmfgraph:ConstantColor"
-            value="lightGray"/>
+            value="cyan"/>
         <preferredSize
             dx="75"
             dy="20"/>

@@ -141,6 +141,7 @@
         visualID="2009"
         editPartClassName="ContainmentAssociationEditPart"
         itemSemanticEditPolicyClassName="ContainmentAssociationItemSemanticEditPolicy"
+        notationViewFactoryClassName="ContainmentAssociationViewFactory"
         canonicalEditPolicyClassName="ContainmentAssociationCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="ContainmentAssociationGraphicalNodeEditPolicy"
         createCommandClassName="ContainmentAssociationCreateCommand">
@@ -170,6 +171,7 @@
           visualID="5009"
           editPartClassName="ContainmentAssociationLowerBoundUpperBoundEditPart"
           itemSemanticEditPolicyClassName="ContainmentAssociationLowerBoundUpperBoundItemSemanticEditPolicy"
+          notationViewFactoryClassName="ContainmentAssociationLowerBoundUpperBoundViewFactory"
           readOnly="true">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -204,7 +206,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="AttributeBox"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class AttributeBox extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureAttributeLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public AttributeBox() {&#xA;&#x9;&#x9;this.setLayoutManager(new org.eclipse.draw2d.StackLayout());&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightGray);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(75)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureAttributeLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureAttributeLabel.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureAttributeLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureAttributeLabel() {&#xA;&#x9;&#x9;return fFigureAttributeLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class AttributeBox extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureAttributeLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public AttributeBox() {&#xA;&#x9;&#x9;this.setLayoutManager(new org.eclipse.draw2d.StackLayout());&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.cyan);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(75)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureAttributeLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureAttributeLabel.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureAttributeLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureAttributeLabel() {&#xA;&#x9;&#x9;return fFigureAttributeLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
             fixedBackground="true"/>
@@ -288,6 +290,7 @@
         visualID="4013"
         editPartClassName="ContainmentAssociationSubFeaturesEditPart"
         itemSemanticEditPolicyClassName="ContainmentAssociationSubFeaturesItemSemanticEditPolicy"
+        notationViewFactoryClassName="ContainmentAssociationSubFeaturesViewFactory"
         createCommandClassName="ContainmentAssociationSubFeaturesCreateCommand"
         reorientCommandClassName="ContainmentAssociationSubFeaturesReorientCommand">
       <diagramRunTimeClass
@@ -311,6 +314,7 @@
         visualID="4014"
         editPartClassName="ContainmentAssociationSubFeatures2EditPart"
         itemSemanticEditPolicyClassName="ContainmentAssociationSubFeatures2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="ContainmentAssociationSubFeaturesViewFactory"
         createCommandClassName="ContainmentAssociationSubFeatures2CreateCommand"
         reorientCommandClassName="ContainmentAssociationSubFeatures2ReorientCommand">
       <diagramRunTimeClass
@@ -334,6 +338,7 @@
         visualID="4015"
         editPartClassName="FeatureContainersEditPart"
         itemSemanticEditPolicyClassName="FeatureContainersItemSemanticEditPolicy"
+        notationViewFactoryClassName="FeatureContainersViewFactory"
         createCommandClassName="FeatureContainersCreateCommand"
         reorientCommandClassName="FeatureContainersReorientCommand">
       <diagramRunTimeClass
@@ -379,15 +384,18 @@
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Feature"
+            smallIconPath="icons/Feature.gif"
             genNodes="//@diagram/@topLevelNodes.0 //@diagram/@topLevelNodes.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Containment Association"
+            smallIconPath="icons/ContainmentAssociation.gif"
             genNodes="//@diagram/@topLevelNodes.2"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="Attribute"
+            title="Simple Attribute"
             description=""
+            smallIconPath="icons/SimpleAttribute.gif"
             genNodes="//@diagram/@topLevelNodes.3"/>
       </groups>
       <groups
@@ -395,6 +403,7 @@
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Connection"
+            smallIconPath="icons/Connection.gif"
             genLinks="//@diagram/@links.0 //@diagram/@links.1 //@diagram/@links.2 //@diagram/@links.3 //@diagram/@links.4 //@diagram/@links.5"/>
       </groups>
     </palette>

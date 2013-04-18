@@ -386,7 +386,8 @@ public class ContainmentAssociationEditPart extends ShapeNodeEditPart {
 
 			fFigureContainmentAssociationLabel = new WrappingLabel();
 			fFigureContainmentAssociationLabel.setText("");
-			fFigureContainmentAssociationLabel.setAlignment(PositionConstants.CENTER);
+			fFigureContainmentAssociationLabel
+					.setAlignment(PositionConstants.CENTER);
 			fFigureContainmentAssociationLabel.setTextWrap(true);
 
 			this.add(fFigureContainmentAssociationLabel);

@@ -25,6 +25,7 @@
  */
 package it.unibg.robotics.featuremodels.util;
 
+import it.unibg.robotics.featuremodels.*;
 import it.unibg.robotics.featuremodels.Attribute;
 import it.unibg.robotics.featuremodels.Constraint;
 import it.unibg.robotics.featuremodels.ContainmentAssociation;

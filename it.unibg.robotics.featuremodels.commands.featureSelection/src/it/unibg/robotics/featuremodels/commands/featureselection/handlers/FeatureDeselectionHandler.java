@@ -77,7 +77,7 @@ public class FeatureDeselectionHandler extends AbstractHandler {
 				//FeatureModel model = featureEditPart.getFeatureModel();
 				instance = featureEditPart.getFeatureModel().getSelectedInstance();
 				if(instance == null){
-					MessageDialog.openWarning(null, "Warning", 
+					MessageDialog.openWarning(window.getShell(), "Warning", 
 					"You have to select an instance!!!");
 					return null;
 				}
@@ -97,12 +97,10 @@ public class FeatureDeselectionHandler extends AbstractHandler {
 			}
 		}
 
-
-		
-		MessageDialog.openInformation(
-				window.getShell(),
-				"Feature Selection",
-				"Feature Removed");
+//		MessageDialog.openInformation(
+//				window.getShell(),
+//				"Feature Selection",
+//				"Feature Removed");
 		return null;
 	}
 }

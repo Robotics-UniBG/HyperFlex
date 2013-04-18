@@ -288,12 +288,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Attribute3CreationTool_title;
+	public static String SimpleAttribute3CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Attribute3CreationTool_desc;
+	public static String SimpleAttribute3CreationTool_desc;
 
 	/**
 	 * @generated

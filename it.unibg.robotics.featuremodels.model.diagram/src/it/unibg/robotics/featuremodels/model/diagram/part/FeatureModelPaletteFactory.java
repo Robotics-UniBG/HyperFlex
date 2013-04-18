@@ -63,7 +63,7 @@ public class FeatureModelPaletteFactory {
 		paletteContainer.setId("createNodes1Group"); //$NON-NLS-1$
 		paletteContainer.add(createFeature1CreationTool());
 		paletteContainer.add(createContainmentAssociation2CreationTool());
-		paletteContainer.add(createAttribute3CreationTool());
+		paletteContainer.add(createSimpleAttribute3CreationTool());
 		return paletteContainer;
 	}
 
@@ -89,8 +89,8 @@ public class FeatureModelPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Feature1CreationTool_title, null, types);
 		entry.setId("createFeature1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(FeatureModelElementTypes
-				.getImageDescriptor(FeatureModelElementTypes.Feature_2005));
+		entry.setSmallIcon(FeatureModelDiagramEditorPlugin
+				.findImageDescriptor("icons/Feature.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -105,8 +105,8 @@ public class FeatureModelPaletteFactory {
 				Collections
 						.singletonList(FeatureModelElementTypes.ContainmentAssociation_2009));
 		entry.setId("createContainmentAssociation2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(FeatureModelElementTypes
-				.getImageDescriptor(FeatureModelElementTypes.ContainmentAssociation_2009));
+		entry.setSmallIcon(FeatureModelDiagramEditorPlugin
+				.findImageDescriptor("icons/ContainmentAssociation.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -114,15 +114,15 @@ public class FeatureModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createAttribute3CreationTool() {
+	private ToolEntry createSimpleAttribute3CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Attribute3CreationTool_title,
-				Messages.Attribute3CreationTool_desc,
+				Messages.SimpleAttribute3CreationTool_title,
+				Messages.SimpleAttribute3CreationTool_desc,
 				Collections
 						.singletonList(FeatureModelElementTypes.SimpleAttribute_2008));
-		entry.setId("createAttribute3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(FeatureModelElementTypes
-				.getImageDescriptor(FeatureModelElementTypes.SimpleAttribute_2008));
+		entry.setId("createSimpleAttribute3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(FeatureModelDiagramEditorPlugin
+				.findImageDescriptor("icons/SimpleAttribute.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -141,8 +141,8 @@ public class FeatureModelPaletteFactory {
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.Connection1CreationTool_title, null, types);
 		entry.setId("createConnection1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(FeatureModelElementTypes
-				.getImageDescriptor(FeatureModelElementTypes.FeatureSubFeatures_4007));
+		entry.setSmallIcon(FeatureModelDiagramEditorPlugin
+				.findImageDescriptor("icons/Connection.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

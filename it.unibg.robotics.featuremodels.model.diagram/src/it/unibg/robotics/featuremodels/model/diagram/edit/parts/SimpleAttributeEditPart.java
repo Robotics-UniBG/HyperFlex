@@ -321,7 +321,7 @@ public class SimpleAttributeEditPart extends ShapeNodeEditPart {
 			this.setLayoutManager(new StackLayout());
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
 					getMapMode().DPtoLP(8)));
-			this.setBackgroundColor(ColorConstants.lightGray);
+			this.setBackgroundColor(ColorConstants.cyan);
 			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(75),
 					getMapMode().DPtoLP(20)));
 

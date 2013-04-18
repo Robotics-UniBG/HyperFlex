@@ -12,21 +12,41 @@
         title="Nodes">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Feature"/>
+          title="Feature">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Feature.gif"
+            bundle=""/>
+      </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Containment Association"/>
+          title="Containment Association">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/ContainmentAssociation.gif"
+            bundle=""/>
+      </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Attribute"
-          description=""/>
+          title="Simple Attribute"
+          description="">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/SimpleAttribute.gif"
+            bundle=""/>
+      </tools>
     </tools>
     <tools
         xsi:type="gmftool:ToolGroup"
         title="Connections">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Connection"/>
+          title="Connection">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Connection.gif"
+            bundle=""/>
+      </tools>
     </tools>
   </palette>
 </gmftool:ToolRegistry>
