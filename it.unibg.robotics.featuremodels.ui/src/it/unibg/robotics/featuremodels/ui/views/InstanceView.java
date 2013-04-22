@@ -381,11 +381,16 @@ public class InstanceView extends ViewPart implements ISelectionListener, Proper
 
 		InputDialog idDialog = new InputDialog(null, "Instance id", 
 				"Define instance id", "", validator);
-		idDialog.open();
+		if(idDialog.open() == InputDialog.CANCEL){
+			return;
+		}
 		final String id = idDialog.getValue();
+
 		InputDialog descriptionDialog = new InputDialog(null, "Instance description", 
 				"Define instance description", "", validator);
-		descriptionDialog.open();
+		if(descriptionDialog.open() == InputDialog.CANCEL){
+			return;
+		}
 		final String instDescription = descriptionDialog.getValue();
 
 		editingDomain.getCommandStack().execute(new RecordingCommand(editingDomain){
@@ -432,7 +437,7 @@ public class InstanceView extends ViewPart implements ISelectionListener, Proper
 
 	private void selectInstance(){
 
-		
+
 		ISelection selection = viewer.getSelection();
 		if(selection instanceof StructuredSelection){
 			StructuredSelection structuredSel = (StructuredSelection)selection;
@@ -444,8 +449,8 @@ public class InstanceView extends ViewPart implements ISelectionListener, Proper
 						null,
 						"Instance Selection",
 						"Instance " + instance.getId() + " selected as working instance");
-//				MessageDialog.openWarning(null, "Message", 
-//						"Instance " + instance.getId() + " selected as working instance");
+				//				MessageDialog.openWarning(null, "Message", 
+				//						"Instance " + instance.getId() + " selected as working instance");
 				updateAllFigures();
 
 				viewer.refresh();
@@ -473,7 +478,7 @@ public class InstanceView extends ViewPart implements ISelectionListener, Proper
 			MessageDialog.openInformation(null, "Selection validation", 
 					"All the constraints are satisfied");
 		}
-	
+
 	}
 
 	private void addAllMandatoryFeaures(Instance instance, FeatureModel model){
