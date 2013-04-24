@@ -29,6 +29,7 @@ import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.Instance;
 import it.unibg.robotics.featuremodels.featuremodelsPackage;
+import it.unibg.robotics.featuremodels.constraints.utility.ConstraintChecker;
 import it.unibg.robotics.resolutionmodels.RMAbstractTransformation;
 import it.unibg.robotics.resolutionmodels.RMResolutionElement;
 import it.unibg.robotics.resolutionmodels.ResolutionModel;
@@ -184,16 +185,6 @@ public class ROSResolutionHandler extends AbstractHandler {
 					return null;
 				}
 
-				
-				cloneRosArchitecture(sourceRosArchModel, sourceRosPackModels);
-
-				/* 
-				 * Creating a copy is not enough
-				 * We have to fill the hashtables
-				 */ 
-				//				targetOrocosModel = EcoreUtil.copy(sourceRttModel);
-
-
 				Instance instance;
 
 				if(sourceFeatureModel.getInstances().size() < 1){
@@ -212,6 +203,23 @@ public class ROSResolutionHandler extends AbstractHandler {
 					return null;
 				}
 				instance = (Instance)instanceDialog.getResult()[0];
+				sourceFeatureModel.setSelectedInstance(instance);
+				
+				ConstraintChecker cc = new ConstraintChecker(sourceFeatureModel);
+				if(cc.checkConstraints()){
+					MessageDialog.openInformation(null, "Selection validation", 
+							"All the constraints are satisfied, the model will be generated");
+				}else{
+					return null;
+				}
+				
+				cloneRosArchitecture(sourceRosArchModel, sourceRosPackModels);
+
+				/* 
+				 * Creating a copy is not enough
+				 * We have to fill the hashtables
+				 */ 
+				//				targetOrocosModel = EcoreUtil.copy(sourceRttModel);
 
 				doTransformation(instance);
 
@@ -1214,19 +1222,21 @@ public class ROSResolutionHandler extends AbstractHandler {
 	 * Set the target architecture model starting from a possible target
 	 * It checks if the possible target is not null and if more than one system model as been defined as source.
 	 */
-	private void setTargetArchitectureModelIfNotNullAndDuplicated(Architecture arch){
+	private boolean setTargetArchitectureModelIfNotNullAndDuplicated(Architecture arch){
 		
 		if(arch != null){
 			if(sourceRosArchModel != null && arch != sourceRosArchModel){
 
-				MessageDialog.openError(null, "Error", 
-						"You are using at least two system models!!!");
-				return;
+//				MessageDialog.openError(null, "Error", 
+//						"You are using at least two system models!!!");
+				return false;
 
 			}else{
 				sourceRosArchModel = arch;
+				return true;
 			}
 		}
+		return false;
 		
 	}
 

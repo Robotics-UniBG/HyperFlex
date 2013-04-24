@@ -29,6 +29,7 @@ import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.Instance;
 import it.unibg.robotics.featuremodels.featuremodelsPackage;
+import it.unibg.robotics.featuremodels.constraints.utility.ConstraintChecker;
 import it.unibg.robotics.resolutionmodels.RMAbstractTransformation;
 import it.unibg.robotics.resolutionmodels.RMResolutionElement;
 import it.unibg.robotics.resolutionmodels.ResolutionModel;
@@ -154,17 +155,8 @@ public class RTTResolutionHandler extends AbstractHandler {
 					return null;
 				}
 				
-				cloneRttPackage(sourceRttModel);
-
-				/* 
-				 * Creating a copy is not enough
-				 * We have to fill the hashtables
-				 */ 
-				//				targetOrocosModel = EcoreUtil.copy(sourceRttModel);
-
-
 				Instance instance;
-				
+
 				if(sourceFeatureModel.getInstances().size() < 1){
 					MessageDialog.openWarning(null, "Warning", 
 							"You have to create at least an instance!!!");
@@ -181,6 +173,23 @@ public class RTTResolutionHandler extends AbstractHandler {
 					return null;
 				}
 				instance = (Instance)instanceDialog.getResult()[0];
+				sourceFeatureModel.setSelectedInstance(instance);
+				
+				ConstraintChecker cc = new ConstraintChecker(sourceFeatureModel);
+				if(cc.checkConstraints()){
+					MessageDialog.openInformation(null, "Selection validation", 
+							"All the constraints are satisfied, the model will be generated");
+				}else{
+					return null;
+				}
+				
+				cloneRttPackage(sourceRttModel);
+
+				/* 
+				 * Creating a copy is not enough
+				 * We have to fill the hashtables
+				 */ 
+				//				targetOrocosModel = EcoreUtil.copy(sourceRttModel);
 				
 				doTransformation(instance);
 
