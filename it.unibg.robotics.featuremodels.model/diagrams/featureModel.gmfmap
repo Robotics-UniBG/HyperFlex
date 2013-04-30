@@ -51,30 +51,30 @@
           href="featureModel.gmftool#//@palette/@tools.0/@tools.0"/>
       <diagramNode
           href="featureModel.gmfgraph#Feature"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <ownedChild>
-      <domainMetaElement
-          href="../models/featureModel.ecore#//ContainmentAssociation"/>
-      <domainSpecialization
-          body="oclIsTypeOf(ContainmentAssociation)"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping"
-          readOnly="true"
-          viewPattern="{0} ... {1}">
-        <diagramLabel
-            href="featureModel.gmfgraph#ContainmentAssociationLabel"/>
-        <features
-            href="../models/featureModel.ecore#//ContainmentAssociation/lowerBound"/>
-        <features
-            href="../models/featureModel.ecore#//ContainmentAssociation/upperBound"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="featureModel.gmftool#//@palette/@tools.0/@tools.1"/>
-      <diagramNode
-          href="featureModel.gmfgraph#ContainmentAssociation"/>
+      <children>
+        <containmentFeature
+            href="../models/featureModel.ecore#//Feature/containers"/>
+        <ownedChild>
+          <domainMetaElement
+              href="../models/featureModel.ecore#//ContainmentAssociation"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping"
+              readOnly="true"
+              viewPattern="{0} ... {1}">
+            <diagramLabel
+                href="featureModel.gmfgraph#ContainmentAssociationTriangleLabel"/>
+            <features
+                href="../models/featureModel.ecore#//ContainmentAssociation/lowerBound"/>
+            <features
+                href="../models/featureModel.ecore#//ContainmentAssociation/upperBound"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="featureModel.gmftool#//@palette/@tools.0/@tools.1"/>
+          <diagramNode
+              href="featureModel.gmfgraph#ContainmentAssociationTriangle"/>
+        </ownedChild>
+      </children>
     </ownedChild>
   </nodes>
   <nodes>
@@ -157,20 +157,6 @@
           body="parent &lt;> null"/>
       <targetEnd
           body="required = true"/>
-    </creationConstraints>
-  </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="featureModel.gmftool#//@palette/@tools.1/@tools.0"/>
-    <diagramLink
-        href="featureModel.gmfgraph#FEATURE_COMPOSITE_Connection"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="../models/featureModel.ecore#//Feature/containers"/>
-    <creationConstraints>
-      <sourceEnd
-          body="containerParent &lt;> null or featureParent &lt;> null"/>
     </creationConstraints>
   </links>
   <links>

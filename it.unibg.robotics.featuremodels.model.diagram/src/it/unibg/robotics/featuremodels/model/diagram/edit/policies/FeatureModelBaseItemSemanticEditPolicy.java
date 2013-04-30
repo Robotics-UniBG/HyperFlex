@@ -436,26 +436,6 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateFeatureContainers_4015(Feature source,
-				ContainmentAssociation target) {
-			if (source != null) {
-				if (source.getContainers().contains(target)) {
-					return false;
-				}
-				if (source == target) {
-					return false;
-				}
-			}
-			if (target != null && (target.getParent() != null)) {
-				return false;
-			}
-
-			return canExistFeatureContainers_4015(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
 		public boolean canCreateFeatureAttributes_4012(Feature source,
 				Attribute target) {
 			if (source != null) {
@@ -484,7 +464,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
 					Object sourceVal = FeatureModelOCLFactory
 							.getExpression(
-									3,
+									2,
 									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 											.getFeature(), env).evaluate(
 									source,
@@ -503,7 +483,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
 					Object targetVal = FeatureModelOCLFactory
 							.getExpression(
-									4,
+									3,
 									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 											.getFeature(), env).evaluate(
 									target,
@@ -536,7 +516,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
 					Object sourceVal = FeatureModelOCLFactory
 							.getExpression(
-									5,
+									4,
 									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 											.getFeature(), env).evaluate(
 									source,
@@ -555,7 +535,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
 					Object targetVal = FeatureModelOCLFactory
 							.getExpression(
-									6,
+									5,
 									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 											.getFeature(), env).evaluate(
 									target,
@@ -588,7 +568,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
 					Object sourceVal = FeatureModelOCLFactory
 							.getExpression(
-									7,
+									6,
 									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 											.getContainmentAssociation(), env)
 							.evaluate(
@@ -608,7 +588,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getContainmentAssociation()); //$NON-NLS-1$
 					Object targetVal = FeatureModelOCLFactory
 							.getExpression(
-									8,
+									7,
 									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 											.getFeature(), env).evaluate(
 									target,
@@ -641,7 +621,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getFeature()); //$NON-NLS-1$
 					Object sourceVal = FeatureModelOCLFactory
 							.getExpression(
-									9,
+									8,
 									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 											.getContainmentAssociation(), env)
 							.evaluate(
@@ -661,7 +641,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getContainmentAssociation()); //$NON-NLS-1$
 					Object targetVal = FeatureModelOCLFactory
 							.getExpression(
-									10,
+									9,
 									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 											.getFeature(), env).evaluate(
 									target,
@@ -669,39 +649,6 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 											"oppositeEnd", source)); //$NON-NLS-1$
 					if (false == targetVal instanceof Boolean
 							|| !((Boolean) targetVal).booleanValue()) {
-						return false;
-					} // else fall-through
-				}
-				return true;
-			} catch (Exception e) {
-				FeatureModelDiagramEditorPlugin.getInstance().logError(
-						"Link constraint evaluation error", e); //$NON-NLS-1$
-				return false;
-			}
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistFeatureContainers_4015(Feature source,
-				ContainmentAssociation target) {
-			try {
-				if (source == null) {
-					return true;
-				} else {
-					Map<String, EClassifier> env = Collections
-							.<String, EClassifier> singletonMap(
-									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getContainmentAssociation()); //$NON-NLS-1$
-					Object sourceVal = FeatureModelOCLFactory
-							.getExpression(
-									11,
-									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-											.getFeature(), env).evaluate(
-									source,
-									Collections.singletonMap(
-											"oppositeEnd", target)); //$NON-NLS-1$
-					if (false == sourceVal instanceof Boolean
-							|| !((Boolean) sourceVal).booleanValue()) {
 						return false;
 					} // else fall-through
 				}
@@ -727,7 +674,7 @@ public class FeatureModelBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 									"oppositeEnd", it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE.getAttribute()); //$NON-NLS-1$
 					Object sourceVal = FeatureModelOCLFactory
 							.getExpression(
-									12,
+									10,
 									it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 											.getFeature(), env).evaluate(
 									source,

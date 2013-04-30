@@ -26,12 +26,12 @@
 package it.unibg.robotics.featuremodels.model.diagram.edit.commands;
 
 import it.unibg.robotics.featuremodels.ContainmentAssociation;
+import it.unibg.robotics.featuremodels.Feature;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.common.core.command.ICommand;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
@@ -70,6 +70,7 @@ public class ContainmentAssociationCreateCommand extends EditElementCommand {
 	 */
 	public boolean canExecute() {
 		return true;
+
 	}
 
 	/**
@@ -77,17 +78,11 @@ public class ContainmentAssociationCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		// Uncomment to put "phantom" objects into the diagram file.		
-		// org.eclipse.emf.ecore.resource.Resource resource = 
-		// 		((org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest) getRequest()).getContainer().eResource();
-		// if (resource == null) {
-		// 	return null;
-		// }
-		Resource resource = getElementToEdit().eResource();
 		ContainmentAssociation newElement = it.unibg.robotics.featuremodels.featuremodelsFactory.eINSTANCE
 				.createContainmentAssociation();
 
-		resource.getContents().add(newElement);
+		Feature owner = (Feature) getElementToEdit();
+		owner.getContainers().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

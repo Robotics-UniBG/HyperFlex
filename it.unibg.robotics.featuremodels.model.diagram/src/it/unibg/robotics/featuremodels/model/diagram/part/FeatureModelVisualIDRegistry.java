@@ -25,7 +25,6 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.part;
 
-import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationEditPart;
@@ -165,14 +164,15 @@ public class FeatureModelVisualIDRegistry {
 				return Feature2EditPart.VISUAL_ID;
 			}
 			if (it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-					.getContainmentAssociation().isSuperTypeOf(
-							domainElement.eClass())
-					&& isContainmentAssociation_2009((ContainmentAssociation) domainElement)) {
-				return ContainmentAssociationEditPart.VISUAL_ID;
-			}
-			if (it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
 					.getSimpleAttribute().isSuperTypeOf(domainElement.eClass())) {
 				return SimpleAttributeEditPart.VISUAL_ID;
+			}
+			break;
+		case Feature2EditPart.VISUAL_ID:
+			if (it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+					.getContainmentAssociation().isSuperTypeOf(
+							domainElement.eClass())) {
+				return ContainmentAssociationEditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -207,9 +207,6 @@ public class FeatureModelVisualIDRegistry {
 			if (Feature2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (ContainmentAssociationEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			if (SimpleAttributeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -223,14 +220,17 @@ public class FeatureModelVisualIDRegistry {
 			if (FeatureName2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			break;
-		case ContainmentAssociationEditPart.VISUAL_ID:
-			if (ContainmentAssociationLowerBoundUpperBoundEditPart.VISUAL_ID == nodeVisualID) {
+			if (ContainmentAssociationEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case SimpleAttributeEditPart.VISUAL_ID:
 			if (SimpleAttributeNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case ContainmentAssociationEditPart.VISUAL_ID:
+			if (ContainmentAssociationLowerBoundUpperBoundEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -283,19 +283,6 @@ public class FeatureModelVisualIDRegistry {
 	/**
 	 * @generated
 	 */
-	private static boolean isContainmentAssociation_2009(
-			ContainmentAssociation domainElement) {
-		Object result = FeatureModelOCLFactory.getExpression(
-				2,
-				it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-						.getContainmentAssociation(), null).evaluate(
-				domainElement);
-		return result instanceof Boolean && ((Boolean) result).booleanValue();
-	}
-
-	/**
-	 * @generated
-	 */
 	public static boolean checkNodeVisualID(View containerView,
 			EObject domainElement, int candidate) {
 		if (candidate == -1) {
@@ -321,7 +308,6 @@ public class FeatureModelVisualIDRegistry {
 		case FeatureModelEditPart.VISUAL_ID:
 			return false;
 		case FeatureEditPart.VISUAL_ID:
-		case Feature2EditPart.VISUAL_ID:
 		case SimpleAttributeEditPart.VISUAL_ID:
 		case ContainmentAssociationEditPart.VISUAL_ID:
 			return true;

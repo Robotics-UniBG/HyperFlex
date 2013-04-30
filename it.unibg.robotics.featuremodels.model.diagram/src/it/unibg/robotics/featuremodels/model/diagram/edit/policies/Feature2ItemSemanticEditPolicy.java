@@ -25,22 +25,21 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.policies;
 
+import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationCreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationSubFeatures2CreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationSubFeatures2ReorientCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationSubFeaturesCreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationSubFeaturesReorientCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureAttributesCreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureAttributesReorientCommand;
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureContainersCreateCommand;
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureContainersReorientCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubFeatures2CreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubFeatures2ReorientCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubFeaturesCreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubFeaturesReorientCommand;
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureAttributesEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureContainersEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelVisualIDRegistry;
@@ -56,15 +55,18 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.common.core.command.CommandResult;
+import org.eclipse.gmf.runtime.common.core.command.ICompositeCommand;
 import org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand;
 import org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand;
 import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand;
+import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 import org.eclipse.gmf.runtime.notation.Edge;
+import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
 /**
@@ -78,6 +80,17 @@ public class Feature2ItemSemanticEditPolicy extends
 	 */
 	public Feature2ItemSemanticEditPolicy() {
 		super(FeatureModelElementTypes.Feature_2006);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected Command getCreateCommand(CreateElementRequest req) {
+		if (FeatureModelElementTypes.ContainmentAssociation_3001 == req
+				.getElementType()) {
+			return getGEFWrapper(new ContainmentAssociationCreateCommand(req));
+		}
+		return super.getCreateCommand(req);
 	}
 
 	/**
@@ -219,27 +232,6 @@ public class Feature2ItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
-			if (FeatureModelVisualIDRegistry.getVisualID(outgoingLink) == FeatureContainersEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						outgoingLink.getSource().getElement(), null,
-						outgoingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r) {
-					protected CommandResult doExecuteWithResult(
-							IProgressMonitor progressMonitor, IAdaptable info)
-							throws ExecutionException {
-						EObject referencedObject = getReferencedObject();
-						Resource resource = referencedObject.eResource();
-						CommandResult result = super.doExecuteWithResult(
-								progressMonitor, info);
-						if (resource != null) {
-							resource.getContents().add(referencedObject);
-						}
-						return result;
-					}
-				});
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
-				continue;
-			}
 			if (FeatureModelVisualIDRegistry.getVisualID(outgoingLink) == FeatureAttributesEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						outgoingLink.getSource().getElement(), null,
@@ -265,6 +257,7 @@ public class Feature2ItemSemanticEditPolicy extends
 		EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
 		if (annotation == null) {
 			// there are indirectly referenced children, need extra commands: false
+			addDestroyChildNodesCommand(cmd);
 			addDestroyShortcutsCommand(cmd, view);
 			// delete host element
 			cmd.add(new DestroyElementCommand(req));
@@ -272,6 +265,78 @@ public class Feature2ItemSemanticEditPolicy extends
 			cmd.add(new DeleteCommand(getEditingDomain(), view));
 		}
 		return getGEFWrapper(cmd.reduce());
+	}
+
+	/**
+	 * @generated
+	 */
+	private void addDestroyChildNodesCommand(ICompositeCommand cmd) {
+		View view = (View) getHost().getModel();
+		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
+			Node node = (Node) nit.next();
+			switch (FeatureModelVisualIDRegistry.getVisualID(node)) {
+			case ContainmentAssociationEditPart.VISUAL_ID:
+				for (Iterator<?> it = node.getSourceEdges().iterator(); it
+						.hasNext();) {
+					Edge outgoingLink = (Edge) it.next();
+					if (FeatureModelVisualIDRegistry.getVisualID(outgoingLink) == ContainmentAssociationSubFeaturesEditPart.VISUAL_ID) {
+						DestroyReferenceRequest r = new DestroyReferenceRequest(
+								outgoingLink.getSource().getElement(), null,
+								outgoingLink.getTarget().getElement(), false);
+						cmd.add(new DestroyReferenceCommand(r) {
+							protected CommandResult doExecuteWithResult(
+									IProgressMonitor progressMonitor,
+									IAdaptable info) throws ExecutionException {
+								EObject referencedObject = getReferencedObject();
+								Resource resource = referencedObject
+										.eResource();
+								CommandResult result = super
+										.doExecuteWithResult(progressMonitor,
+												info);
+								if (resource != null) {
+									resource.getContents()
+											.add(referencedObject);
+								}
+								return result;
+							}
+						});
+						cmd.add(new DeleteCommand(getEditingDomain(),
+								outgoingLink));
+						continue;
+					}
+					if (FeatureModelVisualIDRegistry.getVisualID(outgoingLink) == ContainmentAssociationSubFeatures2EditPart.VISUAL_ID) {
+						DestroyReferenceRequest r = new DestroyReferenceRequest(
+								outgoingLink.getSource().getElement(), null,
+								outgoingLink.getTarget().getElement(), false);
+						cmd.add(new DestroyReferenceCommand(r) {
+							protected CommandResult doExecuteWithResult(
+									IProgressMonitor progressMonitor,
+									IAdaptable info) throws ExecutionException {
+								EObject referencedObject = getReferencedObject();
+								Resource resource = referencedObject
+										.eResource();
+								CommandResult result = super
+										.doExecuteWithResult(progressMonitor,
+												info);
+								if (resource != null) {
+									resource.getContents()
+											.add(referencedObject);
+								}
+								return result;
+							}
+						});
+						cmd.add(new DeleteCommand(getEditingDomain(),
+								outgoingLink));
+						continue;
+					}
+				}
+				cmd.add(new DestroyElementCommand(new DestroyElementRequest(
+						getEditingDomain(), node.getElement(), false))); // directlyOwned: true
+				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
+				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
+				break;
+			}
+		}
 	}
 
 	/**
@@ -307,11 +372,6 @@ public class Feature2ItemSemanticEditPolicy extends
 				.getElementType()) {
 			return null;
 		}
-		if (FeatureModelElementTypes.FeatureContainers_4015 == req
-				.getElementType()) {
-			return getGEFWrapper(new FeatureContainersCreateCommand(req,
-					req.getSource(), req.getTarget()));
-		}
 		if (FeatureModelElementTypes.FeatureAttributes_4012 == req
 				.getElementType()) {
 			return getGEFWrapper(new FeatureAttributesCreateCommand(req,
@@ -345,10 +405,6 @@ public class Feature2ItemSemanticEditPolicy extends
 			return getGEFWrapper(new ContainmentAssociationSubFeatures2CreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.FeatureContainers_4015 == req
-				.getElementType()) {
-			return null;
-		}
 		if (FeatureModelElementTypes.FeatureAttributes_4012 == req
 				.getElementType()) {
 			return null;
@@ -375,8 +431,6 @@ public class Feature2ItemSemanticEditPolicy extends
 		case ContainmentAssociationSubFeatures2EditPart.VISUAL_ID:
 			return getGEFWrapper(new ContainmentAssociationSubFeatures2ReorientCommand(
 					req));
-		case FeatureContainersEditPart.VISUAL_ID:
-			return getGEFWrapper(new FeatureContainersReorientCommand(req));
 		case FeatureAttributesEditPart.VISUAL_ID:
 			return getGEFWrapper(new FeatureAttributesReorientCommand(req));
 		}

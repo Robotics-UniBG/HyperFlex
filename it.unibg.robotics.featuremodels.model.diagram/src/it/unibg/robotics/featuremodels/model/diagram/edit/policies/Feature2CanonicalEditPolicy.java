@@ -25,19 +25,20 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.policies;
 
+import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramUpdater;
 import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelNodeDescriptor;
 import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelVisualIDRegistry;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.diagram.core.util.ViewUtil;
@@ -70,9 +71,24 @@ public class Feature2CanonicalEditPolicy extends CanonicalEditPolicy {
 	/**
 	 * @generated
 	 */
+	protected EStructuralFeature getFeatureToSynchronize() {
+		return it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+				.getFeature_Containers();
+	}
+
+	/**
+	 * @generated
+	 */
 	@SuppressWarnings("rawtypes")
 	protected List getSemanticChildrenList() {
-		return Collections.EMPTY_LIST;
+		View viewObject = (View) getHost().getModel();
+		LinkedList<EObject> result = new LinkedList<EObject>();
+		List<FeatureModelNodeDescriptor> childDescriptors = FeatureModelDiagramUpdater
+				.getFeature_2006SemanticChildren(viewObject);
+		for (FeatureModelNodeDescriptor d : childDescriptors) {
+			result.add(d.getModelElement());
+		}
+		return result;
 	}
 
 	/**
@@ -88,7 +104,8 @@ public class Feature2CanonicalEditPolicy extends CanonicalEditPolicy {
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		return false;
+		return ContainmentAssociationEditPart.VISUAL_ID == FeatureModelVisualIDRegistry
+				.getVisualID(view);
 	}
 
 	/**

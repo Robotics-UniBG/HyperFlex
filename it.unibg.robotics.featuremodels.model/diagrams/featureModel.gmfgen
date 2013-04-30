@@ -29,6 +29,67 @@
         figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
     <domainDiagramElement
         href="../models/featureModel.genmodel#//featuremodels/FeatureModel"/>
+    <childNodes
+        xsi:type="gmfgen:GenChildSideAffixedNode"
+        visualID="3001"
+        editPartClassName="ContainmentAssociationEditPart"
+        itemSemanticEditPolicyClassName="ContainmentAssociationItemSemanticEditPolicy"
+        notationViewFactoryClassName="ContainmentAssociationViewFactory"
+        canonicalEditPolicyClassName="ContainmentAssociationCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="ContainmentAssociationGraphicalNodeEditPolicy"
+        createCommandClassName="ContainmentAssociationCreateCommand"
+        containers="//@diagram/@topLevelNodes.1"
+        preferredSideName="SOUTH">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="ContainmentAssociationEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="ContainmentAssociationTriangleFig"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ContainmentAssociationTriangleFig extends org.eclipse.draw2d.ScalablePolygonShape {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureContainmentAssociationTriangleLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ContainmentAssociationTriangleFig() {&#xA;&#x9;&#x9;&#x9;&#x9;this.addPoint(new org.eclipse.draw2d.geometry.Point(getMapMode().DPtoLP(40)&#xA;, getMapMode().DPtoLP(0)&#xA;));&#xA;this.addPoint(new org.eclipse.draw2d.geometry.Point(getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(35)&#xA;));&#xA;this.addPoint(new org.eclipse.draw2d.geometry.Point(getMapMode().DPtoLP(80)&#xA;, getMapMode().DPtoLP(35)&#xA;));&#xA;this.setFill(true);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightGray);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(80)&#xA;, getMapMode().DPtoLP(35)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(80)&#xA;, getMapMode().DPtoLP(35)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(80)&#xA;, getMapMode().DPtoLP(35)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(15)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureContainmentAssociationTriangleLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureContainmentAssociationTriangleLabel.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureContainmentAssociationTriangleLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureContainmentAssociationTriangleLabel() {&#xA;&#x9;&#x9;return fFigureContainmentAssociationTriangleLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedBackground="true"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"/>
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="80"
+            height="35"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass
+            href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation"/>
+        <containmentMetaFeature
+            href="../models/featureModel.genmodel#//featuremodels/Feature/containers"/>
+        <childMetaFeature
+            href="../models/featureModel.genmodel#//featuremodels/Feature/containers"/>
+      </modelFacet>
+      <labels
+          visualID="5010"
+          editPartClassName="ContainmentAssociationLowerBoundUpperBoundEditPart"
+          itemSemanticEditPolicyClassName="ContainmentAssociationLowerBoundUpperBoundItemSemanticEditPolicy"
+          notationViewFactoryClassName="ContainmentAssociationLowerBoundUpperBoundViewFactory"
+          readOnly="true">
+        <diagramRunTimeClass
+            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureContainmentAssociationTriangleLabel"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0"
+            viewPattern="{0} ... {1}">
+          <metaFeatures
+              href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation/lowerBound"/>
+          <metaFeatures
+              href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation/upperBound"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
     <topLevelNodes
         visualID="2005"
         editPartClassName="FeatureEditPart"
@@ -90,6 +151,7 @@
         itemSemanticEditPolicyClassName="Feature2ItemSemanticEditPolicy"
         notationViewFactoryClassName="FeatureViewFactory"
         canonicalEditPolicyClassName="Feature2CanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.0"
         graphicalNodeEditPolicyClassName="Feature2GraphicalNodeEditPolicy"
         createCommandClassName="Feature2CreateCommand">
       <diagramRunTimeClass
@@ -134,59 +196,6 @@
               href="../models/featureModel.genmodel#//featuremodels/Feature/name"/>
           <editableMetaFeatures
               href="../models/featureModel.genmodel#//featuremodels/Feature/name"/>
-        </modelFacet>
-      </labels>
-    </topLevelNodes>
-    <topLevelNodes
-        visualID="2009"
-        editPartClassName="ContainmentAssociationEditPart"
-        itemSemanticEditPolicyClassName="ContainmentAssociationItemSemanticEditPolicy"
-        notationViewFactoryClassName="ContainmentAssociationViewFactory"
-        canonicalEditPolicyClassName="ContainmentAssociationCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="ContainmentAssociationGraphicalNodeEditPolicy"
-        createCommandClassName="ContainmentAssociationCreateCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="ContainmentAssociationEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="ContainmentAssociationBox"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ContainmentAssociationBox extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureContainmentAssociationLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ContainmentAssociationBox() {&#xA;&#x9;&#x9;this.setLayoutManager(new org.eclipse.draw2d.StackLayout());&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightGray);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(100)&#xA;, getMapMode().DPtoLP(35)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureContainmentAssociationLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureContainmentAssociationLabel.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureContainmentAssociationLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureContainmentAssociationLabel() {&#xA;&#x9;&#x9;return fFigureContainmentAssociationLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
-        <attributes
-            xsi:type="gmfgen:StyleAttributes"
-            fixedBackground="true"/>
-        <attributes
-            xsi:type="gmfgen:DefaultSizeAttributes"
-            width="100"
-            height="35"/>
-      </viewmap>
-      <modelFacet
-          modelElementSelector="//@expressionProviders/@providers.0/@expressions.2">
-        <metaClass
-            href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation"/>
-      </modelFacet>
-      <labels
-          visualID="5009"
-          editPartClassName="ContainmentAssociationLowerBoundUpperBoundEditPart"
-          itemSemanticEditPolicyClassName="ContainmentAssociationLowerBoundUpperBoundItemSemanticEditPolicy"
-          notationViewFactoryClassName="ContainmentAssociationLowerBoundUpperBoundViewFactory"
-          readOnly="true">
-        <diagramRunTimeClass
-            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap
-            xsi:type="gmfgen:ParentAssignedViewmap"
-            getterName="getFigureContainmentAssociationLabel"
-            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
-        <modelFacet
-            xsi:type="gmfgen:FeatureLabelModelFacet"
-            parser="//@labelParsers/@implementations.0"
-            viewPattern="{0} ... {1}">
-          <metaFeatures
-              href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation/lowerBound"/>
-          <metaFeatures
-              href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation/upperBound"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -259,8 +268,8 @@
             href="../models/featureModel.genmodel#//featuremodels/Feature/subFeatures"/>
       </modelFacet>
       <creationConstraints
-          sourceEnd="//@expressionProviders/@providers.0/@expressions.3"
-          targetEnd="//@expressionProviders/@providers.0/@expressions.4"/>
+          sourceEnd="//@expressionProviders/@providers.0/@expressions.2"
+          targetEnd="//@expressionProviders/@providers.0/@expressions.3"/>
     </links>
     <links
         visualID="4008"
@@ -283,8 +292,8 @@
             href="../models/featureModel.genmodel#//featuremodels/Feature/subFeatures"/>
       </modelFacet>
       <creationConstraints
-          sourceEnd="//@expressionProviders/@providers.0/@expressions.5"
-          targetEnd="//@expressionProviders/@providers.0/@expressions.6"/>
+          sourceEnd="//@expressionProviders/@providers.0/@expressions.4"
+          targetEnd="//@expressionProviders/@providers.0/@expressions.5"/>
     </links>
     <links
         visualID="4013"
@@ -307,8 +316,8 @@
             href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation/subFeatures"/>
       </modelFacet>
       <creationConstraints
-          sourceEnd="//@expressionProviders/@providers.0/@expressions.7"
-          targetEnd="//@expressionProviders/@providers.0/@expressions.8"/>
+          sourceEnd="//@expressionProviders/@providers.0/@expressions.6"
+          targetEnd="//@expressionProviders/@providers.0/@expressions.7"/>
     </links>
     <links
         visualID="4014"
@@ -331,30 +340,8 @@
             href="../models/featureModel.genmodel#//featuremodels/ContainmentAssociation/subFeatures"/>
       </modelFacet>
       <creationConstraints
-          sourceEnd="//@expressionProviders/@providers.0/@expressions.9"
-          targetEnd="//@expressionProviders/@providers.0/@expressions.10"/>
-    </links>
-    <links
-        visualID="4015"
-        editPartClassName="FeatureContainersEditPart"
-        itemSemanticEditPolicyClassName="FeatureContainersItemSemanticEditPolicy"
-        notationViewFactoryClassName="FeatureContainersViewFactory"
-        createCommandClassName="FeatureContainersCreateCommand"
-        reorientCommandClassName="FeatureContainersReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"/>
-      <viewmap
-          xsi:type="gmfgen:FigureViewmap"
-          figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
-      <modelFacet
-          xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature
-            href="../models/featureModel.genmodel#//featuremodels/Feature/containers"/>
-      </modelFacet>
-      <creationConstraints
-          sourceEnd="//@expressionProviders/@providers.0/@expressions.11"/>
+          sourceEnd="//@expressionProviders/@providers.0/@expressions.8"
+          targetEnd="//@expressionProviders/@providers.0/@expressions.9"/>
     </links>
     <links
         visualID="4012"
@@ -376,7 +363,7 @@
             href="../models/featureModel.genmodel#//featuremodels/Feature/attributes"/>
       </modelFacet>
       <creationConstraints
-          sourceEnd="//@expressionProviders/@providers.0/@expressions.12"/>
+          sourceEnd="//@expressionProviders/@providers.0/@expressions.10"/>
     </links>
     <palette>
       <groups
@@ -390,13 +377,13 @@
             xsi:type="gmfgen:ToolEntry"
             title="Containment Association"
             smallIconPath="icons/ContainmentAssociation.gif"
-            genNodes="//@diagram/@topLevelNodes.2"/>
+            genNodes="//@diagram/@childNodes.0"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Simple Attribute"
             description=""
             smallIconPath="icons/SimpleAttribute.gif"
-            genNodes="//@diagram/@topLevelNodes.3"/>
+            genNodes="//@diagram/@topLevelNodes.2"/>
       </groups>
       <groups
           title="Connections">
@@ -404,7 +391,7 @@
             xsi:type="gmfgen:ToolEntry"
             title="Connection"
             smallIconPath="icons/Connection.gif"
-            genLinks="//@diagram/@links.0 //@diagram/@links.1 //@diagram/@links.2 //@diagram/@links.3 //@diagram/@links.4 //@diagram/@links.5"/>
+            genLinks="//@diagram/@links.0 //@diagram/@links.1 //@diagram/@links.2 //@diagram/@links.3 //@diagram/@links.4"/>
       </groups>
     </palette>
     <preferencePages
@@ -448,6 +435,9 @@
         parent="//@diagram"
         child="//@diagram/@topLevelNodes.0"/>
     <childReferences
+        parent="//@diagram/@topLevelNodes.1"
+        child="//@diagram/@childNodes.0"/>
+    <childReferences
         parent="//@diagram"
         child="//@diagram/@topLevelNodes.1"/>
     <childReferences
@@ -455,9 +445,6 @@
         child="//@diagram/@topLevelNodes.2"/>
     <childReferences
         parent="//@diagram"
-        child="//@diagram/@topLevelNodes.3"/>
-    <childReferences
-        parent="//@diagram"
         child="//@diagram/@links.0"
         groupName="links"
         groupIcon="icons/linksNavigatorGroup.gif"/>
@@ -593,12 +580,12 @@
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.2"
-        child="//@diagram/@topLevelNodes.2"
+        child="//@diagram/@childNodes.0"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@topLevelNodes.2"
+        parent="//@diagram/@childNodes.0"
         child="//@diagram/@links.2"
         referenceType="out_target"
         groupName="outgoing links"
@@ -634,12 +621,12 @@
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.3"
-        child="//@diagram/@topLevelNodes.2"
+        child="//@diagram/@childNodes.0"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@topLevelNodes.2"
+        parent="//@diagram/@childNodes.0"
         child="//@diagram/@links.3"
         referenceType="out_target"
         groupName="outgoing links"
@@ -682,47 +669,6 @@
     <childReferences
         parent="//@diagram/@topLevelNodes.1"
         child="//@diagram/@links.4"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@links.5"
-        groupName="links"
-        groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.5"
-        child="//@diagram/@topLevelNodes.3"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.3"
-        child="//@diagram/@links.5"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.5"
-        child="//@diagram/@topLevelNodes.0"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@links.5"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.5"
-        child="//@diagram/@topLevelNodes.1"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.1"
-        child="//@diagram/@links.5"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
@@ -760,9 +706,6 @@
           body="root = false"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="oclIsTypeOf(ContainmentAssociation)"/>
-      <expressions
-          xsi:type="gmfgen:GenConstraint"
           body="featureParent &lt;> null or root = true"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
@@ -788,16 +731,13 @@
       <expressions
           xsi:type="gmfgen:GenConstraint"
           body="containerParent &lt;> null or featureParent &lt;> null"/>
-      <expressions
-          xsi:type="gmfgen:GenConstraint"
-          body="containerParent &lt;> null or featureParent &lt;> null"/>
     </providers>
   </expressionProviders>
   <labelParsers
       extensibleViaService="true">
     <implementations
         xsi:type="gmfgen:PredefinedParser"
-        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet"/>
+        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus
       context="//@diagram">

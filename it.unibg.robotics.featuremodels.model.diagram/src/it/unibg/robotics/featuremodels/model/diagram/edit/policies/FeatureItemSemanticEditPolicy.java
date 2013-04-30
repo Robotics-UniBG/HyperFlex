@@ -31,8 +31,6 @@ import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAs
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationSubFeaturesReorientCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureAttributesCreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureAttributesReorientCommand;
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureContainersCreateCommand;
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureContainersReorientCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubFeatures2CreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubFeatures2ReorientCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubFeaturesCreateCommand;
@@ -40,7 +38,6 @@ import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureSubFea
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureAttributesEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureContainersEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelVisualIDRegistry;
@@ -219,27 +216,6 @@ public class FeatureItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
-			if (FeatureModelVisualIDRegistry.getVisualID(outgoingLink) == FeatureContainersEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						outgoingLink.getSource().getElement(), null,
-						outgoingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r) {
-					protected CommandResult doExecuteWithResult(
-							IProgressMonitor progressMonitor, IAdaptable info)
-							throws ExecutionException {
-						EObject referencedObject = getReferencedObject();
-						Resource resource = referencedObject.eResource();
-						CommandResult result = super.doExecuteWithResult(
-								progressMonitor, info);
-						if (resource != null) {
-							resource.getContents().add(referencedObject);
-						}
-						return result;
-					}
-				});
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
-				continue;
-			}
 			if (FeatureModelVisualIDRegistry.getVisualID(outgoingLink) == FeatureAttributesEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						outgoingLink.getSource().getElement(), null,
@@ -307,11 +283,6 @@ public class FeatureItemSemanticEditPolicy extends
 				.getElementType()) {
 			return null;
 		}
-		if (FeatureModelElementTypes.FeatureContainers_4015 == req
-				.getElementType()) {
-			return getGEFWrapper(new FeatureContainersCreateCommand(req,
-					req.getSource(), req.getTarget()));
-		}
 		if (FeatureModelElementTypes.FeatureAttributes_4012 == req
 				.getElementType()) {
 			return getGEFWrapper(new FeatureAttributesCreateCommand(req,
@@ -345,10 +316,6 @@ public class FeatureItemSemanticEditPolicy extends
 			return getGEFWrapper(new ContainmentAssociationSubFeatures2CreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.FeatureContainers_4015 == req
-				.getElementType()) {
-			return null;
-		}
 		if (FeatureModelElementTypes.FeatureAttributes_4012 == req
 				.getElementType()) {
 			return null;
@@ -375,8 +342,6 @@ public class FeatureItemSemanticEditPolicy extends
 		case ContainmentAssociationSubFeatures2EditPart.VISUAL_ID:
 			return getGEFWrapper(new ContainmentAssociationSubFeatures2ReorientCommand(
 					req));
-		case FeatureContainersEditPart.VISUAL_ID:
-			return getGEFWrapper(new FeatureContainersReorientCommand(req));
 		case FeatureAttributesEditPart.VISUAL_ID:
 			return getGEFWrapper(new FeatureAttributesReorientCommand(req));
 		}

@@ -29,11 +29,8 @@ import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAs
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationSubFeatures2ReorientCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationSubFeaturesCreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationSubFeaturesReorientCommand;
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureContainersCreateCommand;
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureContainersReorientCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeaturesEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureContainersEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelVisualIDRegistry;
 import it.unibg.robotics.featuremodels.model.diagram.providers.FeatureModelElementTypes;
 
@@ -68,7 +65,7 @@ public class ContainmentAssociationItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public ContainmentAssociationItemSemanticEditPolicy() {
-		super(FeatureModelElementTypes.ContainmentAssociation_2009);
+		super(FeatureModelElementTypes.ContainmentAssociation_3001);
 	}
 
 	/**
@@ -79,30 +76,6 @@ public class ContainmentAssociationItemSemanticEditPolicy extends
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(
 				getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
-		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
-			Edge incomingLink = (Edge) it.next();
-			if (FeatureModelVisualIDRegistry.getVisualID(incomingLink) == FeatureContainersEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r) {
-					protected CommandResult doExecuteWithResult(
-							IProgressMonitor progressMonitor, IAdaptable info)
-							throws ExecutionException {
-						EObject referencedObject = getReferencedObject();
-						Resource resource = referencedObject.eResource();
-						CommandResult result = super.doExecuteWithResult(
-								progressMonitor, info);
-						if (resource != null) {
-							resource.getContents().add(referencedObject);
-						}
-						return result;
-					}
-				});
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
-		}
 		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
 			if (FeatureModelVisualIDRegistry.getVisualID(outgoingLink) == ContainmentAssociationSubFeaturesEditPart.VISUAL_ID) {
@@ -185,10 +158,6 @@ public class ContainmentAssociationItemSemanticEditPolicy extends
 			return getGEFWrapper(new ContainmentAssociationSubFeatures2CreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (FeatureModelElementTypes.FeatureContainers_4015 == req
-				.getElementType()) {
-			return null;
-		}
 		return null;
 	}
 
@@ -204,11 +173,6 @@ public class ContainmentAssociationItemSemanticEditPolicy extends
 		if (FeatureModelElementTypes.ContainmentAssociationSubFeatures_4014 == req
 				.getElementType()) {
 			return null;
-		}
-		if (FeatureModelElementTypes.FeatureContainers_4015 == req
-				.getElementType()) {
-			return getGEFWrapper(new FeatureContainersCreateCommand(req,
-					req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -228,8 +192,6 @@ public class ContainmentAssociationItemSemanticEditPolicy extends
 		case ContainmentAssociationSubFeatures2EditPart.VISUAL_ID:
 			return getGEFWrapper(new ContainmentAssociationSubFeatures2ReorientCommand(
 					req));
-		case FeatureContainersEditPart.VISUAL_ID:
-			return getGEFWrapper(new FeatureContainersReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

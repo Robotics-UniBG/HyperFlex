@@ -31,7 +31,6 @@ import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssoc
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeatures2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureContainersEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureSubFeatures2EditPart;
@@ -134,14 +133,9 @@ public class FeatureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 	 */
 	private boolean isMyDiagramElement(View view) {
 		int visualID = FeatureModelVisualIDRegistry.getVisualID(view);
-		switch (visualID) {
-		case FeatureEditPart.VISUAL_ID:
-		case Feature2EditPart.VISUAL_ID:
-		case ContainmentAssociationEditPart.VISUAL_ID:
-		case SimpleAttributeEditPart.VISUAL_ID:
-			return true;
-		}
-		return false;
+		return visualID == FeatureEditPart.VISUAL_ID
+				|| visualID == Feature2EditPart.VISUAL_ID
+				|| visualID == SimpleAttributeEditPart.VISUAL_ID;
 	}
 
 	/**
@@ -337,14 +331,16 @@ public class FeatureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 							linkDescriptorsIterator.remove();
 							remove = true;
 						}
-					} else if (nextLinkDescriptor.getSource() instanceof ContainmentAssociationImpl) {
-						ContainmentAssociationImpl dest = (ContainmentAssociationImpl) nextLinkDescriptor
-								.getDestination();
-						if (visualId != FeatureContainersEditPart.VISUAL_ID) {
-							linkDescriptorsIterator.remove();
-							remove = true;
-						}
 					}
+					// this worked when containment associations were connected to features
+					//					else if (nextLinkDescriptor.getSource() instanceof ContainmentAssociationImpl) {
+					//						ContainmentAssociationImpl dest = (ContainmentAssociationImpl) nextLinkDescriptor
+					//								.getDestination();
+					//						if (visualId != FeatureContainersEditPart.VISUAL_ID) {
+					//							linkDescriptorsIterator.remove();
+					//							remove = true;
+					//						}
+					//					}
 				} else if (nextLinkDescriptor.getSource() instanceof ContainmentAssociationImpl) {
 					ContainmentAssociationImpl src = (ContainmentAssociationImpl) nextLinkDescriptor
 							.getSource();
@@ -411,18 +407,18 @@ public class FeatureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case ContainmentAssociationEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(FeatureModelDiagramUpdater
-						.getContainmentAssociation_2009ContainedLinks(view));
-			}
-			domain2NotationMap.putView(view.getElement(), view);
-			break;
-		}
 		case SimpleAttributeEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(FeatureModelDiagramUpdater
 						.getSimpleAttribute_2008ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case ContainmentAssociationEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(FeatureModelDiagramUpdater
+						.getContainmentAssociation_3001ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

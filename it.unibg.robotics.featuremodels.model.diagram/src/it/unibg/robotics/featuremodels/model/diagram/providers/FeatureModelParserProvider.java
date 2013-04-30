@@ -96,30 +96,6 @@ public class FeatureModelParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser containmentAssociationLowerBoundUpperBound_5009Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getContainmentAssociationLowerBoundUpperBound_5009Parser() {
-		if (containmentAssociationLowerBoundUpperBound_5009Parser == null) {
-			EAttribute[] features = new EAttribute[] {
-					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-							.getContainmentAssociation_LowerBound(),
-					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
-							.getContainmentAssociation_UpperBound() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("{0} ... {1}"); //$NON-NLS-1$
-			parser.setEditorPattern("{0} ... {1}"); //$NON-NLS-1$
-			parser.setEditPattern("{0} ... {1}"); //$NON-NLS-1$
-			containmentAssociationLowerBoundUpperBound_5009Parser = parser;
-		}
-		return containmentAssociationLowerBoundUpperBound_5009Parser;
-	}
-
-	/**
-	 * @generated
-	 */
 	private IParser simpleAttributeName_5008Parser;
 
 	/**
@@ -138,16 +114,40 @@ public class FeatureModelParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
+	private IParser containmentAssociationLowerBoundUpperBound_5010Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getContainmentAssociationLowerBoundUpperBound_5010Parser() {
+		if (containmentAssociationLowerBoundUpperBound_5010Parser == null) {
+			EAttribute[] features = new EAttribute[] {
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+							.getContainmentAssociation_LowerBound(),
+					it.unibg.robotics.featuremodels.featuremodelsPackage.eINSTANCE
+							.getContainmentAssociation_UpperBound() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			parser.setViewPattern("{0} ... {1}"); //$NON-NLS-1$
+			parser.setEditorPattern("{0} ... {1}"); //$NON-NLS-1$
+			parser.setEditPattern("{0} ... {1}"); //$NON-NLS-1$
+			containmentAssociationLowerBoundUpperBound_5010Parser = parser;
+		}
+		return containmentAssociationLowerBoundUpperBound_5010Parser;
+	}
+
+	/**
+	 * @generated
+	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case FeatureNameEditPart.VISUAL_ID:
 			return getFeatureName_5005Parser();
 		case FeatureName2EditPart.VISUAL_ID:
 			return getFeatureName_5006Parser();
-		case ContainmentAssociationLowerBoundUpperBoundEditPart.VISUAL_ID:
-			return getContainmentAssociationLowerBoundUpperBound_5009Parser();
 		case SimpleAttributeNameEditPart.VISUAL_ID:
 			return getSimpleAttributeName_5008Parser();
+		case ContainmentAssociationLowerBoundUpperBoundEditPart.VISUAL_ID:
+			return getContainmentAssociationLowerBoundUpperBound_5010Parser();
 		}
 		return null;
 	}

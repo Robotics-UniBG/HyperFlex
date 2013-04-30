@@ -25,6 +25,7 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.parts;
 
+import it.unibg.robotics.featuremodels.ContainmentAssociation;
 import it.unibg.robotics.featuremodels.model.diagram.edit.policies.ContainmentAssociationCanonicalEditPolicy;
 import it.unibg.robotics.featuremodels.model.diagram.edit.policies.ContainmentAssociationItemSemanticEditPolicy;
 import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelVisualIDRegistry;
@@ -38,37 +39,41 @@ import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.PositionConstants;
-import org.eclipse.draw2d.RoundedRectangle;
+import org.eclipse.draw2d.ScalablePolygonShape;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
+import org.eclipse.draw2d.geometry.Point;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
+import org.eclipse.gef.editpolicies.ResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderItemEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
+import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
 /**
  * @generated
  */
-public class ContainmentAssociationEditPart extends ShapeNodeEditPart {
+public class ContainmentAssociationEditPart extends AbstractBorderItemEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2009;
+	public static final int VISUAL_ID = 3001;
 
 	/**
 	 * @generated
@@ -92,6 +97,8 @@ public class ContainmentAssociationEditPart extends ShapeNodeEditPart {
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
+		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE,
+				getPrimaryDragEditPolicy());
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
 				new ContainmentAssociationItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
@@ -131,14 +138,14 @@ public class ContainmentAssociationEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		return primaryShape = new ContainmentAssociationBox();
+		return primaryShape = new ContainmentAssociationTriangleFig();
 	}
 
 	/**
 	 * @generated
 	 */
-	public ContainmentAssociationBox getPrimaryShape() {
-		return (ContainmentAssociationBox) primaryShape;
+	public ContainmentAssociationTriangleFig getPrimaryShape() {
+		return (ContainmentAssociationTriangleFig) primaryShape;
 	}
 
 	/**
@@ -148,7 +155,7 @@ public class ContainmentAssociationEditPart extends ShapeNodeEditPart {
 		if (childEditPart instanceof ContainmentAssociationLowerBoundUpperBoundEditPart) {
 			((ContainmentAssociationLowerBoundUpperBoundEditPart) childEditPart)
 					.setLabel(getPrimaryShape()
-							.getFigureContainmentAssociationLabel());
+							.getFigureContainmentAssociationTriangleLabel());
 			return true;
 		}
 		return false;
@@ -195,7 +202,22 @@ public class ContainmentAssociationEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected NodeFigure createNodePlate() {
-		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(100, 35);
+		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(80, 35);
+
+		//FIXME: workaround for #154536
+		result.getBounds().setSize(result.getPreferredSize());
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public EditPolicy getPrimaryDragEditPolicy() {
+		EditPolicy result = super.getPrimaryDragEditPolicy();
+		if (result instanceof ResizableEditPolicy) {
+			ResizableEditPolicy ep = (ResizableEditPolicy) result;
+			ep.setResizeDirections(PositionConstants.NONE);
+		}
 		return result;
 	}
 
@@ -332,48 +354,46 @@ public class ContainmentAssociationEditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
-	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(FeatureModelElementTypes.FeatureContainers_4015);
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == FeatureModelElementTypes.FeatureContainers_4015) {
-			types.add(FeatureModelElementTypes.Feature_2005);
-			types.add(FeatureModelElementTypes.Feature_2006);
+	@Override
+	protected void handleNotificationEvent(Notification notification) {
+		if (notification.getNotifier() instanceof ContainmentAssociation) {
+			getPrimaryShape().updateColor();
 		}
-		return types;
+		super.handleNotificationEvent(notification);
 	}
 
 	/**
 	 * @generated
 	 */
-	public class ContainmentAssociationBox extends RoundedRectangle {
+	public class ContainmentAssociationTriangleFig extends ScalablePolygonShape {
 
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureContainmentAssociationLabel;
+		private WrappingLabel fFigureContainmentAssociationTriangleLabel;
 
 		/**
 		 * @generated
 		 */
-		public ContainmentAssociationBox() {
-			this.setLayoutManager(new StackLayout());
-			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
-					getMapMode().DPtoLP(8)));
+		public ContainmentAssociationTriangleFig() {
+			this.addPoint(new Point(getMapMode().DPtoLP(40), getMapMode()
+					.DPtoLP(0)));
+			this.addPoint(new Point(getMapMode().DPtoLP(0), getMapMode()
+					.DPtoLP(35)));
+			this.addPoint(new Point(getMapMode().DPtoLP(80), getMapMode()
+					.DPtoLP(35)));
+			this.setFill(true);
 			this.setBackgroundColor(ColorConstants.lightGray);
-			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(100),
+			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(80),
+					getMapMode().DPtoLP(35)));
+			this.setMaximumSize(new Dimension(getMapMode().DPtoLP(80),
+					getMapMode().DPtoLP(35)));
+			this.setMinimumSize(new Dimension(getMapMode().DPtoLP(80),
 					getMapMode().DPtoLP(35)));
 
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(15),
 					getMapMode().DPtoLP(5), getMapMode().DPtoLP(0),
 					getMapMode().DPtoLP(5)));
 			createContents();
@@ -384,21 +404,59 @@ public class ContainmentAssociationEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigureContainmentAssociationLabel = new WrappingLabel();
-			fFigureContainmentAssociationLabel.setText("");
-			fFigureContainmentAssociationLabel
+			fFigureContainmentAssociationTriangleLabel = new WrappingLabel();
+			fFigureContainmentAssociationTriangleLabel.setText("");
+			fFigureContainmentAssociationTriangleLabel
 					.setAlignment(PositionConstants.CENTER);
-			fFigureContainmentAssociationLabel.setTextWrap(true);
+			fFigureContainmentAssociationTriangleLabel.setTextWrap(true);
+			updateColor();
 
-			this.add(fFigureContainmentAssociationLabel);
+			this.add(fFigureContainmentAssociationTriangleLabel);
 
 		}
 
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureContainmentAssociationLabel() {
-			return fFigureContainmentAssociationLabel;
+		public WrappingLabel getFigureContainmentAssociationTriangleLabel() {
+			return fFigureContainmentAssociationTriangleLabel;
+		}
+
+		/**
+		 * @generated NOT
+		 */
+		public void updateColor() {
+
+			ContainmentAssociation thisContainmentAssociation = (ContainmentAssociation) ((Node) ContainmentAssociationEditPart.this
+					.getModel()).getElement();
+
+			int upperBound = thisContainmentAssociation.getUpperBound();
+			int lowerBound = thisContainmentAssociation.getLowerBound();
+
+			
+			
+			if (lowerBound == 1 && upperBound == 1) {
+
+				this.setBackgroundColor(ColorConstants.black);
+				fFigureContainmentAssociationTriangleLabel
+						.setForegroundColor(ColorConstants.lightGray);
+
+			} else if ((lowerBound == 0 || lowerBound == 1)
+					&& (upperBound == -1 || upperBound == thisContainmentAssociation
+							.getSubFeatures().size())) {
+
+				this.setBackgroundColor(ColorConstants.white);
+				fFigureContainmentAssociationTriangleLabel
+						.setForegroundColor(ColorConstants.darkGray);
+
+			} else {
+
+				this.setBackgroundColor(ColorConstants.lightGray);
+				fFigureContainmentAssociationTriangleLabel
+				.setForegroundColor(ColorConstants.black);
+
+			}
+
 		}
 
 	}

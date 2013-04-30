@@ -318,26 +318,6 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_ContainmentAssociation_2009_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_ContainmentAssociation_2009_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_FeatureContainers_4015_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_FeatureContainers_4015_source;
-
-	/**
-	 * @generated
-	 */
 	public static String NavigatorGroupName_FeatureAttributes_4012_target;
 
 	/**
@@ -354,6 +334,11 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_ContainmentAssociationSubFeatures_4014_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ContainmentAssociation_3001_outgoinglinks;
 
 	/**
 	 * @generated

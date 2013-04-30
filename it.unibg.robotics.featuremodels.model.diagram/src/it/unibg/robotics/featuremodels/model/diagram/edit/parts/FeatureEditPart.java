@@ -291,10 +291,9 @@ public class FeatureEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(FeatureModelElementTypes.FeatureSubFeatures_4007);
 		types.add(FeatureModelElementTypes.FeatureSubFeatures_4008);
-		types.add(FeatureModelElementTypes.FeatureContainers_4015);
 		types.add(FeatureModelElementTypes.FeatureAttributes_4012);
 		return types;
 	}
@@ -317,9 +316,6 @@ public class FeatureEditPart extends ShapeNodeEditPart {
 		if (targetEditPart instanceof Feature2EditPart) {
 			types.add(FeatureModelElementTypes.FeatureSubFeatures_4008);
 		}
-		if (targetEditPart instanceof ContainmentAssociationEditPart) {
-			types.add(FeatureModelElementTypes.FeatureContainers_4015);
-		}
 		if (targetEditPart instanceof SimpleAttributeEditPart) {
 			types.add(FeatureModelElementTypes.FeatureAttributes_4012);
 		}
@@ -337,8 +333,6 @@ public class FeatureEditPart extends ShapeNodeEditPart {
 		} else if (relationshipType == FeatureModelElementTypes.FeatureSubFeatures_4008) {
 			types.add(FeatureModelElementTypes.Feature_2005);
 			types.add(FeatureModelElementTypes.Feature_2006);
-		} else if (relationshipType == FeatureModelElementTypes.FeatureContainers_4015) {
-			types.add(FeatureModelElementTypes.ContainmentAssociation_2009);
 		} else if (relationshipType == FeatureModelElementTypes.FeatureAttributes_4012) {
 			types.add(FeatureModelElementTypes.SimpleAttribute_2008);
 		}
@@ -369,9 +363,9 @@ public class FeatureEditPart extends ShapeNodeEditPart {
 			types.add(FeatureModelElementTypes.Feature_2005);
 			types.add(FeatureModelElementTypes.Feature_2006);
 		} else if (relationshipType == FeatureModelElementTypes.ContainmentAssociationSubFeatures_4013) {
-			types.add(FeatureModelElementTypes.ContainmentAssociation_2009);
+			types.add(FeatureModelElementTypes.ContainmentAssociation_3001);
 		} else if (relationshipType == FeatureModelElementTypes.ContainmentAssociationSubFeatures_4014) {
-			types.add(FeatureModelElementTypes.ContainmentAssociation_2009);
+			types.add(FeatureModelElementTypes.ContainmentAssociation_3001);
 		}
 		return types;
 	}

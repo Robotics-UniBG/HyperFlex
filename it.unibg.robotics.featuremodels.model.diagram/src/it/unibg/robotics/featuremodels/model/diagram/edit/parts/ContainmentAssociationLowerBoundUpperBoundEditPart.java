@@ -83,7 +83,7 @@ public class ContainmentAssociationLowerBoundUpperBoundEditPart extends
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5009;
+	public static final int VISUAL_ID = 5010;
 
 	/**
 	 * @generated
@@ -332,7 +332,7 @@ public class ContainmentAssociationLowerBoundUpperBoundEditPart extends
 		if (parser == null) {
 			parser = FeatureModelParserProvider
 					.getParser(
-							FeatureModelElementTypes.ContainmentAssociation_2009,
+							FeatureModelElementTypes.ContainmentAssociation_3001,
 							getParserElement(),
 							FeatureModelVisualIDRegistry
 									.getType(it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationLowerBoundUpperBoundEditPart.VISUAL_ID));
@@ -423,13 +423,13 @@ public class ContainmentAssociationLowerBoundUpperBoundEditPart extends
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void refreshVisuals() {
 		super.refreshVisuals();
 		refreshLabel();
 		refreshFont();
-		refreshFontColor();
+		//refreshFontColor();
 		refreshUnderline();
 		refreshStrikeThrough();
 	}

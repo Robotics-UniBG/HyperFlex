@@ -67,11 +67,15 @@ public class FeatureModelModelingAssistantProvider extends
 		IGraphicalEditPart editPart = (IGraphicalEditPart) host
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof FeatureModelEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 			types.add(FeatureModelElementTypes.Feature_2005);
 			types.add(FeatureModelElementTypes.Feature_2006);
-			types.add(FeatureModelElementTypes.ContainmentAssociation_2009);
 			types.add(FeatureModelElementTypes.SimpleAttribute_2008);
+			return types;
+		}
+		if (editPart instanceof Feature2EditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			types.add(FeatureModelElementTypes.ContainmentAssociation_3001);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -107,10 +111,6 @@ public class FeatureModelModelingAssistantProvider extends
 		}
 		if (targetEditPart instanceof Feature2EditPart) {
 			return ((Feature2EditPart) targetEditPart).getMARelTypesOnTarget();
-		}
-		if (targetEditPart instanceof ContainmentAssociationEditPart) {
-			return ((ContainmentAssociationEditPart) targetEditPart)
-					.getMARelTypesOnTarget();
 		}
 		if (targetEditPart instanceof SimpleAttributeEditPart) {
 			return ((SimpleAttributeEditPart) targetEditPart)
@@ -156,10 +156,6 @@ public class FeatureModelModelingAssistantProvider extends
 		}
 		if (targetEditPart instanceof Feature2EditPart) {
 			return ((Feature2EditPart) targetEditPart)
-					.getMATypesForSource(relationshipType);
-		}
-		if (targetEditPart instanceof ContainmentAssociationEditPart) {
-			return ((ContainmentAssociationEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
 		if (targetEditPart instanceof SimpleAttributeEditPart) {

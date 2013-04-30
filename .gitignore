@@ -5,4 +5,6 @@
 .DS_Store
 it.unibg.robotics.varp.updatesite/features/
 it.unibg.robotics.varp.updatesite/plugins/
+it.unibg.robotics.varp.updatesite/artifacts.jar
+it.unibg.robotics.varp.updatesite/content.jar
 it.unibg.robotics.resolutionmodels.dsl*

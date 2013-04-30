@@ -57,10 +57,14 @@ import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderedShapeEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IBorderItemEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.BorderItemSelectionEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.CanonicalEditPolicy;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.DragDropEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.diagram.ui.figures.BorderItemLocator;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
@@ -68,12 +72,13 @@ import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
 import org.eclipse.swt.graphics.Color;
 
 /**
  * @generated
  */
-public class Feature2EditPart extends ShapeNodeEditPart {
+public class Feature2EditPart extends AbstractBorderedShapeEditPart {
 
 	/**
 	 * @generated
@@ -101,9 +106,14 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected void createDefaultEditPolicies() {
+		installEditPolicy(EditPolicyRoles.CREATION_ROLE,
+				new CreationEditPolicyWithCustomReparent(
+						FeatureModelVisualIDRegistry.TYPED_INSTANCE));
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
 				new Feature2ItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE,
+				new DragDropEditPolicy());
 		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
 				new Feature2CanonicalEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
@@ -120,6 +130,11 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
 			protected EditPolicy createChildEditPolicy(EditPart child) {
+				View childView = (View) child.getModel();
+				switch (FeatureModelVisualIDRegistry.getVisualID(childView)) {
+				case ContainmentAssociationEditPart.VISUAL_ID:
+					return new BorderItemSelectionEditPolicy();
+				}
 				EditPolicy result = child
 						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
 				if (result == null) {
@@ -162,6 +177,16 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 					.getFigureFeatureLabel());
 			return true;
 		}
+		if (childEditPart instanceof ContainmentAssociationEditPart) {
+			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
+					PositionConstants.SOUTH);
+			getBorderedFigure()
+					.getBorderItemContainer()
+					.add(((ContainmentAssociationEditPart) childEditPart)
+							.getFigure(),
+							locator);
+			return true;
+		}
 		return false;
 	}
 
@@ -170,6 +195,12 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof FeatureName2EditPart) {
+			return true;
+		}
+		if (childEditPart instanceof ContainmentAssociationEditPart) {
+			getBorderedFigure().getBorderItemContainer().remove(
+					((ContainmentAssociationEditPart) childEditPart)
+							.getFigure());
 			return true;
 		}
 		return false;
@@ -199,6 +230,9 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		if (editPart instanceof IBorderItemEditPart) {
+			return getBorderedFigure().getBorderItemContainer();
+		}
 		return getContentPane();
 	}
 
@@ -218,7 +252,7 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 	 * 
 	 * @generated
 	 */
-	protected NodeFigure createNodeFigure() {
+	protected NodeFigure createMainFigure() {
 		NodeFigure figure = createNodePlate();
 		figure.setLayoutManager(new StackLayout());
 		IFigure shape = createNodeShape();
@@ -300,10 +334,9 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(FeatureModelElementTypes.FeatureSubFeatures_4007);
 		types.add(FeatureModelElementTypes.FeatureSubFeatures_4008);
-		types.add(FeatureModelElementTypes.FeatureContainers_4015);
 		types.add(FeatureModelElementTypes.FeatureAttributes_4012);
 		return types;
 	}
@@ -326,9 +359,6 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 		if (targetEditPart instanceof it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart) {
 			types.add(FeatureModelElementTypes.FeatureSubFeatures_4008);
 		}
-		if (targetEditPart instanceof ContainmentAssociationEditPart) {
-			types.add(FeatureModelElementTypes.FeatureContainers_4015);
-		}
 		if (targetEditPart instanceof SimpleAttributeEditPart) {
 			types.add(FeatureModelElementTypes.FeatureAttributes_4012);
 		}
@@ -346,8 +376,6 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 		} else if (relationshipType == FeatureModelElementTypes.FeatureSubFeatures_4008) {
 			types.add(FeatureModelElementTypes.Feature_2005);
 			types.add(FeatureModelElementTypes.Feature_2006);
-		} else if (relationshipType == FeatureModelElementTypes.FeatureContainers_4015) {
-			types.add(FeatureModelElementTypes.ContainmentAssociation_2009);
 		} else if (relationshipType == FeatureModelElementTypes.FeatureAttributes_4012) {
 			types.add(FeatureModelElementTypes.SimpleAttribute_2008);
 		}
@@ -378,9 +406,9 @@ public class Feature2EditPart extends ShapeNodeEditPart {
 			types.add(FeatureModelElementTypes.Feature_2005);
 			types.add(FeatureModelElementTypes.Feature_2006);
 		} else if (relationshipType == FeatureModelElementTypes.ContainmentAssociationSubFeatures_4013) {
-			types.add(FeatureModelElementTypes.ContainmentAssociation_2009);
+			types.add(FeatureModelElementTypes.ContainmentAssociation_3001);
 		} else if (relationshipType == FeatureModelElementTypes.ContainmentAssociationSubFeatures_4014) {
-			types.add(FeatureModelElementTypes.ContainmentAssociation_2009);
+			types.add(FeatureModelElementTypes.ContainmentAssociation_3001);
 		}
 		return types;
 	}

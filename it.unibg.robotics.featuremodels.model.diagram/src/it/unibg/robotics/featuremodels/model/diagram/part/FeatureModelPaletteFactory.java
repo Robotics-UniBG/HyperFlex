@@ -103,7 +103,7 @@ public class FeatureModelPaletteFactory {
 				Messages.ContainmentAssociation2CreationTool_title,
 				null,
 				Collections
-						.singletonList(FeatureModelElementTypes.ContainmentAssociation_2009));
+						.singletonList(FeatureModelElementTypes.ContainmentAssociation_3001));
 		entry.setId("createContainmentAssociation2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(FeatureModelDiagramEditorPlugin
 				.findImageDescriptor("icons/ContainmentAssociation.gif")); //$NON-NLS-1$
@@ -131,12 +131,11 @@ public class FeatureModelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createConnection1CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(6);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(5);
 		types.add(FeatureModelElementTypes.FeatureSubFeatures_4007);
 		types.add(FeatureModelElementTypes.FeatureSubFeatures_4008);
 		types.add(FeatureModelElementTypes.ContainmentAssociationSubFeatures_4013);
 		types.add(FeatureModelElementTypes.ContainmentAssociationSubFeatures_4014);
-		types.add(FeatureModelElementTypes.FeatureContainers_4015);
 		types.add(FeatureModelElementTypes.FeatureAttributes_4012);
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.Connection1CreationTool_title, null, types);

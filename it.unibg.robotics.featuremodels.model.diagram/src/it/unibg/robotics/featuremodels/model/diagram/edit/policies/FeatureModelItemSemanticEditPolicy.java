@@ -25,7 +25,6 @@
  */
 package it.unibg.robotics.featuremodels.model.diagram.edit.policies;
 
-import it.unibg.robotics.featuremodels.model.diagram.edit.commands.ContainmentAssociationCreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.Feature2CreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.FeatureCreateCommand;
 import it.unibg.robotics.featuremodels.model.diagram.edit.commands.SimpleAttributeCreateCommand;
@@ -60,10 +59,6 @@ public class FeatureModelItemSemanticEditPolicy extends
 		}
 		if (FeatureModelElementTypes.Feature_2006 == req.getElementType()) {
 			return getGEFWrapper(new Feature2CreateCommand(req));
-		}
-		if (FeatureModelElementTypes.ContainmentAssociation_2009 == req
-				.getElementType()) {
-			return getGEFWrapper(new ContainmentAssociationCreateCommand(req));
 		}
 		if (FeatureModelElementTypes.SimpleAttribute_2008 == req
 				.getElementType()) {

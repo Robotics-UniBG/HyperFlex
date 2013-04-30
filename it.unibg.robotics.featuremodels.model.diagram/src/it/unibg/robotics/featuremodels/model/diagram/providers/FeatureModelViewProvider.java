@@ -31,7 +31,6 @@ import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssoc
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.ContainmentAssociationSubFeaturesEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureAttributesEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureContainersEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
 import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureName2EditPart;
@@ -176,8 +175,8 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 				}
 				switch (visualID) {
 				case FeatureEditPart.VISUAL_ID:
-				case ContainmentAssociationEditPart.VISUAL_ID:
 				case SimpleAttributeEditPart.VISUAL_ID:
+				case ContainmentAssociationEditPart.VISUAL_ID:
 				case Feature2EditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != FeatureModelVisualIDRegistry
@@ -193,8 +192,8 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		}
 		return FeatureEditPart.VISUAL_ID == visualID
 				|| Feature2EditPart.VISUAL_ID == visualID
-				|| ContainmentAssociationEditPart.VISUAL_ID == visualID
-				|| SimpleAttributeEditPart.VISUAL_ID == visualID;
+				|| SimpleAttributeEditPart.VISUAL_ID == visualID
+				|| ContainmentAssociationEditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -258,12 +257,12 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		case Feature2EditPart.VISUAL_ID:
 			return createFeature_2006(domainElement, containerView, index,
 					persisted, preferencesHint);
-		case ContainmentAssociationEditPart.VISUAL_ID:
-			return createContainmentAssociation_2009(domainElement,
-					containerView, index, persisted, preferencesHint);
 		case SimpleAttributeEditPart.VISUAL_ID:
 			return createSimpleAttribute_2008(domainElement, containerView,
 					index, persisted, preferencesHint);
+		case ContainmentAssociationEditPart.VISUAL_ID:
+			return createContainmentAssociation_3001(domainElement,
+					containerView, index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -290,9 +289,6 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		case ContainmentAssociationSubFeatures2EditPart.VISUAL_ID:
 			return createContainmentAssociationSubFeatures_4014(containerView,
 					index, persisted, preferencesHint);
-		case FeatureContainersEditPart.VISUAL_ID:
-			return createFeatureContainers_4015(containerView, index,
-					persisted, preferencesHint);
 		case FeatureAttributesEditPart.VISUAL_ID:
 			return createFeatureAttributes_4012(containerView, index,
 					persisted, preferencesHint);
@@ -396,53 +392,6 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createContainmentAssociation_2009(EObject domainElement,
-			View containerView, int index, boolean persisted,
-			PreferencesHint preferencesHint) {
-		Node node = NotationFactory.eINSTANCE.createNode();
-		node.getStyles()
-				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
-		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
-		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(FeatureModelVisualIDRegistry
-				.getType(ContainmentAssociationEditPart.VISUAL_ID));
-		ViewUtil.insertChildView(containerView, node, index, persisted);
-		node.setElement(domainElement);
-		stampShortcut(containerView, node);
-		// initializeFromPreferences 
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle nodeFontStyle = (FontStyle) node
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (nodeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			nodeFontStyle.setFontName(fontData.getName());
-			nodeFontStyle.setFontHeight(fontData.getHeight());
-			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Node label5009 = createLabel(
-				node,
-				FeatureModelVisualIDRegistry
-						.getType(ContainmentAssociationLowerBoundUpperBoundEditPart.VISUAL_ID));
-		return node;
-	}
-
-	/**
-	 * @generated
-	 */
 	public Node createSimpleAttribute_2008(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
@@ -483,6 +432,52 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		Node label5008 = createLabel(node,
 				FeatureModelVisualIDRegistry
 						.getType(SimpleAttributeNameEditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createContainmentAssociation_3001(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(FeatureModelVisualIDRegistry
+				.getType(ContainmentAssociationEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Node label5010 = createLabel(
+				node,
+				FeatureModelVisualIDRegistry
+						.getType(ContainmentAssociationLowerBoundUpperBoundEditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -662,58 +657,6 @@ public class FeatureModelViewProvider extends AbstractProvider implements
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(FeatureModelVisualIDRegistry
 				.getType(ContainmentAssociationSubFeatures2EditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createFeatureContainers_4015(View containerView, int index,
-			boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(FeatureModelVisualIDRegistry
-				.getType(FeatureContainersEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint

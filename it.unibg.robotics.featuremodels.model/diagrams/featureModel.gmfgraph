@@ -93,6 +93,42 @@
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
+        name="ContainmentAssociationTriangleFig">
+      <actualFigure
+          xsi:type="gmfgraph:ScalablePolygon">
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="lightGray"/>
+        <maximumSize
+            dx="80"
+            dy="35"/>
+        <minimumSize
+            dx="80"
+            dy="35"/>
+        <preferredSize
+            dx="80"
+            dy="35"/>
+        <insets
+            top="15"
+            left="5"
+            right="5"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ContainmentAssociationTriangleLabel"
+            text=""/>
+        <template
+            x="40"/>
+        <template
+            y="35"/>
+        <template
+            x="80"
+            y="35"/>
+      </actualFigure>
+      <accessors
+          accessor="getFigureContainmentAssociationTriangleLabel"
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors
         name="ConstraintBox">
       <actualFigure
           xsi:type="gmfgraph:RoundedRectangle"
@@ -114,7 +150,7 @@
             name="ConstraintLabel"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="XOR_ALTERNATIVE">
@@ -190,9 +226,14 @@
             name="AttributeLabel"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.12/@actualFigure/@children.0"/>
     </descriptors>
   </figures>
+  <nodes
+      name="ContainmentAssociationTriangle"
+      figure="ContainmentAssociationTriangleFig"
+      resizeConstraint="NONE"
+      affixedParentSide="SOUTH"/>
   <nodes
       name="Feature"
       figure="FeatureBox"/>
@@ -243,10 +284,15 @@
       name="ConstraintLabel"
       figure="ConstraintBox"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.3/@accessors.0"/>
   <labels
       name="AttributeLabel"
       figure="AttributeBox"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.11/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.12/@accessors.0"/>
+  <labels
+      name="ContainmentAssociationTriangleLabel"
+      figure="ContainmentAssociationTriangleFig"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
 </gmfgraph:Canvas>
