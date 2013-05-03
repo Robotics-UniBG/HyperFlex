@@ -203,7 +203,14 @@ public class ContainmentAssociationEditPart extends AbstractBorderItemEditPart {
 	 */
 	protected NodeFigure createNodePlate() {
 		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(80, 35);
-
+//		HashMap<String, PrecisionPoint> anchorLocations = new HashMap<String, PrecisionPoint>();
+//		anchorLocations.put("SOUTH", new PrecisionPoint(0.5, 1));
+//		//anchorLocations.put("EAST", new PrecisionPoint(1d, 0.5d));
+//		//anchorLocations.put("NORTH", new PrecisionPoint(0.5d, 0));
+//		//anchorLocations.put("SOUTH", new PrecisionPoint(0.5d, 1d));
+//		DefaultSizeNodeFigureWithFixedAnchors result = new DefaultSizeNodeFigureWithFixedAnchors(
+//				80,35, anchorLocations);
+		
 		//FIXME: workaround for #154536
 		result.getBounds().setSize(result.getPreferredSize());
 		return result;
@@ -358,6 +365,7 @@ public class ContainmentAssociationEditPart extends AbstractBorderItemEditPart {
 	 */
 	@Override
 	protected void handleNotificationEvent(Notification notification) {
+		
 		if (notification.getNotifier() instanceof ContainmentAssociation) {
 			getPrimaryShape().updateColor();
 		}

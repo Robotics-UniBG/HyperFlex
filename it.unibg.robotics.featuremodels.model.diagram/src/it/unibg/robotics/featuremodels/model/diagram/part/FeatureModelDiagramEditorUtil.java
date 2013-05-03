@@ -126,7 +126,7 @@ public class FeatureModelDiagramEditorUtil {
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	public static String getUniqueFileName(IPath containerFullPath,
 			String fileName, String extension) {
@@ -134,7 +134,7 @@ public class FeatureModelDiagramEditorUtil {
 			containerFullPath = new Path(""); //$NON-NLS-1$
 		}
 		if (fileName == null || fileName.trim().length() == 0) {
-			fileName = "default"; //$NON-NLS-1$
+			fileName = "variability_model"; //$NON-NLS-1$
 		}
 		IPath filePath = containerFullPath.append(fileName);
 		if (extension != null && !extension.equals(filePath.getFileExtension())) {
