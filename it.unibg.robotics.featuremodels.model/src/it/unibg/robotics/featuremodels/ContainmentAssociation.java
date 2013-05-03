@@ -62,7 +62,7 @@ public interface ContainmentAssociation extends EObject {
 	 * @return the value of the '<em>Sub Features</em>' containment reference list.
 	 * @see it.unibg.robotics.featuremodels.featuremodelsPackage#getContainmentAssociation_SubFeatures()
 	 * @see it.unibg.robotics.featuremodels.Feature#getContainerParent
-	 * @model opposite="containerParent" containment="true"
+	 * @model opposite="containerParent" containment="true" required="true"
 	 * @generated
 	 */
 	EList<Feature> getSubFeatures();
