@@ -26,10 +26,10 @@
 package it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl;
 
 import it.unibg.robotics.resolutionmodels.impl.RMRequiredConnectionsImpl;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection;
+import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
+import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
+import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
 
 import java.util.Collection;
@@ -48,9 +48,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl#getRequiredTopicConnections <em>Required Topic Connections</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl#getRequiredServiceConnections <em>Required Service Connections</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl#getRequiredActionConnections <em>Required Action Connections</em>}</li>
+ *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl#getRequiredExistingTopicConnections <em>Required Existing Topic Connections</em>}</li>
+ *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl#getRequiredExistingServiceConnections <em>Required Existing Service Connections</em>}</li>
+ *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl#getRequiredExistingActionConnections <em>Required Existing Action Connections</em>}</li>
  * </ul>
  * </p>
  *
@@ -58,34 +58,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implements ROSRequiredConnections {
 	/**
-	 * The cached value of the '{@link #getRequiredTopicConnections() <em>Required Topic Connections</em>}' containment reference list.
+	 * The cached value of the '{@link #getRequiredExistingTopicConnections() <em>Required Existing Topic Connections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRequiredTopicConnections()
+	 * @see #getRequiredExistingTopicConnections()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ROSTopicConnection> requiredTopicConnections;
+	protected EList<ROSExistingTopicConnection> requiredExistingTopicConnections;
 
 	/**
-	 * The cached value of the '{@link #getRequiredServiceConnections() <em>Required Service Connections</em>}' containment reference list.
+	 * The cached value of the '{@link #getRequiredExistingServiceConnections() <em>Required Existing Service Connections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRequiredServiceConnections()
+	 * @see #getRequiredExistingServiceConnections()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ROSServiceConnection> requiredServiceConnections;
+	protected EList<ROSExistingServiceConnection> requiredExistingServiceConnections;
 
 	/**
-	 * The cached value of the '{@link #getRequiredActionConnections() <em>Required Action Connections</em>}' containment reference list.
+	 * The cached value of the '{@link #getRequiredExistingActionConnections() <em>Required Existing Action Connections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRequiredActionConnections()
+	 * @see #getRequiredExistingActionConnections()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ROSActionConnection> requiredActionConnections;
+	protected EList<ROSExistingActionConnection> requiredExistingActionConnections;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,11 +111,11 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ROSTopicConnection> getRequiredTopicConnections() {
-		if (requiredTopicConnections == null) {
-			requiredTopicConnections = new EObjectContainmentEList<ROSTopicConnection>(ROSTopicConnection.class, this, rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS);
+	public EList<ROSExistingTopicConnection> getRequiredExistingTopicConnections() {
+		if (requiredExistingTopicConnections == null) {
+			requiredExistingTopicConnections = new EObjectContainmentEList<ROSExistingTopicConnection>(ROSExistingTopicConnection.class, this, rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_TOPIC_CONNECTIONS);
 		}
-		return requiredTopicConnections;
+		return requiredExistingTopicConnections;
 	}
 
 	/**
@@ -123,11 +123,11 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ROSServiceConnection> getRequiredServiceConnections() {
-		if (requiredServiceConnections == null) {
-			requiredServiceConnections = new EObjectContainmentEList<ROSServiceConnection>(ROSServiceConnection.class, this, rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS);
+	public EList<ROSExistingServiceConnection> getRequiredExistingServiceConnections() {
+		if (requiredExistingServiceConnections == null) {
+			requiredExistingServiceConnections = new EObjectContainmentEList<ROSExistingServiceConnection>(ROSExistingServiceConnection.class, this, rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_SERVICE_CONNECTIONS);
 		}
-		return requiredServiceConnections;
+		return requiredExistingServiceConnections;
 	}
 
 	/**
@@ -135,11 +135,11 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ROSActionConnection> getRequiredActionConnections() {
-		if (requiredActionConnections == null) {
-			requiredActionConnections = new EObjectContainmentEList<ROSActionConnection>(ROSActionConnection.class, this, rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS);
+	public EList<ROSExistingActionConnection> getRequiredExistingActionConnections() {
+		if (requiredExistingActionConnections == null) {
+			requiredExistingActionConnections = new EObjectContainmentEList<ROSExistingActionConnection>(ROSExistingActionConnection.class, this, rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_ACTION_CONNECTIONS);
 		}
-		return requiredActionConnections;
+		return requiredExistingActionConnections;
 	}
 
 	/**
@@ -150,12 +150,12 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS:
-				return ((InternalEList<?>)getRequiredTopicConnections()).basicRemove(otherEnd, msgs);
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS:
-				return ((InternalEList<?>)getRequiredServiceConnections()).basicRemove(otherEnd, msgs);
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS:
-				return ((InternalEList<?>)getRequiredActionConnections()).basicRemove(otherEnd, msgs);
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_TOPIC_CONNECTIONS:
+				return ((InternalEList<?>)getRequiredExistingTopicConnections()).basicRemove(otherEnd, msgs);
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_SERVICE_CONNECTIONS:
+				return ((InternalEList<?>)getRequiredExistingServiceConnections()).basicRemove(otherEnd, msgs);
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_ACTION_CONNECTIONS:
+				return ((InternalEList<?>)getRequiredExistingActionConnections()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -168,12 +168,12 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS:
-				return getRequiredTopicConnections();
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS:
-				return getRequiredServiceConnections();
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS:
-				return getRequiredActionConnections();
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_TOPIC_CONNECTIONS:
+				return getRequiredExistingTopicConnections();
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_SERVICE_CONNECTIONS:
+				return getRequiredExistingServiceConnections();
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_ACTION_CONNECTIONS:
+				return getRequiredExistingActionConnections();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -187,17 +187,17 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS:
-				getRequiredTopicConnections().clear();
-				getRequiredTopicConnections().addAll((Collection<? extends ROSTopicConnection>)newValue);
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_TOPIC_CONNECTIONS:
+				getRequiredExistingTopicConnections().clear();
+				getRequiredExistingTopicConnections().addAll((Collection<? extends ROSExistingTopicConnection>)newValue);
 				return;
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS:
-				getRequiredServiceConnections().clear();
-				getRequiredServiceConnections().addAll((Collection<? extends ROSServiceConnection>)newValue);
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_SERVICE_CONNECTIONS:
+				getRequiredExistingServiceConnections().clear();
+				getRequiredExistingServiceConnections().addAll((Collection<? extends ROSExistingServiceConnection>)newValue);
 				return;
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS:
-				getRequiredActionConnections().clear();
-				getRequiredActionConnections().addAll((Collection<? extends ROSActionConnection>)newValue);
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_ACTION_CONNECTIONS:
+				getRequiredExistingActionConnections().clear();
+				getRequiredExistingActionConnections().addAll((Collection<? extends ROSExistingActionConnection>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -211,14 +211,14 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS:
-				getRequiredTopicConnections().clear();
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_TOPIC_CONNECTIONS:
+				getRequiredExistingTopicConnections().clear();
 				return;
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS:
-				getRequiredServiceConnections().clear();
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_SERVICE_CONNECTIONS:
+				getRequiredExistingServiceConnections().clear();
 				return;
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS:
-				getRequiredActionConnections().clear();
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_ACTION_CONNECTIONS:
+				getRequiredExistingActionConnections().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -232,12 +232,12 @@ public class ROSRequiredConnectionsImpl extends RMRequiredConnectionsImpl implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS:
-				return requiredTopicConnections != null && !requiredTopicConnections.isEmpty();
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS:
-				return requiredServiceConnections != null && !requiredServiceConnections.isEmpty();
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS:
-				return requiredActionConnections != null && !requiredActionConnections.isEmpty();
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_TOPIC_CONNECTIONS:
+				return requiredExistingTopicConnections != null && !requiredExistingTopicConnections.isEmpty();
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_SERVICE_CONNECTIONS:
+				return requiredExistingServiceConnections != null && !requiredExistingServiceConnections.isEmpty();
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_ACTION_CONNECTIONS:
+				return requiredExistingActionConnections != null && !requiredExistingActionConnections.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

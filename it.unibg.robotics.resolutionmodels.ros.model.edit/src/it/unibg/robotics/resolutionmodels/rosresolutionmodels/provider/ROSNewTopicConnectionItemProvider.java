@@ -34,7 +34,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -52,7 +51,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class ROSNewTopicConnectionItemProvider
-	extends ROSAbstractConnectionItemProvider
+	extends ROSTopicConnectionItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -80,55 +79,9 @@ public class ROSNewTopicConnectionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPublisherPropertyDescriptor(object);
-			addSubscriberPropertyDescriptor(object);
 			addTopicNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Publisher feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPublisherPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ROSNewTopicConnection_publisher_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNewTopicConnection_publisher_feature", "_UI_ROSNewTopicConnection_type"),
-				 rosresolutionmodelsPackage.Literals.ROS_NEW_TOPIC_CONNECTION__PUBLISHER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Subscriber feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSubscriberPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ROSNewTopicConnection_subscriber_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNewTopicConnection_subscriber_feature", "_UI_ROSNewTopicConnection_type"),
-				 rosresolutionmodelsPackage.Literals.ROS_NEW_TOPIC_CONNECTION__SUBSCRIBER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

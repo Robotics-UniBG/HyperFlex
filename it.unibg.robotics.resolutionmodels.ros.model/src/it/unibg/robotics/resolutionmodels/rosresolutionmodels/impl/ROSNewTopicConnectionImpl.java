@@ -30,10 +30,7 @@ import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodel
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.ros.model.ros.Publisher;
-import org.ros.model.ros.Subscriber;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,35 +39,13 @@ import org.ros.model.ros.Subscriber;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl#getPublisher <em>Publisher</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl#getSubscriber <em>Subscriber</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl#getTopicName <em>Topic Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ROSNewTopicConnectionImpl extends ROSAbstractConnectionImpl implements ROSNewTopicConnection {
-	/**
-	 * The cached value of the '{@link #getPublisher() <em>Publisher</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPublisher()
-	 * @generated
-	 * @ordered
-	 */
-	protected Publisher publisher;
-
-	/**
-	 * The cached value of the '{@link #getSubscriber() <em>Subscriber</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubscriber()
-	 * @generated
-	 * @ordered
-	 */
-	protected Subscriber subscriber;
-
+public class ROSNewTopicConnectionImpl extends ROSTopicConnectionImpl implements ROSNewTopicConnection {
 	/**
 	 * The default value of the '{@link #getTopicName() <em>Topic Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -115,82 +90,6 @@ public class ROSNewTopicConnectionImpl extends ROSAbstractConnectionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Publisher getPublisher() {
-		if (publisher != null && publisher.eIsProxy()) {
-			InternalEObject oldPublisher = (InternalEObject)publisher;
-			publisher = (Publisher)eResolveProxy(oldPublisher);
-			if (publisher != oldPublisher) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__PUBLISHER, oldPublisher, publisher));
-			}
-		}
-		return publisher;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Publisher basicGetPublisher() {
-		return publisher;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPublisher(Publisher newPublisher) {
-		Publisher oldPublisher = publisher;
-		publisher = newPublisher;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__PUBLISHER, oldPublisher, publisher));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Subscriber getSubscriber() {
-		if (subscriber != null && subscriber.eIsProxy()) {
-			InternalEObject oldSubscriber = (InternalEObject)subscriber;
-			subscriber = (Subscriber)eResolveProxy(oldSubscriber);
-			if (subscriber != oldSubscriber) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__SUBSCRIBER, oldSubscriber, subscriber));
-			}
-		}
-		return subscriber;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Subscriber basicGetSubscriber() {
-		return subscriber;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSubscriber(Subscriber newSubscriber) {
-		Subscriber oldSubscriber = subscriber;
-		subscriber = newSubscriber;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__SUBSCRIBER, oldSubscriber, subscriber));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getTopicName() {
 		return topicName;
 	}
@@ -215,12 +114,6 @@ public class ROSNewTopicConnectionImpl extends ROSAbstractConnectionImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__PUBLISHER:
-				if (resolve) return getPublisher();
-				return basicGetPublisher();
-			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__SUBSCRIBER:
-				if (resolve) return getSubscriber();
-				return basicGetSubscriber();
 			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__TOPIC_NAME:
 				return getTopicName();
 		}
@@ -235,12 +128,6 @@ public class ROSNewTopicConnectionImpl extends ROSAbstractConnectionImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__PUBLISHER:
-				setPublisher((Publisher)newValue);
-				return;
-			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__SUBSCRIBER:
-				setSubscriber((Subscriber)newValue);
-				return;
 			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__TOPIC_NAME:
 				setTopicName((String)newValue);
 				return;
@@ -256,12 +143,6 @@ public class ROSNewTopicConnectionImpl extends ROSAbstractConnectionImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__PUBLISHER:
-				setPublisher((Publisher)null);
-				return;
-			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__SUBSCRIBER:
-				setSubscriber((Subscriber)null);
-				return;
 			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__TOPIC_NAME:
 				setTopicName(TOPIC_NAME_EDEFAULT);
 				return;
@@ -277,10 +158,6 @@ public class ROSNewTopicConnectionImpl extends ROSAbstractConnectionImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__PUBLISHER:
-				return publisher != null;
-			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__SUBSCRIBER:
-				return subscriber != null;
 			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION__TOPIC_NAME:
 				return TOPIC_NAME_EDEFAULT == null ? topicName != null : !TOPIC_NAME_EDEFAULT.equals(topicName);
 		}
@@ -312,16 +189,16 @@ public class ROSNewTopicConnectionImpl extends ROSAbstractConnectionImpl impleme
 		if(arg0 instanceof ROSNewTopicConnectionImpl){
 			ROSNewTopicConnectionImpl connection = (ROSNewTopicConnectionImpl)arg0;
 			
-			Publisher pubA = connection.getPublisher();
-			Publisher pubB = this.getPublisher();
-
-			Subscriber subA = connection.getSubscriber();
-			Subscriber subB = this.getSubscriber();
+//			Publisher pubA = connection.getPublisher();
+//			Publisher pubB = this.getPublisher();
+//
+//			Subscriber subA = connection.getSubscriber();
+//			Subscriber subB = this.getSubscriber();
 
 			String nA = connection.getTopicName();
 			String nB = this.getTopicName();
 
-			if(pubA == pubB && subA == subB && nA == nB){
+			if(super.equals(arg0) && nA == nB){
 				return true;
 			}else{
 				return false;

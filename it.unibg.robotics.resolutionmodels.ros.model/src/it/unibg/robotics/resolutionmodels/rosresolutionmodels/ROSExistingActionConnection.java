@@ -25,48 +25,49 @@
  */
 package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
 
+import org.ros.model.ros.Action;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>ROS New Topic Connection</b></em>'.
+ * A representation of the model object '<em><b>ROS Existing Action Connection</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getTopicName <em>Topic Name</em>}</li>
+ *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection#getAction <em>Action</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSNewTopicConnection()
+ * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSExistingActionConnection()
  * @model
  * @generated
  */
-public interface ROSNewTopicConnection extends ROSTopicConnection {
+public interface ROSExistingActionConnection extends ROSActionConnection {
 	/**
-	 * Returns the value of the '<em><b>Topic Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Action</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Topic Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Action</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Topic Name</em>' attribute.
-	 * @see #setTopicName(String)
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSNewTopicConnection_TopicName()
+	 * @return the value of the '<em>Action</em>' reference.
+	 * @see #setAction(Action)
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSExistingActionConnection_Action()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getTopicName();
+	Action getAction();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getTopicName <em>Topic Name</em>}' attribute.
+	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection#getAction <em>Action</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Topic Name</em>' attribute.
-	 * @see #getTopicName()
+	 * @param value the new value of the '<em>Action</em>' reference.
+	 * @see #getAction()
 	 * @generated
 	 */
-	void setTopicName(String value);
+	void setAction(Action value);
 
-} // ROSNewTopicConnection
+} // ROSExistingActionConnection

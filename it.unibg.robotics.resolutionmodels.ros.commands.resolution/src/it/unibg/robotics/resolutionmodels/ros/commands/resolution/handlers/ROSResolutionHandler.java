@@ -36,6 +36,9 @@ import it.unibg.robotics.resolutionmodels.ResolutionModel;
 import it.unibg.robotics.resolutionmodels.presentation.resolutionmodelsEditor;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection;
+import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
+import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
+import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection;
@@ -140,9 +143,9 @@ public class ROSResolutionHandler extends AbstractHandler {
 	 * doesn't implement comparable
 	 */
 	private ArrayList<Node> requiredComponents;
-	private ArrayList<ROSTopicConnection> requiredTopicConnections;
-	private ArrayList<ROSServiceConnection> requiredServiceConnections;
-	private ArrayList<ROSActionConnection> requiredActionConnections;
+	private ArrayList<ROSExistingTopicConnection> requiredExistingTopicConnections;
+	private ArrayList<ROSExistingServiceConnection> requiredExistingServiceConnections;
+	private ArrayList<ROSExistingActionConnection> requiredExistingActionConnections;
 
 
 	/**
@@ -331,9 +334,9 @@ public class ROSResolutionHandler extends AbstractHandler {
 	private void doTransformation(Instance featureModelInstance){
 
 		requiredComponents = new ArrayList<Node>();
-		requiredTopicConnections = new ArrayList<ROSTopicConnection>();
-		requiredServiceConnections = new ArrayList<ROSServiceConnection>();
-		requiredActionConnections = new ArrayList<ROSActionConnection>();
+		requiredExistingTopicConnections = new ArrayList<ROSExistingTopicConnection>();
+		requiredExistingServiceConnections = new ArrayList<ROSExistingServiceConnection>();
+		requiredExistingActionConnections = new ArrayList<ROSExistingActionConnection>();
 
 		//topicConnectionHashTable = new Hashtable<ROSTopicConnection, ROSTopicConnection>();
 		//serviceConnectionHashTable = new Hashtable<ROSServiceConnection, ROSServiceConnection>();
@@ -375,37 +378,37 @@ public class ROSResolutionHandler extends AbstractHandler {
 				if(currentResElem.getRequiredConnections() instanceof ROSRequiredConnections){
 					ROSRequiredConnections requiredConnectionsTmp = (ROSRequiredConnections)currentResElem.getRequiredConnections();
 					
-					for(ROSTopicConnection conn : requiredConnectionsTmp.getRequiredTopicConnections()){
+					for(ROSExistingTopicConnection conn : requiredConnectionsTmp.getRequiredExistingTopicConnections()){
 						
-						ROSTopicConnection newConnection = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSTopicConnection();
+						ROSExistingTopicConnection newConnection = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingTopicConnection();
 						newConnection.setPublisher(publisherHashTable.get(conn.getPublisher()));
 						newConnection.setSubscriber(subscriberHashTable.get(conn.getSubscriber()));
 						newConnection.setTopic(topicHashTable.get(conn.getTopic()));
-						if(! requiredTopicConnections.contains(newConnection)){
-							requiredTopicConnections.add(newConnection);
+						if(! requiredExistingTopicConnections.contains(newConnection)){
+							requiredExistingTopicConnections.add(newConnection);
 						}
 						
 					}
 					
-					for(ROSServiceConnection conn : requiredConnectionsTmp.getRequiredServiceConnections()){
+					for(ROSExistingServiceConnection conn : requiredConnectionsTmp.getRequiredExistingServiceConnections()){
 						
-						ROSServiceConnection newConnection = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSServiceConnection();
+						ROSExistingServiceConnection newConnection = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingServiceConnection();
 						newConnection.setServiceServer(serviceServerHashTable.get(conn.getServiceServer()));
 						newConnection.setServiceClient(serviceClientHashTable.get(conn.getServiceClient()));
 						newConnection.setService(serviceHashTable.get(conn.getService()));
-						if(! requiredServiceConnections.contains(newConnection)){
-							requiredServiceConnections.add(newConnection);
+						if(! requiredExistingServiceConnections.contains(newConnection)){
+							requiredExistingServiceConnections.add(newConnection);
 						}
 					}
 					
-					for(ROSActionConnection conn : requiredConnectionsTmp.getRequiredActionConnections()){
+					for(ROSExistingActionConnection conn : requiredConnectionsTmp.getRequiredExistingActionConnections()){
 					
-						ROSActionConnection newConnection = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSActionConnection();
+						ROSExistingActionConnection newConnection = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingActionConnection();
 						newConnection.setActionServer(actionServerHashTable.get(conn.getActionServer()));
 						newConnection.setActionClient(actionClientHashTable.get(conn.getActionClient()));
 						newConnection.setAction(actionHashTable.get(conn.getAction()));
-						if(! requiredActionConnections.contains(newConnection)){
-							requiredActionConnections.add(newConnection);
+						if(! requiredExistingActionConnections.contains(newConnection)){
+							requiredExistingActionConnections.add(newConnection);
 						}
 					}
 
@@ -444,16 +447,15 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 					for(ROSAbstractConnection newRosConnection : transf.getNewConnections()){
 
-						if(newRosConnection instanceof ROSTopicConnection ||
-								newRosConnection instanceof ROSNewTopicConnection){
+						if(newRosConnection instanceof ROSTopicConnection){
 
 							Topic targetTopic;
 							Publisher pub;
 							Subscriber sub;
 
-							if(newRosConnection instanceof ROSTopicConnection){
+							if(newRosConnection instanceof ROSExistingTopicConnection){
 
-								ROSTopicConnection currentConn = (ROSTopicConnection)newRosConnection;
+								ROSExistingTopicConnection currentConn = (ROSExistingTopicConnection)newRosConnection;
 								targetTopic = topicHashTable.get(currentConn.getTopic());
 
 								pub = publisherHashTable.get(currentConn.getPublisher());
@@ -482,13 +484,13 @@ public class ROSResolutionHandler extends AbstractHandler {
 							}
 
 							// add the new connection to the required connections list
-							ROSTopicConnection newRequiredConn = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSTopicConnection();
+							ROSExistingTopicConnection newRequiredConn = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingTopicConnection();
 							newRequiredConn.setTopic(targetTopic);
 							newRequiredConn.setPublisher(pub);
 							newRequiredConn.setSubscriber(sub);
 
-							if(! requiredTopicConnections.contains(newRequiredConn)){
-								requiredTopicConnections.add(newRequiredConn);
+							if(! requiredExistingTopicConnections.contains(newRequiredConn)){
+								requiredExistingTopicConnections.add(newRequiredConn);
 							}
 
 							// we add also the connected components
@@ -499,16 +501,15 @@ public class ROSResolutionHandler extends AbstractHandler {
 								requiredComponents.add((Node)sub.eContainer());
 							}
 
-						}else if(newRosConnection instanceof ROSServiceConnection ||
-								newRosConnection instanceof ROSNewServiceConnection){
+						}else if(newRosConnection instanceof ROSServiceConnection){
 
 							Service targetService;
 							ServiceServer ss;
 							ServiceClient sc;
 
-							if(newRosConnection instanceof ROSServiceConnection){
+							if(newRosConnection instanceof ROSExistingServiceConnection){
 
-								ROSServiceConnection currentConn = (ROSServiceConnection)newRosConnection;
+								ROSExistingServiceConnection currentConn = (ROSExistingServiceConnection)newRosConnection;
 								targetService = serviceHashTable.get(currentConn.getService());
 
 								ss = serviceServerHashTable.get(currentConn.getServiceServer());
@@ -545,12 +546,12 @@ public class ROSResolutionHandler extends AbstractHandler {
 							}
 
 							// add the new connection to the required connections list
-							ROSServiceConnection newRequiredConn = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSServiceConnection();
+							ROSExistingServiceConnection newRequiredConn = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingServiceConnection();
 							newRequiredConn.setService(targetService);
 							newRequiredConn.setServiceServer(ss);
 							newRequiredConn.setServiceClient(sc);
-							if(! requiredServiceConnections.contains(newRequiredConn)){
-								requiredServiceConnections.add(newRequiredConn);
+							if(! requiredExistingServiceConnections.contains(newRequiredConn)){
+								requiredExistingServiceConnections.add(newRequiredConn);
 							}
 
 							// we add also the connected components
@@ -561,16 +562,15 @@ public class ROSResolutionHandler extends AbstractHandler {
 								requiredComponents.add((Node)sc.eContainer());
 							}
 
-						}else if(newRosConnection instanceof ROSActionConnection ||
-								newRosConnection instanceof ROSNewActionConnection){
+						}else if(newRosConnection instanceof ROSActionConnection){
 
 							Action targetAction;
 							ActionServer as;
 							ActionClient ac;
 
-							if(newRosConnection instanceof ROSActionConnection){
+							if(newRosConnection instanceof ROSExistingActionConnection){
 
-								ROSActionConnection currentConn = (ROSActionConnection)newRosConnection;
+								ROSExistingActionConnection currentConn = (ROSExistingActionConnection)newRosConnection;
 								targetAction = actionHashTable.get(currentConn.getAction());
 
 								as = actionServerHashTable.get(currentConn.getActionServer());
@@ -599,12 +599,12 @@ public class ROSResolutionHandler extends AbstractHandler {
 							}
 
 							// add the new connection to the required connections list
-							ROSActionConnection newRequiredConn = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSActionConnection();
+							ROSExistingActionConnection newRequiredConn = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingActionConnection();
 							newRequiredConn.setAction(targetAction);
 							newRequiredConn.setActionServer(as);
 							newRequiredConn.setActionClient(ac);
-							if(! requiredActionConnections.contains(newRequiredConn)){
-								requiredActionConnections.add(newRequiredConn);
+							if(! requiredExistingActionConnections.contains(newRequiredConn)){
+								requiredExistingActionConnections.add(newRequiredConn);
 							}
 
 							// we add also the connected components
@@ -655,7 +655,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 		ArrayList<Topic> usedTopics = new ArrayList<Topic>();
 		for(Topic topic : targetRosArchModel.getTopic()){
 
-			for(ROSTopicConnection conn : requiredTopicConnections){
+			for(ROSExistingTopicConnection conn : requiredExistingTopicConnections){
 
 				if(conn.getTopic().equals(topic)){
 					usedTopics.add(topic);
@@ -678,7 +678,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 			ArrayList<ServiceServer> connectedServiceServers = new ArrayList<ServiceServer>();
 			ArrayList<ServiceClient> connectedServiceClients = new ArrayList<ServiceClient>();
 
-			for(ROSServiceConnection conn : requiredServiceConnections){
+			for(ROSExistingServiceConnection conn : requiredExistingServiceConnections){
 
 				if(conn.getService().equals(service)){
 					used = true;
@@ -708,7 +708,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 		ArrayList<Action> usedActions = new ArrayList<Action>();
 		for(Action action : targetRosArchModel.getAction()){
 
-			for(ROSActionConnection conn : requiredActionConnections){
+			for(ROSExistingActionConnection conn : requiredExistingActionConnections){
 
 				if(conn.getAction().equals(action)){
 					usedActions.add(action);
@@ -1152,27 +1152,27 @@ public class ROSResolutionHandler extends AbstractHandler {
 		Node node = null;
 		Architecture arch = null;
 
-		if(connection instanceof ROSTopicConnection){
+		if(connection instanceof ROSExistingTopicConnection){
 
-			arch = (Architecture)((ROSTopicConnection)connection).getTopic().eContainer();
+			arch = (Architecture)((ROSExistingTopicConnection)connection).getTopic().eContainer();
 
 		}else if(connection instanceof ROSNewTopicConnection){
 
 			node = (Node)((ROSNewTopicConnection)connection).getPublisher().eContainer();
 			arch = (Architecture)node.eContainer().eContainer();
 
-		}else if(connection instanceof ROSServiceConnection){
+		}else if(connection instanceof ROSExistingServiceConnection){
 
-			arch = (Architecture)((ROSServiceConnection)connection).getService().eContainer();
+			arch = (Architecture)((ROSExistingServiceConnection)connection).getService().eContainer();
 
 		}else if(connection instanceof ROSNewServiceConnection){
 
 			node = (Node)((ROSNewServiceConnection)connection).getServiceServer().eContainer();
 			arch = (Architecture)node.eContainer().eContainer();
 
-		}else if(connection instanceof ROSActionConnection){
+		}else if(connection instanceof ROSExistingActionConnection){
 
-			arch = (Architecture)((ROSActionConnection)connection).getAction().eContainer();
+			arch = (Architecture)((ROSExistingActionConnection)connection).getAction().eContainer();
 
 		}else if(connection instanceof ROSNewActionConnection){
 
@@ -1193,19 +1193,19 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 		Architecture arch = null;
 
-		for(ROSTopicConnection conn : requiredConnection.getRequiredTopicConnections()){
+		for(ROSExistingTopicConnection conn : requiredConnection.getRequiredExistingTopicConnections()){
 			arch = (Architecture)conn.getTopic().eContainer();
 //			MessageDialog.openError(null, "Error", "Req Topic Conn!!! \n" + arch);
 			setTargetArchitectureModelIfNotNullAndDuplicated(arch);
 		}
 
-		for(ROSServiceConnection conn : requiredConnection.getRequiredServiceConnections()){
+		for(ROSExistingServiceConnection conn : requiredConnection.getRequiredExistingServiceConnections()){
 			arch = (Architecture)conn.getService().eContainer();
 //			MessageDialog.openError(null, "Error", "Req Service Conn!!! \n" + arch);
 			setTargetArchitectureModelIfNotNullAndDuplicated(arch);
 		}
 
-		for(ROSActionConnection conn : requiredConnection.getRequiredActionConnections()){
+		for(ROSExistingActionConnection conn : requiredConnection.getRequiredExistingActionConnections()){
 			arch = (Architecture)conn.getAction().eContainer();
 //			MessageDialog.openError(null, "Error", "Req Action Conn!!! \n" + arch);
 			setTargetArchitectureModelIfNotNullAndDuplicated(arch);

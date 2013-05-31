@@ -25,53 +25,45 @@
  */
 package it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl;
 
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
+import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.ros.model.ros.Action;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>ROS New Action Connection</b></em>'.
+ * An implementation of the model object '<em><b>ROS Existing Action Connection</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewActionConnectionImpl#getActionName <em>Action Name</em>}</li>
+ *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl#getAction <em>Action</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ROSNewActionConnectionImpl extends ROSActionConnectionImpl implements ROSNewActionConnection {
+public class ROSExistingActionConnectionImpl extends ROSActionConnectionImpl implements ROSExistingActionConnection {
 	/**
-	 * The default value of the '{@link #getActionName() <em>Action Name</em>}' attribute.
+	 * The cached value of the '{@link #getAction() <em>Action</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getActionName()
+	 * @see #getAction()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ACTION_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getActionName() <em>Action Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getActionName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String actionName = ACTION_NAME_EDEFAULT;
+	protected Action action;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ROSNewActionConnectionImpl() {
+	protected ROSExistingActionConnectionImpl() {
 		super();
 	}
 
@@ -82,7 +74,7 @@ public class ROSNewActionConnectionImpl extends ROSActionConnectionImpl implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return rosresolutionmodelsPackage.Literals.ROS_NEW_ACTION_CONNECTION;
+		return rosresolutionmodelsPackage.Literals.ROS_EXISTING_ACTION_CONNECTION;
 	}
 
 	/**
@@ -90,8 +82,16 @@ public class ROSNewActionConnectionImpl extends ROSActionConnectionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getActionName() {
-		return actionName;
+	public Action getAction() {
+		if (action != null && action.eIsProxy()) {
+			InternalEObject oldAction = (InternalEObject)action;
+			action = (Action)eResolveProxy(oldAction);
+			if (action != oldAction) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, rosresolutionmodelsPackage.ROS_EXISTING_ACTION_CONNECTION__ACTION, oldAction, action));
+			}
+		}
+		return action;
 	}
 
 	/**
@@ -99,11 +99,20 @@ public class ROSNewActionConnectionImpl extends ROSActionConnectionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActionName(String newActionName) {
-		String oldActionName = actionName;
-		actionName = newActionName;
+	public Action basicGetAction() {
+		return action;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAction(Action newAction) {
+		Action oldAction = action;
+		action = newAction;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rosresolutionmodelsPackage.ROS_NEW_ACTION_CONNECTION__ACTION_NAME, oldActionName, actionName));
+			eNotify(new ENotificationImpl(this, Notification.SET, rosresolutionmodelsPackage.ROS_EXISTING_ACTION_CONNECTION__ACTION, oldAction, action));
 	}
 
 	/**
@@ -114,8 +123,9 @@ public class ROSNewActionConnectionImpl extends ROSActionConnectionImpl implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_NEW_ACTION_CONNECTION__ACTION_NAME:
-				return getActionName();
+			case rosresolutionmodelsPackage.ROS_EXISTING_ACTION_CONNECTION__ACTION:
+				if (resolve) return getAction();
+				return basicGetAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -128,8 +138,8 @@ public class ROSNewActionConnectionImpl extends ROSActionConnectionImpl implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_NEW_ACTION_CONNECTION__ACTION_NAME:
-				setActionName((String)newValue);
+			case rosresolutionmodelsPackage.ROS_EXISTING_ACTION_CONNECTION__ACTION:
+				setAction((Action)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -143,8 +153,8 @@ public class ROSNewActionConnectionImpl extends ROSActionConnectionImpl implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_NEW_ACTION_CONNECTION__ACTION_NAME:
-				setActionName(ACTION_NAME_EDEFAULT);
+			case rosresolutionmodelsPackage.ROS_EXISTING_ACTION_CONNECTION__ACTION:
+				setAction((Action)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -158,51 +168,35 @@ public class ROSNewActionConnectionImpl extends ROSActionConnectionImpl implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_NEW_ACTION_CONNECTION__ACTION_NAME:
-				return ACTION_NAME_EDEFAULT == null ? actionName != null : !ACTION_NAME_EDEFAULT.equals(actionName);
+			case rosresolutionmodelsPackage.ROS_EXISTING_ACTION_CONNECTION__ACTION:
+				return action != null;
 		}
 		return super.eIsSet(featureID);
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (actionName: ");
-		result.append(actionName);
-		result.append(')');
-		return result.toString();
-	}
-
+	
 	/**
 	 * @generated NOT
 	 */
 	@Override
 	public boolean equals(Object arg0) {
+		
+		if(arg0 instanceof ROSActionConnectionImpl){
+			ROSExistingActionConnectionImpl connection = (ROSExistingActionConnectionImpl)arg0;
+			
+			Action aA = connection.getAction();
+			Action aB = this.getAction();
 
-		if(arg0 instanceof ROSNewActionConnectionImpl){
-			ROSNewActionConnectionImpl connection = (ROSNewActionConnectionImpl)arg0;
-
-			String nA = connection.getActionName();
-			String nB = this.getActionName();
-
-			if(super.equals(arg0) && nA == nB){
+			if(super.equals(arg0) && aA == aB){
 				return true;
 			}else{
 				return false;
 			}
-
-
+			
+			
 		}else{
 			return false;
 		}
-
+		
 	}
 
-} //ROSNewActionConnectionImpl
+} //ROSExistingActionConnectionImpl

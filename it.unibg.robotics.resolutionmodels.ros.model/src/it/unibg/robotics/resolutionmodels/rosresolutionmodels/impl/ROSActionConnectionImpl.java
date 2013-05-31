@@ -32,7 +32,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.ros.model.ros.Action;
 import org.ros.model.ros.ActionClient;
 import org.ros.model.ros.ActionServer;
 
@@ -45,13 +44,12 @@ import org.ros.model.ros.ActionServer;
  * <ul>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl#getActionServer <em>Action Server</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl#getActionClient <em>Action Client</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl#getAction <em>Action</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ROSActionConnectionImpl extends ROSAbstractConnectionImpl implements ROSActionConnection {
+public abstract class ROSActionConnectionImpl extends ROSAbstractConnectionImpl implements ROSActionConnection {
 	/**
 	 * The cached value of the '{@link #getActionServer() <em>Action Server</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -71,16 +69,6 @@ public class ROSActionConnectionImpl extends ROSAbstractConnectionImpl implement
 	 * @ordered
 	 */
 	protected ActionClient actionClient;
-
-	/**
-	 * The cached value of the '{@link #getAction() <em>Action</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAction()
-	 * @generated
-	 * @ordered
-	 */
-	protected Action action;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,44 +170,6 @@ public class ROSActionConnectionImpl extends ROSAbstractConnectionImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Action getAction() {
-		if (action != null && action.eIsProxy()) {
-			InternalEObject oldAction = (InternalEObject)action;
-			action = (Action)eResolveProxy(oldAction);
-			if (action != oldAction) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, rosresolutionmodelsPackage.ROS_ACTION_CONNECTION__ACTION, oldAction, action));
-			}
-		}
-		return action;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Action basicGetAction() {
-		return action;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAction(Action newAction) {
-		Action oldAction = action;
-		action = newAction;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rosresolutionmodelsPackage.ROS_ACTION_CONNECTION__ACTION, oldAction, action));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -229,9 +179,6 @@ public class ROSActionConnectionImpl extends ROSAbstractConnectionImpl implement
 			case rosresolutionmodelsPackage.ROS_ACTION_CONNECTION__ACTION_CLIENT:
 				if (resolve) return getActionClient();
 				return basicGetActionClient();
-			case rosresolutionmodelsPackage.ROS_ACTION_CONNECTION__ACTION:
-				if (resolve) return getAction();
-				return basicGetAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -249,9 +196,6 @@ public class ROSActionConnectionImpl extends ROSAbstractConnectionImpl implement
 				return;
 			case rosresolutionmodelsPackage.ROS_ACTION_CONNECTION__ACTION_CLIENT:
 				setActionClient((ActionClient)newValue);
-				return;
-			case rosresolutionmodelsPackage.ROS_ACTION_CONNECTION__ACTION:
-				setAction((Action)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -271,9 +215,6 @@ public class ROSActionConnectionImpl extends ROSAbstractConnectionImpl implement
 			case rosresolutionmodelsPackage.ROS_ACTION_CONNECTION__ACTION_CLIENT:
 				setActionClient((ActionClient)null);
 				return;
-			case rosresolutionmodelsPackage.ROS_ACTION_CONNECTION__ACTION:
-				setAction((Action)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -290,8 +231,6 @@ public class ROSActionConnectionImpl extends ROSAbstractConnectionImpl implement
 				return actionServer != null;
 			case rosresolutionmodelsPackage.ROS_ACTION_CONNECTION__ACTION_CLIENT:
 				return actionClient != null;
-			case rosresolutionmodelsPackage.ROS_ACTION_CONNECTION__ACTION:
-				return action != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -311,10 +250,7 @@ public class ROSActionConnectionImpl extends ROSAbstractConnectionImpl implement
 			ActionClient acA = connection.getActionClient();
 			ActionClient acB = this.getActionClient();
 
-			Action aA = connection.getAction();
-			Action aB = this.getAction();
-
-			if(asA == asB && acA == acB && aA == aB){
+			if(asA == asB && acA == acB){
 				return true;
 			}else{
 				return false;

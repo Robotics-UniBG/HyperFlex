@@ -34,7 +34,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -52,7 +51,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class ROSNewActionConnectionItemProvider
-	extends ROSAbstractConnectionItemProvider
+	extends ROSActionConnectionItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -80,55 +79,9 @@ public class ROSNewActionConnectionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addActionServerPropertyDescriptor(object);
-			addActionClientPropertyDescriptor(object);
 			addActionNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Action Server feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addActionServerPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ROSNewActionConnection_actionServer_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNewActionConnection_actionServer_feature", "_UI_ROSNewActionConnection_type"),
-				 rosresolutionmodelsPackage.Literals.ROS_NEW_ACTION_CONNECTION__ACTION_SERVER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Action Client feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addActionClientPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ROSNewActionConnection_actionClient_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ROSNewActionConnection_actionClient_feature", "_UI_ROSNewActionConnection_type"),
-				 rosresolutionmodelsPackage.Literals.ROS_NEW_ACTION_CONNECTION__ACTION_CLIENT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

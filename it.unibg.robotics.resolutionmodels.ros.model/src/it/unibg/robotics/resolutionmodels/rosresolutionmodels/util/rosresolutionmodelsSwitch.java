@@ -31,6 +31,7 @@ import it.unibg.robotics.resolutionmodels.RMRequiredConnections;
 import it.unibg.robotics.resolutionmodels.RMTransfConnection;
 import it.unibg.robotics.resolutionmodels.RMTransfImplementation;
 import it.unibg.robotics.resolutionmodels.RMTransfProperty;
+import it.unibg.robotics.resolutionmodels.rosresolutionmodels.*;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
@@ -146,7 +147,16 @@ public class rosresolutionmodelsSwitch<T> extends Switch<T> {
 			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION: {
 				ROSNewTopicConnection rosNewTopicConnection = (ROSNewTopicConnection)theEObject;
 				T result = caseROSNewTopicConnection(rosNewTopicConnection);
+				if (result == null) result = caseROSTopicConnection(rosNewTopicConnection);
 				if (result == null) result = caseROSAbstractConnection(rosNewTopicConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case rosresolutionmodelsPackage.ROS_EXISTING_TOPIC_CONNECTION: {
+				ROSExistingTopicConnection rosExistingTopicConnection = (ROSExistingTopicConnection)theEObject;
+				T result = caseROSExistingTopicConnection(rosExistingTopicConnection);
+				if (result == null) result = caseROSTopicConnection(rosExistingTopicConnection);
+				if (result == null) result = caseROSAbstractConnection(rosExistingTopicConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -160,7 +170,16 @@ public class rosresolutionmodelsSwitch<T> extends Switch<T> {
 			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION: {
 				ROSNewServiceConnection rosNewServiceConnection = (ROSNewServiceConnection)theEObject;
 				T result = caseROSNewServiceConnection(rosNewServiceConnection);
+				if (result == null) result = caseROSServiceConnection(rosNewServiceConnection);
 				if (result == null) result = caseROSAbstractConnection(rosNewServiceConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case rosresolutionmodelsPackage.ROS_EXISTING_SERVICE_CONNECTION: {
+				ROSExistingServiceConnection rosExistingServiceConnection = (ROSExistingServiceConnection)theEObject;
+				T result = caseROSExistingServiceConnection(rosExistingServiceConnection);
+				if (result == null) result = caseROSServiceConnection(rosExistingServiceConnection);
+				if (result == null) result = caseROSAbstractConnection(rosExistingServiceConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -174,7 +193,16 @@ public class rosresolutionmodelsSwitch<T> extends Switch<T> {
 			case rosresolutionmodelsPackage.ROS_NEW_ACTION_CONNECTION: {
 				ROSNewActionConnection rosNewActionConnection = (ROSNewActionConnection)theEObject;
 				T result = caseROSNewActionConnection(rosNewActionConnection);
+				if (result == null) result = caseROSActionConnection(rosNewActionConnection);
 				if (result == null) result = caseROSAbstractConnection(rosNewActionConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case rosresolutionmodelsPackage.ROS_EXISTING_ACTION_CONNECTION: {
+				ROSExistingActionConnection rosExistingActionConnection = (ROSExistingActionConnection)theEObject;
+				T result = caseROSExistingActionConnection(rosExistingActionConnection);
+				if (result == null) result = caseROSActionConnection(rosExistingActionConnection);
+				if (result == null) result = caseROSAbstractConnection(rosExistingActionConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -287,6 +315,21 @@ public class rosresolutionmodelsSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ROS Existing Topic Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ROS Existing Topic Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseROSExistingTopicConnection(ROSExistingTopicConnection object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ROS Service Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -317,6 +360,21 @@ public class rosresolutionmodelsSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ROS Existing Service Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ROS Existing Service Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseROSExistingServiceConnection(ROSExistingServiceConnection object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ROS Action Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -343,6 +401,21 @@ public class rosresolutionmodelsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseROSNewActionConnection(ROSNewActionConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ROS Existing Action Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ROS Existing Action Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseROSExistingActionConnection(ROSExistingActionConnection object) {
 		return null;
 	}
 

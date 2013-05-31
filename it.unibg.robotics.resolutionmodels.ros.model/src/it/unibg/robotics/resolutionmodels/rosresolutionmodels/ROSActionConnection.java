@@ -25,7 +25,6 @@
  */
 package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
 
-import org.ros.model.ros.Action;
 import org.ros.model.ros.ActionClient;
 import org.ros.model.ros.ActionServer;
 
@@ -39,12 +38,11 @@ import org.ros.model.ros.ActionServer;
  * <ul>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection#getActionServer <em>Action Server</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection#getActionClient <em>Action Client</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection#getAction <em>Action</em>}</li>
  * </ul>
  * </p>
  *
  * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSActionConnection()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ROSActionConnection extends ROSAbstractConnection {
@@ -99,31 +97,5 @@ public interface ROSActionConnection extends ROSAbstractConnection {
 	 * @generated
 	 */
 	void setActionClient(ActionClient value);
-
-	/**
-	 * Returns the value of the '<em><b>Action</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Action</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Action</em>' reference.
-	 * @see #setAction(Action)
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSActionConnection_Action()
-	 * @model required="true"
-	 * @generated
-	 */
-	Action getAction();
-
-	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection#getAction <em>Action</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Action</em>' reference.
-	 * @see #getAction()
-	 * @generated
-	 */
-	void setAction(Action value);
 
 } // ROSActionConnection

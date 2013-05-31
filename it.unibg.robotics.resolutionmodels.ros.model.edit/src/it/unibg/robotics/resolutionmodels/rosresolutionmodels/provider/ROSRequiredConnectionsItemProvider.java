@@ -27,7 +27,6 @@ package it.unibg.robotics.resolutionmodels.rosresolutionmodels.provider;
 
 
 import it.unibg.robotics.resolutionmodels.provider.RMRequiredConnectionsItemProvider;
-
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsFactory;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
@@ -37,12 +36,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -86,77 +81,8 @@ public class ROSRequiredConnectionsItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addRequiredTopicConnectionsPropertyDescriptor(object);
-			addRequiredServiceConnectionsPropertyDescriptor(object);
-			addRequiredActionConnectionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Required Topic Connections feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRequiredTopicConnectionsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ROSRequiredConnections_requiredTopicConnections_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ROSRequiredConnections_requiredTopicConnections_feature", "_UI_ROSRequiredConnections_type"),
-				 rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Required Service Connections feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRequiredServiceConnectionsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ROSRequiredConnections_requiredServiceConnections_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ROSRequiredConnections_requiredServiceConnections_feature", "_UI_ROSRequiredConnections_type"),
-				 rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Required Action Connections feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRequiredActionConnectionsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ROSRequiredConnections_requiredActionConnections_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ROSRequiredConnections_requiredActionConnections_feature", "_UI_ROSRequiredConnections_type"),
-				 rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -171,9 +97,9 @@ public class ROSRequiredConnectionsItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS);
-			childrenFeatures.add(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS);
-			childrenFeatures.add(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS);
+			childrenFeatures.add(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_TOPIC_CONNECTIONS);
+			childrenFeatures.add(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_SERVICE_CONNECTIONS);
+			childrenFeatures.add(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_ACTION_CONNECTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -225,9 +151,9 @@ public class ROSRequiredConnectionsItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ROSRequiredConnections.class)) {
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS:
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS:
-			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS:
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_TOPIC_CONNECTIONS:
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_SERVICE_CONNECTIONS:
+			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_ACTION_CONNECTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -247,18 +173,18 @@ public class ROSRequiredConnectionsItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS,
-				 rosresolutionmodelsFactory.eINSTANCE.createROSTopicConnection()));
+				(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_TOPIC_CONNECTIONS,
+				 rosresolutionmodelsFactory.eINSTANCE.createROSExistingTopicConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS,
-				 rosresolutionmodelsFactory.eINSTANCE.createROSServiceConnection()));
+				(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_SERVICE_CONNECTIONS,
+				 rosresolutionmodelsFactory.eINSTANCE.createROSExistingServiceConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS,
-				 rosresolutionmodelsFactory.eINSTANCE.createROSActionConnection()));
+				(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_ACTION_CONNECTIONS,
+				 rosresolutionmodelsFactory.eINSTANCE.createROSExistingActionConnection()));
 	}
 
 	/**

@@ -25,8 +25,6 @@
  */
 package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
 
-import org.ros.model.ros.ServiceClient;
-import org.ros.model.ros.ServiceServer;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,8 +34,6 @@ import org.ros.model.ros.ServiceServer;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceServer <em>Service Server</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceClient <em>Service Client</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceName <em>Service Name</em>}</li>
  * </ul>
  * </p>
@@ -46,59 +42,7 @@ import org.ros.model.ros.ServiceServer;
  * @model
  * @generated
  */
-public interface ROSNewServiceConnection extends ROSAbstractConnection {
-	/**
-	 * Returns the value of the '<em><b>Service Server</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Service Server</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Service Server</em>' reference.
-	 * @see #setServiceServer(ServiceServer)
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSNewServiceConnection_ServiceServer()
-	 * @model required="true"
-	 * @generated
-	 */
-	ServiceServer getServiceServer();
-
-	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceServer <em>Service Server</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Service Server</em>' reference.
-	 * @see #getServiceServer()
-	 * @generated
-	 */
-	void setServiceServer(ServiceServer value);
-
-	/**
-	 * Returns the value of the '<em><b>Service Client</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Service Client</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Service Client</em>' reference.
-	 * @see #setServiceClient(ServiceClient)
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSNewServiceConnection_ServiceClient()
-	 * @model required="true"
-	 * @generated
-	 */
-	ServiceClient getServiceClient();
-
-	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceClient <em>Service Client</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Service Client</em>' reference.
-	 * @see #getServiceClient()
-	 * @generated
-	 */
-	void setServiceClient(ServiceClient value);
-
+public interface ROSNewServiceConnection extends ROSServiceConnection {
 	/**
 	 * Returns the value of the '<em><b>Service Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

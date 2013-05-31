@@ -383,10 +383,10 @@ public class RTTResolutionHandler extends AbstractHandler {
 						newConnection.setBufferSize(newRttConnection.getBufferSize());
 
 						InputPort targetInputPort = inputPortHashTable.get(newRttConnection.getInputPort());
-						targetInputPort.setInputConnectionPolicy(newConnection);
+						targetInputPort.getInputConnectionPolicy().add(newConnection);
 
 						OutputPort targetOutputPort = outputPortHashTable.get(newRttConnection.getOutputPort());
-						targetOutputPort.setOutputConnectionPolicy(newConnection);
+						targetOutputPort.getOutputConnectionPolicy().add(newConnection);
 
 						newConnection.setInputPort(targetInputPort);
 						newConnection.setOutputPort(targetOutputPort);
@@ -444,8 +444,8 @@ public class RTTResolutionHandler extends AbstractHandler {
 		}
 
 		for(ConnectionPolicy connection : unusedConnection){
-			connection.getInputPort().setInputConnectionPolicy(null);
-			connection.getOutputPort().setOutputConnectionPolicy(null);
+			connection.getInputPort().getInputConnectionPolicy().remove(connection);
+			connection.getOutputPort().getOutputConnectionPolicy().remove(connection);
 
 			targetOrocosModel.getConnectionPolicy().remove(connection);
 		}
@@ -587,13 +587,13 @@ public class RTTResolutionHandler extends AbstractHandler {
 		InputPort sourceInputPort = source.getInputPort();
 		InputPort targetInputPort = inputPortHashTable.get(sourceInputPort);
 
-		targetInputPort.setInputConnectionPolicy(target);
+		targetInputPort.getInputConnectionPolicy().add(target);
 		target.setInputPort(targetInputPort);
 
 		OutputPort sourceOutputPort = source.getOutputPort();
 		OutputPort targetOutputPort = outputPortHashTable.get(sourceOutputPort);
 
-		targetOutputPort.setOutputConnectionPolicy(target);
+		targetOutputPort.getOutputConnectionPolicy().add(target);
 		target.setOutputPort(targetOutputPort);
 
 		connectionHashTable.put(source, target);

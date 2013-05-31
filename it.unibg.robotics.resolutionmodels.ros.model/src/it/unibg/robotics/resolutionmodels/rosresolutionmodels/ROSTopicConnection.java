@@ -27,7 +27,6 @@ package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
 
 import org.ros.model.ros.Publisher;
 import org.ros.model.ros.Subscriber;
-import org.ros.model.ros.Topic;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,12 +38,11 @@ import org.ros.model.ros.Topic;
  * <ul>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getPublisher <em>Publisher</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getSubscriber <em>Subscriber</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getTopic <em>Topic</em>}</li>
  * </ul>
  * </p>
  *
  * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSTopicConnection()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ROSTopicConnection extends ROSAbstractConnection {
@@ -99,31 +97,5 @@ public interface ROSTopicConnection extends ROSAbstractConnection {
 	 * @generated
 	 */
 	void setSubscriber(Subscriber value);
-
-	/**
-	 * Returns the value of the '<em><b>Topic</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Topic</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Topic</em>' reference.
-	 * @see #setTopic(Topic)
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSTopicConnection_Topic()
-	 * @model required="true"
-	 * @generated
-	 */
-	Topic getTopic();
-
-	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getTopic <em>Topic</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Topic</em>' reference.
-	 * @see #getTopic()
-	 * @generated
-	 */
-	void setTopic(Topic value);
 
 } // ROSTopicConnection

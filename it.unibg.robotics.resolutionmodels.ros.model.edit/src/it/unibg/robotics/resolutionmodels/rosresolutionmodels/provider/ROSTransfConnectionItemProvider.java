@@ -27,7 +27,6 @@ package it.unibg.robotics.resolutionmodels.rosresolutionmodels.provider;
 
 
 import it.unibg.robotics.resolutionmodels.provider.RMTransfConnectionItemProvider;
-
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsFactory;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
@@ -37,11 +36,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -177,17 +173,12 @@ public class ROSTransfConnectionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(rosresolutionmodelsPackage.Literals.ROS_TRANSF_CONNECTION__NEW_CONNECTIONS,
-				 rosresolutionmodelsFactory.eINSTANCE.createROSTopicConnection()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(rosresolutionmodelsPackage.Literals.ROS_TRANSF_CONNECTION__NEW_CONNECTIONS,
 				 rosresolutionmodelsFactory.eINSTANCE.createROSNewTopicConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(rosresolutionmodelsPackage.Literals.ROS_TRANSF_CONNECTION__NEW_CONNECTIONS,
-				 rosresolutionmodelsFactory.eINSTANCE.createROSServiceConnection()));
+				 rosresolutionmodelsFactory.eINSTANCE.createROSExistingTopicConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -197,12 +188,17 @@ public class ROSTransfConnectionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(rosresolutionmodelsPackage.Literals.ROS_TRANSF_CONNECTION__NEW_CONNECTIONS,
-				 rosresolutionmodelsFactory.eINSTANCE.createROSActionConnection()));
+				 rosresolutionmodelsFactory.eINSTANCE.createROSExistingServiceConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(rosresolutionmodelsPackage.Literals.ROS_TRANSF_CONNECTION__NEW_CONNECTIONS,
 				 rosresolutionmodelsFactory.eINSTANCE.createROSNewActionConnection()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(rosresolutionmodelsPackage.Literals.ROS_TRANSF_CONNECTION__NEW_CONNECTIONS,
+				 rosresolutionmodelsFactory.eINSTANCE.createROSExistingActionConnection()));
 	}
 
 	/**

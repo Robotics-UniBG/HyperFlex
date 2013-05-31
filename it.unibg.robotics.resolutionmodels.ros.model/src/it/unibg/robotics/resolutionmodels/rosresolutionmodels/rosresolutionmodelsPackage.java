@@ -311,22 +311,13 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_TOPIC_CONNECTION__SUBSCRIBER = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Topic</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROS_TOPIC_CONNECTION__TOPIC = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>ROS Topic Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_TOPIC_CONNECTION_FEATURE_COUNT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 3;
+	int ROS_TOPIC_CONNECTION_FEATURE_COUNT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl <em>ROS New Topic Connection</em>}' class.
@@ -345,7 +336,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_TOPIC_CONNECTION__NAME = ROS_ABSTRACT_CONNECTION__NAME;
+	int ROS_NEW_TOPIC_CONNECTION__NAME = ROS_TOPIC_CONNECTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Publisher</b></em>' reference.
@@ -354,7 +345,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_TOPIC_CONNECTION__PUBLISHER = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 0;
+	int ROS_NEW_TOPIC_CONNECTION__PUBLISHER = ROS_TOPIC_CONNECTION__PUBLISHER;
 
 	/**
 	 * The feature id for the '<em><b>Subscriber</b></em>' reference.
@@ -363,7 +354,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_TOPIC_CONNECTION__SUBSCRIBER = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 1;
+	int ROS_NEW_TOPIC_CONNECTION__SUBSCRIBER = ROS_TOPIC_CONNECTION__SUBSCRIBER;
 
 	/**
 	 * The feature id for the '<em><b>Topic Name</b></em>' attribute.
@@ -372,7 +363,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_TOPIC_CONNECTION__TOPIC_NAME = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 2;
+	int ROS_NEW_TOPIC_CONNECTION__TOPIC_NAME = ROS_TOPIC_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>ROS New Topic Connection</em>' class.
@@ -381,7 +372,62 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_TOPIC_CONNECTION_FEATURE_COUNT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 3;
+	int ROS_NEW_TOPIC_CONNECTION_FEATURE_COUNT = ROS_TOPIC_CONNECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl <em>ROS Existing Topic Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingTopicConnection()
+	 * @generated
+	 */
+	int ROS_EXISTING_TOPIC_CONNECTION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_TOPIC_CONNECTION__NAME = ROS_TOPIC_CONNECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Publisher</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_TOPIC_CONNECTION__PUBLISHER = ROS_TOPIC_CONNECTION__PUBLISHER;
+
+	/**
+	 * The feature id for the '<em><b>Subscriber</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_TOPIC_CONNECTION__SUBSCRIBER = ROS_TOPIC_CONNECTION__SUBSCRIBER;
+
+	/**
+	 * The feature id for the '<em><b>Topic</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_TOPIC_CONNECTION__TOPIC = ROS_TOPIC_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>ROS Existing Topic Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_TOPIC_CONNECTION_FEATURE_COUNT = ROS_TOPIC_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSServiceConnectionImpl <em>ROS Service Connection</em>}' class.
@@ -391,7 +437,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSServiceConnection()
 	 * @generated
 	 */
-	int ROS_SERVICE_CONNECTION = 6;
+	int ROS_SERVICE_CONNECTION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -421,22 +467,13 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_SERVICE_CONNECTION__SERVICE_CLIENT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Service</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROS_SERVICE_CONNECTION__SERVICE = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>ROS Service Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_SERVICE_CONNECTION_FEATURE_COUNT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 3;
+	int ROS_SERVICE_CONNECTION_FEATURE_COUNT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl <em>ROS New Service Connection</em>}' class.
@@ -446,7 +483,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewServiceConnection()
 	 * @generated
 	 */
-	int ROS_NEW_SERVICE_CONNECTION = 7;
+	int ROS_NEW_SERVICE_CONNECTION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -455,7 +492,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_SERVICE_CONNECTION__NAME = ROS_ABSTRACT_CONNECTION__NAME;
+	int ROS_NEW_SERVICE_CONNECTION__NAME = ROS_SERVICE_CONNECTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Service Server</b></em>' reference.
@@ -464,7 +501,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_SERVICE_CONNECTION__SERVICE_SERVER = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 0;
+	int ROS_NEW_SERVICE_CONNECTION__SERVICE_SERVER = ROS_SERVICE_CONNECTION__SERVICE_SERVER;
 
 	/**
 	 * The feature id for the '<em><b>Service Client</b></em>' reference.
@@ -473,7 +510,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_SERVICE_CONNECTION__SERVICE_CLIENT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 1;
+	int ROS_NEW_SERVICE_CONNECTION__SERVICE_CLIENT = ROS_SERVICE_CONNECTION__SERVICE_CLIENT;
 
 	/**
 	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
@@ -482,7 +519,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_SERVICE_CONNECTION__SERVICE_NAME = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 2;
+	int ROS_NEW_SERVICE_CONNECTION__SERVICE_NAME = ROS_SERVICE_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>ROS New Service Connection</em>' class.
@@ -491,7 +528,62 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_SERVICE_CONNECTION_FEATURE_COUNT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 3;
+	int ROS_NEW_SERVICE_CONNECTION_FEATURE_COUNT = ROS_SERVICE_CONNECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingServiceConnectionImpl <em>ROS Existing Service Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingServiceConnectionImpl
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingServiceConnection()
+	 * @generated
+	 */
+	int ROS_EXISTING_SERVICE_CONNECTION = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_SERVICE_CONNECTION__NAME = ROS_SERVICE_CONNECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Service Server</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_SERVICE_CONNECTION__SERVICE_SERVER = ROS_SERVICE_CONNECTION__SERVICE_SERVER;
+
+	/**
+	 * The feature id for the '<em><b>Service Client</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_SERVICE_CONNECTION__SERVICE_CLIENT = ROS_SERVICE_CONNECTION__SERVICE_CLIENT;
+
+	/**
+	 * The feature id for the '<em><b>Service</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_SERVICE_CONNECTION__SERVICE = ROS_SERVICE_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>ROS Existing Service Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_SERVICE_CONNECTION_FEATURE_COUNT = ROS_SERVICE_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl <em>ROS Action Connection</em>}' class.
@@ -501,7 +593,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSActionConnection()
 	 * @generated
 	 */
-	int ROS_ACTION_CONNECTION = 8;
+	int ROS_ACTION_CONNECTION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -531,22 +623,13 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_ACTION_CONNECTION__ACTION_CLIENT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Action</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROS_ACTION_CONNECTION__ACTION = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>ROS Action Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_ACTION_CONNECTION_FEATURE_COUNT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 3;
+	int ROS_ACTION_CONNECTION_FEATURE_COUNT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewActionConnectionImpl <em>ROS New Action Connection</em>}' class.
@@ -556,7 +639,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewActionConnection()
 	 * @generated
 	 */
-	int ROS_NEW_ACTION_CONNECTION = 9;
+	int ROS_NEW_ACTION_CONNECTION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -565,7 +648,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_ACTION_CONNECTION__NAME = ROS_ABSTRACT_CONNECTION__NAME;
+	int ROS_NEW_ACTION_CONNECTION__NAME = ROS_ACTION_CONNECTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Action Server</b></em>' reference.
@@ -574,7 +657,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_ACTION_CONNECTION__ACTION_SERVER = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 0;
+	int ROS_NEW_ACTION_CONNECTION__ACTION_SERVER = ROS_ACTION_CONNECTION__ACTION_SERVER;
 
 	/**
 	 * The feature id for the '<em><b>Action Client</b></em>' reference.
@@ -583,7 +666,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_ACTION_CONNECTION__ACTION_CLIENT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 1;
+	int ROS_NEW_ACTION_CONNECTION__ACTION_CLIENT = ROS_ACTION_CONNECTION__ACTION_CLIENT;
 
 	/**
 	 * The feature id for the '<em><b>Action Name</b></em>' attribute.
@@ -592,7 +675,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_ACTION_CONNECTION__ACTION_NAME = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 2;
+	int ROS_NEW_ACTION_CONNECTION__ACTION_NAME = ROS_ACTION_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>ROS New Action Connection</em>' class.
@@ -601,7 +684,62 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_NEW_ACTION_CONNECTION_FEATURE_COUNT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 3;
+	int ROS_NEW_ACTION_CONNECTION_FEATURE_COUNT = ROS_ACTION_CONNECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl <em>ROS Existing Action Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingActionConnection()
+	 * @generated
+	 */
+	int ROS_EXISTING_ACTION_CONNECTION = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_ACTION_CONNECTION__NAME = ROS_ACTION_CONNECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Action Server</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_ACTION_CONNECTION__ACTION_SERVER = ROS_ACTION_CONNECTION__ACTION_SERVER;
+
+	/**
+	 * The feature id for the '<em><b>Action Client</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_ACTION_CONNECTION__ACTION_CLIENT = ROS_ACTION_CONNECTION__ACTION_CLIENT;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_ACTION_CONNECTION__ACTION = ROS_ACTION_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>ROS Existing Action Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_ACTION_CONNECTION_FEATURE_COUNT = ROS_ACTION_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredComponentsImpl <em>ROS Required Components</em>}' class.
@@ -611,7 +749,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSRequiredComponents()
 	 * @generated
 	 */
-	int ROS_REQUIRED_COMPONENTS = 10;
+	int ROS_REQUIRED_COMPONENTS = 13;
 
 	/**
 	 * The feature id for the '<em><b>ROS Nodes</b></em>' reference list.
@@ -639,34 +777,34 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSRequiredConnections()
 	 * @generated
 	 */
-	int ROS_REQUIRED_CONNECTIONS = 11;
+	int ROS_REQUIRED_CONNECTIONS = 14;
 
 	/**
-	 * The feature id for the '<em><b>Required Topic Connections</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Required Existing Topic Connections</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS = resolutionmodelsPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 0;
+	int ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_TOPIC_CONNECTIONS = resolutionmodelsPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Required Service Connections</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Required Existing Service Connections</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS = resolutionmodelsPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 1;
+	int ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_SERVICE_CONNECTIONS = resolutionmodelsPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Required Action Connections</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Required Existing Action Connections</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS = resolutionmodelsPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 2;
+	int ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_ACTION_CONNECTIONS = resolutionmodelsPackage.RM_REQUIRED_CONNECTIONS_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>ROS Required Connections</em>' class.
@@ -795,17 +933,6 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	EReference getROSTopicConnection_Subscriber();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getTopic <em>Topic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Topic</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getTopic()
-	 * @see #getROSTopicConnection()
-	 * @generated
-	 */
-	EReference getROSTopicConnection_Topic();
-
-	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection <em>ROS New Topic Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -814,28 +941,6 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getROSNewTopicConnection();
-
-	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getPublisher <em>Publisher</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Publisher</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getPublisher()
-	 * @see #getROSNewTopicConnection()
-	 * @generated
-	 */
-	EReference getROSNewTopicConnection_Publisher();
-
-	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getSubscriber <em>Subscriber</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Subscriber</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getSubscriber()
-	 * @see #getROSNewTopicConnection()
-	 * @generated
-	 */
-	EReference getROSNewTopicConnection_Subscriber();
 
 	/**
 	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getTopicName <em>Topic Name</em>}'.
@@ -847,6 +952,27 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getROSNewTopicConnection_TopicName();
+
+	/**
+	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection <em>ROS Existing Topic Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ROS Existing Topic Connection</em>'.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection
+	 * @generated
+	 */
+	EClass getROSExistingTopicConnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection#getTopic <em>Topic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Topic</em>'.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection#getTopic()
+	 * @see #getROSExistingTopicConnection()
+	 * @generated
+	 */
+	EReference getROSExistingTopicConnection_Topic();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection <em>ROS Service Connection</em>}'.
@@ -881,17 +1007,6 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	EReference getROSServiceConnection_ServiceClient();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getService <em>Service</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Service</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getService()
-	 * @see #getROSServiceConnection()
-	 * @generated
-	 */
-	EReference getROSServiceConnection_Service();
-
-	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection <em>ROS New Service Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -900,28 +1015,6 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getROSNewServiceConnection();
-
-	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceServer <em>Service Server</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Service Server</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceServer()
-	 * @see #getROSNewServiceConnection()
-	 * @generated
-	 */
-	EReference getROSNewServiceConnection_ServiceServer();
-
-	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceClient <em>Service Client</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Service Client</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceClient()
-	 * @see #getROSNewServiceConnection()
-	 * @generated
-	 */
-	EReference getROSNewServiceConnection_ServiceClient();
 
 	/**
 	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceName <em>Service Name</em>}'.
@@ -933,6 +1026,27 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getROSNewServiceConnection_ServiceName();
+
+	/**
+	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection <em>ROS Existing Service Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ROS Existing Service Connection</em>'.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection
+	 * @generated
+	 */
+	EClass getROSExistingServiceConnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection#getService <em>Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Service</em>'.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection#getService()
+	 * @see #getROSExistingServiceConnection()
+	 * @generated
+	 */
+	EReference getROSExistingServiceConnection_Service();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection <em>ROS Action Connection</em>}'.
@@ -967,17 +1081,6 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	EReference getROSActionConnection_ActionClient();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection#getAction <em>Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Action</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection#getAction()
-	 * @see #getROSActionConnection()
-	 * @generated
-	 */
-	EReference getROSActionConnection_Action();
-
-	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection <em>ROS New Action Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -986,28 +1089,6 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getROSNewActionConnection();
-
-	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionServer <em>Action Server</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Action Server</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionServer()
-	 * @see #getROSNewActionConnection()
-	 * @generated
-	 */
-	EReference getROSNewActionConnection_ActionServer();
-
-	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionClient <em>Action Client</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Action Client</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionClient()
-	 * @see #getROSNewActionConnection()
-	 * @generated
-	 */
-	EReference getROSNewActionConnection_ActionClient();
 
 	/**
 	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionName <em>Action Name</em>}'.
@@ -1019,6 +1100,27 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getROSNewActionConnection_ActionName();
+
+	/**
+	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection <em>ROS Existing Action Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ROS Existing Action Connection</em>'.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection
+	 * @generated
+	 */
+	EClass getROSExistingActionConnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection#getAction <em>Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Action</em>'.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection#getAction()
+	 * @see #getROSExistingActionConnection()
+	 * @generated
+	 */
+	EReference getROSExistingActionConnection_Action();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents <em>ROS Required Components</em>}'.
@@ -1052,37 +1154,37 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	EClass getROSRequiredConnections();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredTopicConnections <em>Required Topic Connections</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingTopicConnections <em>Required Existing Topic Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Required Topic Connections</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredTopicConnections()
+	 * @return the meta object for the containment reference list '<em>Required Existing Topic Connections</em>'.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingTopicConnections()
 	 * @see #getROSRequiredConnections()
 	 * @generated
 	 */
-	EReference getROSRequiredConnections_RequiredTopicConnections();
+	EReference getROSRequiredConnections_RequiredExistingTopicConnections();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredServiceConnections <em>Required Service Connections</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingServiceConnections <em>Required Existing Service Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Required Service Connections</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredServiceConnections()
+	 * @return the meta object for the containment reference list '<em>Required Existing Service Connections</em>'.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingServiceConnections()
 	 * @see #getROSRequiredConnections()
 	 * @generated
 	 */
-	EReference getROSRequiredConnections_RequiredServiceConnections();
+	EReference getROSRequiredConnections_RequiredExistingServiceConnections();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredActionConnections <em>Required Action Connections</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingActionConnections <em>Required Existing Action Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Required Action Connections</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredActionConnections()
+	 * @return the meta object for the containment reference list '<em>Required Existing Action Connections</em>'.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingActionConnections()
 	 * @see #getROSRequiredConnections()
 	 * @generated
 	 */
-	EReference getROSRequiredConnections_RequiredActionConnections();
+	EReference getROSRequiredConnections_RequiredExistingActionConnections();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1205,14 +1307,6 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_TOPIC_CONNECTION__SUBSCRIBER = eINSTANCE.getROSTopicConnection_Subscriber();
 
 		/**
-		 * The meta object literal for the '<em><b>Topic</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROS_TOPIC_CONNECTION__TOPIC = eINSTANCE.getROSTopicConnection_Topic();
-
-		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl <em>ROS New Topic Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1223,28 +1317,30 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EClass ROS_NEW_TOPIC_CONNECTION = eINSTANCE.getROSNewTopicConnection();
 
 		/**
-		 * The meta object literal for the '<em><b>Publisher</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROS_NEW_TOPIC_CONNECTION__PUBLISHER = eINSTANCE.getROSNewTopicConnection_Publisher();
-
-		/**
-		 * The meta object literal for the '<em><b>Subscriber</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROS_NEW_TOPIC_CONNECTION__SUBSCRIBER = eINSTANCE.getROSNewTopicConnection_Subscriber();
-
-		/**
 		 * The meta object literal for the '<em><b>Topic Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute ROS_NEW_TOPIC_CONNECTION__TOPIC_NAME = eINSTANCE.getROSNewTopicConnection_TopicName();
+
+		/**
+		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl <em>ROS Existing Topic Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl
+		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingTopicConnection()
+		 * @generated
+		 */
+		EClass ROS_EXISTING_TOPIC_CONNECTION = eINSTANCE.getROSExistingTopicConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Topic</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROS_EXISTING_TOPIC_CONNECTION__TOPIC = eINSTANCE.getROSExistingTopicConnection_Topic();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSServiceConnectionImpl <em>ROS Service Connection</em>}' class.
@@ -1273,14 +1369,6 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_SERVICE_CONNECTION__SERVICE_CLIENT = eINSTANCE.getROSServiceConnection_ServiceClient();
 
 		/**
-		 * The meta object literal for the '<em><b>Service</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROS_SERVICE_CONNECTION__SERVICE = eINSTANCE.getROSServiceConnection_Service();
-
-		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl <em>ROS New Service Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1291,28 +1379,30 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EClass ROS_NEW_SERVICE_CONNECTION = eINSTANCE.getROSNewServiceConnection();
 
 		/**
-		 * The meta object literal for the '<em><b>Service Server</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROS_NEW_SERVICE_CONNECTION__SERVICE_SERVER = eINSTANCE.getROSNewServiceConnection_ServiceServer();
-
-		/**
-		 * The meta object literal for the '<em><b>Service Client</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROS_NEW_SERVICE_CONNECTION__SERVICE_CLIENT = eINSTANCE.getROSNewServiceConnection_ServiceClient();
-
-		/**
 		 * The meta object literal for the '<em><b>Service Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute ROS_NEW_SERVICE_CONNECTION__SERVICE_NAME = eINSTANCE.getROSNewServiceConnection_ServiceName();
+
+		/**
+		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingServiceConnectionImpl <em>ROS Existing Service Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingServiceConnectionImpl
+		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingServiceConnection()
+		 * @generated
+		 */
+		EClass ROS_EXISTING_SERVICE_CONNECTION = eINSTANCE.getROSExistingServiceConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Service</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROS_EXISTING_SERVICE_CONNECTION__SERVICE = eINSTANCE.getROSExistingServiceConnection_Service();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl <em>ROS Action Connection</em>}' class.
@@ -1341,14 +1431,6 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_ACTION_CONNECTION__ACTION_CLIENT = eINSTANCE.getROSActionConnection_ActionClient();
 
 		/**
-		 * The meta object literal for the '<em><b>Action</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROS_ACTION_CONNECTION__ACTION = eINSTANCE.getROSActionConnection_Action();
-
-		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewActionConnectionImpl <em>ROS New Action Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1359,28 +1441,30 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EClass ROS_NEW_ACTION_CONNECTION = eINSTANCE.getROSNewActionConnection();
 
 		/**
-		 * The meta object literal for the '<em><b>Action Server</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROS_NEW_ACTION_CONNECTION__ACTION_SERVER = eINSTANCE.getROSNewActionConnection_ActionServer();
-
-		/**
-		 * The meta object literal for the '<em><b>Action Client</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROS_NEW_ACTION_CONNECTION__ACTION_CLIENT = eINSTANCE.getROSNewActionConnection_ActionClient();
-
-		/**
 		 * The meta object literal for the '<em><b>Action Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute ROS_NEW_ACTION_CONNECTION__ACTION_NAME = eINSTANCE.getROSNewActionConnection_ActionName();
+
+		/**
+		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl <em>ROS Existing Action Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl
+		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingActionConnection()
+		 * @generated
+		 */
+		EClass ROS_EXISTING_ACTION_CONNECTION = eINSTANCE.getROSExistingActionConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Action</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROS_EXISTING_ACTION_CONNECTION__ACTION = eINSTANCE.getROSExistingActionConnection_Action();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredComponentsImpl <em>ROS Required Components</em>}' class.
@@ -1411,28 +1495,28 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EClass ROS_REQUIRED_CONNECTIONS = eINSTANCE.getROSRequiredConnections();
 
 		/**
-		 * The meta object literal for the '<em><b>Required Topic Connections</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Required Existing Topic Connections</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROS_REQUIRED_CONNECTIONS__REQUIRED_TOPIC_CONNECTIONS = eINSTANCE.getROSRequiredConnections_RequiredTopicConnections();
+		EReference ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_TOPIC_CONNECTIONS = eINSTANCE.getROSRequiredConnections_RequiredExistingTopicConnections();
 
 		/**
-		 * The meta object literal for the '<em><b>Required Service Connections</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Required Existing Service Connections</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROS_REQUIRED_CONNECTIONS__REQUIRED_SERVICE_CONNECTIONS = eINSTANCE.getROSRequiredConnections_RequiredServiceConnections();
+		EReference ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_SERVICE_CONNECTIONS = eINSTANCE.getROSRequiredConnections_RequiredExistingServiceConnections();
 
 		/**
-		 * The meta object literal for the '<em><b>Required Action Connections</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Required Existing Action Connections</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROS_REQUIRED_CONNECTIONS__REQUIRED_ACTION_CONNECTIONS = eINSTANCE.getROSRequiredConnections_RequiredActionConnections();
+		EReference ROS_REQUIRED_CONNECTIONS__REQUIRED_EXISTING_ACTION_CONNECTIONS = eINSTANCE.getROSRequiredConnections_RequiredExistingActionConnections();
 
 	}
 

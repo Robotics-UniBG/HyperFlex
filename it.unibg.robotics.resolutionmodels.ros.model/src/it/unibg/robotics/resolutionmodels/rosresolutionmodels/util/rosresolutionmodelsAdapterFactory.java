@@ -31,6 +31,7 @@ import it.unibg.robotics.resolutionmodels.RMRequiredConnections;
 import it.unibg.robotics.resolutionmodels.RMTransfConnection;
 import it.unibg.robotics.resolutionmodels.RMTransfImplementation;
 import it.unibg.robotics.resolutionmodels.RMTransfProperty;
+import it.unibg.robotics.resolutionmodels.rosresolutionmodels.*;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
@@ -131,6 +132,10 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 				return createROSNewTopicConnectionAdapter();
 			}
 			@Override
+			public Adapter caseROSExistingTopicConnection(ROSExistingTopicConnection object) {
+				return createROSExistingTopicConnectionAdapter();
+			}
+			@Override
 			public Adapter caseROSServiceConnection(ROSServiceConnection object) {
 				return createROSServiceConnectionAdapter();
 			}
@@ -139,12 +144,20 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 				return createROSNewServiceConnectionAdapter();
 			}
 			@Override
+			public Adapter caseROSExistingServiceConnection(ROSExistingServiceConnection object) {
+				return createROSExistingServiceConnectionAdapter();
+			}
+			@Override
 			public Adapter caseROSActionConnection(ROSActionConnection object) {
 				return createROSActionConnectionAdapter();
 			}
 			@Override
 			public Adapter caseROSNewActionConnection(ROSNewActionConnection object) {
 				return createROSNewActionConnectionAdapter();
+			}
+			@Override
+			public Adapter caseROSExistingActionConnection(ROSExistingActionConnection object) {
+				return createROSExistingActionConnectionAdapter();
 			}
 			@Override
 			public Adapter caseROSRequiredComponents(ROSRequiredComponents object) {
@@ -283,6 +296,20 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection <em>ROS Existing Topic Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection
+	 * @generated
+	 */
+	public Adapter createROSExistingTopicConnectionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection <em>ROS Service Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -311,6 +338,20 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection <em>ROS Existing Service Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection
+	 * @generated
+	 */
+	public Adapter createROSExistingServiceConnectionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection <em>ROS Action Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -335,6 +376,20 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createROSNewActionConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection <em>ROS Existing Action Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection
+	 * @generated
+	 */
+	public Adapter createROSExistingActionConnectionAdapter() {
 		return null;
 	}
 

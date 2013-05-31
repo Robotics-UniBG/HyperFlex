@@ -34,7 +34,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -80,7 +79,6 @@ public class ROSActionConnectionItemProvider
 
 			addActionServerPropertyDescriptor(object);
 			addActionClientPropertyDescriptor(object);
-			addActionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -121,28 +119,6 @@ public class ROSActionConnectionItemProvider
 				 getString("_UI_ROSActionConnection_actionClient_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSActionConnection_actionClient_feature", "_UI_ROSActionConnection_type"),
 				 rosresolutionmodelsPackage.Literals.ROS_ACTION_CONNECTION__ACTION_CLIENT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Action feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addActionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ROSActionConnection_action_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ROSActionConnection_action_feature", "_UI_ROSActionConnection_type"),
-				 rosresolutionmodelsPackage.Literals.ROS_ACTION_CONNECTION__ACTION,
 				 true,
 				 false,
 				 true,

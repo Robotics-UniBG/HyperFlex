@@ -25,7 +25,6 @@
  */
 package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
 
-import org.ros.model.ros.Service;
 import org.ros.model.ros.ServiceClient;
 import org.ros.model.ros.ServiceServer;
 
@@ -39,12 +38,11 @@ import org.ros.model.ros.ServiceServer;
  * <ul>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getServiceServer <em>Service Server</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getServiceClient <em>Service Client</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getService <em>Service</em>}</li>
  * </ul>
  * </p>
  *
  * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSServiceConnection()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ROSServiceConnection extends ROSAbstractConnection {
@@ -99,31 +97,5 @@ public interface ROSServiceConnection extends ROSAbstractConnection {
 	 * @generated
 	 */
 	void setServiceClient(ServiceClient value);
-
-	/**
-	 * Returns the value of the '<em><b>Service</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Service</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Service</em>' reference.
-	 * @see #setService(Service)
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSServiceConnection_Service()
-	 * @model required="true"
-	 * @generated
-	 */
-	Service getService();
-
-	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getService <em>Service</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Service</em>' reference.
-	 * @see #getService()
-	 * @generated
-	 */
-	void setService(Service value);
 
 } // ROSServiceConnection

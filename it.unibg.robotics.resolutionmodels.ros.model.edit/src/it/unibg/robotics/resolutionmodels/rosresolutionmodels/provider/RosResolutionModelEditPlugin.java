@@ -26,13 +26,10 @@
 package it.unibg.robotics.resolutionmodels.rosresolutionmodels.provider;
 
 import it.unibg.robotics.featuremodels.provider.FeatureModelEditPlugin;
-
 import it.unibg.robotics.resolutionmodels.provider.ResolutionModelEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.ros.model.ros.provider.RosEditPlugin;
 
 /**

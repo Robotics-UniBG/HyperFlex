@@ -25,14 +25,14 @@
  */
 package it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl;
 
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection;
+import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
+import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
+import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty;
@@ -92,12 +92,12 @@ public class rosresolutionmodelsFactoryImpl extends EFactoryImpl implements rosr
 			case rosresolutionmodelsPackage.ROS_TRANSF_IMPLEMENTATION: return createROSTransfImplementation();
 			case rosresolutionmodelsPackage.ROS_TRANSF_PROPERTY: return createROSTransfProperty();
 			case rosresolutionmodelsPackage.ROS_TRANSF_CONNECTION: return createROSTransfConnection();
-			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION: return createROSTopicConnection();
 			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION: return createROSNewTopicConnection();
-			case rosresolutionmodelsPackage.ROS_SERVICE_CONNECTION: return createROSServiceConnection();
+			case rosresolutionmodelsPackage.ROS_EXISTING_TOPIC_CONNECTION: return createROSExistingTopicConnection();
 			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION: return createROSNewServiceConnection();
-			case rosresolutionmodelsPackage.ROS_ACTION_CONNECTION: return createROSActionConnection();
+			case rosresolutionmodelsPackage.ROS_EXISTING_SERVICE_CONNECTION: return createROSExistingServiceConnection();
 			case rosresolutionmodelsPackage.ROS_NEW_ACTION_CONNECTION: return createROSNewActionConnection();
+			case rosresolutionmodelsPackage.ROS_EXISTING_ACTION_CONNECTION: return createROSExistingActionConnection();
 			case rosresolutionmodelsPackage.ROS_REQUIRED_COMPONENTS: return createROSRequiredComponents();
 			case rosresolutionmodelsPackage.ROS_REQUIRED_CONNECTIONS: return createROSRequiredConnections();
 			default:
@@ -140,16 +140,6 @@ public class rosresolutionmodelsFactoryImpl extends EFactoryImpl implements rosr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ROSTopicConnection createROSTopicConnection() {
-		ROSTopicConnectionImpl rosTopicConnection = new ROSTopicConnectionImpl();
-		return rosTopicConnection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ROSNewTopicConnection createROSNewTopicConnection() {
 		ROSNewTopicConnectionImpl rosNewTopicConnection = new ROSNewTopicConnectionImpl();
 		return rosNewTopicConnection;
@@ -160,9 +150,9 @@ public class rosresolutionmodelsFactoryImpl extends EFactoryImpl implements rosr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ROSServiceConnection createROSServiceConnection() {
-		ROSServiceConnectionImpl rosServiceConnection = new ROSServiceConnectionImpl();
-		return rosServiceConnection;
+	public ROSExistingTopicConnection createROSExistingTopicConnection() {
+		ROSExistingTopicConnectionImpl rosExistingTopicConnection = new ROSExistingTopicConnectionImpl();
+		return rosExistingTopicConnection;
 	}
 
 	/**
@@ -180,9 +170,9 @@ public class rosresolutionmodelsFactoryImpl extends EFactoryImpl implements rosr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ROSActionConnection createROSActionConnection() {
-		ROSActionConnectionImpl rosActionConnection = new ROSActionConnectionImpl();
-		return rosActionConnection;
+	public ROSExistingServiceConnection createROSExistingServiceConnection() {
+		ROSExistingServiceConnectionImpl rosExistingServiceConnection = new ROSExistingServiceConnectionImpl();
+		return rosExistingServiceConnection;
 	}
 
 	/**
@@ -193,6 +183,16 @@ public class rosresolutionmodelsFactoryImpl extends EFactoryImpl implements rosr
 	public ROSNewActionConnection createROSNewActionConnection() {
 		ROSNewActionConnectionImpl rosNewActionConnection = new ROSNewActionConnectionImpl();
 		return rosNewActionConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ROSExistingActionConnection createROSExistingActionConnection() {
+		ROSExistingActionConnectionImpl rosExistingActionConnection = new ROSExistingActionConnectionImpl();
+		return rosExistingActionConnection;
 	}
 
 	/**

@@ -34,7 +34,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -80,7 +79,6 @@ public class ROSTopicConnectionItemProvider
 
 			addPublisherPropertyDescriptor(object);
 			addSubscriberPropertyDescriptor(object);
-			addTopicPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -121,28 +119,6 @@ public class ROSTopicConnectionItemProvider
 				 getString("_UI_ROSTopicConnection_subscriber_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ROSTopicConnection_subscriber_feature", "_UI_ROSTopicConnection_type"),
 				 rosresolutionmodelsPackage.Literals.ROS_TOPIC_CONNECTION__SUBSCRIBER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Topic feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTopicPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ROSTopicConnection_topic_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ROSTopicConnection_topic_feature", "_UI_ROSTopicConnection_type"),
-				 rosresolutionmodelsPackage.Literals.ROS_TOPIC_CONNECTION__TOPIC,
 				 true,
 				 false,
 				 true,

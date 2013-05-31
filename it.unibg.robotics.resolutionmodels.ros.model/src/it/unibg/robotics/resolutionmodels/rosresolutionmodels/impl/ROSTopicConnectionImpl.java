@@ -34,7 +34,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.ros.model.ros.Publisher;
 import org.ros.model.ros.Subscriber;
-import org.ros.model.ros.Topic;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,13 +44,12 @@ import org.ros.model.ros.Topic;
  * <ul>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl#getPublisher <em>Publisher</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl#getSubscriber <em>Subscriber</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl#getTopic <em>Topic</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ROSTopicConnectionImpl extends ROSAbstractConnectionImpl implements ROSTopicConnection {
+public abstract class ROSTopicConnectionImpl extends ROSAbstractConnectionImpl implements ROSTopicConnection {
 	/**
 	 * The cached value of the '{@link #getPublisher() <em>Publisher</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -71,16 +69,6 @@ public class ROSTopicConnectionImpl extends ROSAbstractConnectionImpl implements
 	 * @ordered
 	 */
 	protected Subscriber subscriber;
-
-	/**
-	 * The cached value of the '{@link #getTopic() <em>Topic</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTopic()
-	 * @generated
-	 * @ordered
-	 */
-	protected Topic topic;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,44 +170,6 @@ public class ROSTopicConnectionImpl extends ROSAbstractConnectionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Topic getTopic() {
-		if (topic != null && topic.eIsProxy()) {
-			InternalEObject oldTopic = (InternalEObject)topic;
-			topic = (Topic)eResolveProxy(oldTopic);
-			if (topic != oldTopic) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__TOPIC, oldTopic, topic));
-			}
-		}
-		return topic;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Topic basicGetTopic() {
-		return topic;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTopic(Topic newTopic) {
-		Topic oldTopic = topic;
-		topic = newTopic;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__TOPIC, oldTopic, topic));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -229,9 +179,6 @@ public class ROSTopicConnectionImpl extends ROSAbstractConnectionImpl implements
 			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__SUBSCRIBER:
 				if (resolve) return getSubscriber();
 				return basicGetSubscriber();
-			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__TOPIC:
-				if (resolve) return getTopic();
-				return basicGetTopic();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -249,9 +196,6 @@ public class ROSTopicConnectionImpl extends ROSAbstractConnectionImpl implements
 				return;
 			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__SUBSCRIBER:
 				setSubscriber((Subscriber)newValue);
-				return;
-			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__TOPIC:
-				setTopic((Topic)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -271,9 +215,6 @@ public class ROSTopicConnectionImpl extends ROSAbstractConnectionImpl implements
 			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__SUBSCRIBER:
 				setSubscriber((Subscriber)null);
 				return;
-			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__TOPIC:
-				setTopic((Topic)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -290,8 +231,6 @@ public class ROSTopicConnectionImpl extends ROSAbstractConnectionImpl implements
 				return publisher != null;
 			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__SUBSCRIBER:
 				return subscriber != null;
-			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__TOPIC:
-				return topic != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -311,10 +250,7 @@ public class ROSTopicConnectionImpl extends ROSAbstractConnectionImpl implements
 			Subscriber subA = connection.getSubscriber();
 			Subscriber subB = this.getSubscriber();
 
-			Topic topA = connection.getTopic();
-			Topic topB = this.getTopic();
-
-			if(pubA == pubB && subA == subB && topA == topB){
+			if(pubA == pubB && subA == subB){
 				return true;
 			}else{
 				return false;

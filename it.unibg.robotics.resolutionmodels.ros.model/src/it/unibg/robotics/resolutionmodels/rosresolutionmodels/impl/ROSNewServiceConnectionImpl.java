@@ -30,10 +30,7 @@ import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodel
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.ros.model.ros.ServiceClient;
-import org.ros.model.ros.ServiceServer;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,35 +39,13 @@ import org.ros.model.ros.ServiceServer;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl#getServiceServer <em>Service Server</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl#getServiceClient <em>Service Client</em>}</li>
  *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl#getServiceName <em>Service Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ROSNewServiceConnectionImpl extends ROSAbstractConnectionImpl implements ROSNewServiceConnection {
-	/**
-	 * The cached value of the '{@link #getServiceServer() <em>Service Server</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getServiceServer()
-	 * @generated
-	 * @ordered
-	 */
-	protected ServiceServer serviceServer;
-
-	/**
-	 * The cached value of the '{@link #getServiceClient() <em>Service Client</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getServiceClient()
-	 * @generated
-	 * @ordered
-	 */
-	protected ServiceClient serviceClient;
-
+public class ROSNewServiceConnectionImpl extends ROSServiceConnectionImpl implements ROSNewServiceConnection {
 	/**
 	 * The default value of the '{@link #getServiceName() <em>Service Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -115,82 +90,6 @@ public class ROSNewServiceConnectionImpl extends ROSAbstractConnectionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ServiceServer getServiceServer() {
-		if (serviceServer != null && serviceServer.eIsProxy()) {
-			InternalEObject oldServiceServer = (InternalEObject)serviceServer;
-			serviceServer = (ServiceServer)eResolveProxy(oldServiceServer);
-			if (serviceServer != oldServiceServer) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_SERVER, oldServiceServer, serviceServer));
-			}
-		}
-		return serviceServer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ServiceServer basicGetServiceServer() {
-		return serviceServer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setServiceServer(ServiceServer newServiceServer) {
-		ServiceServer oldServiceServer = serviceServer;
-		serviceServer = newServiceServer;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_SERVER, oldServiceServer, serviceServer));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ServiceClient getServiceClient() {
-		if (serviceClient != null && serviceClient.eIsProxy()) {
-			InternalEObject oldServiceClient = (InternalEObject)serviceClient;
-			serviceClient = (ServiceClient)eResolveProxy(oldServiceClient);
-			if (serviceClient != oldServiceClient) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_CLIENT, oldServiceClient, serviceClient));
-			}
-		}
-		return serviceClient;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ServiceClient basicGetServiceClient() {
-		return serviceClient;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setServiceClient(ServiceClient newServiceClient) {
-		ServiceClient oldServiceClient = serviceClient;
-		serviceClient = newServiceClient;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_CLIENT, oldServiceClient, serviceClient));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getServiceName() {
 		return serviceName;
 	}
@@ -215,12 +114,6 @@ public class ROSNewServiceConnectionImpl extends ROSAbstractConnectionImpl imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_SERVER:
-				if (resolve) return getServiceServer();
-				return basicGetServiceServer();
-			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_CLIENT:
-				if (resolve) return getServiceClient();
-				return basicGetServiceClient();
 			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_NAME:
 				return getServiceName();
 		}
@@ -235,12 +128,6 @@ public class ROSNewServiceConnectionImpl extends ROSAbstractConnectionImpl imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_SERVER:
-				setServiceServer((ServiceServer)newValue);
-				return;
-			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_CLIENT:
-				setServiceClient((ServiceClient)newValue);
-				return;
 			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_NAME:
 				setServiceName((String)newValue);
 				return;
@@ -256,12 +143,6 @@ public class ROSNewServiceConnectionImpl extends ROSAbstractConnectionImpl imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_SERVER:
-				setServiceServer((ServiceServer)null);
-				return;
-			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_CLIENT:
-				setServiceClient((ServiceClient)null);
-				return;
 			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_NAME:
 				setServiceName(SERVICE_NAME_EDEFAULT);
 				return;
@@ -277,10 +158,6 @@ public class ROSNewServiceConnectionImpl extends ROSAbstractConnectionImpl imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_SERVER:
-				return serviceServer != null;
-			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_CLIENT:
-				return serviceClient != null;
 			case rosresolutionmodelsPackage.ROS_NEW_SERVICE_CONNECTION__SERVICE_NAME:
 				return SERVICE_NAME_EDEFAULT == null ? serviceName != null : !SERVICE_NAME_EDEFAULT.equals(serviceName);
 		}
@@ -312,16 +189,10 @@ public class ROSNewServiceConnectionImpl extends ROSAbstractConnectionImpl imple
 		if(arg0 instanceof ROSNewServiceConnectionImpl){
 			ROSNewServiceConnectionImpl connection = (ROSNewServiceConnectionImpl)arg0;
 			
-			ServiceServer ssA = connection.getServiceServer();
-			ServiceServer ssB = this.getServiceServer();
-
-			ServiceClient scA = connection.getServiceClient();
-			ServiceClient scB = this.getServiceClient();
-
 			String nA = connection.getServiceName();
 			String nB = this.getServiceName();
 
-			if(ssA == ssB && scA == scB && nA == nB){
+			if(super.equals(arg0) && nA == nB){
 				return true;
 			}else{
 				return false;

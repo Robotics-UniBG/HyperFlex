@@ -37,9 +37,9 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredTopicConnections <em>Required Topic Connections</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredServiceConnections <em>Required Service Connections</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredActionConnections <em>Required Action Connections</em>}</li>
+ *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingTopicConnections <em>Required Existing Topic Connections</em>}</li>
+ *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingServiceConnections <em>Required Existing Service Connections</em>}</li>
+ *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingActionConnections <em>Required Existing Action Connections</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,51 +49,51 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface ROSRequiredConnections extends RMRequiredConnections {
 	/**
-	 * Returns the value of the '<em><b>Required Topic Connections</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection}.
+	 * Returns the value of the '<em><b>Required Existing Topic Connections</b></em>' containment reference list.
+	 * The list contents are of type {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Required Topic Connections</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Required Existing Topic Connections</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required Topic Connections</em>' containment reference list.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections_RequiredTopicConnections()
+	 * @return the value of the '<em>Required Existing Topic Connections</em>' containment reference list.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections_RequiredExistingTopicConnections()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ROSTopicConnection> getRequiredTopicConnections();
+	EList<ROSExistingTopicConnection> getRequiredExistingTopicConnections();
 
 	/**
-	 * Returns the value of the '<em><b>Required Service Connections</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection}.
+	 * Returns the value of the '<em><b>Required Existing Service Connections</b></em>' containment reference list.
+	 * The list contents are of type {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Required Service Connections</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Required Existing Service Connections</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required Service Connections</em>' containment reference list.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections_RequiredServiceConnections()
+	 * @return the value of the '<em>Required Existing Service Connections</em>' containment reference list.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections_RequiredExistingServiceConnections()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ROSServiceConnection> getRequiredServiceConnections();
+	EList<ROSExistingServiceConnection> getRequiredExistingServiceConnections();
 
 	/**
-	 * Returns the value of the '<em><b>Required Action Connections</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection}.
+	 * Returns the value of the '<em><b>Required Existing Action Connections</b></em>' containment reference list.
+	 * The list contents are of type {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Required Action Connections</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Required Existing Action Connections</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required Action Connections</em>' containment reference list.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections_RequiredActionConnections()
+	 * @return the value of the '<em>Required Existing Action Connections</em>' containment reference list.
+	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections_RequiredExistingActionConnections()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ROSActionConnection> getRequiredActionConnections();
+	EList<ROSExistingActionConnection> getRequiredExistingActionConnections();
 
 } // ROSRequiredConnections

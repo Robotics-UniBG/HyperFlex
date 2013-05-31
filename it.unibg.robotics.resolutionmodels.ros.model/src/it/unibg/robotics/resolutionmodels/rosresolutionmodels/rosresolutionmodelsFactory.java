@@ -72,15 +72,6 @@ public interface rosresolutionmodelsFactory extends EFactory {
 	ROSTransfConnection createROSTransfConnection();
 
 	/**
-	 * Returns a new object of class '<em>ROS Topic Connection</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ROS Topic Connection</em>'.
-	 * @generated
-	 */
-	ROSTopicConnection createROSTopicConnection();
-
-	/**
 	 * Returns a new object of class '<em>ROS New Topic Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,13 +81,13 @@ public interface rosresolutionmodelsFactory extends EFactory {
 	ROSNewTopicConnection createROSNewTopicConnection();
 
 	/**
-	 * Returns a new object of class '<em>ROS Service Connection</em>'.
+	 * Returns a new object of class '<em>ROS Existing Topic Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ROS Service Connection</em>'.
+	 * @return a new object of class '<em>ROS Existing Topic Connection</em>'.
 	 * @generated
 	 */
-	ROSServiceConnection createROSServiceConnection();
+	ROSExistingTopicConnection createROSExistingTopicConnection();
 
 	/**
 	 * Returns a new object of class '<em>ROS New Service Connection</em>'.
@@ -108,13 +99,13 @@ public interface rosresolutionmodelsFactory extends EFactory {
 	ROSNewServiceConnection createROSNewServiceConnection();
 
 	/**
-	 * Returns a new object of class '<em>ROS Action Connection</em>'.
+	 * Returns a new object of class '<em>ROS Existing Service Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ROS Action Connection</em>'.
+	 * @return a new object of class '<em>ROS Existing Service Connection</em>'.
 	 * @generated
 	 */
-	ROSActionConnection createROSActionConnection();
+	ROSExistingServiceConnection createROSExistingServiceConnection();
 
 	/**
 	 * Returns a new object of class '<em>ROS New Action Connection</em>'.
@@ -124,6 +115,15 @@ public interface rosresolutionmodelsFactory extends EFactory {
 	 * @generated
 	 */
 	ROSNewActionConnection createROSNewActionConnection();
+
+	/**
+	 * Returns a new object of class '<em>ROS Existing Action Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ROS Existing Action Connection</em>'.
+	 * @generated
+	 */
+	ROSExistingActionConnection createROSExistingActionConnection();
 
 	/**
 	 * Returns a new object of class '<em>ROS Required Components</em>'.

@@ -27,11 +27,8 @@ package it.unibg.robotics.resolutionmodels.rosresolutionmodels.provider;
 
 import it.unibg.robotics.resolutionmodels.RMResolutionElement;
 import it.unibg.robotics.resolutionmodels.resolutionmodelsPackage;
-
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsFactory;
-
 import it.unibg.robotics.resolutionmodels.rosresolutionmodels.util.rosresolutionmodelsAdapterFactory;
-
 import it.unibg.robotics.resolutionmodels.util.resolutionmodelsSwitch;
 
 import java.util.ArrayList;
@@ -41,15 +38,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.emf.edit.command.CommandParameter;
-
 import org.eclipse.emf.edit.domain.EditingDomain;
-
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -181,29 +173,6 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ROSTopicConnectionItemProvider rosTopicConnectionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createROSTopicConnectionAdapter() {
-		if (rosTopicConnectionItemProvider == null) {
-			rosTopicConnectionItemProvider = new ROSTopicConnectionItemProvider(this);
-		}
-
-		return rosTopicConnectionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -227,26 +196,26 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection} instances.
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ROSServiceConnectionItemProvider rosServiceConnectionItemProvider;
+	protected ROSExistingTopicConnectionItemProvider rosExistingTopicConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection}.
+	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createROSServiceConnectionAdapter() {
-		if (rosServiceConnectionItemProvider == null) {
-			rosServiceConnectionItemProvider = new ROSServiceConnectionItemProvider(this);
+	public Adapter createROSExistingTopicConnectionAdapter() {
+		if (rosExistingTopicConnectionItemProvider == null) {
+			rosExistingTopicConnectionItemProvider = new ROSExistingTopicConnectionItemProvider(this);
 		}
 
-		return rosServiceConnectionItemProvider;
+		return rosExistingTopicConnectionItemProvider;
 	}
 
 	/**
@@ -273,26 +242,26 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection} instances.
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ROSActionConnectionItemProvider rosActionConnectionItemProvider;
+	protected ROSExistingServiceConnectionItemProvider rosExistingServiceConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection}.
+	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createROSActionConnectionAdapter() {
-		if (rosActionConnectionItemProvider == null) {
-			rosActionConnectionItemProvider = new ROSActionConnectionItemProvider(this);
+	public Adapter createROSExistingServiceConnectionAdapter() {
+		if (rosExistingServiceConnectionItemProvider == null) {
+			rosExistingServiceConnectionItemProvider = new ROSExistingServiceConnectionItemProvider(this);
 		}
 
-		return rosActionConnectionItemProvider;
+		return rosExistingServiceConnectionItemProvider;
 	}
 
 	/**
@@ -316,6 +285,29 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 		}
 
 		return rosNewActionConnectionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ROSExistingActionConnectionItemProvider rosExistingActionConnectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createROSExistingActionConnectionAdapter() {
+		if (rosExistingActionConnectionItemProvider == null) {
+			rosExistingActionConnectionItemProvider = new ROSExistingActionConnectionItemProvider(this);
+		}
+
+		return rosExistingActionConnectionItemProvider;
 	}
 
 	/**
@@ -466,12 +458,12 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 		if (rosTransfImplementationItemProvider != null) rosTransfImplementationItemProvider.dispose();
 		if (rosTransfPropertyItemProvider != null) rosTransfPropertyItemProvider.dispose();
 		if (rosTransfConnectionItemProvider != null) rosTransfConnectionItemProvider.dispose();
-		if (rosTopicConnectionItemProvider != null) rosTopicConnectionItemProvider.dispose();
 		if (rosNewTopicConnectionItemProvider != null) rosNewTopicConnectionItemProvider.dispose();
-		if (rosServiceConnectionItemProvider != null) rosServiceConnectionItemProvider.dispose();
+		if (rosExistingTopicConnectionItemProvider != null) rosExistingTopicConnectionItemProvider.dispose();
 		if (rosNewServiceConnectionItemProvider != null) rosNewServiceConnectionItemProvider.dispose();
-		if (rosActionConnectionItemProvider != null) rosActionConnectionItemProvider.dispose();
+		if (rosExistingServiceConnectionItemProvider != null) rosExistingServiceConnectionItemProvider.dispose();
 		if (rosNewActionConnectionItemProvider != null) rosNewActionConnectionItemProvider.dispose();
+		if (rosExistingActionConnectionItemProvider != null) rosExistingActionConnectionItemProvider.dispose();
 		if (rosRequiredComponentsItemProvider != null) rosRequiredComponentsItemProvider.dispose();
 		if (rosRequiredConnectionsItemProvider != null) rosRequiredConnectionsItemProvider.dispose();
 	}
