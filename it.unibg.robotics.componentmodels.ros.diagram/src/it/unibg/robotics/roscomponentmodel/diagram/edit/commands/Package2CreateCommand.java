@@ -1,5 +1,6 @@
 package it.unibg.robotics.roscomponentmodel.diagram.edit.commands;
 
+import it.unibg.robotics.componentmodels.shared.filters.ViewerFileFilter;
 import it.unibg.robotics.roscomponentmodel.ArchitectureModel;
 import it.unibg.robotics.roscomponentmodel.Package;
 
@@ -73,6 +74,34 @@ public class Package2CreateCommand extends EditElementCommand {
 				new WorkbenchLabelProvider(),
 				new BaseWorkbenchContentProvider());
 
+		dialog.addFilter(new ViewerFileFilter("roscomponentmodel"));
+		
+		
+//		class MyFilter extends ViewerFilter{
+//			  private boolean isLeaf(Object element){
+//			     // implement this
+//			  }
+//
+//			  private boolean isEvenLeaf(Object leaf){
+//			     // implement this
+//			  }
+//
+//			  @Override
+//			  public boolean select(Viewer viewer, Object parentElement, Object element){
+//			     if(isLeaf(element))
+//			        return isEventLeaf(element);
+//			     else{
+//			       StructuredViewer sviewer = (StructuredViewer)viewer;
+//			       ITreeContentProvider provider = (ITreeContentProvider)viewer.getContentProvider();
+//			       for(Object child: provider.getChildren(element)){
+//			         if(select(viewer, element, child))
+//			           return true;
+//			       }
+//			       return false;
+//			    }
+//			  }
+//			}
+		
 		dialog.setTitle("Model Selection");
 		dialog.setMessage("Select the model from the tree:");
 		dialog.setInput(ResourcesPlugin.getWorkspace().getRoot());
