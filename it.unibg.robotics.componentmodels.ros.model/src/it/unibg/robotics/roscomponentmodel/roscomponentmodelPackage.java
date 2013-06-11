@@ -161,13 +161,22 @@ public interface roscomponentmodelPackage extends EPackage {
 	int PACKAGE__SUB_PACKAGES = 7;
 
 	/**
+	 * The feature id for the '<em><b>Wires</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE__WIRES = 8;
+
+	/**
 	 * The number of structural features of the '<em>Package</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_FEATURE_COUNT = 8;
+	int PACKAGE_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl <em>Node</em>}' class.
@@ -613,22 +622,13 @@ public interface roscomponentmodelPackage extends EPackage {
 	int SRV_CONSUMER = 11;
 
 	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SRV_CONSUMER__TARGET = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SRV_CONSUMER__NAME = 1;
+	int SRV_CONSUMER__NAME = 0;
 
 	/**
 	 * The number of structural features of the '<em>Srv Consumer</em>' class.
@@ -637,7 +637,7 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SRV_CONSUMER_FEATURE_COUNT = 2;
+	int SRV_CONSUMER_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.PackageSrvProducerImpl <em>Package Srv Producer</em>}' class.
@@ -724,15 +724,6 @@ public interface roscomponentmodelPackage extends EPackage {
 	int PACKAGE_SRV_CONSUMER = 14;
 
 	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE_SRV_CONSUMER__TARGET = SRV_CONSUMER__TARGET;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -768,15 +759,6 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 */
 	int NODE_SRV_CONSUMER = 15;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_SRV_CONSUMER__TARGET = SRV_CONSUMER__TARGET;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -825,13 +807,13 @@ public interface roscomponentmodelPackage extends EPackage {
 	int WIRE__SOURCE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Srv Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE__SRV_NAME = 1;
+	int WIRE__TARGET = 1;
 
 	/**
 	 * The number of structural features of the '<em>Wire</em>' class.
@@ -969,6 +951,17 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPackage_SubPackages();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Package#getWires <em>Wires</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Wires</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.Package#getWires()
+	 * @see #getPackage()
+	 * @generated
+	 */
+	EReference getPackage_Wires();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.Node <em>Node</em>}'.
@@ -1290,17 +1283,6 @@ public interface roscomponentmodelPackage extends EPackage {
 	EClass getSrvConsumer();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscomponentmodel.SrvConsumer#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.SrvConsumer#getTarget()
-	 * @see #getSrvConsumer()
-	 * @generated
-	 */
-	EReference getSrvConsumer_Target();
-
-	/**
 	 * Returns the meta object for the attribute '{@link it.unibg.robotics.roscomponentmodel.SrvConsumer#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1417,15 +1399,15 @@ public interface roscomponentmodelPackage extends EPackage {
 	EReference getWire_Source();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.roscomponentmodel.Wire#getSrvName <em>Srv Name</em>}'.
+	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscomponentmodel.Wire#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Srv Name</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Wire#getSrvName()
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.Wire#getTarget()
 	 * @see #getWire()
 	 * @generated
 	 */
-	EAttribute getWire_SrvName();
+	EReference getWire_Target();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.ArchitectureModel <em>Architecture Model</em>}'.
@@ -1543,6 +1525,14 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PACKAGE__SUB_PACKAGES = eINSTANCE.getPackage_SubPackages();
+
+		/**
+		 * The meta object literal for the '<em><b>Wires</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PACKAGE__WIRES = eINSTANCE.getPackage_Wires();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl <em>Node</em>}' class.
@@ -1807,14 +1797,6 @@ public interface roscomponentmodelPackage extends EPackage {
 		EClass SRV_CONSUMER = eINSTANCE.getSrvConsumer();
 
 		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SRV_CONSUMER__TARGET = eINSTANCE.getSrvConsumer_Target();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1913,12 +1895,12 @@ public interface roscomponentmodelPackage extends EPackage {
 		EReference WIRE__SOURCE = eINSTANCE.getWire_Source();
 
 		/**
-		 * The meta object literal for the '<em><b>Srv Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute WIRE__SRV_NAME = eINSTANCE.getWire_SrvName();
+		EReference WIRE__TARGET = eINSTANCE.getWire_Target();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.ArchitectureModelImpl <em>Architecture Model</em>}' class.

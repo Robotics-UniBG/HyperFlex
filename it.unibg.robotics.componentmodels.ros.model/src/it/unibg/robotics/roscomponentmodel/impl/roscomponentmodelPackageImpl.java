@@ -332,6 +332,15 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPackage_Wires() {
+		return (EReference)packageEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getNode() {
 		return nodeEClass;
 	}
@@ -602,17 +611,8 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSrvConsumer_Target() {
-		return (EReference)srvConsumerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getSrvConsumer_Name() {
-		return (EAttribute)srvConsumerEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)srvConsumerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -710,8 +710,8 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getWire_SrvName() {
-		return (EAttribute)wireEClass.getEStructuralFeatures().get(1);
+	public EReference getWire_Target() {
+		return (EReference)wireEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -769,6 +769,7 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 		createEReference(packageEClass, PACKAGE__SRV_CONSUMERS);
 		createEAttribute(packageEClass, PACKAGE__NAME);
 		createEReference(packageEClass, PACKAGE__SUB_PACKAGES);
+		createEReference(packageEClass, PACKAGE__WIRES);
 
 		nodeEClass = createEClass(NODE);
 		createEReference(nodeEClass, NODE__MSG_PRODUCERS);
@@ -810,7 +811,6 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 		createEAttribute(srvProducerEClass, SRV_PRODUCER__NAME);
 
 		srvConsumerEClass = createEClass(SRV_CONSUMER);
-		createEReference(srvConsumerEClass, SRV_CONSUMER__TARGET);
 		createEAttribute(srvConsumerEClass, SRV_CONSUMER__NAME);
 
 		packageSrvProducerEClass = createEClass(PACKAGE_SRV_PRODUCER);
@@ -827,7 +827,7 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 
 		wireEClass = createEClass(WIRE);
 		createEReference(wireEClass, WIRE__SOURCE);
-		createEAttribute(wireEClass, WIRE__SRV_NAME);
+		createEReference(wireEClass, WIRE__TARGET);
 
 		architectureModelEClass = createEClass(ARCHITECTURE_MODEL);
 		createEReference(architectureModelEClass, ARCHITECTURE_MODEL__PACKAGE);
@@ -880,6 +880,7 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 		initEReference(getPackage_SrvConsumers(), this.getPackageSrvConsumer(), null, "srvConsumers", null, 0, -1, it.unibg.robotics.roscomponentmodel.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPackage_Name(), ecorePackage.getEString(), "name", null, 0, 1, it.unibg.robotics.roscomponentmodel.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPackage_SubPackages(), this.getPackage(), null, "subPackages", null, 0, -1, it.unibg.robotics.roscomponentmodel.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPackage_Wires(), this.getWire(), null, "wires", null, 0, -1, it.unibg.robotics.roscomponentmodel.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNode_MsgProducers(), this.getNodeMsgProducer(), null, "msgProducers", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -921,7 +922,6 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 		initEAttribute(getSrvProducer_Name(), ecorePackage.getEString(), "name", null, 0, 1, SrvProducer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(srvConsumerEClass, SrvConsumer.class, "SrvConsumer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSrvConsumer_Target(), this.getWire(), null, "target", null, 0, 1, SrvConsumer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSrvConsumer_Name(), ecorePackage.getEString(), "name", null, 0, 1, SrvConsumer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(packageSrvProducerEClass, PackageSrvProducer.class, "PackageSrvProducer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -938,7 +938,7 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 
 		initEClass(wireEClass, Wire.class, "Wire", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWire_Source(), this.getSrvProducer(), null, "source", null, 1, 1, Wire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWire_SrvName(), ecorePackage.getEString(), "srvName", null, 0, 1, Wire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWire_Target(), this.getSrvConsumer(), null, "target", null, 1, 1, Wire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(architectureModelEClass, ArchitectureModel.class, "ArchitectureModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArchitectureModel_Package(), this.getPackage(), null, "package", null, 1, 1, ArchitectureModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

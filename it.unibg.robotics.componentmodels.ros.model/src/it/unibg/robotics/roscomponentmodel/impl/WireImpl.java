@@ -25,6 +25,7 @@
  */
 package it.unibg.robotics.roscomponentmodel.impl;
 
+import it.unibg.robotics.roscomponentmodel.SrvConsumer;
 import it.unibg.robotics.roscomponentmodel.SrvProducer;
 import it.unibg.robotics.roscomponentmodel.Wire;
 import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
@@ -45,7 +46,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.WireImpl#getSource <em>Source</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.WireImpl#getSrvName <em>Srv Name</em>}</li>
+ *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.WireImpl#getTarget <em>Target</em>}</li>
  * </ul>
  * </p>
  *
@@ -63,24 +64,14 @@ public class WireImpl extends EObjectImpl implements Wire {
 	protected SrvProducer source;
 
 	/**
-	 * The default value of the '{@link #getSrvName() <em>Srv Name</em>}' attribute.
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSrvName()
+	 * @see #getTarget()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SRV_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSrvName() <em>Srv Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSrvName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String srvName = SRV_NAME_EDEFAULT;
+	protected SrvConsumer target;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -144,8 +135,16 @@ public class WireImpl extends EObjectImpl implements Wire {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSrvName() {
-		return srvName;
+	public SrvConsumer getTarget() {
+		if (target != null && target.eIsProxy()) {
+			InternalEObject oldTarget = (InternalEObject)target;
+			target = (SrvConsumer)eResolveProxy(oldTarget);
+			if (target != oldTarget) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, roscomponentmodelPackage.WIRE__TARGET, oldTarget, target));
+			}
+		}
+		return target;
 	}
 
 	/**
@@ -153,11 +152,20 @@ public class WireImpl extends EObjectImpl implements Wire {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSrvName(String newSrvName) {
-		String oldSrvName = srvName;
-		srvName = newSrvName;
+	public SrvConsumer basicGetTarget() {
+		return target;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTarget(SrvConsumer newTarget) {
+		SrvConsumer oldTarget = target;
+		target = newTarget;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, roscomponentmodelPackage.WIRE__SRV_NAME, oldSrvName, srvName));
+			eNotify(new ENotificationImpl(this, Notification.SET, roscomponentmodelPackage.WIRE__TARGET, oldTarget, target));
 	}
 
 	/**
@@ -171,8 +179,9 @@ public class WireImpl extends EObjectImpl implements Wire {
 			case roscomponentmodelPackage.WIRE__SOURCE:
 				if (resolve) return getSource();
 				return basicGetSource();
-			case roscomponentmodelPackage.WIRE__SRV_NAME:
-				return getSrvName();
+			case roscomponentmodelPackage.WIRE__TARGET:
+				if (resolve) return getTarget();
+				return basicGetTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -188,8 +197,8 @@ public class WireImpl extends EObjectImpl implements Wire {
 			case roscomponentmodelPackage.WIRE__SOURCE:
 				setSource((SrvProducer)newValue);
 				return;
-			case roscomponentmodelPackage.WIRE__SRV_NAME:
-				setSrvName((String)newValue);
+			case roscomponentmodelPackage.WIRE__TARGET:
+				setTarget((SrvConsumer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -206,8 +215,8 @@ public class WireImpl extends EObjectImpl implements Wire {
 			case roscomponentmodelPackage.WIRE__SOURCE:
 				setSource((SrvProducer)null);
 				return;
-			case roscomponentmodelPackage.WIRE__SRV_NAME:
-				setSrvName(SRV_NAME_EDEFAULT);
+			case roscomponentmodelPackage.WIRE__TARGET:
+				setTarget((SrvConsumer)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -223,26 +232,10 @@ public class WireImpl extends EObjectImpl implements Wire {
 		switch (featureID) {
 			case roscomponentmodelPackage.WIRE__SOURCE:
 				return source != null;
-			case roscomponentmodelPackage.WIRE__SRV_NAME:
-				return SRV_NAME_EDEFAULT == null ? srvName != null : !SRV_NAME_EDEFAULT.equals(srvName);
+			case roscomponentmodelPackage.WIRE__TARGET:
+				return target != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (srvName: ");
-		result.append(srvName);
-		result.append(')');
-		return result.toString();
 	}
 
 } //WireImpl

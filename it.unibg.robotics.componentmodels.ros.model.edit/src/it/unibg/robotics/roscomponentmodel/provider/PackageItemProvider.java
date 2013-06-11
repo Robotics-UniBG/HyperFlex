@@ -131,6 +131,7 @@ public class PackageItemProvider
 			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__SRV_PRODUCERS);
 			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__SRV_CONSUMERS);
 			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__SUB_PACKAGES);
+			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__WIRES);
 		}
 		return childrenFeatures;
 	}
@@ -195,6 +196,7 @@ public class PackageItemProvider
 			case roscomponentmodelPackage.PACKAGE__SRV_PRODUCERS:
 			case roscomponentmodelPackage.PACKAGE__SRV_CONSUMERS:
 			case roscomponentmodelPackage.PACKAGE__SUB_PACKAGES:
+			case roscomponentmodelPackage.PACKAGE__WIRES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -246,6 +248,11 @@ public class PackageItemProvider
 			(createChildParameter
 				(roscomponentmodelPackage.Literals.PACKAGE__SUB_PACKAGES,
 				 roscomponentmodelFactory.eINSTANCE.createPackage()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(roscomponentmodelPackage.Literals.PACKAGE__WIRES,
+				 roscomponentmodelFactory.eINSTANCE.createWire()));
 	}
 
 	/**

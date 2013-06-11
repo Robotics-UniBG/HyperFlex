@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.Wire#getSource <em>Source</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Wire#getSrvName <em>Srv Name</em>}</li>
+ *   <li>{@link it.unibg.robotics.roscomponentmodel.Wire#getTarget <em>Target</em>}</li>
  * </ul>
  * </p>
  *
@@ -72,29 +72,29 @@ public interface Wire extends EObject {
 	void setSource(SrvProducer value);
 
 	/**
-	 * Returns the value of the '<em><b>Srv Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Srv Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Target</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Srv Name</em>' attribute.
-	 * @see #setSrvName(String)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getWire_SrvName()
-	 * @model
+	 * @return the value of the '<em>Target</em>' reference.
+	 * @see #setTarget(SrvConsumer)
+	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getWire_Target()
+	 * @model required="true"
 	 * @generated
 	 */
-	String getSrvName();
+	SrvConsumer getTarget();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.Wire#getSrvName <em>Srv Name</em>}' attribute.
+	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.Wire#getTarget <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Srv Name</em>' attribute.
-	 * @see #getSrvName()
+	 * @param value the new value of the '<em>Target</em>' reference.
+	 * @see #getTarget()
 	 * @generated
 	 */
-	void setSrvName(String value);
+	void setTarget(SrvConsumer value);
 
 } // Wire

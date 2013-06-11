@@ -1,0 +1,7 @@
+# Tracing options for the it.unibg.robotics.componentmodels.ros.diagram plug-in
+
+# Common issues
+it.unibg.robotics.componentmodels.ros.diagram/debug=false
+
+# Visual IDs
+it.unibg.robotics.componentmodels.ros.diagram/debug/visualID=false

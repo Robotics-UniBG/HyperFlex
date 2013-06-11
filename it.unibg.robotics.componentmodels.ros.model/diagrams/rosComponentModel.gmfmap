@@ -15,7 +15,7 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="rosComponentModel.gmfgraph#PackageContainerName"/>
+            href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerName"/>
         <features
             href="../models/rosComponentModel.ecore#//Package/name"/>
       </labelMappings>
@@ -23,7 +23,7 @@
           xsi:type="gmftool:CreationTool"
           href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.4"/>
       <diagramNode
-          href="rosComponentModel.gmfgraph#PackageContainer"/>
+          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainer"/>
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
@@ -34,14 +34,14 @@
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="rosComponentModel.gmfgraph#ComponentName"/>
+                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ComponentName"/>
             <features
                 href="../models/rosComponentModel.ecore#//Node/name"/>
           </labelMappings>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="rosComponentModel.gmfgraph#ComponentType"/>
+                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ComponentType"/>
             <features
                 href="../models/rosComponentModel.ecore#//Node/type"/>
           </labelMappings>
@@ -49,7 +49,7 @@
               xsi:type="gmftool:CreationTool"
               href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.0"/>
           <diagramNode
-              href="rosComponentModel.gmfgraph#Component"/>
+              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Component"/>
           <children
               compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0">
             <containmentFeature
@@ -60,7 +60,7 @@
               <labelMappings
                   xsi:type="gmfmap:FeatureLabelMapping">
                 <diagramLabel
-                    href="rosComponentModel.gmfgraph#PropertiesName"/>
+                    href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#PropertiesName"/>
                 <features
                     href="../models/rosComponentModel.ecore#//Parameter/name"/>
               </labelMappings>
@@ -68,7 +68,7 @@
                   xsi:type="gmftool:CreationTool"
                   href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
               <diagramNode
-                  href="rosComponentModel.gmfgraph#PropertiesName"/>
+                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Properties"/>
             </ownedChild>
           </children>
           <children>
@@ -80,7 +80,7 @@
               <labelMappings
                   xsi:type="gmfmap:FeatureLabelMapping">
                 <diagramLabel
-                    href="rosComponentModel.gmfgraph#PublisherName"/>
+                    href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1Name"/>
                 <features
                     href="../models/rosComponentModel.ecore#//MsgProducer/name"/>
               </labelMappings>
@@ -88,7 +88,7 @@
                   xsi:type="gmftool:CreationTool"
                   href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
               <diagramNode
-                  href="rosComponentModel.gmfgraph#Publisher"/>
+                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
             </ownedChild>
           </children>
           <children>
@@ -100,7 +100,7 @@
               <labelMappings
                   xsi:type="gmfmap:FeatureLabelMapping">
                 <diagramLabel
-                    href="rosComponentModel.gmfgraph#SubscriberName"/>
+                    href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1Name"/>
                 <features
                     href="../models/rosComponentModel.ecore#//MsgConsumer/name"/>
               </labelMappings>
@@ -108,13 +108,13 @@
                   xsi:type="gmftool:CreationTool"
                   href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
               <diagramNode
-                  href="rosComponentModel.gmfgraph#Subscriber"/>
+                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
             </ownedChild>
           </children>
           <compartments
               children="//@nodes.0/@ownedChild/@children.0/@ownedChild/@children.0">
             <compartment
-                href="rosComponentModel.gmfgraph#PropertiesCompartment"/>
+                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#PropertiesCompartment"/>
           </compartments>
         </ownedChild>
       </children>
@@ -122,14 +122,13 @@
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
             href="../models/rosComponentModel.ecore#//Package/subPackages"/>
-        <ownedChild
-            relatedDiagrams="//@diagram">
+        <ownedChild>
           <domainMetaElement
               href="../models/rosComponentModel.ecore#//Package"/>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="rosComponentModel.gmfgraph#PackageName"/>
+                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeName"/>
             <features
                 href="../models/rosComponentModel.ecore#//Package/name"/>
           </labelMappings>
@@ -137,7 +136,47 @@
               xsi:type="gmftool:CreationTool"
               href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.5"/>
           <diagramNode
-              href="rosComponentModel.gmfgraph#Package"/>
+              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Composite"/>
+          <children>
+            <containmentFeature
+                href="../models/rosComponentModel.ecore#//Package/msgProducers"/>
+            <ownedChild>
+              <domainMetaElement
+                  href="../models/rosComponentModel.ecore#//PackageMsgProducer"/>
+              <labelMappings
+                  xsi:type="gmfmap:FeatureLabelMapping">
+                <diagramLabel
+                    href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1Name"/>
+                <features
+                    href="../models/rosComponentModel.ecore#//MsgProducer/name"/>
+              </labelMappings>
+              <tool
+                  xsi:type="gmftool:CreationTool"
+                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
+              <diagramNode
+                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
+            </ownedChild>
+          </children>
+          <children>
+            <containmentFeature
+                href="../models/rosComponentModel.ecore#//Package/msgConsumers"/>
+            <ownedChild>
+              <domainMetaElement
+                  href="../models/rosComponentModel.ecore#//PackageMsgConsumer"/>
+              <labelMappings
+                  xsi:type="gmfmap:FeatureLabelMapping">
+                <diagramLabel
+                    href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1Name"/>
+                <features
+                    href="../models/rosComponentModel.ecore#//MsgConsumer/name"/>
+              </labelMappings>
+              <tool
+                  xsi:type="gmftool:CreationTool"
+                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
+              <diagramNode
+                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
+            </ownedChild>
+          </children>
         </ownedChild>
       </children>
       <children>
@@ -149,7 +188,7 @@
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="rosComponentModel.gmfgraph#PublisherName"/>
+                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1Name"/>
             <features
                 href="../models/rosComponentModel.ecore#//MsgProducer/name"/>
           </labelMappings>
@@ -157,7 +196,7 @@
               xsi:type="gmftool:CreationTool"
               href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
           <diagramNode
-              href="rosComponentModel.gmfgraph#Publisher"/>
+              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
         </ownedChild>
       </children>
       <children>
@@ -169,7 +208,7 @@
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="rosComponentModel.gmfgraph#SubscriberName"/>
+                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1Name"/>
             <features
                 href="../models/rosComponentModel.ecore#//MsgConsumer/name"/>
           </labelMappings>
@@ -177,7 +216,7 @@
               xsi:type="gmftool:CreationTool"
               href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
-              href="rosComponentModel.gmfgraph#Subscriber"/>
+              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
         </ownedChild>
       </children>
       <children
@@ -190,7 +229,7 @@
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="rosComponentModel.gmfgraph#TopicName"/>
+                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Channel1Name"/>
             <features
                 href="../models/rosComponentModel.ecore#//Topic/name"/>
           </labelMappings>
@@ -198,13 +237,13 @@
               xsi:type="gmftool:CreationTool"
               href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
           <diagramNode
-              href="rosComponentModel.gmfgraph#Topic"/>
+              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Channel1"/>
         </ownedChild>
       </children>
       <compartments
           children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.4">
         <compartment
-            href="rosComponentModel.gmfgraph#PackageContainerCompartment"/>
+            href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerCompartment"/>
       </compartments>
     </ownedChild>
   </nodes>
@@ -213,7 +252,7 @@
         xsi:type="gmftool:CreationTool"
         href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
-        href="rosComponentModel.gmfgraph#SubscriberTopicConnection"/>
+        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ConsumerChannelConnection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="../models/rosComponentModel.ecore#//MsgConsumer/source"/>
@@ -223,7 +262,7 @@
         xsi:type="gmftool:CreationTool"
         href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
-        href="rosComponentModel.gmfgraph#PublisherTopicConnection"/>
+        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ProducerChannelConnection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="../models/rosComponentModel.ecore#//MsgProducer/target"/>
@@ -233,7 +272,7 @@
         xsi:type="gmftool:CreationTool"
         href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
-        href="rosComponentModel.gmfgraph#PromoteConnection"/>
+        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#PromoteConnection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="../models/rosComponentModel.ecore#//PackageMsgProducer/promote"/>
@@ -243,14 +282,14 @@
         xsi:type="gmftool:CreationTool"
         href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
-        href="rosComponentModel.gmfgraph#PromoteConnection"/>
+        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#PromoteConnection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="../models/rosComponentModel.ecore#//PackageMsgConsumer/promote"/>
   </links>
   <diagram>
     <diagramCanvas
-        href="rosComponentModel.gmfgraph#rosComponentDiagram"/>
+        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#rosComponentDiagram"/>
     <domainModel
         href="../models/rosComponentModel.ecore#/"/>
     <domainMetaElement

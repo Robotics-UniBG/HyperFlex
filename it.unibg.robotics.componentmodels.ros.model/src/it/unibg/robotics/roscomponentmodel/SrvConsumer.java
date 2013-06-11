@@ -35,7 +35,6 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.SrvConsumer#getTarget <em>Target</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.SrvConsumer#getName <em>Name</em>}</li>
  * </ul>
  * </p>
@@ -45,32 +44,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface SrvConsumer extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target</em>' reference.
-	 * @see #setTarget(Wire)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getSrvConsumer_Target()
-	 * @model
-	 * @generated
-	 */
-	Wire getTarget();
-
-	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.SrvConsumer#getTarget <em>Target</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target</em>' reference.
-	 * @see #getTarget()
-	 * @generated
-	 */
-	void setTarget(Wire value);
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

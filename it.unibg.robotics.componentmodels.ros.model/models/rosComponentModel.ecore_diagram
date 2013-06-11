@@ -340,10 +340,6 @@
   <children xmi:type="notation:Shape" xmi:id="_-98qIMxREeKDDpQObDE1eA" type="2001" fontName="Lucida Grande">
     <children xmi:type="notation:DecorationNode" xmi:id="_-99RMMxREeKDDpQObDE1eA" type="5001"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_-99RMcxREeKDDpQObDE1eA" type="7001">
-      <children xmi:type="notation:Node" xmi:id="_WgdbwMxeEeKDDpQObDE1eA" type="3001">
-        <element xmi:type="ecore:EAttribute" href="rosComponentModel.ecore#//Wire/srvName"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_WgdbwcxeEeKDDpQObDE1eA"/>
-      </children>
       <styles xmi:type="notation:SortingStyle" xmi:id="_-9-fUMxREeKDDpQObDE1eA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_-9-fUcxREeKDDpQObDE1eA"/>
     </children>
@@ -589,14 +585,14 @@
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_wNj_AMxREeKDDpQObDE1eA" type="4003" source="_iQV5MMwwEeKoru2b7bAxnw" target="_GX4AsMw0EeKoru2b7bAxnw" routing="Rectilinear">
     <children xmi:type="notation:DecorationNode" xmi:id="_wNkmEMxREeKDDpQObDE1eA" type="6002">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_wNkmEcxREeKDDpQObDE1eA" y="40"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_wNkmEcxREeKDDpQObDE1eA" x="7" y="14"/>
     </children>
     <children xmi:type="notation:DecorationNode" xmi:id="_wNkmEsxREeKDDpQObDE1eA" type="6004">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_wNkmE8xREeKDDpQObDE1eA" y="60"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_wNkmE8xREeKDDpQObDE1eA" x="-2" y="14"/>
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_wNj_AcxREeKDDpQObDE1eA" fontName="Lucida Grande"/>
     <element xmi:type="ecore:EReference" href="rosComponentModel.ecore#//Package/srvProducers"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wNj_AsxREeKDDpQObDE1eA" points="[13, 9, -325, -215]$[331, 226, -7, 2]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wNj_AsxREeKDDpQObDE1eA" points="[49, 11, -340, -208]$[49, 213, -340, -6]$[382, 213, -7, -6]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wNnpYMxREeKDDpQObDE1eA" id="(0.2,0.8269230769230769)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wNnpYcxREeKDDpQObDE1eA" id="(0.06542056074766354,0.8076923076923077)"/>
   </edges>
@@ -612,18 +608,6 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xnj30sxREeKDDpQObDE1eA" points="[-4, 8, -412, -440]$[-4, 460, -412, 12]$[392, 460, -16, 12]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xnm7IMxREeKDDpQObDE1eA" id="(0.11016949152542373,0.8461538461538461)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xnm7IcxREeKDDpQObDE1eA" id="(0.1415929203539823,0.28846153846153844)"/>
-  </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_El6_QMxSEeKDDpQObDE1eA" type="4002" source="_242G4MwzEeKoru2b7bAxnw" target="_-98qIMxREeKDDpQObDE1eA">
-    <children xmi:type="notation:DecorationNode" xmi:id="_El6_Q8xSEeKDDpQObDE1eA" type="6001">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_El6_RMxSEeKDDpQObDE1eA" x="-21" y="14"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="_El6_RcxSEeKDDpQObDE1eA" type="6003">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_El6_RsxSEeKDDpQObDE1eA" x="8" y="-14"/>
-    </children>
-    <styles xmi:type="notation:FontStyle" xmi:id="_El6_QcxSEeKDDpQObDE1eA" fontName="Lucida Grande"/>
-    <element xmi:type="ecore:EReference" href="rosComponentModel.ecore#//SrvConsumer/target"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_El6_QsxSEeKDDpQObDE1eA" points="[-4, -3, 100, 61]$[-95, -38, 9, 26]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_El9bgMxSEeKDDpQObDE1eA" id="(0.05194805194805195,0.1346153846153846)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_NBEmoMxSEeKDDpQObDE1eA" type="4002" source="_-98qIMxREeKDDpQObDE1eA" target="_0HVBgMwzEeKoru2b7bAxnw">
     <children xmi:type="notation:DecorationNode" xmi:id="_NBEmo8xSEeKDDpQObDE1eA" type="6001">
@@ -664,19 +648,6 @@
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_waWL0M0XEeKDDpQObDE1eA" id="(0.9203539823008849,0.7692307692307693)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_waWL0c0XEeKDDpQObDE1eA" id="(0.09090909090909091,0.8076923076923077)"/>
   </edges>
-  <edges xmi:type="notation:Connector" xmi:id="__99DoM0XEeKDDpQObDE1eA" type="4003" source="_iQV5MMwwEeKoru2b7bAxnw" target="_iQV5MMwwEeKoru2b7bAxnw" routing="Rectilinear">
-    <children xmi:type="notation:DecorationNode" xmi:id="__99Do80XEeKDDpQObDE1eA" type="6002">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="__99DpM0XEeKDDpQObDE1eA" x="-1" y="28"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="__99Dpc0XEeKDDpQObDE1eA" type="6004">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="__99Dps0XEeKDDpQObDE1eA" x="-20" y="13"/>
-    </children>
-    <styles xmi:type="notation:FontStyle" xmi:id="__99Doc0XEeKDDpQObDE1eA" fontName="Lucida Grande"/>
-    <element xmi:type="ecore:EReference" href="rosComponentModel.ecore#//Package/subPackages"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__99Dos0XEeKDDpQObDE1eA" points="[12, -15, 28, 5]$[83, -15, 99, 5]$[83, -60, 99, -40]$[2, -60, 18, -40]$[2, -33, 18, -13]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__9_f4M0XEeKDDpQObDE1eA" id="(0.8983050847457628,0.559322033898305)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__9_f4c0XEeKDDpQObDE1eA" id="(0.7627118644067796,0.22033898305084745)"/>
-  </edges>
   <edges xmi:type="notation:Connector" xmi:id="_WjwucM2-EeKnYOslSloOXQ" type="4003" source="_TWgIQM2-EeKnYOslSloOXQ" target="_iQV5MMwwEeKoru2b7bAxnw">
     <children xmi:type="notation:DecorationNode" xmi:id="_Wjwuc82-EeKnYOslSloOXQ" type="6002">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_WjwudM2-EeKnYOslSloOXQ" y="40"/>
@@ -689,5 +660,41 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Wjwucs2-EeKnYOslSloOXQ" points="[15, 10, -84, -52]$[86, 65, -13, 3]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Wj0Y0M2-EeKnYOslSloOXQ" id="(0.5858585858585859,0.8076923076923077)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Wj0Y0c2-EeKnYOslSloOXQ" id="(0.11016949152542373,0.6949152542372882)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_xq94QNHPEeKiOeYWGQkP1Q" type="4003" source="_iQV5MMwwEeKoru2b7bAxnw" target="_iQV5MMwwEeKoru2b7bAxnw" routing="Rectilinear">
+    <children xmi:type="notation:DecorationNode" xmi:id="_xq94Q9HPEeKiOeYWGQkP1Q" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_xq94RNHPEeKiOeYWGQkP1Q" x="-43" y="-14"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_xq94RdHPEeKiOeYWGQkP1Q" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_xq94RtHPEeKiOeYWGQkP1Q" x="-14" y="-17"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_xq94QdHPEeKiOeYWGQkP1Q" fontName="Lucida Grande"/>
+    <element xmi:type="ecore:EReference" href="rosComponentModel.ecore#//Package/subPackages"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xq94QtHPEeKiOeYWGQkP1Q" points="[59, -11, 59, -11]$[121, -11, 121, -11]$[121, -65, 121, -65]$[40, -65, 40, -65]$[40, -29, 40, -29]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_lfMCcNHQEeKiOeYWGQkP1Q" type="4003" source="_iQV5MMwwEeKoru2b7bAxnw" target="_-98qIMxREeKDDpQObDE1eA" routing="Rectilinear">
+    <children xmi:type="notation:DecorationNode" xmi:id="_lfMCc9HQEeKiOeYWGQkP1Q" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lfMCdNHQEeKiOeYWGQkP1Q" x="3" y="13"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_lfMCddHQEeKiOeYWGQkP1Q" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lfMCdtHQEeKiOeYWGQkP1Q" x="-2" y="22"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_lfMCcdHQEeKiOeYWGQkP1Q" fontName="Lucida Grande"/>
+    <element xmi:type="ecore:EReference" href="rosComponentModel.ecore#//Package/wires"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lfMCctHQEeKiOeYWGQkP1Q" points="[17, 14, -422, -344]$[432, 363, -7, 5]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lfOesNHQEeKiOeYWGQkP1Q" id="(0.2796610169491525,0.7627118644067796)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lfOesdHQEeKiOeYWGQkP1Q" id="(0.175,0.6923076923076923)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_r7cUMNHQEeKiOeYWGQkP1Q" type="4002" source="_-98qIMxREeKDDpQObDE1eA" target="_242G4MwzEeKoru2b7bAxnw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_r7cUM9HQEeKiOeYWGQkP1Q" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_r7c7QNHQEeKiOeYWGQkP1Q" x="-3" y="-16"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_r7c7QdHQEeKiOeYWGQkP1Q" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_r7c7QtHQEeKiOeYWGQkP1Q" x="-28" y="8"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_r7cUMdHQEeKiOeYWGQkP1Q" fontName="Lucida Grande"/>
+    <element xmi:type="ecore:EReference" href="rosComponentModel.ecore#//Wire/target"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_r7cUMtHQEeKiOeYWGQkP1Q" points="[20, 10, -105, -57]$[113, 57, -12, -10]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r7fXgNHQEeKiOeYWGQkP1Q" id="(0.26881720430107525,0.1694915254237288)"/>
   </edges>
 </notation:Diagram>

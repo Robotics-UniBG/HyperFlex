@@ -84,7 +84,7 @@ public class WireItemProvider
 			super.getPropertyDescriptors(object);
 
 			addSourcePropertyDescriptor(object);
-			addSrvNamePropertyDescriptor(object);
+			addTargetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -112,23 +112,23 @@ public class WireItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Srv Name feature.
+	 * This adds a property descriptor for the Target feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSrvNamePropertyDescriptor(Object object) {
+	protected void addTargetPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Wire_srvName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Wire_srvName_feature", "_UI_Wire_type"),
-				 roscomponentmodelPackage.Literals.WIRE__SRV_NAME,
+				 getString("_UI_Wire_target_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Wire_target_feature", "_UI_Wire_type"),
+				 roscomponentmodelPackage.Literals.WIRE__TARGET,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -152,10 +152,7 @@ public class WireItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Wire)object).getSrvName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Wire_type") :
-			getString("_UI_Wire_type") + " " + label;
+		return getString("_UI_Wire_type");
 	}
 
 	/**
@@ -168,12 +165,6 @@ public class WireItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Wire.class)) {
-			case roscomponentmodelPackage.WIRE__SRV_NAME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

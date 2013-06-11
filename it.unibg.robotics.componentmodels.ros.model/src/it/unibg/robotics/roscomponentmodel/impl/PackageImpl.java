@@ -31,6 +31,7 @@ import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
 import it.unibg.robotics.roscomponentmodel.PackageSrvConsumer;
 import it.unibg.robotics.roscomponentmodel.PackageSrvProducer;
 import it.unibg.robotics.roscomponentmodel.Topic;
+import it.unibg.robotics.roscomponentmodel.Wire;
 import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
 
 import java.util.Collection;
@@ -47,6 +48,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -64,6 +66,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.PackageImpl#getSrvConsumers <em>Srv Consumers</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.PackageImpl#getName <em>Name</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.PackageImpl#getSubPackages <em>Sub Packages</em>}</li>
+ *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.PackageImpl#getWires <em>Wires</em>}</li>
  * </ul>
  * </p>
  *
@@ -159,6 +162,16 @@ public class PackageImpl extends EObjectImpl implements it.unibg.robotics.roscom
 	 * @ordered
 	 */
 	protected EList<it.unibg.robotics.roscomponentmodel.Package> subPackages;
+
+	/**
+	 * The cached value of the '{@link #getWires() <em>Wires</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWires()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Wire> wires;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -289,6 +302,18 @@ public class PackageImpl extends EObjectImpl implements it.unibg.robotics.roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Wire> getWires() {
+		if (wires == null) {
+			wires = new EObjectContainmentEList<Wire>(Wire.class, this, roscomponentmodelPackage.PACKAGE__WIRES);
+		}
+		return wires;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -306,6 +331,8 @@ public class PackageImpl extends EObjectImpl implements it.unibg.robotics.roscom
 				return ((InternalEList<?>)getSrvConsumers()).basicRemove(otherEnd, msgs);
 			case roscomponentmodelPackage.PACKAGE__SUB_PACKAGES:
 				return ((InternalEList<?>)getSubPackages()).basicRemove(otherEnd, msgs);
+			case roscomponentmodelPackage.PACKAGE__WIRES:
+				return ((InternalEList<?>)getWires()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -334,6 +361,8 @@ public class PackageImpl extends EObjectImpl implements it.unibg.robotics.roscom
 				return getName();
 			case roscomponentmodelPackage.PACKAGE__SUB_PACKAGES:
 				return getSubPackages();
+			case roscomponentmodelPackage.PACKAGE__WIRES:
+				return getWires();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -378,6 +407,10 @@ public class PackageImpl extends EObjectImpl implements it.unibg.robotics.roscom
 				getSubPackages().clear();
 				getSubPackages().addAll((Collection<? extends it.unibg.robotics.roscomponentmodel.Package>)newValue);
 				return;
+			case roscomponentmodelPackage.PACKAGE__WIRES:
+				getWires().clear();
+				getWires().addAll((Collection<? extends Wire>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -414,6 +447,9 @@ public class PackageImpl extends EObjectImpl implements it.unibg.robotics.roscom
 			case roscomponentmodelPackage.PACKAGE__SUB_PACKAGES:
 				getSubPackages().clear();
 				return;
+			case roscomponentmodelPackage.PACKAGE__WIRES:
+				getWires().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -442,6 +478,8 @@ public class PackageImpl extends EObjectImpl implements it.unibg.robotics.roscom
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case roscomponentmodelPackage.PACKAGE__SUB_PACKAGES:
 				return subPackages != null && !subPackages.isEmpty();
+			case roscomponentmodelPackage.PACKAGE__WIRES:
+				return wires != null && !wires.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

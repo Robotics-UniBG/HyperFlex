@@ -45,6 +45,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link it.unibg.robotics.roscomponentmodel.Package#getSrvConsumers <em>Srv Consumers</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.Package#getName <em>Name</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.Package#getSubPackages <em>Sub Packages</em>}</li>
+ *   <li>{@link it.unibg.robotics.roscomponentmodel.Package#getWires <em>Wires</em>}</li>
  * </ul>
  * </p>
  *
@@ -190,5 +191,21 @@ public interface Package extends EObject {
 	 * @generated
 	 */
 	EList<Package> getSubPackages();
+
+	/**
+	 * Returns the value of the '<em><b>Wires</b></em>' containment reference list.
+	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.Wire}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Wires</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Wires</em>' containment reference list.
+	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getPackage_Wires()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Wire> getWires();
 
 } // Package
