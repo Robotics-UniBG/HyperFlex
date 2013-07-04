@@ -120,36 +120,36 @@ public class FeatureModelNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (FeatureModelVisualIDRegistry.getVisualID(view)) {
-		case Feature2EditPart.VISUAL_ID:
+		case FeatureAttributesEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://robotics.unibg.it/featuremodels?Feature", FeatureModelElementTypes.Feature_2006); //$NON-NLS-1$
-		case FeatureEditPart.VISUAL_ID:
+					"Navigator?Link?http://robotics.unibg.it/featuremodels?Feature?attributes", FeatureModelElementTypes.FeatureAttributes_4012); //$NON-NLS-1$
+		case FeatureSubFeatures2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://robotics.unibg.it/featuremodels?Feature", FeatureModelElementTypes.Feature_2005); //$NON-NLS-1$
+					"Navigator?Link?http://robotics.unibg.it/featuremodels?Feature?subFeatures", FeatureModelElementTypes.FeatureSubFeatures_4008); //$NON-NLS-1$
 		case FeatureSubFeaturesEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://robotics.unibg.it/featuremodels?Feature?subFeatures", FeatureModelElementTypes.FeatureSubFeatures_4007); //$NON-NLS-1$
 		case ContainmentAssociationSubFeatures2EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://robotics.unibg.it/featuremodels?ContainmentAssociation?subFeatures", FeatureModelElementTypes.ContainmentAssociationSubFeatures_4014); //$NON-NLS-1$
-		case SimpleAttributeEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://robotics.unibg.it/featuremodels?SimpleAttribute", FeatureModelElementTypes.SimpleAttribute_2008); //$NON-NLS-1$
 		case ContainmentAssociationSubFeaturesEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://robotics.unibg.it/featuremodels?ContainmentAssociation?subFeatures", FeatureModelElementTypes.ContainmentAssociationSubFeatures_4013); //$NON-NLS-1$
-		case FeatureSubFeatures2EditPart.VISUAL_ID:
+		case Feature2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://robotics.unibg.it/featuremodels?Feature?subFeatures", FeatureModelElementTypes.FeatureSubFeatures_4008); //$NON-NLS-1$
-		case ContainmentAssociationEditPart.VISUAL_ID:
+					"Navigator?TopLevelNode?http://robotics.unibg.it/featuremodels?Feature", FeatureModelElementTypes.Feature_2006); //$NON-NLS-1$
+		case FeatureEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/featuremodels?ContainmentAssociation", FeatureModelElementTypes.ContainmentAssociation_3001); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://robotics.unibg.it/featuremodels?Feature", FeatureModelElementTypes.Feature_2005); //$NON-NLS-1$
 		case FeatureModelEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Diagram?http://robotics.unibg.it/featuremodels?FeatureModel", FeatureModelElementTypes.FeatureModel_1000); //$NON-NLS-1$
-		case FeatureAttributesEditPart.VISUAL_ID:
+		case SimpleAttributeEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://robotics.unibg.it/featuremodels?Feature?attributes", FeatureModelElementTypes.FeatureAttributes_4012); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://robotics.unibg.it/featuremodels?SimpleAttribute", FeatureModelElementTypes.SimpleAttribute_2008); //$NON-NLS-1$
+		case ContainmentAssociationEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/featuremodels?ContainmentAssociation", FeatureModelElementTypes.ContainmentAssociation_3001); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -202,26 +202,26 @@ public class FeatureModelNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (FeatureModelVisualIDRegistry.getVisualID(view)) {
-		case Feature2EditPart.VISUAL_ID:
-			return getFeature_2006Text(view);
-		case FeatureEditPart.VISUAL_ID:
-			return getFeature_2005Text(view);
+		case FeatureAttributesEditPart.VISUAL_ID:
+			return getFeatureAttributes_4012Text(view);
+		case FeatureSubFeatures2EditPart.VISUAL_ID:
+			return getFeatureSubFeatures_4008Text(view);
 		case FeatureSubFeaturesEditPart.VISUAL_ID:
 			return getFeatureSubFeatures_4007Text(view);
 		case ContainmentAssociationSubFeatures2EditPart.VISUAL_ID:
 			return getContainmentAssociationSubFeatures_4014Text(view);
-		case SimpleAttributeEditPart.VISUAL_ID:
-			return getSimpleAttribute_2008Text(view);
 		case ContainmentAssociationSubFeaturesEditPart.VISUAL_ID:
 			return getContainmentAssociationSubFeatures_4013Text(view);
-		case FeatureSubFeatures2EditPart.VISUAL_ID:
-			return getFeatureSubFeatures_4008Text(view);
-		case ContainmentAssociationEditPart.VISUAL_ID:
-			return getContainmentAssociation_3001Text(view);
+		case Feature2EditPart.VISUAL_ID:
+			return getFeature_2006Text(view);
+		case FeatureEditPart.VISUAL_ID:
+			return getFeature_2005Text(view);
 		case FeatureModelEditPart.VISUAL_ID:
 			return getFeatureModel_1000Text(view);
-		case FeatureAttributesEditPart.VISUAL_ID:
-			return getFeatureAttributes_4012Text(view);
+		case SimpleAttributeEditPart.VISUAL_ID:
+			return getSimpleAttribute_2008Text(view);
+		case ContainmentAssociationEditPart.VISUAL_ID:
+			return getContainmentAssociation_3001Text(view);
 		}
 		return getUnknownElementText(view);
 	}

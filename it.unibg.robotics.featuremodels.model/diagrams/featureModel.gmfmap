@@ -106,7 +106,7 @@
         href="../models/featureModel.ecore#//Feature/subFeatures"/>
     <creationConstraints>
       <sourceEnd
-          body="featureParent &lt;> null or root = true"/>
+          body="featureParent &lt;> null or containerParent &lt;> null or root = true"/>
       <targetEnd
           body="required = false"/>
     </creationConstraints>
@@ -122,7 +122,7 @@
         href="../models/featureModel.ecore#//Feature/subFeatures"/>
     <creationConstraints>
       <sourceEnd
-          body="featureParent &lt;> null or root = true"/>
+          body="featureParent &lt;> null or containerParent &lt;> null or root = true"/>
       <targetEnd
           body="required = true "/>
     </creationConstraints>

@@ -63,11 +63,12 @@ public class FeatureModelOCLFactory {
 	 */
 	protected FeatureModelOCLFactory() {
 		this.expressions = new FeatureModelAbstractExpression[11];
-		this.expressionBodies = new String[] { "root = true", //$NON-NLS-1$
+		this.expressionBodies = new String[] {
+				"root = true", //$NON-NLS-1$
 				"root = false", //$NON-NLS-1$
-				"featureParent <> null or root = true", //$NON-NLS-1$
+				"featureParent <> null or containerParent <> null or root = true", //$NON-NLS-1$
 				"required = false", //$NON-NLS-1$
-				"featureParent <> null or root = true", //$NON-NLS-1$
+				"featureParent <> null or containerParent <> null or root = true", //$NON-NLS-1$
 				"required = true ", //$NON-NLS-1$
 				"parent <> null", //$NON-NLS-1$
 				"required = false", //$NON-NLS-1$

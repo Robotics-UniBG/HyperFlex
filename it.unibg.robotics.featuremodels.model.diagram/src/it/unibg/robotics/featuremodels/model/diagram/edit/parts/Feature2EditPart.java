@@ -500,10 +500,10 @@ public class Feature2EditPart extends AbstractBorderedShapeEditPart {
 			}
 			FeatureModel model = (FeatureModel) eObj;
 
-//			FeatureModelEditPart modelEditPart = null;
+			//			FeatureModelEditPart modelEditPart = null;
 			if (Feature2EditPart.this.getParent() instanceof FeatureModelEditPart) {
-//				modelEditPart = (FeatureModelEditPart) Feature2EditPart.this
-//						.getParent();
+				//				modelEditPart = (FeatureModelEditPart) Feature2EditPart.this
+				//						.getParent();
 				int index = model.getInstances().indexOf(
 						model.getSelectedInstance());
 				if (index != -1) {
@@ -520,7 +520,6 @@ public class Feature2EditPart extends AbstractBorderedShapeEditPart {
 				}
 
 			}
-
 
 		}
 

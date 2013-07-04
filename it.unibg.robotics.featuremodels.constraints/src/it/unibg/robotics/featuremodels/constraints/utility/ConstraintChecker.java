@@ -95,7 +95,20 @@ public class ConstraintChecker {
 		boolean satisfied = true;
 
 		for (Feature feature : model.getRequiredFeatures()) {
-			if(!currentInstance.getSelectedFeatures().contains(feature)){
+			
+			boolean constraintSatisfied = false; 
+			
+			boolean isParentAFeature = feature.getFeatureParent() != null;
+			
+			boolean isParentSelceted = currentInstance.getSelectedFeatures().contains(feature.getFeatureParent());
+			
+			if(isParentAFeature && isParentSelceted){
+				constraintSatisfied = currentInstance.getSelectedFeatures().contains(feature);
+			}else{
+				constraintSatisfied = true;
+			}
+			
+			if(! constraintSatisfied){
 				MessageDialog.openError(null, "ERROR", "The feature '" + feature.getName() + 
 						"' is mandatory and must be selected");
 				satisfied = false;
