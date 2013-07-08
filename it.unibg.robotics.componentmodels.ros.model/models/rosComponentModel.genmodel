@@ -15,7 +15,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Package/srvProducers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Package/srvConsumers"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//Package/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Package/subPackages"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Package/wires"/>
     </genClasses>
     <genClasses ecoreClass="rosComponentModel.ecore#//Node">
@@ -27,26 +26,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//Node/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//Node/type"/>
     </genClasses>
-    <genClasses ecoreClass="rosComponentModel.ecore#//MsgProducer">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//MsgProducer/target"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//MsgProducer/name"/>
-    </genClasses>
-    <genClasses ecoreClass="rosComponentModel.ecore#//MsgConsumer">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//MsgConsumer/source"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//MsgConsumer/name"/>
-    </genClasses>
-    <genClasses ecoreClass="rosComponentModel.ecore#//NodeMsgProducer">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//NodeMsgProducer/topicName"/>
-    </genClasses>
-    <genClasses ecoreClass="rosComponentModel.ecore#//NodeMsgConsumer">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//NodeMsgConsumer/topicName"/>
-    </genClasses>
-    <genClasses ecoreClass="rosComponentModel.ecore#//PackageMsgProducer">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//PackageMsgProducer/promote"/>
-    </genClasses>
-    <genClasses ecoreClass="rosComponentModel.ecore#//PackageMsgConsumer">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//PackageMsgConsumer/promote"/>
-    </genClasses>
+    <genClasses ecoreClass="rosComponentModel.ecore#//NodeMsgProducer"/>
+    <genClasses ecoreClass="rosComponentModel.ecore#//NodeMsgConsumer"/>
+    <genClasses ecoreClass="rosComponentModel.ecore#//PackageMsgProducer"/>
+    <genClasses ecoreClass="rosComponentModel.ecore#//PackageMsgConsumer"/>
     <genClasses ecoreClass="rosComponentModel.ecore#//Topic">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//Topic/name"/>
     </genClasses>
@@ -79,5 +62,16 @@
     <genClasses ecoreClass="rosComponentModel.ecore#//ArchitectureModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//ArchitectureModel/package"/>
     </genClasses>
+    <genClasses ecoreClass="rosComponentModel.ecore#//MsgInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//MsgInterface/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//MsgInterface/connection"/>
+    </genClasses>
+    <genClasses ecoreClass="rosComponentModel.ecore#//CompositeMsgInterface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//CompositeMsgInterface/exposed"/>
+    </genClasses>
+    <genClasses ecoreClass="rosComponentModel.ecore#//NodeMsgInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//NodeMsgInterface/topicName"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="rosComponentModel.ecore#//AbstractComponent"/>
   </genPackages>
 </genmodel:GenModel>

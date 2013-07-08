@@ -75,33 +75,7 @@ public class Package2CreateCommand extends EditElementCommand {
 				new BaseWorkbenchContentProvider());
 
 		dialog.addFilter(new ViewerFileFilter("roscomponentmodel"));
-		
-		
-//		class MyFilter extends ViewerFilter{
-//			  private boolean isLeaf(Object element){
-//			     // implement this
-//			  }
-//
-//			  private boolean isEvenLeaf(Object leaf){
-//			     // implement this
-//			  }
-//
-//			  @Override
-//			  public boolean select(Viewer viewer, Object parentElement, Object element){
-//			     if(isLeaf(element))
-//			        return isEventLeaf(element);
-//			     else{
-//			       StructuredViewer sviewer = (StructuredViewer)viewer;
-//			       ITreeContentProvider provider = (ITreeContentProvider)viewer.getContentProvider();
-//			       for(Object child: provider.getChildren(element)){
-//			         if(select(viewer, element, child))
-//			           return true;
-//			       }
-//			       return false;
-//			    }
-//			  }
-//			}
-		
+
 		dialog.setTitle("Model Selection");
 		dialog.setMessage("Select the model from the tree:");
 		dialog.setInput(ResourcesPlugin.getWorkspace().getRoot());
@@ -133,7 +107,7 @@ public class Package2CreateCommand extends EditElementCommand {
 
 				Package owner = (Package) getElementToEdit();
 
-				owner.getSubPackages().add(newElement);
+				owner.getNodes().add(newElement);
 
 				doConfigure(newElement, monitor, info);
 

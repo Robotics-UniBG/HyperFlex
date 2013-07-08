@@ -27,7 +27,6 @@ package it.unibg.robotics.roscomponentmodel.provider;
 
 
 import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -35,7 +34,6 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -50,7 +48,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * @generated
  */
 public class PackageMsgConsumerItemProvider
-	extends MsgConsumerItemProvider
+	extends CompositeMsgInterfaceItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -78,31 +76,8 @@ public class PackageMsgConsumerItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPromotePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Promote feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPromotePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PackageMsgConsumer_promote_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PackageMsgConsumer_promote_feature", "_UI_PackageMsgConsumer_type"),
-				 roscomponentmodelPackage.Literals.PACKAGE_MSG_CONSUMER__PROMOTE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

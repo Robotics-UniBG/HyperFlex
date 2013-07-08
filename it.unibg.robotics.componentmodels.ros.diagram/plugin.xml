@@ -217,8 +217,8 @@
       <viewProvider class="it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="RosComponentModel"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2002,3001,3002,3003,3004,3005,3006,3007,3009,3010,3008"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4002,4003,4004,4005"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2002,3001,3002,3003,3004,3011,3006,3007,3009,3010,3008"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4010,4011,4007,4012"/>
       </viewProvider>
    </extension>
 
@@ -230,13 +230,13 @@
             <method name="getType()" value="RosComponentModel"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2002,3001,3002,3003,3004,3005,3006,3007,3009,3010,3008"/>
+            <method name="getType()" value="2002,3001,3002,3003,3004,3011,3006,3007,3009,3010,3008"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4002,4003,4004,4005"/>
+            <method name="getType()" value="4010,4011,4007,4012"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5010,5003,5004,5013,5001,5002,5005,5007,5008,5011,5012,5009"/>
+            <method name="getType()" value="5010,5003,5013,5016,5017"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value="7003,7002"/>
@@ -255,13 +255,13 @@
          <object class="it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ParameterEditPart" id="Parameter_3002"/>
          <object class="it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart" id="NodeMsgProducer_3003"/>
          <object class="it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart" id="NodeMsgConsumer_3004"/>
-         <object class="it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart" id="Package_3005"/>
+         <object class="it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart" id="Package_3011"/>
          <object class="it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducerEditPart" id="PackageMsgProducer_3006"/>
          <object class="it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumerEditPart" id="PackageMsgConsumer_3007"/>
          <object class="it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducer2EditPart" id="PackageMsgProducer_3009"/>
          <object class="it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer2EditPart" id="PackageMsgConsumer_3010"/>
          <object class="it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart" id="Topic_3008"/>
-         <context elements="ArchitectureModel_1000,Package_2002,Node_3001,Parameter_3002,NodeMsgProducer_3003,NodeMsgConsumer_3004,Package_3005,PackageMsgProducer_3006,PackageMsgConsumer_3007,PackageMsgProducer_3009,PackageMsgConsumer_3010,Topic_3008"/>
+         <context elements="ArchitectureModel_1000,Package_2002,Node_3001,Parameter_3002,NodeMsgProducer_3003,NodeMsgConsumer_3004,Package_3011,PackageMsgProducer_3006,PackageMsgConsumer_3007,PackageMsgProducer_3009,PackageMsgConsumer_3010,Topic_3008"/>
       </modelingAssistantProvider>
    </extension>
 
@@ -343,11 +343,11 @@
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/componentmodels.ros">
          <specializationType
-               id="it.unibg.robotics.componentmodels.ros.diagram.Package_3005"
-               name="%metatype.name.Package_3005"
+               id="it.unibg.robotics.componentmodels.ros.diagram.Package_3011"
+               name="%metatype.name.Package_3011"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="it.unibg.robotics.componentmodels.ros.diagram.Package_2002"/>
-            <param name="semanticHint" value="3005"/>
+            <param name="semanticHint" value="3011"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/componentmodels.ros">
@@ -400,38 +400,38 @@
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/componentmodels.ros">
          <specializationType
-               id="it.unibg.robotics.componentmodels.ros.diagram.MsgConsumerSource_4002"
-               name="%metatype.name.MsgConsumerSource_4002"
+               id="it.unibg.robotics.componentmodels.ros.diagram.MsgInterfaceConnection_4010"
+               name="%metatype.name.MsgInterfaceConnection_4010"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4002"/>
+            <param name="semanticHint" value="4010"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/componentmodels.ros">
          <specializationType
-               id="it.unibg.robotics.componentmodels.ros.diagram.MsgProducerTarget_4003"
-               name="%metatype.name.MsgProducerTarget_4003"
+               id="it.unibg.robotics.componentmodels.ros.diagram.MsgInterfaceConnection_4011"
+               name="%metatype.name.MsgInterfaceConnection_4011"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4003"/>
+            <param name="semanticHint" value="4011"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/componentmodels.ros">
          <specializationType
-               id="it.unibg.robotics.componentmodels.ros.diagram.PackageMsgProducerPromote_4004"
-               name="%metatype.name.PackageMsgProducerPromote_4004"
+               id="it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4007"
+               name="%metatype.name.CompositeMsgInterfaceExposed_4007"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4004"/>
+            <param name="semanticHint" value="4007"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/componentmodels.ros">
          <specializationType
-               id="it.unibg.robotics.componentmodels.ros.diagram.PackageMsgConsumerPromote_4005"
-               name="%metatype.name.PackageMsgConsumerPromote_4005"
+               id="it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4012"
+               name="%metatype.name.CompositeMsgInterfaceExposed_4012"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4005"/>
+            <param name="semanticHint" value="4012"/>
          </specializationType>
       </metamodel>
    </extension>
@@ -452,16 +452,16 @@
          <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.Parameter_3002"/>
          <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.NodeMsgProducer_3003"/>
          <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.NodeMsgConsumer_3004"/>
-         <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.Package_3005"/>
+         <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.Package_3011"/>
          <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.PackageMsgProducer_3006"/>
          <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.PackageMsgConsumer_3007"/>
          <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.PackageMsgProducer_3009"/>
          <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.PackageMsgConsumer_3010"/>
          <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.Topic_3008"/>
-         <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.MsgConsumerSource_4002"/>
-         <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.MsgProducerTarget_4003"/>
-         <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.PackageMsgProducerPromote_4004"/>
-         <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.PackageMsgConsumerPromote_4005"/>
+         <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.MsgInterfaceConnection_4010"/>
+         <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.MsgInterfaceConnection_4011"/>
+         <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4007"/>
+         <elementType ref="it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4012"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

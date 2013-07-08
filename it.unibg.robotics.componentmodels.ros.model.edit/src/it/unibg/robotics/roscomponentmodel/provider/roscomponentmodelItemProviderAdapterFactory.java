@@ -141,52 +141,6 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.MsgProducer} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MsgProducerItemProvider msgProducerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.MsgProducer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMsgProducerAdapter() {
-		if (msgProducerItemProvider == null) {
-			msgProducerItemProvider = new MsgProducerItemProvider(this);
-		}
-
-		return msgProducerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.MsgConsumer} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MsgConsumerItemProvider msgConsumerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.MsgConsumer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMsgConsumerAdapter() {
-		if (msgConsumerItemProvider == null) {
-			msgConsumerItemProvider = new MsgConsumerItemProvider(this);
-		}
-
-		return msgConsumerItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.NodeMsgProducer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -509,6 +463,75 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.MsgInterface} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MsgInterfaceItemProvider msgInterfaceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.MsgInterface}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMsgInterfaceAdapter() {
+		if (msgInterfaceItemProvider == null) {
+			msgInterfaceItemProvider = new MsgInterfaceItemProvider(this);
+		}
+
+		return msgInterfaceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.CompositeMsgInterface} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CompositeMsgInterfaceItemProvider compositeMsgInterfaceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.CompositeMsgInterface}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCompositeMsgInterfaceAdapter() {
+		if (compositeMsgInterfaceItemProvider == null) {
+			compositeMsgInterfaceItemProvider = new CompositeMsgInterfaceItemProvider(this);
+		}
+
+		return compositeMsgInterfaceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.NodeMsgInterface} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NodeMsgInterfaceItemProvider nodeMsgInterfaceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.NodeMsgInterface}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNodeMsgInterfaceAdapter() {
+		if (nodeMsgInterfaceItemProvider == null) {
+			nodeMsgInterfaceItemProvider = new NodeMsgInterfaceItemProvider(this);
+		}
+
+		return nodeMsgInterfaceItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -609,8 +632,6 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 	public void dispose() {
 		if (packageItemProvider != null) packageItemProvider.dispose();
 		if (nodeItemProvider != null) nodeItemProvider.dispose();
-		if (msgProducerItemProvider != null) msgProducerItemProvider.dispose();
-		if (msgConsumerItemProvider != null) msgConsumerItemProvider.dispose();
 		if (nodeMsgProducerItemProvider != null) nodeMsgProducerItemProvider.dispose();
 		if (nodeMsgConsumerItemProvider != null) nodeMsgConsumerItemProvider.dispose();
 		if (packageMsgProducerItemProvider != null) packageMsgProducerItemProvider.dispose();
@@ -625,6 +646,9 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 		if (nodeSrvConsumerItemProvider != null) nodeSrvConsumerItemProvider.dispose();
 		if (wireItemProvider != null) wireItemProvider.dispose();
 		if (architectureModelItemProvider != null) architectureModelItemProvider.dispose();
+		if (msgInterfaceItemProvider != null) msgInterfaceItemProvider.dispose();
+		if (compositeMsgInterfaceItemProvider != null) compositeMsgInterfaceItemProvider.dispose();
+		if (nodeMsgInterfaceItemProvider != null) nodeMsgInterfaceItemProvider.dispose();
 	}
 
 }

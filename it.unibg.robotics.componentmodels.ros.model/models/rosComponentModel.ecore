@@ -2,9 +2,9 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="roscomponentmodel" nsURI="http://robotics.unibg.it/componentmodels.ros"
     nsPrefix="roscomponentmodel">
-  <eClassifiers xsi:type="ecore:EClass" name="Package">
+  <eClassifiers xsi:type="ecore:EClass" name="Package" eSuperTypes="#//AbstractComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
-        eType="#//Node" containment="true"/>
+        eType="#//AbstractComponent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="msgProducers" upperBound="-1"
         eType="#//PackageMsgProducer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="msgConsumers" upperBound="-1"
@@ -16,12 +16,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="srvConsumers" upperBound="-1"
         eType="#//PackageSrvConsumer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subPackages" upperBound="-1"
-        eType="#//Package" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="wires" upperBound="-1"
         eType="#//Wire" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Node">
+  <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//AbstractComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="msgProducers" upperBound="-1"
         eType="#//NodeMsgProducer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="msgConsumers" upperBound="-1"
@@ -35,26 +33,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MsgProducer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Topic"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MsgConsumer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Topic"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NodeMsgProducer" eSuperTypes="#//MsgProducer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="topicName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NodeMsgConsumer" eSuperTypes="#//MsgConsumer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="topicName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PackageMsgProducer" eSuperTypes="#//MsgProducer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="promote" eType="#//MsgProducer"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PackageMsgConsumer" eSuperTypes="#//MsgConsumer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="promote" eType="#//MsgConsumer"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeMsgProducer" eSuperTypes="#//NodeMsgInterface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeMsgConsumer" eSuperTypes="#//NodeMsgInterface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PackageMsgProducer" eSuperTypes="#//CompositeMsgInterface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PackageMsgConsumer" eSuperTypes="#//CompositeMsgInterface"/>
   <eClassifiers xsi:type="ecore:EClass" name="Topic">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -63,10 +45,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SrvProducer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SrvConsumer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PackageSrvProducer" eSuperTypes="#//SrvProducer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="promote" eType="#//SrvProducer"/>
@@ -90,4 +72,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="package" lowerBound="1"
         eType="#//Package" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MsgInterface">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connection" eType="#//Topic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeMsgInterface" eSuperTypes="#//MsgInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exposed" lowerBound="1"
+        eType="#//Topic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeMsgInterface" eSuperTypes="#//MsgInterface">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="topicName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractComponent" abstract="true"/>
 </ecore:EPackage>

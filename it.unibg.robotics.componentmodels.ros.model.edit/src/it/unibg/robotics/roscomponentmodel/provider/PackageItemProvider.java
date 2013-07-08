@@ -35,8 +35,6 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -47,7 +45,6 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -57,7 +54,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class PackageItemProvider
-	extends ItemProviderAdapter
+	extends AbstractComponentItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -130,7 +127,6 @@ public class PackageItemProvider
 			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__TOPICS);
 			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__SRV_PRODUCERS);
 			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__SRV_CONSUMERS);
-			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__SUB_PACKAGES);
 			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__WIRES);
 		}
 		return childrenFeatures;
@@ -195,7 +191,6 @@ public class PackageItemProvider
 			case roscomponentmodelPackage.PACKAGE__TOPICS:
 			case roscomponentmodelPackage.PACKAGE__SRV_PRODUCERS:
 			case roscomponentmodelPackage.PACKAGE__SRV_CONSUMERS:
-			case roscomponentmodelPackage.PACKAGE__SUB_PACKAGES:
 			case roscomponentmodelPackage.PACKAGE__WIRES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -213,6 +208,11 @@ public class PackageItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(roscomponentmodelPackage.Literals.PACKAGE__NODES,
+				 roscomponentmodelFactory.eINSTANCE.createPackage()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -246,24 +246,8 @@ public class PackageItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(roscomponentmodelPackage.Literals.PACKAGE__SUB_PACKAGES,
-				 roscomponentmodelFactory.eINSTANCE.createPackage()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(roscomponentmodelPackage.Literals.PACKAGE__WIRES,
 				 roscomponentmodelFactory.eINSTANCE.createWire()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return RosComponentModelEditPlugin.INSTANCE;
 	}
 
 }

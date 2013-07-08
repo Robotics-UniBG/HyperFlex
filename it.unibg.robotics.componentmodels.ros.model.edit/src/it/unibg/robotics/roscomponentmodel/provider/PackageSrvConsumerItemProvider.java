@@ -28,6 +28,7 @@ package it.unibg.robotics.roscomponentmodel.provider;
 
 import it.unibg.robotics.roscomponentmodel.PackageSrvConsumer;
 import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
+
 import java.util.Collection;
 import java.util.List;
 
