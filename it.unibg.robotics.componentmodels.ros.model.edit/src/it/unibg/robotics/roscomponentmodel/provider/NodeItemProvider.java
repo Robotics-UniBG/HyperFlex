@@ -35,9 +35,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -243,7 +241,7 @@ public class NodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(roscomponentmodelPackage.Literals.NODE__PARAMETERS,
-				 roscomponentmodelFactory.eINSTANCE.createParameter()));
+				 roscomponentmodelFactory.eINSTANCE.createNodeProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter

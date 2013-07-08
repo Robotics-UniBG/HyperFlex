@@ -1,8 +1,10 @@
 package it.unibg.robotics.compositionmodel.diagram.edit.policies;
 
+import it.unibg.robotics.compositionmodel.diagram.edit.commands.ROSCompositeCreateCommand;
 import it.unibg.robotics.compositionmodel.diagram.edit.commands.SystemProvidedInterfCreateCommand;
 import it.unibg.robotics.compositionmodel.diagram.edit.commands.SystemRequiredInterfCreateCommand;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
@@ -125,6 +127,13 @@ public class System2ItemSemanticEditPolicy extends
 					Node cnode = (Node) cit.next();
 					switch (CompositionModelVisualIDRegistry.getVisualID(cnode)) {
 					case SystemCompositeEditPart.VISUAL_ID:
+						cmd.add(new DestroyElementCommand(
+								new DestroyElementRequest(getEditingDomain(),
+										cnode.getElement(), false))); // directlyOwned: true
+						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
+						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
+						break;
+					case ROSCompositeEditPart.VISUAL_ID:
 						cmd.add(new DestroyElementCommand(
 								new DestroyElementRequest(getEditingDomain(),
 										cnode.getElement(), false))); // directlyOwned: true

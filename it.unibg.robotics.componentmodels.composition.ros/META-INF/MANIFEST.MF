@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: it.unibg.robotics.componentmodels.composition.ros;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: it.unibg.robotics.componentmodels.roscompositionmodel,
+ it.unibg.robotics.componentmodels.roscompositionmodel.impl,
+ it.unibg.robotics.componentmodels.roscompositionmodel.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ it.unibg.robotics.componentmodels.composition;visibility:=reexport,
+ it.unibg.robotics.componentmodels.ros.model;visibility:=reexport
+Bundle-ActivationPolicy: lazy

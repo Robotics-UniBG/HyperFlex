@@ -10,6 +10,8 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEdi
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer2EditPart;
@@ -19,8 +21,6 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducer
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageName2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackagePackageContainerCompartmentEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ParameterEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ParameterNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
@@ -164,7 +164,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 				switch (visualID) {
 				case PackageEditPart.VISUAL_ID:
 				case NodeEditPart.VISUAL_ID:
-				case ParameterEditPart.VISUAL_ID:
+				case NodePropertyEditPart.VISUAL_ID:
 				case NodeMsgProducerEditPart.VISUAL_ID:
 				case NodeMsgConsumerEditPart.VISUAL_ID:
 				case PackageMsgProducerEditPart.VISUAL_ID:
@@ -187,7 +187,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		}
 		return PackageEditPart.VISUAL_ID == visualID
 				|| NodeEditPart.VISUAL_ID == visualID
-				|| ParameterEditPart.VISUAL_ID == visualID
+				|| NodePropertyEditPart.VISUAL_ID == visualID
 				|| NodeMsgProducerEditPart.VISUAL_ID == visualID
 				|| NodeMsgConsumerEditPart.VISUAL_ID == visualID
 				|| Package2EditPart.VISUAL_ID == visualID
@@ -260,8 +260,8 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		case NodeEditPart.VISUAL_ID:
 			return createNode_3001(domainElement, containerView, index,
 					persisted, preferencesHint);
-		case ParameterEditPart.VISUAL_ID:
-			return createParameter_3002(domainElement, containerView, index,
+		case NodePropertyEditPart.VISUAL_ID:
+			return createNodeProperty_3012(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case NodeMsgProducerEditPart.VISUAL_ID:
 			return createNodeMsgProducer_3003(domainElement, containerView,
@@ -421,12 +421,13 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createParameter_3002(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
+	public Node createNodeProperty_3012(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(RosComponentModelVisualIDRegistry
-				.getType(ParameterEditPart.VISUAL_ID));
+				.getType(NodePropertyEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -457,14 +458,14 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5013 = createLabel(node,
+		Node label5018 = createLabel(node,
 				RosComponentModelVisualIDRegistry
-						.getType(ParameterNameEditPart.VISUAL_ID));
-		label5013.setLayoutConstraint(NotationFactory.eINSTANCE
+						.getType(NodePropertyNameEditPart.VISUAL_ID));
+		label5018.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
-		Location location5013 = (Location) label5013.getLayoutConstraint();
-		location5013.setX(0);
-		location5013.setY(5);
+		Location location5018 = (Location) label5018.getLayoutConstraint();
+		location5018.setX(0);
+		location5018.setY(5);
 		return node;
 	}
 

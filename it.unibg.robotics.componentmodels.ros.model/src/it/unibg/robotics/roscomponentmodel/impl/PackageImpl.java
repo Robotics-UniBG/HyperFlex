@@ -26,6 +26,7 @@
 package it.unibg.robotics.roscomponentmodel.impl;
 
 import it.unibg.robotics.roscomponentmodel.AbstractComponent;
+import it.unibg.robotics.roscomponentmodel.CompositeProperty;
 import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
 import it.unibg.robotics.roscomponentmodel.PackageSrvConsumer;
@@ -38,14 +39,10 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -64,6 +61,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.PackageImpl#getSrvConsumers <em>Srv Consumers</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.PackageImpl#getName <em>Name</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.PackageImpl#getWires <em>Wires</em>}</li>
+ *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.PackageImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
@@ -159,6 +157,16 @@ public class PackageImpl extends AbstractComponentImpl implements it.unibg.robot
 	 * @ordered
 	 */
 	protected EList<Wire> wires;
+
+	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CompositeProperty> properties;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -289,6 +297,18 @@ public class PackageImpl extends AbstractComponentImpl implements it.unibg.robot
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<CompositeProperty> getProperties() {
+		if (properties == null) {
+			properties = new EObjectContainmentEList<CompositeProperty>(CompositeProperty.class, this, roscomponentmodelPackage.PACKAGE__PROPERTIES);
+		}
+		return properties;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -306,6 +326,8 @@ public class PackageImpl extends AbstractComponentImpl implements it.unibg.robot
 				return ((InternalEList<?>)getSrvConsumers()).basicRemove(otherEnd, msgs);
 			case roscomponentmodelPackage.PACKAGE__WIRES:
 				return ((InternalEList<?>)getWires()).basicRemove(otherEnd, msgs);
+			case roscomponentmodelPackage.PACKAGE__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -334,6 +356,8 @@ public class PackageImpl extends AbstractComponentImpl implements it.unibg.robot
 				return getName();
 			case roscomponentmodelPackage.PACKAGE__WIRES:
 				return getWires();
+			case roscomponentmodelPackage.PACKAGE__PROPERTIES:
+				return getProperties();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -378,6 +402,10 @@ public class PackageImpl extends AbstractComponentImpl implements it.unibg.robot
 				getWires().clear();
 				getWires().addAll((Collection<? extends Wire>)newValue);
 				return;
+			case roscomponentmodelPackage.PACKAGE__PROPERTIES:
+				getProperties().clear();
+				getProperties().addAll((Collection<? extends CompositeProperty>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -414,6 +442,9 @@ public class PackageImpl extends AbstractComponentImpl implements it.unibg.robot
 			case roscomponentmodelPackage.PACKAGE__WIRES:
 				getWires().clear();
 				return;
+			case roscomponentmodelPackage.PACKAGE__PROPERTIES:
+				getProperties().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -442,6 +473,8 @@ public class PackageImpl extends AbstractComponentImpl implements it.unibg.robot
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case roscomponentmodelPackage.PACKAGE__WIRES:
 				return wires != null && !wires.isEmpty();
+			case roscomponentmodelPackage.PACKAGE__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

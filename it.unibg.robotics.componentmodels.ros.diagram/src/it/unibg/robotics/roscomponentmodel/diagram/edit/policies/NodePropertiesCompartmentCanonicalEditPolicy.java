@@ -1,6 +1,6 @@
 package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ParameterEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
@@ -80,7 +80,7 @@ public class NodePropertiesCompartmentCanonicalEditPolicy extends
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		return ParameterEditPart.VISUAL_ID == RosComponentModelVisualIDRegistry
+		return NodePropertyEditPart.VISUAL_ID == RosComponentModelVisualIDRegistry
 				.getVisualID(view);
 	}
 

@@ -1,6 +1,9 @@
 package it.unibg.robotics.compositionmodel.diagram.edit.policies;
 
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.System2EditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
@@ -299,6 +302,30 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CompositionModelDiagramUpdater
 						.getSystemCompositeRequiredInterf_3011ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case ROSCompositeEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(CompositionModelDiagramUpdater
+						.getROSComposite_3012ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case ROSMsgProducerEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(CompositionModelDiagramUpdater
+						.getROSMsgProducer_3013ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case ROSMsgConsumerEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(CompositionModelDiagramUpdater
+						.getROSMsgConsumer_3014ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

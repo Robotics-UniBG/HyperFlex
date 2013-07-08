@@ -7,10 +7,10 @@ import it.unibg.robotics.roscomponentmodel.MsgInterface;
 import it.unibg.robotics.roscomponentmodel.Node;
 import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
+import it.unibg.robotics.roscomponentmodel.NodeProperty;
 import it.unibg.robotics.roscomponentmodel.Package;
 import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
-import it.unibg.robotics.roscomponentmodel.Parameter;
 import it.unibg.robotics.roscomponentmodel.Topic;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
@@ -21,6 +21,7 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer2EditPart;
@@ -28,7 +29,6 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducer2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackagePackageContainerCompartmentEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ParameterEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
@@ -257,10 +257,10 @@ public class RosComponentModelDiagramUpdater {
 		LinkedList<RosComponentModelNodeDescriptor> result = new LinkedList<RosComponentModelNodeDescriptor>();
 		for (Iterator<?> it = modelElement.getParameters().iterator(); it
 				.hasNext();) {
-			Parameter childElement = (Parameter) it.next();
+			NodeProperty childElement = (NodeProperty) it.next();
 			int visualID = RosComponentModelVisualIDRegistry.getNodeVisualID(
 					view, childElement);
-			if (visualID == ParameterEditPart.VISUAL_ID) {
+			if (visualID == NodePropertyEditPart.VISUAL_ID) {
 				result.add(new RosComponentModelNodeDescriptor(childElement,
 						visualID));
 				continue;
@@ -281,8 +281,8 @@ public class RosComponentModelDiagramUpdater {
 			return getPackage_2002ContainedLinks(view);
 		case NodeEditPart.VISUAL_ID:
 			return getNode_3001ContainedLinks(view);
-		case ParameterEditPart.VISUAL_ID:
-			return getParameter_3002ContainedLinks(view);
+		case NodePropertyEditPart.VISUAL_ID:
+			return getNodeProperty_3012ContainedLinks(view);
 		case NodeMsgProducerEditPart.VISUAL_ID:
 			return getNodeMsgProducer_3003ContainedLinks(view);
 		case NodeMsgConsumerEditPart.VISUAL_ID:
@@ -313,8 +313,8 @@ public class RosComponentModelDiagramUpdater {
 			return getPackage_2002IncomingLinks(view);
 		case NodeEditPart.VISUAL_ID:
 			return getNode_3001IncomingLinks(view);
-		case ParameterEditPart.VISUAL_ID:
-			return getParameter_3002IncomingLinks(view);
+		case NodePropertyEditPart.VISUAL_ID:
+			return getNodeProperty_3012IncomingLinks(view);
 		case NodeMsgProducerEditPart.VISUAL_ID:
 			return getNodeMsgProducer_3003IncomingLinks(view);
 		case NodeMsgConsumerEditPart.VISUAL_ID:
@@ -345,8 +345,8 @@ public class RosComponentModelDiagramUpdater {
 			return getPackage_2002OutgoingLinks(view);
 		case NodeEditPart.VISUAL_ID:
 			return getNode_3001OutgoingLinks(view);
-		case ParameterEditPart.VISUAL_ID:
-			return getParameter_3002OutgoingLinks(view);
+		case NodePropertyEditPart.VISUAL_ID:
+			return getNodeProperty_3012OutgoingLinks(view);
 		case NodeMsgProducerEditPart.VISUAL_ID:
 			return getNodeMsgProducer_3003OutgoingLinks(view);
 		case NodeMsgConsumerEditPart.VISUAL_ID:
@@ -394,7 +394,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getParameter_3002ContainedLinks(
+	public static List<RosComponentModelLinkDescriptor> getNodeProperty_3012ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -518,7 +518,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getParameter_3002IncomingLinks(
+	public static List<RosComponentModelLinkDescriptor> getNodeProperty_3012IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -618,7 +618,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getParameter_3002OutgoingLinks(
+	public static List<RosComponentModelLinkDescriptor> getNodeProperty_3012OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}

@@ -1,6 +1,9 @@
 package it.unibg.robotics.compositionmodel.diagram.providers;
 
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.System2EditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
@@ -80,6 +83,21 @@ public class CompositionModelElementTypes {
 	 * @generated
 	 */
 	public static final IElementType SystemCompositeRequiredInterf_3011 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.SystemCompositeRequiredInterf_3011"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType ROSComposite_3012 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.ROSComposite_3012"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType ROSMsgProducer_3013 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.ROSMsgProducer_3013"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType ROSMsgConsumer_3014 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.ROSMsgConsumer_3014"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -233,6 +251,21 @@ public class CompositionModelElementTypes {
 							.getSystemCompositeRequiredInterf());
 
 			elements.put(
+					ROSComposite_3012,
+					it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
+							.getROSComposite());
+
+			elements.put(
+					ROSMsgProducer_3013,
+					it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
+							.getROSMsgProducer());
+
+			elements.put(
+					ROSMsgConsumer_3014,
+					it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
+							.getROSMsgConsumer());
+
+			elements.put(
 					Connection_4002,
 					it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getConnection());
@@ -260,6 +293,9 @@ public class CompositionModelElementTypes {
 			KNOWN_ELEMENT_TYPES.add(SystemComposite_3009);
 			KNOWN_ELEMENT_TYPES.add(SystemCompositeProvidedInterf_3010);
 			KNOWN_ELEMENT_TYPES.add(SystemCompositeRequiredInterf_3011);
+			KNOWN_ELEMENT_TYPES.add(ROSComposite_3012);
+			KNOWN_ELEMENT_TYPES.add(ROSMsgProducer_3013);
+			KNOWN_ELEMENT_TYPES.add(ROSMsgConsumer_3014);
 			KNOWN_ELEMENT_TYPES.add(Connection_4002);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
@@ -284,6 +320,12 @@ public class CompositionModelElementTypes {
 			return SystemCompositeProvidedInterf_3010;
 		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
 			return SystemCompositeRequiredInterf_3011;
+		case ROSCompositeEditPart.VISUAL_ID:
+			return ROSComposite_3012;
+		case ROSMsgProducerEditPart.VISUAL_ID:
+			return ROSMsgProducer_3013;
+		case ROSMsgConsumerEditPart.VISUAL_ID:
+			return ROSMsgConsumer_3014;
 		case ConnectionEditPart.VISUAL_ID:
 			return Connection_4002;
 		}

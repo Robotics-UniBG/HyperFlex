@@ -28,18 +28,20 @@ package it.unibg.robotics.roscomponentmodel.util;
 import it.unibg.robotics.roscomponentmodel.AbstractComponent;
 import it.unibg.robotics.roscomponentmodel.ArchitectureModel;
 import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
+import it.unibg.robotics.roscomponentmodel.CompositeProperty;
 import it.unibg.robotics.roscomponentmodel.MsgInterface;
 import it.unibg.robotics.roscomponentmodel.Node;
 import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeMsgInterface;
 import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
+import it.unibg.robotics.roscomponentmodel.NodeProperty;
 import it.unibg.robotics.roscomponentmodel.NodeSrvConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeSrvProducer;
 import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
 import it.unibg.robotics.roscomponentmodel.PackageSrvConsumer;
 import it.unibg.robotics.roscomponentmodel.PackageSrvProducer;
-import it.unibg.robotics.roscomponentmodel.Parameter;
+import it.unibg.robotics.roscomponentmodel.Property;
 import it.unibg.robotics.roscomponentmodel.SrvConsumer;
 import it.unibg.robotics.roscomponentmodel.SrvProducer;
 import it.unibg.robotics.roscomponentmodel.Topic;
@@ -48,7 +50,6 @@ import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
 
 /**
@@ -160,9 +161,9 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case roscomponentmodelPackage.PARAMETER: {
-				Parameter parameter = (Parameter)theEObject;
-				T result = caseParameter(parameter);
+			case roscomponentmodelPackage.PROPERTY: {
+				Property property = (Property)theEObject;
+				T result = caseProperty(property);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -241,6 +242,20 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 			case roscomponentmodelPackage.ABSTRACT_COMPONENT: {
 				AbstractComponent abstractComponent = (AbstractComponent)theEObject;
 				T result = caseAbstractComponent(abstractComponent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case roscomponentmodelPackage.NODE_PROPERTY: {
+				NodeProperty nodeProperty = (NodeProperty)theEObject;
+				T result = caseNodeProperty(nodeProperty);
+				if (result == null) result = caseProperty(nodeProperty);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case roscomponentmodelPackage.COMPOSITE_PROPERTY: {
+				CompositeProperty compositeProperty = (CompositeProperty)theEObject;
+				T result = caseCompositeProperty(compositeProperty);
+				if (result == null) result = caseProperty(compositeProperty);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -354,17 +369,17 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Property</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameter(Parameter object) {
+	public T caseProperty(Property object) {
 		return null;
 	}
 
@@ -545,6 +560,36 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbstractComponent(AbstractComponent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Node Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Node Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNodeProperty(NodeProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Composite Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Composite Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCompositeProperty(CompositeProperty object) {
 		return null;
 	}
 

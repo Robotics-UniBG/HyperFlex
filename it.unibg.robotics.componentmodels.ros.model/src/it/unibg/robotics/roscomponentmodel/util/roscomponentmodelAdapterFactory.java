@@ -28,18 +28,20 @@ package it.unibg.robotics.roscomponentmodel.util;
 import it.unibg.robotics.roscomponentmodel.AbstractComponent;
 import it.unibg.robotics.roscomponentmodel.ArchitectureModel;
 import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
+import it.unibg.robotics.roscomponentmodel.CompositeProperty;
 import it.unibg.robotics.roscomponentmodel.MsgInterface;
 import it.unibg.robotics.roscomponentmodel.Node;
 import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeMsgInterface;
 import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
+import it.unibg.robotics.roscomponentmodel.NodeProperty;
 import it.unibg.robotics.roscomponentmodel.NodeSrvConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeSrvProducer;
 import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
 import it.unibg.robotics.roscomponentmodel.PackageSrvConsumer;
 import it.unibg.robotics.roscomponentmodel.PackageSrvProducer;
-import it.unibg.robotics.roscomponentmodel.Parameter;
+import it.unibg.robotics.roscomponentmodel.Property;
 import it.unibg.robotics.roscomponentmodel.SrvConsumer;
 import it.unibg.robotics.roscomponentmodel.SrvProducer;
 import it.unibg.robotics.roscomponentmodel.Topic;
@@ -48,9 +50,7 @@ import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -138,8 +138,8 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 				return createTopicAdapter();
 			}
 			@Override
-			public Adapter caseParameter(Parameter object) {
-				return createParameterAdapter();
+			public Adapter caseProperty(Property object) {
+				return createPropertyAdapter();
 			}
 			@Override
 			public Adapter caseSrvProducer(SrvProducer object) {
@@ -188,6 +188,14 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAbstractComponent(AbstractComponent object) {
 				return createAbstractComponentAdapter();
+			}
+			@Override
+			public Adapter caseNodeProperty(NodeProperty object) {
+				return createNodePropertyAdapter();
+			}
+			@Override
+			public Adapter caseCompositeProperty(CompositeProperty object) {
+				return createCompositePropertyAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -308,16 +316,16 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.Parameter <em>Parameter</em>}'.
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.Property <em>Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscomponentmodel.Parameter
+	 * @see it.unibg.robotics.roscomponentmodel.Property
 	 * @generated
 	 */
-	public Adapter createParameterAdapter() {
+	public Adapter createPropertyAdapter() {
 		return null;
 	}
 
@@ -486,6 +494,34 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAbstractComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.NodeProperty <em>Node Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see it.unibg.robotics.roscomponentmodel.NodeProperty
+	 * @generated
+	 */
+	public Adapter createNodePropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.CompositeProperty <em>Composite Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeProperty
+	 * @generated
+	 */
+	public Adapter createCompositePropertyAdapter() {
 		return null;
 	}
 

@@ -37,8 +37,8 @@ Require-Bundle: org.eclipse.core.runtime,
  it.unibg.robotics.componentmodels.composition;visibility:=reexport,
  it.unibg.robotics.componentmodels.composition.edit;visibility:=reexport,
  org.eclipse.gef;visibility:=reexport,
+ it.unibg.robotics.componentmodels.shared;bundle-version="1.0.0",
  it.unibg.robotics.componentmodels.composition.ros;bundle-version="1.0.0",
- it.unibg.robotics.componentmodels.composition.ros.edit;bundle-version="1.0.0",
- it.unibg.robotics.componentmodels.shared;bundle-version="1.0.0"
+ it.unibg.robotics.componentmodels.composition.ros.edit;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

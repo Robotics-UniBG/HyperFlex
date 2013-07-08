@@ -3,6 +3,10 @@ package it.unibg.robotics.compositionmodel.diagram.part;
 import it.unibg.robotics.compositionmodel.ArchitectureModel;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionNameEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeNameEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.System2EditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
@@ -158,10 +162,24 @@ public class CompositionModelVisualIDRegistry {
 				return SystemCompositeRequiredInterfEditPart.VISUAL_ID;
 			}
 			break;
+		case ROSCompositeEditPart.VISUAL_ID:
+			if (it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
+					.getROSMsgProducer().isSuperTypeOf(domainElement.eClass())) {
+				return ROSMsgProducerEditPart.VISUAL_ID;
+			}
+			if (it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
+					.getROSMsgConsumer().isSuperTypeOf(domainElement.eClass())) {
+				return ROSMsgConsumerEditPart.VISUAL_ID;
+			}
+			break;
 		case SystemCompositeContainerCompartmentEditPart.VISUAL_ID:
 			if (it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getSystemComposite().isSuperTypeOf(domainElement.eClass())) {
 				return SystemCompositeEditPart.VISUAL_ID;
+			}
+			if (it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
+					.getROSComposite().isSuperTypeOf(domainElement.eClass())) {
+				return ROSCompositeEditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -219,8 +237,22 @@ public class CompositionModelVisualIDRegistry {
 				return true;
 			}
 			break;
+		case ROSCompositeEditPart.VISUAL_ID:
+			if (ROSCompositeNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ROSMsgProducerEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ROSMsgConsumerEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case SystemCompositeContainerCompartmentEditPart.VISUAL_ID:
 			if (SystemCompositeEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (ROSCompositeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -294,6 +326,8 @@ public class CompositionModelVisualIDRegistry {
 		case SystemRequiredInterfEditPart.VISUAL_ID:
 		case SystemCompositeProvidedInterfEditPart.VISUAL_ID:
 		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
+		case ROSMsgProducerEditPart.VISUAL_ID:
+		case ROSMsgConsumerEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Variability Analysis and Resolution Plugin (VARP)
+ 
+ Copyright (c) 2013
+ All rights reserved.
+ 
+ Luca Gherardi
+ University of Bergamo
+ Dept. of Information Technology and Mathematics
+ 
+ ***********************************************************************************************
+ 
+ Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ 
+ Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ 
+ ***********************************************************************************************
+ 
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="it.unibg.robotics.componentmodels.roscompositionmodel.presentation.roscompositionmodelModelWizardID"
+            name="%_UI_roscompositionmodelModelWizard_label"
+            class="it.unibg.robotics.componentmodels.roscompositionmodel.presentation.roscompositionmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/roscompositionmodelModelFile.gif">
+         <description>%_UI_roscompositionmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="it.unibg.robotics.componentmodels.roscompositionmodel.presentation.roscompositionmodelEditorID"
+            name="%_UI_roscompositionmodelEditor_label"
+            icon="icons/full/obj16/roscompositionmodelModelFile.gif"
+            extensions="roscompositionmodel"
+            class="it.unibg.robotics.componentmodels.roscompositionmodel.presentation.roscompositionmodelEditor"
+            contributorClass="it.unibg.robotics.componentmodels.roscompositionmodel.presentation.roscompositionmodelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

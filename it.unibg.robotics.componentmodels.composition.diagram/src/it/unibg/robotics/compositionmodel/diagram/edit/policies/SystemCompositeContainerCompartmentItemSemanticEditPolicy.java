@@ -1,5 +1,6 @@
 package it.unibg.robotics.compositionmodel.diagram.edit.policies;
 
+import it.unibg.robotics.compositionmodel.diagram.edit.commands.ROSCompositeCreateCommand;
 import it.unibg.robotics.compositionmodel.diagram.edit.commands.SystemCompositeCreateCommand;
 import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
 
@@ -26,6 +27,10 @@ public class SystemCompositeContainerCompartmentItemSemanticEditPolicy extends
 		if (CompositionModelElementTypes.SystemComposite_3009 == req
 				.getElementType()) {
 			return getGEFWrapper(new SystemCompositeCreateCommand(req));
+		}
+		if (CompositionModelElementTypes.ROSComposite_3012 == req
+				.getElementType()) {
+			return getGEFWrapper(new ROSCompositeCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

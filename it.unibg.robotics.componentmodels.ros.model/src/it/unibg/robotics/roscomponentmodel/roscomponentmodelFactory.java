@@ -108,13 +108,13 @@ public interface roscomponentmodelFactory extends EFactory {
 	Topic createTopic();
 
 	/**
-	 * Returns a new object of class '<em>Parameter</em>'.
+	 * Returns a new object of class '<em>Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter</em>'.
+	 * @return a new object of class '<em>Property</em>'.
 	 * @generated
 	 */
-	Parameter createParameter();
+	Property createProperty();
 
 	/**
 	 * Returns a new object of class '<em>Srv Producer</em>'.
@@ -214,6 +214,24 @@ public interface roscomponentmodelFactory extends EFactory {
 	 * @generated
 	 */
 	NodeMsgInterface createNodeMsgInterface();
+
+	/**
+	 * Returns a new object of class '<em>Node Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Node Property</em>'.
+	 * @generated
+	 */
+	NodeProperty createNodeProperty();
+
+	/**
+	 * Returns a new object of class '<em>Composite Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Composite Property</em>'.
+	 * @generated
+	 */
+	CompositeProperty createCompositeProperty();
 
 	/**
 	 * Returns the package supported by this factory.

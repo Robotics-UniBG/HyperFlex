@@ -1,5 +1,8 @@
 package it.unibg.robotics.compositionmodel.diagram.providers;
 
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.System2EditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
@@ -61,9 +64,16 @@ public class CompositionModelModelingAssistantProvider extends
 			types.add(CompositionModelElementTypes.SystemCompositeRequiredInterf_3011);
 			return types;
 		}
+		if (editPart instanceof ROSCompositeEditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+			types.add(CompositionModelElementTypes.ROSMsgProducer_3013);
+			types.add(CompositionModelElementTypes.ROSMsgConsumer_3014);
+			return types;
+		}
 		if (editPart instanceof SystemCompositeContainerCompartmentEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 			types.add(CompositionModelElementTypes.SystemComposite_3009);
+			types.add(CompositionModelElementTypes.ROSComposite_3012);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -83,6 +93,10 @@ public class CompositionModelModelingAssistantProvider extends
 			return ((SystemCompositeRequiredInterfEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
+		if (sourceEditPart instanceof ROSMsgConsumerEditPart) {
+			return ((ROSMsgConsumerEditPart) sourceEditPart)
+					.getMARelTypesOnSource();
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -98,6 +112,10 @@ public class CompositionModelModelingAssistantProvider extends
 		}
 		if (targetEditPart instanceof SystemCompositeProvidedInterfEditPart) {
 			return ((SystemCompositeProvidedInterfEditPart) targetEditPart)
+					.getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof ROSMsgProducerEditPart) {
+			return ((ROSMsgProducerEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
 		return Collections.EMPTY_LIST;
@@ -120,6 +138,10 @@ public class CompositionModelModelingAssistantProvider extends
 			return ((SystemCompositeRequiredInterfEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
+		if (sourceEditPart instanceof ROSMsgConsumerEditPart) {
+			return ((ROSMsgConsumerEditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -138,6 +160,10 @@ public class CompositionModelModelingAssistantProvider extends
 			return ((SystemCompositeProvidedInterfEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
+		if (targetEditPart instanceof ROSMsgProducerEditPart) {
+			return ((ROSMsgProducerEditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -154,6 +180,10 @@ public class CompositionModelModelingAssistantProvider extends
 		}
 		if (sourceEditPart instanceof SystemCompositeRequiredInterfEditPart) {
 			return ((SystemCompositeRequiredInterfEditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof ROSMsgConsumerEditPart) {
+			return ((ROSMsgConsumerEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		return Collections.EMPTY_LIST;

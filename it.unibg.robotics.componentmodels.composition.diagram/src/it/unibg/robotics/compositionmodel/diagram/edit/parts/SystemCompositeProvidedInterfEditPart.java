@@ -213,6 +213,7 @@ public class SystemCompositeProvidedInterfEditPart extends
 		if (relationshipType == CompositionModelElementTypes.Connection_4002) {
 			types.add(CompositionModelElementTypes.SystemRequiredInterf_3008);
 			types.add(CompositionModelElementTypes.SystemCompositeRequiredInterf_3011);
+			types.add(CompositionModelElementTypes.ROSMsgConsumer_3014);
 		}
 		return types;
 	}

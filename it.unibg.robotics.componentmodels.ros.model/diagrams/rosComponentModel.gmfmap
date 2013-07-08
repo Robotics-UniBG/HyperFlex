@@ -49,13 +49,13 @@
                 href="../models/rosComponentModel.ecore#//Node/parameters"/>
             <ownedChild>
               <domainMetaElement
-                  href="../models/rosComponentModel.ecore#//Parameter"/>
+                  href="../models/rosComponentModel.ecore#//NodeProperty"/>
               <labelMappings
                   xsi:type="gmfmap:FeatureLabelMapping">
                 <diagramLabel
                     href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#PropertiesName"/>
                 <features
-                    href="../models/rosComponentModel.ecore#//Parameter/name"/>
+                    href="../models/rosComponentModel.ecore#//Property/name"/>
               </labelMappings>
               <tool
                   xsi:type="gmftool:CreationTool"

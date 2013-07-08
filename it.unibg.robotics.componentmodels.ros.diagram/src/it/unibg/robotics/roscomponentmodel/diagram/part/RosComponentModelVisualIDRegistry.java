@@ -7,6 +7,8 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEdi
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer2EditPart;
@@ -16,8 +18,6 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducer
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageName2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackagePackageContainerCompartmentEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ParameterEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ParameterNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
 
@@ -191,8 +191,8 @@ public class RosComponentModelVisualIDRegistry {
 			break;
 		case NodePropertiesCompartmentEditPart.VISUAL_ID:
 			if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-					.getParameter().isSuperTypeOf(domainElement.eClass())) {
-				return ParameterEditPart.VISUAL_ID;
+					.getNodeProperty().isSuperTypeOf(domainElement.eClass())) {
+				return NodePropertyEditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -253,8 +253,8 @@ public class RosComponentModelVisualIDRegistry {
 				return true;
 			}
 			break;
-		case ParameterEditPart.VISUAL_ID:
-			if (ParameterNameEditPart.VISUAL_ID == nodeVisualID) {
+		case NodePropertyEditPart.VISUAL_ID:
+			if (NodePropertyNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -286,7 +286,7 @@ public class RosComponentModelVisualIDRegistry {
 			}
 			break;
 		case NodePropertiesCompartmentEditPart.VISUAL_ID:
-			if (ParameterEditPart.VISUAL_ID == nodeVisualID) {
+			if (NodePropertyEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -348,7 +348,6 @@ public class RosComponentModelVisualIDRegistry {
 		switch (visualID) {
 		case ArchitectureModelEditPart.VISUAL_ID:
 			return false;
-		case ParameterEditPart.VISUAL_ID:
 		case NodeMsgProducerEditPart.VISUAL_ID:
 		case NodeMsgConsumerEditPart.VISUAL_ID:
 		case PackageMsgProducerEditPart.VISUAL_ID:
@@ -356,6 +355,7 @@ public class RosComponentModelVisualIDRegistry {
 		case TopicEditPart.VISUAL_ID:
 		case PackageMsgProducer2EditPart.VISUAL_ID:
 		case PackageMsgConsumer2EditPart.VISUAL_ID:
+		case NodePropertyEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

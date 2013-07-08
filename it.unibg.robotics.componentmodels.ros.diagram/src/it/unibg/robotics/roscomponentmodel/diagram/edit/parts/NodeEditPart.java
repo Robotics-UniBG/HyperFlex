@@ -335,7 +335,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter
 					.getAdapter(IElementType.class);
-			if (type == RosComponentModelElementTypes.Parameter_3002) {
+			if (type == RosComponentModelElementTypes.NodeProperty_3012) {
 				return getChildBySemanticHint(RosComponentModelVisualIDRegistry
 						.getType(NodePropertiesCompartmentEditPart.VISUAL_ID));
 			}
@@ -402,7 +402,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 
 			fFigureComponentNameLabel = new WrappingLabel();
 
-			fFigureComponentNameLabel.setText("<?>");
+			fFigureComponentNameLabel.setText("<É>");
 
 			fFigureComponentNameLabel.setFont(FFIGURECOMPONENTNAMELABEL_FONT);
 

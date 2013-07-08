@@ -73,26 +73,25 @@
       </labels>
     </childNodes>
     <childNodes
-        visualID="3002"
-        editPartClassName="ParameterEditPart"
-        itemSemanticEditPolicyClassName="ParameterItemSemanticEditPolicy"
-        notationViewFactoryClassName="ParameterViewFactory"
-        canonicalEditPolicyClassName="ParameterCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="ParameterGraphicalNodeEditPolicy"
-        createCommandClassName="ParameterCreateCommand"
+        visualID="3012"
+        editPartClassName="NodePropertyEditPart"
+        itemSemanticEditPolicyClassName="NodePropertyItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="NodePropertyCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="NodePropertyGraphicalNodeEditPolicy"
+        createCommandClassName="NodePropertyCreateCommand"
         containers="//@diagram/@compartments.1">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="ParameterEditHelper"/>
+          editHelperClassName="NodePropertyEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="PropertiesFigure"
           classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PropertiesFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PropertiesFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;&lt;…>&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet>
         <metaClass
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Parameter"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/NodeProperty"/>
         <containmentMetaFeature
             href="../models/rosComponentModel.genmodel#//roscomponentmodel/Node/parameters"/>
         <childMetaFeature
@@ -100,10 +99,9 @@
       </modelFacet>
       <labels
           xsi:type="gmfgen:GenExternalNodeLabel"
-          visualID="5013"
-          editPartClassName="ParameterNameEditPart"
-          itemSemanticEditPolicyClassName="ParameterNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="ParameterNameViewFactory"
+          visualID="5018"
+          editPartClassName="NodePropertyNameEditPart"
+          itemSemanticEditPolicyClassName="NodePropertyNameItemSemanticEditPolicy"
           elementIcon="true">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -115,7 +113,7 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../models/rosComponentModel.genmodel#//roscomponentmodel/Parameter/name"/>
+              href="../models/rosComponentModel.genmodel#//roscomponentmodel/Property/name"/>
         </modelFacet>
       </labels>
     </childNodes>

@@ -29,7 +29,6 @@ import it.unibg.robotics.compositionmodel.Property;
 import it.unibg.robotics.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**

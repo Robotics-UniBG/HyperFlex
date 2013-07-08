@@ -8,13 +8,13 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnec
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducer2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ParameterEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
 
@@ -75,7 +75,8 @@ public class RosComponentModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Parameter_3002 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Parameter_3002"); //$NON-NLS-1$
+	public static final IElementType NodeProperty_3012 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.NodeProperty_3012"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
@@ -252,9 +253,9 @@ public class RosComponentModelElementTypes {
 							.getNode());
 
 			elements.put(
-					Parameter_3002,
+					NodeProperty_3012,
 					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-							.getParameter());
+							.getNodeProperty());
 
 			elements.put(
 					NodeMsgProducer_3003,
@@ -335,7 +336,7 @@ public class RosComponentModelElementTypes {
 			KNOWN_ELEMENT_TYPES.add(ArchitectureModel_1000);
 			KNOWN_ELEMENT_TYPES.add(Package_2002);
 			KNOWN_ELEMENT_TYPES.add(Node_3001);
-			KNOWN_ELEMENT_TYPES.add(Parameter_3002);
+			KNOWN_ELEMENT_TYPES.add(NodeProperty_3012);
 			KNOWN_ELEMENT_TYPES.add(NodeMsgProducer_3003);
 			KNOWN_ELEMENT_TYPES.add(NodeMsgConsumer_3004);
 			KNOWN_ELEMENT_TYPES.add(Package_3011);
@@ -363,8 +364,8 @@ public class RosComponentModelElementTypes {
 			return Package_2002;
 		case NodeEditPart.VISUAL_ID:
 			return Node_3001;
-		case ParameterEditPart.VISUAL_ID:
-			return Parameter_3002;
+		case NodePropertyEditPart.VISUAL_ID:
+			return NodeProperty_3012;
 		case NodeMsgProducerEditPart.VISUAL_ID:
 			return NodeMsgProducer_3003;
 		case NodeMsgConsumerEditPart.VISUAL_ID:

@@ -219,6 +219,130 @@
             href="../models/compositionModel.genmodel#//compositionmodel/Composite/reqInterfaces"/>
       </modelFacet>
     </childNodes>
+    <childNodes
+        visualID="3012"
+        editPartClassName="ROSCompositeEditPart"
+        itemSemanticEditPolicyClassName="ROSCompositeItemSemanticEditPolicy"
+        notationViewFactoryClassName="ROSCompositeViewFactory"
+        canonicalEditPolicyClassName="ROSCompositeCanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.6 //@diagram/@childNodes.7"
+        graphicalNodeEditPolicyClassName="ROSCompositeGraphicalNodeEditPolicy"
+        createCommandClassName="ROSCompositeCreateCommand"
+        containers="//@diagram/@compartments.0">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="ROSCompositeEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="CompositeFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class CompositeFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigureCompositeProperties; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePackageNameLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public CompositeFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;org.eclipse.draw2d.RectangleFigure compositeInfo0 = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;&#x9;compositeInfo0.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightBlue);&#xA;&#xA;compositeInfo0.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintCompositeInfo0 = new org.eclipse.draw2d.GridData();&#xA;constraintCompositeInfo0.verticalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintCompositeInfo0.horizontalAlignment = org.eclipse.draw2d.GridData.FILL;&#xA;constraintCompositeInfo0.horizontalIndent = 0;&#xA;constraintCompositeInfo0.horizontalSpan = 1;&#xA;constraintCompositeInfo0.verticalSpan = 1;&#xA;constraintCompositeInfo0.grabExcessHorizontalSpace = true;&#xA;constraintCompositeInfo0.grabExcessVerticalSpace = false;&#xA;this.add(compositeInfo0, constraintCompositeInfo0);&#xA;&#xA;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutCompositeInfo0 = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutCompositeInfo0.numColumns = 1;&#xA;&#x9;layoutCompositeInfo0.makeColumnsEqualWidth = true;&#xA;&#x9;compositeInfo0.setLayoutManager(layoutCompositeInfo0);&#xA;&#xA;&#xA;&#xA;fFigurePackageNameLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigurePackageNameLabel.setText(&quot;&lt;…>&quot;);&#xA;&#xA;fFigurePackageNameLabel.setFont(FFIGUREPACKAGENAMELABEL_FONT);&#xA;&#xA;&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintFFigurePackageNameLabel = new org.eclipse.draw2d.GridData();&#xA;constraintFFigurePackageNameLabel.verticalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintFFigurePackageNameLabel.horizontalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintFFigurePackageNameLabel.horizontalIndent = 0;&#xA;constraintFFigurePackageNameLabel.horizontalSpan = 1;&#xA;constraintFFigurePackageNameLabel.verticalSpan = 1;&#xA;constraintFFigurePackageNameLabel.grabExcessHorizontalSpace = false;&#xA;constraintFFigurePackageNameLabel.grabExcessVerticalSpace = false;&#xA;compositeInfo0.add(fFigurePackageNameLabel, constraintFFigurePackageNameLabel);&#xA;&#xA;&#xA;&#xA;&#xA;org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel compositeLabel1 = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;compositeLabel1.setText(&quot;Composite&quot;);&#xA;&#xA;compositeLabel1.setFont(COMPOSITELABEL1_FONT);&#xA;&#xA;&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintCompositeLabel1 = new org.eclipse.draw2d.GridData();&#xA;constraintCompositeLabel1.verticalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintCompositeLabel1.horizontalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintCompositeLabel1.horizontalIndent = 0;&#xA;constraintCompositeLabel1.horizontalSpan = 1;&#xA;constraintCompositeLabel1.verticalSpan = 1;&#xA;constraintCompositeLabel1.grabExcessHorizontalSpace = false;&#xA;constraintCompositeLabel1.grabExcessVerticalSpace = false;&#xA;compositeInfo0.add(compositeLabel1, constraintCompositeLabel1);&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;fFigureCompositeProperties = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintFFigureCompositeProperties = new org.eclipse.draw2d.GridData();&#xA;constraintFFigureCompositeProperties.verticalAlignment = org.eclipse.draw2d.GridData.FILL;&#xA;constraintFFigureCompositeProperties.horizontalAlignment = org.eclipse.draw2d.GridData.FILL;&#xA;constraintFFigureCompositeProperties.horizontalIndent = 0;&#xA;constraintFFigureCompositeProperties.horizontalSpan = 1;&#xA;constraintFFigureCompositeProperties.verticalSpan = 1;&#xA;constraintFFigureCompositeProperties.grabExcessHorizontalSpace = true;&#xA;constraintFFigureCompositeProperties.grabExcessVerticalSpace = true;&#xA;this.add(fFigureCompositeProperties, constraintFFigureCompositeProperties);&#xA;&#xA;fFigureCompositeProperties.setLayoutManager(new org.eclipse.draw2d.StackLayout());&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigureCompositeProperties() {&#xA;&#x9;&#x9;return fFigureCompositeProperties;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePackageNameLabel() {&#xA;&#x9;&#x9;return fFigurePackageNameLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREPACKAGENAMELABEL_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font COMPOSITELABEL1_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass
+            href="../../it.unibg.robotics.componentmodels.composition.ros/models/rosCompositionModel.genmodel#//roscompositionmodel/ROSComposite"/>
+        <containmentMetaFeature
+            href="../models/compositionModel.genmodel#//compositionmodel/System/composites"/>
+        <childMetaFeature
+            href="../models/compositionModel.genmodel#//compositionmodel/System/composites"/>
+      </modelFacet>
+      <labels
+          visualID="5008"
+          editPartClassName="ROSCompositeNameEditPart"
+          itemSemanticEditPolicyClassName="ROSCompositeNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="ROSCompositeNameViewFactory">
+        <diagramRunTimeClass
+            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigurePackageNameLabel"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
+          <attributes
+              xsi:type="gmfgen:StyleAttributes"
+              fixedFont="true"/>
+        </viewmap>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../models/compositionModel.genmodel#//compositionmodel/Composite/name"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes
+        xsi:type="gmfgen:GenChildSideAffixedNode"
+        visualID="3013"
+        editPartClassName="ROSMsgProducerEditPart"
+        itemSemanticEditPolicyClassName="ROSMsgProducerItemSemanticEditPolicy"
+        notationViewFactoryClassName="ROSMsgProducerViewFactory"
+        canonicalEditPolicyClassName="ROSMsgProducerCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="ROSMsgProducerGraphicalNodeEditPolicy"
+        createCommandClassName="ROSMsgProducerCreateCommand"
+        containers="//@diagram/@childNodes.5"
+        preferredSideName="WEST">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="ROSMsgProducerEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="Producer1Figure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class Producer1Figure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public Producer1Figure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.yellow);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedBackground="true"/>
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="20"
+            height="20"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass
+            href="../../it.unibg.robotics.componentmodels.composition.ros/models/rosCompositionModel.genmodel#//roscompositionmodel/ROSMsgProducer"/>
+        <containmentMetaFeature
+            href="../models/compositionModel.genmodel#//compositionmodel/Composite/provInterfaces"/>
+        <childMetaFeature
+            href="../models/compositionModel.genmodel#//compositionmodel/Composite/provInterfaces"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes
+        xsi:type="gmfgen:GenChildSideAffixedNode"
+        visualID="3014"
+        editPartClassName="ROSMsgConsumerEditPart"
+        itemSemanticEditPolicyClassName="ROSMsgConsumerItemSemanticEditPolicy"
+        notationViewFactoryClassName="ROSMsgConsumerViewFactory"
+        canonicalEditPolicyClassName="ROSMsgConsumerCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="ROSMsgConsumerGraphicalNodeEditPolicy"
+        createCommandClassName="ROSMsgConsumerCreateCommand"
+        containers="//@diagram/@childNodes.5"
+        preferredSideName="EAST">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="ROSMsgConsumerEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="Consumer1Figure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class Consumer1Figure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public Consumer1Figure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.cyan);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedBackground="true"/>
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="20"
+            height="20"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass
+            href="../../it.unibg.robotics.componentmodels.composition.ros/models/rosCompositionModel.genmodel#//roscompositionmodel/ROSMsgConsumer"/>
+        <containmentMetaFeature
+            href="../models/compositionModel.genmodel#//compositionmodel/Composite/reqInterfaces"/>
+        <childMetaFeature
+            href="../models/compositionModel.genmodel#//compositionmodel/Composite/reqInterfaces"/>
+      </modelFacet>
+    </childNodes>
     <topLevelNodes
         visualID="2002"
         editPartClassName="System2EditPart"
@@ -330,7 +454,7 @@
         itemSemanticEditPolicyClassName="SystemCompositeContainerCompartmentItemSemanticEditPolicy"
         notationViewFactoryClassName="SystemCompositeContainerCompartmentViewFactory"
         canonicalEditPolicyClassName="SystemCompositeContainerCompartmentCanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.2"
+        childNodes="//@diagram/@childNodes.2 //@diagram/@childNodes.5"
         title="CompositeContainerCompartment"
         canCollapse="false"
         needsTitle="false"
@@ -351,7 +475,8 @@
             xsi:type="gmfgen:ToolEntry"
             title="Import ROS Composite"
             description="Import existing ROS Composite"
-            smallIconPath="icons/Composite.gif"/>
+            smallIconPath="icons/Composite.gif"
+            genNodes="//@diagram/@childNodes.5"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Channel"
@@ -364,11 +489,11 @@
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Provided Interface"
-            genNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.3"/>
+            genNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.3 //@diagram/@childNodes.6"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Required Interface"
-            genNodes="//@diagram/@childNodes.1 //@diagram/@childNodes.4"/>
+            genNodes="//@diagram/@childNodes.1 //@diagram/@childNodes.4 //@diagram/@childNodes.7"/>
       </groups>
       <groups
           title="Connections"
@@ -432,6 +557,15 @@
         parent="//@diagram/@topLevelNodes.0"
         child="//@diagram/@childNodes.2"/>
     <childReferences
+        parent="//@diagram/@childNodes.5"
+        child="//@diagram/@childNodes.6"/>
+    <childReferences
+        parent="//@diagram/@childNodes.5"
+        child="//@diagram/@childNodes.7"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.0"
+        child="//@diagram/@childNodes.5"/>
+    <childReferences
         parent="//@diagram"
         child="//@diagram/@topLevelNodes.0"/>
     <childReferences
@@ -465,6 +599,18 @@
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
+        child="//@diagram/@childNodes.6"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.6"
+        child="//@diagram/@links.0"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.0"
         child="//@diagram/@childNodes.1"
         referenceType="in_source"
         groupName="source"
@@ -483,6 +629,18 @@
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@childNodes.4"
+        child="//@diagram/@links.0"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.0"
+        child="//@diagram/@childNodes.7"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.7"
         child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
@@ -514,7 +672,7 @@
       extensibleViaService="true">
     <implementations
         xsi:type="gmfgen:PredefinedParser"
-        uses="//@diagram/@childNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet"/>
+        uses="//@diagram/@childNodes.2/@labels.0/@modelFacet //@diagram/@childNodes.5/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus
       context="//@diagram">

@@ -49,6 +49,18 @@ public class CompositionModelEditPartFactory implements EditPartFactory {
 			case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
 				return new SystemCompositeRequiredInterfEditPart(view);
 
+			case ROSCompositeEditPart.VISUAL_ID:
+				return new ROSCompositeEditPart(view);
+
+			case ROSCompositeNameEditPart.VISUAL_ID:
+				return new ROSCompositeNameEditPart(view);
+
+			case ROSMsgProducerEditPart.VISUAL_ID:
+				return new ROSMsgProducerEditPart(view);
+
+			case ROSMsgConsumerEditPart.VISUAL_ID:
+				return new ROSMsgConsumerEditPart(view);
+
 			case SystemCompositeContainerCompartmentEditPart.VISUAL_ID:
 				return new SystemCompositeContainerCompartmentEditPart(view);
 

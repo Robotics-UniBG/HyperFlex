@@ -2,6 +2,10 @@ package it.unibg.robotics.compositionmodel.diagram.providers;
 
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionNameEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeNameEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.System2EditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
@@ -156,6 +160,9 @@ public class CompositionModelViewProvider extends AbstractProvider implements
 				case SystemCompositeEditPart.VISUAL_ID:
 				case SystemCompositeProvidedInterfEditPart.VISUAL_ID:
 				case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
+				case ROSCompositeEditPart.VISUAL_ID:
+				case ROSMsgProducerEditPart.VISUAL_ID:
+				case ROSMsgConsumerEditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != CompositionModelVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -173,7 +180,10 @@ public class CompositionModelViewProvider extends AbstractProvider implements
 				|| SystemRequiredInterfEditPart.VISUAL_ID == visualID
 				|| SystemCompositeEditPart.VISUAL_ID == visualID
 				|| SystemCompositeProvidedInterfEditPart.VISUAL_ID == visualID
-				|| SystemCompositeRequiredInterfEditPart.VISUAL_ID == visualID;
+				|| SystemCompositeRequiredInterfEditPart.VISUAL_ID == visualID
+				|| ROSCompositeEditPart.VISUAL_ID == visualID
+				|| ROSMsgProducerEditPart.VISUAL_ID == visualID
+				|| ROSMsgConsumerEditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -250,6 +260,15 @@ public class CompositionModelViewProvider extends AbstractProvider implements
 		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
 			return createSystemCompositeRequiredInterf_3011(domainElement,
 					containerView, index, persisted, preferencesHint);
+		case ROSCompositeEditPart.VISUAL_ID:
+			return createROSComposite_3012(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case ROSMsgProducerEditPart.VISUAL_ID:
+			return createROSMsgProducer_3013(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case ROSMsgConsumerEditPart.VISUAL_ID:
+			return createROSMsgConsumer_3014(domainElement, containerView,
+					index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -509,6 +528,136 @@ public class CompositionModelViewProvider extends AbstractProvider implements
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(CompositionModelVisualIDRegistry
 				.getType(SystemCompositeRequiredInterfEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createROSComposite_3012(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(CompositionModelVisualIDRegistry
+				.getType(ROSCompositeEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5008 = createLabel(node,
+				CompositionModelVisualIDRegistry
+						.getType(ROSCompositeNameEditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createROSMsgProducer_3013(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(CompositionModelVisualIDRegistry
+				.getType(ROSMsgProducerEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createROSMsgConsumer_3014(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(CompositionModelVisualIDRegistry
+				.getType(ROSMsgConsumerEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 

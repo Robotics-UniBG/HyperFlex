@@ -7,7 +7,7 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnec
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ParameterEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
@@ -150,7 +150,7 @@ public class NodeItemSemanticEditPolicy extends
 					Node cnode = (Node) cit.next();
 					switch (RosComponentModelVisualIDRegistry
 							.getVisualID(cnode)) {
-					case ParameterEditPart.VISUAL_ID:
+					case NodePropertyEditPart.VISUAL_ID:
 						cmd.add(new DestroyElementCommand(
 								new DestroyElementRequest(getEditingDomain(),
 										cnode.getElement(), false))); // directlyOwned: true

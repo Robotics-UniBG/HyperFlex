@@ -26,15 +26,12 @@
 package it.unibg.robotics.compositionmodel.impl;
 
 import it.unibg.robotics.compositionmodel.ProvidedInterface;
-import it.unibg.robotics.compositionmodel.RequiredInterface;
 import it.unibg.robotics.compositionmodel.SystemProvidedInterf;
 import it.unibg.robotics.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**

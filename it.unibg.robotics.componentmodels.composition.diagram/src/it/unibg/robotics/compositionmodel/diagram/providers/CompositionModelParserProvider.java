@@ -1,6 +1,7 @@
 package it.unibg.robotics.compositionmodel.diagram.providers;
 
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionNameEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeNameEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeNameEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemNameEditPart;
 import it.unibg.robotics.compositionmodel.diagram.parsers.MessageFormatParser;
@@ -64,6 +65,24 @@ public class CompositionModelParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
+	private IParser rOSCompositeName_5008Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getROSCompositeName_5008Parser() {
+		if (rOSCompositeName_5008Parser == null) {
+			EAttribute[] features = new EAttribute[] { it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+					.getComposite_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			rOSCompositeName_5008Parser = parser;
+		}
+		return rOSCompositeName_5008Parser;
+	}
+
+	/**
+	 * @generated
+	 */
 	private IParser connectionName_6001Parser;
 
 	/**
@@ -88,6 +107,8 @@ public class CompositionModelParserProvider extends AbstractProvider implements
 			return getSystemName_5006Parser();
 		case SystemCompositeNameEditPart.VISUAL_ID:
 			return getSystemCompositeName_5007Parser();
+		case ROSCompositeNameEditPart.VISUAL_ID:
+			return getROSCompositeName_5008Parser();
 		case ConnectionNameEditPart.VISUAL_ID:
 			return getConnectionName_6001Parser();
 		}

@@ -354,7 +354,7 @@ public class PackageEditPart extends AbstractBorderedShapeEditPart {
 
 			fFigurePackageContainerNameLabel = new WrappingLabel();
 
-			fFigurePackageContainerNameLabel.setText("<?>");
+			fFigurePackageContainerNameLabel.setText("<É>");
 
 			fFigurePackageContainerNameLabel
 					.setFont(FFIGUREPACKAGECONTAINERNAMELABEL_FONT);

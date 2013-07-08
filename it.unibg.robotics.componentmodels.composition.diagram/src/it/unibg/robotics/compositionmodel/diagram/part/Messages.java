@@ -328,6 +328,16 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String NavigatorGroupName_ROSMsgConsumer_3014_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ROSMsgProducer_3013_incominglinks;
+
+	/**
+	 * @generated
+	 */
 	public static String NavigatorGroupName_SystemCompositeProvidedInterf_3010_incominglinks;
 
 	/**

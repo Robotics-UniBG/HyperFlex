@@ -1,9 +1,9 @@
 package it.unibg.robotics.roscomponentmodel.diagram.providers;
 
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageName2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageNameEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ParameterNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.parsers.MessageFormatParser;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
@@ -66,19 +66,19 @@ public class RosComponentModelParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser parameterName_5013Parser;
+	private IParser nodePropertyName_5018Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getParameterName_5013Parser() {
-		if (parameterName_5013Parser == null) {
+	private IParser getNodePropertyName_5018Parser() {
+		if (nodePropertyName_5018Parser == null) {
 			EAttribute[] features = new EAttribute[] { it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-					.getParameter_Name() };
+					.getProperty_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			parameterName_5013Parser = parser;
+			nodePropertyName_5018Parser = parser;
 		}
-		return parameterName_5013Parser;
+		return nodePropertyName_5018Parser;
 	}
 
 	/**
@@ -126,8 +126,8 @@ public class RosComponentModelParserProvider extends AbstractProvider implements
 			return getPackageName_5010Parser();
 		case NodeNameEditPart.VISUAL_ID:
 			return getNodeName_5003Parser();
-		case ParameterNameEditPart.VISUAL_ID:
-			return getParameterName_5013Parser();
+		case NodePropertyNameEditPart.VISUAL_ID:
+			return getNodePropertyName_5018Parser();
 		case PackageName2EditPart.VISUAL_ID:
 			return getPackageName_5016Parser();
 		case TopicNameEditPart.VISUAL_ID:

@@ -34,9 +34,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -128,6 +126,7 @@ public class PackageItemProvider
 			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__SRV_PRODUCERS);
 			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__SRV_CONSUMERS);
 			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__WIRES);
+			childrenFeatures.add(roscomponentmodelPackage.Literals.PACKAGE__PROPERTIES);
 		}
 		return childrenFeatures;
 	}
@@ -192,6 +191,7 @@ public class PackageItemProvider
 			case roscomponentmodelPackage.PACKAGE__SRV_PRODUCERS:
 			case roscomponentmodelPackage.PACKAGE__SRV_CONSUMERS:
 			case roscomponentmodelPackage.PACKAGE__WIRES:
+			case roscomponentmodelPackage.PACKAGE__PROPERTIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -248,6 +248,11 @@ public class PackageItemProvider
 			(createChildParameter
 				(roscomponentmodelPackage.Literals.PACKAGE__WIRES,
 				 roscomponentmodelFactory.eINSTANCE.createWire()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(roscomponentmodelPackage.Literals.PACKAGE__PROPERTIES,
+				 roscomponentmodelFactory.eINSTANCE.createCompositeProperty()));
 	}
 
 }

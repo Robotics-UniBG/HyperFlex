@@ -1,5 +1,6 @@
 package it.unibg.robotics.compositionmodel.diagram.edit.policies;
 
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
 import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramUpdater;
 import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelNodeDescriptor;
@@ -80,8 +81,9 @@ public class SystemCompositeContainerCompartmentCanonicalEditPolicy extends
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		return SystemCompositeEditPart.VISUAL_ID == CompositionModelVisualIDRegistry
-				.getVisualID(view);
+		int visualID = CompositionModelVisualIDRegistry.getVisualID(view);
+		return visualID == SystemCompositeEditPart.VISUAL_ID
+				|| visualID == ROSCompositeEditPart.VISUAL_ID;
 	}
 
 	/**

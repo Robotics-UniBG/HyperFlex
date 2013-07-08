@@ -27,18 +27,20 @@ package it.unibg.robotics.roscomponentmodel.impl;
 
 import it.unibg.robotics.roscomponentmodel.ArchitectureModel;
 import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
+import it.unibg.robotics.roscomponentmodel.CompositeProperty;
 import it.unibg.robotics.roscomponentmodel.MsgInterface;
 import it.unibg.robotics.roscomponentmodel.Node;
 import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeMsgInterface;
 import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
+import it.unibg.robotics.roscomponentmodel.NodeProperty;
 import it.unibg.robotics.roscomponentmodel.NodeSrvConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeSrvProducer;
 import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
 import it.unibg.robotics.roscomponentmodel.PackageSrvConsumer;
 import it.unibg.robotics.roscomponentmodel.PackageSrvProducer;
-import it.unibg.robotics.roscomponentmodel.Parameter;
+import it.unibg.robotics.roscomponentmodel.Property;
 import it.unibg.robotics.roscomponentmodel.SrvConsumer;
 import it.unibg.robotics.roscomponentmodel.SrvProducer;
 import it.unibg.robotics.roscomponentmodel.Topic;
@@ -49,9 +51,7 @@ import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -105,7 +105,7 @@ public class roscomponentmodelFactoryImpl extends EFactoryImpl implements roscom
 			case roscomponentmodelPackage.PACKAGE_MSG_PRODUCER: return createPackageMsgProducer();
 			case roscomponentmodelPackage.PACKAGE_MSG_CONSUMER: return createPackageMsgConsumer();
 			case roscomponentmodelPackage.TOPIC: return createTopic();
-			case roscomponentmodelPackage.PARAMETER: return createParameter();
+			case roscomponentmodelPackage.PROPERTY: return createProperty();
 			case roscomponentmodelPackage.SRV_PRODUCER: return createSrvProducer();
 			case roscomponentmodelPackage.SRV_CONSUMER: return createSrvConsumer();
 			case roscomponentmodelPackage.PACKAGE_SRV_PRODUCER: return createPackageSrvProducer();
@@ -117,6 +117,8 @@ public class roscomponentmodelFactoryImpl extends EFactoryImpl implements roscom
 			case roscomponentmodelPackage.MSG_INTERFACE: return createMsgInterface();
 			case roscomponentmodelPackage.COMPOSITE_MSG_INTERFACE: return createCompositeMsgInterface();
 			case roscomponentmodelPackage.NODE_MSG_INTERFACE: return createNodeMsgInterface();
+			case roscomponentmodelPackage.NODE_PROPERTY: return createNodeProperty();
+			case roscomponentmodelPackage.COMPOSITE_PROPERTY: return createCompositeProperty();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -197,9 +199,9 @@ public class roscomponentmodelFactoryImpl extends EFactoryImpl implements roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parameter createParameter() {
-		ParameterImpl parameter = new ParameterImpl();
-		return parameter;
+	public Property createProperty() {
+		PropertyImpl property = new PropertyImpl();
+		return property;
 	}
 
 	/**
@@ -310,6 +312,26 @@ public class roscomponentmodelFactoryImpl extends EFactoryImpl implements roscom
 	public NodeMsgInterface createNodeMsgInterface() {
 		NodeMsgInterfaceImpl nodeMsgInterface = new NodeMsgInterfaceImpl();
 		return nodeMsgInterface;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NodeProperty createNodeProperty() {
+		NodePropertyImpl nodeProperty = new NodePropertyImpl();
+		return nodeProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CompositeProperty createCompositeProperty() {
+		CompositePropertyImpl compositeProperty = new CompositePropertyImpl();
+		return compositeProperty;
 	}
 
 	/**

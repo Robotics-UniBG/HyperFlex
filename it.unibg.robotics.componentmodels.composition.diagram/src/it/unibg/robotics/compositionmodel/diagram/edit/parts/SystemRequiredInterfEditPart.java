@@ -216,6 +216,9 @@ public class SystemRequiredInterfEditPart extends AbstractBorderItemEditPart {
 		if (targetEditPart instanceof SystemCompositeProvidedInterfEditPart) {
 			types.add(CompositionModelElementTypes.Connection_4002);
 		}
+		if (targetEditPart instanceof ROSMsgProducerEditPart) {
+			types.add(CompositionModelElementTypes.Connection_4002);
+		}
 		return types;
 	}
 
@@ -227,6 +230,7 @@ public class SystemRequiredInterfEditPart extends AbstractBorderItemEditPart {
 		if (relationshipType == CompositionModelElementTypes.Connection_4002) {
 			types.add(CompositionModelElementTypes.SystemProvidedInterf_3007);
 			types.add(CompositionModelElementTypes.SystemCompositeProvidedInterf_3010);
+			types.add(CompositionModelElementTypes.ROSMsgProducer_3013);
 		}
 		return types;
 	}

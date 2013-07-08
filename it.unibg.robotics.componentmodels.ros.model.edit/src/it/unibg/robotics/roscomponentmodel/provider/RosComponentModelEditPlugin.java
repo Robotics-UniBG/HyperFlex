@@ -26,7 +26,6 @@
 package it.unibg.robotics.roscomponentmodel.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**

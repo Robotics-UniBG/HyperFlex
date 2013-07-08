@@ -1,5 +1,8 @@
 package it.unibg.robotics.compositionmodel.diagram.part;
 
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgConsumer;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgProducer;
 import it.unibg.robotics.compositionmodel.ArchitectureModel;
 import it.unibg.robotics.compositionmodel.CompProvidedInterf;
 import it.unibg.robotics.compositionmodel.CompRequiredInterf;
@@ -14,6 +17,9 @@ import it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf;
 import it.unibg.robotics.compositionmodel.SystemProvidedInterf;
 import it.unibg.robotics.compositionmodel.SystemRequiredInterf;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
+import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.System2EditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
@@ -54,6 +60,8 @@ public class CompositionModelDiagramUpdater {
 			return getSystem_2002SemanticChildren(view);
 		case SystemCompositeEditPart.VISUAL_ID:
 			return getSystemComposite_3009SemanticChildren(view);
+		case ROSCompositeEditPart.VISUAL_ID:
+			return getROSComposite_3012SemanticChildren(view);
 		case SystemCompositeContainerCompartmentEditPart.VISUAL_ID:
 			return getSystemCompositeContainerCompartment_7003SemanticChildren(view);
 		}
@@ -157,6 +165,41 @@ public class CompositionModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<CompositionModelNodeDescriptor> getROSComposite_3012SemanticChildren(
+			View view) {
+		if (!view.isSetElement()) {
+			return Collections.emptyList();
+		}
+		ROSComposite modelElement = (ROSComposite) view.getElement();
+		LinkedList<CompositionModelNodeDescriptor> result = new LinkedList<CompositionModelNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getProvInterfaces().iterator(); it
+				.hasNext();) {
+			CompProvidedInterf childElement = (CompProvidedInterf) it.next();
+			int visualID = CompositionModelVisualIDRegistry.getNodeVisualID(
+					view, childElement);
+			if (visualID == ROSMsgProducerEditPart.VISUAL_ID) {
+				result.add(new CompositionModelNodeDescriptor(childElement,
+						visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getReqInterfaces().iterator(); it
+				.hasNext();) {
+			CompRequiredInterf childElement = (CompRequiredInterf) it.next();
+			int visualID = CompositionModelVisualIDRegistry.getNodeVisualID(
+					view, childElement);
+			if (visualID == ROSMsgConsumerEditPart.VISUAL_ID) {
+				result.add(new CompositionModelNodeDescriptor(childElement,
+						visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<CompositionModelNodeDescriptor> getSystemCompositeContainerCompartment_7003SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
@@ -174,6 +217,11 @@ public class CompositionModelDiagramUpdater {
 			int visualID = CompositionModelVisualIDRegistry.getNodeVisualID(
 					view, childElement);
 			if (visualID == SystemCompositeEditPart.VISUAL_ID) {
+				result.add(new CompositionModelNodeDescriptor(childElement,
+						visualID));
+				continue;
+			}
+			if (visualID == ROSCompositeEditPart.VISUAL_ID) {
 				result.add(new CompositionModelNodeDescriptor(childElement,
 						visualID));
 				continue;
@@ -202,6 +250,12 @@ public class CompositionModelDiagramUpdater {
 			return getSystemCompositeProvidedInterf_3010ContainedLinks(view);
 		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
 			return getSystemCompositeRequiredInterf_3011ContainedLinks(view);
+		case ROSCompositeEditPart.VISUAL_ID:
+			return getROSComposite_3012ContainedLinks(view);
+		case ROSMsgProducerEditPart.VISUAL_ID:
+			return getROSMsgProducer_3013ContainedLinks(view);
+		case ROSMsgConsumerEditPart.VISUAL_ID:
+			return getROSMsgConsumer_3014ContainedLinks(view);
 		case ConnectionEditPart.VISUAL_ID:
 			return getConnection_4002ContainedLinks(view);
 		}
@@ -226,6 +280,12 @@ public class CompositionModelDiagramUpdater {
 			return getSystemCompositeProvidedInterf_3010IncomingLinks(view);
 		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
 			return getSystemCompositeRequiredInterf_3011IncomingLinks(view);
+		case ROSCompositeEditPart.VISUAL_ID:
+			return getROSComposite_3012IncomingLinks(view);
+		case ROSMsgProducerEditPart.VISUAL_ID:
+			return getROSMsgProducer_3013IncomingLinks(view);
+		case ROSMsgConsumerEditPart.VISUAL_ID:
+			return getROSMsgConsumer_3014IncomingLinks(view);
 		case ConnectionEditPart.VISUAL_ID:
 			return getConnection_4002IncomingLinks(view);
 		}
@@ -250,6 +310,12 @@ public class CompositionModelDiagramUpdater {
 			return getSystemCompositeProvidedInterf_3010OutgoingLinks(view);
 		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
 			return getSystemCompositeRequiredInterf_3011OutgoingLinks(view);
+		case ROSCompositeEditPart.VISUAL_ID:
+			return getROSComposite_3012OutgoingLinks(view);
+		case ROSMsgProducerEditPart.VISUAL_ID:
+			return getROSMsgProducer_3013OutgoingLinks(view);
+		case ROSMsgConsumerEditPart.VISUAL_ID:
+			return getROSMsgConsumer_3014OutgoingLinks(view);
 		case ConnectionEditPart.VISUAL_ID:
 			return getConnection_4002OutgoingLinks(view);
 		}
@@ -311,6 +377,30 @@ public class CompositionModelDiagramUpdater {
 	 * @generated
 	 */
 	public static List<CompositionModelLinkDescriptor> getSystemCompositeRequiredInterf_3011ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CompositionModelLinkDescriptor> getROSComposite_3012ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CompositionModelLinkDescriptor> getROSMsgProducer_3013ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CompositionModelLinkDescriptor> getROSMsgConsumer_3014ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -388,6 +478,36 @@ public class CompositionModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<CompositionModelLinkDescriptor> getROSComposite_3012IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CompositionModelLinkDescriptor> getROSMsgProducer_3013IncomingLinks(
+			View view) {
+		ROSMsgProducer modelElement = (ROSMsgProducer) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<CompositionModelLinkDescriptor> result = new LinkedList<CompositionModelLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Connection_4002(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CompositionModelLinkDescriptor> getROSMsgConsumer_3014IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<CompositionModelLinkDescriptor> getConnection_4002IncomingLinks(
 			View view) {
 		return Collections.emptyList();
@@ -444,6 +564,33 @@ public class CompositionModelDiagramUpdater {
 			View view) {
 		SystemCompositeRequiredInterf modelElement = (SystemCompositeRequiredInterf) view
 				.getElement();
+		LinkedList<CompositionModelLinkDescriptor> result = new LinkedList<CompositionModelLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Connection_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CompositionModelLinkDescriptor> getROSComposite_3012OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CompositionModelLinkDescriptor> getROSMsgProducer_3013OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<CompositionModelLinkDescriptor> getROSMsgConsumer_3014OutgoingLinks(
+			View view) {
+		ROSMsgConsumer modelElement = (ROSMsgConsumer) view.getElement();
 		LinkedList<CompositionModelLinkDescriptor> result = new LinkedList<CompositionModelLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_Connection_4002(modelElement));
 		return result;

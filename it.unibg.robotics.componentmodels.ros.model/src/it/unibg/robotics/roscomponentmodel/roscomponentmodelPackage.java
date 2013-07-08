@@ -180,13 +180,22 @@ public interface roscomponentmodelPackage extends EPackage {
 	int PACKAGE__WIRES = ABSTRACT_COMPONENT_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE__PROPERTIES = ABSTRACT_COMPONENT_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Package</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_FEATURE_COUNT = ABSTRACT_COMPONENT_FEATURE_COUNT + 8;
+	int PACKAGE_FEATURE_COUNT = ABSTRACT_COMPONENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl <em>Node</em>}' class.
@@ -612,14 +621,14 @@ public interface roscomponentmodelPackage extends EPackage {
 	int TOPIC_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.ParameterImpl <em>Parameter</em>}' class.
+	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.PropertyImpl <em>Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscomponentmodel.impl.ParameterImpl
-	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getParameter()
+	 * @see it.unibg.robotics.roscomponentmodel.impl.PropertyImpl
+	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getProperty()
 	 * @generated
 	 */
-	int PARAMETER = 7;
+	int PROPERTY = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -628,25 +637,16 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__NAME = 0;
+	int PROPERTY__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The number of structural features of the '<em>Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__VALUE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Parameter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_FEATURE_COUNT = 2;
+	int PROPERTY_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.SrvProducerImpl <em>Srv Producer</em>}' class.
@@ -919,6 +919,90 @@ public interface roscomponentmodelPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodePropertyImpl <em>Node Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see it.unibg.robotics.roscomponentmodel.impl.NodePropertyImpl
+	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getNodeProperty()
+	 * @generated
+	 */
+	int NODE_PROPERTY = 20;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_PROPERTY__NAME = PROPERTY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_PROPERTY__VALUE = PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_PROPERTY__TYPE = PROPERTY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Node Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_PROPERTY_FEATURE_COUNT = PROPERTY_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.CompositePropertyImpl <em>Composite Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see it.unibg.robotics.roscomponentmodel.impl.CompositePropertyImpl
+	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getCompositeProperty()
+	 * @generated
+	 */
+	int COMPOSITE_PROPERTY = 21;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_PROPERTY__NAME = PROPERTY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Exposed</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_PROPERTY__EXPOSED = PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Composite Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_PROPERTY_FEATURE_COUNT = PROPERTY_FEATURE_COUNT + 1;
+
+
+	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.Package <em>Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1015,6 +1099,17 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPackage_Wires();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Package#getProperties <em>Properties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.Package#getProperties()
+	 * @see #getPackage()
+	 * @generated
+	 */
+	EReference getPackage_Properties();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.Node <em>Node</em>}'.
@@ -1165,36 +1260,25 @@ public interface roscomponentmodelPackage extends EPackage {
 	EAttribute getTopic_Name();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.Parameter <em>Parameter</em>}'.
+	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.Property <em>Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Parameter</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Parameter
+	 * @return the meta object for class '<em>Property</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.Property
 	 * @generated
 	 */
-	EClass getParameter();
+	EClass getProperty();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.roscomponentmodel.Parameter#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.roscomponentmodel.Property#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Parameter#getName()
-	 * @see #getParameter()
+	 * @see it.unibg.robotics.roscomponentmodel.Property#getName()
+	 * @see #getProperty()
 	 * @generated
 	 */
-	EAttribute getParameter_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.roscomponentmodel.Parameter#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Parameter#getValue()
-	 * @see #getParameter()
-	 * @generated
-	 */
-	EAttribute getParameter_Value();
+	EAttribute getProperty_Name();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.SrvProducer <em>Srv Producer</em>}'.
@@ -1460,6 +1544,59 @@ public interface roscomponentmodelPackage extends EPackage {
 	EClass getAbstractComponent();
 
 	/**
+	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.NodeProperty <em>Node Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node Property</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.NodeProperty
+	 * @generated
+	 */
+	EClass getNodeProperty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.roscomponentmodel.NodeProperty#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.NodeProperty#getValue()
+	 * @see #getNodeProperty()
+	 * @generated
+	 */
+	EAttribute getNodeProperty_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.roscomponentmodel.NodeProperty#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.NodeProperty#getType()
+	 * @see #getNodeProperty()
+	 * @generated
+	 */
+	EAttribute getNodeProperty_Type();
+
+	/**
+	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.CompositeProperty <em>Composite Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Composite Property</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeProperty
+	 * @generated
+	 */
+	EClass getCompositeProperty();
+
+	/**
+	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscomponentmodel.CompositeProperty#getExposed <em>Exposed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Exposed</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeProperty#getExposed()
+	 * @see #getCompositeProperty()
+	 * @generated
+	 */
+	EReference getCompositeProperty_Exposed();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1554,6 +1691,14 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PACKAGE__WIRES = eINSTANCE.getPackage_Wires();
+
+		/**
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PACKAGE__PROPERTIES = eINSTANCE.getPackage_Properties();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl <em>Node</em>}' class.
@@ -1680,14 +1825,14 @@ public interface roscomponentmodelPackage extends EPackage {
 		EAttribute TOPIC__NAME = eINSTANCE.getTopic_Name();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.PropertyImpl <em>Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscomponentmodel.impl.ParameterImpl
-		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getParameter()
+		 * @see it.unibg.robotics.roscomponentmodel.impl.PropertyImpl
+		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getProperty()
 		 * @generated
 		 */
-		EClass PARAMETER = eINSTANCE.getParameter();
+		EClass PROPERTY = eINSTANCE.getProperty();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1695,15 +1840,7 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PARAMETER__VALUE = eINSTANCE.getParameter_Value();
+		EAttribute PROPERTY__NAME = eINSTANCE.getProperty_Name();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.SrvProducerImpl <em>Srv Producer</em>}' class.
@@ -1928,6 +2065,50 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ABSTRACT_COMPONENT = eINSTANCE.getAbstractComponent();
+
+		/**
+		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodePropertyImpl <em>Node Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.unibg.robotics.roscomponentmodel.impl.NodePropertyImpl
+		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getNodeProperty()
+		 * @generated
+		 */
+		EClass NODE_PROPERTY = eINSTANCE.getNodeProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE_PROPERTY__VALUE = eINSTANCE.getNodeProperty_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE_PROPERTY__TYPE = eINSTANCE.getNodeProperty_Type();
+
+		/**
+		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.CompositePropertyImpl <em>Composite Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.unibg.robotics.roscomponentmodel.impl.CompositePropertyImpl
+		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getCompositeProperty()
+		 * @generated
+		 */
+		EClass COMPOSITE_PROPERTY = eINSTANCE.getCompositeProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Exposed</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPOSITE_PROPERTY__EXPOSED = eINSTANCE.getCompositeProperty_Exposed();
 
 	}
 

@@ -1,6 +1,6 @@
 package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.commands.ParameterCreateCommand;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.commands.NodePropertyCreateCommand;
 import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 import org.eclipse.gef.commands.Command;
@@ -23,9 +23,9 @@ public class NodePropertiesCompartmentItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RosComponentModelElementTypes.Parameter_3002 == req
+		if (RosComponentModelElementTypes.NodeProperty_3012 == req
 				.getElementType()) {
-			return getGEFWrapper(new ParameterCreateCommand(req));
+			return getGEFWrapper(new NodePropertyCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

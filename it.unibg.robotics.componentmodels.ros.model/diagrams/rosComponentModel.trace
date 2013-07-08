@@ -24,13 +24,6 @@
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
-      visualID="3002"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Parameter') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Node') and _containmentMF_.name = 'parameters')">
-    <nodeLabelTraces
-        visualID="5013"
-        queryText="true"/>
-  </childNodeTraces>
-  <childNodeTraces
       visualID="3003"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'NodeMsgProducer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Node') and _containmentMF_.name = 'msgProducers')"/>
   <childNodeTraces
@@ -60,6 +53,13 @@
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Package') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Package') and _containmentMF_.name = 'nodes')">
     <nodeLabelTraces
         visualID="5016"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3012"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'NodeProperty') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Node') and _containmentMF_.name = 'parameters')">
+    <nodeLabelTraces
+        visualID="5018"
         queryText="true"/>
   </childNodeTraces>
   <linkTraces

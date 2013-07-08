@@ -33,7 +33,6 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -256,26 +255,26 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.Parameter} instances.
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.Property} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterItemProvider parameterItemProvider;
+	protected PropertyItemProvider propertyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.Parameter}.
+	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.Property}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createParameterAdapter() {
-		if (parameterItemProvider == null) {
-			parameterItemProvider = new ParameterItemProvider(this);
+	public Adapter createPropertyAdapter() {
+		if (propertyItemProvider == null) {
+			propertyItemProvider = new PropertyItemProvider(this);
 		}
 
-		return parameterItemProvider;
+		return propertyItemProvider;
 	}
 
 	/**
@@ -532,6 +531,52 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.NodeProperty} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NodePropertyItemProvider nodePropertyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.NodeProperty}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNodePropertyAdapter() {
+		if (nodePropertyItemProvider == null) {
+			nodePropertyItemProvider = new NodePropertyItemProvider(this);
+		}
+
+		return nodePropertyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.CompositeProperty} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CompositePropertyItemProvider compositePropertyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.CompositeProperty}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCompositePropertyAdapter() {
+		if (compositePropertyItemProvider == null) {
+			compositePropertyItemProvider = new CompositePropertyItemProvider(this);
+		}
+
+		return compositePropertyItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -637,7 +682,7 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 		if (packageMsgProducerItemProvider != null) packageMsgProducerItemProvider.dispose();
 		if (packageMsgConsumerItemProvider != null) packageMsgConsumerItemProvider.dispose();
 		if (topicItemProvider != null) topicItemProvider.dispose();
-		if (parameterItemProvider != null) parameterItemProvider.dispose();
+		if (propertyItemProvider != null) propertyItemProvider.dispose();
 		if (srvProducerItemProvider != null) srvProducerItemProvider.dispose();
 		if (srvConsumerItemProvider != null) srvConsumerItemProvider.dispose();
 		if (packageSrvProducerItemProvider != null) packageSrvProducerItemProvider.dispose();
@@ -649,6 +694,8 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 		if (msgInterfaceItemProvider != null) msgInterfaceItemProvider.dispose();
 		if (compositeMsgInterfaceItemProvider != null) compositeMsgInterfaceItemProvider.dispose();
 		if (nodeMsgInterfaceItemProvider != null) nodeMsgInterfaceItemProvider.dispose();
+		if (nodePropertyItemProvider != null) nodePropertyItemProvider.dispose();
+		if (compositePropertyItemProvider != null) compositePropertyItemProvider.dispose();
 	}
 
 }

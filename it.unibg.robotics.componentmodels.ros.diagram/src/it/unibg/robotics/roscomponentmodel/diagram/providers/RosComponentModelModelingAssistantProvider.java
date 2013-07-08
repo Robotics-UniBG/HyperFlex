@@ -63,7 +63,7 @@ public class RosComponentModelModelingAssistantProvider extends
 			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 			types.add(RosComponentModelElementTypes.NodeMsgProducer_3003);
 			types.add(RosComponentModelElementTypes.NodeMsgConsumer_3004);
-			types.add(RosComponentModelElementTypes.Parameter_3002);
+			types.add(RosComponentModelElementTypes.NodeProperty_3012);
 			return types;
 		}
 		if (editPart instanceof Package2EditPart) {

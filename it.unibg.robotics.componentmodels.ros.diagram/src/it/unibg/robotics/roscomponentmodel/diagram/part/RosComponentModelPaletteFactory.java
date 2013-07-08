@@ -119,7 +119,7 @@ public class RosComponentModelPaletteFactory {
 				Messages.Properties4CreationTool_title,
 				Messages.Properties4CreationTool_desc,
 				Collections
-						.singletonList(RosComponentModelElementTypes.Parameter_3002));
+						.singletonList(RosComponentModelElementTypes.NodeProperty_3012));
 		entry.setId("createProperties4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Parameter.gif")); //$NON-NLS-1$

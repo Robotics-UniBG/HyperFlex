@@ -84,7 +84,7 @@ public interface Node extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.Parameter}.
+	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.NodeProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parameters</em>' containment reference list isn't clear,
@@ -96,7 +96,7 @@ public interface Node extends AbstractComponent {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Parameter> getParameters();
+	EList<NodeProperty> getParameters();
 
 	/**
 	 * Returns the value of the '<em><b>Srv Producers</b></em>' containment reference list.

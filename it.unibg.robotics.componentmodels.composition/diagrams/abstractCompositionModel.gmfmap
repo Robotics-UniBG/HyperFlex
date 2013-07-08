@@ -97,8 +97,55 @@
           </children>
         </ownedChild>
       </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="../models/compositionModel.ecore#//System/composites"/>
+        <ownedChild>
+          <domainMetaElement
+              href="../../it.unibg.robotics.componentmodels.composition.ros/models/rosCompositionModel.ecore#//ROSComposite"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeName"/>
+            <features
+                href="../models/compositionModel.ecore#//Composite/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="abstractCompositionModel.gmftool#//@palette/@tools.0/@tools.0"/>
+          <diagramNode
+              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Composite"/>
+          <children>
+            <containmentFeature
+                href="../models/compositionModel.ecore#//Composite/provInterfaces"/>
+            <ownedChild>
+              <domainMetaElement
+                  href="../../it.unibg.robotics.componentmodels.composition.ros/models/rosCompositionModel.ecore#//ROSMsgProducer"/>
+              <tool
+                  xsi:type="gmftool:CreationTool"
+                  href="abstractCompositionModel.gmftool#//@palette/@tools.0/@tools.3"/>
+              <diagramNode
+                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
+            </ownedChild>
+          </children>
+          <children>
+            <containmentFeature
+                href="../models/compositionModel.ecore#//Composite/reqInterfaces"/>
+            <ownedChild>
+              <domainMetaElement
+                  href="../../it.unibg.robotics.componentmodels.composition.ros/models/rosCompositionModel.ecore#//ROSMsgConsumer"/>
+              <tool
+                  xsi:type="gmftool:CreationTool"
+                  href="abstractCompositionModel.gmftool#//@palette/@tools.0/@tools.4"/>
+              <diagramNode
+                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
+            </ownedChild>
+          </children>
+        </ownedChild>
+      </children>
       <compartments
-          children="//@nodes.0/@ownedChild/@children.2">
+          children="//@nodes.0/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.3">
         <compartment
             href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerCompartment"/>
       </compartments>

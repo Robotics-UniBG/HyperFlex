@@ -28,23 +28,19 @@ package it.unibg.robotics.roscomponentmodel.impl;
 import it.unibg.robotics.roscomponentmodel.Node;
 import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
+import it.unibg.robotics.roscomponentmodel.NodeProperty;
 import it.unibg.robotics.roscomponentmodel.NodeSrvConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeSrvProducer;
-import it.unibg.robotics.roscomponentmodel.Parameter;
 import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -96,7 +92,7 @@ public class NodeImpl extends AbstractComponentImpl implements Node {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Parameter> parameters;
+	protected EList<NodeProperty> parameters;
 
 	/**
 	 * The cached value of the '{@link #getSrvProducers() <em>Srv Producers</em>}' containment reference list.
@@ -206,9 +202,9 @@ public class NodeImpl extends AbstractComponentImpl implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Parameter> getParameters() {
+	public EList<NodeProperty> getParameters() {
 		if (parameters == null) {
-			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, roscomponentmodelPackage.NODE__PARAMETERS);
+			parameters = new EObjectContainmentEList<NodeProperty>(NodeProperty.class, this, roscomponentmodelPackage.NODE__PARAMETERS);
 		}
 		return parameters;
 	}
@@ -346,7 +342,7 @@ public class NodeImpl extends AbstractComponentImpl implements Node {
 				return;
 			case roscomponentmodelPackage.NODE__PARAMETERS:
 				getParameters().clear();
-				getParameters().addAll((Collection<? extends Parameter>)newValue);
+				getParameters().addAll((Collection<? extends NodeProperty>)newValue);
 				return;
 			case roscomponentmodelPackage.NODE__SRV_PRODUCERS:
 				getSrvProducers().clear();

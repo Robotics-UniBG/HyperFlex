@@ -32,6 +32,19 @@
   <childNodeTraces
       visualID="3011"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/compositionmodels' and _eClass_.name = 'SystemCompositeRequiredInterf') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/compositionmodels' and _eClass_.name = 'Composite') and _containmentMF_.name = 'reqInterfaces')"/>
+  <childNodeTraces
+      visualID="3012"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/compositionmodels.ros' and _eClass_.name = 'ROSComposite') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/compositionmodels' and _eClass_.name = 'System') and _containmentMF_.name = 'composites')">
+    <nodeLabelTraces
+        visualID="5008"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3013"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/compositionmodels.ros' and _eClass_.name = 'ROSMsgProducer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/compositionmodels' and _eClass_.name = 'Composite') and _containmentMF_.name = 'provInterfaces')"/>
+  <childNodeTraces
+      visualID="3014"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/compositionmodels.ros' and _eClass_.name = 'ROSMsgConsumer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/compositionmodels' and _eClass_.name = 'Composite') and _containmentMF_.name = 'reqInterfaces')"/>
   <linkTraces
       visualID="4002"
       queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/compositionmodels' and _eClass_.name = 'Connection')">

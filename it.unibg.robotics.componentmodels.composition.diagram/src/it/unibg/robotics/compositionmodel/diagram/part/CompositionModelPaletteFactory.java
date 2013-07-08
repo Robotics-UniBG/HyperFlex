@@ -60,13 +60,15 @@ public class CompositionModelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createImportROSComposite1CreationTool() {
-		ToolEntry entry = new ToolEntry(
+		NodeToolEntry entry = new NodeToolEntry(
 				Messages.ImportROSComposite1CreationTool_title,
-				Messages.ImportROSComposite1CreationTool_desc, null, null) {
-		};
+				Messages.ImportROSComposite1CreationTool_desc,
+				Collections
+						.singletonList(CompositionModelElementTypes.ROSComposite_3012));
 		entry.setId("createImportROSComposite1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(CompositionModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Composite.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
@@ -103,9 +105,10 @@ public class CompositionModelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createProvidedInterface4CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(CompositionModelElementTypes.SystemProvidedInterf_3007);
 		types.add(CompositionModelElementTypes.SystemCompositeProvidedInterf_3010);
+		types.add(CompositionModelElementTypes.ROSMsgProducer_3013);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.ProvidedInterface4CreationTool_title, null, types);
 		entry.setId("createProvidedInterface4CreationTool"); //$NON-NLS-1$
@@ -119,9 +122,10 @@ public class CompositionModelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createRequiredInterface5CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(CompositionModelElementTypes.SystemRequiredInterf_3008);
 		types.add(CompositionModelElementTypes.SystemCompositeRequiredInterf_3011);
+		types.add(CompositionModelElementTypes.ROSMsgConsumer_3014);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.RequiredInterface5CreationTool_title, null, types);
 		entry.setId("createRequiredInterface5CreationTool"); //$NON-NLS-1$

@@ -43,6 +43,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link it.unibg.robotics.roscomponentmodel.Package#getSrvConsumers <em>Srv Consumers</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.Package#getName <em>Name</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.Package#getWires <em>Wires</em>}</li>
+ *   <li>{@link it.unibg.robotics.roscomponentmodel.Package#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
@@ -188,5 +189,21 @@ public interface Package extends AbstractComponent {
 	 * @generated
 	 */
 	EList<Wire> getWires();
+
+	/**
+	 * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
+	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.CompositeProperty}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Properties</em>' containment reference list.
+	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getPackage_Properties()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<CompositeProperty> getProperties();
 
 } // Package

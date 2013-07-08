@@ -37,11 +37,11 @@ public class RosComponentModelEditPartFactory implements EditPartFactory {
 			case NodeNameEditPart.VISUAL_ID:
 				return new NodeNameEditPart(view);
 
-			case ParameterEditPart.VISUAL_ID:
-				return new ParameterEditPart(view);
+			case NodePropertyEditPart.VISUAL_ID:
+				return new NodePropertyEditPart(view);
 
-			case ParameterNameEditPart.VISUAL_ID:
-				return new ParameterNameEditPart(view);
+			case NodePropertyNameEditPart.VISUAL_ID:
+				return new NodePropertyNameEditPart(view);
 
 			case NodeMsgProducerEditPart.VISUAL_ID:
 				return new NodeMsgProducerEditPart(view);
