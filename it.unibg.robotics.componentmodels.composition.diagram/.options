@@ -1,0 +1,7 @@
+# Tracing options for the it.unibg.robotics.componentmodels.composition.diagram plug-in
+
+# Common issues
+it.unibg.robotics.componentmodels.composition.diagram/debug=false
+
+# Visual IDs
+it.unibg.robotics.componentmodels.composition.diagram/debug/visualID=false

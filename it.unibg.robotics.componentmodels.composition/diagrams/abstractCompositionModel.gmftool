@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette
+      title="CompositionModelPalette">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Entities"
+        collapsible="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Import ROS Composite"
+          description="Import existing ROS Composite">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Composite.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Channel"
+          description="Create new Channel">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Channel.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Composite"/>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Provided Interface"/>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Required Interface"/>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Connections"
+        collapsible="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Continue connection "
+          description="Create new Continue Connection">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/ContinueConnection.gif"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>

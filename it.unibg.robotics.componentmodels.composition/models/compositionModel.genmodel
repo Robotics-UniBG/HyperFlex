@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Variability Modeling And Resolution Plugins (VARP)&#xA;&#xA;Copyright (c) 2013&#xA;All rights reserved.&#xA;&#xA;Luca Gherardi&#xA;University of Bergamo&#xA;Dept. of Information Technology and Mathematics&#xA;&#xA;***********************************************************************************************&#xA;&#xA;Author: &lt;A HREF=&quot;mailto:luca.gherardi@unibg.it&quot;>Luca Gherardi&lt;/A>&#xA;&#xA;Supervised by: &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;>Davide Brugali&lt;/A>&#xA;&#xA;***********************************************************************************************&#xA;&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;"
+    modelDirectory="/it.unibg.robotics.componentmodels.composition/src" editDirectory="/it.unibg.robotics.componentmodels.composition.edit/src"
+    editorDirectory="/it.unibg.robotics.componentmodels.composition.editor/src" modelPluginID="it.unibg.robotics.componentmodels.composition"
+    modelName="CompositionModel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" editPluginID="it.unibg.robotics.componentmodels.composition.edit"
+    editorPluginID="it.unibg.robotics.componentmodels.composition.editor" language="English">
+  <foreignModel>compositionModel.ecore</foreignModel>
+  <genPackages prefix="compositionmodel" basePackage="it.unibg.robotics" disposableProviderFactory="true"
+      extensibleProviderFactory="true" fileExtensions="compositionmodel" ecorePackage="compositionModel.ecore#/">
+    <genClasses ecoreClass="compositionModel.ecore#//System">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compositionModel.ecore#//System/composites"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compositionModel.ecore#//System/provInterfaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compositionModel.ecore#//System/reqInterfaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compositionModel.ecore#//System/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compositionModel.ecore#//System/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compositionModel.ecore#//System/connections"/>
+    </genClasses>
+    <genClasses ecoreClass="compositionModel.ecore#//Composite">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compositionModel.ecore#//Composite/provInterfaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compositionModel.ecore#//Composite/reqInterfaces"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compositionModel.ecore#//Composite/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="compositionModel.ecore#//CompProvidedInterf"/>
+    <genClasses image="false" ecoreClass="compositionModel.ecore#//CompRequiredInterf"/>
+    <genClasses image="false" ecoreClass="compositionModel.ecore#//Connection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compositionModel.ecore#//Connection/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compositionModel.ecore#//Connection/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compositionModel.ecore#//Connection/name"/>
+    </genClasses>
+    <genClasses ecoreClass="compositionModel.ecore#//ArchitectureModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compositionModel.ecore#//ArchitectureModel/system"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compositionModel.ecore#//ArchitectureModel/name"/>
+    </genClasses>
+    <genClasses ecoreClass="compositionModel.ecore#//SystemComposite">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compositionModel.ecore#//SystemComposite/impl"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="compositionModel.ecore#//Interface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compositionModel.ecore#//Interface/name"/>
+    </genClasses>
+    <genClasses ecoreClass="compositionModel.ecore#//SystemProvidedInterf">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compositionModel.ecore#//SystemProvidedInterf/exposed"/>
+    </genClasses>
+    <genClasses ecoreClass="compositionModel.ecore#//SystemRequiredInterf">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compositionModel.ecore#//SystemRequiredInterf/exposed"/>
+    </genClasses>
+    <genClasses ecoreClass="compositionModel.ecore#//ProvidedInterface"/>
+    <genClasses ecoreClass="compositionModel.ecore#//RequiredInterface"/>
+    <genClasses image="false" ecoreClass="compositionModel.ecore#//ComponentProperty">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compositionModel.ecore#//ComponentProperty/properties"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="compositionModel.ecore#//Property"/>
+    <genClasses ecoreClass="compositionModel.ecore#//SystemCompositeProvidedInterf">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compositionModel.ecore#//SystemCompositeProvidedInterf/impl"/>
+    </genClasses>
+    <genClasses ecoreClass="compositionModel.ecore#//SystemCompositeRequiredInterf">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compositionModel.ecore#//SystemCompositeRequiredInterf/impl"/>
+    </genClasses>
+    <genClasses ecoreClass="compositionModel.ecore#//SystemProperty">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compositionModel.ecore#//SystemProperty/exposed"/>
+    </genClasses>
+    <genClasses ecoreClass="compositionModel.ecore#//SystemCompositeProperty">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compositionModel.ecore#//SystemCompositeProperty/impl"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
