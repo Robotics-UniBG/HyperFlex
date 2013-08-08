@@ -10,8 +10,6 @@ import it.unibg.robotics.compositionmodel.RequiredInterface;
 import it.unibg.robotics.compositionmodel.System;
 import it.unibg.robotics.compositionmodel.compositionmodelFactory;
 import it.unibg.robotics.roscomponentmodel.ArchitectureModel;
-import it.unibg.robotics.roscomponentmodel.MsgConsumer;
-import it.unibg.robotics.roscomponentmodel.MsgProducer;
 import it.unibg.robotics.roscomponentmodel.Package;
 
 import java.io.IOException;
