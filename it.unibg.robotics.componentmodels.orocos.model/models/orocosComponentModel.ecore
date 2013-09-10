@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="orocoscomponentmodel" nsURI="http://robotics.unibg.it/componentmodels.orocos"
+    nsPrefix="orocoscomponentmodel">
+  <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//AbstractComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskContexts" upperBound="-1"
+        eType="#//AbstractComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputPorts" upperBound="-1"
+        eType="#//CompInputPort" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputPorts" upperBound="-1"
+        eType="#//CompOutputPort" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectionPolicies" upperBound="-1"
+        eType="#//ConnectionPolicy" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
+        eType="#//CompOperation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationCallers" upperBound="-1"
+        eType="#//CompOperationCaller" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="peersConnections" upperBound="-1"
+        eType="#//PeersConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//CompositeProperty" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskContext" eSuperTypes="#//AbstractComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputPorts" upperBound="-1"
+        eType="#//TCInputDataPort" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputPorts" upperBound="-1"
+        eType="#//TCOutputDataPort" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//NodeProperty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
+        eType="#//TCOperation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationCallers" upperBound="-1"
+        eType="#//TCOperationCaller" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="namespace" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="period" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TCInputDataPort" eSuperTypes="#//InputDataPort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventPort" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TCOutputDataPort" eSuperTypes="#//OutputDataPort"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompInputPort" eSuperTypes="#//InputDataPort">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exposedPort" lowerBound="1"
+        eType="#//InputDataPort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompOutputPort" eSuperTypes="#//OutputDataPort">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exposedPort" lowerBound="1"
+        eType="#//OutputDataPort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectionPolicy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//OutputDataPort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//InputDataPort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//ConnectionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lockPolicy" lowerBound="1"
+        eType="#//LockPolicy"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bufferSize" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transport" lowerBound="1"
+        eType="#//ConnectionTransport"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="note" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ConnectionType">
+    <eLiterals name="DATA" literal="DATA"/>
+    <eLiterals name="BUFFER" value="1" literal="BUFFER"/>
+    <eLiterals name="CIRCULAR_BUFFER" value="2" literal="CIRCULAR_BUFFER"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ConnectionTransport">
+    <eLiterals name="OROCOS" literal="OROCOS"/>
+    <eLiterals name="MQUEUE" value="1" literal="MQUEUE"/>
+    <eLiterals name="ROS" value="2" literal="ROS"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LockPolicy">
+    <eLiterals name="UNSYNC" literal="UNSYNC"/>
+    <eLiterals name="LOCKED" value="1" literal="LOCKED"/>
+    <eLiterals name="LOCK_FREE" value="2" literal="LOCK_FREE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Property">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationCaller">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompOperation" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exposedOp" eType="#//Operation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TCOperation" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="srvName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ownThread" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompOperationCaller" eSuperTypes="#//OperationCaller">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exposedOpCaller" eType="#//OperationCaller"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TCOperationCaller" eSuperTypes="#//OperationCaller">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="srvName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PeersConnection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//OperationCaller"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="System">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composite" lowerBound="1"
+        eType="#//Composite" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataPort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputDataPort" eSuperTypes="#//DataPort"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputDataPort" eSuperTypes="#//DataPort"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractComponent" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeProperty" eSuperTypes="#//Property">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeProperty" eSuperTypes="#//Property">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exposedProperty" lowerBound="1"
+        eType="#//Property"/>
+  </eClassifiers>
+</ecore:EPackage>

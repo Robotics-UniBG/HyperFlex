@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Variability Analysis And Resolution Plugins (VARP)&#xA;&#xA;Copyright (c) 2013&#xA;All rights reserved.&#xA;&#xA;Luca Gherardi&#xA;University of Bergamo&#xA;Dept. of Information Technology and Mathematics&#xA;&#xA;***********************************************************************************************&#xA;&#xA;Author: &lt;A HREF=&quot;mailto:luca.gherardi@unibg.it&quot;>Luca Gherardi&lt;/A>&#xA;&#xA;Supervised by: &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;>Davide Brugali&lt;/A>&#xA;&#xA;***********************************************************************************************&#xA;&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;"
+    modelDirectory="/it.unibg.robotics.componentmodels.orocos.model/src" modelPluginID="it.unibg.robotics.componentmodels.orocos.model"
+    modelName="Orocos Component Model" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" language="English">
+  <foreignModel>orocosComponentModel.ecore</foreignModel>
+  <genPackages prefix="orocoscomponentmodel" basePackage="it.unibg.robotics" disposableProviderFactory="true"
+      ecorePackage="orocosComponentModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="orocosComponentModel.ecore#//ConnectionType">
+      <genEnumLiterals ecoreEnumLiteral="orocosComponentModel.ecore#//ConnectionType/DATA"/>
+      <genEnumLiterals ecoreEnumLiteral="orocosComponentModel.ecore#//ConnectionType/BUFFER"/>
+      <genEnumLiterals ecoreEnumLiteral="orocosComponentModel.ecore#//ConnectionType/CIRCULAR_BUFFER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="orocosComponentModel.ecore#//ConnectionTransport">
+      <genEnumLiterals ecoreEnumLiteral="orocosComponentModel.ecore#//ConnectionTransport/OROCOS"/>
+      <genEnumLiterals ecoreEnumLiteral="orocosComponentModel.ecore#//ConnectionTransport/MQUEUE"/>
+      <genEnumLiterals ecoreEnumLiteral="orocosComponentModel.ecore#//ConnectionTransport/ROS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="orocosComponentModel.ecore#//LockPolicy">
+      <genEnumLiterals ecoreEnumLiteral="orocosComponentModel.ecore#//LockPolicy/UNSYNC"/>
+      <genEnumLiterals ecoreEnumLiteral="orocosComponentModel.ecore#//LockPolicy/LOCKED"/>
+      <genEnumLiterals ecoreEnumLiteral="orocosComponentModel.ecore#//LockPolicy/LOCK_FREE"/>
+    </genEnums>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//Composite">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//Composite/taskContexts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//Composite/inputPorts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//Composite/outputPorts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//Composite/connectionPolicies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//Composite/operations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//Composite/operationCallers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//Composite/peersConnections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//Composite/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//TaskContext">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//TaskContext/inputPorts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//TaskContext/outputPorts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//TaskContext/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//TaskContext/operations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//TaskContext/operationCallers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//TaskContext/namespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//TaskContext/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//TaskContext/period"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//TaskContext/priority"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//TCInputDataPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//TCInputDataPort/eventPort"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//TCOutputDataPort"/>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//CompInputPort">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//CompInputPort/exposedPort"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//CompOutputPort">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//CompOutputPort/exposedPort"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//ConnectionPolicy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//ConnectionPolicy/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//ConnectionPolicy/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//ConnectionPolicy/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//ConnectionPolicy/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//ConnectionPolicy/lockPolicy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//ConnectionPolicy/bufferSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//ConnectionPolicy/transport"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//ConnectionPolicy/note"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//Property/name"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//Operation/name"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//OperationCaller">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//OperationCaller/name"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//CompOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//CompOperation/exposedOp"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//TCOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//TCOperation/srvName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//TCOperation/ownThread"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//CompOperationCaller">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//CompOperationCaller/exposedOpCaller"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//TCOperationCaller">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//TCOperationCaller/srvName"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//PeersConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//PeersConnection/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//PeersConnection/target"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//System">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//System/composite"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//DataPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//DataPort/name"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//InputDataPort"/>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//OutputDataPort"/>
+    <genClasses image="false" ecoreClass="orocosComponentModel.ecore#//AbstractComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//AbstractComponent/name"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//NodeProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//NodeProperty/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orocosComponentModel.ecore#//NodeProperty/type"/>
+    </genClasses>
+    <genClasses ecoreClass="orocosComponentModel.ecore#//CompositeProperty">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orocosComponentModel.ecore#//CompositeProperty/exposedProperty"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
