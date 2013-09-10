@@ -237,7 +237,7 @@ public class NodePropertyEditPart extends AbstractBorderedShapeEditPart {
 		 * @generated
 		 */
 		public PropertiesFigure() {
-			this.setText("<É>");
+			this.setText("<?>");
 		}
 
 	}

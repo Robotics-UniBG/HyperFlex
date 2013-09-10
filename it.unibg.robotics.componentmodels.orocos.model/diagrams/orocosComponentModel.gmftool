@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette
+      title="orocosComponentModelPalette">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Entities"
+        collapsible="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Component"
+          description="Create new Node">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Component.gif"
+            bundle=""/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Output Port"
+          description="Create new output port">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/OutputPort.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Input Port"
+          description="Create new input port">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/InputPort.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Property"
+          description="Create new Property">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Property.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Composite"
+          description="Create new Composite">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Composite.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Import Composite"
+          description="Import existing composite">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Composite.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Operation"
+          description="Create new operation">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/OutputPort.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Operation Caller"
+          description="Create new operation caller">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/InputPort.gif"/>
+      </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Connections"
+        collapsible="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Promote Connection"
+          description="Create new Promote Connection">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/PromoteConnection.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Continue connection "
+          description="Create new Continue Connection">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/ContinueConnection.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Event connection "
+          description="Create new Event Connection">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/EventConnection.gif"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>

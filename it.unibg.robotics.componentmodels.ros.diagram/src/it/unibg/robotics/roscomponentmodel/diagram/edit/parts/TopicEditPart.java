@@ -339,7 +339,7 @@ public class TopicEditPart extends ShapeNodeEditPart {
 
 			fFigureChannel1NameLabel = new WrappingLabel();
 
-			fFigureChannel1NameLabel.setText("<É>");
+			fFigureChannel1NameLabel.setText("<?>");
 
 			fFigureChannel1NameLabel.setFont(FFIGURECHANNEL1NAMELABEL_FONT);
 

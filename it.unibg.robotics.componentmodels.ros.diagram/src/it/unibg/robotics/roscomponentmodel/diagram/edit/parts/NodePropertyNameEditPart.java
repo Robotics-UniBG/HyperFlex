@@ -669,7 +669,7 @@ public class NodePropertyNameEditPart extends LabelEditPart implements
 		 * @generated
 		 */
 		public PropertiesFigure() {
-			this.setText("<É>");
+			this.setText("<?>");
 		}
 
 	}

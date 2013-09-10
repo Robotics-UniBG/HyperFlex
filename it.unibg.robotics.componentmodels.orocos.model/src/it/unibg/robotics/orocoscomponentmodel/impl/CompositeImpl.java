@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -55,7 +55,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.CompositeImpl#getTaskContexts <em>Task Contexts</em>}</li>
+ *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.CompositeImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.CompositeImpl#getInputPorts <em>Input Ports</em>}</li>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.CompositeImpl#getOutputPorts <em>Output Ports</em>}</li>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.CompositeImpl#getConnectionPolicies <em>Connection Policies</em>}</li>
@@ -70,14 +70,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class CompositeImpl extends AbstractComponentImpl implements Composite {
 	/**
-	 * The cached value of the '{@link #getTaskContexts() <em>Task Contexts</em>}' containment reference list.
+	 * The cached value of the '{@link #getComponents() <em>Components</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTaskContexts()
+	 * @see #getComponents()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<AbstractComponent> taskContexts;
+	protected EList<AbstractComponent> components;
 
 	/**
 	 * The cached value of the '{@link #getInputPorts() <em>Input Ports</em>}' containment reference list.
@@ -173,11 +173,11 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<AbstractComponent> getTaskContexts() {
-		if (taskContexts == null) {
-			taskContexts = new EObjectContainmentEList<AbstractComponent>(AbstractComponent.class, this, orocoscomponentmodelPackage.COMPOSITE__TASK_CONTEXTS);
+	public EList<AbstractComponent> getComponents() {
+		if (components == null) {
+			components = new EObjectContainmentEList<AbstractComponent>(AbstractComponent.class, this, orocoscomponentmodelPackage.COMPOSITE__COMPONENTS);
 		}
-		return taskContexts;
+		return components;
 	}
 
 	/**
@@ -272,8 +272,8 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case orocoscomponentmodelPackage.COMPOSITE__TASK_CONTEXTS:
-				return ((InternalEList<?>)getTaskContexts()).basicRemove(otherEnd, msgs);
+			case orocoscomponentmodelPackage.COMPOSITE__COMPONENTS:
+				return ((InternalEList<?>)getComponents()).basicRemove(otherEnd, msgs);
 			case orocoscomponentmodelPackage.COMPOSITE__INPUT_PORTS:
 				return ((InternalEList<?>)getInputPorts()).basicRemove(otherEnd, msgs);
 			case orocoscomponentmodelPackage.COMPOSITE__OUTPUT_PORTS:
@@ -300,8 +300,8 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case orocoscomponentmodelPackage.COMPOSITE__TASK_CONTEXTS:
-				return getTaskContexts();
+			case orocoscomponentmodelPackage.COMPOSITE__COMPONENTS:
+				return getComponents();
 			case orocoscomponentmodelPackage.COMPOSITE__INPUT_PORTS:
 				return getInputPorts();
 			case orocoscomponentmodelPackage.COMPOSITE__OUTPUT_PORTS:
@@ -329,9 +329,9 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case orocoscomponentmodelPackage.COMPOSITE__TASK_CONTEXTS:
-				getTaskContexts().clear();
-				getTaskContexts().addAll((Collection<? extends AbstractComponent>)newValue);
+			case orocoscomponentmodelPackage.COMPOSITE__COMPONENTS:
+				getComponents().clear();
+				getComponents().addAll((Collection<? extends AbstractComponent>)newValue);
 				return;
 			case orocoscomponentmodelPackage.COMPOSITE__INPUT_PORTS:
 				getInputPorts().clear();
@@ -373,8 +373,8 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case orocoscomponentmodelPackage.COMPOSITE__TASK_CONTEXTS:
-				getTaskContexts().clear();
+			case orocoscomponentmodelPackage.COMPOSITE__COMPONENTS:
+				getComponents().clear();
 				return;
 			case orocoscomponentmodelPackage.COMPOSITE__INPUT_PORTS:
 				getInputPorts().clear();
@@ -409,8 +409,8 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case orocoscomponentmodelPackage.COMPOSITE__TASK_CONTEXTS:
-				return taskContexts != null && !taskContexts.isEmpty();
+			case orocoscomponentmodelPackage.COMPOSITE__COMPONENTS:
+				return components != null && !components.isEmpty();
 			case orocoscomponentmodelPackage.COMPOSITE__INPUT_PORTS:
 				return inputPorts != null && !inputPorts.isEmpty();
 			case orocoscomponentmodelPackage.COMPOSITE__OUTPUT_PORTS:

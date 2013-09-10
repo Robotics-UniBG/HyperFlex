@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -35,7 +35,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.orocoscomponentmodel.Composite#getTaskContexts <em>Task Contexts</em>}</li>
+ *   <li>{@link it.unibg.robotics.orocoscomponentmodel.Composite#getComponents <em>Components</em>}</li>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.Composite#getInputPorts <em>Input Ports</em>}</li>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.Composite#getOutputPorts <em>Output Ports</em>}</li>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.Composite#getConnectionPolicies <em>Connection Policies</em>}</li>
@@ -52,20 +52,20 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Composite extends AbstractComponent {
 	/**
-	 * Returns the value of the '<em><b>Task Contexts</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
 	 * The list contents are of type {@link it.unibg.robotics.orocoscomponentmodel.AbstractComponent}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Task Contexts</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Components</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Task Contexts</em>' containment reference list.
-	 * @see it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage#getComposite_TaskContexts()
+	 * @return the value of the '<em>Components</em>' containment reference list.
+	 * @see it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage#getComposite_Components()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<AbstractComponent> getTaskContexts();
+	EList<AbstractComponent> getComponents();
 
 	/**
 	 * Returns the value of the '<em><b>Input Ports</b></em>' containment reference list.

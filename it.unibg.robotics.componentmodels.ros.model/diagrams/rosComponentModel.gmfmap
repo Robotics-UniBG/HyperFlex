@@ -231,7 +231,7 @@
         xsi:type="gmftool:CreationTool"
         href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ChannelCompProducerConnection"/>
+        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeProducerConnection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="../models/rosComponentModel.ecore#//CompositeMsgInterface/exposed"/>
@@ -245,7 +245,7 @@
         xsi:type="gmftool:CreationTool"
         href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ChannelCompConsumerConnection"/>
+        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeConsumerConnection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="../models/rosComponentModel.ecore#//CompositeMsgInterface/exposed"/>

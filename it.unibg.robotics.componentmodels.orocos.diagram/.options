@@ -1,0 +1,7 @@
+# Tracing options for the it.unibg.robotics.componentmodels.orocos.diagram plug-in
+
+# Common issues
+it.unibg.robotics.componentmodels.orocos.diagram/debug=false
+
+# Visual IDs
+it.unibg.robotics.componentmodels.orocos.diagram/debug/visualID=false

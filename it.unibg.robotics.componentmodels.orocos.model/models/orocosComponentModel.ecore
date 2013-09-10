@@ -3,7 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="orocoscomponentmodel" nsURI="http://robotics.unibg.it/componentmodels.orocos"
     nsPrefix="orocoscomponentmodel">
   <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//AbstractComponent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="taskContexts" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
         eType="#//AbstractComponent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputPorts" upperBound="-1"
         eType="#//CompInputPort" containment="true"/>
@@ -109,6 +109,7 @@
         eType="#//Operation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//OperationCaller"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="System">
     <eStructuralFeatures xsi:type="ecore:EReference" name="composite" lowerBound="1"

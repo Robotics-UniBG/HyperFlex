@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.PeersConnection#getSource <em>Source</em>}</li>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.PeersConnection#getTarget <em>Target</em>}</li>
+ *   <li>{@link it.unibg.robotics.orocoscomponentmodel.PeersConnection#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -96,5 +97,31 @@ public interface PeersConnection extends EObject {
 	 * @generated
 	 */
 	void setTarget(OperationCaller value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage#getPeersConnection_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link it.unibg.robotics.orocoscomponentmodel.PeersConnection#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // PeersConnection

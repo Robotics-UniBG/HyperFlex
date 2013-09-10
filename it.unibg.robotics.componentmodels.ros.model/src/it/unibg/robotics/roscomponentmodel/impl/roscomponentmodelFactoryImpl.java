@@ -69,7 +69,7 @@ public class roscomponentmodelFactoryImpl extends EFactoryImpl implements roscom
 	 */
 	public static roscomponentmodelFactory init() {
 		try {
-			roscomponentmodelFactory theroscomponentmodelFactory = (roscomponentmodelFactory)EPackage.Registry.INSTANCE.getEFactory("http://robotics.unibg.it/componentmodels.ros"); 
+			roscomponentmodelFactory theroscomponentmodelFactory = (roscomponentmodelFactory)EPackage.Registry.INSTANCE.getEFactory(roscomponentmodelPackage.eNS_URI);
 			if (theroscomponentmodelFactory != null) {
 				return theroscomponentmodelFactory;
 			}

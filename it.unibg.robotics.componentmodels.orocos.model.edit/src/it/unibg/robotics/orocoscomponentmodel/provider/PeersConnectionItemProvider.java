@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -26,6 +26,7 @@
 package it.unibg.robotics.orocoscomponentmodel.provider;
 
 
+import it.unibg.robotics.orocoscomponentmodel.PeersConnection;
 import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage;
 
 import java.util.Collection;
@@ -43,7 +44,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link it.unibg.robotics.orocoscomponentmodel.PeersConnection} object.
@@ -82,6 +85,7 @@ public class PeersConnectionItemProvider
 
 			addSourcePropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -131,6 +135,28 @@ public class PeersConnectionItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PeersConnection_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PeersConnection_name_feature", "_UI_PeersConnection_type"),
+				 orocoscomponentmodelPackage.Literals.PEERS_CONNECTION__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns PeersConnection.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -149,7 +175,10 @@ public class PeersConnectionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PeersConnection_type");
+		String label = ((PeersConnection)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PeersConnection_type") :
+			getString("_UI_PeersConnection_type") + " " + label;
 	}
 
 	/**
@@ -162,6 +191,12 @@ public class PeersConnectionItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(PeersConnection.class)) {
+			case orocoscomponentmodelPackage.PEERS_CONNECTION__NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

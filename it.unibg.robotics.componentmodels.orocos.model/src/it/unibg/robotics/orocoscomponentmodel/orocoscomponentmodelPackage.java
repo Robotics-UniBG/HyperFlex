@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -127,13 +127,13 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	int COMPOSITE__NAME = ABSTRACT_COMPONENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Task Contexts</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE__TASK_CONTEXTS = ABSTRACT_COMPONENT_FEATURE_COUNT + 0;
+	int COMPOSITE__COMPONENTS = ABSTRACT_COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Input Ports</b></em>' containment reference list.
@@ -900,13 +900,22 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	int PEERS_CONNECTION__TARGET = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PEERS_CONNECTION__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Peers Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PEERS_CONNECTION_FEATURE_COUNT = 2;
+	int PEERS_CONNECTION_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.orocoscomponentmodel.impl.SystemImpl <em>System</em>}' class.
@@ -1061,15 +1070,15 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	EClass getComposite();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.orocoscomponentmodel.Composite#getTaskContexts <em>Task Contexts</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.orocoscomponentmodel.Composite#getComponents <em>Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Task Contexts</em>'.
-	 * @see it.unibg.robotics.orocoscomponentmodel.Composite#getTaskContexts()
+	 * @return the meta object for the containment reference list '<em>Components</em>'.
+	 * @see it.unibg.robotics.orocoscomponentmodel.Composite#getComponents()
 	 * @see #getComposite()
 	 * @generated
 	 */
-	EReference getComposite_TaskContexts();
+	EReference getComposite_Components();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.orocoscomponentmodel.Composite#getInputPorts <em>Input Ports</em>}'.
@@ -1619,6 +1628,17 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	EReference getPeersConnection_Target();
 
 	/**
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.orocoscomponentmodel.PeersConnection#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see it.unibg.robotics.orocoscomponentmodel.PeersConnection#getName()
+	 * @see #getPeersConnection()
+	 * @generated
+	 */
+	EAttribute getPeersConnection_Name();
+
+	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.orocoscomponentmodel.System <em>System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1817,12 +1837,12 @@ public interface orocoscomponentmodelPackage extends EPackage {
 		EClass COMPOSITE = eINSTANCE.getComposite();
 
 		/**
-		 * The meta object literal for the '<em><b>Task Contexts</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPOSITE__TASK_CONTEXTS = eINSTANCE.getComposite_TaskContexts();
+		EReference COMPOSITE__COMPONENTS = eINSTANCE.getComposite_Components();
 
 		/**
 		 * The meta object literal for the '<em><b>Input Ports</b></em>' containment reference list feature.
@@ -2259,6 +2279,14 @@ public interface orocoscomponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PEERS_CONNECTION__TARGET = eINSTANCE.getPeersConnection_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PEERS_CONNECTION__NAME = eINSTANCE.getPeersConnection_Name();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.orocoscomponentmodel.impl.SystemImpl <em>System</em>}' class.

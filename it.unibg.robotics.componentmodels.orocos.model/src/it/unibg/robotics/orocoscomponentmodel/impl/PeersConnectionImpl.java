@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -47,6 +47,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.PeersConnectionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.PeersConnectionImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.PeersConnectionImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -72,6 +73,26 @@ public class PeersConnectionImpl extends EObjectImpl implements PeersConnection 
 	 * @ordered
 	 */
 	protected OperationCaller target;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,6 +194,27 @@ public class PeersConnectionImpl extends EObjectImpl implements PeersConnection 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, orocoscomponentmodelPackage.PEERS_CONNECTION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -182,6 +224,8 @@ public class PeersConnectionImpl extends EObjectImpl implements PeersConnection 
 			case orocoscomponentmodelPackage.PEERS_CONNECTION__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
+			case orocoscomponentmodelPackage.PEERS_CONNECTION__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -199,6 +243,9 @@ public class PeersConnectionImpl extends EObjectImpl implements PeersConnection 
 				return;
 			case orocoscomponentmodelPackage.PEERS_CONNECTION__TARGET:
 				setTarget((OperationCaller)newValue);
+				return;
+			case orocoscomponentmodelPackage.PEERS_CONNECTION__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -218,6 +265,9 @@ public class PeersConnectionImpl extends EObjectImpl implements PeersConnection 
 			case orocoscomponentmodelPackage.PEERS_CONNECTION__TARGET:
 				setTarget((OperationCaller)null);
 				return;
+			case orocoscomponentmodelPackage.PEERS_CONNECTION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -234,8 +284,26 @@ public class PeersConnectionImpl extends EObjectImpl implements PeersConnection 
 				return source != null;
 			case orocoscomponentmodelPackage.PEERS_CONNECTION__TARGET:
 				return target != null;
+			case orocoscomponentmodelPackage.PEERS_CONNECTION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //PeersConnectionImpl

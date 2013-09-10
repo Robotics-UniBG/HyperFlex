@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -317,7 +317,7 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComposite_TaskContexts() {
+	public EReference getComposite_Components() {
 		return (EReference)compositeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -785,6 +785,15 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPeersConnection_Name() {
+		return (EAttribute)peersConnectionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSystem() {
 		return systemEClass;
 	}
@@ -953,7 +962,7 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 
 		// Create classes and their features
 		compositeEClass = createEClass(COMPOSITE);
-		createEReference(compositeEClass, COMPOSITE__TASK_CONTEXTS);
+		createEReference(compositeEClass, COMPOSITE__COMPONENTS);
 		createEReference(compositeEClass, COMPOSITE__INPUT_PORTS);
 		createEReference(compositeEClass, COMPOSITE__OUTPUT_PORTS);
 		createEReference(compositeEClass, COMPOSITE__CONNECTION_POLICIES);
@@ -1019,6 +1028,7 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 		peersConnectionEClass = createEClass(PEERS_CONNECTION);
 		createEReference(peersConnectionEClass, PEERS_CONNECTION__SOURCE);
 		createEReference(peersConnectionEClass, PEERS_CONNECTION__TARGET);
+		createEAttribute(peersConnectionEClass, PEERS_CONNECTION__NAME);
 
 		systemEClass = createEClass(SYSTEM);
 		createEReference(systemEClass, SYSTEM__COMPOSITE);
@@ -1091,7 +1101,7 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(compositeEClass, Composite.class, "Composite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComposite_TaskContexts(), this.getAbstractComponent(), null, "taskContexts", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComposite_Components(), this.getAbstractComponent(), null, "components", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComposite_InputPorts(), this.getCompInputPort(), null, "inputPorts", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComposite_OutputPorts(), this.getCompOutputPort(), null, "outputPorts", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComposite_ConnectionPolicies(), this.getConnectionPolicy(), null, "connectionPolicies", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1157,6 +1167,7 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 		initEClass(peersConnectionEClass, PeersConnection.class, "PeersConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPeersConnection_Source(), this.getOperation(), null, "source", null, 1, 1, PeersConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPeersConnection_Target(), this.getOperationCaller(), null, "target", null, 1, 1, PeersConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPeersConnection_Name(), ecorePackage.getEString(), "name", null, 1, 1, PeersConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(systemEClass, it.unibg.robotics.orocoscomponentmodel.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSystem_Composite(), this.getComposite(), null, "composite", null, 1, 1, it.unibg.robotics.orocoscomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

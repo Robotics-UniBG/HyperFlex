@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -97,7 +97,7 @@ public class CompositeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(orocoscomponentmodelPackage.Literals.COMPOSITE__TASK_CONTEXTS);
+			childrenFeatures.add(orocoscomponentmodelPackage.Literals.COMPOSITE__COMPONENTS);
 			childrenFeatures.add(orocoscomponentmodelPackage.Literals.COMPOSITE__INPUT_PORTS);
 			childrenFeatures.add(orocoscomponentmodelPackage.Literals.COMPOSITE__OUTPUT_PORTS);
 			childrenFeatures.add(orocoscomponentmodelPackage.Literals.COMPOSITE__CONNECTION_POLICIES);
@@ -159,7 +159,7 @@ public class CompositeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Composite.class)) {
-			case orocoscomponentmodelPackage.COMPOSITE__TASK_CONTEXTS:
+			case orocoscomponentmodelPackage.COMPOSITE__COMPONENTS:
 			case orocoscomponentmodelPackage.COMPOSITE__INPUT_PORTS:
 			case orocoscomponentmodelPackage.COMPOSITE__OUTPUT_PORTS:
 			case orocoscomponentmodelPackage.COMPOSITE__CONNECTION_POLICIES:
@@ -186,12 +186,12 @@ public class CompositeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(orocoscomponentmodelPackage.Literals.COMPOSITE__TASK_CONTEXTS,
+				(orocoscomponentmodelPackage.Literals.COMPOSITE__COMPONENTS,
 				 orocoscomponentmodelFactory.eINSTANCE.createComposite()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(orocoscomponentmodelPackage.Literals.COMPOSITE__TASK_CONTEXTS,
+				(orocoscomponentmodelPackage.Literals.COMPOSITE__COMPONENTS,
 				 orocoscomponentmodelFactory.eINSTANCE.createTaskContext()));
 
 		newChildDescriptors.add

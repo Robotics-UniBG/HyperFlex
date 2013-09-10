@@ -1,155 +1,588 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="componentDiagram">
-  <figures name="componentModel Figure Gallery">
-    <figures xsi:type="gmfgraph:PolylineDecoration" name="OpenArrow" lineWidth="2"/>
-    <descriptors name="CompositeContainerFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
+<gmfgraph:Canvas
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition"
+    name="componentDiagram">
+  <figures
+      name="componentModel Figure Gallery">
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="OpenArrow"
+        lineWidth="2"/>
+    <descriptors
+        name="CompositeContainerFigure">
+      <actualFigure
+          xsi:type="gmfgraph:RoundedRectangle">
+        <border
+            xsi:type="gmfgraph:MarginBorder">
+          <insets
+              top="5"
+              left="5"
+              bottom="5"
+              right="5"/>
         </border>
-        <children xsi:type="gmfgraph:Label" name="CompositeContainerNameLabel" text="&lt;…>">
-          <maximumSize dx="10000" dy="50"/>
-          <font xsi:type="gmfgraph:BasicFont" height="15" style="BOLD"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="CompositeContainerNameLabel"
+            text="&lt;…>">
+          <maximumSize
+              dx="10000"
+              dy="50"/>
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              height="15"
+              style="BOLD"/>
         </children>
-        <children xsi:type="gmfgraph:Rectangle" name="CompositeContainerComponentsArea" lineWidth="0"/>
+        <children
+            xsi:type="gmfgraph:Rectangle"
+            name="CompositeContainerComponentsArea"
+            lineWidth="0"/>
       </actualFigure>
-      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
-      <accessors accessor="getFigurePackageContainerNameLabel" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+      <accessors
+          accessor="getFigurePackageContainerNameLabel"
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
     </descriptors>
-    <descriptors name="CompositeFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle">
-        <layout xsi:type="gmfgraph:GridLayout"/>
-        <children xsi:type="gmfgraph:Rectangle" name="CompositeInfo">
-          <layoutData xsi:type="gmfgraph:GridLayoutData" grabExcessHorizontalSpace="true" verticalAlignment="BEGINNING" horizontalAlignment="FILL"/>
-          <layout xsi:type="gmfgraph:GridLayout"/>
-          <backgroundColor xsi:type="gmfgraph:ConstantColor" value="lightBlue"/>
-          <insets top="5" left="5" bottom="5" right="5"/>
-          <children xsi:type="gmfgraph:Label" name="CompositeNameLabel" text="&lt;…>">
-            <layoutData xsi:type="gmfgraph:GridLayoutData" verticalAlignment="BEGINNING" horizontalAlignment="BEGINNING"/>
-            <font xsi:type="gmfgraph:BasicFont" height="15" style="BOLD"/>
+    <descriptors
+        name="CompositeFigure">
+      <actualFigure
+          xsi:type="gmfgraph:RoundedRectangle">
+        <layout
+            xsi:type="gmfgraph:GridLayout"/>
+        <children
+            xsi:type="gmfgraph:Rectangle"
+            name="CompositeInfo">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              grabExcessHorizontalSpace="true"
+              verticalAlignment="BEGINNING"
+              horizontalAlignment="FILL"/>
+          <layout
+              xsi:type="gmfgraph:GridLayout"/>
+          <backgroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="lightBlue"/>
+          <insets
+              top="5"
+              left="5"
+              bottom="5"
+              right="5"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="CompositeNameLabel"
+              text="&lt;…>">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="BEGINNING"
+                horizontalAlignment="BEGINNING"/>
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                height="15"
+                style="BOLD"/>
           </children>
-          <children xsi:type="gmfgraph:Label" name="CompositeLabel" text="Composite">
-            <layoutData xsi:type="gmfgraph:GridLayoutData" verticalAlignment="BEGINNING" horizontalAlignment="BEGINNING"/>
-            <font xsi:type="gmfgraph:BasicFont" height="15" style="BOLD"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="CompositeLabel"
+              text="Composite">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="BEGINNING"
+                horizontalAlignment="BEGINNING"/>
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                height="15"
+                style="BOLD"/>
           </children>
         </children>
-        <children xsi:type="gmfgraph:Rectangle" name="CompositeProperties">
-          <layoutData xsi:type="gmfgraph:GridLayoutData" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" verticalAlignment="FILL" horizontalAlignment="FILL"/>
-          <layout xsi:type="gmfgraph:StackLayout"/>
+        <children
+            xsi:type="gmfgraph:Rectangle"
+            name="CompositeProperties">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              grabExcessHorizontalSpace="true"
+              grabExcessVerticalSpace="true"
+              verticalAlignment="FILL"
+              horizontalAlignment="FILL"/>
+          <layout
+              xsi:type="gmfgraph:StackLayout"/>
         </children>
       </actualFigure>
-      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
-      <accessors accessor="getFigurePackageNameLabel" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      <accessors
+          accessor="getFigurePackageNameLabel"
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.0/@children.0"/>
     </descriptors>
-    <descriptors name="ComponentFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ComponentRectangle">
-        <layout xsi:type="gmfgraph:GridLayout"/>
-        <children xsi:type="gmfgraph:Rectangle" name="ComponentInfo">
-          <layoutData xsi:type="gmfgraph:GridLayoutData" grabExcessHorizontalSpace="true" verticalAlignment="BEGINNING" horizontalAlignment="FILL"/>
-          <layout xsi:type="gmfgraph:GridLayout"/>
-          <backgroundColor xsi:type="gmfgraph:ConstantColor" value="lightGray"/>
-          <insets top="5" left="5" bottom="5" right="5"/>
-          <children xsi:type="gmfgraph:Label" name="ComponentNameLabel" text="&lt;…>">
-            <layoutData xsi:type="gmfgraph:GridLayoutData" verticalAlignment="BEGINNING" horizontalAlignment="BEGINNING"/>
-            <font xsi:type="gmfgraph:BasicFont" height="15" style="BOLD"/>
+    <descriptors
+        name="ComponentFigure">
+      <actualFigure
+          xsi:type="gmfgraph:RoundedRectangle"
+          name="ComponentRectangle">
+        <layout
+            xsi:type="gmfgraph:GridLayout"/>
+        <children
+            xsi:type="gmfgraph:Rectangle"
+            name="ComponentInfo">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              grabExcessHorizontalSpace="true"
+              verticalAlignment="BEGINNING"
+              horizontalAlignment="FILL"/>
+          <layout
+              xsi:type="gmfgraph:GridLayout"/>
+          <backgroundColor
+              xsi:type="gmfgraph:ConstantColor"
+              value="lightGray"/>
+          <insets
+              top="5"
+              left="5"
+              bottom="5"
+              right="5"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="ComponentNameLabel"
+              text="&lt;…>">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                verticalAlignment="BEGINNING"
+                horizontalAlignment="BEGINNING"/>
+            <font
+                xsi:type="gmfgraph:BasicFont"
+                height="15"
+                style="BOLD"/>
           </children>
         </children>
-        <children xsi:type="gmfgraph:Rectangle" name="ComponentProperties">
-          <layoutData xsi:type="gmfgraph:GridLayoutData" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" verticalAlignment="FILL" horizontalAlignment="FILL"/>
-          <layout xsi:type="gmfgraph:StackLayout"/>
+        <children
+            xsi:type="gmfgraph:Rectangle"
+            name="ComponentProperties">
+          <layoutData
+              xsi:type="gmfgraph:GridLayoutData"
+              grabExcessHorizontalSpace="true"
+              grabExcessVerticalSpace="true"
+              verticalAlignment="FILL"
+              horizontalAlignment="FILL"/>
+          <layout
+              xsi:type="gmfgraph:StackLayout"/>
         </children>
       </actualFigure>
-      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
-      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@children.0/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0/@children.0"/>
     </descriptors>
-    <descriptors name="PropertiesFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="PropertiesNameLabel" text="&lt;…>"/>
+    <descriptors
+        name="PropertiesFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Label"
+          name="PropertiesNameLabel"
+          text="&lt;…>"/>
     </descriptors>
-    <descriptors name="Producer1Figure">
-      <actualFigure xsi:type="gmfgraph:Rectangle" name="Producer1Rectangle">
-        <layout xsi:type="gmfgraph:GridLayout"/>
-        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="yellow"/>
-        <maximumSize dx="20" dy="20"/>
-        <minimumSize dx="20" dy="20"/>
-        <preferredSize dx="20" dy="20"/>
-        <insets top="5" left="5" bottom="5" right="5"/>
+    <descriptors
+        name="Producer1Figure">
+      <actualFigure
+          xsi:type="gmfgraph:Rectangle"
+          name="Producer1Rectangle">
+        <layout
+            xsi:type="gmfgraph:GridLayout"/>
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="yellow"/>
+        <maximumSize
+            dx="20"
+            dy="20"/>
+        <minimumSize
+            dx="20"
+            dy="20"/>
+        <preferredSize
+            dx="20"
+            dy="20"/>
+        <insets
+            top="5"
+            left="5"
+            bottom="5"
+            right="5"/>
       </actualFigure>
     </descriptors>
-    <descriptors name="Consumer1Figure">
-      <actualFigure xsi:type="gmfgraph:Rectangle" name="Consumer1Rectangle">
-        <layout xsi:type="gmfgraph:GridLayout"/>
-        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="cyan"/>
-        <maximumSize dx="20" dy="20"/>
-        <minimumSize dx="20" dy="20"/>
-        <preferredSize dx="20" dy="20"/>
-        <insets top="5" left="5" bottom="5" right="5"/>
+    <descriptors
+        name="Consumer1Figure">
+      <actualFigure
+          xsi:type="gmfgraph:Rectangle"
+          name="Consumer1Rectangle">
+        <layout
+            xsi:type="gmfgraph:GridLayout"/>
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="cyan"/>
+        <maximumSize
+            dx="20"
+            dy="20"/>
+        <minimumSize
+            dx="20"
+            dy="20"/>
+        <preferredSize
+            dx="20"
+            dy="20"/>
+        <insets
+            top="5"
+            left="5"
+            bottom="5"
+            right="5"/>
       </actualFigure>
     </descriptors>
-    <descriptors name="Channel1Figure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="Channel1Rectangle">
-        <layout xsi:type="gmfgraph:StackLayout"/>
-        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="lightGreen"/>
-        <maximumSize dx="50" dy="20"/>
-        <minimumSize dx="50" dy="20"/>
-        <insets top="5" left="5" bottom="5" right="5"/>
-        <children xsi:type="gmfgraph:Label" name="Channel1NameLabel" text="&lt;…>">
-          <font xsi:type="gmfgraph:BasicFont" height="15"/>
+    <descriptors
+        name="Channel1Figure">
+      <actualFigure
+          xsi:type="gmfgraph:RoundedRectangle"
+          name="Channel1Rectangle">
+        <layout
+            xsi:type="gmfgraph:StackLayout"/>
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="lightGreen"/>
+        <maximumSize
+            dx="50"
+            dy="20"/>
+        <minimumSize
+            dx="50"
+            dy="20"/>
+        <insets
+            top="5"
+            left="5"
+            bottom="5"
+            right="5"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Channel1NameLabel"
+            text="&lt;…>">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              height="15"/>
         </children>
       </actualFigure>
-      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
     </descriptors>
-    <descriptors name="ChannelCompProducerConnectionFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="PromotePolylineConnection" lineKind="LINE_DASH" sourceDecoration="//@figures.0/@figures.0"/>
-    </descriptors>
-    <descriptors name="ChannelCompConsumerConnectionFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="PromotePolylineConnection" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.0"/>
-    </descriptors>
-    <descriptors name="ProducerChannelConnectionFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ProducerChannelPolylineConnection" targetDecoration="//@figures.0/@figures.0"/>
-    </descriptors>
-    <descriptors name="ConsumerChannelConnectionFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ConsumerChannelPolylineConnection" sourceDecoration="//@figures.0/@figures.0"/>
-    </descriptors>
-    <descriptors name="ImplementationFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="ImplementationNameLabel" text="&lt;…>"/>
-      <accessors figure="//@figures.0/@descriptors.11/@actualFigure"/>
-    </descriptors>
-    <descriptors name="ProvidedRequriedConnectionFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ProvidedRequriedConnection" sourceDecoration="//@figures.0/@figures.0">
-        <children xsi:type="gmfgraph:Label" name="ProvidedRequriedConnectionLabel">
-          <font xsi:type="gmfgraph:BasicFont" height="15" style="BOLD"/>
+    <descriptors
+        name="ExposeProducerConnectionFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="PromotePolylineConnection"
+          lineKind="LINE_DOT"
+          sourceDecoration="//@figures.0/@figures.0">
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ExposeProducerConnectionLabel">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              height="15"
+              style="BOLD"/>
         </children>
       </actualFigure>
-      <accessors figure="//@figures.0/@descriptors.12/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors
+        name="ExposeConsumerConnectionFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="PromotePolylineConnection"
+          lineKind="LINE_DOT"
+          targetDecoration="//@figures.0/@figures.0">
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ExposeConsumerConnectionLabel">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              height="15"
+              style="BOLD"/>
+        </children>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors
+        name="ProducerChannelConnectionFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="ProducerChannelPolylineConnection"
+          targetDecoration="//@figures.0/@figures.0">
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ProducerChannelConnectionLabel"
+            text="">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              height="15"
+              style="BOLD"/>
+        </children>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors
+        name="ConsumerChannelConnectionFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="ConsumerChannelPolylineConnection"
+          sourceDecoration="//@figures.0/@figures.0">
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ConsumerChannelConnectionLabel"
+            text="">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              height="15"
+              style="BOLD"/>
+        </children>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.10/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors
+        name="ImplementationFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Label"
+          name="ImplementationNameLabel"
+          text="&lt;…>"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure"/>
+    </descriptors>
+    <descriptors
+        name="SolidWireConnectionFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="ProvidedRequriedConnection"
+          sourceDecoration="//@figures.0/@figures.0">
+        <children
+            xsi:type="gmfgraph:Label"
+            name="SolidWireConnectionLabel">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              height="15"
+              style="BOLD"/>
+        </children>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.12/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors
+        name="DashedWireConnectionFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="ProvidedRequriedConnection"
+          lineKind="LINE_DASH"
+          sourceDecoration="//@figures.0/@figures.0">
+        <children
+            xsi:type="gmfgraph:Label"
+            name="DashedWireConnectionLabel">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              height="15"
+              style="BOLD"/>
+        </children>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors
+        name="Producer2Figure">
+      <actualFigure
+          xsi:type="gmfgraph:Rectangle"
+          name="Producer1Rectangle">
+        <layout
+            xsi:type="gmfgraph:GridLayout"/>
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="green"/>
+        <maximumSize
+            dx="20"
+            dy="20"/>
+        <minimumSize
+            dx="20"
+            dy="20"/>
+        <preferredSize
+            dx="20"
+            dy="20"/>
+        <insets
+            top="5"
+            left="5"
+            bottom="5"
+            right="5"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors
+        name="Consumer2Figure">
+      <actualFigure
+          xsi:type="gmfgraph:Rectangle"
+          name="Consumer1Rectangle">
+        <layout
+            xsi:type="gmfgraph:GridLayout"/>
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="red"/>
+        <maximumSize
+            dx="20"
+            dy="20"/>
+        <minimumSize
+            dx="20"
+            dy="20"/>
+        <preferredSize
+            dx="20"
+            dy="20"/>
+        <insets
+            top="5"
+            left="5"
+            bottom="5"
+            right="5"/>
+      </actualFigure>
     </descriptors>
   </figures>
-  <nodes name="CompositeContainer" figure="CompositeContainerFigure"/>
-  <nodes name="Composite" figure="CompositeFigure"/>
-  <nodes name="Component" figure="ComponentFigure"/>
-  <nodes name="Properties" figure="PropertiesFigure"/>
-  <nodes name="Producer1" figure="Producer1Figure" affixedParentSide="WEST"/>
-  <nodes name="Consumer1" figure="Consumer1Figure" affixedParentSide="EAST"/>
-  <nodes name="Channel1" figure="Channel1Figure"/>
-  <nodes name="Implementation" figure="ImplementationFigure"/>
-  <connections name="ConsumerChannelConnection" figure="ConsumerChannelConnectionFigure"/>
-  <connections name="ProducerChannelConnection" figure="ProducerChannelConnectionFigure"/>
-  <connections name="ChannelCompProducerConnection" figure="ChannelCompProducerConnectionFigure"/>
-  <connections name="ChannelCompConsumerConnection" figure="ChannelCompConsumerConnectionFigure"/>
-  <connections name="ProvidedRequiredConnection" figure="ProvidedRequriedConnectionFigure"/>
-  <compartments name="PropertiesCompartment" figure="ComponentFigure" collapsible="true" needsTitle="true" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
-  <compartments name="CompositeContainerCompartment" figure="CompositeContainerFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
-  <compartments name="Producer1ImplementationCompartment" figure="Producer1Figure"/>
-  <compartments name="Consumer1ImplementationCompartment" figure="Consumer1Figure"/>
-  <labels name="CompositeContainerName" figure="CompositeContainerFigure" elementIcon="false" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
-  <labels name="CompositeName" figure="CompositeFigure" elementIcon="false" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
-  <labels name="ComponentName" figure="ComponentFigure" elementIcon="false" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
-  <labels name="ComponentType" figure="ComponentFigure" elementIcon="false"/>
-  <labels name="PropertiesName" figure="PropertiesFigure"/>
-  <labels name="Producer1Name" figure="Producer1Figure" elementIcon="false"/>
-  <labels name="Producer1TopicNameLabel" figure="Producer1Figure" elementIcon="false"/>
-  <labels name="Consumer1Name" figure="Consumer1Figure" elementIcon="false"/>
-  <labels name="Consumer1TopicNameLabel" figure="Consumer1Figure" elementIcon="false"/>
-  <labels name="Channel1Name" figure="Channel1Figure" elementIcon="false" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
-  <labels name="ImplementationName" figure="ImplementationFigure" accessor="//@figures.0/@descriptors.11/@accessors.0"/>
-  <labels name="ProvidedRequiredConnectionName" figure="ProvidedRequriedConnectionFigure" elementIcon="false" accessor="//@figures.0/@descriptors.12/@accessors.0"/>
+  <nodes
+      name="CompositeContainer"
+      figure="CompositeContainerFigure"/>
+  <nodes
+      name="Composite"
+      figure="CompositeFigure"/>
+  <nodes
+      name="Component"
+      figure="ComponentFigure"/>
+  <nodes
+      name="Properties"
+      figure="PropertiesFigure"/>
+  <nodes
+      name="Producer1"
+      figure="Producer1Figure"
+      affixedParentSide="WEST"/>
+  <nodes
+      name="Consumer1"
+      figure="Consumer1Figure"
+      affixedParentSide="EAST"/>
+  <nodes
+      name="Channel1"
+      figure="Channel1Figure"/>
+  <nodes
+      name="Implementation"
+      figure="ImplementationFigure"/>
+  <nodes
+      name="Producer2"
+      figure="Producer2Figure"
+      affixedParentSide="WEST"/>
+  <nodes
+      name="Consumer2"
+      figure="Consumer2Figure"
+      affixedParentSide="EAST"/>
+  <connections
+      name="ConsumerChannelConnection"
+      figure="ConsumerChannelConnectionFigure"/>
+  <connections
+      name="ProducerChannelConnection"
+      figure="ProducerChannelConnectionFigure"/>
+  <connections
+      name="ExposeProducerConnection"
+      figure="ExposeProducerConnectionFigure"/>
+  <connections
+      name="ExposeConsumerConnection"
+      figure="ExposeConsumerConnectionFigure"/>
+  <connections
+      name="SolidWireConnection"
+      figure="SolidWireConnectionFigure"/>
+  <connections
+      name="DashedWireConnection"
+      figure="DashedWireConnectionFigure"/>
+  <compartments
+      name="PropertiesCompartment"
+      figure="ComponentFigure"
+      collapsible="true"
+      needsTitle="true"
+      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <compartments
+      name="CompositeContainerCompartment"
+      figure="CompositeContainerFigure"
+      accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <compartments
+      name="Producer1ImplementationCompartment"
+      figure="Producer1Figure"/>
+  <compartments
+      name="Consumer1ImplementationCompartment"
+      figure="Consumer1Figure"/>
+  <labels
+      name="CompositeContainerName"
+      figure="CompositeContainerFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.0/@accessors.1"/>
+  <labels
+      name="CompositeName"
+      figure="CompositeFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <labels
+      name="ComponentName"
+      figure="ComponentFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+  <labels
+      name="ComponentType"
+      figure="ComponentFigure"
+      elementIcon="false"/>
+  <labels
+      name="PropertiesName"
+      figure="PropertiesFigure"/>
+  <labels
+      name="Producer1Name"
+      figure="Producer1Figure"
+      elementIcon="false"/>
+  <labels
+      name="Producer1TopicNameLabel"
+      figure="Producer1Figure"
+      elementIcon="false"/>
+  <labels
+      name="Consumer1Name"
+      figure="Consumer1Figure"
+      elementIcon="false"/>
+  <labels
+      name="Consumer1TopicNameLabel"
+      figure="Consumer1Figure"
+      elementIcon="false"/>
+  <labels
+      name="Channel1Name"
+      figure="Channel1Figure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels
+      name="ImplementationName"
+      figure="ImplementationFigure"
+      accessor="//@figures.0/@descriptors.11/@accessors.0"/>
+  <labels
+      name="SolidWireConnectionName"
+      figure="SolidWireConnectionFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.12/@accessors.0"/>
+  <labels
+      name="ExposeProducerConnectionNameLabel"
+      figure="ExposeProducerConnectionFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+  <labels
+      name="ExposeConsumerConnectionNameLabel"
+      figure="ExposeConsumerConnectionFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+  <labels
+      name="ProducerChannelConnectionNameLabel"
+      figure="ProducerChannelConnectionFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.9/@accessors.0"/>
+  <labels
+      name="ConsumerChannelConnectionNameLabel"
+      figure="ConsumerChannelConnectionFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.10/@accessors.0"/>
+  <labels
+      name="DashedWireConnectionNameLabel"
+      figure="ConsumerChannelConnectionFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.10/@accessors.0"/>
 </gmfgraph:Canvas>
