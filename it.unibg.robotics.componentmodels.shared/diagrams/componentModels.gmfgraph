@@ -176,9 +176,14 @@
     <descriptors
         name="PropertiesFigure">
       <actualFigure
-          xsi:type="gmfgraph:Label"
-          name="PropertiesNameLabel"
-          text="&lt;…>"/>
+          xsi:type="gmfgraph:InvisibleRectangle">
+        <children
+            xsi:type="gmfgraph:Label"
+            name="PropertiesNameLabel"
+            text="&lt;…>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="Producer1Figure">
@@ -266,6 +271,15 @@
           figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
+        name="ImplementationFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Label"
+          name="ImplementationNameLabel"
+          text="&lt;…>"/>
+      <accessors
+          figure="//@figures.0/@descriptors.7/@actualFigure"/>
+    </descriptors>
+    <descriptors
         name="ExposeProducerConnectionFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
@@ -277,12 +291,11 @@
             name="ExposeProducerConnectionLabel">
           <font
               xsi:type="gmfgraph:BasicFont"
-              height="15"
-              style="BOLD"/>
+              height="15"/>
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="ExposeConsumerConnectionFigure">
@@ -296,12 +309,11 @@
             name="ExposeConsumerConnectionLabel">
           <font
               xsi:type="gmfgraph:BasicFont"
-              height="15"
-              style="BOLD"/>
+              height="15"/>
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="ProducerChannelConnectionFigure">
@@ -315,12 +327,11 @@
             text="">
           <font
               xsi:type="gmfgraph:BasicFont"
-              height="15"
-              style="BOLD"/>
+              height="15"/>
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.10/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="ConsumerChannelConnectionFigure">
@@ -334,21 +345,11 @@
             text="">
           <font
               xsi:type="gmfgraph:BasicFont"
-              height="15"
-              style="BOLD"/>
+              height="15"/>
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.10/@actualFigure/@children.0"/>
-    </descriptors>
-    <descriptors
-        name="ImplementationFigure">
-      <actualFigure
-          xsi:type="gmfgraph:Label"
-          name="ImplementationNameLabel"
-          text="&lt;…>"/>
-      <accessors
-          figure="//@figures.0/@descriptors.11/@actualFigure"/>
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="SolidWireConnectionFigure">
@@ -361,8 +362,7 @@
             name="SolidWireConnectionLabel">
           <font
               xsi:type="gmfgraph:BasicFont"
-              height="15"
-              style="BOLD"/>
+              height="15"/>
         </children>
       </actualFigure>
       <accessors
@@ -380,8 +380,7 @@
             name="DashedWireConnectionLabel">
           <font
               xsi:type="gmfgraph:BasicFont"
-              height="15"
-              style="BOLD"/>
+              height="15"/>
         </children>
       </actualFigure>
       <accessors
@@ -493,7 +492,7 @@
       name="DashedWireConnection"
       figure="DashedWireConnectionFigure"/>
   <compartments
-      name="PropertiesCompartment"
+      name="Properties Compartment"
       figure="ComponentFigure"
       collapsible="true"
       needsTitle="true"
@@ -529,7 +528,9 @@
       elementIcon="false"/>
   <labels
       name="PropertiesName"
-      figure="PropertiesFigure"/>
+      figure="PropertiesFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.2/@accessors.1"/>
   <labels
       name="Producer1Name"
       figure="Producer1Figure"
@@ -554,7 +555,7 @@
   <labels
       name="ImplementationName"
       figure="ImplementationFigure"
-      accessor="//@figures.0/@descriptors.11/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.7/@accessors.0"/>
   <labels
       name="SolidWireConnectionName"
       figure="SolidWireConnectionFigure"
@@ -564,25 +565,25 @@
       name="ExposeProducerConnectionNameLabel"
       figure="ExposeProducerConnectionFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.8/@accessors.0"/>
   <labels
       name="ExposeConsumerConnectionNameLabel"
       figure="ExposeConsumerConnectionFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.9/@accessors.0"/>
   <labels
       name="ProducerChannelConnectionNameLabel"
       figure="ProducerChannelConnectionFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.9/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.10/@accessors.0"/>
   <labels
       name="ConsumerChannelConnectionNameLabel"
       figure="ConsumerChannelConnectionFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.10/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.11/@accessors.0"/>
   <labels
       name="DashedWireConnectionNameLabel"
       figure="ConsumerChannelConnectionFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.10/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.11/@accessors.0"/>
 </gmfgraph:Canvas>

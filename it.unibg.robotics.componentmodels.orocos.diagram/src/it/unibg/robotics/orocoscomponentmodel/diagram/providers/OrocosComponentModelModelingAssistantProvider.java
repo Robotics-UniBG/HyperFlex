@@ -97,7 +97,7 @@ public class OrocosComponentModelModelingAssistantProvider extends
 			types.add(OrocosComponentModelElementTypes.TCOutputDataPort_3003);
 			types.add(OrocosComponentModelElementTypes.TCOperation_3010);
 			types.add(OrocosComponentModelElementTypes.TCOperationCaller_3011);
-			types.add(OrocosComponentModelElementTypes.NodeProperty_3004);
+			types.add(OrocosComponentModelElementTypes.TCProperty_3016);
 			return types;
 		}
 		if (editPart instanceof Composite2EditPart) {

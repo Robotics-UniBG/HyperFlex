@@ -25,7 +25,7 @@
  */
 package it.unibg.robotics.orocoscomponentmodel.diagram.edit.policies;
 
-import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramUpdater;
 import it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelNodeDescriptor;
 import it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelVisualIDRegistry;
@@ -105,7 +105,7 @@ public class TaskContextPropertiesCompartmentCanonicalEditPolicy extends
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		return NodePropertyEditPart.VISUAL_ID == OrocosComponentModelVisualIDRegistry
+		return TCPropertyEditPart.VISUAL_ID == OrocosComponentModelVisualIDRegistry
 				.getVisualID(view);
 	}
 

@@ -216,22 +216,22 @@ public interface orocoscomponentmodelFactory extends EFactory {
 	OutputDataPort createOutputDataPort();
 
 	/**
-	 * Returns a new object of class '<em>Node Property</em>'.
+	 * Returns a new object of class '<em>TC Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Node Property</em>'.
+	 * @return a new object of class '<em>TC Property</em>'.
 	 * @generated
 	 */
-	NodeProperty createNodeProperty();
+	TCProperty createTCProperty();
 
 	/**
-	 * Returns a new object of class '<em>Composite Property</em>'.
+	 * Returns a new object of class '<em>Comp Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Composite Property</em>'.
+	 * @return a new object of class '<em>Comp Property</em>'.
 	 * @generated
 	 */
-	CompositeProperty createCompositeProperty();
+	CompProperty createCompProperty();
 
 	/**
 	 * Returns the package supported by this factory.

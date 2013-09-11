@@ -86,7 +86,7 @@ public interface TaskContext extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.orocoscomponentmodel.NodeProperty}.
+	 * The list contents are of type {@link it.unibg.robotics.orocoscomponentmodel.TCProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
@@ -98,7 +98,7 @@ public interface TaskContext extends AbstractComponent {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<NodeProperty> getProperties();
+	EList<TCProperty> getProperties();
 
 	/**
 	 * Returns the value of the '<em><b>Operations</b></em>' containment reference list.

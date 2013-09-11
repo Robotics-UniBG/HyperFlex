@@ -29,7 +29,6 @@ import it.unibg.robotics.orocoscomponentmodel.CompInputPort;
 import it.unibg.robotics.orocoscomponentmodel.CompOperation;
 import it.unibg.robotics.orocoscomponentmodel.CompOperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.CompOutputPort;
-import it.unibg.robotics.orocoscomponentmodel.NodeProperty;
 import it.unibg.robotics.orocoscomponentmodel.TCInputDataPort;
 import it.unibg.robotics.orocoscomponentmodel.TCOperation;
 import it.unibg.robotics.orocoscomponentmodel.TCOperationCaller;
@@ -56,7 +55,6 @@ import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeName2E
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.ConnectionPolicyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.ConnectionPolicyNameEditPart;
-import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.PeersConnectionEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.PeersConnectionNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.SystemEditPart;
@@ -64,6 +62,8 @@ import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCInputDataPort
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationCallerEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOutputDataPortEditPart;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyEditPart;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorPlugin;
@@ -162,9 +162,6 @@ public class OrocosComponentModelNavigatorLabelProvider extends LabelProvider
 		case TCOutputDataPortEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://robotics.unibg.it/componentmodels.orocos?TCOutputDataPort", OrocosComponentModelElementTypes.TCOutputDataPort_3003); //$NON-NLS-1$
-		case NodePropertyEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/componentmodels.orocos?NodeProperty", OrocosComponentModelElementTypes.NodeProperty_3004); //$NON-NLS-1$
 		case Composite2EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://robotics.unibg.it/componentmodels.orocos?Composite", OrocosComponentModelElementTypes.Composite_3005); //$NON-NLS-1$
@@ -198,6 +195,9 @@ public class OrocosComponentModelNavigatorLabelProvider extends LabelProvider
 		case CompOperationCaller2EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://robotics.unibg.it/componentmodels.orocos?CompOperationCaller", OrocosComponentModelElementTypes.CompOperationCaller_3015); //$NON-NLS-1$
+		case TCPropertyEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/componentmodels.orocos?TCProperty", OrocosComponentModelElementTypes.TCProperty_3016); //$NON-NLS-1$
 		case ConnectionPolicyEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://robotics.unibg.it/componentmodels.orocos?ConnectionPolicy", OrocosComponentModelElementTypes.ConnectionPolicy_4001); //$NON-NLS-1$
@@ -280,8 +280,6 @@ public class OrocosComponentModelNavigatorLabelProvider extends LabelProvider
 			return getTCInputDataPort_3002Text(view);
 		case TCOutputDataPortEditPart.VISUAL_ID:
 			return getTCOutputDataPort_3003Text(view);
-		case NodePropertyEditPart.VISUAL_ID:
-			return getNodeProperty_3004Text(view);
 		case Composite2EditPart.VISUAL_ID:
 			return getComposite_3005Text(view);
 		case CompInputPortEditPart.VISUAL_ID:
@@ -304,6 +302,8 @@ public class OrocosComponentModelNavigatorLabelProvider extends LabelProvider
 			return getCompOperation_3014Text(view);
 		case CompOperationCaller2EditPart.VISUAL_ID:
 			return getCompOperationCaller_3015Text(view);
+		case TCPropertyEditPart.VISUAL_ID:
+			return getTCProperty_3016Text(view);
 		case ConnectionPolicyEditPart.VISUAL_ID:
 			return getConnectionPolicy_4001Text(view);
 		case CompOutputPort3EditPart.VISUAL_ID:
@@ -393,20 +393,6 @@ public class OrocosComponentModelNavigatorLabelProvider extends LabelProvider
 		} else {
 			OrocosComponentModelDiagramEditorPlugin.getInstance().logError(
 					"No domain element for view with visualID = " + 3003); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getNodeProperty_3004Text(View view) {
-		NodeProperty domainModelElement = (NodeProperty) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			OrocosComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3004); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -570,6 +556,26 @@ public class OrocosComponentModelNavigatorLabelProvider extends LabelProvider
 		} else {
 			OrocosComponentModelDiagramEditorPlugin.getInstance().logError(
 					"No domain element for view with visualID = " + 3015); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getTCProperty_3016Text(View view) {
+		IParser parser = OrocosComponentModelParserProvider.getParser(
+				OrocosComponentModelElementTypes.TCProperty_3016, view
+						.getElement() != null ? view.getElement() : view,
+				OrocosComponentModelVisualIDRegistry
+						.getType(TCPropertyNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			OrocosComponentModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5005); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

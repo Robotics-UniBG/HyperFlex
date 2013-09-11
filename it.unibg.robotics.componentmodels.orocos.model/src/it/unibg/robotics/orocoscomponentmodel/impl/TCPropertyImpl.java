@@ -25,30 +25,28 @@
  */
 package it.unibg.robotics.orocoscomponentmodel.impl;
 
-import it.unibg.robotics.orocoscomponentmodel.NodeProperty;
+import it.unibg.robotics.orocoscomponentmodel.TCProperty;
 import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Node Property</b></em>'.
+ * An implementation of the model object '<em><b>TC Property</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.NodePropertyImpl#getValue <em>Value</em>}</li>
- *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.NodePropertyImpl#getType <em>Type</em>}</li>
+ *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.TCPropertyImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.TCPropertyImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class NodePropertyImpl extends PropertyImpl implements NodeProperty {
+public class TCPropertyImpl extends PropertyImpl implements TCProperty {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -94,7 +92,7 @@ public class NodePropertyImpl extends PropertyImpl implements NodeProperty {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NodePropertyImpl() {
+	protected TCPropertyImpl() {
 		super();
 	}
 
@@ -105,7 +103,7 @@ public class NodePropertyImpl extends PropertyImpl implements NodeProperty {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return orocoscomponentmodelPackage.Literals.NODE_PROPERTY;
+		return orocoscomponentmodelPackage.Literals.TC_PROPERTY;
 	}
 
 	/**
@@ -126,7 +124,7 @@ public class NodePropertyImpl extends PropertyImpl implements NodeProperty {
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, orocoscomponentmodelPackage.NODE_PROPERTY__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, orocoscomponentmodelPackage.TC_PROPERTY__VALUE, oldValue, value));
 	}
 
 	/**
@@ -147,7 +145,7 @@ public class NodePropertyImpl extends PropertyImpl implements NodeProperty {
 		String oldType = type;
 		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, orocoscomponentmodelPackage.NODE_PROPERTY__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, orocoscomponentmodelPackage.TC_PROPERTY__TYPE, oldType, type));
 	}
 
 	/**
@@ -158,9 +156,9 @@ public class NodePropertyImpl extends PropertyImpl implements NodeProperty {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case orocoscomponentmodelPackage.NODE_PROPERTY__VALUE:
+			case orocoscomponentmodelPackage.TC_PROPERTY__VALUE:
 				return getValue();
-			case orocoscomponentmodelPackage.NODE_PROPERTY__TYPE:
+			case orocoscomponentmodelPackage.TC_PROPERTY__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -174,10 +172,10 @@ public class NodePropertyImpl extends PropertyImpl implements NodeProperty {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case orocoscomponentmodelPackage.NODE_PROPERTY__VALUE:
+			case orocoscomponentmodelPackage.TC_PROPERTY__VALUE:
 				setValue((String)newValue);
 				return;
-			case orocoscomponentmodelPackage.NODE_PROPERTY__TYPE:
+			case orocoscomponentmodelPackage.TC_PROPERTY__TYPE:
 				setType((String)newValue);
 				return;
 		}
@@ -192,10 +190,10 @@ public class NodePropertyImpl extends PropertyImpl implements NodeProperty {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case orocoscomponentmodelPackage.NODE_PROPERTY__VALUE:
+			case orocoscomponentmodelPackage.TC_PROPERTY__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case orocoscomponentmodelPackage.NODE_PROPERTY__TYPE:
+			case orocoscomponentmodelPackage.TC_PROPERTY__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
 		}
@@ -210,9 +208,9 @@ public class NodePropertyImpl extends PropertyImpl implements NodeProperty {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case orocoscomponentmodelPackage.NODE_PROPERTY__VALUE:
+			case orocoscomponentmodelPackage.TC_PROPERTY__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-			case orocoscomponentmodelPackage.NODE_PROPERTY__TYPE:
+			case orocoscomponentmodelPackage.TC_PROPERTY__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);
@@ -236,4 +234,4 @@ public class NodePropertyImpl extends PropertyImpl implements NodeProperty {
 		return result.toString();
 	}
 
-} //NodePropertyImpl
+} //TCPropertyImpl

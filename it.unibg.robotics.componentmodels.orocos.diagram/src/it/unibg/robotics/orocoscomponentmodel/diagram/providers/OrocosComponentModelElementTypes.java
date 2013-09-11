@@ -40,13 +40,13 @@ import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompOutputPortE
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.Composite2EditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.ConnectionPolicyEditPart;
-import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.PeersConnectionEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.SystemEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCInputDataPortEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationCallerEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOutputDataPortEditPart;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorPlugin;
 
@@ -115,7 +115,8 @@ public class OrocosComponentModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodeProperty_3004 = getElementType("it.unibg.robotics.componentmodels.orocos.diagram.NodeProperty_3004"); //$NON-NLS-1$
+	public static final IElementType TCProperty_3016 = getElementType("it.unibg.robotics.componentmodels.orocos.diagram.TCProperty_3016"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
@@ -249,9 +250,9 @@ public class OrocosComponentModelElementTypes {
 							.getTCOutputDataPort());
 
 			elements.put(
-					NodeProperty_3004,
+					TCProperty_3016,
 					it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage.eINSTANCE
-							.getNodeProperty());
+							.getTCProperty());
 
 			elements.put(
 					TCOperation_3010,
@@ -359,7 +360,7 @@ public class OrocosComponentModelElementTypes {
 			KNOWN_ELEMENT_TYPES.add(TaskContext_3001);
 			KNOWN_ELEMENT_TYPES.add(TCInputDataPort_3002);
 			KNOWN_ELEMENT_TYPES.add(TCOutputDataPort_3003);
-			KNOWN_ELEMENT_TYPES.add(NodeProperty_3004);
+			KNOWN_ELEMENT_TYPES.add(TCProperty_3016);
 			KNOWN_ELEMENT_TYPES.add(TCOperation_3010);
 			KNOWN_ELEMENT_TYPES.add(TCOperationCaller_3011);
 			KNOWN_ELEMENT_TYPES.add(Composite_3005);
@@ -396,8 +397,8 @@ public class OrocosComponentModelElementTypes {
 			return TCInputDataPort_3002;
 		case TCOutputDataPortEditPart.VISUAL_ID:
 			return TCOutputDataPort_3003;
-		case NodePropertyEditPart.VISUAL_ID:
-			return NodeProperty_3004;
+		case TCPropertyEditPart.VISUAL_ID:
+			return TCProperty_3016;
 		case TCOperationEditPart.VISUAL_ID:
 			return TCOperation_3010;
 		case TCOperationCallerEditPart.VISUAL_ID:

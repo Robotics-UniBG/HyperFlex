@@ -75,7 +75,14 @@
                 href="../models/orocosComponentModel.ecore#//TaskContext/properties"/>
             <ownedChild>
               <domainMetaElement
-                  href="../models/orocosComponentModel.ecore#//NodeProperty"/>
+                  href="../models/orocosComponentModel.ecore#//TCProperty"/>
+              <labelMappings
+                  xsi:type="gmfmap:FeatureLabelMapping">
+                <diagramLabel
+                    href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#PropertiesName"/>
+                <features
+                    href="../models/orocosComponentModel.ecore#//Property/name"/>
+              </labelMappings>
               <tool
                   xsi:type="gmftool:CreationTool"
                   href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
@@ -112,7 +119,7 @@
           <compartments
               children="//@nodes.0/@ownedChild/@children.0/@ownedChild/@children.2">
             <compartment
-                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#PropertiesCompartment"/>
+                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Properties Compartment"/>
           </compartments>
         </ownedChild>
       </children>

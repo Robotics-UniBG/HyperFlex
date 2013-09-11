@@ -146,7 +146,7 @@ public class OrocosComponentModelPaletteFactory {
 				Messages.Property4CreationTool_title,
 				Messages.Property4CreationTool_desc,
 				Collections
-						.singletonList(OrocosComponentModelElementTypes.NodeProperty_3004));
+						.singletonList(OrocosComponentModelElementTypes.TCProperty_3016));
 		entry.setId("createProperty4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(OrocosComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Property.gif")); //$NON-NLS-1$

@@ -49,7 +49,6 @@ import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeName2E
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.ConnectionPolicyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.ConnectionPolicyNameEditPart;
-import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.PeersConnectionEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.PeersConnectionNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.SystemEditPart;
@@ -57,6 +56,8 @@ import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCInputDataPort
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationCallerEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOutputDataPortEditPart;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyEditPart;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextPropertiesCompartmentEditPart;
@@ -251,8 +252,8 @@ public class OrocosComponentModelVisualIDRegistry {
 			break;
 		case TaskContextPropertiesCompartmentEditPart.VISUAL_ID:
 			if (it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage.eINSTANCE
-					.getNodeProperty().isSuperTypeOf(domainElement.eClass())) {
-				return NodePropertyEditPart.VISUAL_ID;
+					.getTCProperty().isSuperTypeOf(domainElement.eClass())) {
+				return TCPropertyEditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -325,6 +326,11 @@ public class OrocosComponentModelVisualIDRegistry {
 				return true;
 			}
 			break;
+		case TCPropertyEditPart.VISUAL_ID:
+			if (TCPropertyNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case Composite2EditPart.VISUAL_ID:
 			if (CompositeName2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -351,7 +357,7 @@ public class OrocosComponentModelVisualIDRegistry {
 			}
 			break;
 		case TaskContextPropertiesCompartmentEditPart.VISUAL_ID:
-			if (NodePropertyEditPart.VISUAL_ID == nodeVisualID) {
+			if (TCPropertyEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -469,7 +475,6 @@ public class OrocosComponentModelVisualIDRegistry {
 			return false;
 		case TCInputDataPortEditPart.VISUAL_ID:
 		case TCOutputDataPortEditPart.VISUAL_ID:
-		case NodePropertyEditPart.VISUAL_ID:
 		case CompInputPortEditPart.VISUAL_ID:
 		case CompOutputPortEditPart.VISUAL_ID:
 		case CompInputPort2EditPart.VISUAL_ID:
@@ -480,6 +485,7 @@ public class OrocosComponentModelVisualIDRegistry {
 		case CompOperationCallerEditPart.VISUAL_ID:
 		case CompOperation2EditPart.VISUAL_ID:
 		case CompOperationCaller2EditPart.VISUAL_ID:
+		case TCPropertyEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

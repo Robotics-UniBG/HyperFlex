@@ -291,7 +291,7 @@ public class TaskContextItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(orocoscomponentmodelPackage.Literals.TASK_CONTEXT__PROPERTIES,
-				 orocoscomponentmodelFactory.eINSTANCE.createNodeProperty()));
+				 orocoscomponentmodelFactory.eINSTANCE.createTCProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter

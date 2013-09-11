@@ -30,8 +30,8 @@ import it.unibg.robotics.orocoscomponentmodel.CompInputPort;
 import it.unibg.robotics.orocoscomponentmodel.CompOperation;
 import it.unibg.robotics.orocoscomponentmodel.CompOperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.CompOutputPort;
+import it.unibg.robotics.orocoscomponentmodel.CompProperty;
 import it.unibg.robotics.orocoscomponentmodel.Composite;
-import it.unibg.robotics.orocoscomponentmodel.CompositeProperty;
 import it.unibg.robotics.orocoscomponentmodel.ConnectionPolicy;
 import it.unibg.robotics.orocoscomponentmodel.PeersConnection;
 import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage;
@@ -39,12 +39,9 @@ import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -147,7 +144,7 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<CompositeProperty> properties;
+	protected EList<CompProperty> properties;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -257,9 +254,9 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<CompositeProperty> getProperties() {
+	public EList<CompProperty> getProperties() {
 		if (properties == null) {
-			properties = new EObjectContainmentEList<CompositeProperty>(CompositeProperty.class, this, orocoscomponentmodelPackage.COMPOSITE__PROPERTIES);
+			properties = new EObjectContainmentEList<CompProperty>(CompProperty.class, this, orocoscomponentmodelPackage.COMPOSITE__PROPERTIES);
 		}
 		return properties;
 	}
@@ -359,7 +356,7 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 				return;
 			case orocoscomponentmodelPackage.COMPOSITE__PROPERTIES:
 				getProperties().clear();
-				getProperties().addAll((Collection<? extends CompositeProperty>)newValue);
+				getProperties().addAll((Collection<? extends CompProperty>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

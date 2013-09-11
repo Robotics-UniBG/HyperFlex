@@ -26,7 +26,7 @@
 package it.unibg.robotics.orocoscomponentmodel.provider;
 
 
-import it.unibg.robotics.orocoscomponentmodel.CompositeProperty;
+import it.unibg.robotics.orocoscomponentmodel.TCProperty;
 import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage;
 
 import java.util.Collection;
@@ -42,14 +42,16 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link it.unibg.robotics.orocoscomponentmodel.CompositeProperty} object.
+ * This is the item provider adapter for a {@link it.unibg.robotics.orocoscomponentmodel.TCProperty} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class CompositePropertyItemProvider
+public class TCPropertyItemProvider
 	extends PropertyItemProvider
 	implements
 		IEditingDomainItemProvider,
@@ -63,7 +65,7 @@ public class CompositePropertyItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CompositePropertyItemProvider(AdapterFactory adapterFactory) {
+	public TCPropertyItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -78,42 +80,65 @@ public class CompositePropertyItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addExposedPropertyPropertyDescriptor(object);
+			addValuePropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Exposed Property feature.
+	 * This adds a property descriptor for the Value feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addExposedPropertyPropertyDescriptor(Object object) {
+	protected void addValuePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CompositeProperty_exposedProperty_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CompositeProperty_exposedProperty_feature", "_UI_CompositeProperty_type"),
-				 orocoscomponentmodelPackage.Literals.COMPOSITE_PROPERTY__EXPOSED_PROPERTY,
+				 getString("_UI_TCProperty_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TCProperty_value_feature", "_UI_TCProperty_type"),
+				 orocoscomponentmodelPackage.Literals.TC_PROPERTY__VALUE,
 				 true,
 				 false,
-				 true,
-				 null,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This returns CompositeProperty.gif.
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TCProperty_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TCProperty_type_feature", "_UI_TCProperty_type"),
+				 orocoscomponentmodelPackage.Literals.TC_PROPERTY__TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns TCProperty.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/CompositeProperty"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/TCProperty"));
 	}
 
 	/**
@@ -124,10 +149,10 @@ public class CompositePropertyItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((CompositeProperty)object).getName();
+		String label = ((TCProperty)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_CompositeProperty_type") :
-			getString("_UI_CompositeProperty_type") + " " + label;
+			getString("_UI_TCProperty_type") :
+			getString("_UI_TCProperty_type") + " " + label;
 	}
 
 	/**
@@ -140,6 +165,13 @@ public class CompositePropertyItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(TCProperty.class)) {
+			case orocoscomponentmodelPackage.TC_PROPERTY__VALUE:
+			case orocoscomponentmodelPackage.TC_PROPERTY__TYPE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

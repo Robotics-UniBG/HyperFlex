@@ -28,21 +28,21 @@ package it.unibg.robotics.orocoscomponentmodel;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Composite Property</b></em>'.
+ * A representation of the model object '<em><b>Comp Property</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.orocoscomponentmodel.CompositeProperty#getExposedProperty <em>Exposed Property</em>}</li>
+ *   <li>{@link it.unibg.robotics.orocoscomponentmodel.CompProperty#getExposedProperty <em>Exposed Property</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage#getCompositeProperty()
+ * @see it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage#getCompProperty()
  * @model
  * @generated
  */
-public interface CompositeProperty extends Property {
+public interface CompProperty extends Property {
 	/**
 	 * Returns the value of the '<em><b>Exposed Property</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -53,14 +53,14 @@ public interface CompositeProperty extends Property {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exposed Property</em>' reference.
 	 * @see #setExposedProperty(Property)
-	 * @see it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage#getCompositeProperty_ExposedProperty()
+	 * @see it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage#getCompProperty_ExposedProperty()
 	 * @model required="true"
 	 * @generated
 	 */
 	Property getExposedProperty();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.orocoscomponentmodel.CompositeProperty#getExposedProperty <em>Exposed Property</em>}' reference.
+	 * Sets the value of the '{@link it.unibg.robotics.orocoscomponentmodel.CompProperty#getExposedProperty <em>Exposed Property</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Exposed Property</em>' reference.
@@ -69,4 +69,4 @@ public interface CompositeProperty extends Property {
 	 */
 	void setExposedProperty(Property value);
 
-} // CompositeProperty
+} // CompProperty

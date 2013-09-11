@@ -91,7 +91,7 @@ public class Composite2CreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		
+
 		IFile file;
 
 		ElementTreeSelectionDialog dialog = new ElementTreeSelectionDialog(
@@ -126,8 +126,7 @@ public class Composite2CreateCommand extends EditElementCommand {
 							.newErrorCommandResult("File Selection Error");
 				}
 
-				System ePackage = (System) ecoreResource
-						.getContents().get(0);
+				System ePackage = (System) ecoreResource.getContents().get(0);
 				Composite newElement = ePackage.getComposite();
 
 				Composite owner = (Composite) getElementToEdit();

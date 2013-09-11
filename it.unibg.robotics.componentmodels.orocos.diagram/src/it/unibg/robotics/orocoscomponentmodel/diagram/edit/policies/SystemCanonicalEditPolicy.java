@@ -40,13 +40,13 @@ import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompOutputPortE
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.Composite2EditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.ConnectionPolicyEditPart;
-import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.PeersConnectionEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.SystemEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCInputDataPortEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationCallerEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOutputDataPortEditPart;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramUpdater;
 import it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelLinkDescriptor;
@@ -327,10 +327,10 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case NodePropertyEditPart.VISUAL_ID: {
+		case TCPropertyEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(OrocosComponentModelDiagramUpdater
-						.getNodeProperty_3004ContainedLinks(view));
+						.getTCProperty_3016ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

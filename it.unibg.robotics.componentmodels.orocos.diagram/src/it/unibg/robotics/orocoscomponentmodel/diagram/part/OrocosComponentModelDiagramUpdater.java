@@ -33,7 +33,6 @@ import it.unibg.robotics.orocoscomponentmodel.CompOutputPort;
 import it.unibg.robotics.orocoscomponentmodel.Composite;
 import it.unibg.robotics.orocoscomponentmodel.ConnectionPolicy;
 import it.unibg.robotics.orocoscomponentmodel.InputDataPort;
-import it.unibg.robotics.orocoscomponentmodel.NodeProperty;
 import it.unibg.robotics.orocoscomponentmodel.Operation;
 import it.unibg.robotics.orocoscomponentmodel.OperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.OutputDataPort;
@@ -43,6 +42,7 @@ import it.unibg.robotics.orocoscomponentmodel.TCInputDataPort;
 import it.unibg.robotics.orocoscomponentmodel.TCOperation;
 import it.unibg.robotics.orocoscomponentmodel.TCOperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.TCOutputDataPort;
+import it.unibg.robotics.orocoscomponentmodel.TCProperty;
 import it.unibg.robotics.orocoscomponentmodel.TaskContext;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompInputPort2EditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompInputPort3EditPart;
@@ -60,13 +60,13 @@ import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.Composite2EditP
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.ConnectionPolicyEditPart;
-import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.PeersConnectionEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.SystemEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCInputDataPortEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationCallerEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOutputDataPortEditPart;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextPropertiesCompartmentEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.providers.OrocosComponentModelElementTypes;
@@ -353,10 +353,10 @@ public class OrocosComponentModelDiagramUpdater {
 		LinkedList<OrocosComponentModelNodeDescriptor> result = new LinkedList<OrocosComponentModelNodeDescriptor>();
 		for (Iterator<?> it = modelElement.getProperties().iterator(); it
 				.hasNext();) {
-			NodeProperty childElement = (NodeProperty) it.next();
+			TCProperty childElement = (TCProperty) it.next();
 			int visualID = OrocosComponentModelVisualIDRegistry
 					.getNodeVisualID(view, childElement);
-			if (visualID == NodePropertyEditPart.VISUAL_ID) {
+			if (visualID == TCPropertyEditPart.VISUAL_ID) {
 				result.add(new OrocosComponentModelNodeDescriptor(childElement,
 						visualID));
 				continue;
@@ -381,8 +381,8 @@ public class OrocosComponentModelDiagramUpdater {
 			return getTCInputDataPort_3002ContainedLinks(view);
 		case TCOutputDataPortEditPart.VISUAL_ID:
 			return getTCOutputDataPort_3003ContainedLinks(view);
-		case NodePropertyEditPart.VISUAL_ID:
-			return getNodeProperty_3004ContainedLinks(view);
+		case TCPropertyEditPart.VISUAL_ID:
+			return getTCProperty_3016ContainedLinks(view);
 		case TCOperationEditPart.VISUAL_ID:
 			return getTCOperation_3010ContainedLinks(view);
 		case TCOperationCallerEditPart.VISUAL_ID:
@@ -435,8 +435,8 @@ public class OrocosComponentModelDiagramUpdater {
 			return getTCInputDataPort_3002IncomingLinks(view);
 		case TCOutputDataPortEditPart.VISUAL_ID:
 			return getTCOutputDataPort_3003IncomingLinks(view);
-		case NodePropertyEditPart.VISUAL_ID:
-			return getNodeProperty_3004IncomingLinks(view);
+		case TCPropertyEditPart.VISUAL_ID:
+			return getTCProperty_3016IncomingLinks(view);
 		case TCOperationEditPart.VISUAL_ID:
 			return getTCOperation_3010IncomingLinks(view);
 		case TCOperationCallerEditPart.VISUAL_ID:
@@ -489,8 +489,8 @@ public class OrocosComponentModelDiagramUpdater {
 			return getTCInputDataPort_3002OutgoingLinks(view);
 		case TCOutputDataPortEditPart.VISUAL_ID:
 			return getTCOutputDataPort_3003OutgoingLinks(view);
-		case NodePropertyEditPart.VISUAL_ID:
-			return getNodeProperty_3004OutgoingLinks(view);
+		case TCPropertyEditPart.VISUAL_ID:
+			return getTCProperty_3016OutgoingLinks(view);
 		case TCOperationEditPart.VISUAL_ID:
 			return getTCOperation_3010OutgoingLinks(view);
 		case TCOperationCallerEditPart.VISUAL_ID:
@@ -580,7 +580,7 @@ public class OrocosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<OrocosComponentModelLinkDescriptor> getNodeProperty_3004ContainedLinks(
+	public static List<OrocosComponentModelLinkDescriptor> getTCProperty_3016ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -778,7 +778,7 @@ public class OrocosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<OrocosComponentModelLinkDescriptor> getNodeProperty_3004IncomingLinks(
+	public static List<OrocosComponentModelLinkDescriptor> getTCProperty_3016IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1064,7 +1064,7 @@ public class OrocosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<OrocosComponentModelLinkDescriptor> getNodeProperty_3004OutgoingLinks(
+	public static List<OrocosComponentModelLinkDescriptor> getTCProperty_3016OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}

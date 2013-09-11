@@ -227,7 +227,7 @@ public class CompositeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(orocoscomponentmodelPackage.Literals.COMPOSITE__PROPERTIES,
-				 orocoscomponentmodelFactory.eINSTANCE.createCompositeProperty()));
+				 orocoscomponentmodelFactory.eINSTANCE.createCompProperty()));
 	}
 
 }

@@ -30,12 +30,11 @@ import it.unibg.robotics.orocoscomponentmodel.CompInputPort;
 import it.unibg.robotics.orocoscomponentmodel.CompOperation;
 import it.unibg.robotics.orocoscomponentmodel.CompOperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.CompOutputPort;
+import it.unibg.robotics.orocoscomponentmodel.CompProperty;
 import it.unibg.robotics.orocoscomponentmodel.Composite;
-import it.unibg.robotics.orocoscomponentmodel.CompositeProperty;
 import it.unibg.robotics.orocoscomponentmodel.ConnectionPolicy;
 import it.unibg.robotics.orocoscomponentmodel.DataPort;
 import it.unibg.robotics.orocoscomponentmodel.InputDataPort;
-import it.unibg.robotics.orocoscomponentmodel.NodeProperty;
 import it.unibg.robotics.orocoscomponentmodel.Operation;
 import it.unibg.robotics.orocoscomponentmodel.OperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.OutputDataPort;
@@ -45,14 +44,13 @@ import it.unibg.robotics.orocoscomponentmodel.TCInputDataPort;
 import it.unibg.robotics.orocoscomponentmodel.TCOperation;
 import it.unibg.robotics.orocoscomponentmodel.TCOperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.TCOutputDataPort;
+import it.unibg.robotics.orocoscomponentmodel.TCProperty;
 import it.unibg.robotics.orocoscomponentmodel.TaskContext;
 import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -192,12 +190,12 @@ public class orocoscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractComponentAdapter();
 			}
 			@Override
-			public Adapter caseNodeProperty(NodeProperty object) {
-				return createNodePropertyAdapter();
+			public Adapter caseTCProperty(TCProperty object) {
+				return createTCPropertyAdapter();
 			}
 			@Override
-			public Adapter caseCompositeProperty(CompositeProperty object) {
-				return createCompositePropertyAdapter();
+			public Adapter caseCompProperty(CompProperty object) {
+				return createCompPropertyAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -500,30 +498,30 @@ public class orocoscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.orocoscomponentmodel.NodeProperty <em>Node Property</em>}'.
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.orocoscomponentmodel.TCProperty <em>TC Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.orocoscomponentmodel.NodeProperty
+	 * @see it.unibg.robotics.orocoscomponentmodel.TCProperty
 	 * @generated
 	 */
-	public Adapter createNodePropertyAdapter() {
+	public Adapter createTCPropertyAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.orocoscomponentmodel.CompositeProperty <em>Composite Property</em>}'.
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.orocoscomponentmodel.CompProperty <em>Comp Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.orocoscomponentmodel.CompositeProperty
+	 * @see it.unibg.robotics.orocoscomponentmodel.CompProperty
 	 * @generated
 	 */
-	public Adapter createCompositePropertyAdapter() {
+	public Adapter createCompPropertyAdapter() {
 		return null;
 	}
 

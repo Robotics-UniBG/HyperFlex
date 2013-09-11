@@ -48,7 +48,6 @@ import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeName2E
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.ConnectionPolicyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.ConnectionPolicyNameEditPart;
-import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.PeersConnectionEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.PeersConnectionNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.SystemEditPart;
@@ -56,6 +55,8 @@ import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCInputDataPort
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationCallerEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOutputDataPortEditPart;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyEditPart;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextPropertiesCompartmentEditPart;
@@ -202,7 +203,7 @@ public class OrocosComponentModelViewProvider extends AbstractProvider
 				case TaskContextEditPart.VISUAL_ID:
 				case TCInputDataPortEditPart.VISUAL_ID:
 				case TCOutputDataPortEditPart.VISUAL_ID:
-				case NodePropertyEditPart.VISUAL_ID:
+				case TCPropertyEditPart.VISUAL_ID:
 				case TCOperationEditPart.VISUAL_ID:
 				case TCOperationCallerEditPart.VISUAL_ID:
 				case CompInputPortEditPart.VISUAL_ID:
@@ -230,7 +231,7 @@ public class OrocosComponentModelViewProvider extends AbstractProvider
 				|| TaskContextEditPart.VISUAL_ID == visualID
 				|| TCInputDataPortEditPart.VISUAL_ID == visualID
 				|| TCOutputDataPortEditPart.VISUAL_ID == visualID
-				|| NodePropertyEditPart.VISUAL_ID == visualID
+				|| TCPropertyEditPart.VISUAL_ID == visualID
 				|| TCOperationEditPart.VISUAL_ID == visualID
 				|| TCOperationCallerEditPart.VISUAL_ID == visualID
 				|| Composite2EditPart.VISUAL_ID == visualID
@@ -312,8 +313,8 @@ public class OrocosComponentModelViewProvider extends AbstractProvider
 		case TCOutputDataPortEditPart.VISUAL_ID:
 			return createTCOutputDataPort_3003(domainElement, containerView,
 					index, persisted, preferencesHint);
-		case NodePropertyEditPart.VISUAL_ID:
-			return createNodeProperty_3004(domainElement, containerView, index,
+		case TCPropertyEditPart.VISUAL_ID:
+			return createTCProperty_3016(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case TCOperationEditPart.VISUAL_ID:
 			return createTCOperation_3010(domainElement, containerView, index,
@@ -581,13 +582,13 @@ public class OrocosComponentModelViewProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
-	public Node createNodeProperty_3004(EObject domainElement,
+	public Node createTCProperty_3016(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(OrocosComponentModelVisualIDRegistry
-				.getType(NodePropertyEditPart.VISUAL_ID));
+				.getType(TCPropertyEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -618,6 +619,9 @@ public class OrocosComponentModelViewProvider extends AbstractProvider
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5005 = createLabel(node,
+				OrocosComponentModelVisualIDRegistry
+						.getType(TCPropertyNameEditPart.VISUAL_ID));
 		return node;
 	}
 

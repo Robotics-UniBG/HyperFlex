@@ -191,6 +191,6 @@ public class CompOutputPort3EditPart extends ConnectionNodeEditPart implements
 	 */
 	static final Font FFIGUREEXPOSEPRODUCERCONNECTIONLABEL_FONT = new Font(
 			Display.getCurrent(), Display.getDefault().getSystemFont()
-					.getFontData()[0].getName(), 15, SWT.BOLD);
+					.getFontData()[0].getName(), 15, SWT.NORMAL);
 
 }

@@ -25,11 +25,11 @@
  */
 package it.unibg.robotics.orocoscomponentmodel.impl;
 
-import it.unibg.robotics.orocoscomponentmodel.NodeProperty;
 import it.unibg.robotics.orocoscomponentmodel.TCInputDataPort;
 import it.unibg.robotics.orocoscomponentmodel.TCOperation;
 import it.unibg.robotics.orocoscomponentmodel.TCOperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.TCOutputDataPort;
+import it.unibg.robotics.orocoscomponentmodel.TCProperty;
 import it.unibg.robotics.orocoscomponentmodel.TaskContext;
 import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage;
 
@@ -37,14 +37,10 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -98,7 +94,7 @@ public class TaskContextImpl extends AbstractComponentImpl implements TaskContex
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<NodeProperty> properties;
+	protected EList<TCProperty> properties;
 
 	/**
 	 * The cached value of the '{@link #getOperations() <em>Operations</em>}' containment reference list.
@@ -248,9 +244,9 @@ public class TaskContextImpl extends AbstractComponentImpl implements TaskContex
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<NodeProperty> getProperties() {
+	public EList<TCProperty> getProperties() {
 		if (properties == null) {
-			properties = new EObjectContainmentEList<NodeProperty>(NodeProperty.class, this, orocoscomponentmodelPackage.TASK_CONTEXT__PROPERTIES);
+			properties = new EObjectContainmentEList<TCProperty>(TCProperty.class, this, orocoscomponentmodelPackage.TASK_CONTEXT__PROPERTIES);
 		}
 		return properties;
 	}
@@ -434,7 +430,7 @@ public class TaskContextImpl extends AbstractComponentImpl implements TaskContex
 				return;
 			case orocoscomponentmodelPackage.TASK_CONTEXT__PROPERTIES:
 				getProperties().clear();
-				getProperties().addAll((Collection<? extends NodeProperty>)newValue);
+				getProperties().addAll((Collection<? extends TCProperty>)newValue);
 				return;
 			case orocoscomponentmodelPackage.TASK_CONTEXT__OPERATIONS:
 				getOperations().clear();

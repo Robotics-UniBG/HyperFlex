@@ -38,14 +38,14 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class NodePropertyItemSemanticEditPolicy extends
+public class TCPropertyItemSemanticEditPolicy extends
 		OrocosComponentModelBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated
 	 */
-	public NodePropertyItemSemanticEditPolicy() {
-		super(OrocosComponentModelElementTypes.NodeProperty_3004);
+	public TCPropertyItemSemanticEditPolicy() {
+		super(OrocosComponentModelElementTypes.TCProperty_3016);
 	}
 
 	/**

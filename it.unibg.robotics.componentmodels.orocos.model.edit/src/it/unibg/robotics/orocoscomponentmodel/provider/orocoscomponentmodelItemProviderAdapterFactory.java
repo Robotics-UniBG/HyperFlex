@@ -532,49 +532,49 @@ public class orocoscomponentmodelItemProviderAdapterFactory extends orocoscompon
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.orocoscomponentmodel.NodeProperty} instances.
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.orocoscomponentmodel.TCProperty} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NodePropertyItemProvider nodePropertyItemProvider;
+	protected TCPropertyItemProvider tcPropertyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.orocoscomponentmodel.NodeProperty}.
+	 * This creates an adapter for a {@link it.unibg.robotics.orocoscomponentmodel.TCProperty}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createNodePropertyAdapter() {
-		if (nodePropertyItemProvider == null) {
-			nodePropertyItemProvider = new NodePropertyItemProvider(this);
+	public Adapter createTCPropertyAdapter() {
+		if (tcPropertyItemProvider == null) {
+			tcPropertyItemProvider = new TCPropertyItemProvider(this);
 		}
 
-		return nodePropertyItemProvider;
+		return tcPropertyItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.orocoscomponentmodel.CompositeProperty} instances.
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.orocoscomponentmodel.CompProperty} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CompositePropertyItemProvider compositePropertyItemProvider;
+	protected CompPropertyItemProvider compPropertyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.orocoscomponentmodel.CompositeProperty}.
+	 * This creates an adapter for a {@link it.unibg.robotics.orocoscomponentmodel.CompProperty}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCompositePropertyAdapter() {
-		if (compositePropertyItemProvider == null) {
-			compositePropertyItemProvider = new CompositePropertyItemProvider(this);
+	public Adapter createCompPropertyAdapter() {
+		if (compPropertyItemProvider == null) {
+			compPropertyItemProvider = new CompPropertyItemProvider(this);
 		}
 
-		return compositePropertyItemProvider;
+		return compPropertyItemProvider;
 	}
 
 	/**
@@ -695,8 +695,8 @@ public class orocoscomponentmodelItemProviderAdapterFactory extends orocoscompon
 		if (dataPortItemProvider != null) dataPortItemProvider.dispose();
 		if (inputDataPortItemProvider != null) inputDataPortItemProvider.dispose();
 		if (outputDataPortItemProvider != null) outputDataPortItemProvider.dispose();
-		if (nodePropertyItemProvider != null) nodePropertyItemProvider.dispose();
-		if (compositePropertyItemProvider != null) compositePropertyItemProvider.dispose();
+		if (tcPropertyItemProvider != null) tcPropertyItemProvider.dispose();
+		if (compPropertyItemProvider != null) compPropertyItemProvider.dispose();
 	}
 
 }

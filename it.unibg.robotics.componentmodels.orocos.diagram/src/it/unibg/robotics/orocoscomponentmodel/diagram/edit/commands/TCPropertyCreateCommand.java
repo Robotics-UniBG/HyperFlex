@@ -25,7 +25,7 @@
  */
 package it.unibg.robotics.orocoscomponentmodel.diagram.edit.commands;
 
-import it.unibg.robotics.orocoscomponentmodel.NodeProperty;
+import it.unibg.robotics.orocoscomponentmodel.TCProperty;
 import it.unibg.robotics.orocoscomponentmodel.TaskContext;
 
 import org.eclipse.core.commands.ExecutionException;
@@ -43,12 +43,12 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class NodePropertyCreateCommand extends EditElementCommand {
+public class TCPropertyCreateCommand extends EditElementCommand {
 
 	/**
 	 * @generated
 	 */
-	public NodePropertyCreateCommand(CreateElementRequest req) {
+	public TCPropertyCreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
@@ -78,8 +78,8 @@ public class NodePropertyCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		NodeProperty newElement = it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelFactory.eINSTANCE
-				.createNodeProperty();
+		TCProperty newElement = it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelFactory.eINSTANCE
+				.createTCProperty();
 
 		TaskContext owner = (TaskContext) getElementToEdit();
 		owner.getProperties().add(newElement);
@@ -93,9 +93,8 @@ public class NodePropertyCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(NodeProperty newElement,
-			IProgressMonitor monitor, IAdaptable info)
-			throws ExecutionException {
+	protected void doConfigure(TCProperty newElement, IProgressMonitor monitor,
+			IAdaptable info) throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())
 				.getElementType();
 		ConfigureRequest configureRequest = new ConfigureRequest(

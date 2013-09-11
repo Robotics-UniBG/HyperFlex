@@ -25,20 +25,35 @@
  */
 package it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts;
 
-import it.unibg.robotics.orocoscomponentmodel.diagram.edit.policies.NodePropertyItemSemanticEditPolicy;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.policies.TCPropertyItemSemanticEditPolicy;
+import it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelVisualIDRegistry;
+
+import java.util.Collections;
+import java.util.List;
 
 import org.eclipse.draw2d.IFigure;
+import org.eclipse.draw2d.PositionConstants;
+import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
+import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
+import org.eclipse.gef.handles.MoveHandle;
 import org.eclipse.gef.requests.CreateRequest;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderedShapeEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IBorderItemEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.BorderItemSelectionEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.diagram.ui.figures.BorderItemLocator;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -48,12 +63,12 @@ import org.eclipse.swt.graphics.Color;
 /**
  * @generated
  */
-public class NodePropertyEditPart extends ShapeNodeEditPart {
+public class TCPropertyEditPart extends ShapeNodeEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3004;
+	public static final int VISUAL_ID = 3016;
 
 	/**
 	 * @generated
@@ -68,7 +83,7 @@ public class NodePropertyEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public NodePropertyEditPart(View view) {
+	public TCPropertyEditPart(View view) {
 		super(view);
 	}
 
@@ -78,7 +93,7 @@ public class NodePropertyEditPart extends ShapeNodeEditPart {
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new NodePropertyItemSemanticEditPolicy());
+				new TCPropertyItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -127,6 +142,55 @@ public class NodePropertyEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
+	protected boolean addFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof TCPropertyNameEditPart) {
+			((TCPropertyNameEditPart) childEditPart).setLabel(getPrimaryShape()
+					.getFigurePropertiesNameLabel());
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected boolean removeFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof TCPropertyNameEditPart) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void addChildVisual(EditPart childEditPart, int index) {
+		if (addFixedChild(childEditPart)) {
+			return;
+		}
+		super.addChildVisual(childEditPart, -1);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void removeChildVisual(EditPart childEditPart) {
+		if (removeFixedChild(childEditPart)) {
+			return;
+		}
+		super.removeChildVisual(childEditPart);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		return getContentPane();
+	}
+
+	/**
+	 * @generated
+	 */
 	protected NodeFigure createNodePlate() {
 		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40);
 		return result;
@@ -156,6 +220,11 @@ public class NodePropertyEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure setupContentPane(IFigure nodeShape) {
+		if (nodeShape.getLayoutManager() == null) {
+			ConstrainedToolbarLayout layout = new ConstrainedToolbarLayout();
+			layout.setSpacing(5);
+			nodeShape.setLayoutManager(layout);
+		}
 		return nodeShape; // use nodeShape itself as contentPane
 	}
 
@@ -208,13 +277,49 @@ public class NodePropertyEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class PropertiesFigure extends WrappingLabel {
+	public EditPart getPrimaryChildEditPart() {
+		return getChildBySemanticHint(OrocosComponentModelVisualIDRegistry
+				.getType(TCPropertyNameEditPart.VISUAL_ID));
+	}
+
+	/**
+	 * @generated
+	 */
+	public class PropertiesFigure extends RectangleFigure {
+
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigurePropertiesNameLabel;
 
 		/**
 		 * @generated
 		 */
 		public PropertiesFigure() {
-			this.setText("<?>");
+			this.setOutline(false);
+			this.setFill(false);
+			this.setOpaque(false);
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigurePropertiesNameLabel = new WrappingLabel();
+
+			fFigurePropertiesNameLabel.setText("<?>");
+
+			this.add(fFigurePropertiesNameLabel);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigurePropertiesNameLabel() {
+			return fFigurePropertiesNameLabel;
 		}
 
 	}

@@ -191,6 +191,6 @@ public class CompOperationCaller3EditPart extends ConnectionNodeEditPart
 	 */
 	static final Font FFIGUREEXPOSECONSUMERCONNECTIONLABEL_FONT = new Font(
 			Display.getCurrent(), Display.getDefault().getSystemFont()
-					.getFontData()[0].getName(), 15, SWT.BOLD);
+					.getFontData()[0].getName(), 15, SWT.NORMAL);
 
 }

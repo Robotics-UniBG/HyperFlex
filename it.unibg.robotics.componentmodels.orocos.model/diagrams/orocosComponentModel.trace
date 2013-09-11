@@ -30,9 +30,6 @@
       visualID="3003"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.orocos' and _eClass_.name = 'TCOutputDataPort') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.orocos' and _eClass_.name = 'TaskContext') and _containmentMF_.name = 'outputPorts')"/>
   <childNodeTraces
-      visualID="3004"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.orocos' and _eClass_.name = 'NodeProperty') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.orocos' and _eClass_.name = 'TaskContext') and _containmentMF_.name = 'properties')"/>
-  <childNodeTraces
       visualID="3005"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.orocos' and _eClass_.name = 'Composite') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.orocos' and _eClass_.name = 'Composite') and _containmentMF_.name = 'components')">
     <nodeLabelTraces
@@ -69,6 +66,13 @@
   <childNodeTraces
       visualID="3015"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.orocos' and _eClass_.name = 'CompOperationCaller') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.orocos' and _eClass_.name = 'Composite') and _containmentMF_.name = 'operationCallers')"/>
+  <childNodeTraces
+      visualID="3016"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.orocos' and _eClass_.name = 'TCProperty') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.orocos' and _eClass_.name = 'TaskContext') and _containmentMF_.name = 'properties')">
+    <nodeLabelTraces
+        visualID="5005"
+        queryText="true"/>
+  </childNodeTraces>
   <linkTraces
       visualID="4001"
       queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.orocos' and _eClass_.name = 'ConnectionPolicy')">

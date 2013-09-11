@@ -41,13 +41,13 @@ import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.Composite2EditP
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.ConnectionPolicyEditPart;
-import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.PeersConnectionEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.SystemEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCInputDataPortEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationCallerEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOutputDataPortEditPart;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextPropertiesCompartmentEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.part.Messages;
@@ -400,7 +400,7 @@ public class OrocosComponentModelNavigatorContentProvider implements
 							.getType(TaskContextPropertiesCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					OrocosComponentModelVisualIDRegistry
-							.getType(NodePropertyEditPart.VISUAL_ID));
+							.getType(TCPropertyEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),

@@ -33,6 +33,7 @@ import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeName2E
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.ConnectionPolicyNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.PeersConnectionNameEditPart;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextNameEditPart;
 import it.unibg.robotics.orocoscomponentmodel.diagram.parsers.MessageFormatParser;
 import it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelVisualIDRegistry;
@@ -90,6 +91,24 @@ public class OrocosComponentModelParserProvider extends AbstractProvider
 			taskContextName_5001Parser = parser;
 		}
 		return taskContextName_5001Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser tCPropertyName_5005Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getTCPropertyName_5005Parser() {
+		if (tCPropertyName_5005Parser == null) {
+			EAttribute[] features = new EAttribute[] { it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage.eINSTANCE
+					.getProperty_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			tCPropertyName_5005Parser = parser;
+		}
+		return tCPropertyName_5005Parser;
 	}
 
 	/**
@@ -227,6 +246,8 @@ public class OrocosComponentModelParserProvider extends AbstractProvider
 			return getCompositeName_5003Parser();
 		case TaskContextNameEditPart.VISUAL_ID:
 			return getTaskContextName_5001Parser();
+		case TCPropertyNameEditPart.VISUAL_ID:
+			return getTCPropertyName_5005Parser();
 		case CompositeName2EditPart.VISUAL_ID:
 			return getCompositeName_5002Parser();
 		case ConnectionPolicyNameEditPart.VISUAL_ID:

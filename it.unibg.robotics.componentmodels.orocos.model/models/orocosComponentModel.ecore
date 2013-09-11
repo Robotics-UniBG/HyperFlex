@@ -18,7 +18,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="peersConnections" upperBound="-1"
         eType="#//PeersConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//CompositeProperty" containment="true"/>
+        eType="#//CompProperty" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TaskContext" eSuperTypes="#//AbstractComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputPorts" upperBound="-1"
@@ -26,7 +26,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputPorts" upperBound="-1"
         eType="#//TCOutputDataPort" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
-        eType="#//NodeProperty" containment="true"/>
+        eType="#//TCProperty" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
         eType="#//TCOperation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operationCallers" upperBound="-1"
@@ -123,11 +123,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="AbstractComponent" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NodeProperty" eSuperTypes="#//Property">
+  <eClassifiers xsi:type="ecore:EClass" name="TCProperty" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CompositeProperty" eSuperTypes="#//Property">
+  <eClassifiers xsi:type="ecore:EClass" name="CompProperty" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EReference" name="exposedProperty" lowerBound="1"
         eType="#//Property"/>
   </eClassifiers>

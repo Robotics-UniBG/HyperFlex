@@ -68,8 +68,11 @@ public class OrocosComponentModelEditPartFactory implements EditPartFactory {
 			case TCOutputDataPortEditPart.VISUAL_ID:
 				return new TCOutputDataPortEditPart(view);
 
-			case NodePropertyEditPart.VISUAL_ID:
-				return new NodePropertyEditPart(view);
+			case TCPropertyEditPart.VISUAL_ID:
+				return new TCPropertyEditPart(view);
+
+			case TCPropertyNameEditPart.VISUAL_ID:
+				return new TCPropertyNameEditPart(view);
 
 			case TCOperationEditPart.VISUAL_ID:
 				return new TCOperationEditPart(view);

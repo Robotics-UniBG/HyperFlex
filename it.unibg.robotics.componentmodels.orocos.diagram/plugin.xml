@@ -242,7 +242,7 @@ http://www.eclipse.org/legal/epl-v10.html
       <viewProvider class="it.unibg.robotics.orocoscomponentmodel.diagram.providers.OrocosComponentModelViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="OrocosComponentModel"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,3001,3002,3003,3004,3010,3011,3005,3006,3007,3012,3013,3008,3009,3014,3015"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,3001,3002,3003,3016,3010,3011,3005,3006,3007,3012,3013,3008,3009,3014,3015"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4004,4005,4007,4008,4009"/>
       </viewProvider>
    </extension>
@@ -255,13 +255,13 @@ http://www.eclipse.org/legal/epl-v10.html
             <method name="getType()" value="OrocosComponentModel"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,3001,3002,3003,3004,3010,3011,3005,3006,3007,3012,3013,3008,3009,3014,3015"/>
+            <method name="getType()" value="2001,3001,3002,3003,3016,3010,3011,3005,3006,3007,3012,3013,3008,3009,3014,3015"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001,4004,4005,4007,4008,4009"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5003,5001,5002"/>
+            <method name="getType()" value="5003,5001,5005,5002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value="7001,7002"/>
@@ -279,7 +279,7 @@ http://www.eclipse.org/legal/epl-v10.html
          <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextEditPart" id="TaskContext_3001"/>
          <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCInputDataPortEditPart" id="TCInputDataPort_3002"/>
          <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOutputDataPortEditPart" id="TCOutputDataPort_3003"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.NodePropertyEditPart" id="NodeProperty_3004"/>
+         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyEditPart" id="TCProperty_3016"/>
          <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationEditPart" id="TCOperation_3010"/>
          <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationCallerEditPart" id="TCOperationCaller_3011"/>
          <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.Composite2EditPart" id="Composite_3005"/>
@@ -291,7 +291,7 @@ http://www.eclipse.org/legal/epl-v10.html
          <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompOutputPort2EditPart" id="CompOutputPort_3009"/>
          <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompOperation2EditPart" id="CompOperation_3014"/>
          <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompOperationCaller2EditPart" id="CompOperationCaller_3015"/>
-         <context elements="System_1000,Composite_2001,TaskContext_3001,TCInputDataPort_3002,TCOutputDataPort_3003,NodeProperty_3004,TCOperation_3010,TCOperationCaller_3011,Composite_3005,CompInputPort_3006,CompOutputPort_3007,CompOperation_3012,CompOperationCaller_3013,CompInputPort_3008,CompOutputPort_3009,CompOperation_3014,CompOperationCaller_3015"/>
+         <context elements="System_1000,Composite_2001,TaskContext_3001,TCInputDataPort_3002,TCOutputDataPort_3003,TCProperty_3016,TCOperation_3010,TCOperationCaller_3011,Composite_3005,CompInputPort_3006,CompOutputPort_3007,CompOperation_3012,CompOperationCaller_3013,CompInputPort_3008,CompOutputPort_3009,CompOperation_3014,CompOperationCaller_3015"/>
       </modelingAssistantProvider>
    </extension>
 
@@ -363,12 +363,12 @@ http://www.eclipse.org/legal/epl-v10.html
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.NodeProperty_3004"
-               name="%metatype.name.NodeProperty_3004"
+               id="it.unibg.robotics.componentmodels.orocos.diagram.TCProperty_3016"
+               name="%metatype.name.TCProperty_3016"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="NodeProperty"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.NodePropertyEditHelper">
-            <param name="semanticHint" value="3004"/>
+               eclass="TCProperty"
+               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.TCPropertyEditHelper">
+            <param name="semanticHint" value="3016"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
@@ -549,7 +549,7 @@ http://www.eclipse.org/legal/epl-v10.html
          <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.TaskContext_3001"/>
          <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.TCInputDataPort_3002"/>
          <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.TCOutputDataPort_3003"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.NodeProperty_3004"/>
+         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.TCProperty_3016"/>
          <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.TCOperation_3010"/>
          <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.TCOperationCaller_3011"/>
          <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.Composite_3005"/>

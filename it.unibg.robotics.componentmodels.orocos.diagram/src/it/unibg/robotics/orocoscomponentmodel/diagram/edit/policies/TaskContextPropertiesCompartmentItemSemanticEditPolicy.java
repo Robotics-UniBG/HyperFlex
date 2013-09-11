@@ -25,7 +25,7 @@
  */
 package it.unibg.robotics.orocoscomponentmodel.diagram.edit.policies;
 
-import it.unibg.robotics.orocoscomponentmodel.diagram.edit.commands.NodePropertyCreateCommand;
+import it.unibg.robotics.orocoscomponentmodel.diagram.edit.commands.TCPropertyCreateCommand;
 import it.unibg.robotics.orocoscomponentmodel.diagram.providers.OrocosComponentModelElementTypes;
 
 import org.eclipse.gef.commands.Command;
@@ -48,9 +48,9 @@ public class TaskContextPropertiesCompartmentItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (OrocosComponentModelElementTypes.NodeProperty_3004 == req
+		if (OrocosComponentModelElementTypes.TCProperty_3016 == req
 				.getElementType()) {
-			return getGEFWrapper(new NodePropertyCreateCommand(req));
+			return getGEFWrapper(new TCPropertyCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

@@ -387,7 +387,7 @@ public class TaskContextEditPart extends AbstractBorderedShapeEditPart {
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter
 					.getAdapter(IElementType.class);
-			if (type == OrocosComponentModelElementTypes.NodeProperty_3004) {
+			if (type == OrocosComponentModelElementTypes.TCProperty_3016) {
 				return getChildBySemanticHint(OrocosComponentModelVisualIDRegistry
 						.getType(TaskContextPropertiesCompartmentEditPart.VISUAL_ID));
 			}

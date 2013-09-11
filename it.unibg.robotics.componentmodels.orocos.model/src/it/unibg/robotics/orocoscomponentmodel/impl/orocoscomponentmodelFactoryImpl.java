@@ -29,15 +29,14 @@ import it.unibg.robotics.orocoscomponentmodel.CompInputPort;
 import it.unibg.robotics.orocoscomponentmodel.CompOperation;
 import it.unibg.robotics.orocoscomponentmodel.CompOperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.CompOutputPort;
+import it.unibg.robotics.orocoscomponentmodel.CompProperty;
 import it.unibg.robotics.orocoscomponentmodel.Composite;
-import it.unibg.robotics.orocoscomponentmodel.CompositeProperty;
 import it.unibg.robotics.orocoscomponentmodel.ConnectionPolicy;
 import it.unibg.robotics.orocoscomponentmodel.ConnectionTransport;
 import it.unibg.robotics.orocoscomponentmodel.ConnectionType;
 import it.unibg.robotics.orocoscomponentmodel.DataPort;
 import it.unibg.robotics.orocoscomponentmodel.InputDataPort;
 import it.unibg.robotics.orocoscomponentmodel.LockPolicy;
-import it.unibg.robotics.orocoscomponentmodel.NodeProperty;
 import it.unibg.robotics.orocoscomponentmodel.Operation;
 import it.unibg.robotics.orocoscomponentmodel.OperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.OutputDataPort;
@@ -47,6 +46,7 @@ import it.unibg.robotics.orocoscomponentmodel.TCInputDataPort;
 import it.unibg.robotics.orocoscomponentmodel.TCOperation;
 import it.unibg.robotics.orocoscomponentmodel.TCOperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.TCOutputDataPort;
+import it.unibg.robotics.orocoscomponentmodel.TCProperty;
 import it.unibg.robotics.orocoscomponentmodel.TaskContext;
 import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelFactory;
 import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage;
@@ -55,9 +55,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -123,8 +121,8 @@ public class orocoscomponentmodelFactoryImpl extends EFactoryImpl implements oro
 			case orocoscomponentmodelPackage.DATA_PORT: return createDataPort();
 			case orocoscomponentmodelPackage.INPUT_DATA_PORT: return createInputDataPort();
 			case orocoscomponentmodelPackage.OUTPUT_DATA_PORT: return createOutputDataPort();
-			case orocoscomponentmodelPackage.NODE_PROPERTY: return createNodeProperty();
-			case orocoscomponentmodelPackage.COMPOSITE_PROPERTY: return createCompositeProperty();
+			case orocoscomponentmodelPackage.TC_PROPERTY: return createTCProperty();
+			case orocoscomponentmodelPackage.COMP_PROPERTY: return createCompProperty();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -363,9 +361,9 @@ public class orocoscomponentmodelFactoryImpl extends EFactoryImpl implements oro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NodeProperty createNodeProperty() {
-		NodePropertyImpl nodeProperty = new NodePropertyImpl();
-		return nodeProperty;
+	public TCProperty createTCProperty() {
+		TCPropertyImpl tcProperty = new TCPropertyImpl();
+		return tcProperty;
 	}
 
 	/**
@@ -373,9 +371,9 @@ public class orocoscomponentmodelFactoryImpl extends EFactoryImpl implements oro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CompositeProperty createCompositeProperty() {
-		CompositePropertyImpl compositeProperty = new CompositePropertyImpl();
-		return compositeProperty;
+	public CompProperty createCompProperty() {
+		CompPropertyImpl compProperty = new CompPropertyImpl();
+		return compProperty;
 	}
 
 	/**

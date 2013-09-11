@@ -30,15 +30,14 @@ import it.unibg.robotics.orocoscomponentmodel.CompInputPort;
 import it.unibg.robotics.orocoscomponentmodel.CompOperation;
 import it.unibg.robotics.orocoscomponentmodel.CompOperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.CompOutputPort;
+import it.unibg.robotics.orocoscomponentmodel.CompProperty;
 import it.unibg.robotics.orocoscomponentmodel.Composite;
-import it.unibg.robotics.orocoscomponentmodel.CompositeProperty;
 import it.unibg.robotics.orocoscomponentmodel.ConnectionPolicy;
 import it.unibg.robotics.orocoscomponentmodel.ConnectionTransport;
 import it.unibg.robotics.orocoscomponentmodel.ConnectionType;
 import it.unibg.robotics.orocoscomponentmodel.DataPort;
 import it.unibg.robotics.orocoscomponentmodel.InputDataPort;
 import it.unibg.robotics.orocoscomponentmodel.LockPolicy;
-import it.unibg.robotics.orocoscomponentmodel.NodeProperty;
 import it.unibg.robotics.orocoscomponentmodel.Operation;
 import it.unibg.robotics.orocoscomponentmodel.OperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.OutputDataPort;
@@ -48,6 +47,7 @@ import it.unibg.robotics.orocoscomponentmodel.TCInputDataPort;
 import it.unibg.robotics.orocoscomponentmodel.TCOperation;
 import it.unibg.robotics.orocoscomponentmodel.TCOperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.TCOutputDataPort;
+import it.unibg.robotics.orocoscomponentmodel.TCProperty;
 import it.unibg.robotics.orocoscomponentmodel.TaskContext;
 import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelFactory;
 import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage;
@@ -57,7 +57,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -212,14 +211,14 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass nodePropertyEClass = null;
+	private EClass tcPropertyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass compositePropertyEClass = null;
+	private EClass compPropertyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -866,8 +865,8 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNodeProperty() {
-		return nodePropertyEClass;
+	public EClass getTCProperty() {
+		return tcPropertyEClass;
 	}
 
 	/**
@@ -875,8 +874,8 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNodeProperty_Value() {
-		return (EAttribute)nodePropertyEClass.getEStructuralFeatures().get(0);
+	public EAttribute getTCProperty_Value() {
+		return (EAttribute)tcPropertyEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -884,8 +883,8 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNodeProperty_Type() {
-		return (EAttribute)nodePropertyEClass.getEStructuralFeatures().get(1);
+	public EAttribute getTCProperty_Type() {
+		return (EAttribute)tcPropertyEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -893,8 +892,8 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCompositeProperty() {
-		return compositePropertyEClass;
+	public EClass getCompProperty() {
+		return compPropertyEClass;
 	}
 
 	/**
@@ -902,8 +901,8 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCompositeProperty_ExposedProperty() {
-		return (EReference)compositePropertyEClass.getEStructuralFeatures().get(0);
+	public EReference getCompProperty_ExposedProperty() {
+		return (EReference)compPropertyEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1043,12 +1042,12 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 		abstractComponentEClass = createEClass(ABSTRACT_COMPONENT);
 		createEAttribute(abstractComponentEClass, ABSTRACT_COMPONENT__NAME);
 
-		nodePropertyEClass = createEClass(NODE_PROPERTY);
-		createEAttribute(nodePropertyEClass, NODE_PROPERTY__VALUE);
-		createEAttribute(nodePropertyEClass, NODE_PROPERTY__TYPE);
+		tcPropertyEClass = createEClass(TC_PROPERTY);
+		createEAttribute(tcPropertyEClass, TC_PROPERTY__VALUE);
+		createEAttribute(tcPropertyEClass, TC_PROPERTY__TYPE);
 
-		compositePropertyEClass = createEClass(COMPOSITE_PROPERTY);
-		createEReference(compositePropertyEClass, COMPOSITE_PROPERTY__EXPOSED_PROPERTY);
+		compPropertyEClass = createEClass(COMP_PROPERTY);
+		createEReference(compPropertyEClass, COMP_PROPERTY__EXPOSED_PROPERTY);
 
 		// Create enums
 		connectionTypeEEnum = createEEnum(CONNECTION_TYPE);
@@ -1096,8 +1095,8 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 		tcOperationCallerEClass.getESuperTypes().add(this.getOperationCaller());
 		inputDataPortEClass.getESuperTypes().add(this.getDataPort());
 		outputDataPortEClass.getESuperTypes().add(this.getDataPort());
-		nodePropertyEClass.getESuperTypes().add(this.getProperty());
-		compositePropertyEClass.getESuperTypes().add(this.getProperty());
+		tcPropertyEClass.getESuperTypes().add(this.getProperty());
+		compPropertyEClass.getESuperTypes().add(this.getProperty());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(compositeEClass, Composite.class, "Composite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1108,12 +1107,12 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 		initEReference(getComposite_Operations(), this.getCompOperation(), null, "operations", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComposite_OperationCallers(), this.getCompOperationCaller(), null, "operationCallers", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComposite_PeersConnections(), this.getPeersConnection(), null, "peersConnections", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComposite_Properties(), this.getCompositeProperty(), null, "properties", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComposite_Properties(), this.getCompProperty(), null, "properties", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskContextEClass, TaskContext.class, "TaskContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskContext_InputPorts(), this.getTCInputDataPort(), null, "inputPorts", null, 0, -1, TaskContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTaskContext_OutputPorts(), this.getTCOutputDataPort(), null, "outputPorts", null, 0, -1, TaskContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTaskContext_Properties(), this.getNodeProperty(), null, "properties", null, 0, -1, TaskContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskContext_Properties(), this.getTCProperty(), null, "properties", null, 0, -1, TaskContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTaskContext_Operations(), this.getTCOperation(), null, "operations", null, 0, -1, TaskContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTaskContext_OperationCallers(), this.getTCOperationCaller(), null, "operationCallers", null, 0, -1, TaskContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTaskContext_Namespace(), ecorePackage.getEString(), "namespace", null, 1, 1, TaskContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1182,12 +1181,12 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 		initEClass(abstractComponentEClass, AbstractComponent.class, "AbstractComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbstractComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, AbstractComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(nodePropertyEClass, NodeProperty.class, "NodeProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNodeProperty_Value(), ecorePackage.getEString(), "value", null, 0, 1, NodeProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNodeProperty_Type(), ecorePackage.getEString(), "type", null, 0, 1, NodeProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(tcPropertyEClass, TCProperty.class, "TCProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTCProperty_Value(), ecorePackage.getEString(), "value", null, 0, 1, TCProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTCProperty_Type(), ecorePackage.getEString(), "type", null, 0, 1, TCProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(compositePropertyEClass, CompositeProperty.class, "CompositeProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCompositeProperty_ExposedProperty(), this.getProperty(), null, "exposedProperty", null, 1, 1, CompositeProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(compPropertyEClass, CompProperty.class, "CompProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCompProperty_ExposedProperty(), this.getProperty(), null, "exposedProperty", null, 1, 1, CompProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(connectionTypeEEnum, ConnectionType.class, "ConnectionType");

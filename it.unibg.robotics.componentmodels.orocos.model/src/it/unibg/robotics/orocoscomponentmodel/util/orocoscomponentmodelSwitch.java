@@ -30,12 +30,11 @@ import it.unibg.robotics.orocoscomponentmodel.CompInputPort;
 import it.unibg.robotics.orocoscomponentmodel.CompOperation;
 import it.unibg.robotics.orocoscomponentmodel.CompOperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.CompOutputPort;
+import it.unibg.robotics.orocoscomponentmodel.CompProperty;
 import it.unibg.robotics.orocoscomponentmodel.Composite;
-import it.unibg.robotics.orocoscomponentmodel.CompositeProperty;
 import it.unibg.robotics.orocoscomponentmodel.ConnectionPolicy;
 import it.unibg.robotics.orocoscomponentmodel.DataPort;
 import it.unibg.robotics.orocoscomponentmodel.InputDataPort;
-import it.unibg.robotics.orocoscomponentmodel.NodeProperty;
 import it.unibg.robotics.orocoscomponentmodel.Operation;
 import it.unibg.robotics.orocoscomponentmodel.OperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.OutputDataPort;
@@ -45,12 +44,12 @@ import it.unibg.robotics.orocoscomponentmodel.TCInputDataPort;
 import it.unibg.robotics.orocoscomponentmodel.TCOperation;
 import it.unibg.robotics.orocoscomponentmodel.TCOperationCaller;
 import it.unibg.robotics.orocoscomponentmodel.TCOutputDataPort;
+import it.unibg.robotics.orocoscomponentmodel.TCProperty;
 import it.unibg.robotics.orocoscomponentmodel.TaskContext;
 import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
 
 /**
@@ -246,17 +245,17 @@ public class orocoscomponentmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case orocoscomponentmodelPackage.NODE_PROPERTY: {
-				NodeProperty nodeProperty = (NodeProperty)theEObject;
-				T result = caseNodeProperty(nodeProperty);
-				if (result == null) result = caseProperty(nodeProperty);
+			case orocoscomponentmodelPackage.TC_PROPERTY: {
+				TCProperty tcProperty = (TCProperty)theEObject;
+				T result = caseTCProperty(tcProperty);
+				if (result == null) result = caseProperty(tcProperty);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case orocoscomponentmodelPackage.COMPOSITE_PROPERTY: {
-				CompositeProperty compositeProperty = (CompositeProperty)theEObject;
-				T result = caseCompositeProperty(compositeProperty);
-				if (result == null) result = caseProperty(compositeProperty);
+			case orocoscomponentmodelPackage.COMP_PROPERTY: {
+				CompProperty compProperty = (CompProperty)theEObject;
+				T result = caseCompProperty(compProperty);
+				if (result == null) result = caseProperty(compProperty);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -565,32 +564,32 @@ public class orocoscomponentmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Node Property</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TC Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Node Property</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TC Property</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNodeProperty(NodeProperty object) {
+	public T caseTCProperty(TCProperty object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Composite Property</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Comp Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Composite Property</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Comp Property</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCompositeProperty(CompositeProperty object) {
+	public T caseCompProperty(CompProperty object) {
 		return null;
 	}
 

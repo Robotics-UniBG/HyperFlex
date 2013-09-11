@@ -946,14 +946,14 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	int SYSTEM_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.orocoscomponentmodel.impl.NodePropertyImpl <em>Node Property</em>}' class.
+	 * The meta object id for the '{@link it.unibg.robotics.orocoscomponentmodel.impl.TCPropertyImpl <em>TC Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.orocoscomponentmodel.impl.NodePropertyImpl
-	 * @see it.unibg.robotics.orocoscomponentmodel.impl.orocoscomponentmodelPackageImpl#getNodeProperty()
+	 * @see it.unibg.robotics.orocoscomponentmodel.impl.TCPropertyImpl
+	 * @see it.unibg.robotics.orocoscomponentmodel.impl.orocoscomponentmodelPackageImpl#getTCProperty()
 	 * @generated
 	 */
-	int NODE_PROPERTY = 20;
+	int TC_PROPERTY = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -962,7 +962,7 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_PROPERTY__NAME = PROPERTY__NAME;
+	int TC_PROPERTY__NAME = PROPERTY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -971,7 +971,7 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_PROPERTY__VALUE = PROPERTY_FEATURE_COUNT + 0;
+	int TC_PROPERTY__VALUE = PROPERTY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -980,26 +980,26 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_PROPERTY__TYPE = PROPERTY_FEATURE_COUNT + 1;
+	int TC_PROPERTY__TYPE = PROPERTY_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Node Property</em>' class.
+	 * The number of structural features of the '<em>TC Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_PROPERTY_FEATURE_COUNT = PROPERTY_FEATURE_COUNT + 2;
+	int TC_PROPERTY_FEATURE_COUNT = PROPERTY_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.orocoscomponentmodel.impl.CompositePropertyImpl <em>Composite Property</em>}' class.
+	 * The meta object id for the '{@link it.unibg.robotics.orocoscomponentmodel.impl.CompPropertyImpl <em>Comp Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.orocoscomponentmodel.impl.CompositePropertyImpl
-	 * @see it.unibg.robotics.orocoscomponentmodel.impl.orocoscomponentmodelPackageImpl#getCompositeProperty()
+	 * @see it.unibg.robotics.orocoscomponentmodel.impl.CompPropertyImpl
+	 * @see it.unibg.robotics.orocoscomponentmodel.impl.orocoscomponentmodelPackageImpl#getCompProperty()
 	 * @generated
 	 */
-	int COMPOSITE_PROPERTY = 21;
+	int COMP_PROPERTY = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1008,7 +1008,7 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_PROPERTY__NAME = PROPERTY__NAME;
+	int COMP_PROPERTY__NAME = PROPERTY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Exposed Property</b></em>' reference.
@@ -1017,16 +1017,16 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_PROPERTY__EXPOSED_PROPERTY = PROPERTY_FEATURE_COUNT + 0;
+	int COMP_PROPERTY__EXPOSED_PROPERTY = PROPERTY_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Composite Property</em>' class.
+	 * The number of structural features of the '<em>Comp Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_PROPERTY_FEATURE_COUNT = PROPERTY_FEATURE_COUNT + 1;
+	int COMP_PROPERTY_FEATURE_COUNT = PROPERTY_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.orocoscomponentmodel.ConnectionType <em>Connection Type</em>}' enum.
@@ -1722,57 +1722,57 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	EAttribute getAbstractComponent_Name();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.orocoscomponentmodel.NodeProperty <em>Node Property</em>}'.
+	 * Returns the meta object for class '{@link it.unibg.robotics.orocoscomponentmodel.TCProperty <em>TC Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Node Property</em>'.
-	 * @see it.unibg.robotics.orocoscomponentmodel.NodeProperty
+	 * @return the meta object for class '<em>TC Property</em>'.
+	 * @see it.unibg.robotics.orocoscomponentmodel.TCProperty
 	 * @generated
 	 */
-	EClass getNodeProperty();
+	EClass getTCProperty();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.orocoscomponentmodel.NodeProperty#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.orocoscomponentmodel.TCProperty#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see it.unibg.robotics.orocoscomponentmodel.NodeProperty#getValue()
-	 * @see #getNodeProperty()
+	 * @see it.unibg.robotics.orocoscomponentmodel.TCProperty#getValue()
+	 * @see #getTCProperty()
 	 * @generated
 	 */
-	EAttribute getNodeProperty_Value();
+	EAttribute getTCProperty_Value();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.orocoscomponentmodel.NodeProperty#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.orocoscomponentmodel.TCProperty#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see it.unibg.robotics.orocoscomponentmodel.NodeProperty#getType()
-	 * @see #getNodeProperty()
+	 * @see it.unibg.robotics.orocoscomponentmodel.TCProperty#getType()
+	 * @see #getTCProperty()
 	 * @generated
 	 */
-	EAttribute getNodeProperty_Type();
+	EAttribute getTCProperty_Type();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.orocoscomponentmodel.CompositeProperty <em>Composite Property</em>}'.
+	 * Returns the meta object for class '{@link it.unibg.robotics.orocoscomponentmodel.CompProperty <em>Comp Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Composite Property</em>'.
-	 * @see it.unibg.robotics.orocoscomponentmodel.CompositeProperty
+	 * @return the meta object for class '<em>Comp Property</em>'.
+	 * @see it.unibg.robotics.orocoscomponentmodel.CompProperty
 	 * @generated
 	 */
-	EClass getCompositeProperty();
+	EClass getCompProperty();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.orocoscomponentmodel.CompositeProperty#getExposedProperty <em>Exposed Property</em>}'.
+	 * Returns the meta object for the reference '{@link it.unibg.robotics.orocoscomponentmodel.CompProperty#getExposedProperty <em>Exposed Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Exposed Property</em>'.
-	 * @see it.unibg.robotics.orocoscomponentmodel.CompositeProperty#getExposedProperty()
-	 * @see #getCompositeProperty()
+	 * @see it.unibg.robotics.orocoscomponentmodel.CompProperty#getExposedProperty()
+	 * @see #getCompProperty()
 	 * @generated
 	 */
-	EReference getCompositeProperty_ExposedProperty();
+	EReference getCompProperty_ExposedProperty();
 
 	/**
 	 * Returns the meta object for enum '{@link it.unibg.robotics.orocoscomponentmodel.ConnectionType <em>Connection Type</em>}'.
@@ -2363,14 +2363,14 @@ public interface orocoscomponentmodelPackage extends EPackage {
 		EAttribute ABSTRACT_COMPONENT__NAME = eINSTANCE.getAbstractComponent_Name();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.orocoscomponentmodel.impl.NodePropertyImpl <em>Node Property</em>}' class.
+		 * The meta object literal for the '{@link it.unibg.robotics.orocoscomponentmodel.impl.TCPropertyImpl <em>TC Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.orocoscomponentmodel.impl.NodePropertyImpl
-		 * @see it.unibg.robotics.orocoscomponentmodel.impl.orocoscomponentmodelPackageImpl#getNodeProperty()
+		 * @see it.unibg.robotics.orocoscomponentmodel.impl.TCPropertyImpl
+		 * @see it.unibg.robotics.orocoscomponentmodel.impl.orocoscomponentmodelPackageImpl#getTCProperty()
 		 * @generated
 		 */
-		EClass NODE_PROPERTY = eINSTANCE.getNodeProperty();
+		EClass TC_PROPERTY = eINSTANCE.getTCProperty();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -2378,7 +2378,7 @@ public interface orocoscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute NODE_PROPERTY__VALUE = eINSTANCE.getNodeProperty_Value();
+		EAttribute TC_PROPERTY__VALUE = eINSTANCE.getTCProperty_Value();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -2386,17 +2386,17 @@ public interface orocoscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute NODE_PROPERTY__TYPE = eINSTANCE.getNodeProperty_Type();
+		EAttribute TC_PROPERTY__TYPE = eINSTANCE.getTCProperty_Type();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.orocoscomponentmodel.impl.CompositePropertyImpl <em>Composite Property</em>}' class.
+		 * The meta object literal for the '{@link it.unibg.robotics.orocoscomponentmodel.impl.CompPropertyImpl <em>Comp Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.orocoscomponentmodel.impl.CompositePropertyImpl
-		 * @see it.unibg.robotics.orocoscomponentmodel.impl.orocoscomponentmodelPackageImpl#getCompositeProperty()
+		 * @see it.unibg.robotics.orocoscomponentmodel.impl.CompPropertyImpl
+		 * @see it.unibg.robotics.orocoscomponentmodel.impl.orocoscomponentmodelPackageImpl#getCompProperty()
 		 * @generated
 		 */
-		EClass COMPOSITE_PROPERTY = eINSTANCE.getCompositeProperty();
+		EClass COMP_PROPERTY = eINSTANCE.getCompProperty();
 
 		/**
 		 * The meta object literal for the '<em><b>Exposed Property</b></em>' reference feature.
@@ -2404,7 +2404,7 @@ public interface orocoscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPOSITE_PROPERTY__EXPOSED_PROPERTY = eINSTANCE.getCompositeProperty_ExposedProperty();
+		EReference COMP_PROPERTY__EXPOSED_PROPERTY = eINSTANCE.getCompProperty_ExposedProperty();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.orocoscomponentmodel.ConnectionType <em>Connection Type</em>}' enum.

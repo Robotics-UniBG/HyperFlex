@@ -26,7 +26,7 @@
 package it.unibg.robotics.orocoscomponentmodel.provider;
 
 
-import it.unibg.robotics.orocoscomponentmodel.NodeProperty;
+import it.unibg.robotics.orocoscomponentmodel.CompProperty;
 import it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage;
 
 import java.util.Collection;
@@ -42,16 +42,14 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link it.unibg.robotics.orocoscomponentmodel.NodeProperty} object.
+ * This is the item provider adapter for a {@link it.unibg.robotics.orocoscomponentmodel.CompProperty} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class NodePropertyItemProvider
+public class CompPropertyItemProvider
 	extends PropertyItemProvider
 	implements
 		IEditingDomainItemProvider,
@@ -65,7 +63,7 @@ public class NodePropertyItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NodePropertyItemProvider(AdapterFactory adapterFactory) {
+	public CompPropertyItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -80,65 +78,42 @@ public class NodePropertyItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addValuePropertyDescriptor(object);
-			addTypePropertyDescriptor(object);
+			addExposedPropertyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Value feature.
+	 * This adds a property descriptor for the Exposed Property feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addValuePropertyDescriptor(Object object) {
+	protected void addExposedPropertyPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_NodeProperty_value_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NodeProperty_value_feature", "_UI_NodeProperty_type"),
-				 orocoscomponentmodelPackage.Literals.NODE_PROPERTY__VALUE,
+				 getString("_UI_CompProperty_exposedProperty_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CompProperty_exposedProperty_feature", "_UI_CompProperty_type"),
+				 orocoscomponentmodelPackage.Literals.COMP_PROPERTY__EXPOSED_PROPERTY,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_NodeProperty_type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NodeProperty_type_feature", "_UI_NodeProperty_type"),
-				 orocoscomponentmodelPackage.Literals.NODE_PROPERTY__TYPE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This returns NodeProperty.gif.
+	 * This returns CompProperty.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/NodeProperty"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CompProperty"));
 	}
 
 	/**
@@ -149,10 +124,10 @@ public class NodePropertyItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((NodeProperty)object).getName();
+		String label = ((CompProperty)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_NodeProperty_type") :
-			getString("_UI_NodeProperty_type") + " " + label;
+			getString("_UI_CompProperty_type") :
+			getString("_UI_CompProperty_type") + " " + label;
 	}
 
 	/**
@@ -165,13 +140,6 @@ public class NodePropertyItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(NodeProperty.class)) {
-			case orocoscomponentmodelPackage.NODE_PROPERTY__VALUE:
-			case orocoscomponentmodelPackage.NODE_PROPERTY__TYPE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

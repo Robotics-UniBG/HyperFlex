@@ -165,7 +165,7 @@ public interface Composite extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.orocoscomponentmodel.CompositeProperty}.
+	 * The list contents are of type {@link it.unibg.robotics.orocoscomponentmodel.CompProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
@@ -177,6 +177,6 @@ public interface Composite extends AbstractComponent {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<CompositeProperty> getProperties();
+	EList<CompProperty> getProperties();
 
 } // Composite
