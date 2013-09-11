@@ -1,0 +1,7 @@
+# Tracing options for the it.unibg.robotics.componentmodels.tca.diagram plug-in
+
+# Common issues
+it.unibg.robotics.componentmodels.tca.diagram/debug=false
+
+# Visual IDs
+it.unibg.robotics.componentmodels.tca.diagram/debug/visualID=false
