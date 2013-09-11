@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfmap:Mapping
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:gmfmap="http://www.eclipse.org/gmf/2008/mappings">
+  <diagram>
+    <diagramCanvas
+        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#componentDiagram"/>
+    <domainModel
+        href="../models/tcaComponentModel.ecore#/"/>
+    <domainMetaElement
+        href="../models/tcaComponentModel.ecore#//System"/>
+    <palette
+        href="tcaComponentModel.gmftool#//@palette"/>
+  </diagram>
+</gmfmap:Mapping>

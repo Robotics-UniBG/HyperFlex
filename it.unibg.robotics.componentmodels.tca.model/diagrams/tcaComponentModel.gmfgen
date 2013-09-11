@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgen:GenEditorGenerator
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel"
+    copyrightText="HyperFlex toolchain&#xA;&#xA;Copyright (c) 2013&#xA;All rights reserved.&#xA;&#xA;Luca Gherardi&#xA;University of Bergamo&#xA;Dept. of Information Technology and Mathematics&#xA;&#xA;***********************************************************************************************&#xA;&#xA;Author: &lt;A HREF=&quot;mailto:luca.gherardi@unibg.it&quot;>Luca Gherardi&lt;/A>&#xA;&#xA;In collaboration with: &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;>Davide Brugali&lt;/A>&#xA;&#xA;***********************************************************************************************&#xA;&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;">
+  <diagram
+      visualID="1000"
+      editPartClassName="SystemEditPart"
+      itemSemanticEditPolicyClassName="SystemItemSemanticEditPolicy"
+      canonicalEditPolicyClassName="SystemCanonicalEditPolicy"
+      iconProviderPriority="Low"
+      validationProviderPriority="Low">
+    <diagramRunTimeClass
+        href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
+    <elementType
+        xsi:type="gmfgen:MetamodelType"
+        editHelperClassName="SystemEditHelper"/>
+    <viewmap
+        xsi:type="gmfgen:FigureViewmap"
+        figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
+    <domainDiagramElement
+        href="../models/tcaComponentModel.genmodel#//tcacomponentmodel/System"/>
+    <palette>
+      <groups
+          title="Entities"
+          collapse="true">
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Component"
+            description="Create new Node"
+            smallIconPath="icons/Component.gif"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Output Port"
+            description="Create new output port"
+            smallIconPath="icons/OutputPort.gif"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Input Port"
+            description="Create new input port"
+            smallIconPath="icons/InputPort.gif"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Property"
+            description="Create new Property"
+            smallIconPath="icons/Property.gif"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Composite"
+            description="Create new Composite"
+            smallIconPath="icons/Composite.gif"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Import Composite"
+            description="Import existing composite"
+            smallIconPath="icons/Composite.gif"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Operation"
+            description="Create new operation"
+            smallIconPath="icons/OutputPort.gif"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Operation Caller"
+            description="Create new operation caller"
+            smallIconPath="icons/InputPort.gif"/>
+      </groups>
+      <groups
+          title="Connections"
+          collapse="true">
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Promote Connection"
+            description="Create new Promote Connection"
+            smallIconPath="icons/PromoteConnection.gif"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Continue connection "
+            description="Create new Continue Connection"
+            smallIconPath="icons/ContinueConnection.gif"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Event connection "
+            description="Create new Event Connection"
+            smallIconPath="icons/EventConnection.gif"/>
+      </groups>
+    </palette>
+    <preferencePages
+        xsi:type="gmfgen:GenStandardPreferencePage"
+        iD="it.unibg.robotics.componentmodels.tca.diagram.general"
+        name="TCA Component Model Diagram">
+      <children
+          xsi:type="gmfgen:GenStandardPreferencePage"
+          iD="it.unibg.robotics.componentmodels.tca.diagram.appearance"
+          name="Appearance"
+          kind="Appearance"/>
+      <children
+          xsi:type="gmfgen:GenStandardPreferencePage"
+          iD="it.unibg.robotics.componentmodels.tca.diagram.connections"
+          name="Connections"
+          kind="Connections"/>
+      <children
+          xsi:type="gmfgen:GenStandardPreferencePage"
+          iD="it.unibg.robotics.componentmodels.tca.diagram.printing"
+          name="Printing"
+          kind="Printing"/>
+      <children
+          xsi:type="gmfgen:GenStandardPreferencePage"
+          iD="it.unibg.robotics.componentmodels.tca.diagram.rulersAndGrid"
+          name="Rulers And Grid"
+          kind="RulersAndGrid"/>
+    </preferencePages>
+  </diagram>
+  <plugin>
+    <requiredPlugins>org.eclipse.gmf.tooling.runtime</requiredPlugins>
+    <requiredPlugins>org.eclipse.draw2d</requiredPlugins>
+  </plugin>
+  <editor/>
+  <navigator>
+    <childReferences
+        child="//@diagram"/>
+  </navigator>
+  <diagramUpdater/>
+  <propertySheet>
+    <tabs
+        xsi:type="gmfgen:GenStandardPropertyTab"
+        iD="appearance"/>
+    <tabs
+        xsi:type="gmfgen:GenStandardPropertyTab"
+        iD="diagram"/>
+    <tabs
+        xsi:type="gmfgen:GenCustomPropertyTab"
+        iD="domain"
+        label="Core">
+      <filter
+          xsi:type="gmfgen:TypeTabFilter">
+        <types>org.eclipse.gmf.runtime.notation.View</types>
+        <types>org.eclipse.gef.EditPart</types>
+        <generatedTypes>abstractNavigatorItem</generatedTypes>
+      </filter>
+    </tabs>
+  </propertySheet>
+  <domainGenModel
+      href="../models/tcaComponentModel.genmodel#/"/>
+  <contextMenus
+      context="//@diagram">
+    <items
+        xsi:type="gmfgen:LoadResourceAction"/>
+  </contextMenus>
+</gmfgen:GenEditorGenerator>
