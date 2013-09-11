@@ -5,10 +5,7 @@ import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgProducer;
 import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelFactory;
 import it.unibg.robotics.componentmodels.shared.filters.ViewerFileFilter;
 import it.unibg.robotics.compositionmodel.Composite;
-import it.unibg.robotics.compositionmodel.ProvidedInterface;
-import it.unibg.robotics.compositionmodel.RequiredInterface;
 import it.unibg.robotics.compositionmodel.System;
-import it.unibg.robotics.compositionmodel.compositionmodelFactory;
 import it.unibg.robotics.roscomponentmodel.ArchitectureModel;
 import it.unibg.robotics.roscomponentmodel.Package;
 
@@ -75,8 +72,7 @@ public class ImportCompositeCreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
 
-		Composite newElement = compositionmodelFactory.eINSTANCE
-				.createComposite();
+		Composite newElement;
 
 		IFile file;
 
@@ -86,6 +82,7 @@ public class ImportCompositeCreateCommand extends EditElementCommand {
 				new BaseWorkbenchContentProvider());
 
 		dialog.addFilter(new ViewerFileFilter("roscomponentmodel"));
+		dialog.addFilter(new ViewerFileFilter("orocoscomponentmodel"));
 
 		dialog.setTitle("Model Selection");
 		dialog.setMessage("Select the model from the tree:");
@@ -112,51 +109,52 @@ public class ImportCompositeCreateCommand extends EditElementCommand {
 							.newErrorCommandResult("File Selection Error");
 				}
 
-				if (!(ecoreResource.getContents().get(0) instanceof ArchitectureModel)) {
+				if ((ecoreResource.getContents().get(0) instanceof ArchitectureModel)) {
+
+
+					newElement = roscompositionmodelFactory.eINSTANCE.createROSComposite();
+					
+					Package originalComposite = ((ArchitectureModel) ecoreResource
+							.getContents().get(0)).getPackage();
+
+					newElement.setName(originalComposite.getName());
+
+					
+					for (it.unibg.robotics.roscomponentmodel.PackageMsgProducer msgProducer : originalComposite.getMsgProducers()) {
+
+						ROSMsgProducer providedInterface = roscompositionmodelFactory.eINSTANCE
+								.createROSMsgProducer();
+						providedInterface.setName(msgProducer.getName());
+						providedInterface.setMsgProducer(msgProducer);
+						newElement.getProvInterfaces().add(providedInterface);
+
+					}
+
+					for (it.unibg.robotics.roscomponentmodel.PackageMsgConsumer msgConsumer : originalComposite.getMsgConsumers()) {
+
+						ROSMsgConsumer requiredInterface = roscompositionmodelFactory.eINSTANCE
+								.createROSMsgConsumer();
+						requiredInterface.setName(msgConsumer.getName());
+						requiredInterface.setMsgConsumer(msgConsumer);
+						newElement.getReqInterfaces().add(requiredInterface);
+
+					}
+
+					System owner = (System) getElementToEdit();
+					owner.getComposites().add(newElement);
+
+					doConfigure(newElement, monitor, info);
+
+					((CreateElementRequest) getRequest()).setNewElement(newElement);
+					return CommandResult.newOKCommandResult(newElement);
+				}else if ((ecoreResource.getContents().get(0) instanceof 
+						it.unibg.robotics.orocoscomponentmodel.System)) {
+					//TODO
+				}
+				else{
 					return CommandResult
 							.newErrorCommandResult("The selected file is not a ROS package model");
 				}
-
-				Package originalComposite = ((ArchitectureModel) ecoreResource
-						.getContents().get(0)).getPackage();
-
-				newElement.setName(originalComposite.getName());
-
-				for (MsgProducer msgProducer : originalComposite
-						.getMsgProducers()) {
-
-					ProvidedInterface pInt = compositionmodelFactory.eINSTANCE
-							.createProvidedInterface();
-					pInt.setName(msgProducer.getName());
-					ROSMsgProducer pIntImpl = roscompositionmodelFactory.eINSTANCE
-							.createROSMsgProducer();
-					pIntImpl.setMsgProducer(msgProducer);
-					pInt.setImpl(pIntImpl);
-					newElement.getProvInterfaces().add(pInt);
-
-				}
-
-				for (MsgConsumer msgConsumer : originalComposite
-						.getMsgConsumers()) {
-
-					RequiredInterface rInt = compositionmodelFactory.eINSTANCE
-							.createRequiredInterface();
-					rInt.setName(msgConsumer.getName());
-					ROSMsgConsumer rIntImpl = roscompositionmodelFactory.eINSTANCE
-							.createROSMsgConsumer();
-					rIntImpl.setMsgConsumer(msgConsumer);
-					rInt.setImpl(rIntImpl);
-					newElement.getReqInterfaces().add(rInt);
-
-				}
-
-				System owner = (System) getElementToEdit();
-				owner.getComposites().add(newElement);
-
-				doConfigure(newElement, monitor, info);
-
-				((CreateElementRequest) getRequest()).setNewElement(newElement);
-				return CommandResult.newOKCommandResult(newElement);
 
 			}
 
