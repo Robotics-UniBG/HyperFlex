@@ -22,4 +22,3 @@ Require-Bundle: org.eclipse.ui,
  org.best_of_robotics.transform.service;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Export-Package: it.unibg.robotics.componentmodels.ros.m2t.tools

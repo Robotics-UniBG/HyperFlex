@@ -6,7 +6,8 @@
 	//launch File
 	var launchTemplate := TemplateFactory.load('launchfile.egl');
 	launchTemplate.populate('mainComposite', mainComposite);
-	launchTemplate.generate('system.launch');
+	var fileName := mainComposite.name + '.launch';
+	launchTemplate.generate(fileName);
 	
 	//manifest
 	//var manifestTemplate := TemplateFactory.load('manifest.egl');

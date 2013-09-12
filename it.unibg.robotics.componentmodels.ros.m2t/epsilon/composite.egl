@@ -1,38 +1,53 @@
-<launch>
-[%=out.startPreserve("<!--", "-->", "additional custom Launchfile statements in the beginning", true)%]
-[%=out.stopPreserve()%]
-  
+[*
+ * HyperFlex toolchain
+ * 
+ * Copyright (c) 2013
+ * All rights reserved.
+ * 
+ * Luca Gherardi
+ * ETH Zurich
+ * Institute for Dynamic Systems and Control
+ * 
+ * ***********************************************************************************************
+ * 
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
+ * 
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
+ * 
+ * ***********************************************************************************************
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * 
+ *]
+<!-- Start composite "[%=composite.name%]" -->
 
 [%
 for(child in composite.components) {
 %]
-
 	[%
 	if(child.isTypeOf(Node)){
 	%]
-		<node pkg="[%=child.name%]" type="[%=child.name%]" name="[%=child.name%]" output="screen">
+		<node pkg="[%=child.packageName%]" type="[%=child.type%]" name="[%=child.name%]" output="screen">
 	
 		</node>
-	
 	[%
 	}else if(child.isTypeOf(Composite)){
 	
 		var compositeTemplate := TemplateFactory.load('composite.egl');
-		launchTemplate.populate('composite', child);
+		compositeTemplate.populate('composite', child);
 	
-		out.print.compositeTemplate.process();
+		out.print(compositeTemplate.process());
 	
 	}
 	%]
-	
 [%
 }
-
 %]
 
-[%=out.startPreserve("<!--", "-->", "additional custom Launchfile statements in the end of launch file", true)%]
-[%=out.stopPreserve()%]
-
-</launch>
-
+<!-- End composite "[%=composite.name%]" -->
 
