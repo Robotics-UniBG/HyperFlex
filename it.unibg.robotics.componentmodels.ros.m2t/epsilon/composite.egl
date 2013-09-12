@@ -1,0 +1,38 @@
+<launch>
+[%=out.startPreserve("<!--", "-->", "additional custom Launchfile statements in the beginning", true)%]
+[%=out.stopPreserve()%]
+  
+
+[%
+for(child in composite.components) {
+%]
+
+	[%
+	if(child.isTypeOf(Node)){
+	%]
+		<node pkg="[%=child.name%]" type="[%=child.name%]" name="[%=child.name%]" output="screen">
+	
+		</node>
+	
+	[%
+	}else if(child.isTypeOf(Composite)){
+	
+		var compositeTemplate := TemplateFactory.load('composite.egl');
+		launchTemplate.populate('composite', child);
+	
+		out.print.compositeTemplate.process();
+	
+	}
+	%]
+	
+[%
+}
+
+%]
+
+[%=out.startPreserve("<!--", "-->", "additional custom Launchfile statements in the end of launch file", true)%]
+[%=out.stopPreserve()%]
+
+</launch>
+
+

@@ -3,28 +3,21 @@ package it.unibg.robotics.roscomponentmodel.diagram.edit.parts;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.NodePropertyItemSemanticEditPolicy;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
-import java.util.Collections;
-import java.util.List;
-
 import org.eclipse.draw2d.IFigure;
-import org.eclipse.draw2d.PositionConstants;
+import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
-import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
-import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
-import org.eclipse.gef.handles.MoveHandle;
 import org.eclipse.gef.requests.CreateRequest;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderedShapeEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.IBorderItemEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editpolicies.BorderItemSelectionEditPolicy;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
-import org.eclipse.gmf.runtime.diagram.ui.figures.BorderItemLocator;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -34,7 +27,7 @@ import org.eclipse.swt.graphics.Color;
 /**
  * @generated
  */
-public class NodePropertyEditPart extends AbstractBorderedShapeEditPart {
+public class NodePropertyEditPart extends ShapeNodeEditPart {
 
 	/**
 	 * @generated
@@ -77,20 +70,6 @@ public class NodePropertyEditPart extends AbstractBorderedShapeEditPart {
 		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
 			protected EditPolicy createChildEditPolicy(EditPart child) {
-				View childView = (View) child.getModel();
-				switch (RosComponentModelVisualIDRegistry
-						.getVisualID(childView)) {
-				case NodePropertyNameEditPart.VISUAL_ID:
-					return new BorderItemSelectionEditPolicy() {
-
-						protected List createSelectionHandles() {
-							MoveHandle mh = new MoveHandle(
-									(GraphicalEditPart) getHost());
-							mh.setBorder(null);
-							return Collections.singletonList(mh);
-						}
-					};
-				}
 				EditPolicy result = child
 						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
 				if (result == null) {
@@ -125,18 +104,52 @@ public class NodePropertyEditPart extends AbstractBorderedShapeEditPart {
 	}
 
 	/**
+	 * @generated NOT
+	 */
+	protected boolean addFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof NodePropertyNameEditPart) {
+			((NodePropertyNameEditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigurePropertiesNameLabel());
+			return true;
+		}
+		return false;
+	}
+
+	/**
 	 * @generated
 	 */
-	protected void addBorderItem(IFigure borderItemContainer,
-			IBorderItemEditPart borderItemEditPart) {
-		if (borderItemEditPart instanceof NodePropertyNameEditPart) {
-			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.SOUTH);
-			locator.setBorderItemOffset(new Dimension(-20, -20));
-			borderItemContainer.add(borderItemEditPart.getFigure(), locator);
-		} else {
-			super.addBorderItem(borderItemContainer, borderItemEditPart);
+	protected boolean removeFixedChild(EditPart childEditPart) {
+		if (childEditPart instanceof NodePropertyNameEditPart) {
+			return true;
 		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void addChildVisual(EditPart childEditPart, int index) {
+		if (addFixedChild(childEditPart)) {
+			return;
+		}
+		super.addChildVisual(childEditPart, -1);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void removeChildVisual(EditPart childEditPart) {
+		if (removeFixedChild(childEditPart)) {
+			return;
+		}
+		super.removeChildVisual(childEditPart);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
+		return getContentPane();
 	}
 
 	/**
@@ -155,7 +168,7 @@ public class NodePropertyEditPart extends AbstractBorderedShapeEditPart {
 	 * 
 	 * @generated
 	 */
-	protected NodeFigure createMainFigure() {
+	protected NodeFigure createNodeFigure() {
 		NodeFigure figure = createNodePlate();
 		figure.setLayoutManager(new StackLayout());
 		IFigure shape = createNodeShape();
@@ -171,6 +184,11 @@ public class NodePropertyEditPart extends AbstractBorderedShapeEditPart {
 	 * @generated
 	 */
 	protected IFigure setupContentPane(IFigure nodeShape) {
+		if (nodeShape.getLayoutManager() == null) {
+			ConstrainedToolbarLayout layout = new ConstrainedToolbarLayout();
+			layout.setSpacing(5);
+			nodeShape.setLayoutManager(layout);
+		}
 		return nodeShape; // use nodeShape itself as contentPane
 	}
 
@@ -231,13 +249,41 @@ public class NodePropertyEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public class PropertiesFigure extends WrappingLabel {
+	public class PropertiesFigure extends RectangleFigure {
+
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigurePropertiesNameLabel;
 
 		/**
 		 * @generated
 		 */
 		public PropertiesFigure() {
-			this.setText("<?>");
+			this.setOutline(false);
+			this.setFill(false);
+			this.setOpaque(false);
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigurePropertiesNameLabel = new WrappingLabel();
+
+			fFigurePropertiesNameLabel.setText("<?>");
+
+			this.add(fFigurePropertiesNameLabel);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigurePropertiesNameLabel() {
+			return fFigurePropertiesNameLabel;
 		}
 
 	}

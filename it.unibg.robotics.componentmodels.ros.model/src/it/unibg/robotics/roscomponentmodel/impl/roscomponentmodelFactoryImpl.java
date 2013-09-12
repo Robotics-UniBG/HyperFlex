@@ -1,5 +1,5 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -25,9 +25,13 @@
  */
 package it.unibg.robotics.roscomponentmodel.impl;
 
-import it.unibg.robotics.roscomponentmodel.ArchitectureModel;
+import it.unibg.robotics.roscomponentmodel.Composite;
+import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
+import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
 import it.unibg.robotics.roscomponentmodel.CompositeProperty;
+import it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer;
+import it.unibg.robotics.roscomponentmodel.CompositeSrvProducer;
 import it.unibg.robotics.roscomponentmodel.MsgInterface;
 import it.unibg.robotics.roscomponentmodel.Node;
 import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
@@ -36,10 +40,6 @@ import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
 import it.unibg.robotics.roscomponentmodel.NodeProperty;
 import it.unibg.robotics.roscomponentmodel.NodeSrvConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeSrvProducer;
-import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
-import it.unibg.robotics.roscomponentmodel.PackageSrvConsumer;
-import it.unibg.robotics.roscomponentmodel.PackageSrvProducer;
 import it.unibg.robotics.roscomponentmodel.Property;
 import it.unibg.robotics.roscomponentmodel.SrvConsumer;
 import it.unibg.robotics.roscomponentmodel.SrvProducer;
@@ -51,7 +51,9 @@ import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -98,22 +100,22 @@ public class roscomponentmodelFactoryImpl extends EFactoryImpl implements roscom
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case roscomponentmodelPackage.PACKAGE: return createPackage();
+			case roscomponentmodelPackage.COMPOSITE: return createComposite();
 			case roscomponentmodelPackage.NODE: return createNode();
 			case roscomponentmodelPackage.NODE_MSG_PRODUCER: return createNodeMsgProducer();
 			case roscomponentmodelPackage.NODE_MSG_CONSUMER: return createNodeMsgConsumer();
-			case roscomponentmodelPackage.PACKAGE_MSG_PRODUCER: return createPackageMsgProducer();
-			case roscomponentmodelPackage.PACKAGE_MSG_CONSUMER: return createPackageMsgConsumer();
+			case roscomponentmodelPackage.COMPOSITE_MSG_PRODUCER: return createCompositeMsgProducer();
+			case roscomponentmodelPackage.COMPOSITE_MSG_CONSUMER: return createCompositeMsgConsumer();
 			case roscomponentmodelPackage.TOPIC: return createTopic();
 			case roscomponentmodelPackage.PROPERTY: return createProperty();
 			case roscomponentmodelPackage.SRV_PRODUCER: return createSrvProducer();
 			case roscomponentmodelPackage.SRV_CONSUMER: return createSrvConsumer();
-			case roscomponentmodelPackage.PACKAGE_SRV_PRODUCER: return createPackageSrvProducer();
+			case roscomponentmodelPackage.COMPOSITE_SRV_PRODUCER: return createCompositeSrvProducer();
 			case roscomponentmodelPackage.NODE_SRV_PRODUCER: return createNodeSrvProducer();
-			case roscomponentmodelPackage.PACKAGE_SRV_CONSUMER: return createPackageSrvConsumer();
+			case roscomponentmodelPackage.COMPOSITE_SRV_CONSUMER: return createCompositeSrvConsumer();
 			case roscomponentmodelPackage.NODE_SRV_CONSUMER: return createNodeSrvConsumer();
 			case roscomponentmodelPackage.WIRE: return createWire();
-			case roscomponentmodelPackage.ARCHITECTURE_MODEL: return createArchitectureModel();
+			case roscomponentmodelPackage.SYSTEM: return createSystem();
 			case roscomponentmodelPackage.MSG_INTERFACE: return createMsgInterface();
 			case roscomponentmodelPackage.COMPOSITE_MSG_INTERFACE: return createCompositeMsgInterface();
 			case roscomponentmodelPackage.NODE_MSG_INTERFACE: return createNodeMsgInterface();
@@ -129,9 +131,9 @@ public class roscomponentmodelFactoryImpl extends EFactoryImpl implements roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public it.unibg.robotics.roscomponentmodel.Package createPackage() {
-		PackageImpl package_ = new PackageImpl();
-		return package_;
+	public Composite createComposite() {
+		CompositeImpl composite = new CompositeImpl();
+		return composite;
 	}
 
 	/**
@@ -169,9 +171,9 @@ public class roscomponentmodelFactoryImpl extends EFactoryImpl implements roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageMsgProducer createPackageMsgProducer() {
-		PackageMsgProducerImpl packageMsgProducer = new PackageMsgProducerImpl();
-		return packageMsgProducer;
+	public CompositeMsgProducer createCompositeMsgProducer() {
+		CompositeMsgProducerImpl compositeMsgProducer = new CompositeMsgProducerImpl();
+		return compositeMsgProducer;
 	}
 
 	/**
@@ -179,9 +181,9 @@ public class roscomponentmodelFactoryImpl extends EFactoryImpl implements roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageMsgConsumer createPackageMsgConsumer() {
-		PackageMsgConsumerImpl packageMsgConsumer = new PackageMsgConsumerImpl();
-		return packageMsgConsumer;
+	public CompositeMsgConsumer createCompositeMsgConsumer() {
+		CompositeMsgConsumerImpl compositeMsgConsumer = new CompositeMsgConsumerImpl();
+		return compositeMsgConsumer;
 	}
 
 	/**
@@ -229,9 +231,9 @@ public class roscomponentmodelFactoryImpl extends EFactoryImpl implements roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageSrvProducer createPackageSrvProducer() {
-		PackageSrvProducerImpl packageSrvProducer = new PackageSrvProducerImpl();
-		return packageSrvProducer;
+	public CompositeSrvProducer createCompositeSrvProducer() {
+		CompositeSrvProducerImpl compositeSrvProducer = new CompositeSrvProducerImpl();
+		return compositeSrvProducer;
 	}
 
 	/**
@@ -249,9 +251,9 @@ public class roscomponentmodelFactoryImpl extends EFactoryImpl implements roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageSrvConsumer createPackageSrvConsumer() {
-		PackageSrvConsumerImpl packageSrvConsumer = new PackageSrvConsumerImpl();
-		return packageSrvConsumer;
+	public CompositeSrvConsumer createCompositeSrvConsumer() {
+		CompositeSrvConsumerImpl compositeSrvConsumer = new CompositeSrvConsumerImpl();
+		return compositeSrvConsumer;
 	}
 
 	/**
@@ -279,9 +281,9 @@ public class roscomponentmodelFactoryImpl extends EFactoryImpl implements roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArchitectureModel createArchitectureModel() {
-		ArchitectureModelImpl architectureModel = new ArchitectureModelImpl();
-		return architectureModel;
+	public it.unibg.robotics.roscomponentmodel.System createSystem() {
+		SystemImpl system = new SystemImpl();
+		return system;
 	}
 
 	/**

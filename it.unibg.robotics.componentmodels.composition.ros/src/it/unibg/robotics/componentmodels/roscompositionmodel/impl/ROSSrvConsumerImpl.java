@@ -26,16 +26,12 @@ package it.unibg.robotics.componentmodels.roscompositionmodel.impl;
 
 import it.unibg.robotics.componentmodels.roscompositionmodel.ROSSrvConsumer;
 import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage;
-
 import it.unibg.robotics.compositionmodel.impl.CompRequiredInterfImpl;
 
-import it.unibg.robotics.roscomponentmodel.PackageSrvConsumer;
-
+import it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -60,7 +56,7 @@ public class ROSSrvConsumerImpl extends CompRequiredInterfImpl implements ROSSrv
 	 * @generated
 	 * @ordered
 	 */
-	protected PackageSrvConsumer srvConsumer;
+	protected CompositeSrvConsumer srvConsumer;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,10 +82,10 @@ public class ROSSrvConsumerImpl extends CompRequiredInterfImpl implements ROSSrv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageSrvConsumer getSrvConsumer() {
+	public CompositeSrvConsumer getSrvConsumer() {
 		if (srvConsumer != null && srvConsumer.eIsProxy()) {
 			InternalEObject oldSrvConsumer = (InternalEObject)srvConsumer;
-			srvConsumer = (PackageSrvConsumer)eResolveProxy(oldSrvConsumer);
+			srvConsumer = (CompositeSrvConsumer)eResolveProxy(oldSrvConsumer);
 			if (srvConsumer != oldSrvConsumer) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, roscompositionmodelPackage.ROS_SRV_CONSUMER__SRV_CONSUMER, oldSrvConsumer, srvConsumer));
@@ -103,7 +99,7 @@ public class ROSSrvConsumerImpl extends CompRequiredInterfImpl implements ROSSrv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageSrvConsumer basicGetSrvConsumer() {
+	public CompositeSrvConsumer basicGetSrvConsumer() {
 		return srvConsumer;
 	}
 
@@ -112,8 +108,8 @@ public class ROSSrvConsumerImpl extends CompRequiredInterfImpl implements ROSSrv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSrvConsumer(PackageSrvConsumer newSrvConsumer) {
-		PackageSrvConsumer oldSrvConsumer = srvConsumer;
+	public void setSrvConsumer(CompositeSrvConsumer newSrvConsumer) {
+		CompositeSrvConsumer oldSrvConsumer = srvConsumer;
 		srvConsumer = newSrvConsumer;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, roscompositionmodelPackage.ROS_SRV_CONSUMER__SRV_CONSUMER, oldSrvConsumer, srvConsumer));
@@ -143,7 +139,7 @@ public class ROSSrvConsumerImpl extends CompRequiredInterfImpl implements ROSSrv
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case roscompositionmodelPackage.ROS_SRV_CONSUMER__SRV_CONSUMER:
-				setSrvConsumer((PackageSrvConsumer)newValue);
+				setSrvConsumer((CompositeSrvConsumer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -158,7 +154,7 @@ public class ROSSrvConsumerImpl extends CompRequiredInterfImpl implements ROSSrv
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case roscompositionmodelPackage.ROS_SRV_CONSUMER__SRV_CONSUMER:
-				setSrvConsumer((PackageSrvConsumer)null);
+				setSrvConsumer((CompositeSrvConsumer)null);
 				return;
 		}
 		super.eUnset(featureID);

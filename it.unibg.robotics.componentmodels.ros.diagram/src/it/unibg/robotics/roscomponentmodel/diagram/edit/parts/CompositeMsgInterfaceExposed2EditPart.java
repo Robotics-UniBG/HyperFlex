@@ -10,7 +10,11 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.widgets.Display;
 
 /**
  * @generated
@@ -49,29 +53,50 @@ public class CompositeMsgInterfaceExposed2EditPart extends
 	 */
 
 	protected Connection createConnectionFigure() {
-		return new ChannelCompConsumerConnectionFigure();
+		return new ExposeConsumerConnectionFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public ChannelCompConsumerConnectionFigure getPrimaryShape() {
-		return (ChannelCompConsumerConnectionFigure) getFigure();
+	public ExposeConsumerConnectionFigure getPrimaryShape() {
+		return (ExposeConsumerConnectionFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class ChannelCompConsumerConnectionFigure extends
-			PolylineConnectionEx {
+	public class ExposeConsumerConnectionFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		public ChannelCompConsumerConnectionFigure() {
-			this.setLineStyle(Graphics.LINE_DASH);
+		private WrappingLabel fFigureExposeConsumerConnectionLabel;
 
+		/**
+		 * @generated
+		 */
+		public ExposeConsumerConnectionFigure() {
+			this.setLineStyle(Graphics.LINE_DOT);
+
+			createContents();
 			setTargetDecoration(createTargetDecoration());
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureExposeConsumerConnectionLabel = new WrappingLabel();
+
+			fFigureExposeConsumerConnectionLabel.setText("");
+
+			fFigureExposeConsumerConnectionLabel
+					.setFont(FFIGUREEXPOSECONSUMERCONNECTIONLABEL_FONT);
+
+			this.add(fFigureExposeConsumerConnectionLabel);
+
 		}
 
 		/**
@@ -83,6 +108,20 @@ public class CompositeMsgInterfaceExposed2EditPart extends
 			return df;
 		}
 
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureExposeConsumerConnectionLabel() {
+			return fFigureExposeConsumerConnectionLabel;
+		}
+
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Font FFIGUREEXPOSECONSUMERCONNECTIONLABEL_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 15, SWT.NORMAL);
 
 }

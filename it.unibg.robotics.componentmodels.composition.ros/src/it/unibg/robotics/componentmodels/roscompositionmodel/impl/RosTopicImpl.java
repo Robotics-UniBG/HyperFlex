@@ -26,7 +26,6 @@ package it.unibg.robotics.componentmodels.roscompositionmodel.impl;
 
 import it.unibg.robotics.componentmodels.roscompositionmodel.RosTopic;
 import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage;
-
 import it.unibg.robotics.compositionmodel.impl.ConnectionImpl;
 
 import org.eclipse.emf.ecore.EClass;

@@ -1,5 +1,5 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -37,10 +37,14 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -56,7 +60,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getSrvProducers <em>Srv Producers</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getSrvConsumers <em>Srv Consumers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getPackageName <em>Package Name</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -115,24 +119,24 @@ public class NodeImpl extends AbstractComponentImpl implements Node {
 	protected EList<NodeSrvConsumer> srvConsumers;
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getPackageName() <em>Package Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getPackageName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String PACKAGE_NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getPackageName() <em>Package Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getPackageName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String packageName = PACKAGE_NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -238,8 +242,8 @@ public class NodeImpl extends AbstractComponentImpl implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getPackageName() {
+		return packageName;
 	}
 
 	/**
@@ -247,11 +251,11 @@ public class NodeImpl extends AbstractComponentImpl implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setPackageName(String newPackageName) {
+		String oldPackageName = packageName;
+		packageName = newPackageName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, roscomponentmodelPackage.NODE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, roscomponentmodelPackage.NODE__PACKAGE_NAME, oldPackageName, packageName));
 	}
 
 	/**
@@ -315,8 +319,8 @@ public class NodeImpl extends AbstractComponentImpl implements Node {
 				return getSrvProducers();
 			case roscomponentmodelPackage.NODE__SRV_CONSUMERS:
 				return getSrvConsumers();
-			case roscomponentmodelPackage.NODE__NAME:
-				return getName();
+			case roscomponentmodelPackage.NODE__PACKAGE_NAME:
+				return getPackageName();
 			case roscomponentmodelPackage.NODE__TYPE:
 				return getType();
 		}
@@ -352,8 +356,8 @@ public class NodeImpl extends AbstractComponentImpl implements Node {
 				getSrvConsumers().clear();
 				getSrvConsumers().addAll((Collection<? extends NodeSrvConsumer>)newValue);
 				return;
-			case roscomponentmodelPackage.NODE__NAME:
-				setName((String)newValue);
+			case roscomponentmodelPackage.NODE__PACKAGE_NAME:
+				setPackageName((String)newValue);
 				return;
 			case roscomponentmodelPackage.NODE__TYPE:
 				setType((String)newValue);
@@ -385,8 +389,8 @@ public class NodeImpl extends AbstractComponentImpl implements Node {
 			case roscomponentmodelPackage.NODE__SRV_CONSUMERS:
 				getSrvConsumers().clear();
 				return;
-			case roscomponentmodelPackage.NODE__NAME:
-				setName(NAME_EDEFAULT);
+			case roscomponentmodelPackage.NODE__PACKAGE_NAME:
+				setPackageName(PACKAGE_NAME_EDEFAULT);
 				return;
 			case roscomponentmodelPackage.NODE__TYPE:
 				setType(TYPE_EDEFAULT);
@@ -413,8 +417,8 @@ public class NodeImpl extends AbstractComponentImpl implements Node {
 				return srvProducers != null && !srvProducers.isEmpty();
 			case roscomponentmodelPackage.NODE__SRV_CONSUMERS:
 				return srvConsumers != null && !srvConsumers.isEmpty();
-			case roscomponentmodelPackage.NODE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case roscomponentmodelPackage.NODE__PACKAGE_NAME:
+				return PACKAGE_NAME_EDEFAULT == null ? packageName != null : !PACKAGE_NAME_EDEFAULT.equals(packageName);
 			case roscomponentmodelPackage.NODE__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
@@ -431,8 +435,8 @@ public class NodeImpl extends AbstractComponentImpl implements Node {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (packageName: ");
+		result.append(packageName);
 		result.append(", type: ");
 		result.append(type);
 		result.append(')');

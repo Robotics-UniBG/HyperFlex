@@ -49,7 +49,7 @@ public class ConnectionEditPart extends ConnectionNodeEditPart implements
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof ConnectionNameEditPart) {
 			((ConnectionNameEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureProvidedRequriedConnectionLabel());
+					.getFigureSolidWireConnectionLabel());
 			return true;
 		}
 		return false;
@@ -95,30 +95,30 @@ public class ConnectionEditPart extends ConnectionNodeEditPart implements
 	 */
 
 	protected Connection createConnectionFigure() {
-		return new ProvidedRequriedConnectionFigure();
+		return new SolidWireConnectionFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public ProvidedRequriedConnectionFigure getPrimaryShape() {
-		return (ProvidedRequriedConnectionFigure) getFigure();
+	public SolidWireConnectionFigure getPrimaryShape() {
+		return (SolidWireConnectionFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class ProvidedRequriedConnectionFigure extends PolylineConnectionEx {
+	public class SolidWireConnectionFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureProvidedRequriedConnectionLabel;
+		private WrappingLabel fFigureSolidWireConnectionLabel;
 
 		/**
 		 * @generated
 		 */
-		public ProvidedRequriedConnectionFigure() {
+		public SolidWireConnectionFigure() {
 
 			createContents();
 			setSourceDecoration(createSourceDecoration());
@@ -129,14 +129,14 @@ public class ConnectionEditPart extends ConnectionNodeEditPart implements
 		 */
 		private void createContents() {
 
-			fFigureProvidedRequriedConnectionLabel = new WrappingLabel();
+			fFigureSolidWireConnectionLabel = new WrappingLabel();
 
-			fFigureProvidedRequriedConnectionLabel.setText("");
+			fFigureSolidWireConnectionLabel.setText("");
 
-			fFigureProvidedRequriedConnectionLabel
-					.setFont(FFIGUREPROVIDEDREQURIEDCONNECTIONLABEL_FONT);
+			fFigureSolidWireConnectionLabel
+					.setFont(FFIGURESOLIDWIRECONNECTIONLABEL_FONT);
 
-			this.add(fFigureProvidedRequriedConnectionLabel);
+			this.add(fFigureSolidWireConnectionLabel);
 
 		}
 
@@ -152,8 +152,8 @@ public class ConnectionEditPart extends ConnectionNodeEditPart implements
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureProvidedRequriedConnectionLabel() {
-			return fFigureProvidedRequriedConnectionLabel;
+		public WrappingLabel getFigureSolidWireConnectionLabel() {
+			return fFigureSolidWireConnectionLabel;
 		}
 
 	}
@@ -161,8 +161,8 @@ public class ConnectionEditPart extends ConnectionNodeEditPart implements
 	/**
 	 * @generated
 	 */
-	static final Font FFIGUREPROVIDEDREQURIEDCONNECTIONLABEL_FONT = new Font(
+	static final Font FFIGURESOLIDWIRECONNECTIONLABEL_FONT = new Font(
 			Display.getCurrent(), Display.getDefault().getSystemFont()
-					.getFontData()[0].getName(), 15, SWT.BOLD);
+					.getFontData()[0].getName(), 15, SWT.NORMAL);
 
 }

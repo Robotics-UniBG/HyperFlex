@@ -26,16 +26,12 @@ package it.unibg.robotics.componentmodels.roscompositionmodel.impl;
 
 import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgProducer;
 import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage;
-
 import it.unibg.robotics.compositionmodel.impl.CompProvidedInterfImpl;
 
-import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
-
+import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -60,7 +56,7 @@ public class ROSMsgProducerImpl extends CompProvidedInterfImpl implements ROSMsg
 	 * @generated
 	 * @ordered
 	 */
-	protected PackageMsgProducer msgProducer;
+	protected CompositeMsgProducer msgProducer;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,10 +82,10 @@ public class ROSMsgProducerImpl extends CompProvidedInterfImpl implements ROSMsg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageMsgProducer getMsgProducer() {
+	public CompositeMsgProducer getMsgProducer() {
 		if (msgProducer != null && msgProducer.eIsProxy()) {
 			InternalEObject oldMsgProducer = (InternalEObject)msgProducer;
-			msgProducer = (PackageMsgProducer)eResolveProxy(oldMsgProducer);
+			msgProducer = (CompositeMsgProducer)eResolveProxy(oldMsgProducer);
 			if (msgProducer != oldMsgProducer) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, roscompositionmodelPackage.ROS_MSG_PRODUCER__MSG_PRODUCER, oldMsgProducer, msgProducer));
@@ -103,7 +99,7 @@ public class ROSMsgProducerImpl extends CompProvidedInterfImpl implements ROSMsg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageMsgProducer basicGetMsgProducer() {
+	public CompositeMsgProducer basicGetMsgProducer() {
 		return msgProducer;
 	}
 
@@ -112,8 +108,8 @@ public class ROSMsgProducerImpl extends CompProvidedInterfImpl implements ROSMsg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMsgProducer(PackageMsgProducer newMsgProducer) {
-		PackageMsgProducer oldMsgProducer = msgProducer;
+	public void setMsgProducer(CompositeMsgProducer newMsgProducer) {
+		CompositeMsgProducer oldMsgProducer = msgProducer;
 		msgProducer = newMsgProducer;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, roscompositionmodelPackage.ROS_MSG_PRODUCER__MSG_PRODUCER, oldMsgProducer, msgProducer));
@@ -143,7 +139,7 @@ public class ROSMsgProducerImpl extends CompProvidedInterfImpl implements ROSMsg
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case roscompositionmodelPackage.ROS_MSG_PRODUCER__MSG_PRODUCER:
-				setMsgProducer((PackageMsgProducer)newValue);
+				setMsgProducer((CompositeMsgProducer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -158,7 +154,7 @@ public class ROSMsgProducerImpl extends CompProvidedInterfImpl implements ROSMsg
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case roscompositionmodelPackage.ROS_MSG_PRODUCER__MSG_PRODUCER:
-				setMsgProducer((PackageMsgProducer)null);
+				setMsgProducer((CompositeMsgProducer)null);
 				return;
 		}
 		super.eUnset(featureID);

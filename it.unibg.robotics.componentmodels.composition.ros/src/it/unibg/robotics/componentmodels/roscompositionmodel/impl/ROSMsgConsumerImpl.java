@@ -26,16 +26,12 @@ package it.unibg.robotics.componentmodels.roscompositionmodel.impl;
 
 import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgConsumer;
 import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage;
-
 import it.unibg.robotics.compositionmodel.impl.CompRequiredInterfImpl;
 
-import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
-
+import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -60,7 +56,7 @@ public class ROSMsgConsumerImpl extends CompRequiredInterfImpl implements ROSMsg
 	 * @generated
 	 * @ordered
 	 */
-	protected PackageMsgConsumer msgConsumer;
+	protected CompositeMsgConsumer msgConsumer;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,10 +82,10 @@ public class ROSMsgConsumerImpl extends CompRequiredInterfImpl implements ROSMsg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageMsgConsumer getMsgConsumer() {
+	public CompositeMsgConsumer getMsgConsumer() {
 		if (msgConsumer != null && msgConsumer.eIsProxy()) {
 			InternalEObject oldMsgConsumer = (InternalEObject)msgConsumer;
-			msgConsumer = (PackageMsgConsumer)eResolveProxy(oldMsgConsumer);
+			msgConsumer = (CompositeMsgConsumer)eResolveProxy(oldMsgConsumer);
 			if (msgConsumer != oldMsgConsumer) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, roscompositionmodelPackage.ROS_MSG_CONSUMER__MSG_CONSUMER, oldMsgConsumer, msgConsumer));
@@ -103,7 +99,7 @@ public class ROSMsgConsumerImpl extends CompRequiredInterfImpl implements ROSMsg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageMsgConsumer basicGetMsgConsumer() {
+	public CompositeMsgConsumer basicGetMsgConsumer() {
 		return msgConsumer;
 	}
 
@@ -112,8 +108,8 @@ public class ROSMsgConsumerImpl extends CompRequiredInterfImpl implements ROSMsg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMsgConsumer(PackageMsgConsumer newMsgConsumer) {
-		PackageMsgConsumer oldMsgConsumer = msgConsumer;
+	public void setMsgConsumer(CompositeMsgConsumer newMsgConsumer) {
+		CompositeMsgConsumer oldMsgConsumer = msgConsumer;
 		msgConsumer = newMsgConsumer;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, roscompositionmodelPackage.ROS_MSG_CONSUMER__MSG_CONSUMER, oldMsgConsumer, msgConsumer));
@@ -143,7 +139,7 @@ public class ROSMsgConsumerImpl extends CompRequiredInterfImpl implements ROSMsg
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case roscompositionmodelPackage.ROS_MSG_CONSUMER__MSG_CONSUMER:
-				setMsgConsumer((PackageMsgConsumer)newValue);
+				setMsgConsumer((CompositeMsgConsumer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -158,7 +154,7 @@ public class ROSMsgConsumerImpl extends CompRequiredInterfImpl implements ROSMsg
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case roscompositionmodelPackage.ROS_MSG_CONSUMER__MSG_CONSUMER:
-				setMsgConsumer((PackageMsgConsumer)null);
+				setMsgConsumer((CompositeMsgConsumer)null);
 				return;
 		}
 		super.eUnset(featureID);

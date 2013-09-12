@@ -1,7 +1,7 @@
 package it.unibg.robotics.roscomponentmodel.diagram.edit.commands;
 
+import it.unibg.robotics.roscomponentmodel.Composite;
 import it.unibg.robotics.roscomponentmodel.Node;
-import it.unibg.robotics.roscomponentmodel.Package;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
@@ -56,8 +56,8 @@ public class NodeCreateCommand extends EditElementCommand {
 		Node newElement = it.unibg.robotics.roscomponentmodel.roscomponentmodelFactory.eINSTANCE
 				.createNode();
 
-		Package owner = (Package) getElementToEdit();
-		owner.getNodes().add(newElement);
+		Composite owner = (Composite) getElementToEdit();
+		owner.getComponents().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -16,7 +16,7 @@ public class NodePropertiesCompartmentItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public NodePropertiesCompartmentItemSemanticEditPolicy() {
-		super(RosComponentModelElementTypes.Node_3001);
+		super(RosComponentModelElementTypes.Node_3013);
 	}
 
 	/**

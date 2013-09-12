@@ -1,5 +1,5 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -26,9 +26,13 @@
 package it.unibg.robotics.roscomponentmodel.util;
 
 import it.unibg.robotics.roscomponentmodel.AbstractComponent;
-import it.unibg.robotics.roscomponentmodel.ArchitectureModel;
+import it.unibg.robotics.roscomponentmodel.Composite;
+import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
+import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
 import it.unibg.robotics.roscomponentmodel.CompositeProperty;
+import it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer;
+import it.unibg.robotics.roscomponentmodel.CompositeSrvProducer;
 import it.unibg.robotics.roscomponentmodel.MsgInterface;
 import it.unibg.robotics.roscomponentmodel.Node;
 import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
@@ -37,10 +41,6 @@ import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
 import it.unibg.robotics.roscomponentmodel.NodeProperty;
 import it.unibg.robotics.roscomponentmodel.NodeSrvConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeSrvProducer;
-import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
-import it.unibg.robotics.roscomponentmodel.PackageSrvConsumer;
-import it.unibg.robotics.roscomponentmodel.PackageSrvProducer;
 import it.unibg.robotics.roscomponentmodel.Property;
 import it.unibg.robotics.roscomponentmodel.SrvConsumer;
 import it.unibg.robotics.roscomponentmodel.SrvProducer;
@@ -50,6 +50,7 @@ import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.util.Switch;
 
 /**
@@ -109,10 +110,10 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case roscomponentmodelPackage.PACKAGE: {
-				it.unibg.robotics.roscomponentmodel.Package package_ = (it.unibg.robotics.roscomponentmodel.Package)theEObject;
-				T result = casePackage(package_);
-				if (result == null) result = caseAbstractComponent(package_);
+			case roscomponentmodelPackage.COMPOSITE: {
+				Composite composite = (Composite)theEObject;
+				T result = caseComposite(composite);
+				if (result == null) result = caseAbstractComponent(composite);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -139,19 +140,19 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case roscomponentmodelPackage.PACKAGE_MSG_PRODUCER: {
-				PackageMsgProducer packageMsgProducer = (PackageMsgProducer)theEObject;
-				T result = casePackageMsgProducer(packageMsgProducer);
-				if (result == null) result = caseCompositeMsgInterface(packageMsgProducer);
-				if (result == null) result = caseMsgInterface(packageMsgProducer);
+			case roscomponentmodelPackage.COMPOSITE_MSG_PRODUCER: {
+				CompositeMsgProducer compositeMsgProducer = (CompositeMsgProducer)theEObject;
+				T result = caseCompositeMsgProducer(compositeMsgProducer);
+				if (result == null) result = caseCompositeMsgInterface(compositeMsgProducer);
+				if (result == null) result = caseMsgInterface(compositeMsgProducer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case roscomponentmodelPackage.PACKAGE_MSG_CONSUMER: {
-				PackageMsgConsumer packageMsgConsumer = (PackageMsgConsumer)theEObject;
-				T result = casePackageMsgConsumer(packageMsgConsumer);
-				if (result == null) result = caseCompositeMsgInterface(packageMsgConsumer);
-				if (result == null) result = caseMsgInterface(packageMsgConsumer);
+			case roscomponentmodelPackage.COMPOSITE_MSG_CONSUMER: {
+				CompositeMsgConsumer compositeMsgConsumer = (CompositeMsgConsumer)theEObject;
+				T result = caseCompositeMsgConsumer(compositeMsgConsumer);
+				if (result == null) result = caseCompositeMsgInterface(compositeMsgConsumer);
+				if (result == null) result = caseMsgInterface(compositeMsgConsumer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -179,10 +180,10 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case roscomponentmodelPackage.PACKAGE_SRV_PRODUCER: {
-				PackageSrvProducer packageSrvProducer = (PackageSrvProducer)theEObject;
-				T result = casePackageSrvProducer(packageSrvProducer);
-				if (result == null) result = caseSrvProducer(packageSrvProducer);
+			case roscomponentmodelPackage.COMPOSITE_SRV_PRODUCER: {
+				CompositeSrvProducer compositeSrvProducer = (CompositeSrvProducer)theEObject;
+				T result = caseCompositeSrvProducer(compositeSrvProducer);
+				if (result == null) result = caseSrvProducer(compositeSrvProducer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -193,10 +194,10 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case roscomponentmodelPackage.PACKAGE_SRV_CONSUMER: {
-				PackageSrvConsumer packageSrvConsumer = (PackageSrvConsumer)theEObject;
-				T result = casePackageSrvConsumer(packageSrvConsumer);
-				if (result == null) result = caseSrvConsumer(packageSrvConsumer);
+			case roscomponentmodelPackage.COMPOSITE_SRV_CONSUMER: {
+				CompositeSrvConsumer compositeSrvConsumer = (CompositeSrvConsumer)theEObject;
+				T result = caseCompositeSrvConsumer(compositeSrvConsumer);
+				if (result == null) result = caseSrvConsumer(compositeSrvConsumer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -213,9 +214,9 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case roscomponentmodelPackage.ARCHITECTURE_MODEL: {
-				ArchitectureModel architectureModel = (ArchitectureModel)theEObject;
-				T result = caseArchitectureModel(architectureModel);
+			case roscomponentmodelPackage.SYSTEM: {
+				it.unibg.robotics.roscomponentmodel.System system = (it.unibg.robotics.roscomponentmodel.System)theEObject;
+				T result = caseSystem(system);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -264,17 +265,17 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Package</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Composite</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Package</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Composite</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePackage(it.unibg.robotics.roscomponentmodel.Package object) {
+	public T caseComposite(Composite object) {
 		return null;
 	}
 
@@ -324,32 +325,32 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Package Msg Producer</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Composite Msg Producer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Package Msg Producer</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Composite Msg Producer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePackageMsgProducer(PackageMsgProducer object) {
+	public T caseCompositeMsgProducer(CompositeMsgProducer object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Package Msg Consumer</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Composite Msg Consumer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Package Msg Consumer</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Composite Msg Consumer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePackageMsgConsumer(PackageMsgConsumer object) {
+	public T caseCompositeMsgConsumer(CompositeMsgConsumer object) {
 		return null;
 	}
 
@@ -414,17 +415,17 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Package Srv Producer</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Composite Srv Producer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Package Srv Producer</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Composite Srv Producer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePackageSrvProducer(PackageSrvProducer object) {
+	public T caseCompositeSrvProducer(CompositeSrvProducer object) {
 		return null;
 	}
 
@@ -444,17 +445,17 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Package Srv Consumer</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Composite Srv Consumer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Package Srv Consumer</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Composite Srv Consumer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePackageSrvConsumer(PackageSrvConsumer object) {
+	public T caseCompositeSrvConsumer(CompositeSrvConsumer object) {
 		return null;
 	}
 
@@ -489,17 +490,17 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Architecture Model</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>System</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Architecture Model</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>System</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseArchitectureModel(ArchitectureModel object) {
+	public T caseSystem(it.unibg.robotics.roscomponentmodel.System object) {
 		return null;
 	}
 

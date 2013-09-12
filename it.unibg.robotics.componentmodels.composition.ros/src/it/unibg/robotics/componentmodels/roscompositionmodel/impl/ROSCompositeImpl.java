@@ -26,14 +26,12 @@ package it.unibg.robotics.componentmodels.roscompositionmodel.impl;
 
 import it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite;
 import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage;
-
+import it.unibg.robotics.compositionmodel.Composite;
 import it.unibg.robotics.compositionmodel.impl.CompositeImpl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -43,7 +41,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.componentmodels.roscompositionmodel.impl.ROSCompositeImpl#getPackage <em>Package</em>}</li>
+ *   <li>{@link it.unibg.robotics.componentmodels.roscompositionmodel.impl.ROSCompositeImpl#getComposite <em>Composite</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,15 +49,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class ROSCompositeImpl extends CompositeImpl implements ROSComposite {
 	/**
-	 * The cached value of the '{@link #getPackage() <em>Package</em>}' reference.
+	 * The cached value of the '{@link #getComposite() <em>Composite</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPackage()
+	 * @see #getComposite()
 	 * @generated
 	 * @ordered
 	 */
-	protected it.unibg.robotics.roscomponentmodel.Package package_;
-
+	protected Composite composite;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,16 +81,16 @@ public class ROSCompositeImpl extends CompositeImpl implements ROSComposite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public it.unibg.robotics.roscomponentmodel.Package getPackage() {
-		if (package_ != null && package_.eIsProxy()) {
-			InternalEObject oldPackage = (InternalEObject)package_;
-			package_ = (it.unibg.robotics.roscomponentmodel.Package)eResolveProxy(oldPackage);
-			if (package_ != oldPackage) {
+	public Composite getComposite() {
+		if (composite != null && composite.eIsProxy()) {
+			InternalEObject oldComposite = (InternalEObject)composite;
+			composite = (Composite)eResolveProxy(oldComposite);
+			if (composite != oldComposite) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, roscompositionmodelPackage.ROS_COMPOSITE__PACKAGE, oldPackage, package_));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, roscompositionmodelPackage.ROS_COMPOSITE__COMPOSITE, oldComposite, composite));
 			}
 		}
-		return package_;
+		return composite;
 	}
 
 	/**
@@ -101,8 +98,8 @@ public class ROSCompositeImpl extends CompositeImpl implements ROSComposite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public it.unibg.robotics.roscomponentmodel.Package basicGetPackage() {
-		return package_;
+	public Composite basicGetComposite() {
+		return composite;
 	}
 
 	/**
@@ -110,11 +107,11 @@ public class ROSCompositeImpl extends CompositeImpl implements ROSComposite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPackage(it.unibg.robotics.roscomponentmodel.Package newPackage) {
-		it.unibg.robotics.roscomponentmodel.Package oldPackage = package_;
-		package_ = newPackage;
+	public void setComposite(Composite newComposite) {
+		Composite oldComposite = composite;
+		composite = newComposite;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, roscompositionmodelPackage.ROS_COMPOSITE__PACKAGE, oldPackage, package_));
+			eNotify(new ENotificationImpl(this, Notification.SET, roscompositionmodelPackage.ROS_COMPOSITE__COMPOSITE, oldComposite, composite));
 	}
 
 	/**
@@ -125,9 +122,9 @@ public class ROSCompositeImpl extends CompositeImpl implements ROSComposite {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case roscompositionmodelPackage.ROS_COMPOSITE__PACKAGE:
-				if (resolve) return getPackage();
-				return basicGetPackage();
+			case roscompositionmodelPackage.ROS_COMPOSITE__COMPOSITE:
+				if (resolve) return getComposite();
+				return basicGetComposite();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -140,8 +137,8 @@ public class ROSCompositeImpl extends CompositeImpl implements ROSComposite {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case roscompositionmodelPackage.ROS_COMPOSITE__PACKAGE:
-				setPackage((it.unibg.robotics.roscomponentmodel.Package)newValue);
+			case roscompositionmodelPackage.ROS_COMPOSITE__COMPOSITE:
+				setComposite((Composite)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -155,8 +152,8 @@ public class ROSCompositeImpl extends CompositeImpl implements ROSComposite {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case roscompositionmodelPackage.ROS_COMPOSITE__PACKAGE:
-				setPackage((it.unibg.robotics.roscomponentmodel.Package)null);
+			case roscompositionmodelPackage.ROS_COMPOSITE__COMPOSITE:
+				setComposite((Composite)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -170,8 +167,8 @@ public class ROSCompositeImpl extends CompositeImpl implements ROSComposite {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case roscompositionmodelPackage.ROS_COMPOSITE__PACKAGE:
-				return package_ != null;
+			case roscompositionmodelPackage.ROS_COMPOSITE__COMPOSITE:
+				return composite != null;
 		}
 		return super.eIsSet(featureID);
 	}

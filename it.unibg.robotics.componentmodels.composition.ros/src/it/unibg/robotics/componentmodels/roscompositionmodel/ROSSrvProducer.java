@@ -25,8 +25,7 @@
 package it.unibg.robotics.componentmodels.roscompositionmodel;
 
 import it.unibg.robotics.compositionmodel.CompProvidedInterf;
-
-import it.unibg.robotics.roscomponentmodel.PackageSrvProducer;
+import it.unibg.robotics.roscomponentmodel.CompositeSrvProducer;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,12 +53,12 @@ public interface ROSSrvProducer extends CompProvidedInterf {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Srv Producer</em>' reference.
-	 * @see #setSrvProducer(PackageSrvProducer)
+	 * @see #setSrvProducer(CompositeSrvProducer)
 	 * @see it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage#getROSSrvProducer_SrvProducer()
 	 * @model required="true"
 	 * @generated
 	 */
-	PackageSrvProducer getSrvProducer();
+	CompositeSrvProducer getSrvProducer();
 
 	/**
 	 * Sets the value of the '{@link it.unibg.robotics.componentmodels.roscompositionmodel.ROSSrvProducer#getSrvProducer <em>Srv Producer</em>}' reference.
@@ -69,6 +68,6 @@ public interface ROSSrvProducer extends CompProvidedInterf {
 	 * @see #getSrvProducer()
 	 * @generated
 	 */
-	void setSrvProducer(PackageSrvProducer value);
+	void setSrvProducer(CompositeSrvProducer value);
 
 } // ROSSrvProducer

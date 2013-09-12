@@ -1,5 +1,5 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -40,7 +40,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getParameters <em>Parameters</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getSrvProducers <em>Srv Producers</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getSrvConsumers <em>Srv Consumers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getName <em>Name</em>}</li>
+ *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getPackageName <em>Package Name</em>}</li>
  *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -131,30 +131,30 @@ public interface Node extends AbstractComponent {
 	EList<NodeSrvConsumer> getSrvConsumers();
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Package Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Package Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNode_Name()
+	 * @return the value of the '<em>Package Name</em>' attribute.
+	 * @see #setPackageName(String)
+	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNode_PackageName()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	String getPackageName();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.Node#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.Node#getPackageName <em>Package Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Package Name</em>' attribute.
+	 * @see #getPackageName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setPackageName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.

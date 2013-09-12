@@ -75,7 +75,7 @@ public class NodeCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RosComponentModelNodeDescriptor> childDescriptors = RosComponentModelDiagramUpdater
-				.getNode_3001SemanticChildren(viewObject);
+				.getNode_3013SemanticChildren(viewObject);
 		for (RosComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -109,7 +109,7 @@ public class NodeCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RosComponentModelNodeDescriptor> childDescriptors = RosComponentModelDiagramUpdater
-				.getNode_3001SemanticChildren((View) getHost().getModel());
+				.getNode_3013SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

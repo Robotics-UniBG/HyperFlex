@@ -25,7 +25,14 @@
 package it.unibg.robotics.componentmodels.roscompositionmodel.util;
 
 import it.unibg.robotics.componentmodels.roscompositionmodel.*;
-
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgConsumer;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgProducer;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSProperty;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSSrvConsumer;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSSrvProducer;
+import it.unibg.robotics.componentmodels.roscompositionmodel.RosTopic;
+import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage;
 import it.unibg.robotics.compositionmodel.CompProvidedInterf;
 import it.unibg.robotics.compositionmodel.CompRequiredInterf;
 import it.unibg.robotics.compositionmodel.Composite;
@@ -37,9 +44,7 @@ import it.unibg.robotics.compositionmodel.RequiredInterface;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**

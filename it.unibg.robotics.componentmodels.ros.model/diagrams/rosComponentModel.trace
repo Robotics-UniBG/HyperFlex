@@ -4,25 +4,15 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:trace="http://www.eclipse.org/gmf/2006/Trace">
   <nodeTraces
-      visualID="2002"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Package') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'ArchitectureModel') and _containmentMF_.name = 'package')">
+      visualID="2003"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Composite') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'System') and _containmentMF_.name = 'composite')">
     <nodeLabelTraces
-        visualID="5010"
+        visualID="5022"
         queryText="true"/>
     <compartmentTraces
-        visualID="7003"
+        visualID="7004"
         queryText="true"/>
   </nodeTraces>
-  <childNodeTraces
-      visualID="3001"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Node') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Package') and _containmentMF_.name = 'nodes')">
-    <nodeLabelTraces
-        visualID="5003"
-        queryText="true"/>
-    <compartmentTraces
-        visualID="7002"
-        queryText="true"/>
-  </childNodeTraces>
   <childNodeTraces
       visualID="3003"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'NodeMsgProducer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Node') and _containmentMF_.name = 'msgProducers')"/>
@@ -30,36 +20,46 @@
       visualID="3004"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'NodeMsgConsumer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Node') and _containmentMF_.name = 'msgConsumers')"/>
   <childNodeTraces
-      visualID="3006"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'PackageMsgProducer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Package') and _containmentMF_.name = 'msgProducers')"/>
-  <childNodeTraces
-      visualID="3007"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'PackageMsgConsumer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Package') and _containmentMF_.name = 'msgConsumers')"/>
-  <childNodeTraces
-      visualID="3008"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Topic') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Package') and _containmentMF_.name = 'topics')">
-    <nodeLabelTraces
-        visualID="5017"
-        queryText="true"/>
-  </childNodeTraces>
-  <childNodeTraces
-      visualID="3009"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'PackageMsgProducer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Package') and _containmentMF_.name = 'msgProducers')"/>
-  <childNodeTraces
-      visualID="3010"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'PackageMsgConsumer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Package') and _containmentMF_.name = 'msgConsumers')"/>
-  <childNodeTraces
-      visualID="3011"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Package') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Package') and _containmentMF_.name = 'nodes')">
-    <nodeLabelTraces
-        visualID="5016"
-        queryText="true"/>
-  </childNodeTraces>
-  <childNodeTraces
       visualID="3012"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'NodeProperty') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Node') and _containmentMF_.name = 'parameters')">
     <nodeLabelTraces
         visualID="5018"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3013"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Node') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Composite') and _containmentMF_.name = 'components')">
+    <nodeLabelTraces
+        visualID="5019"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7005"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3014"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Composite') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Composite') and _containmentMF_.name = 'components')">
+    <nodeLabelTraces
+        visualID="5020"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3015"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'CompositeMsgProducer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Composite') and _containmentMF_.name = 'msgProducers')"/>
+  <childNodeTraces
+      visualID="3016"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'CompositeMsgConsumer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Composite') and _containmentMF_.name = 'msgConsumers')"/>
+  <childNodeTraces
+      visualID="3017"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'CompositeMsgProducer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Composite') and _containmentMF_.name = 'msgProducers')"/>
+  <childNodeTraces
+      visualID="3018"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'CompositeMsgConsumer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Composite') and _containmentMF_.name = 'msgConsumers')"/>
+  <childNodeTraces
+      visualID="3019"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Topic') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://robotics.unibg.it/componentmodels.ros' and _eClass_.name = 'Composite') and _containmentMF_.name = 'topics')">
+    <nodeLabelTraces
+        visualID="5021"
         queryText="true"/>
   </childNodeTraces>
   <linkTraces

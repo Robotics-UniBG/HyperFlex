@@ -34,7 +34,7 @@ import it.unibg.robotics.compositionmodel.Composite;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite#getPackage <em>Package</em>}</li>
+ *   <li>{@link it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite#getComposite <em>Composite</em>}</li>
  * </ul>
  * </p>
  *
@@ -44,29 +44,29 @@ import it.unibg.robotics.compositionmodel.Composite;
  */
 public interface ROSComposite extends Composite {
 	/**
-	 * Returns the value of the '<em><b>Package</b></em>' reference.
+	 * Returns the value of the '<em><b>Composite</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Package</em>' reference isn't clear,
+	 * If the meaning of the '<em>Composite</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Package</em>' reference.
-	 * @see #setPackage(it.unibg.robotics.roscomponentmodel.Package)
-	 * @see it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage#getROSComposite_Package()
+	 * @return the value of the '<em>Composite</em>' reference.
+	 * @see #setComposite(Composite)
+	 * @see it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage#getROSComposite_Composite()
 	 * @model required="true"
 	 * @generated
 	 */
-	it.unibg.robotics.roscomponentmodel.Package getPackage();
+	Composite getComposite();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite#getPackage <em>Package</em>}' reference.
+	 * Sets the value of the '{@link it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite#getComposite <em>Composite</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Package</em>' reference.
-	 * @see #getPackage()
+	 * @param value the new value of the '<em>Composite</em>' reference.
+	 * @see #getComposite()
 	 * @generated
 	 */
-	void setPackage(it.unibg.robotics.roscomponentmodel.Package value);
+	void setComposite(Composite value);
 
 } // ROSComposite

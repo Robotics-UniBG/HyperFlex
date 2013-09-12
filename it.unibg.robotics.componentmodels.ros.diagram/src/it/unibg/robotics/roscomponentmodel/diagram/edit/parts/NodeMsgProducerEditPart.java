@@ -227,9 +227,9 @@ public class NodeMsgProducerEditPart extends AbstractBorderItemEditPart {
 	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == RosComponentModelElementTypes.MsgInterfaceConnection_4010) {
-			types.add(RosComponentModelElementTypes.Topic_3008);
+			types.add(RosComponentModelElementTypes.Topic_3019);
 		} else if (relationshipType == RosComponentModelElementTypes.MsgInterfaceConnection_4011) {
-			types.add(RosComponentModelElementTypes.Topic_3008);
+			types.add(RosComponentModelElementTypes.Topic_3019);
 		}
 		return types;
 	}

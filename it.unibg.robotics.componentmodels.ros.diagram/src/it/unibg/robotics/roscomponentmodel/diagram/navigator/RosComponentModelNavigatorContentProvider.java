@@ -1,8 +1,15 @@
 package it.unibg.robotics.roscomponentmodel.diagram.navigator;
 
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
@@ -10,13 +17,6 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEdi
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackagePackageContainerCompartmentEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.part.Messages;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
@@ -239,12 +239,12 @@ public class RosComponentModelNavigatorContentProvider implements
 			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
 			Diagram sv = (Diagram) view;
 			RosComponentModelNavigatorGroup links = new RosComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_ArchitectureModel_1000_links,
+					Messages.NavigatorGroupName_System_1000_links,
 					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageEditPart.VISUAL_ID));
+							.getType(CompositeEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
@@ -271,14 +271,14 @@ public class RosComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case PackageEditPart.VISUAL_ID: {
+		case CompositeEditPart.VISUAL_ID: {
 			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			Collection<View> connectedViews;
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackagePackageContainerCompartmentEditPart.VISUAL_ID));
+							.getType(CompositeCompositeContainerCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					RosComponentModelVisualIDRegistry
 							.getType(NodeEditPart.VISUAL_ID));
@@ -287,55 +287,29 @@ public class RosComponentModelNavigatorContentProvider implements
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackagePackageContainerCompartmentEditPart.VISUAL_ID));
+							.getType(CompositeCompositeContainerCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					RosComponentModelVisualIDRegistry
-							.getType(Package2EditPart.VISUAL_ID));
+							.getType(Composite2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgProducer2EditPart.VISUAL_ID));
+							.getType(CompositeMsgProducer2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgConsumer2EditPart.VISUAL_ID));
+							.getType(CompositeMsgConsumer2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackagePackageContainerCompartmentEditPart.VISUAL_ID));
+							.getType(CompositeCompositeContainerCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					RosComponentModelVisualIDRegistry
 							.getType(TopicEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			return result.toArray();
-		}
-
-		case NodeEditPart.VISUAL_ID: {
-			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(NodePropertiesCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					RosComponentModelVisualIDRegistry
-							.getType(NodePropertyEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(NodeMsgProducerEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(NodeMsgConsumerEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			return result.toArray();
@@ -387,11 +361,54 @@ public class RosComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case PackageMsgProducerEditPart.VISUAL_ID: {
+		case NodeEditPart.VISUAL_ID: {
+			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(NodePropertiesCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					RosComponentModelVisualIDRegistry
+							.getType(NodePropertyEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(NodeMsgProducerEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(NodeMsgConsumerEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case Composite2EditPart.VISUAL_ID: {
+			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(CompositeMsgProducerEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(CompositeMsgConsumerEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case CompositeMsgProducerEditPart.VISUAL_ID: {
 			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RosComponentModelNavigatorGroup outgoinglinks = new RosComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_PackageMsgProducer_3006_outgoinglinks,
+					Messages.NavigatorGroupName_CompositeMsgProducer_3015_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -422,11 +439,81 @@ public class RosComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case PackageMsgConsumerEditPart.VISUAL_ID: {
+		case CompositeMsgConsumerEditPart.VISUAL_ID: {
 			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RosComponentModelNavigatorGroup outgoinglinks = new RosComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_PackageMsgConsumer_3007_outgoinglinks,
+					Messages.NavigatorGroupName_CompositeMsgConsumer_3016_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(CompositeMsgInterfaceExposedEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(CompositeMsgInterfaceExposed2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case CompositeMsgProducer2EditPart.VISUAL_ID: {
+			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RosComponentModelNavigatorGroup outgoinglinks = new RosComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_CompositeMsgProducer_3017_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(CompositeMsgInterfaceExposedEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					RosComponentModelVisualIDRegistry
+							.getType(CompositeMsgInterfaceExposed2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case CompositeMsgConsumer2EditPart.VISUAL_ID: {
+			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RosComponentModelNavigatorGroup outgoinglinks = new RosComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_CompositeMsgConsumer_3018_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -461,7 +548,7 @@ public class RosComponentModelNavigatorContentProvider implements
 			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RosComponentModelNavigatorGroup incominglinks = new RosComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_Topic_3008_incominglinks,
+					Messages.NavigatorGroupName_Topic_3019_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -492,93 +579,6 @@ public class RosComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case PackageMsgProducer2EditPart.VISUAL_ID: {
-			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RosComponentModelNavigatorGroup outgoinglinks = new RosComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_PackageMsgProducer_3009_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(CompositeMsgInterfaceExposedEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(CompositeMsgInterfaceExposed2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case PackageMsgConsumer2EditPart.VISUAL_ID: {
-			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RosComponentModelNavigatorGroup outgoinglinks = new RosComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_PackageMsgConsumer_3010_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(CompositeMsgInterfaceExposedEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(CompositeMsgInterfaceExposed2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case Package2EditPart.VISUAL_ID: {
-			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgProducerEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgConsumerEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			return result.toArray();
-		}
-
 		case CompositeMsgInterfaceExposedEditPart.VISUAL_ID: {
 			LinkedList<RosComponentModelAbstractNavigatorItem> result = new LinkedList<RosComponentModelAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
@@ -596,22 +596,22 @@ public class RosComponentModelNavigatorContentProvider implements
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgProducerEditPart.VISUAL_ID));
+							.getType(CompositeMsgProducerEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgConsumerEditPart.VISUAL_ID));
+							.getType(CompositeMsgConsumerEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgProducer2EditPart.VISUAL_ID));
+							.getType(CompositeMsgProducer2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgConsumer2EditPart.VISUAL_ID));
+							.getType(CompositeMsgConsumer2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {
@@ -650,22 +650,22 @@ public class RosComponentModelNavigatorContentProvider implements
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgProducerEditPart.VISUAL_ID));
+							.getType(CompositeMsgProducerEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgConsumerEditPart.VISUAL_ID));
+							.getType(CompositeMsgConsumerEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgProducer2EditPart.VISUAL_ID));
+							.getType(CompositeMsgProducer2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgConsumer2EditPart.VISUAL_ID));
+							.getType(CompositeMsgConsumer2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {
@@ -704,22 +704,22 @@ public class RosComponentModelNavigatorContentProvider implements
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgProducerEditPart.VISUAL_ID));
+							.getType(CompositeMsgProducerEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgConsumerEditPart.VISUAL_ID));
+							.getType(CompositeMsgConsumerEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgProducer2EditPart.VISUAL_ID));
+							.getType(CompositeMsgProducer2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgConsumer2EditPart.VISUAL_ID));
+							.getType(CompositeMsgConsumer2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {
@@ -748,22 +748,22 @@ public class RosComponentModelNavigatorContentProvider implements
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgProducerEditPart.VISUAL_ID));
+							.getType(CompositeMsgProducerEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgConsumerEditPart.VISUAL_ID));
+							.getType(CompositeMsgConsumerEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgProducer2EditPart.VISUAL_ID));
+							.getType(CompositeMsgProducer2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RosComponentModelVisualIDRegistry
-							.getType(PackageMsgConsumer2EditPart.VISUAL_ID));
+							.getType(CompositeMsgConsumer2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {

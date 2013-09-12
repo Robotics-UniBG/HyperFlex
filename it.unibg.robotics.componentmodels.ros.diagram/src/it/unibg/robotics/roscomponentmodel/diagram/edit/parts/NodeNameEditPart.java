@@ -59,7 +59,7 @@ public class NodeNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5003;
+	public static final int VISUAL_ID = 5019;
 
 	/**
 	 * @generated
@@ -305,7 +305,7 @@ public class NodeNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = RosComponentModelParserProvider
 					.getParser(
-							RosComponentModelElementTypes.Node_3001,
+							RosComponentModelElementTypes.Node_3013,
 							getParserElement(),
 							RosComponentModelVisualIDRegistry
 									.getType(it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeNameEditPart.VISUAL_ID));

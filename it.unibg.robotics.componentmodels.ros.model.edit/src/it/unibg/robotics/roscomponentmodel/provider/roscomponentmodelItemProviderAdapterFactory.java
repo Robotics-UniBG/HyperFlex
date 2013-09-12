@@ -1,5 +1,5 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -33,6 +33,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -94,26 +95,26 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.Package} instances.
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.Composite} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PackageItemProvider packageItemProvider;
+	protected CompositeItemProvider compositeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.Package}.
+	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.Composite}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPackageAdapter() {
-		if (packageItemProvider == null) {
-			packageItemProvider = new PackageItemProvider(this);
+	public Adapter createCompositeAdapter() {
+		if (compositeItemProvider == null) {
+			compositeItemProvider = new CompositeItemProvider(this);
 		}
 
-		return packageItemProvider;
+		return compositeItemProvider;
 	}
 
 	/**
@@ -186,49 +187,49 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.PackageMsgProducer} instances.
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.CompositeMsgProducer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PackageMsgProducerItemProvider packageMsgProducerItemProvider;
+	protected CompositeMsgProducerItemProvider compositeMsgProducerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.PackageMsgProducer}.
+	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.CompositeMsgProducer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPackageMsgProducerAdapter() {
-		if (packageMsgProducerItemProvider == null) {
-			packageMsgProducerItemProvider = new PackageMsgProducerItemProvider(this);
+	public Adapter createCompositeMsgProducerAdapter() {
+		if (compositeMsgProducerItemProvider == null) {
+			compositeMsgProducerItemProvider = new CompositeMsgProducerItemProvider(this);
 		}
 
-		return packageMsgProducerItemProvider;
+		return compositeMsgProducerItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.PackageMsgConsumer} instances.
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PackageMsgConsumerItemProvider packageMsgConsumerItemProvider;
+	protected CompositeMsgConsumerItemProvider compositeMsgConsumerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.PackageMsgConsumer}.
+	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPackageMsgConsumerAdapter() {
-		if (packageMsgConsumerItemProvider == null) {
-			packageMsgConsumerItemProvider = new PackageMsgConsumerItemProvider(this);
+	public Adapter createCompositeMsgConsumerAdapter() {
+		if (compositeMsgConsumerItemProvider == null) {
+			compositeMsgConsumerItemProvider = new CompositeMsgConsumerItemProvider(this);
 		}
 
-		return packageMsgConsumerItemProvider;
+		return compositeMsgConsumerItemProvider;
 	}
 
 	/**
@@ -324,26 +325,26 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.PackageSrvProducer} instances.
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.CompositeSrvProducer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PackageSrvProducerItemProvider packageSrvProducerItemProvider;
+	protected CompositeSrvProducerItemProvider compositeSrvProducerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.PackageSrvProducer}.
+	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.CompositeSrvProducer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPackageSrvProducerAdapter() {
-		if (packageSrvProducerItemProvider == null) {
-			packageSrvProducerItemProvider = new PackageSrvProducerItemProvider(this);
+	public Adapter createCompositeSrvProducerAdapter() {
+		if (compositeSrvProducerItemProvider == null) {
+			compositeSrvProducerItemProvider = new CompositeSrvProducerItemProvider(this);
 		}
 
-		return packageSrvProducerItemProvider;
+		return compositeSrvProducerItemProvider;
 	}
 
 	/**
@@ -370,26 +371,26 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.PackageSrvConsumer} instances.
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PackageSrvConsumerItemProvider packageSrvConsumerItemProvider;
+	protected CompositeSrvConsumerItemProvider compositeSrvConsumerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.PackageSrvConsumer}.
+	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPackageSrvConsumerAdapter() {
-		if (packageSrvConsumerItemProvider == null) {
-			packageSrvConsumerItemProvider = new PackageSrvConsumerItemProvider(this);
+	public Adapter createCompositeSrvConsumerAdapter() {
+		if (compositeSrvConsumerItemProvider == null) {
+			compositeSrvConsumerItemProvider = new CompositeSrvConsumerItemProvider(this);
 		}
 
-		return packageSrvConsumerItemProvider;
+		return compositeSrvConsumerItemProvider;
 	}
 
 	/**
@@ -439,26 +440,26 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.ArchitectureModel} instances.
+	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscomponentmodel.System} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ArchitectureModelItemProvider architectureModelItemProvider;
+	protected SystemItemProvider systemItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.ArchitectureModel}.
+	 * This creates an adapter for a {@link it.unibg.robotics.roscomponentmodel.System}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createArchitectureModelAdapter() {
-		if (architectureModelItemProvider == null) {
-			architectureModelItemProvider = new ArchitectureModelItemProvider(this);
+	public Adapter createSystemAdapter() {
+		if (systemItemProvider == null) {
+			systemItemProvider = new SystemItemProvider(this);
 		}
 
-		return architectureModelItemProvider;
+		return systemItemProvider;
 	}
 
 	/**
@@ -675,22 +676,22 @@ public class roscomponentmodelItemProviderAdapterFactory extends roscomponentmod
 	 * @generated
 	 */
 	public void dispose() {
-		if (packageItemProvider != null) packageItemProvider.dispose();
+		if (compositeItemProvider != null) compositeItemProvider.dispose();
 		if (nodeItemProvider != null) nodeItemProvider.dispose();
 		if (nodeMsgProducerItemProvider != null) nodeMsgProducerItemProvider.dispose();
 		if (nodeMsgConsumerItemProvider != null) nodeMsgConsumerItemProvider.dispose();
-		if (packageMsgProducerItemProvider != null) packageMsgProducerItemProvider.dispose();
-		if (packageMsgConsumerItemProvider != null) packageMsgConsumerItemProvider.dispose();
+		if (compositeMsgProducerItemProvider != null) compositeMsgProducerItemProvider.dispose();
+		if (compositeMsgConsumerItemProvider != null) compositeMsgConsumerItemProvider.dispose();
 		if (topicItemProvider != null) topicItemProvider.dispose();
 		if (propertyItemProvider != null) propertyItemProvider.dispose();
 		if (srvProducerItemProvider != null) srvProducerItemProvider.dispose();
 		if (srvConsumerItemProvider != null) srvConsumerItemProvider.dispose();
-		if (packageSrvProducerItemProvider != null) packageSrvProducerItemProvider.dispose();
+		if (compositeSrvProducerItemProvider != null) compositeSrvProducerItemProvider.dispose();
 		if (nodeSrvProducerItemProvider != null) nodeSrvProducerItemProvider.dispose();
-		if (packageSrvConsumerItemProvider != null) packageSrvConsumerItemProvider.dispose();
+		if (compositeSrvConsumerItemProvider != null) compositeSrvConsumerItemProvider.dispose();
 		if (nodeSrvConsumerItemProvider != null) nodeSrvConsumerItemProvider.dispose();
 		if (wireItemProvider != null) wireItemProvider.dispose();
-		if (architectureModelItemProvider != null) architectureModelItemProvider.dispose();
+		if (systemItemProvider != null) systemItemProvider.dispose();
 		if (msgInterfaceItemProvider != null) msgInterfaceItemProvider.dispose();
 		if (compositeMsgInterfaceItemProvider != null) compositeMsgInterfaceItemProvider.dispose();
 		if (nodeMsgInterfaceItemProvider != null) nodeMsgInterfaceItemProvider.dispose();

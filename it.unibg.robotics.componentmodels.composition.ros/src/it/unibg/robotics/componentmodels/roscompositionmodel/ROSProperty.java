@@ -25,7 +25,6 @@
 package it.unibg.robotics.componentmodels.roscompositionmodel;
 
 import it.unibg.robotics.compositionmodel.Property;
-
 import it.unibg.robotics.roscomponentmodel.CompositeProperty;
 
 /**

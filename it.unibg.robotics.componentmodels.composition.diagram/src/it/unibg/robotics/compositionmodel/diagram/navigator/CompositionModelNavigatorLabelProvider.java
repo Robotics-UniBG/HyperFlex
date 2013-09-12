@@ -104,39 +104,39 @@ public class CompositionModelNavigatorLabelProvider extends LabelProvider
 	 */
 	public Image getImage(View view) {
 		switch (CompositionModelVisualIDRegistry.getVisualID(view)) {
-		case SystemCompositeEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemComposite", CompositionModelElementTypes.SystemComposite_3009); //$NON-NLS-1$
-		case SystemRequiredInterfEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemRequiredInterf", CompositionModelElementTypes.SystemRequiredInterf_3008); //$NON-NLS-1$
-		case ROSMsgConsumerEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels.ros?ROSMsgConsumer", CompositionModelElementTypes.ROSMsgConsumer_3014); //$NON-NLS-1$
-		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemCompositeRequiredInterf", CompositionModelElementTypes.SystemCompositeRequiredInterf_3011); //$NON-NLS-1$
-		case SystemProvidedInterfEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemProvidedInterf", CompositionModelElementTypes.SystemProvidedInterf_3007); //$NON-NLS-1$
 		case SystemEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Diagram?http://robotics.unibg.it/compositionmodels?ArchitectureModel", CompositionModelElementTypes.ArchitectureModel_1000); //$NON-NLS-1$
-		case SystemCompositeProvidedInterfEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemCompositeProvidedInterf", CompositionModelElementTypes.SystemCompositeProvidedInterf_3010); //$NON-NLS-1$
-		case ROSMsgProducerEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels.ros?ROSMsgProducer", CompositionModelElementTypes.ROSMsgProducer_3013); //$NON-NLS-1$
-		case ROSCompositeEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels.ros?ROSComposite", CompositionModelElementTypes.ROSComposite_3012); //$NON-NLS-1$
-		case ConnectionEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://robotics.unibg.it/compositionmodels?Connection", CompositionModelElementTypes.Connection_4002); //$NON-NLS-1$
 		case System2EditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?http://robotics.unibg.it/compositionmodels?System", CompositionModelElementTypes.System_2002); //$NON-NLS-1$
+		case SystemProvidedInterfEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemProvidedInterf", CompositionModelElementTypes.SystemProvidedInterf_3007); //$NON-NLS-1$
+		case SystemRequiredInterfEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemRequiredInterf", CompositionModelElementTypes.SystemRequiredInterf_3008); //$NON-NLS-1$
+		case SystemCompositeEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemComposite", CompositionModelElementTypes.SystemComposite_3009); //$NON-NLS-1$
+		case SystemCompositeProvidedInterfEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemCompositeProvidedInterf", CompositionModelElementTypes.SystemCompositeProvidedInterf_3010); //$NON-NLS-1$
+		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemCompositeRequiredInterf", CompositionModelElementTypes.SystemCompositeRequiredInterf_3011); //$NON-NLS-1$
+		case ROSCompositeEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/compositionmodels.ros?ROSComposite", CompositionModelElementTypes.ROSComposite_3012); //$NON-NLS-1$
+		case ROSMsgProducerEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/compositionmodels.ros?ROSMsgProducer", CompositionModelElementTypes.ROSMsgProducer_3013); //$NON-NLS-1$
+		case ROSMsgConsumerEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/compositionmodels.ros?ROSMsgConsumer", CompositionModelElementTypes.ROSMsgConsumer_3014); //$NON-NLS-1$
+		case ConnectionEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://robotics.unibg.it/compositionmodels?Connection", CompositionModelElementTypes.Connection_4002); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -189,28 +189,28 @@ public class CompositionModelNavigatorLabelProvider extends LabelProvider
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (CompositionModelVisualIDRegistry.getVisualID(view)) {
-		case SystemCompositeEditPart.VISUAL_ID:
-			return getSystemComposite_3009Text(view);
-		case SystemRequiredInterfEditPart.VISUAL_ID:
-			return getSystemRequiredInterf_3008Text(view);
-		case ROSMsgConsumerEditPart.VISUAL_ID:
-			return getROSMsgConsumer_3014Text(view);
-		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
-			return getSystemCompositeRequiredInterf_3011Text(view);
-		case SystemProvidedInterfEditPart.VISUAL_ID:
-			return getSystemProvidedInterf_3007Text(view);
 		case SystemEditPart.VISUAL_ID:
 			return getArchitectureModel_1000Text(view);
-		case SystemCompositeProvidedInterfEditPart.VISUAL_ID:
-			return getSystemCompositeProvidedInterf_3010Text(view);
-		case ROSMsgProducerEditPart.VISUAL_ID:
-			return getROSMsgProducer_3013Text(view);
-		case ROSCompositeEditPart.VISUAL_ID:
-			return getROSComposite_3012Text(view);
-		case ConnectionEditPart.VISUAL_ID:
-			return getConnection_4002Text(view);
 		case System2EditPart.VISUAL_ID:
 			return getSystem_2002Text(view);
+		case SystemProvidedInterfEditPart.VISUAL_ID:
+			return getSystemProvidedInterf_3007Text(view);
+		case SystemRequiredInterfEditPart.VISUAL_ID:
+			return getSystemRequiredInterf_3008Text(view);
+		case SystemCompositeEditPart.VISUAL_ID:
+			return getSystemComposite_3009Text(view);
+		case SystemCompositeProvidedInterfEditPart.VISUAL_ID:
+			return getSystemCompositeProvidedInterf_3010Text(view);
+		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
+			return getSystemCompositeRequiredInterf_3011Text(view);
+		case ROSCompositeEditPart.VISUAL_ID:
+			return getROSComposite_3012Text(view);
+		case ROSMsgProducerEditPart.VISUAL_ID:
+			return getROSMsgProducer_3013Text(view);
+		case ROSMsgConsumerEditPart.VISUAL_ID:
+			return getROSMsgConsumer_3014Text(view);
+		case ConnectionEditPart.VISUAL_ID:
+			return getConnection_4002Text(view);
 		}
 		return getUnknownElementText(view);
 	}

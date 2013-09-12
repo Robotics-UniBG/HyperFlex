@@ -25,8 +25,7 @@
 package it.unibg.robotics.componentmodels.roscompositionmodel;
 
 import it.unibg.robotics.compositionmodel.CompRequiredInterf;
-
-import it.unibg.robotics.roscomponentmodel.PackageSrvConsumer;
+import it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,12 +53,12 @@ public interface ROSSrvConsumer extends CompRequiredInterf {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Srv Consumer</em>' reference.
-	 * @see #setSrvConsumer(PackageSrvConsumer)
+	 * @see #setSrvConsumer(CompositeSrvConsumer)
 	 * @see it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage#getROSSrvConsumer_SrvConsumer()
 	 * @model required="true"
 	 * @generated
 	 */
-	PackageSrvConsumer getSrvConsumer();
+	CompositeSrvConsumer getSrvConsumer();
 
 	/**
 	 * Sets the value of the '{@link it.unibg.robotics.componentmodels.roscompositionmodel.ROSSrvConsumer#getSrvConsumer <em>Srv Consumer</em>}' reference.
@@ -69,6 +68,6 @@ public interface ROSSrvConsumer extends CompRequiredInterf {
 	 * @see #getSrvConsumer()
 	 * @generated
 	 */
-	void setSrvConsumer(PackageSrvConsumer value);
+	void setSrvConsumer(CompositeSrvConsumer value);
 
 } // ROSSrvConsumer

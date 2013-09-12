@@ -25,11 +25,11 @@ public class RosComponentModelEditPartFactory implements EditPartFactory {
 			case ArchitectureModelEditPart.VISUAL_ID:
 				return new ArchitectureModelEditPart(view);
 
-			case PackageEditPart.VISUAL_ID:
-				return new PackageEditPart(view);
+			case CompositeEditPart.VISUAL_ID:
+				return new CompositeEditPart(view);
 
-			case PackageNameEditPart.VISUAL_ID:
-				return new PackageNameEditPart(view);
+			case CompositeNameEditPart.VISUAL_ID:
+				return new CompositeNameEditPart(view);
 
 			case NodeEditPart.VISUAL_ID:
 				return new NodeEditPart(view);
@@ -49,23 +49,23 @@ public class RosComponentModelEditPartFactory implements EditPartFactory {
 			case NodeMsgConsumerEditPart.VISUAL_ID:
 				return new NodeMsgConsumerEditPart(view);
 
-			case Package2EditPart.VISUAL_ID:
-				return new Package2EditPart(view);
+			case Composite2EditPart.VISUAL_ID:
+				return new Composite2EditPart(view);
 
-			case PackageName2EditPart.VISUAL_ID:
-				return new PackageName2EditPart(view);
+			case CompositeName2EditPart.VISUAL_ID:
+				return new CompositeName2EditPart(view);
 
-			case PackageMsgProducerEditPart.VISUAL_ID:
-				return new PackageMsgProducerEditPart(view);
+			case CompositeMsgProducerEditPart.VISUAL_ID:
+				return new CompositeMsgProducerEditPart(view);
 
-			case PackageMsgConsumerEditPart.VISUAL_ID:
-				return new PackageMsgConsumerEditPart(view);
+			case CompositeMsgConsumerEditPart.VISUAL_ID:
+				return new CompositeMsgConsumerEditPart(view);
 
-			case PackageMsgProducer2EditPart.VISUAL_ID:
-				return new PackageMsgProducer2EditPart(view);
+			case CompositeMsgProducer2EditPart.VISUAL_ID:
+				return new CompositeMsgProducer2EditPart(view);
 
-			case PackageMsgConsumer2EditPart.VISUAL_ID:
-				return new PackageMsgConsumer2EditPart(view);
+			case CompositeMsgConsumer2EditPart.VISUAL_ID:
+				return new CompositeMsgConsumer2EditPart(view);
 
 			case TopicEditPart.VISUAL_ID:
 				return new TopicEditPart(view);
@@ -73,8 +73,8 @@ public class RosComponentModelEditPartFactory implements EditPartFactory {
 			case TopicNameEditPart.VISUAL_ID:
 				return new TopicNameEditPart(view);
 
-			case PackagePackageContainerCompartmentEditPart.VISUAL_ID:
-				return new PackagePackageContainerCompartmentEditPart(view);
+			case CompositeCompositeContainerCompartmentEditPart.VISUAL_ID:
+				return new CompositeCompositeContainerCompartmentEditPart(view);
 
 			case NodePropertiesCompartmentEditPart.VISUAL_ID:
 				return new NodePropertiesCompartmentEditPart(view);

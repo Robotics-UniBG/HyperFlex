@@ -1,8 +1,17 @@
 package it.unibg.robotics.roscomponentmodel.diagram.providers;
 
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeName2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
@@ -12,15 +21,6 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageName2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageNameEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackagePackageContainerCompartmentEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
@@ -52,7 +52,6 @@ import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.FontStyle;
-import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
@@ -162,17 +161,17 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 					return false; // foreign diagram
 				}
 				switch (visualID) {
-				case PackageEditPart.VISUAL_ID:
+				case CompositeEditPart.VISUAL_ID:
 				case NodeEditPart.VISUAL_ID:
 				case NodePropertyEditPart.VISUAL_ID:
 				case NodeMsgProducerEditPart.VISUAL_ID:
 				case NodeMsgConsumerEditPart.VISUAL_ID:
-				case PackageMsgProducerEditPart.VISUAL_ID:
-				case PackageMsgConsumerEditPart.VISUAL_ID:
+				case CompositeMsgProducerEditPart.VISUAL_ID:
+				case CompositeMsgConsumerEditPart.VISUAL_ID:
 				case TopicEditPart.VISUAL_ID:
-				case Package2EditPart.VISUAL_ID:
-				case PackageMsgProducer2EditPart.VISUAL_ID:
-				case PackageMsgConsumer2EditPart.VISUAL_ID:
+				case Composite2EditPart.VISUAL_ID:
+				case CompositeMsgProducer2EditPart.VISUAL_ID:
+				case CompositeMsgConsumer2EditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != RosComponentModelVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -185,16 +184,16 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 				}
 			}
 		}
-		return PackageEditPart.VISUAL_ID == visualID
+		return CompositeEditPart.VISUAL_ID == visualID
 				|| NodeEditPart.VISUAL_ID == visualID
 				|| NodePropertyEditPart.VISUAL_ID == visualID
 				|| NodeMsgProducerEditPart.VISUAL_ID == visualID
 				|| NodeMsgConsumerEditPart.VISUAL_ID == visualID
-				|| Package2EditPart.VISUAL_ID == visualID
-				|| PackageMsgProducerEditPart.VISUAL_ID == visualID
-				|| PackageMsgConsumerEditPart.VISUAL_ID == visualID
-				|| PackageMsgProducer2EditPart.VISUAL_ID == visualID
-				|| PackageMsgConsumer2EditPart.VISUAL_ID == visualID
+				|| Composite2EditPart.VISUAL_ID == visualID
+				|| CompositeMsgProducerEditPart.VISUAL_ID == visualID
+				|| CompositeMsgConsumerEditPart.VISUAL_ID == visualID
+				|| CompositeMsgProducer2EditPart.VISUAL_ID == visualID
+				|| CompositeMsgConsumer2EditPart.VISUAL_ID == visualID
 				|| TopicEditPart.VISUAL_ID == visualID;
 	}
 
@@ -254,11 +253,11 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 					.getVisualID(semanticHint);
 		}
 		switch (visualID) {
-		case PackageEditPart.VISUAL_ID:
-			return createPackage_2002(domainElement, containerView, index,
+		case CompositeEditPart.VISUAL_ID:
+			return createComposite_2003(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case NodeEditPart.VISUAL_ID:
-			return createNode_3001(domainElement, containerView, index,
+			return createNode_3013(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case NodePropertyEditPart.VISUAL_ID:
 			return createNodeProperty_3012(domainElement, containerView, index,
@@ -269,23 +268,23 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		case NodeMsgConsumerEditPart.VISUAL_ID:
 			return createNodeMsgConsumer_3004(domainElement, containerView,
 					index, persisted, preferencesHint);
-		case Package2EditPart.VISUAL_ID:
-			return createPackage_3011(domainElement, containerView, index,
+		case Composite2EditPart.VISUAL_ID:
+			return createComposite_3014(domainElement, containerView, index,
 					persisted, preferencesHint);
-		case PackageMsgProducerEditPart.VISUAL_ID:
-			return createPackageMsgProducer_3006(domainElement, containerView,
-					index, persisted, preferencesHint);
-		case PackageMsgConsumerEditPart.VISUAL_ID:
-			return createPackageMsgConsumer_3007(domainElement, containerView,
-					index, persisted, preferencesHint);
-		case PackageMsgProducer2EditPart.VISUAL_ID:
-			return createPackageMsgProducer_3009(domainElement, containerView,
-					index, persisted, preferencesHint);
-		case PackageMsgConsumer2EditPart.VISUAL_ID:
-			return createPackageMsgConsumer_3010(domainElement, containerView,
-					index, persisted, preferencesHint);
+		case CompositeMsgProducerEditPart.VISUAL_ID:
+			return createCompositeMsgProducer_3015(domainElement,
+					containerView, index, persisted, preferencesHint);
+		case CompositeMsgConsumerEditPart.VISUAL_ID:
+			return createCompositeMsgConsumer_3016(domainElement,
+					containerView, index, persisted, preferencesHint);
+		case CompositeMsgProducer2EditPart.VISUAL_ID:
+			return createCompositeMsgProducer_3017(domainElement,
+					containerView, index, persisted, preferencesHint);
+		case CompositeMsgConsumer2EditPart.VISUAL_ID:
+			return createCompositeMsgConsumer_3018(domainElement,
+					containerView, index, persisted, preferencesHint);
 		case TopicEditPart.VISUAL_ID:
-			return createTopic_3008(domainElement, containerView, index,
+			return createTopic_3019(domainElement, containerView, index,
 					persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
@@ -321,12 +320,12 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createPackage_2002(EObject domainElement, View containerView,
+	public Node createComposite_2003(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(RosComponentModelVisualIDRegistry
-				.getType(PackageEditPart.VISUAL_ID));
+				.getType(CompositeEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -358,13 +357,13 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5010 = createLabel(node,
+		Node label5022 = createLabel(node,
 				RosComponentModelVisualIDRegistry
-						.getType(PackageNameEditPart.VISUAL_ID));
+						.getType(CompositeNameEditPart.VISUAL_ID));
 		createCompartment(
 				node,
 				RosComponentModelVisualIDRegistry
-						.getType(PackagePackageContainerCompartmentEditPart.VISUAL_ID),
+						.getType(CompositeCompositeContainerCompartmentEditPart.VISUAL_ID),
 				false, false, false, false);
 		return node;
 	}
@@ -372,7 +371,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createNode_3001(EObject domainElement, View containerView,
+	public Node createNode_3013(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -408,7 +407,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5003 = createLabel(node,
+		Node label5019 = createLabel(node,
 				RosComponentModelVisualIDRegistry
 						.getType(NodeNameEditPart.VISUAL_ID));
 		createCompartment(node,
@@ -461,11 +460,6 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		Node label5018 = createLabel(node,
 				RosComponentModelVisualIDRegistry
 						.getType(NodePropertyNameEditPart.VISUAL_ID));
-		label5018.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location5018 = (Location) label5018.getLayoutConstraint();
-		location5018.setX(0);
-		location5018.setY(5);
 		return node;
 	}
 
@@ -556,12 +550,12 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createPackage_3011(EObject domainElement, View containerView,
+	public Node createComposite_3014(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(RosComponentModelVisualIDRegistry
-				.getType(Package2EditPart.VISUAL_ID));
+				.getType(Composite2EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -592,16 +586,16 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5016 = createLabel(node,
+		Node label5020 = createLabel(node,
 				RosComponentModelVisualIDRegistry
-						.getType(PackageName2EditPart.VISUAL_ID));
+						.getType(CompositeName2EditPart.VISUAL_ID));
 		return node;
 	}
 
 	/**
 	 * @generated
 	 */
-	public Node createPackageMsgProducer_3006(EObject domainElement,
+	public Node createCompositeMsgProducer_3015(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -611,7 +605,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(RosComponentModelVisualIDRegistry
-				.getType(PackageMsgProducerEditPart.VISUAL_ID));
+				.getType(CompositeMsgProducerEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -643,7 +637,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createPackageMsgConsumer_3007(EObject domainElement,
+	public Node createCompositeMsgConsumer_3016(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -653,7 +647,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(RosComponentModelVisualIDRegistry
-				.getType(PackageMsgConsumerEditPart.VISUAL_ID));
+				.getType(CompositeMsgConsumerEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -685,7 +679,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createPackageMsgProducer_3009(EObject domainElement,
+	public Node createCompositeMsgProducer_3017(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -695,7 +689,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(RosComponentModelVisualIDRegistry
-				.getType(PackageMsgProducer2EditPart.VISUAL_ID));
+				.getType(CompositeMsgProducer2EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -727,7 +721,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createPackageMsgConsumer_3010(EObject domainElement,
+	public Node createCompositeMsgConsumer_3018(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -737,7 +731,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(RosComponentModelVisualIDRegistry
-				.getType(PackageMsgConsumer2EditPart.VISUAL_ID));
+				.getType(CompositeMsgConsumer2EditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -769,7 +763,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createTopic_3008(EObject domainElement, View containerView,
+	public Node createTopic_3019(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
 		node.getStyles()
@@ -804,7 +798,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5017 = createLabel(node,
+		Node label5021 = createLabel(node,
 				RosComponentModelVisualIDRegistry
 						.getType(TopicNameEditPart.VISUAL_ID));
 		return node;

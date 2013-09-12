@@ -44,7 +44,7 @@ public class TopicEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3008;
+	public static final int VISUAL_ID = 3019;
 
 	/**
 	 * @generated
@@ -278,27 +278,27 @@ public class TopicEditPart extends ShapeNodeEditPart {
 		if (relationshipType == RosComponentModelElementTypes.MsgInterfaceConnection_4010) {
 			types.add(RosComponentModelElementTypes.NodeMsgProducer_3003);
 			types.add(RosComponentModelElementTypes.NodeMsgConsumer_3004);
-			types.add(RosComponentModelElementTypes.PackageMsgProducer_3006);
-			types.add(RosComponentModelElementTypes.PackageMsgConsumer_3007);
-			types.add(RosComponentModelElementTypes.PackageMsgProducer_3009);
-			types.add(RosComponentModelElementTypes.PackageMsgConsumer_3010);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3015);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3016);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3017);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3018);
 		} else if (relationshipType == RosComponentModelElementTypes.MsgInterfaceConnection_4011) {
 			types.add(RosComponentModelElementTypes.NodeMsgProducer_3003);
 			types.add(RosComponentModelElementTypes.NodeMsgConsumer_3004);
-			types.add(RosComponentModelElementTypes.PackageMsgProducer_3006);
-			types.add(RosComponentModelElementTypes.PackageMsgConsumer_3007);
-			types.add(RosComponentModelElementTypes.PackageMsgProducer_3009);
-			types.add(RosComponentModelElementTypes.PackageMsgConsumer_3010);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3015);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3016);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3017);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3018);
 		} else if (relationshipType == RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4007) {
-			types.add(RosComponentModelElementTypes.PackageMsgProducer_3006);
-			types.add(RosComponentModelElementTypes.PackageMsgConsumer_3007);
-			types.add(RosComponentModelElementTypes.PackageMsgProducer_3009);
-			types.add(RosComponentModelElementTypes.PackageMsgConsumer_3010);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3015);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3016);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3017);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3018);
 		} else if (relationshipType == RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4012) {
-			types.add(RosComponentModelElementTypes.PackageMsgProducer_3006);
-			types.add(RosComponentModelElementTypes.PackageMsgConsumer_3007);
-			types.add(RosComponentModelElementTypes.PackageMsgProducer_3009);
-			types.add(RosComponentModelElementTypes.PackageMsgConsumer_3010);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3015);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3016);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3017);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3018);
 		}
 		return types;
 	}

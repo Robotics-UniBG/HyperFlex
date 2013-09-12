@@ -157,7 +157,7 @@
     <labelMappings
         xsi:type="gmfmap:FeatureLabelMapping">
       <diagramLabel
-          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ProvidedRequiredConnectionName"/>
+          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnectionName"/>
       <features
           href="../models/compositionModel.ecore#//Connection/name"/>
     </labelMappings>

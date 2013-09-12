@@ -21,9 +21,9 @@
         xsi:type="gmfgen:FigureViewmap"
         figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
     <domainDiagramElement
-        href="../models/rosComponentModel.genmodel#//roscomponentmodel/ArchitectureModel"/>
+        href="../models/rosComponentModel.genmodel#//roscomponentmodel/System"/>
     <childNodes
-        visualID="3001"
+        visualID="3013"
         editPartClassName="NodeEditPart"
         itemSemanticEditPolicyClassName="NodeItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeViewFactory"
@@ -46,15 +46,14 @@
         <metaClass
             href="../models/rosComponentModel.genmodel#//roscomponentmodel/Node"/>
         <containmentMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/nodes"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/components"/>
         <childMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/nodes"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/components"/>
       </modelFacet>
       <labels
-          visualID="5003"
+          visualID="5019"
           editPartClassName="NodeNameEditPart"
-          itemSemanticEditPolicyClassName="NodeNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="NodeNameViewFactory">
+          itemSemanticEditPolicyClassName="NodeNameItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -69,7 +68,7 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../models/rosComponentModel.genmodel#//roscomponentmodel/Node/name"/>
+              href="../models/rosComponentModel.genmodel#//roscomponentmodel/AbstractComponent/name"/>
         </modelFacet>
       </labels>
     </childNodes>
@@ -89,7 +88,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="PropertiesFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PropertiesFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PropertiesFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;&lt;…>&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PropertiesFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePropertiesNameLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PropertiesFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setOutline(false);&#xA;this.setFill(false);&#xA;this.setOpaque(false);&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigurePropertiesNameLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigurePropertiesNameLabel.setText(&quot;&lt;…>&quot;);&#xA;&#xA;this.add(fFigurePropertiesNameLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePropertiesNameLabel() {&#xA;&#x9;&#x9;return fFigurePropertiesNameLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet>
         <metaClass
             href="../models/rosComponentModel.genmodel#//roscomponentmodel/NodeProperty"/>
@@ -99,17 +98,19 @@
             href="../models/rosComponentModel.genmodel#//roscomponentmodel/Node/parameters"/>
       </modelFacet>
       <labels
-          xsi:type="gmfgen:GenExternalNodeLabel"
           visualID="5018"
           editPartClassName="NodePropertyNameEditPart"
-          itemSemanticEditPolicyClassName="NodePropertyNameItemSemanticEditPolicy"
-          elementIcon="true">
+          itemSemanticEditPolicyClassName="NodePropertyNameItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
-            xsi:type="gmfgen:InnerClassViewmap"
-            className="PropertiesFigure"
-            classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PropertiesFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PropertiesFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;&lt;…>&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureComponentNameLabel"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
+          <attributes
+              xsi:type="gmfgen:StyleAttributes"
+              fixedFont="true"/>
+        </viewmap>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
@@ -123,7 +124,6 @@
         visualID="3003"
         editPartClassName="NodeMsgProducerEditPart"
         itemSemanticEditPolicyClassName="NodeMsgProducerItemSemanticEditPolicy"
-        notationViewFactoryClassName="NodeMsgProducerViewFactory"
         canonicalEditPolicyClassName="NodeMsgProducerCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="NodeMsgProducerGraphicalNodeEditPolicy"
         createCommandClassName="NodeMsgProducerCreateCommand"
@@ -160,7 +160,6 @@
         visualID="3004"
         editPartClassName="NodeMsgConsumerEditPart"
         itemSemanticEditPolicyClassName="NodeMsgConsumerItemSemanticEditPolicy"
-        notationViewFactoryClassName="NodeMsgConsumerViewFactory"
         canonicalEditPolicyClassName="NodeMsgConsumerCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="NodeMsgConsumerGraphicalNodeEditPolicy"
         createCommandClassName="NodeMsgConsumerCreateCommand"
@@ -193,14 +192,13 @@
       </modelFacet>
     </childNodes>
     <childNodes
-        visualID="3011"
-        editPartClassName="Package2EditPart"
-        itemSemanticEditPolicyClassName="Package2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="PackageViewFactory"
-        canonicalEditPolicyClassName="Package2CanonicalEditPolicy"
+        visualID="3014"
+        editPartClassName="Composite2EditPart"
+        itemSemanticEditPolicyClassName="Composite2ItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="Composite2CanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.5 //@diagram/@childNodes.6"
-        graphicalNodeEditPolicyClassName="Package2GraphicalNodeEditPolicy"
-        createCommandClassName="Package2CreateCommand"
+        graphicalNodeEditPolicyClassName="Composite2GraphicalNodeEditPolicy"
+        createCommandClassName="Composite2CreateCommand"
         containers="//@diagram/@compartments.0">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -213,17 +211,16 @@
           classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class CompositeFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigureCompositeProperties; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePackageNameLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public CompositeFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;org.eclipse.draw2d.RectangleFigure compositeInfo0 = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;&#x9;compositeInfo0.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightBlue);&#xA;&#xA;compositeInfo0.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintCompositeInfo0 = new org.eclipse.draw2d.GridData();&#xA;constraintCompositeInfo0.verticalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintCompositeInfo0.horizontalAlignment = org.eclipse.draw2d.GridData.FILL;&#xA;constraintCompositeInfo0.horizontalIndent = 0;&#xA;constraintCompositeInfo0.horizontalSpan = 1;&#xA;constraintCompositeInfo0.verticalSpan = 1;&#xA;constraintCompositeInfo0.grabExcessHorizontalSpace = true;&#xA;constraintCompositeInfo0.grabExcessVerticalSpace = false;&#xA;this.add(compositeInfo0, constraintCompositeInfo0);&#xA;&#xA;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutCompositeInfo0 = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutCompositeInfo0.numColumns = 1;&#xA;&#x9;layoutCompositeInfo0.makeColumnsEqualWidth = true;&#xA;&#x9;compositeInfo0.setLayoutManager(layoutCompositeInfo0);&#xA;&#xA;&#xA;&#xA;fFigurePackageNameLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigurePackageNameLabel.setText(&quot;&lt;…>&quot;);&#xA;&#xA;fFigurePackageNameLabel.setFont(FFIGUREPACKAGENAMELABEL_FONT);&#xA;&#xA;&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintFFigurePackageNameLabel = new org.eclipse.draw2d.GridData();&#xA;constraintFFigurePackageNameLabel.verticalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintFFigurePackageNameLabel.horizontalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintFFigurePackageNameLabel.horizontalIndent = 0;&#xA;constraintFFigurePackageNameLabel.horizontalSpan = 1;&#xA;constraintFFigurePackageNameLabel.verticalSpan = 1;&#xA;constraintFFigurePackageNameLabel.grabExcessHorizontalSpace = false;&#xA;constraintFFigurePackageNameLabel.grabExcessVerticalSpace = false;&#xA;compositeInfo0.add(fFigurePackageNameLabel, constraintFFigurePackageNameLabel);&#xA;&#xA;&#xA;&#xA;&#xA;org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel compositeLabel1 = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;compositeLabel1.setText(&quot;Composite&quot;);&#xA;&#xA;compositeLabel1.setFont(COMPOSITELABEL1_FONT);&#xA;&#xA;&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintCompositeLabel1 = new org.eclipse.draw2d.GridData();&#xA;constraintCompositeLabel1.verticalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintCompositeLabel1.horizontalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintCompositeLabel1.horizontalIndent = 0;&#xA;constraintCompositeLabel1.horizontalSpan = 1;&#xA;constraintCompositeLabel1.verticalSpan = 1;&#xA;constraintCompositeLabel1.grabExcessHorizontalSpace = false;&#xA;constraintCompositeLabel1.grabExcessVerticalSpace = false;&#xA;compositeInfo0.add(compositeLabel1, constraintCompositeLabel1);&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;fFigureCompositeProperties = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintFFigureCompositeProperties = new org.eclipse.draw2d.GridData();&#xA;constraintFFigureCompositeProperties.verticalAlignment = org.eclipse.draw2d.GridData.FILL;&#xA;constraintFFigureCompositeProperties.horizontalAlignment = org.eclipse.draw2d.GridData.FILL;&#xA;constraintFFigureCompositeProperties.horizontalIndent = 0;&#xA;constraintFFigureCompositeProperties.horizontalSpan = 1;&#xA;constraintFFigureCompositeProperties.verticalSpan = 1;&#xA;constraintFFigureCompositeProperties.grabExcessHorizontalSpace = true;&#xA;constraintFFigureCompositeProperties.grabExcessVerticalSpace = true;&#xA;this.add(fFigureCompositeProperties, constraintFFigureCompositeProperties);&#xA;&#xA;fFigureCompositeProperties.setLayoutManager(new org.eclipse.draw2d.StackLayout());&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigureCompositeProperties() {&#xA;&#x9;&#x9;return fFigureCompositeProperties;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePackageNameLabel() {&#xA;&#x9;&#x9;return fFigurePackageNameLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREPACKAGENAMELABEL_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font COMPOSITELABEL1_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;"/>
       <modelFacet>
         <metaClass
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite"/>
         <containmentMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/nodes"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/components"/>
         <childMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/nodes"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/components"/>
       </modelFacet>
       <labels
-          visualID="5016"
-          editPartClassName="PackageName2EditPart"
-          itemSemanticEditPolicyClassName="PackageName2ItemSemanticEditPolicy"
-          notationViewFactoryClassName="PackageNameViewFactory">
+          visualID="5020"
+          editPartClassName="CompositeName2EditPart"
+          itemSemanticEditPolicyClassName="CompositeName2ItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -238,26 +235,25 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/name"/>
+              href="../models/rosComponentModel.genmodel#//roscomponentmodel/AbstractComponent/name"/>
         </modelFacet>
       </labels>
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3006"
-        editPartClassName="PackageMsgProducerEditPart"
-        itemSemanticEditPolicyClassName="PackageMsgProducerItemSemanticEditPolicy"
-        notationViewFactoryClassName="PackageMsgProducerViewFactory"
-        canonicalEditPolicyClassName="PackageMsgProducerCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="PackageMsgProducerGraphicalNodeEditPolicy"
-        createCommandClassName="PackageMsgProducerCreateCommand"
+        visualID="3015"
+        editPartClassName="CompositeMsgProducerEditPart"
+        itemSemanticEditPolicyClassName="CompositeMsgProducerItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="CompositeMsgProducerCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="CompositeMsgProducerGraphicalNodeEditPolicy"
+        createCommandClassName="CompositeMsgProducerCreateCommand"
         containers="//@diagram/@childNodes.4"
         preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="PackageMsgProducerEditHelper"/>
+          editHelperClassName="CompositeMsgProducerEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="Producer1Figure"
@@ -272,29 +268,28 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/PackageMsgProducer"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/CompositeMsgProducer"/>
         <containmentMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/msgProducers"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/msgProducers"/>
         <childMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/msgProducers"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/msgProducers"/>
       </modelFacet>
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3007"
-        editPartClassName="PackageMsgConsumerEditPart"
-        itemSemanticEditPolicyClassName="PackageMsgConsumerItemSemanticEditPolicy"
-        notationViewFactoryClassName="PackageMsgConsumerViewFactory"
-        canonicalEditPolicyClassName="PackageMsgConsumerCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="PackageMsgConsumerGraphicalNodeEditPolicy"
-        createCommandClassName="PackageMsgConsumerCreateCommand"
+        visualID="3016"
+        editPartClassName="CompositeMsgConsumerEditPart"
+        itemSemanticEditPolicyClassName="CompositeMsgConsumerItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="CompositeMsgConsumerCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="CompositeMsgConsumerGraphicalNodeEditPolicy"
+        createCommandClassName="CompositeMsgConsumerCreateCommand"
         containers="//@diagram/@childNodes.4"
         preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="PackageMsgConsumerEditHelper"/>
+          editHelperClassName="CompositeMsgConsumerEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="Consumer1Figure"
@@ -309,22 +304,21 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/PackageMsgConsumer"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/CompositeMsgConsumer"/>
         <containmentMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/msgConsumers"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/msgConsumers"/>
         <childMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/msgConsumers"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/msgConsumers"/>
       </modelFacet>
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3009"
-        editPartClassName="PackageMsgProducer2EditPart"
-        itemSemanticEditPolicyClassName="PackageMsgProducer2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="PackageMsgProducerViewFactory"
-        canonicalEditPolicyClassName="PackageMsgProducer2CanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="PackageMsgProducer2GraphicalNodeEditPolicy"
-        createCommandClassName="PackageMsgProducer2CreateCommand"
+        visualID="3017"
+        editPartClassName="CompositeMsgProducer2EditPart"
+        itemSemanticEditPolicyClassName="CompositeMsgProducer2ItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="CompositeMsgProducer2CanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="CompositeMsgProducer2GraphicalNodeEditPolicy"
+        createCommandClassName="CompositeMsgProducer2CreateCommand"
         containers="//@diagram/@topLevelNodes.0"
         preferredSideName="WEST">
       <diagramRunTimeClass
@@ -346,22 +340,21 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/PackageMsgProducer"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/CompositeMsgProducer"/>
         <containmentMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/msgProducers"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/msgProducers"/>
         <childMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/msgProducers"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/msgProducers"/>
       </modelFacet>
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3010"
-        editPartClassName="PackageMsgConsumer2EditPart"
-        itemSemanticEditPolicyClassName="PackageMsgConsumer2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="PackageMsgConsumerViewFactory"
-        canonicalEditPolicyClassName="PackageMsgConsumer2CanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="PackageMsgConsumer2GraphicalNodeEditPolicy"
-        createCommandClassName="PackageMsgConsumer2CreateCommand"
+        visualID="3018"
+        editPartClassName="CompositeMsgConsumer2EditPart"
+        itemSemanticEditPolicyClassName="CompositeMsgConsumer2ItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="CompositeMsgConsumer2CanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="CompositeMsgConsumer2GraphicalNodeEditPolicy"
+        createCommandClassName="CompositeMsgConsumer2CreateCommand"
         containers="//@diagram/@topLevelNodes.0"
         preferredSideName="EAST">
       <diagramRunTimeClass
@@ -383,18 +376,17 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/PackageMsgConsumer"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/CompositeMsgConsumer"/>
         <containmentMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/msgConsumers"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/msgConsumers"/>
         <childMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/msgConsumers"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/msgConsumers"/>
       </modelFacet>
     </childNodes>
     <childNodes
-        visualID="3008"
+        visualID="3019"
         editPartClassName="TopicEditPart"
         itemSemanticEditPolicyClassName="TopicItemSemanticEditPolicy"
-        notationViewFactoryClassName="TopicViewFactory"
         canonicalEditPolicyClassName="TopicCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="TopicGraphicalNodeEditPolicy"
         createCommandClassName="TopicCreateCommand"
@@ -416,15 +408,14 @@
         <metaClass
             href="../models/rosComponentModel.genmodel#//roscomponentmodel/Topic"/>
         <containmentMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/topics"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/topics"/>
         <childMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/topics"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite/topics"/>
       </modelFacet>
       <labels
-          visualID="5017"
+          visualID="5021"
           editPartClassName="TopicNameEditPart"
-          itemSemanticEditPolicyClassName="TopicNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="TopicNameViewFactory">
+          itemSemanticEditPolicyClassName="TopicNameItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -444,37 +435,35 @@
       </labels>
     </childNodes>
     <topLevelNodes
-        visualID="2002"
-        editPartClassName="PackageEditPart"
-        itemSemanticEditPolicyClassName="PackageItemSemanticEditPolicy"
-        notationViewFactoryClassName="PackageViewFactory"
-        canonicalEditPolicyClassName="PackageCanonicalEditPolicy"
+        visualID="2003"
+        editPartClassName="CompositeEditPart"
+        itemSemanticEditPolicyClassName="CompositeItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="CompositeCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.7 //@diagram/@childNodes.8"
         compartments="//@diagram/@compartments.0"
-        graphicalNodeEditPolicyClassName="PackageGraphicalNodeEditPolicy"
-        createCommandClassName="PackageCreateCommand">
+        graphicalNodeEditPolicyClassName="CompositeGraphicalNodeEditPolicy"
+        createCommandClassName="CompositeCreateCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="PackageEditHelper"/>
+          editHelperClassName="CompositeEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="CompositeContainerFigure"
           classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class CompositeContainerFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigureCompositeContainerComponentsArea; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePackageContainerNameLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public CompositeContainerFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigurePackageContainerNameLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigurePackageContainerNameLabel.setText(&quot;&lt;…>&quot;);&#xA;&#xA;fFigurePackageContainerNameLabel.setFont(FFIGUREPACKAGECONTAINERNAMELABEL_FONT);&#xA;&#xA;&#xA;fFigurePackageContainerNameLabel.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigurePackageContainerNameLabel);&#xA;&#xA;&#xA;&#xA;fFigureCompositeContainerComponentsArea = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fFigureCompositeContainerComponentsArea.setLineWidth(0);&#xA;&#xA;this.add(fFigureCompositeContainerComponentsArea);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigureCompositeContainerComponentsArea() {&#xA;&#x9;&#x9;return fFigureCompositeContainerComponentsArea;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePackageContainerNameLabel() {&#xA;&#x9;&#x9;return fFigurePackageContainerNameLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREPACKAGECONTAINERNAMELABEL_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;"/>
       <modelFacet>
         <metaClass
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/Composite"/>
         <containmentMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/ArchitectureModel/package"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/System/composite"/>
         <childMetaFeature
-            href="../models/rosComponentModel.genmodel#//roscomponentmodel/ArchitectureModel/package"/>
+            href="../models/rosComponentModel.genmodel#//roscomponentmodel/System/composite"/>
       </modelFacet>
       <labels
-          visualID="5010"
-          editPartClassName="PackageNameEditPart"
-          itemSemanticEditPolicyClassName="PackageNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="PackageNameViewFactory">
+          visualID="5022"
+          editPartClassName="CompositeNameEditPart"
+          itemSemanticEditPolicyClassName="CompositeNameItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -489,7 +478,7 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../models/rosComponentModel.genmodel#//roscomponentmodel/Package/name"/>
+              href="../models/rosComponentModel.genmodel#//roscomponentmodel/AbstractComponent/name"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -497,7 +486,6 @@
         visualID="4010"
         editPartClassName="MsgInterfaceConnectionEditPart"
         itemSemanticEditPolicyClassName="MsgInterfaceConnectionItemSemanticEditPolicy"
-        notationViewFactoryClassName="MsgInterfaceConnectionViewFactory"
         createCommandClassName="MsgInterfaceConnectionCreateCommand"
         reorientCommandClassName="MsgInterfaceConnectionReorientCommand">
       <diagramRunTimeClass
@@ -507,7 +495,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="ProducerChannelConnectionFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ProducerChannelConnectionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ProducerChannelConnectionFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;df.setLineWidth(2);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ProducerChannelConnectionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureProducerChannelConnectionLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ProducerChannelConnectionFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureProducerChannelConnectionLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureProducerChannelConnectionLabel.setText(&quot;&quot;);&#xA;&#xA;fFigureProducerChannelConnectionLabel.setFont(FFIGUREPRODUCERCHANNELCONNECTIONLABEL_FONT);&#xA;&#xA;&#xA;&#xA;this.add(fFigureProducerChannelConnectionLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;df.setLineWidth(2);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureProducerChannelConnectionLabel() {&#xA;&#x9;&#x9;return fFigureProducerChannelConnectionLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREPRODUCERCHANNELCONNECTIONLABEL_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.NORMAL);&#xA;&#xA;"/>
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
@@ -520,7 +508,6 @@
         visualID="4011"
         editPartClassName="MsgInterfaceConnection2EditPart"
         itemSemanticEditPolicyClassName="MsgInterfaceConnection2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="MsgInterfaceConnectionViewFactory"
         createCommandClassName="MsgInterfaceConnection2CreateCommand"
         reorientCommandClassName="MsgInterfaceConnection2ReorientCommand">
       <diagramRunTimeClass
@@ -530,7 +517,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="ConsumerChannelConnectionFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ConsumerChannelConnectionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ConsumerChannelConnectionFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setSourceDecoration(createSourceDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createSourceDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;df.setLineWidth(2);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ConsumerChannelConnectionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureConsumerChannelConnectionLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ConsumerChannelConnectionFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;&#x9;setSourceDecoration(createSourceDecoration());&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureConsumerChannelConnectionLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureConsumerChannelConnectionLabel.setText(&quot;&quot;);&#xA;&#xA;fFigureConsumerChannelConnectionLabel.setFont(FFIGURECONSUMERCHANNELCONNECTIONLABEL_FONT);&#xA;&#xA;&#xA;&#xA;this.add(fFigureConsumerChannelConnectionLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createSourceDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;df.setLineWidth(2);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureConsumerChannelConnectionLabel() {&#xA;&#x9;&#x9;return fFigureConsumerChannelConnectionLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGURECONSUMERCHANNELCONNECTIONLABEL_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.NORMAL);&#xA;&#xA;"/>
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
@@ -543,7 +530,6 @@
         visualID="4007"
         editPartClassName="CompositeMsgInterfaceExposedEditPart"
         itemSemanticEditPolicyClassName="CompositeMsgInterfaceExposedItemSemanticEditPolicy"
-        notationViewFactoryClassName="CompositeMsgInterfaceExposedViewFactory"
         createCommandClassName="CompositeMsgInterfaceExposedCreateCommand"
         reorientCommandClassName="CompositeMsgInterfaceExposedReorientCommand">
       <diagramRunTimeClass
@@ -552,8 +538,8 @@
           xsi:type="gmfgen:SpecializationType"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
-          className="ChannelCompProducerConnectionFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ChannelCompProducerConnectionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ChannelCompProducerConnectionFigure() {&#xA;&#x9;&#x9;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DASH);&#xA;&#xA;&#x9;&#x9;setSourceDecoration(createSourceDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createSourceDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;df.setLineWidth(2);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          className="ExposeProducerConnectionFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ExposeProducerConnectionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureExposeProducerConnectionLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ExposeProducerConnectionFigure() {&#xA;&#x9;&#x9;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DOT);&#xA;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;&#x9;setSourceDecoration(createSourceDecoration());&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureExposeProducerConnectionLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureExposeProducerConnectionLabel.setText(&quot;&quot;);&#xA;&#xA;fFigureExposeProducerConnectionLabel.setFont(FFIGUREEXPOSEPRODUCERCONNECTIONLABEL_FONT);&#xA;&#xA;&#xA;&#xA;this.add(fFigureExposeProducerConnectionLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createSourceDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;df.setLineWidth(2);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureExposeProducerConnectionLabel() {&#xA;&#x9;&#x9;return fFigureExposeProducerConnectionLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREEXPOSEPRODUCERCONNECTIONLABEL_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.NORMAL);&#xA;&#xA;"/>
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
@@ -566,7 +552,6 @@
         visualID="4012"
         editPartClassName="CompositeMsgInterfaceExposed2EditPart"
         itemSemanticEditPolicyClassName="CompositeMsgInterfaceExposed2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="CompositeMsgInterfaceExposedViewFactory"
         createCommandClassName="CompositeMsgInterfaceExposed2CreateCommand"
         reorientCommandClassName="CompositeMsgInterfaceExposed2ReorientCommand">
       <diagramRunTimeClass
@@ -575,8 +560,8 @@
           xsi:type="gmfgen:SpecializationType"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
-          className="ChannelCompConsumerConnectionFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ChannelCompConsumerConnectionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ChannelCompConsumerConnectionFigure() {&#xA;&#x9;&#x9;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DASH);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;df.setLineWidth(2);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          className="ExposeConsumerConnectionFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ExposeConsumerConnectionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureExposeConsumerConnectionLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ExposeConsumerConnectionFigure() {&#xA;&#x9;&#x9;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DOT);&#xA;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureExposeConsumerConnectionLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureExposeConsumerConnectionLabel.setText(&quot;&quot;);&#xA;&#xA;fFigureExposeConsumerConnectionLabel.setFont(FFIGUREEXPOSECONSUMERCONNECTIONLABEL_FONT);&#xA;&#xA;&#xA;&#xA;this.add(fFigureExposeConsumerConnectionLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;df.setLineWidth(2);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureExposeConsumerConnectionLabel() {&#xA;&#x9;&#x9;return fFigureExposeConsumerConnectionLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREEXPOSECONSUMERCONNECTIONLABEL_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.NORMAL);&#xA;&#xA;"/>
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
@@ -586,11 +571,10 @@
           sourceEnd="//@expressionProviders/@providers.0/@expressions.3"/>
     </links>
     <compartments
-        visualID="7003"
-        editPartClassName="PackagePackageContainerCompartmentEditPart"
-        itemSemanticEditPolicyClassName="PackagePackageContainerCompartmentItemSemanticEditPolicy"
-        notationViewFactoryClassName="PackagePackageContainerCompartmentViewFactory"
-        canonicalEditPolicyClassName="PackagePackageContainerCompartmentCanonicalEditPolicy"
+        visualID="7004"
+        editPartClassName="CompositeCompositeContainerCompartmentEditPart"
+        itemSemanticEditPolicyClassName="CompositeCompositeContainerCompartmentItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="CompositeCompositeContainerCompartmentCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.4 //@diagram/@childNodes.9"
         title="CompositeContainerCompartment"
         canCollapse="false"
@@ -605,13 +589,12 @@
           figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
     <compartments
-        visualID="7002"
+        visualID="7005"
         editPartClassName="NodePropertiesCompartmentEditPart"
         itemSemanticEditPolicyClassName="NodePropertiesCompartmentItemSemanticEditPolicy"
-        notationViewFactoryClassName="NodePropertiesCompartmentViewFactory"
         canonicalEditPolicyClassName="NodePropertiesCompartmentCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.1"
-        title="PropertiesCompartment"
+        title="Properties Compartment"
         node="//@diagram/@childNodes.0">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -1088,16 +1071,16 @@
         xsi:type="gmfgen:GenExpressionInterpreter">
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="oclIsKindOf(NodeMsgProducer) or oclIsKindOf(PackageMsgProducer)"/>
+          body="oclIsKindOf(NodeMsgProducer) or oclIsKindOf(CompositeMsgProducer)"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="oclIsKindOf(NodeMsgConsumer) or oclIsKindOf(PackageMsgConsumer)"/>
+          body="oclIsKindOf(NodeMsgConsumer) or oclIsKindOf(CompositeMsgConsumer)"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="oclIsKindOf(PackageMsgProducer)"/>
+          body="oclIsKindOf(CompositeMsgProducer)"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="oclIsKindOf(PackageMsgConsumer)"/>
+          body="oclIsKindOf(CompositeMsgConsumer)"/>
     </providers>
   </expressionProviders>
   <labelParsers

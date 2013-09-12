@@ -1,20 +1,20 @@
 package it.unibg.robotics.roscomponentmodel.diagram.providers;
 
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
 
@@ -24,16 +24,12 @@ import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.ENamedElement;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages;
 import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes;
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;
 
 /**
@@ -67,15 +63,18 @@ public class RosComponentModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType ArchitectureModel_1000 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.ArchitectureModel_1000"); //$NON-NLS-1$
+	public static final IElementType System_1000 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.System_1000"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Package_2002 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Package_2002"); //$NON-NLS-1$
+	public static final IElementType Composite_2003 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Composite_2003"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Node_3001 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Node_3001"); //$NON-NLS-1$
+	public static final IElementType Node_3013 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Node_3013"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
@@ -92,27 +91,33 @@ public class RosComponentModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Package_3011 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Package_3011"); //$NON-NLS-1$
+	public static final IElementType Composite_3014 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Composite_3014"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType PackageMsgProducer_3006 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.PackageMsgProducer_3006"); //$NON-NLS-1$
+	public static final IElementType CompositeMsgProducer_3015 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgProducer_3015"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType PackageMsgConsumer_3007 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.PackageMsgConsumer_3007"); //$NON-NLS-1$
+	public static final IElementType CompositeMsgConsumer_3016 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgConsumer_3016"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType PackageMsgProducer_3009 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.PackageMsgProducer_3009"); //$NON-NLS-1$
+	public static final IElementType CompositeMsgProducer_3017 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgProducer_3017"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType PackageMsgConsumer_3010 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.PackageMsgConsumer_3010"); //$NON-NLS-1$
+	public static final IElementType CompositeMsgConsumer_3018 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgConsumer_3018"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Topic_3008 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Topic_3008"); //$NON-NLS-1$
+	public static final IElementType Topic_3019 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Topic_3019"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
@@ -169,17 +174,17 @@ public class RosComponentModelElementTypes {
 			elements = new IdentityHashMap<IElementType, ENamedElement>();
 
 			elements.put(
-					ArchitectureModel_1000,
+					System_1000,
 					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-							.getArchitectureModel());
+							.getSystem());
 
 			elements.put(
-					Package_2002,
+					Composite_2003,
 					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-							.getPackage());
+							.getComposite());
 
 			elements.put(
-					Node_3001,
+					Node_3013,
 					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getNode());
 
@@ -199,32 +204,32 @@ public class RosComponentModelElementTypes {
 							.getNodeMsgConsumer());
 
 			elements.put(
-					Package_3011,
+					Composite_3014,
 					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-							.getPackage());
+							.getComposite());
 
 			elements.put(
-					PackageMsgProducer_3006,
+					CompositeMsgProducer_3015,
 					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-							.getPackageMsgProducer());
+							.getCompositeMsgProducer());
 
 			elements.put(
-					PackageMsgConsumer_3007,
+					CompositeMsgConsumer_3016,
 					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-							.getPackageMsgConsumer());
+							.getCompositeMsgConsumer());
 
 			elements.put(
-					PackageMsgProducer_3009,
+					CompositeMsgProducer_3017,
 					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-							.getPackageMsgProducer());
+							.getCompositeMsgProducer());
 
 			elements.put(
-					PackageMsgConsumer_3010,
+					CompositeMsgConsumer_3018,
 					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-							.getPackageMsgConsumer());
+							.getCompositeMsgConsumer());
 
 			elements.put(
-					Topic_3008,
+					Topic_3019,
 					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getTopic());
 
@@ -264,18 +269,18 @@ public class RosComponentModelElementTypes {
 	public static boolean isKnownElementType(IElementType elementType) {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
-			KNOWN_ELEMENT_TYPES.add(ArchitectureModel_1000);
-			KNOWN_ELEMENT_TYPES.add(Package_2002);
-			KNOWN_ELEMENT_TYPES.add(Node_3001);
+			KNOWN_ELEMENT_TYPES.add(System_1000);
+			KNOWN_ELEMENT_TYPES.add(Composite_2003);
+			KNOWN_ELEMENT_TYPES.add(Node_3013);
 			KNOWN_ELEMENT_TYPES.add(NodeProperty_3012);
 			KNOWN_ELEMENT_TYPES.add(NodeMsgProducer_3003);
 			KNOWN_ELEMENT_TYPES.add(NodeMsgConsumer_3004);
-			KNOWN_ELEMENT_TYPES.add(Package_3011);
-			KNOWN_ELEMENT_TYPES.add(PackageMsgProducer_3006);
-			KNOWN_ELEMENT_TYPES.add(PackageMsgConsumer_3007);
-			KNOWN_ELEMENT_TYPES.add(PackageMsgProducer_3009);
-			KNOWN_ELEMENT_TYPES.add(PackageMsgConsumer_3010);
-			KNOWN_ELEMENT_TYPES.add(Topic_3008);
+			KNOWN_ELEMENT_TYPES.add(Composite_3014);
+			KNOWN_ELEMENT_TYPES.add(CompositeMsgProducer_3015);
+			KNOWN_ELEMENT_TYPES.add(CompositeMsgConsumer_3016);
+			KNOWN_ELEMENT_TYPES.add(CompositeMsgProducer_3017);
+			KNOWN_ELEMENT_TYPES.add(CompositeMsgConsumer_3018);
+			KNOWN_ELEMENT_TYPES.add(Topic_3019);
 			KNOWN_ELEMENT_TYPES.add(MsgInterfaceConnection_4010);
 			KNOWN_ELEMENT_TYPES.add(MsgInterfaceConnection_4011);
 			KNOWN_ELEMENT_TYPES.add(CompositeMsgInterfaceExposed_4007);
@@ -290,29 +295,29 @@ public class RosComponentModelElementTypes {
 	public static IElementType getElementType(int visualID) {
 		switch (visualID) {
 		case ArchitectureModelEditPart.VISUAL_ID:
-			return ArchitectureModel_1000;
-		case PackageEditPart.VISUAL_ID:
-			return Package_2002;
+			return System_1000;
+		case CompositeEditPart.VISUAL_ID:
+			return Composite_2003;
 		case NodeEditPart.VISUAL_ID:
-			return Node_3001;
+			return Node_3013;
 		case NodePropertyEditPart.VISUAL_ID:
 			return NodeProperty_3012;
 		case NodeMsgProducerEditPart.VISUAL_ID:
 			return NodeMsgProducer_3003;
 		case NodeMsgConsumerEditPart.VISUAL_ID:
 			return NodeMsgConsumer_3004;
-		case Package2EditPart.VISUAL_ID:
-			return Package_3011;
-		case PackageMsgProducerEditPart.VISUAL_ID:
-			return PackageMsgProducer_3006;
-		case PackageMsgConsumerEditPart.VISUAL_ID:
-			return PackageMsgConsumer_3007;
-		case PackageMsgProducer2EditPart.VISUAL_ID:
-			return PackageMsgProducer_3009;
-		case PackageMsgConsumer2EditPart.VISUAL_ID:
-			return PackageMsgConsumer_3010;
+		case Composite2EditPart.VISUAL_ID:
+			return Composite_3014;
+		case CompositeMsgProducerEditPart.VISUAL_ID:
+			return CompositeMsgProducer_3015;
+		case CompositeMsgConsumerEditPart.VISUAL_ID:
+			return CompositeMsgConsumer_3016;
+		case CompositeMsgProducer2EditPart.VISUAL_ID:
+			return CompositeMsgProducer_3017;
+		case CompositeMsgConsumer2EditPart.VISUAL_ID:
+			return CompositeMsgConsumer_3018;
 		case TopicEditPart.VISUAL_ID:
-			return Topic_3008;
+			return Topic_3019;
 		case MsgInterfaceConnectionEditPart.VISUAL_ID:
 			return MsgInterfaceConnection_4010;
 		case MsgInterfaceConnection2EditPart.VISUAL_ID:

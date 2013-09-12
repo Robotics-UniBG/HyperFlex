@@ -6,8 +6,6 @@ import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodel
 import it.unibg.robotics.componentmodels.shared.filters.ViewerFileFilter;
 import it.unibg.robotics.compositionmodel.Composite;
 import it.unibg.robotics.compositionmodel.System;
-import it.unibg.robotics.roscomponentmodel.ArchitectureModel;
-import it.unibg.robotics.roscomponentmodel.Package;
 
 import java.io.IOException;
 
@@ -109,18 +107,19 @@ public class ImportCompositeCreateCommand extends EditElementCommand {
 							.newErrorCommandResult("File Selection Error");
 				}
 
-				if ((ecoreResource.getContents().get(0) instanceof ArchitectureModel)) {
+				if ((ecoreResource.getContents().get(0) instanceof it.unibg.robotics.roscomponentmodel.System)) {
 
 
 					newElement = roscompositionmodelFactory.eINSTANCE.createROSComposite();
 					
-					Package originalComposite = ((ArchitectureModel) ecoreResource
-							.getContents().get(0)).getPackage();
+					it.unibg.robotics.roscomponentmodel.Composite originalComposite = 
+							((it.unibg.robotics.roscomponentmodel.System) ecoreResource
+							.getContents().get(0)).getComposite();
 
 					newElement.setName(originalComposite.getName());
 
 					
-					for (it.unibg.robotics.roscomponentmodel.PackageMsgProducer msgProducer : originalComposite.getMsgProducers()) {
+					for (it.unibg.robotics.roscomponentmodel.CompositeMsgProducer msgProducer : originalComposite.getMsgProducers()) {
 
 						ROSMsgProducer providedInterface = roscompositionmodelFactory.eINSTANCE
 								.createROSMsgProducer();
@@ -130,7 +129,7 @@ public class ImportCompositeCreateCommand extends EditElementCommand {
 
 					}
 
-					for (it.unibg.robotics.roscomponentmodel.PackageMsgConsumer msgConsumer : originalComposite.getMsgConsumers()) {
+					for (it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer msgConsumer : originalComposite.getMsgConsumers()) {
 
 						ROSMsgConsumer requiredInterface = roscompositionmodelFactory.eINSTANCE
 								.createROSMsgConsumer();

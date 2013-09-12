@@ -33,15 +33,12 @@ import it.unibg.robotics.componentmodels.roscompositionmodel.ROSSrvProducer;
 import it.unibg.robotics.componentmodels.roscompositionmodel.RosTopic;
 import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelFactory;
 import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage;
-
 import it.unibg.robotics.compositionmodel.compositionmodelPackage;
-
 import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -179,7 +176,7 @@ public class roscompositionmodelPackageImpl extends EPackageImpl implements rosc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getROSComposite_Package() {
+	public EReference getROSComposite_Composite() {
 		return (EReference)rosCompositeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -311,7 +308,7 @@ public class roscompositionmodelPackageImpl extends EPackageImpl implements rosc
 
 		// Create classes and their features
 		rosCompositeEClass = createEClass(ROS_COMPOSITE);
-		createEReference(rosCompositeEClass, ROS_COMPOSITE__PACKAGE);
+		createEReference(rosCompositeEClass, ROS_COMPOSITE__COMPOSITE);
 
 		rosMsgProducerEClass = createEClass(ROS_MSG_PRODUCER);
 		createEReference(rosMsgProducerEClass, ROS_MSG_PRODUCER__MSG_PRODUCER);
@@ -373,19 +370,19 @@ public class roscompositionmodelPackageImpl extends EPackageImpl implements rosc
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(rosCompositeEClass, ROSComposite.class, "ROSComposite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getROSComposite_Package(), theroscomponentmodelPackage.getPackage(), null, "package", null, 1, 1, ROSComposite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getROSComposite_Composite(), thecompositionmodelPackage.getComposite(), null, "composite", null, 1, 1, ROSComposite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rosMsgProducerEClass, ROSMsgProducer.class, "ROSMsgProducer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getROSMsgProducer_MsgProducer(), theroscomponentmodelPackage.getPackageMsgProducer(), null, "msgProducer", null, 1, 1, ROSMsgProducer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getROSMsgProducer_MsgProducer(), theroscomponentmodelPackage.getCompositeMsgProducer(), null, "msgProducer", null, 1, 1, ROSMsgProducer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rosMsgConsumerEClass, ROSMsgConsumer.class, "ROSMsgConsumer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getROSMsgConsumer_MsgConsumer(), theroscomponentmodelPackage.getPackageMsgConsumer(), null, "msgConsumer", null, 1, 1, ROSMsgConsumer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getROSMsgConsumer_MsgConsumer(), theroscomponentmodelPackage.getCompositeMsgConsumer(), null, "msgConsumer", null, 1, 1, ROSMsgConsumer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rosSrvProducerEClass, ROSSrvProducer.class, "ROSSrvProducer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getROSSrvProducer_SrvProducer(), theroscomponentmodelPackage.getPackageSrvProducer(), null, "srvProducer", null, 1, 1, ROSSrvProducer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getROSSrvProducer_SrvProducer(), theroscomponentmodelPackage.getCompositeSrvProducer(), null, "srvProducer", null, 1, 1, ROSSrvProducer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rosSrvConsumerEClass, ROSSrvConsumer.class, "ROSSrvConsumer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getROSSrvConsumer_SrvConsumer(), theroscomponentmodelPackage.getPackageSrvConsumer(), null, "srvConsumer", null, 1, 1, ROSSrvConsumer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getROSSrvConsumer_SrvConsumer(), theroscomponentmodelPackage.getCompositeSrvConsumer(), null, "srvConsumer", null, 1, 1, ROSSrvConsumer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rosTopicEClass, RosTopic.class, "RosTopic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -67,7 +67,7 @@ public class RosComponentModelPaletteFactory {
 				Messages.Component1CreationTool_title,
 				Messages.Component1CreationTool_desc,
 				Collections
-						.singletonList(RosComponentModelElementTypes.Node_3001));
+						.singletonList(RosComponentModelElementTypes.Node_3013));
 		entry.setId("createComponent1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Node.gif")); //$NON-NLS-1$
@@ -81,8 +81,8 @@ public class RosComponentModelPaletteFactory {
 	private ToolEntry createPublisher2CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(RosComponentModelElementTypes.NodeMsgProducer_3003);
-		types.add(RosComponentModelElementTypes.PackageMsgProducer_3006);
-		types.add(RosComponentModelElementTypes.PackageMsgProducer_3009);
+		types.add(RosComponentModelElementTypes.CompositeMsgProducer_3015);
+		types.add(RosComponentModelElementTypes.CompositeMsgProducer_3017);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Publisher2CreationTool_title,
 				Messages.Publisher2CreationTool_desc, types);
@@ -99,8 +99,8 @@ public class RosComponentModelPaletteFactory {
 	private ToolEntry createSubscriber3CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(RosComponentModelElementTypes.NodeMsgConsumer_3004);
-		types.add(RosComponentModelElementTypes.PackageMsgConsumer_3007);
-		types.add(RosComponentModelElementTypes.PackageMsgConsumer_3010);
+		types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3016);
+		types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3018);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Subscriber3CreationTool_title,
 				Messages.Subscriber3CreationTool_desc, types);
@@ -135,7 +135,7 @@ public class RosComponentModelPaletteFactory {
 				Messages.Package5CreationTool_title,
 				Messages.Package5CreationTool_desc,
 				Collections
-						.singletonList(RosComponentModelElementTypes.Package_2002));
+						.singletonList(RosComponentModelElementTypes.Composite_2003));
 		entry.setId("createPackage5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Package.gif")); //$NON-NLS-1$
@@ -151,7 +151,7 @@ public class RosComponentModelPaletteFactory {
 				Messages.ImportPackage6CreationTool_title,
 				Messages.ImportPackage6CreationTool_desc,
 				Collections
-						.singletonList(RosComponentModelElementTypes.Package_3011));
+						.singletonList(RosComponentModelElementTypes.Composite_3014));
 		entry.setId("createImportPackage6CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Package.gif")); //$NON-NLS-1$
@@ -167,7 +167,7 @@ public class RosComponentModelPaletteFactory {
 				Messages.Topic7CreationTool_title,
 				Messages.Topic7CreationTool_desc,
 				Collections
-						.singletonList(RosComponentModelElementTypes.Topic_3008));
+						.singletonList(RosComponentModelElementTypes.Topic_3019));
 		entry.setId("createTopic7CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Topic.gif")); //$NON-NLS-1$

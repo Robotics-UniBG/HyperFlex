@@ -1,12 +1,20 @@
 package it.unibg.robotics.roscomponentmodel.diagram.navigator;
 
+import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
+import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
 import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
-import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeName2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
@@ -15,14 +23,6 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEdi
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageName2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
@@ -108,40 +108,40 @@ public class RosComponentModelNavigatorLabelProvider extends LabelProvider
 		switch (RosComponentModelVisualIDRegistry.getVisualID(view)) {
 		case ArchitectureModelEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Diagram?http://robotics.unibg.it/componentmodels.ros?ArchitectureModel", RosComponentModelElementTypes.ArchitectureModel_1000); //$NON-NLS-1$
-		case PackageEditPart.VISUAL_ID:
+					"Navigator?Diagram?http://robotics.unibg.it/componentmodels.ros?System", RosComponentModelElementTypes.System_1000); //$NON-NLS-1$
+		case CompositeEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://robotics.unibg.it/componentmodels.ros?Package", RosComponentModelElementTypes.Package_2002); //$NON-NLS-1$
-		case NodeEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?Node", RosComponentModelElementTypes.Node_3001); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://robotics.unibg.it/componentmodels.ros?Composite", RosComponentModelElementTypes.Composite_2003); //$NON-NLS-1$
 		case NodeMsgProducerEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?NodeMsgProducer", RosComponentModelElementTypes.NodeMsgProducer_3003); //$NON-NLS-1$
 		case NodeMsgConsumerEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?NodeMsgConsumer", RosComponentModelElementTypes.NodeMsgConsumer_3004); //$NON-NLS-1$
-		case PackageMsgProducerEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?PackageMsgProducer", RosComponentModelElementTypes.PackageMsgProducer_3006); //$NON-NLS-1$
-		case PackageMsgConsumerEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?PackageMsgConsumer", RosComponentModelElementTypes.PackageMsgConsumer_3007); //$NON-NLS-1$
-		case TopicEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?Topic", RosComponentModelElementTypes.Topic_3008); //$NON-NLS-1$
-		case PackageMsgProducer2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?PackageMsgProducer", RosComponentModelElementTypes.PackageMsgProducer_3009); //$NON-NLS-1$
-		case PackageMsgConsumer2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?PackageMsgConsumer", RosComponentModelElementTypes.PackageMsgConsumer_3010); //$NON-NLS-1$
-		case Package2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?Package", RosComponentModelElementTypes.Package_3011); //$NON-NLS-1$
 		case NodePropertyEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?NodeProperty", RosComponentModelElementTypes.NodeProperty_3012); //$NON-NLS-1$
+		case NodeEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?Node", RosComponentModelElementTypes.Node_3013); //$NON-NLS-1$
+		case Composite2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?Composite", RosComponentModelElementTypes.Composite_3014); //$NON-NLS-1$
+		case CompositeMsgProducerEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?CompositeMsgProducer", RosComponentModelElementTypes.CompositeMsgProducer_3015); //$NON-NLS-1$
+		case CompositeMsgConsumerEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?CompositeMsgConsumer", RosComponentModelElementTypes.CompositeMsgConsumer_3016); //$NON-NLS-1$
+		case CompositeMsgProducer2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?CompositeMsgProducer", RosComponentModelElementTypes.CompositeMsgProducer_3017); //$NON-NLS-1$
+		case CompositeMsgConsumer2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?CompositeMsgConsumer", RosComponentModelElementTypes.CompositeMsgConsumer_3018); //$NON-NLS-1$
+		case TopicEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://robotics.unibg.it/componentmodels.ros?Topic", RosComponentModelElementTypes.Topic_3019); //$NON-NLS-1$
 		case CompositeMsgInterfaceExposedEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://robotics.unibg.it/componentmodels.ros?CompositeMsgInterface?exposed", RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4007); //$NON-NLS-1$
@@ -209,29 +209,29 @@ public class RosComponentModelNavigatorLabelProvider extends LabelProvider
 		}
 		switch (RosComponentModelVisualIDRegistry.getVisualID(view)) {
 		case ArchitectureModelEditPart.VISUAL_ID:
-			return getArchitectureModel_1000Text(view);
-		case PackageEditPart.VISUAL_ID:
-			return getPackage_2002Text(view);
-		case NodeEditPart.VISUAL_ID:
-			return getNode_3001Text(view);
+			return getSystem_1000Text(view);
+		case CompositeEditPart.VISUAL_ID:
+			return getComposite_2003Text(view);
 		case NodeMsgProducerEditPart.VISUAL_ID:
 			return getNodeMsgProducer_3003Text(view);
 		case NodeMsgConsumerEditPart.VISUAL_ID:
 			return getNodeMsgConsumer_3004Text(view);
-		case PackageMsgProducerEditPart.VISUAL_ID:
-			return getPackageMsgProducer_3006Text(view);
-		case PackageMsgConsumerEditPart.VISUAL_ID:
-			return getPackageMsgConsumer_3007Text(view);
-		case TopicEditPart.VISUAL_ID:
-			return getTopic_3008Text(view);
-		case PackageMsgProducer2EditPart.VISUAL_ID:
-			return getPackageMsgProducer_3009Text(view);
-		case PackageMsgConsumer2EditPart.VISUAL_ID:
-			return getPackageMsgConsumer_3010Text(view);
-		case Package2EditPart.VISUAL_ID:
-			return getPackage_3011Text(view);
 		case NodePropertyEditPart.VISUAL_ID:
 			return getNodeProperty_3012Text(view);
+		case NodeEditPart.VISUAL_ID:
+			return getNode_3013Text(view);
+		case Composite2EditPart.VISUAL_ID:
+			return getComposite_3014Text(view);
+		case CompositeMsgProducerEditPart.VISUAL_ID:
+			return getCompositeMsgProducer_3015Text(view);
+		case CompositeMsgConsumerEditPart.VISUAL_ID:
+			return getCompositeMsgConsumer_3016Text(view);
+		case CompositeMsgProducer2EditPart.VISUAL_ID:
+			return getCompositeMsgProducer_3017Text(view);
+		case CompositeMsgConsumer2EditPart.VISUAL_ID:
+			return getCompositeMsgConsumer_3018Text(view);
+		case TopicEditPart.VISUAL_ID:
+			return getTopic_3019Text(view);
 		case CompositeMsgInterfaceExposedEditPart.VISUAL_ID:
 			return getCompositeMsgInterfaceExposed_4007Text(view);
 		case MsgInterfaceConnectionEditPart.VISUAL_ID:
@@ -247,19 +247,26 @@ public class RosComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getTopic_3008Text(View view) {
+	private String getSystem_1000Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getComposite_2003Text(View view) {
 		IParser parser = RosComponentModelParserProvider.getParser(
-				RosComponentModelElementTypes.Topic_3008,
+				RosComponentModelElementTypes.Composite_2003,
 				view.getElement() != null ? view.getElement() : view,
 				RosComponentModelVisualIDRegistry
-						.getType(TopicNameEditPart.VISUAL_ID));
+						.getType(CompositeNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
 			RosComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5017); //$NON-NLS-1$
+					"Parser was not found for label " + 5022); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -296,36 +303,6 @@ public class RosComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getPackageMsgConsumer_3010Text(View view) {
-		PackageMsgConsumer domainModelElement = (PackageMsgConsumer) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RosComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3010); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getPackageMsgConsumer_3007Text(View view) {
-		PackageMsgConsumer domainModelElement = (PackageMsgConsumer) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RosComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3007); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
 	private String getNodeMsgConsumer_3004Text(View view) {
 		NodeMsgConsumer domainModelElement = (NodeMsgConsumer) view
 				.getElement();
@@ -341,44 +318,7 @@ public class RosComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getPackageMsgProducer_3009Text(View view) {
-		PackageMsgProducer domainModelElement = (PackageMsgProducer) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RosComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3009); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
 	private String getMsgInterfaceConnection_4011Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getPackageMsgProducer_3006Text(View view) {
-		PackageMsgProducer domainModelElement = (PackageMsgProducer) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RosComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3006); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getArchitectureModel_1000Text(View view) {
 		return ""; //$NON-NLS-1$
 	}
 
@@ -387,46 +327,6 @@ public class RosComponentModelNavigatorLabelProvider extends LabelProvider
 	 */
 	private String getCompositeMsgInterfaceExposed_4012Text(View view) {
 		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getPackage_2002Text(View view) {
-		IParser parser = RosComponentModelParserProvider.getParser(
-				RosComponentModelElementTypes.Package_2002,
-				view.getElement() != null ? view.getElement() : view,
-				RosComponentModelVisualIDRegistry
-						.getType(PackageNameEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			RosComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5010); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getPackage_3011Text(View view) {
-		IParser parser = RosComponentModelParserProvider.getParser(
-				RosComponentModelElementTypes.Package_3011,
-				view.getElement() != null ? view.getElement() : view,
-				RosComponentModelVisualIDRegistry
-						.getType(PackageName2EditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			RosComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5016); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
 	}
 
 	/**
@@ -452,9 +352,9 @@ public class RosComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getNode_3001Text(View view) {
+	private String getNode_3013Text(View view) {
 		IParser parser = RosComponentModelParserProvider.getParser(
-				RosComponentModelElementTypes.Node_3001,
+				RosComponentModelElementTypes.Node_3013,
 				view.getElement() != null ? view.getElement() : view,
 				RosComponentModelVisualIDRegistry
 						.getType(NodeNameEditPart.VISUAL_ID));
@@ -464,7 +364,107 @@ public class RosComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			RosComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5003); //$NON-NLS-1$
+					"Parser was not found for label " + 5019); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getComposite_3014Text(View view) {
+		IParser parser = RosComponentModelParserProvider.getParser(
+				RosComponentModelElementTypes.Composite_3014,
+				view.getElement() != null ? view.getElement() : view,
+				RosComponentModelVisualIDRegistry
+						.getType(CompositeName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			RosComponentModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5020); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getCompositeMsgProducer_3015Text(View view) {
+		CompositeMsgProducer domainModelElement = (CompositeMsgProducer) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RosComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3015); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getCompositeMsgConsumer_3016Text(View view) {
+		CompositeMsgConsumer domainModelElement = (CompositeMsgConsumer) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RosComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3016); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getCompositeMsgProducer_3017Text(View view) {
+		CompositeMsgProducer domainModelElement = (CompositeMsgProducer) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RosComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3017); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getCompositeMsgConsumer_3018Text(View view) {
+		CompositeMsgConsumer domainModelElement = (CompositeMsgConsumer) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RosComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3018); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getTopic_3019Text(View view) {
+		IParser parser = RosComponentModelParserProvider.getParser(
+				RosComponentModelElementTypes.Topic_3019,
+				view.getElement() != null ? view.getElement() : view,
+				RosComponentModelVisualIDRegistry
+						.getType(TopicNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			RosComponentModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5021); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

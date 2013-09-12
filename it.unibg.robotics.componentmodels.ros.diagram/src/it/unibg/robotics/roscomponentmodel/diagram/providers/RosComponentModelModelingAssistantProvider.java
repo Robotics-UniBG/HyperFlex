@@ -1,16 +1,16 @@
 package it.unibg.robotics.roscomponentmodel.diagram.providers;
 
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackagePackageContainerCompartmentEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.part.Messages;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
@@ -50,13 +50,13 @@ public class RosComponentModelModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof ArchitectureModelEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-			types.add(RosComponentModelElementTypes.Package_2002);
+			types.add(RosComponentModelElementTypes.Composite_2003);
 			return types;
 		}
-		if (editPart instanceof PackageEditPart) {
+		if (editPart instanceof CompositeEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-			types.add(RosComponentModelElementTypes.PackageMsgProducer_3009);
-			types.add(RosComponentModelElementTypes.PackageMsgConsumer_3010);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3017);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3018);
 			return types;
 		}
 		if (editPart instanceof NodeEditPart) {
@@ -66,17 +66,17 @@ public class RosComponentModelModelingAssistantProvider extends
 			types.add(RosComponentModelElementTypes.NodeProperty_3012);
 			return types;
 		}
-		if (editPart instanceof Package2EditPart) {
+		if (editPart instanceof Composite2EditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-			types.add(RosComponentModelElementTypes.PackageMsgProducer_3006);
-			types.add(RosComponentModelElementTypes.PackageMsgConsumer_3007);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3015);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3016);
 			return types;
 		}
-		if (editPart instanceof PackagePackageContainerCompartmentEditPart) {
+		if (editPart instanceof CompositeCompositeContainerCompartmentEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
-			types.add(RosComponentModelElementTypes.Node_3001);
-			types.add(RosComponentModelElementTypes.Package_3011);
-			types.add(RosComponentModelElementTypes.Topic_3008);
+			types.add(RosComponentModelElementTypes.Node_3013);
+			types.add(RosComponentModelElementTypes.Composite_3014);
+			types.add(RosComponentModelElementTypes.Topic_3019);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -96,20 +96,20 @@ public class RosComponentModelModelingAssistantProvider extends
 			return ((NodeMsgConsumerEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
-		if (sourceEditPart instanceof PackageMsgProducerEditPart) {
-			return ((PackageMsgProducerEditPart) sourceEditPart)
+		if (sourceEditPart instanceof CompositeMsgProducerEditPart) {
+			return ((CompositeMsgProducerEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
-		if (sourceEditPart instanceof PackageMsgConsumerEditPart) {
-			return ((PackageMsgConsumerEditPart) sourceEditPart)
+		if (sourceEditPart instanceof CompositeMsgConsumerEditPart) {
+			return ((CompositeMsgConsumerEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
-		if (sourceEditPart instanceof PackageMsgProducer2EditPart) {
-			return ((PackageMsgProducer2EditPart) sourceEditPart)
+		if (sourceEditPart instanceof CompositeMsgProducer2EditPart) {
+			return ((CompositeMsgProducer2EditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
-		if (sourceEditPart instanceof PackageMsgConsumer2EditPart) {
-			return ((PackageMsgConsumer2EditPart) sourceEditPart)
+		if (sourceEditPart instanceof CompositeMsgConsumer2EditPart) {
+			return ((CompositeMsgConsumer2EditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
 		return Collections.EMPTY_LIST;
@@ -144,20 +144,20 @@ public class RosComponentModelModelingAssistantProvider extends
 			return ((NodeMsgConsumerEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
-		if (sourceEditPart instanceof PackageMsgProducerEditPart) {
-			return ((PackageMsgProducerEditPart) sourceEditPart)
+		if (sourceEditPart instanceof CompositeMsgProducerEditPart) {
+			return ((CompositeMsgProducerEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
-		if (sourceEditPart instanceof PackageMsgConsumerEditPart) {
-			return ((PackageMsgConsumerEditPart) sourceEditPart)
+		if (sourceEditPart instanceof CompositeMsgConsumerEditPart) {
+			return ((CompositeMsgConsumerEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
-		if (sourceEditPart instanceof PackageMsgProducer2EditPart) {
-			return ((PackageMsgProducer2EditPart) sourceEditPart)
+		if (sourceEditPart instanceof CompositeMsgProducer2EditPart) {
+			return ((CompositeMsgProducer2EditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
-		if (sourceEditPart instanceof PackageMsgConsumer2EditPart) {
-			return ((PackageMsgConsumer2EditPart) sourceEditPart)
+		if (sourceEditPart instanceof CompositeMsgConsumer2EditPart) {
+			return ((CompositeMsgConsumer2EditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
 		return Collections.EMPTY_LIST;
@@ -192,20 +192,20 @@ public class RosComponentModelModelingAssistantProvider extends
 			return ((NodeMsgConsumerEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
-		if (sourceEditPart instanceof PackageMsgProducerEditPart) {
-			return ((PackageMsgProducerEditPart) sourceEditPart)
+		if (sourceEditPart instanceof CompositeMsgProducerEditPart) {
+			return ((CompositeMsgProducerEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
-		if (sourceEditPart instanceof PackageMsgConsumerEditPart) {
-			return ((PackageMsgConsumerEditPart) sourceEditPart)
+		if (sourceEditPart instanceof CompositeMsgConsumerEditPart) {
+			return ((CompositeMsgConsumerEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
-		if (sourceEditPart instanceof PackageMsgProducer2EditPart) {
-			return ((PackageMsgProducer2EditPart) sourceEditPart)
+		if (sourceEditPart instanceof CompositeMsgProducer2EditPart) {
+			return ((CompositeMsgProducer2EditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
-		if (sourceEditPart instanceof PackageMsgConsumer2EditPart) {
-			return ((PackageMsgConsumer2EditPart) sourceEditPart)
+		if (sourceEditPart instanceof CompositeMsgConsumer2EditPart) {
+			return ((CompositeMsgConsumer2EditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		return Collections.EMPTY_LIST;

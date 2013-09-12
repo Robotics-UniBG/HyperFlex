@@ -39,10 +39,10 @@ public class RosComponentModelOCLFactory {
 	protected RosComponentModelOCLFactory() {
 		this.expressions = new RosComponentModelAbstractExpression[4];
 		this.expressionBodies = new String[] {
-				"oclIsKindOf(NodeMsgProducer) or oclIsKindOf(PackageMsgProducer)", //$NON-NLS-1$
-				"oclIsKindOf(NodeMsgConsumer) or oclIsKindOf(PackageMsgConsumer)", //$NON-NLS-1$
-				"oclIsKindOf(PackageMsgProducer)", //$NON-NLS-1$
-				"oclIsKindOf(PackageMsgConsumer)", //$NON-NLS-1$
+				"oclIsKindOf(NodeMsgProducer) or oclIsKindOf(CompositeMsgProducer)", //$NON-NLS-1$
+				"oclIsKindOf(NodeMsgConsumer) or oclIsKindOf(CompositeMsgConsumer)", //$NON-NLS-1$
+				"oclIsKindOf(CompositeMsgProducer)", //$NON-NLS-1$
+				"oclIsKindOf(CompositeMsgConsumer)", //$NON-NLS-1$
 		};
 	}
 

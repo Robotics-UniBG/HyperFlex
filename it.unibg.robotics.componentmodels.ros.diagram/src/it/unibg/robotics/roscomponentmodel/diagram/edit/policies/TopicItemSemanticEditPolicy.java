@@ -40,7 +40,7 @@ public class TopicItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public TopicItemSemanticEditPolicy() {
-		super(RosComponentModelElementTypes.Topic_3008);
+		super(RosComponentModelElementTypes.Topic_3019);
 	}
 
 	/**

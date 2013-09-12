@@ -8,16 +8,16 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
-        href="../models/rosComponentModel.ecore#//ArchitectureModel/package"/>
+        href="../models/rosComponentModel.ecore#//System/composite"/>
     <ownedChild>
       <domainMetaElement
-          href="../models/rosComponentModel.ecore#//Package"/>
+          href="../models/rosComponentModel.ecore#//Composite"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
             href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerName"/>
         <features
-            href="../models/rosComponentModel.ecore#//Package/name"/>
+            href="../models/rosComponentModel.ecore#//AbstractComponent/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -27,7 +27,7 @@
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="../models/rosComponentModel.ecore#//Package/nodes"/>
+            href="../models/rosComponentModel.ecore#//Composite/components"/>
         <ownedChild>
           <domainMetaElement
               href="../models/rosComponentModel.ecore#//Node"/>
@@ -36,7 +36,7 @@
             <diagramLabel
                 href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ComponentName"/>
             <features
-                href="../models/rosComponentModel.ecore#//Node/name"/>
+                href="../models/rosComponentModel.ecore#//AbstractComponent/name"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
@@ -93,23 +93,23 @@
           <compartments
               children="//@nodes.0/@ownedChild/@children.0/@ownedChild/@children.0">
             <compartment
-                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#PropertiesCompartment"/>
+                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Properties Compartment"/>
           </compartments>
         </ownedChild>
       </children>
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="../models/rosComponentModel.ecore#//Package/nodes"/>
+            href="../models/rosComponentModel.ecore#//Composite/components"/>
         <ownedChild>
           <domainMetaElement
-              href="../models/rosComponentModel.ecore#//Package"/>
+              href="../models/rosComponentModel.ecore#//Composite"/>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
                 href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeName"/>
             <features
-                href="../models/rosComponentModel.ecore#//Package/name"/>
+                href="../models/rosComponentModel.ecore#//AbstractComponent/name"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
@@ -118,10 +118,10 @@
               href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Composite"/>
           <children>
             <containmentFeature
-                href="../models/rosComponentModel.ecore#//Package/msgProducers"/>
+                href="../models/rosComponentModel.ecore#//Composite/msgProducers"/>
             <ownedChild>
               <domainMetaElement
-                  href="../models/rosComponentModel.ecore#//PackageMsgProducer"/>
+                  href="../models/rosComponentModel.ecore#//CompositeMsgProducer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
                   href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
@@ -131,10 +131,10 @@
           </children>
           <children>
             <containmentFeature
-                href="../models/rosComponentModel.ecore#//Package/msgConsumers"/>
+                href="../models/rosComponentModel.ecore#//Composite/msgConsumers"/>
             <ownedChild>
               <domainMetaElement
-                  href="../models/rosComponentModel.ecore#//PackageMsgConsumer"/>
+                  href="../models/rosComponentModel.ecore#//CompositeMsgConsumer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
                   href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
@@ -146,10 +146,10 @@
       </children>
       <children>
         <containmentFeature
-            href="../models/rosComponentModel.ecore#//Package/msgProducers"/>
+            href="../models/rosComponentModel.ecore#//Composite/msgProducers"/>
         <ownedChild>
           <domainMetaElement
-              href="../models/rosComponentModel.ecore#//PackageMsgProducer"/>
+              href="../models/rosComponentModel.ecore#//CompositeMsgProducer"/>
           <tool
               xsi:type="gmftool:CreationTool"
               href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
@@ -159,10 +159,10 @@
       </children>
       <children>
         <containmentFeature
-            href="../models/rosComponentModel.ecore#//Package/msgConsumers"/>
+            href="../models/rosComponentModel.ecore#//Composite/msgConsumers"/>
         <ownedChild>
           <domainMetaElement
-              href="../models/rosComponentModel.ecore#//PackageMsgConsumer"/>
+              href="../models/rosComponentModel.ecore#//CompositeMsgConsumer"/>
           <tool
               xsi:type="gmftool:CreationTool"
               href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
@@ -173,7 +173,7 @@
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="../models/rosComponentModel.ecore#//Package/topics"/>
+            href="../models/rosComponentModel.ecore#//Composite/topics"/>
         <ownedChild>
           <domainMetaElement
               href="../models/rosComponentModel.ecore#//Topic"/>
@@ -209,7 +209,7 @@
         href="../models/rosComponentModel.ecore#//MsgInterface/connection"/>
     <creationConstraints>
       <sourceEnd
-          body="oclIsKindOf(NodeMsgProducer) or oclIsKindOf(PackageMsgProducer)"/>
+          body="oclIsKindOf(NodeMsgProducer) or oclIsKindOf(CompositeMsgProducer)"/>
     </creationConstraints>
   </links>
   <links>
@@ -223,7 +223,7 @@
         href="../models/rosComponentModel.ecore#//MsgInterface/connection"/>
     <creationConstraints>
       <sourceEnd
-          body="oclIsKindOf(NodeMsgConsumer) or oclIsKindOf(PackageMsgConsumer)"/>
+          body="oclIsKindOf(NodeMsgConsumer) or oclIsKindOf(CompositeMsgConsumer)"/>
     </creationConstraints>
   </links>
   <links>
@@ -237,7 +237,7 @@
         href="../models/rosComponentModel.ecore#//CompositeMsgInterface/exposed"/>
     <creationConstraints>
       <sourceEnd
-          body="oclIsKindOf(PackageMsgProducer)"/>
+          body="oclIsKindOf(CompositeMsgProducer)"/>
     </creationConstraints>
   </links>
   <links>
@@ -251,7 +251,7 @@
         href="../models/rosComponentModel.ecore#//CompositeMsgInterface/exposed"/>
     <creationConstraints>
       <sourceEnd
-          body="oclIsKindOf(PackageMsgConsumer)"/>
+          body="oclIsKindOf(CompositeMsgConsumer)"/>
     </creationConstraints>
   </links>
   <diagram>
@@ -260,7 +260,7 @@
     <domainModel
         href="../models/rosComponentModel.ecore#/"/>
     <domainMetaElement
-        href="../models/rosComponentModel.ecore#//ArchitectureModel"/>
+        href="../models/rosComponentModel.ecore#//System"/>
     <palette
         href="rosComponentModel.gmftool#//@palette"/>
   </diagram>

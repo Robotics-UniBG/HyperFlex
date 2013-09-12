@@ -84,25 +84,25 @@ public class ROSCompositeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPackagePropertyDescriptor(object);
+			addCompositePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Package feature.
+	 * This adds a property descriptor for the Composite feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPackagePropertyDescriptor(Object object) {
+	protected void addCompositePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ROSComposite_package_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ROSComposite_package_feature", "_UI_ROSComposite_type"),
-				 roscompositionmodelPackage.Literals.ROS_COMPOSITE__PACKAGE,
+				 getString("_UI_ROSComposite_composite_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ROSComposite_composite_feature", "_UI_ROSComposite_type"),
+				 roscompositionmodelPackage.Literals.ROS_COMPOSITE__COMPOSITE,
 				 true,
 				 false,
 				 true,

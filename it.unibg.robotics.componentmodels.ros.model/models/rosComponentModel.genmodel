@@ -7,16 +7,15 @@
   <foreignModel>rosComponentModel.ecore</foreignModel>
   <genPackages prefix="roscomponentmodel" basePackage="it.unibg.robotics" disposableProviderFactory="true"
       ecorePackage="rosComponentModel.ecore#/">
-    <genClasses ecoreClass="rosComponentModel.ecore#//Package">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Package/nodes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Package/msgProducers"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Package/msgConsumers"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Package/topics"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Package/srvProducers"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Package/srvConsumers"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//Package/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Package/wires"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Package/properties"/>
+    <genClasses ecoreClass="rosComponentModel.ecore#//Composite">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Composite/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Composite/msgProducers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Composite/msgConsumers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Composite/topics"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Composite/srvProducers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Composite/srvConsumers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Composite/wires"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Composite/properties"/>
     </genClasses>
     <genClasses ecoreClass="rosComponentModel.ecore#//Node">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Node/msgProducers"/>
@@ -24,13 +23,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Node/parameters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Node/srvProducers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Node/srvConsumers"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//Node/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//Node/packageName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//Node/type"/>
     </genClasses>
     <genClasses ecoreClass="rosComponentModel.ecore#//NodeMsgProducer"/>
     <genClasses ecoreClass="rosComponentModel.ecore#//NodeMsgConsumer"/>
-    <genClasses ecoreClass="rosComponentModel.ecore#//PackageMsgProducer"/>
-    <genClasses ecoreClass="rosComponentModel.ecore#//PackageMsgConsumer"/>
+    <genClasses ecoreClass="rosComponentModel.ecore#//CompositeMsgProducer"/>
+    <genClasses ecoreClass="rosComponentModel.ecore#//CompositeMsgConsumer"/>
     <genClasses ecoreClass="rosComponentModel.ecore#//Topic">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//Topic/name"/>
     </genClasses>
@@ -43,14 +42,14 @@
     <genClasses ecoreClass="rosComponentModel.ecore#//SrvConsumer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//SrvConsumer/name"/>
     </genClasses>
-    <genClasses ecoreClass="rosComponentModel.ecore#//PackageSrvProducer">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//PackageSrvProducer/promote"/>
+    <genClasses ecoreClass="rosComponentModel.ecore#//CompositeSrvProducer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//CompositeSrvProducer/promote"/>
     </genClasses>
     <genClasses ecoreClass="rosComponentModel.ecore#//NodeSrvProducer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//NodeSrvProducer/srvName"/>
     </genClasses>
-    <genClasses ecoreClass="rosComponentModel.ecore#//PackageSrvConsumer">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//PackageSrvConsumer/promote"/>
+    <genClasses ecoreClass="rosComponentModel.ecore#//CompositeSrvConsumer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//CompositeSrvConsumer/promote"/>
     </genClasses>
     <genClasses ecoreClass="rosComponentModel.ecore#//NodeSrvConsumer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//NodeSrvConsumer/srvName"/>
@@ -59,8 +58,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Wire/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Wire/target"/>
     </genClasses>
-    <genClasses ecoreClass="rosComponentModel.ecore#//ArchitectureModel">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//ArchitectureModel/package"/>
+    <genClasses ecoreClass="rosComponentModel.ecore#//System">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//System/composite"/>
     </genClasses>
     <genClasses ecoreClass="rosComponentModel.ecore#//MsgInterface">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//MsgInterface/name"/>
@@ -72,7 +71,9 @@
     <genClasses ecoreClass="rosComponentModel.ecore#//NodeMsgInterface">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//NodeMsgInterface/topicName"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="rosComponentModel.ecore#//AbstractComponent"/>
+    <genClasses image="false" ecoreClass="rosComponentModel.ecore#//AbstractComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//AbstractComponent/name"/>
+    </genClasses>
     <genClasses ecoreClass="rosComponentModel.ecore#//NodeProperty">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//NodeProperty/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//NodeProperty/type"/>

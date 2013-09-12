@@ -1,6 +1,6 @@
 package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.commands.PackageCreateCommand;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.commands.CompositeCreateCommand;
 import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
@@ -20,15 +20,16 @@ public class ArchitectureModelItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public ArchitectureModelItemSemanticEditPolicy() {
-		super(RosComponentModelElementTypes.ArchitectureModel_1000);
+		super(RosComponentModelElementTypes.System_1000);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RosComponentModelElementTypes.Package_2002 == req.getElementType()) {
-			return getGEFWrapper(new PackageCreateCommand(req));
+		if (RosComponentModelElementTypes.Composite_2003 == req
+				.getElementType()) {
+			return getGEFWrapper(new CompositeCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

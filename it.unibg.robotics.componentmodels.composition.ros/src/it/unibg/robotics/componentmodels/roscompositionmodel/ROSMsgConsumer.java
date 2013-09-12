@@ -25,8 +25,7 @@
 package it.unibg.robotics.componentmodels.roscompositionmodel;
 
 import it.unibg.robotics.compositionmodel.CompRequiredInterf;
-
-import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
+import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,12 +53,12 @@ public interface ROSMsgConsumer extends CompRequiredInterf {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Msg Consumer</em>' reference.
-	 * @see #setMsgConsumer(PackageMsgConsumer)
+	 * @see #setMsgConsumer(CompositeMsgConsumer)
 	 * @see it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage#getROSMsgConsumer_MsgConsumer()
 	 * @model required="true"
 	 * @generated
 	 */
-	PackageMsgConsumer getMsgConsumer();
+	CompositeMsgConsumer getMsgConsumer();
 
 	/**
 	 * Sets the value of the '{@link it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgConsumer#getMsgConsumer <em>Msg Consumer</em>}' reference.
@@ -69,6 +68,6 @@ public interface ROSMsgConsumer extends CompRequiredInterf {
 	 * @see #getMsgConsumer()
 	 * @generated
 	 */
-	void setMsgConsumer(PackageMsgConsumer value);
+	void setMsgConsumer(CompositeMsgConsumer value);
 
 } // ROSMsgConsumer

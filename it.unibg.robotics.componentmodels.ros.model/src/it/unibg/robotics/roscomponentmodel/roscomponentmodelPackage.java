@@ -1,5 +1,5 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -89,77 +89,32 @@ public interface roscomponentmodelPackage extends EPackage {
 	int ABSTRACT_COMPONENT = 19;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_COMPONENT__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_COMPONENT_FEATURE_COUNT = 0;
+	int ABSTRACT_COMPONENT_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.PackageImpl <em>Package</em>}' class.
+	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.CompositeImpl <em>Composite</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscomponentmodel.impl.PackageImpl
-	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getPackage()
+	 * @see it.unibg.robotics.roscomponentmodel.impl.CompositeImpl
+	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getComposite()
 	 * @generated
 	 */
-	int PACKAGE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__NODES = ABSTRACT_COMPONENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Msg Producers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__MSG_PRODUCERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Msg Consumers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__MSG_CONSUMERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Topics</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__TOPICS = ABSTRACT_COMPONENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Srv Producers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__SRV_PRODUCERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Srv Consumers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__SRV_CONSUMERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 5;
+	int COMPOSITE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -168,7 +123,61 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE__NAME = ABSTRACT_COMPONENT_FEATURE_COUNT + 6;
+	int COMPOSITE__NAME = ABSTRACT_COMPONENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE__COMPONENTS = ABSTRACT_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Msg Producers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE__MSG_PRODUCERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Msg Consumers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE__MSG_CONSUMERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Topics</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE__TOPICS = ABSTRACT_COMPONENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Srv Producers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE__SRV_PRODUCERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Srv Consumers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE__SRV_CONSUMERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Wires</b></em>' containment reference list.
@@ -177,7 +186,7 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE__WIRES = ABSTRACT_COMPONENT_FEATURE_COUNT + 7;
+	int COMPOSITE__WIRES = ABSTRACT_COMPONENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -186,16 +195,16 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE__PROPERTIES = ABSTRACT_COMPONENT_FEATURE_COUNT + 8;
+	int COMPOSITE__PROPERTIES = ABSTRACT_COMPONENT_FEATURE_COUNT + 7;
 
 	/**
-	 * The number of structural features of the '<em>Package</em>' class.
+	 * The number of structural features of the '<em>Composite</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_FEATURE_COUNT = ABSTRACT_COMPONENT_FEATURE_COUNT + 9;
+	int COMPOSITE_FEATURE_COUNT = ABSTRACT_COMPONENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl <em>Node</em>}' class.
@@ -206,6 +215,15 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 */
 	int NODE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__NAME = ABSTRACT_COMPONENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Msg Producers</b></em>' containment reference list.
@@ -253,13 +271,13 @@ public interface roscomponentmodelPackage extends EPackage {
 	int NODE__SRV_CONSUMERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Package Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__NAME = ABSTRACT_COMPONENT_FEATURE_COUNT + 5;
+	int NODE__PACKAGE_NAME = ABSTRACT_COMPONENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -501,14 +519,14 @@ public interface roscomponentmodelPackage extends EPackage {
 	int COMPOSITE_MSG_INTERFACE_FEATURE_COUNT = MSG_INTERFACE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.PackageMsgProducerImpl <em>Package Msg Producer</em>}' class.
+	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.CompositeMsgProducerImpl <em>Composite Msg Producer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscomponentmodel.impl.PackageMsgProducerImpl
-	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getPackageMsgProducer()
+	 * @see it.unibg.robotics.roscomponentmodel.impl.CompositeMsgProducerImpl
+	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getCompositeMsgProducer()
 	 * @generated
 	 */
-	int PACKAGE_MSG_PRODUCER = 4;
+	int COMPOSITE_MSG_PRODUCER = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -517,7 +535,7 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_MSG_PRODUCER__NAME = COMPOSITE_MSG_INTERFACE__NAME;
+	int COMPOSITE_MSG_PRODUCER__NAME = COMPOSITE_MSG_INTERFACE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Connection</b></em>' reference.
@@ -526,7 +544,7 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_MSG_PRODUCER__CONNECTION = COMPOSITE_MSG_INTERFACE__CONNECTION;
+	int COMPOSITE_MSG_PRODUCER__CONNECTION = COMPOSITE_MSG_INTERFACE__CONNECTION;
 
 	/**
 	 * The feature id for the '<em><b>Exposed</b></em>' reference.
@@ -535,26 +553,26 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_MSG_PRODUCER__EXPOSED = COMPOSITE_MSG_INTERFACE__EXPOSED;
+	int COMPOSITE_MSG_PRODUCER__EXPOSED = COMPOSITE_MSG_INTERFACE__EXPOSED;
 
 	/**
-	 * The number of structural features of the '<em>Package Msg Producer</em>' class.
+	 * The number of structural features of the '<em>Composite Msg Producer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_MSG_PRODUCER_FEATURE_COUNT = COMPOSITE_MSG_INTERFACE_FEATURE_COUNT + 0;
+	int COMPOSITE_MSG_PRODUCER_FEATURE_COUNT = COMPOSITE_MSG_INTERFACE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.PackageMsgConsumerImpl <em>Package Msg Consumer</em>}' class.
+	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.CompositeMsgConsumerImpl <em>Composite Msg Consumer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscomponentmodel.impl.PackageMsgConsumerImpl
-	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getPackageMsgConsumer()
+	 * @see it.unibg.robotics.roscomponentmodel.impl.CompositeMsgConsumerImpl
+	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getCompositeMsgConsumer()
 	 * @generated
 	 */
-	int PACKAGE_MSG_CONSUMER = 5;
+	int COMPOSITE_MSG_CONSUMER = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -563,7 +581,7 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_MSG_CONSUMER__NAME = COMPOSITE_MSG_INTERFACE__NAME;
+	int COMPOSITE_MSG_CONSUMER__NAME = COMPOSITE_MSG_INTERFACE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Connection</b></em>' reference.
@@ -572,7 +590,7 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_MSG_CONSUMER__CONNECTION = COMPOSITE_MSG_INTERFACE__CONNECTION;
+	int COMPOSITE_MSG_CONSUMER__CONNECTION = COMPOSITE_MSG_INTERFACE__CONNECTION;
 
 	/**
 	 * The feature id for the '<em><b>Exposed</b></em>' reference.
@@ -581,16 +599,16 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_MSG_CONSUMER__EXPOSED = COMPOSITE_MSG_INTERFACE__EXPOSED;
+	int COMPOSITE_MSG_CONSUMER__EXPOSED = COMPOSITE_MSG_INTERFACE__EXPOSED;
 
 	/**
-	 * The number of structural features of the '<em>Package Msg Consumer</em>' class.
+	 * The number of structural features of the '<em>Composite Msg Consumer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_MSG_CONSUMER_FEATURE_COUNT = COMPOSITE_MSG_INTERFACE_FEATURE_COUNT + 0;
+	int COMPOSITE_MSG_CONSUMER_FEATURE_COUNT = COMPOSITE_MSG_INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.TopicImpl <em>Topic</em>}' class.
@@ -705,14 +723,14 @@ public interface roscomponentmodelPackage extends EPackage {
 	int SRV_CONSUMER_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.PackageSrvProducerImpl <em>Package Srv Producer</em>}' class.
+	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.CompositeSrvProducerImpl <em>Composite Srv Producer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscomponentmodel.impl.PackageSrvProducerImpl
-	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getPackageSrvProducer()
+	 * @see it.unibg.robotics.roscomponentmodel.impl.CompositeSrvProducerImpl
+	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getCompositeSrvProducer()
 	 * @generated
 	 */
-	int PACKAGE_SRV_PRODUCER = 10;
+	int COMPOSITE_SRV_PRODUCER = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -721,7 +739,7 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_SRV_PRODUCER__NAME = SRV_PRODUCER__NAME;
+	int COMPOSITE_SRV_PRODUCER__NAME = SRV_PRODUCER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Promote</b></em>' reference.
@@ -730,16 +748,16 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_SRV_PRODUCER__PROMOTE = SRV_PRODUCER_FEATURE_COUNT + 0;
+	int COMPOSITE_SRV_PRODUCER__PROMOTE = SRV_PRODUCER_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Package Srv Producer</em>' class.
+	 * The number of structural features of the '<em>Composite Srv Producer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_SRV_PRODUCER_FEATURE_COUNT = SRV_PRODUCER_FEATURE_COUNT + 1;
+	int COMPOSITE_SRV_PRODUCER_FEATURE_COUNT = SRV_PRODUCER_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodeSrvProducerImpl <em>Node Srv Producer</em>}' class.
@@ -779,14 +797,14 @@ public interface roscomponentmodelPackage extends EPackage {
 	int NODE_SRV_PRODUCER_FEATURE_COUNT = SRV_PRODUCER_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.PackageSrvConsumerImpl <em>Package Srv Consumer</em>}' class.
+	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.CompositeSrvConsumerImpl <em>Composite Srv Consumer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscomponentmodel.impl.PackageSrvConsumerImpl
-	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getPackageSrvConsumer()
+	 * @see it.unibg.robotics.roscomponentmodel.impl.CompositeSrvConsumerImpl
+	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getCompositeSrvConsumer()
 	 * @generated
 	 */
-	int PACKAGE_SRV_CONSUMER = 12;
+	int COMPOSITE_SRV_CONSUMER = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -795,7 +813,7 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_SRV_CONSUMER__NAME = SRV_CONSUMER__NAME;
+	int COMPOSITE_SRV_CONSUMER__NAME = SRV_CONSUMER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Promote</b></em>' reference.
@@ -804,16 +822,16 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_SRV_CONSUMER__PROMOTE = SRV_CONSUMER_FEATURE_COUNT + 0;
+	int COMPOSITE_SRV_CONSUMER__PROMOTE = SRV_CONSUMER_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Package Srv Consumer</em>' class.
+	 * The number of structural features of the '<em>Composite Srv Consumer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_SRV_CONSUMER_FEATURE_COUNT = SRV_CONSUMER_FEATURE_COUNT + 1;
+	int COMPOSITE_SRV_CONSUMER_FEATURE_COUNT = SRV_CONSUMER_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodeSrvConsumerImpl <em>Node Srv Consumer</em>}' class.
@@ -890,33 +908,32 @@ public interface roscomponentmodelPackage extends EPackage {
 	int WIRE_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.ArchitectureModelImpl <em>Architecture Model</em>}' class.
+	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.SystemImpl <em>System</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscomponentmodel.impl.ArchitectureModelImpl
-	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getArchitectureModel()
+	 * @see it.unibg.robotics.roscomponentmodel.impl.SystemImpl
+	 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getSystem()
 	 * @generated
 	 */
-	int ARCHITECTURE_MODEL = 15;
+	int SYSTEM = 15;
 
 	/**
-	 * The feature id for the '<em><b>Package</b></em>' containment reference.
+	 * The feature id for the '<em><b>Composite</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_MODEL__PACKAGE = 0;
+	int SYSTEM__COMPOSITE = 0;
 
 	/**
-	 * The number of structural features of the '<em>Architecture Model</em>' class.
+	 * The number of structural features of the '<em>System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_MODEL_FEATURE_COUNT = 1;
-
+	int SYSTEM_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodePropertyImpl <em>Node Property</em>}' class.
@@ -1003,113 +1020,102 @@ public interface roscomponentmodelPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.Package <em>Package</em>}'.
+	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.Composite <em>Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Package</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Package
+	 * @return the meta object for class '<em>Composite</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.Composite
 	 * @generated
 	 */
-	EClass getPackage();
+	EClass getComposite();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Package#getNodes <em>Nodes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Composite#getComponents <em>Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Nodes</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Package#getNodes()
-	 * @see #getPackage()
+	 * @return the meta object for the containment reference list '<em>Components</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.Composite#getComponents()
+	 * @see #getComposite()
 	 * @generated
 	 */
-	EReference getPackage_Nodes();
+	EReference getComposite_Components();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Package#getMsgProducers <em>Msg Producers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Composite#getMsgProducers <em>Msg Producers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Msg Producers</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Package#getMsgProducers()
-	 * @see #getPackage()
+	 * @see it.unibg.robotics.roscomponentmodel.Composite#getMsgProducers()
+	 * @see #getComposite()
 	 * @generated
 	 */
-	EReference getPackage_MsgProducers();
+	EReference getComposite_MsgProducers();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Package#getMsgConsumers <em>Msg Consumers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Composite#getMsgConsumers <em>Msg Consumers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Msg Consumers</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Package#getMsgConsumers()
-	 * @see #getPackage()
+	 * @see it.unibg.robotics.roscomponentmodel.Composite#getMsgConsumers()
+	 * @see #getComposite()
 	 * @generated
 	 */
-	EReference getPackage_MsgConsumers();
+	EReference getComposite_MsgConsumers();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Package#getTopics <em>Topics</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Composite#getTopics <em>Topics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Topics</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Package#getTopics()
-	 * @see #getPackage()
+	 * @see it.unibg.robotics.roscomponentmodel.Composite#getTopics()
+	 * @see #getComposite()
 	 * @generated
 	 */
-	EReference getPackage_Topics();
+	EReference getComposite_Topics();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Package#getSrvProducers <em>Srv Producers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Composite#getSrvProducers <em>Srv Producers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Srv Producers</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Package#getSrvProducers()
-	 * @see #getPackage()
+	 * @see it.unibg.robotics.roscomponentmodel.Composite#getSrvProducers()
+	 * @see #getComposite()
 	 * @generated
 	 */
-	EReference getPackage_SrvProducers();
+	EReference getComposite_SrvProducers();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Package#getSrvConsumers <em>Srv Consumers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Composite#getSrvConsumers <em>Srv Consumers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Srv Consumers</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Package#getSrvConsumers()
-	 * @see #getPackage()
+	 * @see it.unibg.robotics.roscomponentmodel.Composite#getSrvConsumers()
+	 * @see #getComposite()
 	 * @generated
 	 */
-	EReference getPackage_SrvConsumers();
+	EReference getComposite_SrvConsumers();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.roscomponentmodel.Package#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Package#getName()
-	 * @see #getPackage()
-	 * @generated
-	 */
-	EAttribute getPackage_Name();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Package#getWires <em>Wires</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Composite#getWires <em>Wires</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Wires</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Package#getWires()
-	 * @see #getPackage()
+	 * @see it.unibg.robotics.roscomponentmodel.Composite#getWires()
+	 * @see #getComposite()
 	 * @generated
 	 */
-	EReference getPackage_Wires();
+	EReference getComposite_Wires();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Package#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.roscomponentmodel.Composite#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Properties</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Package#getProperties()
-	 * @see #getPackage()
+	 * @see it.unibg.robotics.roscomponentmodel.Composite#getProperties()
+	 * @see #getComposite()
 	 * @generated
 	 */
-	EReference getPackage_Properties();
+	EReference getComposite_Properties();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.Node <em>Node</em>}'.
@@ -1177,15 +1183,15 @@ public interface roscomponentmodelPackage extends EPackage {
 	EReference getNode_SrvConsumers();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.roscomponentmodel.Node#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.roscomponentmodel.Node#getPackageName <em>Package Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.Node#getName()
+	 * @return the meta object for the attribute '<em>Package Name</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.Node#getPackageName()
 	 * @see #getNode()
 	 * @generated
 	 */
-	EAttribute getNode_Name();
+	EAttribute getNode_PackageName();
 
 	/**
 	 * Returns the meta object for the attribute '{@link it.unibg.robotics.roscomponentmodel.Node#getType <em>Type</em>}'.
@@ -1219,24 +1225,24 @@ public interface roscomponentmodelPackage extends EPackage {
 	EClass getNodeMsgConsumer();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.PackageMsgProducer <em>Package Msg Producer</em>}'.
+	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.CompositeMsgProducer <em>Composite Msg Producer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Package Msg Producer</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.PackageMsgProducer
+	 * @return the meta object for class '<em>Composite Msg Producer</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeMsgProducer
 	 * @generated
 	 */
-	EClass getPackageMsgProducer();
+	EClass getCompositeMsgProducer();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.PackageMsgConsumer <em>Package Msg Consumer</em>}'.
+	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer <em>Composite Msg Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Package Msg Consumer</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.PackageMsgConsumer
+	 * @return the meta object for class '<em>Composite Msg Consumer</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer
 	 * @generated
 	 */
-	EClass getPackageMsgConsumer();
+	EClass getCompositeMsgConsumer();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.Topic <em>Topic</em>}'.
@@ -1323,25 +1329,25 @@ public interface roscomponentmodelPackage extends EPackage {
 	EAttribute getSrvConsumer_Name();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.PackageSrvProducer <em>Package Srv Producer</em>}'.
+	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.CompositeSrvProducer <em>Composite Srv Producer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Package Srv Producer</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.PackageSrvProducer
+	 * @return the meta object for class '<em>Composite Srv Producer</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeSrvProducer
 	 * @generated
 	 */
-	EClass getPackageSrvProducer();
+	EClass getCompositeSrvProducer();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscomponentmodel.PackageSrvProducer#getPromote <em>Promote</em>}'.
+	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscomponentmodel.CompositeSrvProducer#getPromote <em>Promote</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Promote</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.PackageSrvProducer#getPromote()
-	 * @see #getPackageSrvProducer()
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeSrvProducer#getPromote()
+	 * @see #getCompositeSrvProducer()
 	 * @generated
 	 */
-	EReference getPackageSrvProducer_Promote();
+	EReference getCompositeSrvProducer_Promote();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.NodeSrvProducer <em>Node Srv Producer</em>}'.
@@ -1365,25 +1371,25 @@ public interface roscomponentmodelPackage extends EPackage {
 	EAttribute getNodeSrvProducer_SrvName();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.PackageSrvConsumer <em>Package Srv Consumer</em>}'.
+	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer <em>Composite Srv Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Package Srv Consumer</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.PackageSrvConsumer
+	 * @return the meta object for class '<em>Composite Srv Consumer</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer
 	 * @generated
 	 */
-	EClass getPackageSrvConsumer();
+	EClass getCompositeSrvConsumer();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscomponentmodel.PackageSrvConsumer#getPromote <em>Promote</em>}'.
+	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer#getPromote <em>Promote</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Promote</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.PackageSrvConsumer#getPromote()
-	 * @see #getPackageSrvConsumer()
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer#getPromote()
+	 * @see #getCompositeSrvConsumer()
 	 * @generated
 	 */
-	EReference getPackageSrvConsumer_Promote();
+	EReference getCompositeSrvConsumer_Promote();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.NodeSrvConsumer <em>Node Srv Consumer</em>}'.
@@ -1439,25 +1445,25 @@ public interface roscomponentmodelPackage extends EPackage {
 	EReference getWire_Target();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.ArchitectureModel <em>Architecture Model</em>}'.
+	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.System <em>System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Architecture Model</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.ArchitectureModel
+	 * @return the meta object for class '<em>System</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.System
 	 * @generated
 	 */
-	EClass getArchitectureModel();
+	EClass getSystem();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link it.unibg.robotics.roscomponentmodel.ArchitectureModel#getPackage <em>Package</em>}'.
+	 * Returns the meta object for the containment reference '{@link it.unibg.robotics.roscomponentmodel.System#getComposite <em>Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Package</em>'.
-	 * @see it.unibg.robotics.roscomponentmodel.ArchitectureModel#getPackage()
-	 * @see #getArchitectureModel()
+	 * @return the meta object for the containment reference '<em>Composite</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.System#getComposite()
+	 * @see #getSystem()
 	 * @generated
 	 */
-	EReference getArchitectureModel_Package();
+	EReference getSystem_Composite();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.MsgInterface <em>Msg Interface</em>}'.
@@ -1544,6 +1550,17 @@ public interface roscomponentmodelPackage extends EPackage {
 	EClass getAbstractComponent();
 
 	/**
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.roscomponentmodel.AbstractComponent#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see it.unibg.robotics.roscomponentmodel.AbstractComponent#getName()
+	 * @see #getAbstractComponent()
+	 * @generated
+	 */
+	EAttribute getAbstractComponent_Name();
+
+	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.roscomponentmodel.NodeProperty <em>Node Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1619,22 +1636,22 @@ public interface roscomponentmodelPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.PackageImpl <em>Package</em>}' class.
+		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.CompositeImpl <em>Composite</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscomponentmodel.impl.PackageImpl
-		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getPackage()
+		 * @see it.unibg.robotics.roscomponentmodel.impl.CompositeImpl
+		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getComposite()
 		 * @generated
 		 */
-		EClass PACKAGE = eINSTANCE.getPackage();
+		EClass COMPOSITE = eINSTANCE.getComposite();
 
 		/**
-		 * The meta object literal for the '<em><b>Nodes</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PACKAGE__NODES = eINSTANCE.getPackage_Nodes();
+		EReference COMPOSITE__COMPONENTS = eINSTANCE.getComposite_Components();
 
 		/**
 		 * The meta object literal for the '<em><b>Msg Producers</b></em>' containment reference list feature.
@@ -1642,7 +1659,7 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PACKAGE__MSG_PRODUCERS = eINSTANCE.getPackage_MsgProducers();
+		EReference COMPOSITE__MSG_PRODUCERS = eINSTANCE.getComposite_MsgProducers();
 
 		/**
 		 * The meta object literal for the '<em><b>Msg Consumers</b></em>' containment reference list feature.
@@ -1650,7 +1667,7 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PACKAGE__MSG_CONSUMERS = eINSTANCE.getPackage_MsgConsumers();
+		EReference COMPOSITE__MSG_CONSUMERS = eINSTANCE.getComposite_MsgConsumers();
 
 		/**
 		 * The meta object literal for the '<em><b>Topics</b></em>' containment reference list feature.
@@ -1658,7 +1675,7 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PACKAGE__TOPICS = eINSTANCE.getPackage_Topics();
+		EReference COMPOSITE__TOPICS = eINSTANCE.getComposite_Topics();
 
 		/**
 		 * The meta object literal for the '<em><b>Srv Producers</b></em>' containment reference list feature.
@@ -1666,7 +1683,7 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PACKAGE__SRV_PRODUCERS = eINSTANCE.getPackage_SrvProducers();
+		EReference COMPOSITE__SRV_PRODUCERS = eINSTANCE.getComposite_SrvProducers();
 
 		/**
 		 * The meta object literal for the '<em><b>Srv Consumers</b></em>' containment reference list feature.
@@ -1674,15 +1691,7 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PACKAGE__SRV_CONSUMERS = eINSTANCE.getPackage_SrvConsumers();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PACKAGE__NAME = eINSTANCE.getPackage_Name();
+		EReference COMPOSITE__SRV_CONSUMERS = eINSTANCE.getComposite_SrvConsumers();
 
 		/**
 		 * The meta object literal for the '<em><b>Wires</b></em>' containment reference list feature.
@@ -1690,7 +1699,7 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PACKAGE__WIRES = eINSTANCE.getPackage_Wires();
+		EReference COMPOSITE__WIRES = eINSTANCE.getComposite_Wires();
 
 		/**
 		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
@@ -1698,7 +1707,7 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PACKAGE__PROPERTIES = eINSTANCE.getPackage_Properties();
+		EReference COMPOSITE__PROPERTIES = eINSTANCE.getComposite_Properties();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl <em>Node</em>}' class.
@@ -1751,12 +1760,12 @@ public interface roscomponentmodelPackage extends EPackage {
 		EReference NODE__SRV_CONSUMERS = eINSTANCE.getNode_SrvConsumers();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Package Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute NODE__NAME = eINSTANCE.getNode_Name();
+		EAttribute NODE__PACKAGE_NAME = eINSTANCE.getNode_PackageName();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -1787,24 +1796,24 @@ public interface roscomponentmodelPackage extends EPackage {
 		EClass NODE_MSG_CONSUMER = eINSTANCE.getNodeMsgConsumer();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.PackageMsgProducerImpl <em>Package Msg Producer</em>}' class.
+		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.CompositeMsgProducerImpl <em>Composite Msg Producer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscomponentmodel.impl.PackageMsgProducerImpl
-		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getPackageMsgProducer()
+		 * @see it.unibg.robotics.roscomponentmodel.impl.CompositeMsgProducerImpl
+		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getCompositeMsgProducer()
 		 * @generated
 		 */
-		EClass PACKAGE_MSG_PRODUCER = eINSTANCE.getPackageMsgProducer();
+		EClass COMPOSITE_MSG_PRODUCER = eINSTANCE.getCompositeMsgProducer();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.PackageMsgConsumerImpl <em>Package Msg Consumer</em>}' class.
+		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.CompositeMsgConsumerImpl <em>Composite Msg Consumer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscomponentmodel.impl.PackageMsgConsumerImpl
-		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getPackageMsgConsumer()
+		 * @see it.unibg.robotics.roscomponentmodel.impl.CompositeMsgConsumerImpl
+		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getCompositeMsgConsumer()
 		 * @generated
 		 */
-		EClass PACKAGE_MSG_CONSUMER = eINSTANCE.getPackageMsgConsumer();
+		EClass COMPOSITE_MSG_CONSUMER = eINSTANCE.getCompositeMsgConsumer();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.TopicImpl <em>Topic</em>}' class.
@@ -1879,14 +1888,14 @@ public interface roscomponentmodelPackage extends EPackage {
 		EAttribute SRV_CONSUMER__NAME = eINSTANCE.getSrvConsumer_Name();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.PackageSrvProducerImpl <em>Package Srv Producer</em>}' class.
+		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.CompositeSrvProducerImpl <em>Composite Srv Producer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscomponentmodel.impl.PackageSrvProducerImpl
-		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getPackageSrvProducer()
+		 * @see it.unibg.robotics.roscomponentmodel.impl.CompositeSrvProducerImpl
+		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getCompositeSrvProducer()
 		 * @generated
 		 */
-		EClass PACKAGE_SRV_PRODUCER = eINSTANCE.getPackageSrvProducer();
+		EClass COMPOSITE_SRV_PRODUCER = eINSTANCE.getCompositeSrvProducer();
 
 		/**
 		 * The meta object literal for the '<em><b>Promote</b></em>' reference feature.
@@ -1894,7 +1903,7 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PACKAGE_SRV_PRODUCER__PROMOTE = eINSTANCE.getPackageSrvProducer_Promote();
+		EReference COMPOSITE_SRV_PRODUCER__PROMOTE = eINSTANCE.getCompositeSrvProducer_Promote();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodeSrvProducerImpl <em>Node Srv Producer</em>}' class.
@@ -1915,14 +1924,14 @@ public interface roscomponentmodelPackage extends EPackage {
 		EAttribute NODE_SRV_PRODUCER__SRV_NAME = eINSTANCE.getNodeSrvProducer_SrvName();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.PackageSrvConsumerImpl <em>Package Srv Consumer</em>}' class.
+		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.CompositeSrvConsumerImpl <em>Composite Srv Consumer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscomponentmodel.impl.PackageSrvConsumerImpl
-		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getPackageSrvConsumer()
+		 * @see it.unibg.robotics.roscomponentmodel.impl.CompositeSrvConsumerImpl
+		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getCompositeSrvConsumer()
 		 * @generated
 		 */
-		EClass PACKAGE_SRV_CONSUMER = eINSTANCE.getPackageSrvConsumer();
+		EClass COMPOSITE_SRV_CONSUMER = eINSTANCE.getCompositeSrvConsumer();
 
 		/**
 		 * The meta object literal for the '<em><b>Promote</b></em>' reference feature.
@@ -1930,7 +1939,7 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PACKAGE_SRV_CONSUMER__PROMOTE = eINSTANCE.getPackageSrvConsumer_Promote();
+		EReference COMPOSITE_SRV_CONSUMER__PROMOTE = eINSTANCE.getCompositeSrvConsumer_Promote();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodeSrvConsumerImpl <em>Node Srv Consumer</em>}' class.
@@ -1977,22 +1986,22 @@ public interface roscomponentmodelPackage extends EPackage {
 		EReference WIRE__TARGET = eINSTANCE.getWire_Target();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.ArchitectureModelImpl <em>Architecture Model</em>}' class.
+		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.SystemImpl <em>System</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscomponentmodel.impl.ArchitectureModelImpl
-		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getArchitectureModel()
+		 * @see it.unibg.robotics.roscomponentmodel.impl.SystemImpl
+		 * @see it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelPackageImpl#getSystem()
 		 * @generated
 		 */
-		EClass ARCHITECTURE_MODEL = eINSTANCE.getArchitectureModel();
+		EClass SYSTEM = eINSTANCE.getSystem();
 
 		/**
-		 * The meta object literal for the '<em><b>Package</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Composite</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ARCHITECTURE_MODEL__PACKAGE = eINSTANCE.getArchitectureModel_Package();
+		EReference SYSTEM__COMPOSITE = eINSTANCE.getSystem_Composite();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.MsgInterfaceImpl <em>Msg Interface</em>}' class.
@@ -2065,6 +2074,14 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ABSTRACT_COMPONENT = eINSTANCE.getAbstractComponent();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_COMPONENT__NAME = eINSTANCE.getAbstractComponent_Name();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.roscomponentmodel.impl.NodePropertyImpl <em>Node Property</em>}' class.

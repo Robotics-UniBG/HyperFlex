@@ -9,7 +9,11 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.widgets.Display;
 
 /**
  * @generated
@@ -66,9 +70,31 @@ public class MsgInterfaceConnection2EditPart extends ConnectionNodeEditPart
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureConsumerChannelConnectionLabel;
+
+		/**
+		 * @generated
+		 */
 		public ConsumerChannelConnectionFigure() {
 
+			createContents();
 			setSourceDecoration(createSourceDecoration());
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureConsumerChannelConnectionLabel = new WrappingLabel();
+
+			fFigureConsumerChannelConnectionLabel.setText("");
+
+			fFigureConsumerChannelConnectionLabel
+					.setFont(FFIGURECONSUMERCHANNELCONNECTIONLABEL_FONT);
+
+			this.add(fFigureConsumerChannelConnectionLabel);
+
 		}
 
 		/**
@@ -80,6 +106,20 @@ public class MsgInterfaceConnection2EditPart extends ConnectionNodeEditPart
 			return df;
 		}
 
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureConsumerChannelConnectionLabel() {
+			return fFigureConsumerChannelConnectionLabel;
+		}
+
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Font FFIGURECONSUMERCHANNELCONNECTIONLABEL_FONT = new Font(
+			Display.getCurrent(), Display.getDefault().getSystemFont()
+					.getFontData()[0].getName(), 15, SWT.NORMAL);
 
 }

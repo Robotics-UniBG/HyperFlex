@@ -41,6 +41,7 @@ import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.directedit.TextDirectEditManager2;
 import org.eclipse.gmf.tooling.runtime.draw2d.labels.SimpleLabelDelegate;
+import org.eclipse.gmf.tooling.runtime.edit.policies.DefaultLinkLabelDragPolicy;
 import org.eclipse.gmf.tooling.runtime.edit.policies.labels.IRefreshableFeedbackEditPolicy;
 import org.eclipse.jface.text.contentassist.IContentAssistProcessor;
 import org.eclipse.jface.viewers.ICellEditorValidator;
@@ -113,7 +114,7 @@ public class ConnectionNameEditPart extends LabelEditPart implements
 		installEditPolicy(EditPolicy.SELECTION_FEEDBACK_ROLE,
 				new CompositionModelTextSelectionEditPolicy());
 		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE,
-				new SystemEditPart.LinkLabelDragPolicy());
+				new DefaultLinkLabelDragPolicy());
 	}
 
 	/**

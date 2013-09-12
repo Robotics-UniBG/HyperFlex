@@ -52,7 +52,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3001;
+	public static final int VISUAL_ID = 3013;
 
 	/**
 	 * @generated

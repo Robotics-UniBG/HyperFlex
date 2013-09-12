@@ -4,14 +4,6 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.ArchitectureMod
 import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.ArchitectureModelItemSemanticEditPolicy;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
-import java.util.Collections;
-import java.util.List;
-
-import org.eclipse.gef.GraphicalEditPart;
-import org.eclipse.gef.Request;
-import org.eclipse.gef.commands.Command;
-import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
-import org.eclipse.gef.handles.MoveHandle;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.notation.View;

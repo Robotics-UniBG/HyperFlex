@@ -1,5 +1,5 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -45,13 +45,13 @@ public interface roscomponentmodelFactory extends EFactory {
 	roscomponentmodelFactory eINSTANCE = it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Package</em>'.
+	 * Returns a new object of class '<em>Composite</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Package</em>'.
+	 * @return a new object of class '<em>Composite</em>'.
 	 * @generated
 	 */
-	Package createPackage();
+	Composite createComposite();
 
 	/**
 	 * Returns a new object of class '<em>Node</em>'.
@@ -81,22 +81,22 @@ public interface roscomponentmodelFactory extends EFactory {
 	NodeMsgConsumer createNodeMsgConsumer();
 
 	/**
-	 * Returns a new object of class '<em>Package Msg Producer</em>'.
+	 * Returns a new object of class '<em>Composite Msg Producer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Package Msg Producer</em>'.
+	 * @return a new object of class '<em>Composite Msg Producer</em>'.
 	 * @generated
 	 */
-	PackageMsgProducer createPackageMsgProducer();
+	CompositeMsgProducer createCompositeMsgProducer();
 
 	/**
-	 * Returns a new object of class '<em>Package Msg Consumer</em>'.
+	 * Returns a new object of class '<em>Composite Msg Consumer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Package Msg Consumer</em>'.
+	 * @return a new object of class '<em>Composite Msg Consumer</em>'.
 	 * @generated
 	 */
-	PackageMsgConsumer createPackageMsgConsumer();
+	CompositeMsgConsumer createCompositeMsgConsumer();
 
 	/**
 	 * Returns a new object of class '<em>Topic</em>'.
@@ -135,13 +135,13 @@ public interface roscomponentmodelFactory extends EFactory {
 	SrvConsumer createSrvConsumer();
 
 	/**
-	 * Returns a new object of class '<em>Package Srv Producer</em>'.
+	 * Returns a new object of class '<em>Composite Srv Producer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Package Srv Producer</em>'.
+	 * @return a new object of class '<em>Composite Srv Producer</em>'.
 	 * @generated
 	 */
-	PackageSrvProducer createPackageSrvProducer();
+	CompositeSrvProducer createCompositeSrvProducer();
 
 	/**
 	 * Returns a new object of class '<em>Node Srv Producer</em>'.
@@ -153,13 +153,13 @@ public interface roscomponentmodelFactory extends EFactory {
 	NodeSrvProducer createNodeSrvProducer();
 
 	/**
-	 * Returns a new object of class '<em>Package Srv Consumer</em>'.
+	 * Returns a new object of class '<em>Composite Srv Consumer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Package Srv Consumer</em>'.
+	 * @return a new object of class '<em>Composite Srv Consumer</em>'.
 	 * @generated
 	 */
-	PackageSrvConsumer createPackageSrvConsumer();
+	CompositeSrvConsumer createCompositeSrvConsumer();
 
 	/**
 	 * Returns a new object of class '<em>Node Srv Consumer</em>'.
@@ -180,13 +180,13 @@ public interface roscomponentmodelFactory extends EFactory {
 	Wire createWire();
 
 	/**
-	 * Returns a new object of class '<em>Architecture Model</em>'.
+	 * Returns a new object of class '<em>System</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Architecture Model</em>'.
+	 * @return a new object of class '<em>System</em>'.
 	 * @generated
 	 */
-	ArchitectureModel createArchitectureModel();
+	System createSystem();
 
 	/**
 	 * Returns a new object of class '<em>Msg Interface</em>'.

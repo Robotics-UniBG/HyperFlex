@@ -26,16 +26,12 @@ package it.unibg.robotics.componentmodels.roscompositionmodel.impl;
 
 import it.unibg.robotics.componentmodels.roscompositionmodel.ROSSrvProducer;
 import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage;
-
 import it.unibg.robotics.compositionmodel.impl.CompProvidedInterfImpl;
 
-import it.unibg.robotics.roscomponentmodel.PackageSrvProducer;
-
+import it.unibg.robotics.roscomponentmodel.CompositeSrvProducer;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -60,7 +56,7 @@ public class ROSSrvProducerImpl extends CompProvidedInterfImpl implements ROSSrv
 	 * @generated
 	 * @ordered
 	 */
-	protected PackageSrvProducer srvProducer;
+	protected CompositeSrvProducer srvProducer;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,10 +82,10 @@ public class ROSSrvProducerImpl extends CompProvidedInterfImpl implements ROSSrv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageSrvProducer getSrvProducer() {
+	public CompositeSrvProducer getSrvProducer() {
 		if (srvProducer != null && srvProducer.eIsProxy()) {
 			InternalEObject oldSrvProducer = (InternalEObject)srvProducer;
-			srvProducer = (PackageSrvProducer)eResolveProxy(oldSrvProducer);
+			srvProducer = (CompositeSrvProducer)eResolveProxy(oldSrvProducer);
 			if (srvProducer != oldSrvProducer) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, roscompositionmodelPackage.ROS_SRV_PRODUCER__SRV_PRODUCER, oldSrvProducer, srvProducer));
@@ -103,7 +99,7 @@ public class ROSSrvProducerImpl extends CompProvidedInterfImpl implements ROSSrv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageSrvProducer basicGetSrvProducer() {
+	public CompositeSrvProducer basicGetSrvProducer() {
 		return srvProducer;
 	}
 
@@ -112,8 +108,8 @@ public class ROSSrvProducerImpl extends CompProvidedInterfImpl implements ROSSrv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSrvProducer(PackageSrvProducer newSrvProducer) {
-		PackageSrvProducer oldSrvProducer = srvProducer;
+	public void setSrvProducer(CompositeSrvProducer newSrvProducer) {
+		CompositeSrvProducer oldSrvProducer = srvProducer;
 		srvProducer = newSrvProducer;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, roscompositionmodelPackage.ROS_SRV_PRODUCER__SRV_PRODUCER, oldSrvProducer, srvProducer));
@@ -143,7 +139,7 @@ public class ROSSrvProducerImpl extends CompProvidedInterfImpl implements ROSSrv
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case roscompositionmodelPackage.ROS_SRV_PRODUCER__SRV_PRODUCER:
-				setSrvProducer((PackageSrvProducer)newValue);
+				setSrvProducer((CompositeSrvProducer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -158,7 +154,7 @@ public class ROSSrvProducerImpl extends CompProvidedInterfImpl implements ROSSrv
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case roscompositionmodelPackage.ROS_SRV_PRODUCER__SRV_PRODUCER:
-				setSrvProducer((PackageSrvProducer)null);
+				setSrvProducer((CompositeSrvProducer)null);
 				return;
 		}
 		super.eUnset(featureID);

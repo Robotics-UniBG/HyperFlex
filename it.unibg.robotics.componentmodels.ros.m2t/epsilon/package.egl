@@ -1,0 +1,16 @@
+[%
+	
+	var mainComposite : Composite := Composite.allInstances().at(0);
+	//var composite : Composite := system.composite;
+	
+	//launch File
+	var launchTemplate := TemplateFactory.load('launchfile.egl');
+	launchTemplate.populate('mainComposite', mainComposite);
+	launchTemplate.generate('system.launch');
+	
+	//manifest
+	//var manifestTemplate := TemplateFactory.load('manifest.egl');
+	//manifestTemplate.populate('mainComposite', mainComposite);
+	//manifestTemplate.generate('manifest.xml');
+	
+%]

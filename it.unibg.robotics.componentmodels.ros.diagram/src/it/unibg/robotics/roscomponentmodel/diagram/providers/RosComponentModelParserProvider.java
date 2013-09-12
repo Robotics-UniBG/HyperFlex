@@ -1,9 +1,9 @@
 package it.unibg.robotics.roscomponentmodel.diagram.providers;
 
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeName2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageName2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.parsers.MessageFormatParser;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
@@ -30,37 +30,37 @@ public class RosComponentModelParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser packageName_5010Parser;
+	private IParser compositeName_5022Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getPackageName_5010Parser() {
-		if (packageName_5010Parser == null) {
+	private IParser getCompositeName_5022Parser() {
+		if (compositeName_5022Parser == null) {
 			EAttribute[] features = new EAttribute[] { it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-					.getPackage_Name() };
+					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			packageName_5010Parser = parser;
+			compositeName_5022Parser = parser;
 		}
-		return packageName_5010Parser;
+		return compositeName_5022Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser nodeName_5003Parser;
+	private IParser nodeName_5019Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeName_5003Parser() {
-		if (nodeName_5003Parser == null) {
+	private IParser getNodeName_5019Parser() {
+		if (nodeName_5019Parser == null) {
 			EAttribute[] features = new EAttribute[] { it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-					.getNode_Name() };
+					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			nodeName_5003Parser = parser;
+			nodeName_5019Parser = parser;
 		}
-		return nodeName_5003Parser;
+		return nodeName_5019Parser;
 	}
 
 	/**
@@ -84,37 +84,37 @@ public class RosComponentModelParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser packageName_5016Parser;
+	private IParser compositeName_5020Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getPackageName_5016Parser() {
-		if (packageName_5016Parser == null) {
+	private IParser getCompositeName_5020Parser() {
+		if (compositeName_5020Parser == null) {
 			EAttribute[] features = new EAttribute[] { it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-					.getPackage_Name() };
+					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			packageName_5016Parser = parser;
+			compositeName_5020Parser = parser;
 		}
-		return packageName_5016Parser;
+		return compositeName_5020Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser topicName_5017Parser;
+	private IParser topicName_5021Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getTopicName_5017Parser() {
-		if (topicName_5017Parser == null) {
+	private IParser getTopicName_5021Parser() {
+		if (topicName_5021Parser == null) {
 			EAttribute[] features = new EAttribute[] { it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getTopic_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			topicName_5017Parser = parser;
+			topicName_5021Parser = parser;
 		}
-		return topicName_5017Parser;
+		return topicName_5021Parser;
 	}
 
 	/**
@@ -122,16 +122,16 @@ public class RosComponentModelParserProvider extends AbstractProvider implements
 	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case PackageNameEditPart.VISUAL_ID:
-			return getPackageName_5010Parser();
+		case CompositeNameEditPart.VISUAL_ID:
+			return getCompositeName_5022Parser();
 		case NodeNameEditPart.VISUAL_ID:
-			return getNodeName_5003Parser();
+			return getNodeName_5019Parser();
 		case NodePropertyNameEditPart.VISUAL_ID:
 			return getNodePropertyName_5018Parser();
-		case PackageName2EditPart.VISUAL_ID:
-			return getPackageName_5016Parser();
+		case CompositeName2EditPart.VISUAL_ID:
+			return getCompositeName_5020Parser();
 		case TopicNameEditPart.VISUAL_ID:
-			return getTopicName_5017Parser();
+			return getTopicName_5021Parser();
 		}
 		return null;
 	}

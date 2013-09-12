@@ -1,6 +1,6 @@
 package it.unibg.robotics.roscomponentmodel.diagram.edit.commands;
 
-import it.unibg.robotics.roscomponentmodel.Package;
+import it.unibg.robotics.roscomponentmodel.Composite;
 import it.unibg.robotics.roscomponentmodel.Topic;
 
 import org.eclipse.core.commands.ExecutionException;
@@ -56,7 +56,7 @@ public class TopicCreateCommand extends EditElementCommand {
 		Topic newElement = it.unibg.robotics.roscomponentmodel.roscomponentmodelFactory.eINSTANCE
 				.createTopic();
 
-		Package owner = (Package) getElementToEdit();
+		Composite owner = (Composite) getElementToEdit();
 		owner.getTopics().add(newElement);
 
 		doConfigure(newElement, monitor, info);

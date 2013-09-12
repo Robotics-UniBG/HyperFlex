@@ -1,5 +1,5 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
@@ -12,7 +12,7 @@
  * 
  * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -26,9 +26,13 @@
 package it.unibg.robotics.roscomponentmodel.util;
 
 import it.unibg.robotics.roscomponentmodel.AbstractComponent;
-import it.unibg.robotics.roscomponentmodel.ArchitectureModel;
+import it.unibg.robotics.roscomponentmodel.Composite;
+import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
+import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
 import it.unibg.robotics.roscomponentmodel.CompositeProperty;
+import it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer;
+import it.unibg.robotics.roscomponentmodel.CompositeSrvProducer;
 import it.unibg.robotics.roscomponentmodel.MsgInterface;
 import it.unibg.robotics.roscomponentmodel.Node;
 import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
@@ -37,10 +41,6 @@ import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
 import it.unibg.robotics.roscomponentmodel.NodeProperty;
 import it.unibg.robotics.roscomponentmodel.NodeSrvConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeSrvProducer;
-import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
-import it.unibg.robotics.roscomponentmodel.PackageSrvConsumer;
-import it.unibg.robotics.roscomponentmodel.PackageSrvProducer;
 import it.unibg.robotics.roscomponentmodel.Property;
 import it.unibg.robotics.roscomponentmodel.SrvConsumer;
 import it.unibg.robotics.roscomponentmodel.SrvProducer;
@@ -50,7 +50,9 @@ import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -110,8 +112,8 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 	protected roscomponentmodelSwitch<Adapter> modelSwitch =
 		new roscomponentmodelSwitch<Adapter>() {
 			@Override
-			public Adapter casePackage(it.unibg.robotics.roscomponentmodel.Package object) {
-				return createPackageAdapter();
+			public Adapter caseComposite(Composite object) {
+				return createCompositeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -126,12 +128,12 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 				return createNodeMsgConsumerAdapter();
 			}
 			@Override
-			public Adapter casePackageMsgProducer(PackageMsgProducer object) {
-				return createPackageMsgProducerAdapter();
+			public Adapter caseCompositeMsgProducer(CompositeMsgProducer object) {
+				return createCompositeMsgProducerAdapter();
 			}
 			@Override
-			public Adapter casePackageMsgConsumer(PackageMsgConsumer object) {
-				return createPackageMsgConsumerAdapter();
+			public Adapter caseCompositeMsgConsumer(CompositeMsgConsumer object) {
+				return createCompositeMsgConsumerAdapter();
 			}
 			@Override
 			public Adapter caseTopic(Topic object) {
@@ -150,16 +152,16 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 				return createSrvConsumerAdapter();
 			}
 			@Override
-			public Adapter casePackageSrvProducer(PackageSrvProducer object) {
-				return createPackageSrvProducerAdapter();
+			public Adapter caseCompositeSrvProducer(CompositeSrvProducer object) {
+				return createCompositeSrvProducerAdapter();
 			}
 			@Override
 			public Adapter caseNodeSrvProducer(NodeSrvProducer object) {
 				return createNodeSrvProducerAdapter();
 			}
 			@Override
-			public Adapter casePackageSrvConsumer(PackageSrvConsumer object) {
-				return createPackageSrvConsumerAdapter();
+			public Adapter caseCompositeSrvConsumer(CompositeSrvConsumer object) {
+				return createCompositeSrvConsumerAdapter();
 			}
 			@Override
 			public Adapter caseNodeSrvConsumer(NodeSrvConsumer object) {
@@ -170,8 +172,8 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 				return createWireAdapter();
 			}
 			@Override
-			public Adapter caseArchitectureModel(ArchitectureModel object) {
-				return createArchitectureModelAdapter();
+			public Adapter caseSystem(it.unibg.robotics.roscomponentmodel.System object) {
+				return createSystemAdapter();
 			}
 			@Override
 			public Adapter caseMsgInterface(MsgInterface object) {
@@ -218,16 +220,16 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.Package <em>Package</em>}'.
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.Composite <em>Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscomponentmodel.Package
+	 * @see it.unibg.robotics.roscomponentmodel.Composite
 	 * @generated
 	 */
-	public Adapter createPackageAdapter() {
+	public Adapter createCompositeAdapter() {
 		return null;
 	}
 
@@ -274,30 +276,30 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.PackageMsgProducer <em>Package Msg Producer</em>}'.
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.CompositeMsgProducer <em>Composite Msg Producer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscomponentmodel.PackageMsgProducer
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeMsgProducer
 	 * @generated
 	 */
-	public Adapter createPackageMsgProducerAdapter() {
+	public Adapter createCompositeMsgProducerAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.PackageMsgConsumer <em>Package Msg Consumer</em>}'.
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer <em>Composite Msg Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscomponentmodel.PackageMsgConsumer
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer
 	 * @generated
 	 */
-	public Adapter createPackageMsgConsumerAdapter() {
+	public Adapter createCompositeMsgConsumerAdapter() {
 		return null;
 	}
 
@@ -358,16 +360,16 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.PackageSrvProducer <em>Package Srv Producer</em>}'.
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.CompositeSrvProducer <em>Composite Srv Producer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscomponentmodel.PackageSrvProducer
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeSrvProducer
 	 * @generated
 	 */
-	public Adapter createPackageSrvProducerAdapter() {
+	public Adapter createCompositeSrvProducerAdapter() {
 		return null;
 	}
 
@@ -386,16 +388,16 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.PackageSrvConsumer <em>Package Srv Consumer</em>}'.
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer <em>Composite Srv Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscomponentmodel.PackageSrvConsumer
+	 * @see it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer
 	 * @generated
 	 */
-	public Adapter createPackageSrvConsumerAdapter() {
+	public Adapter createCompositeSrvConsumerAdapter() {
 		return null;
 	}
 
@@ -428,16 +430,16 @@ public class roscomponentmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.ArchitectureModel <em>Architecture Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscomponentmodel.System <em>System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscomponentmodel.ArchitectureModel
+	 * @see it.unibg.robotics.roscomponentmodel.System
 	 * @generated
 	 */
-	public Adapter createArchitectureModelAdapter() {
+	public Adapter createSystemAdapter() {
 		return null;
 	}
 

@@ -3,24 +3,24 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="roscompositionmodel" nsURI="http://robotics.unibg.it/compositionmodels.ros"
     nsPrefix="roscompositionmodel">
   <eClassifiers xsi:type="ecore:EClass" name="ROSComposite" eSuperTypes="../../it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//Composite">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="package" lowerBound="1"
-        eType="ecore:EClass ../../it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//Package"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composite" lowerBound="1"
+        eType="ecore:EClass ../../it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//Composite"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ROSMsgProducer" eSuperTypes="../../it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//CompProvidedInterf">
     <eStructuralFeatures xsi:type="ecore:EReference" name="msgProducer" lowerBound="1"
-        eType="ecore:EClass ../../it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//PackageMsgProducer"/>
+        eType="ecore:EClass ../../it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//CompositeMsgProducer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ROSMsgConsumer" eSuperTypes="../../it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//CompRequiredInterf">
     <eStructuralFeatures xsi:type="ecore:EReference" name="msgConsumer" lowerBound="1"
-        eType="ecore:EClass ../../it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//PackageMsgConsumer"/>
+        eType="ecore:EClass ../../it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//CompositeMsgConsumer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ROSSrvProducer" eSuperTypes="../../it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//CompProvidedInterf">
     <eStructuralFeatures xsi:type="ecore:EReference" name="srvProducer" lowerBound="1"
-        eType="ecore:EClass ../../it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//PackageSrvProducer"/>
+        eType="ecore:EClass ../../it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//CompositeSrvProducer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ROSSrvConsumer" eSuperTypes="../../it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//CompRequiredInterf">
     <eStructuralFeatures xsi:type="ecore:EReference" name="srvConsumer" lowerBound="1"
-        eType="ecore:EClass ../../it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//PackageSrvConsumer"/>
+        eType="ecore:EClass ../../it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//CompositeSrvConsumer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RosTopic" eSuperTypes="../../it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//Connection"/>
   <eClassifiers xsi:type="ecore:EClass" name="ROSProperty" eSuperTypes="../../it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//Property">

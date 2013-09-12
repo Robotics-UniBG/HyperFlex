@@ -1,6 +1,6 @@
 package it.unibg.robotics.roscomponentmodel.diagram.part;
 
-import it.unibg.robotics.roscomponentmodel.ArchitectureModel;
+import it.unibg.robotics.roscomponentmodel.System;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
 
 import java.io.IOException;
@@ -158,7 +158,7 @@ public class RosComponentModelDiagramEditorUtil {
 			protected CommandResult doExecuteWithResult(
 					IProgressMonitor monitor, IAdaptable info)
 					throws ExecutionException {
-				ArchitectureModel model = createInitialModel();
+				System model = createInitialModel();
 				attachModelToResource(model, modelResource);
 
 				Diagram diagram = ViewService
@@ -207,9 +207,9 @@ public class RosComponentModelDiagramEditorUtil {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static ArchitectureModel createInitialModel() {
+	private static System createInitialModel() {
 		return it.unibg.robotics.roscomponentmodel.roscomponentmodelFactory.eINSTANCE
-				.createArchitectureModel();
+				.createSystem();
 	}
 
 	/**
@@ -218,8 +218,7 @@ public class RosComponentModelDiagramEditorUtil {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static void attachModelToResource(ArchitectureModel model,
-			Resource resource) {
+	private static void attachModelToResource(System model, Resource resource) {
 		resource.getContents().add(model);
 	}
 

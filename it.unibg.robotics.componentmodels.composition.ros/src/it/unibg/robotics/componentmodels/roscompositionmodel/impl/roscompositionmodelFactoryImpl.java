@@ -25,13 +25,20 @@
 package it.unibg.robotics.componentmodels.roscompositionmodel.impl;
 
 import it.unibg.robotics.componentmodels.roscompositionmodel.*;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgConsumer;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgProducer;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSProperty;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSSrvConsumer;
+import it.unibg.robotics.componentmodels.roscompositionmodel.ROSSrvProducer;
+import it.unibg.robotics.componentmodels.roscompositionmodel.RosTopic;
+import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelFactory;
+import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -49,7 +56,7 @@ public class roscompositionmodelFactoryImpl extends EFactoryImpl implements rosc
 	 */
 	public static roscompositionmodelFactory init() {
 		try {
-			roscompositionmodelFactory theroscompositionmodelFactory = (roscompositionmodelFactory)EPackage.Registry.INSTANCE.getEFactory("http://robotics.unibg.it/compositionmodels.ros"); 
+			roscompositionmodelFactory theroscompositionmodelFactory = (roscompositionmodelFactory)EPackage.Registry.INSTANCE.getEFactory(roscompositionmodelPackage.eNS_URI);
 			if (theroscompositionmodelFactory != null) {
 				return theroscompositionmodelFactory;
 			}

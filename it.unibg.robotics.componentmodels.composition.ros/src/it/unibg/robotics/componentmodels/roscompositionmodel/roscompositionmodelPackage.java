@@ -116,13 +116,13 @@ public interface roscompositionmodelPackage extends EPackage {
 	int ROS_COMPOSITE__NAME = compositionmodelPackage.COMPOSITE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Package</b></em>' reference.
+	 * The feature id for the '<em><b>Composite</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_COMPOSITE__PACKAGE = compositionmodelPackage.COMPOSITE_FEATURE_COUNT + 0;
+	int ROS_COMPOSITE__COMPOSITE = compositionmodelPackage.COMPOSITE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>ROS Composite</em>' class.
@@ -367,15 +367,15 @@ public interface roscompositionmodelPackage extends EPackage {
 	EClass getROSComposite();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite#getPackage <em>Package</em>}'.
+	 * Returns the meta object for the reference '{@link it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite#getComposite <em>Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Package</em>'.
-	 * @see it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite#getPackage()
+	 * @return the meta object for the reference '<em>Composite</em>'.
+	 * @see it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite#getComposite()
 	 * @see #getROSComposite()
 	 * @generated
 	 */
-	EReference getROSComposite_Package();
+	EReference getROSComposite_Composite();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgProducer <em>ROS Msg Producer</em>}'.
@@ -525,12 +525,12 @@ public interface roscompositionmodelPackage extends EPackage {
 		EClass ROS_COMPOSITE = eINSTANCE.getROSComposite();
 
 		/**
-		 * The meta object literal for the '<em><b>Package</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Composite</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROS_COMPOSITE__PACKAGE = eINSTANCE.getROSComposite_Package();
+		EReference ROS_COMPOSITE__COMPOSITE = eINSTANCE.getROSComposite_Composite();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.componentmodels.roscompositionmodel.impl.ROSMsgProducerImpl <em>ROS Msg Producer</em>}' class.

@@ -25,8 +25,7 @@
 package it.unibg.robotics.componentmodels.roscompositionmodel;
 
 import it.unibg.robotics.compositionmodel.CompProvidedInterf;
-
-import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
+import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,12 +53,12 @@ public interface ROSMsgProducer extends CompProvidedInterf {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Msg Producer</em>' reference.
-	 * @see #setMsgProducer(PackageMsgProducer)
+	 * @see #setMsgProducer(CompositeMsgProducer)
 	 * @see it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage#getROSMsgProducer_MsgProducer()
 	 * @model required="true"
 	 * @generated
 	 */
-	PackageMsgProducer getMsgProducer();
+	CompositeMsgProducer getMsgProducer();
 
 	/**
 	 * Sets the value of the '{@link it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgProducer#getMsgProducer <em>Msg Producer</em>}' reference.
@@ -69,6 +68,6 @@ public interface ROSMsgProducer extends CompProvidedInterf {
 	 * @see #getMsgProducer()
 	 * @generated
 	 */
-	void setMsgProducer(PackageMsgProducer value);
+	void setMsgProducer(CompositeMsgProducer value);
 
 } // ROSMsgProducer

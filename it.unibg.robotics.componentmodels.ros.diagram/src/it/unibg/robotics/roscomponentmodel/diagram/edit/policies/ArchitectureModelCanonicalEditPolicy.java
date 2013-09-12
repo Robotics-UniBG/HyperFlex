@@ -1,28 +1,28 @@
 package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
 
+import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
+import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
 import it.unibg.robotics.roscomponentmodel.MsgInterface;
 import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeMsgInterface;
 import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
-import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
 import it.unibg.robotics.roscomponentmodel.Topic;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
 import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelLinkDescriptor;
@@ -80,7 +80,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
 		return it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
-				.getArchitectureModel_Package();
+				.getSystem_Composite();
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RosComponentModelNodeDescriptor> childDescriptors = RosComponentModelDiagramUpdater
-				.getArchitectureModel_1000SemanticChildren(viewObject);
+				.getSystem_1000SemanticChildren(viewObject);
 		for (RosComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -111,7 +111,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		return PackageEditPart.VISUAL_ID == RosComponentModelVisualIDRegistry
+		return CompositeEditPart.VISUAL_ID == RosComponentModelVisualIDRegistry
 				.getVisualID(view);
 	}
 
@@ -124,8 +124,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RosComponentModelNodeDescriptor> childDescriptors = RosComponentModelDiagramUpdater
-				.getArchitectureModel_1000SemanticChildren((View) getHost()
-						.getModel());
+				.getSystem_1000SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();
@@ -293,19 +292,19 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 
 						CompositeMsgInterface compositeSource = (CompositeMsgInterface) source;
 
-						boolean isCompositeProducerTopicConnection = (compositeSource instanceof PackageMsgProducer
+						boolean isCompositeProducerTopicConnection = (compositeSource instanceof CompositeMsgProducer
 								&& visualId == MsgInterfaceConnectionEditPart.VISUAL_ID && compositeSource
 								.getConnection() == topic);
 
-						boolean isCompositeConsumerTopicConnection = (compositeSource instanceof PackageMsgConsumer
+						boolean isCompositeConsumerTopicConnection = (compositeSource instanceof CompositeMsgConsumer
 								&& visualId == MsgInterfaceConnection2EditPart.VISUAL_ID && compositeSource
 								.getConnection() == topic);
 
-						boolean isCompositeProducerTopicExposed = (compositeSource instanceof PackageMsgProducer
+						boolean isCompositeProducerTopicExposed = (compositeSource instanceof CompositeMsgProducer
 								&& visualId == CompositeMsgInterfaceExposedEditPart.VISUAL_ID && compositeSource
 								.getExposed() == topic);
 
-						boolean isCompositeConsumerTopicExposed = (compositeSource instanceof PackageMsgConsumer
+						boolean isCompositeConsumerTopicExposed = (compositeSource instanceof CompositeMsgConsumer
 								&& visualId == CompositeMsgInterfaceExposed2EditPart.VISUAL_ID && compositeSource
 								.getExposed() == topic);
 
@@ -346,15 +345,15 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case ArchitectureModelEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getArchitectureModel_1000ContainedLinks(view));
+						.getSystem_1000ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case PackageEditPart.VISUAL_ID: {
+		case CompositeEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getPackage_2002ContainedLinks(view));
+						.getComposite_2003ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -362,7 +361,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodeEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getNode_3001ContainedLinks(view));
+						.getNode_3013ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -391,42 +390,42 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case Package2EditPart.VISUAL_ID: {
+		case Composite2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getPackage_3011ContainedLinks(view));
+						.getComposite_3014ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case PackageMsgProducerEditPart.VISUAL_ID: {
+		case CompositeMsgProducerEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getPackageMsgProducer_3006ContainedLinks(view));
+						.getCompositeMsgProducer_3015ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case PackageMsgConsumerEditPart.VISUAL_ID: {
+		case CompositeMsgConsumerEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getPackageMsgConsumer_3007ContainedLinks(view));
+						.getCompositeMsgConsumer_3016ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case PackageMsgProducer2EditPart.VISUAL_ID: {
+		case CompositeMsgProducer2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getPackageMsgProducer_3009ContainedLinks(view));
+						.getCompositeMsgProducer_3017ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case PackageMsgConsumer2EditPart.VISUAL_ID: {
+		case CompositeMsgConsumer2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getPackageMsgConsumer_3010ContainedLinks(view));
+						.getCompositeMsgConsumer_3018ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -434,7 +433,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case TopicEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getTopic_3008ContainedLinks(view));
+						.getTopic_3019ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

@@ -12,7 +12,7 @@ public class RosComponentModelNavigatorSorter extends ViewerSorter {
 	/**
 	 * @generated
 	 */
-	private static final int GROUP_CATEGORY = 7005;
+	private static final int GROUP_CATEGORY = 7007;
 
 	/**
 	 * @generated

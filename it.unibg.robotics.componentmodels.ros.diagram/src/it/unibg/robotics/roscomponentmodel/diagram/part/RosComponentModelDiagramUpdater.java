@@ -1,20 +1,27 @@
 package it.unibg.robotics.roscomponentmodel.diagram.part;
 
 import it.unibg.robotics.roscomponentmodel.AbstractComponent;
-import it.unibg.robotics.roscomponentmodel.ArchitectureModel;
+import it.unibg.robotics.roscomponentmodel.Composite;
+import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
+import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
 import it.unibg.robotics.roscomponentmodel.MsgInterface;
 import it.unibg.robotics.roscomponentmodel.Node;
 import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
 import it.unibg.robotics.roscomponentmodel.NodeProperty;
-import it.unibg.robotics.roscomponentmodel.Package;
-import it.unibg.robotics.roscomponentmodel.PackageMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.PackageMsgProducer;
+import it.unibg.robotics.roscomponentmodel.System;
 import it.unibg.robotics.roscomponentmodel.Topic;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
@@ -22,13 +29,6 @@ import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEdi
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Package2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackageMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.PackagePackageContainerCompartmentEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
 import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
@@ -57,17 +57,17 @@ public class RosComponentModelDiagramUpdater {
 			View view) {
 		switch (RosComponentModelVisualIDRegistry.getVisualID(view)) {
 		case ArchitectureModelEditPart.VISUAL_ID:
-			return getArchitectureModel_1000SemanticChildren(view);
-		case PackageEditPart.VISUAL_ID:
-			return getPackage_2002SemanticChildren(view);
+			return getSystem_1000SemanticChildren(view);
+		case CompositeEditPart.VISUAL_ID:
+			return getComposite_2003SemanticChildren(view);
 		case NodeEditPart.VISUAL_ID:
-			return getNode_3001SemanticChildren(view);
-		case Package2EditPart.VISUAL_ID:
-			return getPackage_3011SemanticChildren(view);
-		case PackagePackageContainerCompartmentEditPart.VISUAL_ID:
-			return getPackageCompositeContainerCompartment_7003SemanticChildren(view);
+			return getNode_3013SemanticChildren(view);
+		case Composite2EditPart.VISUAL_ID:
+			return getComposite_3014SemanticChildren(view);
+		case CompositeCompositeContainerCompartmentEditPart.VISUAL_ID:
+			return getCompositeCompositeContainerCompartment_7004SemanticChildren(view);
 		case NodePropertiesCompartmentEditPart.VISUAL_ID:
-			return getNodePropertiesCompartment_7002SemanticChildren(view);
+			return getNodePropertiesCompartment_7005SemanticChildren(view);
 		}
 		return Collections.emptyList();
 	}
@@ -75,18 +75,18 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelNodeDescriptor> getArchitectureModel_1000SemanticChildren(
+	public static List<RosComponentModelNodeDescriptor> getSystem_1000SemanticChildren(
 			View view) {
 		if (!view.isSetElement()) {
 			return Collections.emptyList();
 		}
-		ArchitectureModel modelElement = (ArchitectureModel) view.getElement();
+		System modelElement = (System) view.getElement();
 		LinkedList<RosComponentModelNodeDescriptor> result = new LinkedList<RosComponentModelNodeDescriptor>();
 		{
-			Package childElement = modelElement.getPackage();
+			Composite childElement = modelElement.getComposite();
 			int visualID = RosComponentModelVisualIDRegistry.getNodeVisualID(
 					view, childElement);
-			if (visualID == PackageEditPart.VISUAL_ID) {
+			if (visualID == CompositeEditPart.VISUAL_ID) {
 				result.add(new RosComponentModelNodeDescriptor(childElement,
 						visualID));
 			}
@@ -97,19 +97,20 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelNodeDescriptor> getPackage_2002SemanticChildren(
+	public static List<RosComponentModelNodeDescriptor> getComposite_2003SemanticChildren(
 			View view) {
 		if (!view.isSetElement()) {
 			return Collections.emptyList();
 		}
-		Package modelElement = (Package) view.getElement();
+		Composite modelElement = (Composite) view.getElement();
 		LinkedList<RosComponentModelNodeDescriptor> result = new LinkedList<RosComponentModelNodeDescriptor>();
 		for (Iterator<?> it = modelElement.getMsgProducers().iterator(); it
 				.hasNext();) {
-			PackageMsgProducer childElement = (PackageMsgProducer) it.next();
+			CompositeMsgProducer childElement = (CompositeMsgProducer) it
+					.next();
 			int visualID = RosComponentModelVisualIDRegistry.getNodeVisualID(
 					view, childElement);
-			if (visualID == PackageMsgProducer2EditPart.VISUAL_ID) {
+			if (visualID == CompositeMsgProducer2EditPart.VISUAL_ID) {
 				result.add(new RosComponentModelNodeDescriptor(childElement,
 						visualID));
 				continue;
@@ -117,10 +118,11 @@ public class RosComponentModelDiagramUpdater {
 		}
 		for (Iterator<?> it = modelElement.getMsgConsumers().iterator(); it
 				.hasNext();) {
-			PackageMsgConsumer childElement = (PackageMsgConsumer) it.next();
+			CompositeMsgConsumer childElement = (CompositeMsgConsumer) it
+					.next();
 			int visualID = RosComponentModelVisualIDRegistry.getNodeVisualID(
 					view, childElement);
-			if (visualID == PackageMsgConsumer2EditPart.VISUAL_ID) {
+			if (visualID == CompositeMsgConsumer2EditPart.VISUAL_ID) {
 				result.add(new RosComponentModelNodeDescriptor(childElement,
 						visualID));
 				continue;
@@ -132,7 +134,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelNodeDescriptor> getNode_3001SemanticChildren(
+	public static List<RosComponentModelNodeDescriptor> getNode_3013SemanticChildren(
 			View view) {
 		if (!view.isSetElement()) {
 			return Collections.emptyList();
@@ -167,19 +169,20 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelNodeDescriptor> getPackage_3011SemanticChildren(
+	public static List<RosComponentModelNodeDescriptor> getComposite_3014SemanticChildren(
 			View view) {
 		if (!view.isSetElement()) {
 			return Collections.emptyList();
 		}
-		Package modelElement = (Package) view.getElement();
+		Composite modelElement = (Composite) view.getElement();
 		LinkedList<RosComponentModelNodeDescriptor> result = new LinkedList<RosComponentModelNodeDescriptor>();
 		for (Iterator<?> it = modelElement.getMsgProducers().iterator(); it
 				.hasNext();) {
-			PackageMsgProducer childElement = (PackageMsgProducer) it.next();
+			CompositeMsgProducer childElement = (CompositeMsgProducer) it
+					.next();
 			int visualID = RosComponentModelVisualIDRegistry.getNodeVisualID(
 					view, childElement);
-			if (visualID == PackageMsgProducerEditPart.VISUAL_ID) {
+			if (visualID == CompositeMsgProducerEditPart.VISUAL_ID) {
 				result.add(new RosComponentModelNodeDescriptor(childElement,
 						visualID));
 				continue;
@@ -187,10 +190,11 @@ public class RosComponentModelDiagramUpdater {
 		}
 		for (Iterator<?> it = modelElement.getMsgConsumers().iterator(); it
 				.hasNext();) {
-			PackageMsgConsumer childElement = (PackageMsgConsumer) it.next();
+			CompositeMsgConsumer childElement = (CompositeMsgConsumer) it
+					.next();
 			int visualID = RosComponentModelVisualIDRegistry.getNodeVisualID(
 					view, childElement);
-			if (visualID == PackageMsgConsumerEditPart.VISUAL_ID) {
+			if (visualID == CompositeMsgConsumerEditPart.VISUAL_ID) {
 				result.add(new RosComponentModelNodeDescriptor(childElement,
 						visualID));
 				continue;
@@ -202,7 +206,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelNodeDescriptor> getPackageCompositeContainerCompartment_7003SemanticChildren(
+	public static List<RosComponentModelNodeDescriptor> getCompositeCompositeContainerCompartment_7004SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -211,9 +215,10 @@ public class RosComponentModelDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		Package modelElement = (Package) containerView.getElement();
+		Composite modelElement = (Composite) containerView.getElement();
 		LinkedList<RosComponentModelNodeDescriptor> result = new LinkedList<RosComponentModelNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getNodes().iterator(); it.hasNext();) {
+		for (Iterator<?> it = modelElement.getComponents().iterator(); it
+				.hasNext();) {
 			AbstractComponent childElement = (AbstractComponent) it.next();
 			int visualID = RosComponentModelVisualIDRegistry.getNodeVisualID(
 					view, childElement);
@@ -222,7 +227,7 @@ public class RosComponentModelDiagramUpdater {
 						visualID));
 				continue;
 			}
-			if (visualID == Package2EditPart.VISUAL_ID) {
+			if (visualID == Composite2EditPart.VISUAL_ID) {
 				result.add(new RosComponentModelNodeDescriptor(childElement,
 						visualID));
 				continue;
@@ -244,7 +249,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelNodeDescriptor> getNodePropertiesCompartment_7002SemanticChildren(
+	public static List<RosComponentModelNodeDescriptor> getNodePropertiesCompartment_7005SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -276,29 +281,29 @@ public class RosComponentModelDiagramUpdater {
 			View view) {
 		switch (RosComponentModelVisualIDRegistry.getVisualID(view)) {
 		case ArchitectureModelEditPart.VISUAL_ID:
-			return getArchitectureModel_1000ContainedLinks(view);
-		case PackageEditPart.VISUAL_ID:
-			return getPackage_2002ContainedLinks(view);
+			return getSystem_1000ContainedLinks(view);
+		case CompositeEditPart.VISUAL_ID:
+			return getComposite_2003ContainedLinks(view);
 		case NodeEditPart.VISUAL_ID:
-			return getNode_3001ContainedLinks(view);
+			return getNode_3013ContainedLinks(view);
 		case NodePropertyEditPart.VISUAL_ID:
 			return getNodeProperty_3012ContainedLinks(view);
 		case NodeMsgProducerEditPart.VISUAL_ID:
 			return getNodeMsgProducer_3003ContainedLinks(view);
 		case NodeMsgConsumerEditPart.VISUAL_ID:
 			return getNodeMsgConsumer_3004ContainedLinks(view);
-		case Package2EditPart.VISUAL_ID:
-			return getPackage_3011ContainedLinks(view);
-		case PackageMsgProducerEditPart.VISUAL_ID:
-			return getPackageMsgProducer_3006ContainedLinks(view);
-		case PackageMsgConsumerEditPart.VISUAL_ID:
-			return getPackageMsgConsumer_3007ContainedLinks(view);
-		case PackageMsgProducer2EditPart.VISUAL_ID:
-			return getPackageMsgProducer_3009ContainedLinks(view);
-		case PackageMsgConsumer2EditPart.VISUAL_ID:
-			return getPackageMsgConsumer_3010ContainedLinks(view);
+		case Composite2EditPart.VISUAL_ID:
+			return getComposite_3014ContainedLinks(view);
+		case CompositeMsgProducerEditPart.VISUAL_ID:
+			return getCompositeMsgProducer_3015ContainedLinks(view);
+		case CompositeMsgConsumerEditPart.VISUAL_ID:
+			return getCompositeMsgConsumer_3016ContainedLinks(view);
+		case CompositeMsgProducer2EditPart.VISUAL_ID:
+			return getCompositeMsgProducer_3017ContainedLinks(view);
+		case CompositeMsgConsumer2EditPart.VISUAL_ID:
+			return getCompositeMsgConsumer_3018ContainedLinks(view);
 		case TopicEditPart.VISUAL_ID:
-			return getTopic_3008ContainedLinks(view);
+			return getTopic_3019ContainedLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -309,28 +314,28 @@ public class RosComponentModelDiagramUpdater {
 	public static List<RosComponentModelLinkDescriptor> getIncomingLinks(
 			View view) {
 		switch (RosComponentModelVisualIDRegistry.getVisualID(view)) {
-		case PackageEditPart.VISUAL_ID:
-			return getPackage_2002IncomingLinks(view);
+		case CompositeEditPart.VISUAL_ID:
+			return getComposite_2003IncomingLinks(view);
 		case NodeEditPart.VISUAL_ID:
-			return getNode_3001IncomingLinks(view);
+			return getNode_3013IncomingLinks(view);
 		case NodePropertyEditPart.VISUAL_ID:
 			return getNodeProperty_3012IncomingLinks(view);
 		case NodeMsgProducerEditPart.VISUAL_ID:
 			return getNodeMsgProducer_3003IncomingLinks(view);
 		case NodeMsgConsumerEditPart.VISUAL_ID:
 			return getNodeMsgConsumer_3004IncomingLinks(view);
-		case Package2EditPart.VISUAL_ID:
-			return getPackage_3011IncomingLinks(view);
-		case PackageMsgProducerEditPart.VISUAL_ID:
-			return getPackageMsgProducer_3006IncomingLinks(view);
-		case PackageMsgConsumerEditPart.VISUAL_ID:
-			return getPackageMsgConsumer_3007IncomingLinks(view);
-		case PackageMsgProducer2EditPart.VISUAL_ID:
-			return getPackageMsgProducer_3009IncomingLinks(view);
-		case PackageMsgConsumer2EditPart.VISUAL_ID:
-			return getPackageMsgConsumer_3010IncomingLinks(view);
+		case Composite2EditPart.VISUAL_ID:
+			return getComposite_3014IncomingLinks(view);
+		case CompositeMsgProducerEditPart.VISUAL_ID:
+			return getCompositeMsgProducer_3015IncomingLinks(view);
+		case CompositeMsgConsumerEditPart.VISUAL_ID:
+			return getCompositeMsgConsumer_3016IncomingLinks(view);
+		case CompositeMsgProducer2EditPart.VISUAL_ID:
+			return getCompositeMsgProducer_3017IncomingLinks(view);
+		case CompositeMsgConsumer2EditPart.VISUAL_ID:
+			return getCompositeMsgConsumer_3018IncomingLinks(view);
 		case TopicEditPart.VISUAL_ID:
-			return getTopic_3008IncomingLinks(view);
+			return getTopic_3019IncomingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -341,28 +346,28 @@ public class RosComponentModelDiagramUpdater {
 	public static List<RosComponentModelLinkDescriptor> getOutgoingLinks(
 			View view) {
 		switch (RosComponentModelVisualIDRegistry.getVisualID(view)) {
-		case PackageEditPart.VISUAL_ID:
-			return getPackage_2002OutgoingLinks(view);
+		case CompositeEditPart.VISUAL_ID:
+			return getComposite_2003OutgoingLinks(view);
 		case NodeEditPart.VISUAL_ID:
-			return getNode_3001OutgoingLinks(view);
+			return getNode_3013OutgoingLinks(view);
 		case NodePropertyEditPart.VISUAL_ID:
 			return getNodeProperty_3012OutgoingLinks(view);
 		case NodeMsgProducerEditPart.VISUAL_ID:
 			return getNodeMsgProducer_3003OutgoingLinks(view);
 		case NodeMsgConsumerEditPart.VISUAL_ID:
 			return getNodeMsgConsumer_3004OutgoingLinks(view);
-		case Package2EditPart.VISUAL_ID:
-			return getPackage_3011OutgoingLinks(view);
-		case PackageMsgProducerEditPart.VISUAL_ID:
-			return getPackageMsgProducer_3006OutgoingLinks(view);
-		case PackageMsgConsumerEditPart.VISUAL_ID:
-			return getPackageMsgConsumer_3007OutgoingLinks(view);
-		case PackageMsgProducer2EditPart.VISUAL_ID:
-			return getPackageMsgProducer_3009OutgoingLinks(view);
-		case PackageMsgConsumer2EditPart.VISUAL_ID:
-			return getPackageMsgConsumer_3010OutgoingLinks(view);
+		case Composite2EditPart.VISUAL_ID:
+			return getComposite_3014OutgoingLinks(view);
+		case CompositeMsgProducerEditPart.VISUAL_ID:
+			return getCompositeMsgProducer_3015OutgoingLinks(view);
+		case CompositeMsgConsumerEditPart.VISUAL_ID:
+			return getCompositeMsgConsumer_3016OutgoingLinks(view);
+		case CompositeMsgProducer2EditPart.VISUAL_ID:
+			return getCompositeMsgProducer_3017OutgoingLinks(view);
+		case CompositeMsgConsumer2EditPart.VISUAL_ID:
+			return getCompositeMsgConsumer_3018OutgoingLinks(view);
 		case TopicEditPart.VISUAL_ID:
-			return getTopic_3008OutgoingLinks(view);
+			return getTopic_3019OutgoingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -370,7 +375,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getArchitectureModel_1000ContainedLinks(
+	public static List<RosComponentModelLinkDescriptor> getSystem_1000ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -378,7 +383,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackage_2002ContainedLinks(
+	public static List<RosComponentModelLinkDescriptor> getComposite_2003ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -386,7 +391,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getNode_3001ContainedLinks(
+	public static List<RosComponentModelLinkDescriptor> getNode_3013ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -426,7 +431,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackage_3011ContainedLinks(
+	public static List<RosComponentModelLinkDescriptor> getComposite_3014ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -434,9 +439,9 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackageMsgProducer_3006ContainedLinks(
+	public static List<RosComponentModelLinkDescriptor> getCompositeMsgProducer_3015ContainedLinks(
 			View view) {
-		PackageMsgProducer modelElement = (PackageMsgProducer) view
+		CompositeMsgProducer modelElement = (CompositeMsgProducer) view
 				.getElement();
 		LinkedList<RosComponentModelLinkDescriptor> result = new LinkedList<RosComponentModelLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4010(modelElement));
@@ -449,9 +454,9 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackageMsgConsumer_3007ContainedLinks(
+	public static List<RosComponentModelLinkDescriptor> getCompositeMsgConsumer_3016ContainedLinks(
 			View view) {
-		PackageMsgConsumer modelElement = (PackageMsgConsumer) view
+		CompositeMsgConsumer modelElement = (CompositeMsgConsumer) view
 				.getElement();
 		LinkedList<RosComponentModelLinkDescriptor> result = new LinkedList<RosComponentModelLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4010(modelElement));
@@ -464,9 +469,9 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackageMsgProducer_3009ContainedLinks(
+	public static List<RosComponentModelLinkDescriptor> getCompositeMsgProducer_3017ContainedLinks(
 			View view) {
-		PackageMsgProducer modelElement = (PackageMsgProducer) view
+		CompositeMsgProducer modelElement = (CompositeMsgProducer) view
 				.getElement();
 		LinkedList<RosComponentModelLinkDescriptor> result = new LinkedList<RosComponentModelLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4010(modelElement));
@@ -479,9 +484,9 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackageMsgConsumer_3010ContainedLinks(
+	public static List<RosComponentModelLinkDescriptor> getCompositeMsgConsumer_3018ContainedLinks(
 			View view) {
-		PackageMsgConsumer modelElement = (PackageMsgConsumer) view
+		CompositeMsgConsumer modelElement = (CompositeMsgConsumer) view
 				.getElement();
 		LinkedList<RosComponentModelLinkDescriptor> result = new LinkedList<RosComponentModelLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4010(modelElement));
@@ -494,7 +499,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getTopic_3008ContainedLinks(
+	public static List<RosComponentModelLinkDescriptor> getTopic_3019ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -502,7 +507,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackage_2002IncomingLinks(
+	public static List<RosComponentModelLinkDescriptor> getComposite_2003IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -510,7 +515,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getNode_3001IncomingLinks(
+	public static List<RosComponentModelLinkDescriptor> getNode_3013IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -542,7 +547,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackage_3011IncomingLinks(
+	public static List<RosComponentModelLinkDescriptor> getComposite_3014IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -550,7 +555,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackageMsgProducer_3006IncomingLinks(
+	public static List<RosComponentModelLinkDescriptor> getCompositeMsgProducer_3015IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -558,7 +563,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackageMsgConsumer_3007IncomingLinks(
+	public static List<RosComponentModelLinkDescriptor> getCompositeMsgConsumer_3016IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -566,7 +571,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackageMsgProducer_3009IncomingLinks(
+	public static List<RosComponentModelLinkDescriptor> getCompositeMsgProducer_3017IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -574,7 +579,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackageMsgConsumer_3010IncomingLinks(
+	public static List<RosComponentModelLinkDescriptor> getCompositeMsgConsumer_3018IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -582,7 +587,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getTopic_3008IncomingLinks(
+	public static List<RosComponentModelLinkDescriptor> getTopic_3019IncomingLinks(
 			View view) {
 		Topic modelElement = (Topic) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -602,7 +607,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackage_2002OutgoingLinks(
+	public static List<RosComponentModelLinkDescriptor> getComposite_2003OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -610,7 +615,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getNode_3001OutgoingLinks(
+	public static List<RosComponentModelLinkDescriptor> getNode_3013OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -650,7 +655,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackage_3011OutgoingLinks(
+	public static List<RosComponentModelLinkDescriptor> getComposite_3014OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -658,9 +663,9 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackageMsgProducer_3006OutgoingLinks(
+	public static List<RosComponentModelLinkDescriptor> getCompositeMsgProducer_3015OutgoingLinks(
 			View view) {
-		PackageMsgProducer modelElement = (PackageMsgProducer) view
+		CompositeMsgProducer modelElement = (CompositeMsgProducer) view
 				.getElement();
 		LinkedList<RosComponentModelLinkDescriptor> result = new LinkedList<RosComponentModelLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4010(modelElement));
@@ -673,9 +678,9 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackageMsgConsumer_3007OutgoingLinks(
+	public static List<RosComponentModelLinkDescriptor> getCompositeMsgConsumer_3016OutgoingLinks(
 			View view) {
-		PackageMsgConsumer modelElement = (PackageMsgConsumer) view
+		CompositeMsgConsumer modelElement = (CompositeMsgConsumer) view
 				.getElement();
 		LinkedList<RosComponentModelLinkDescriptor> result = new LinkedList<RosComponentModelLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4010(modelElement));
@@ -688,9 +693,9 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackageMsgProducer_3009OutgoingLinks(
+	public static List<RosComponentModelLinkDescriptor> getCompositeMsgProducer_3017OutgoingLinks(
 			View view) {
-		PackageMsgProducer modelElement = (PackageMsgProducer) view
+		CompositeMsgProducer modelElement = (CompositeMsgProducer) view
 				.getElement();
 		LinkedList<RosComponentModelLinkDescriptor> result = new LinkedList<RosComponentModelLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4010(modelElement));
@@ -703,9 +708,9 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getPackageMsgConsumer_3010OutgoingLinks(
+	public static List<RosComponentModelLinkDescriptor> getCompositeMsgConsumer_3018OutgoingLinks(
 			View view) {
-		PackageMsgConsumer modelElement = (PackageMsgConsumer) view
+		CompositeMsgConsumer modelElement = (CompositeMsgConsumer) view
 				.getElement();
 		LinkedList<RosComponentModelLinkDescriptor> result = new LinkedList<RosComponentModelLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4010(modelElement));
@@ -718,7 +723,7 @@ public class RosComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RosComponentModelLinkDescriptor> getTopic_3008OutgoingLinks(
+	public static List<RosComponentModelLinkDescriptor> getTopic_3019OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
