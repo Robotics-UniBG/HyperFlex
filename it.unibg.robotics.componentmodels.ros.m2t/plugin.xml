@@ -28,7 +28,7 @@
             locationURI="menu:it.unibg.robotics.componentmodels.menu.m2t">
          <command
                commandId="it.unibg.robotics.componentmodels.ros.m2t.rosLaunch"
-               label="Generate Launch File"
+               label="Generate ROS Launch File"
                style="push">
          </command>
       </menuContribution>

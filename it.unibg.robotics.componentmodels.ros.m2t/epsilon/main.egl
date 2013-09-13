@@ -1,42 +1,17 @@
-[*
- * HyperFlex toolchain
- * 
- * Copyright (c) 2013
- * All rights reserved.
- * 
- * Luca Gherardi
- * ETH Zurich
- * Institute for Dynamic Systems and Control
- * 
- * ***********************************************************************************************
- * 
- * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
- * 
- * In collaboration with: 
- *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
- * 
- * ***********************************************************************************************
- * 
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * 
- *] 
-<launch>
-[%=out.startPreserve("<!--", "-->", "additional custom Launchfile statements in the beginning", true)%]
-[%=out.stopPreserve()%]
-  
-[%  
-var compositeTemplate := TemplateFactory.load('composite.egl');
-compositeTemplate.populate('composite', mainComposite);
-out.print(compositeTemplate.process());
+[%
+	
+	var mainComposite : Composite := Composite.allInstances().at(0);
+	//var composite : Composite := system.composite;
+	
+	//launch File
+	var launchTemplate := TemplateFactory.load('launchFile.egl');
+	launchTemplate.populate('mainComposite', mainComposite);
+	var fileName := mainComposite.name + '.launch';
+	launchTemplate.generate(fileName);
+	
+	//manifest
+	//var manifestTemplate := TemplateFactory.load('manifest.egl');
+	//manifestTemplate.populate('mainComposite', mainComposite);
+	//manifestTemplate.generate('manifest.xml');
+	
 %]
-
-[%=out.startPreserve("<!--", "-->", "additional custom Launchfile statements in the end of launch file", true)%]
-[%=out.stopPreserve()%]
-
-</launch>
-
-
