@@ -27,8 +27,8 @@ package it.unibg.robotics.componentmodels.roscompositionmodel.impl;
 import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgProducer;
 import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage;
 import it.unibg.robotics.compositionmodel.impl.CompProvidedInterfImpl;
-
 import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;

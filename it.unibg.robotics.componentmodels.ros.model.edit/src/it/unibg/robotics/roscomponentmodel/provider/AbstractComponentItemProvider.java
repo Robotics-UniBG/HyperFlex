@@ -28,14 +28,13 @@ package it.unibg.robotics.roscomponentmodel.provider;
 
 import it.unibg.robotics.roscomponentmodel.AbstractComponent;
 import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;

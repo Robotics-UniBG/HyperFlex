@@ -25,13 +25,10 @@
 package it.unibg.robotics.componentmodels.roscompositionmodel.presentation;
 
 import it.unibg.robotics.compositionmodel.provider.CompositionModelEditPlugin;
-
 import it.unibg.robotics.roscomponentmodel.provider.RosComponentModelEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**

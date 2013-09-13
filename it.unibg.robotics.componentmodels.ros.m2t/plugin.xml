@@ -25,20 +25,12 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:org.eclipse.ui.main.menu">
-         <menu
-               id="it.unibg.robotics.componentmodels.menu"
-               label="Component Models">
-            <menu
-                  id="it.unibg.robotics.componentmodels.menu.m2t"
-                  label="Model2Text">
-               <command
-                     commandId="it.unibg.robotics.componentmodels.ros.m2t.rosLaunch"
-                     label="Generate Launch File"
-                     style="push">
-               </command>
-            </menu>
-         </menu>
+            locationURI="menu:it.unibg.robotics.componentmodels.menu.m2t">
+         <command
+               commandId="it.unibg.robotics.componentmodels.ros.m2t.rosLaunch"
+               label="Generate Launch File"
+               style="push">
+         </command>
       </menuContribution>
       
    </extension>

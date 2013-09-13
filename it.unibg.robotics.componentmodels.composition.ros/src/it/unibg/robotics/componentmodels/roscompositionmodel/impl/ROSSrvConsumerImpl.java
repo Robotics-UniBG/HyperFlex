@@ -27,8 +27,8 @@ package it.unibg.robotics.componentmodels.roscompositionmodel.impl;
 import it.unibg.robotics.componentmodels.roscompositionmodel.ROSSrvConsumer;
 import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage;
 import it.unibg.robotics.compositionmodel.impl.CompRequiredInterfImpl;
-
 import it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;

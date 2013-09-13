@@ -28,7 +28,6 @@ package it.unibg.robotics.tcacomponentmodel.impl;
 import it.unibg.robotics.tcacomponentmodel.tcacomponentmodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**

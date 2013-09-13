@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.componentmodels.ros.m2t;
+package it.unibg.robotics.componentmodels.m2t;
 
 import java.io.IOException;
 import java.net.MalformedURLException;

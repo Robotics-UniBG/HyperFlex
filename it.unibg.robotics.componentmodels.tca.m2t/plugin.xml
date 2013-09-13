@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="it.unibg.robotics.componentmodels.tca.m2t.category"
+            name="TCA M2T">
+      </category>
+      <command
+            categoryId="it.unibg.robotics.componentmodels.tca.m2t.category"
+            id="it.unibg.robotics.componentmodels.orocos.m2t.tcaXML"
+            name="Generate XML File for TCA deployment">
+      </command>
+
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="it.unibg.robotics.componentmodels.tca.m2t.handler.TcaXMLTransform"
+            commandId="it.unibg.robotics.componentmodels.tca.m2t.tcaXML">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:it.unibg.robotics.componentmodels.menu.m2t">
+         <command
+               commandId="it.unibg.robotics.componentmodels.tca.m2t.tcaXML"
+               label="Generate TCA XML"
+               style="push">
+         </command>
+      </menuContribution>
+      
+   </extension>
+
+</plugin>

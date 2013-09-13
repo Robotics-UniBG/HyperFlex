@@ -29,7 +29,6 @@ import it.unibg.robotics.tcacomponentmodel.tcacomponentmodelPackage;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
 
 /**

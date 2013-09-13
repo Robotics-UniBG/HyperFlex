@@ -24,7 +24,6 @@
  */
 package it.unibg.robotics.componentmodels.roscompositionmodel.impl;
 
-import it.unibg.robotics.componentmodels.roscompositionmodel.*;
 import it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite;
 import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgConsumer;
 import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgProducer;

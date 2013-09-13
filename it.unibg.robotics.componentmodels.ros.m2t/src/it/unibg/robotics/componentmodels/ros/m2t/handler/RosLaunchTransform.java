@@ -26,8 +26,8 @@
  */
 package it.unibg.robotics.componentmodels.ros.m2t.handler;
 
+import it.unibg.robotics.componentmodels.m2t.EGLTransformer;
 import it.unibg.robotics.componentmodels.ros.m2t.Activator;
-import it.unibg.robotics.componentmodels.ros.m2t.EGLTransformer;
 
 import java.io.IOException;
 import java.net.URL;
@@ -81,7 +81,7 @@ public class RosLaunchTransform extends AbstractHandler {
 			return null;
 		
 	    
-		URL url = Platform.getBundle(Activator.PLUGIN_ID).getEntry("epsilon/package.egl");
+		URL url = Platform.getBundle(Activator.PLUGIN_ID).getEntry("epsilon/main.egl");
 	    String fileURL = "";
 		try {
 			fileURL = FileLocator.toFileURL(url).toString();
