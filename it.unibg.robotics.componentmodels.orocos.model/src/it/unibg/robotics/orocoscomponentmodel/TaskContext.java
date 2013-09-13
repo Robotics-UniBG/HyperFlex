@@ -45,6 +45,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.TaskContext#getClassName <em>Class Name</em>}</li>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.TaskContext#getPeriod <em>Period</em>}</li>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.TaskContext#getPriority <em>Priority</em>}</li>
+ *   <li>{@link it.unibg.robotics.orocoscomponentmodel.TaskContext#isAutoStart <em>Auto Start</em>}</li>
+ *   <li>{@link it.unibg.robotics.orocoscomponentmodel.TaskContext#isAutoConf <em>Auto Conf</em>}</li>
  * </ul>
  * </p>
  *
@@ -236,5 +238,59 @@ public interface TaskContext extends AbstractComponent {
 	 * @generated
 	 */
 	void setPriority(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Auto Start</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Auto Start</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Auto Start</em>' attribute.
+	 * @see #setAutoStart(boolean)
+	 * @see it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage#getTaskContext_AutoStart()
+	 * @model default="false" required="true"
+	 * @generated
+	 */
+	boolean isAutoStart();
+
+	/**
+	 * Sets the value of the '{@link it.unibg.robotics.orocoscomponentmodel.TaskContext#isAutoStart <em>Auto Start</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Auto Start</em>' attribute.
+	 * @see #isAutoStart()
+	 * @generated
+	 */
+	void setAutoStart(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Auto Conf</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Auto Conf</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Auto Conf</em>' attribute.
+	 * @see #setAutoConf(boolean)
+	 * @see it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage#getTaskContext_AutoConf()
+	 * @model default="false" required="true"
+	 * @generated
+	 */
+	boolean isAutoConf();
+
+	/**
+	 * Sets the value of the '{@link it.unibg.robotics.orocoscomponentmodel.TaskContext#isAutoConf <em>Auto Conf</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Auto Conf</em>' attribute.
+	 * @see #isAutoConf()
+	 * @generated
+	 */
+	void setAutoConf(boolean value);
 
 } // TaskContext

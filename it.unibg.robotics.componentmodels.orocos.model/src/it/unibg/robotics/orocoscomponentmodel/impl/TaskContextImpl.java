@@ -65,6 +65,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.TaskContextImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.TaskContextImpl#getPeriod <em>Period</em>}</li>
  *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.TaskContextImpl#getPriority <em>Priority</em>}</li>
+ *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.TaskContextImpl#isAutoStart <em>Auto Start</em>}</li>
+ *   <li>{@link it.unibg.robotics.orocoscomponentmodel.impl.TaskContextImpl#isAutoConf <em>Auto Conf</em>}</li>
  * </ul>
  * </p>
  *
@@ -200,6 +202,46 @@ public class TaskContextImpl extends AbstractComponentImpl implements TaskContex
 	 * @ordered
 	 */
 	protected double priority = PRIORITY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isAutoStart() <em>Auto Start</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAutoStart()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean AUTO_START_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isAutoStart() <em>Auto Start</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAutoStart()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean autoStart = AUTO_START_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isAutoConf() <em>Auto Conf</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAutoConf()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean AUTO_CONF_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isAutoConf() <em>Auto Conf</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAutoConf()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean autoConf = AUTO_CONF_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -369,6 +411,48 @@ public class TaskContextImpl extends AbstractComponentImpl implements TaskContex
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isAutoStart() {
+		return autoStart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAutoStart(boolean newAutoStart) {
+		boolean oldAutoStart = autoStart;
+		autoStart = newAutoStart;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, orocoscomponentmodelPackage.TASK_CONTEXT__AUTO_START, oldAutoStart, autoStart));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isAutoConf() {
+		return autoConf;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAutoConf(boolean newAutoConf) {
+		boolean oldAutoConf = autoConf;
+		autoConf = newAutoConf;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, orocoscomponentmodelPackage.TASK_CONTEXT__AUTO_CONF, oldAutoConf, autoConf));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -412,6 +496,10 @@ public class TaskContextImpl extends AbstractComponentImpl implements TaskContex
 				return getPeriod();
 			case orocoscomponentmodelPackage.TASK_CONTEXT__PRIORITY:
 				return getPriority();
+			case orocoscomponentmodelPackage.TASK_CONTEXT__AUTO_START:
+				return isAutoStart();
+			case orocoscomponentmodelPackage.TASK_CONTEXT__AUTO_CONF:
+				return isAutoConf();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -457,6 +545,12 @@ public class TaskContextImpl extends AbstractComponentImpl implements TaskContex
 			case orocoscomponentmodelPackage.TASK_CONTEXT__PRIORITY:
 				setPriority((Double)newValue);
 				return;
+			case orocoscomponentmodelPackage.TASK_CONTEXT__AUTO_START:
+				setAutoStart((Boolean)newValue);
+				return;
+			case orocoscomponentmodelPackage.TASK_CONTEXT__AUTO_CONF:
+				setAutoConf((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -496,6 +590,12 @@ public class TaskContextImpl extends AbstractComponentImpl implements TaskContex
 			case orocoscomponentmodelPackage.TASK_CONTEXT__PRIORITY:
 				setPriority(PRIORITY_EDEFAULT);
 				return;
+			case orocoscomponentmodelPackage.TASK_CONTEXT__AUTO_START:
+				setAutoStart(AUTO_START_EDEFAULT);
+				return;
+			case orocoscomponentmodelPackage.TASK_CONTEXT__AUTO_CONF:
+				setAutoConf(AUTO_CONF_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -526,6 +626,10 @@ public class TaskContextImpl extends AbstractComponentImpl implements TaskContex
 				return period != PERIOD_EDEFAULT;
 			case orocoscomponentmodelPackage.TASK_CONTEXT__PRIORITY:
 				return priority != PRIORITY_EDEFAULT;
+			case orocoscomponentmodelPackage.TASK_CONTEXT__AUTO_START:
+				return autoStart != AUTO_START_EDEFAULT;
+			case orocoscomponentmodelPackage.TASK_CONTEXT__AUTO_CONF:
+				return autoConf != AUTO_CONF_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -548,6 +652,10 @@ public class TaskContextImpl extends AbstractComponentImpl implements TaskContex
 		result.append(period);
 		result.append(", priority: ");
 		result.append(priority);
+		result.append(", autoStart: ");
+		result.append(autoStart);
+		result.append(", autoConf: ");
+		result.append(autoConf);
 		result.append(')');
 		return result.toString();
 	}

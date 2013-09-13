@@ -480,6 +480,24 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTaskContext_AutoStart() {
+		return (EAttribute)taskContextEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTaskContext_AutoConf() {
+		return (EAttribute)taskContextEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTCInputDataPort() {
 		return tcInputDataPortEClass;
 	}
@@ -982,6 +1000,8 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 		createEAttribute(taskContextEClass, TASK_CONTEXT__CLASS_NAME);
 		createEAttribute(taskContextEClass, TASK_CONTEXT__PERIOD);
 		createEAttribute(taskContextEClass, TASK_CONTEXT__PRIORITY);
+		createEAttribute(taskContextEClass, TASK_CONTEXT__AUTO_START);
+		createEAttribute(taskContextEClass, TASK_CONTEXT__AUTO_CONF);
 
 		tcInputDataPortEClass = createEClass(TC_INPUT_DATA_PORT);
 		createEAttribute(tcInputDataPortEClass, TC_INPUT_DATA_PORT__EVENT_PORT);
@@ -1121,6 +1141,8 @@ public class orocoscomponentmodelPackageImpl extends EPackageImpl implements oro
 		initEAttribute(getTaskContext_ClassName(), ecorePackage.getEString(), "className", null, 1, 1, TaskContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTaskContext_Period(), ecorePackage.getEDouble(), "period", null, 1, 1, TaskContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTaskContext_Priority(), ecorePackage.getEDouble(), "priority", null, 1, 1, TaskContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaskContext_AutoStart(), ecorePackage.getEBoolean(), "autoStart", "false", 1, 1, TaskContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaskContext_AutoConf(), ecorePackage.getEBoolean(), "autoConf", "false", 1, 1, TaskContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tcInputDataPortEClass, TCInputDataPort.class, "TCInputDataPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTCInputDataPort_EventPort(), ecorePackage.getEBoolean(), "eventPort", "false", 1, 1, TCInputDataPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

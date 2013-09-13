@@ -4,7 +4,7 @@
 	//var composite : Composite := system.composite;
 	
 	//launch File
-	var launchTemplate := TemplateFactory.load('launchFile.egl');
+	var launchTemplate := TemplateFactory.load('XML/deployment.egl');
 	launchTemplate.populate('mainComposite', mainComposite);
 	var fileName := mainComposite.name + '.launch';
 	launchTemplate.generate(fileName);

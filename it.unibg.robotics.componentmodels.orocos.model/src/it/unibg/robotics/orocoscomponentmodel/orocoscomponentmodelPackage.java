@@ -309,13 +309,31 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	int TASK_CONTEXT__PRIORITY = ABSTRACT_COMPONENT_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Auto Start</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CONTEXT__AUTO_START = ABSTRACT_COMPONENT_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Auto Conf</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_CONTEXT__AUTO_CONF = ABSTRACT_COMPONENT_FEATURE_COUNT + 10;
+
+	/**
 	 * The number of structural features of the '<em>Task Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CONTEXT_FEATURE_COUNT = ABSTRACT_COMPONENT_FEATURE_COUNT + 9;
+	int TASK_CONTEXT_FEATURE_COUNT = ABSTRACT_COMPONENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The meta object id for the '{@link it.unibg.robotics.orocoscomponentmodel.impl.DataPortImpl <em>Data Port</em>}' class.
@@ -1268,6 +1286,28 @@ public interface orocoscomponentmodelPackage extends EPackage {
 	EAttribute getTaskContext_Priority();
 
 	/**
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.orocoscomponentmodel.TaskContext#isAutoStart <em>Auto Start</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Auto Start</em>'.
+	 * @see it.unibg.robotics.orocoscomponentmodel.TaskContext#isAutoStart()
+	 * @see #getTaskContext()
+	 * @generated
+	 */
+	EAttribute getTaskContext_AutoStart();
+
+	/**
+	 * Returns the meta object for the attribute '{@link it.unibg.robotics.orocoscomponentmodel.TaskContext#isAutoConf <em>Auto Conf</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Auto Conf</em>'.
+	 * @see it.unibg.robotics.orocoscomponentmodel.TaskContext#isAutoConf()
+	 * @see #getTaskContext()
+	 * @generated
+	 */
+	EAttribute getTaskContext_AutoConf();
+
+	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.orocoscomponentmodel.TCInputDataPort <em>TC Input Data Port</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1982,6 +2022,22 @@ public interface orocoscomponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TASK_CONTEXT__PRIORITY = eINSTANCE.getTaskContext_Priority();
+
+		/**
+		 * The meta object literal for the '<em><b>Auto Start</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK_CONTEXT__AUTO_START = eINSTANCE.getTaskContext_AutoStart();
+
+		/**
+		 * The meta object literal for the '<em><b>Auto Conf</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK_CONTEXT__AUTO_CONF = eINSTANCE.getTaskContext_AutoConf();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.orocoscomponentmodel.impl.TCInputDataPortImpl <em>TC Input Data Port</em>}' class.

@@ -34,5 +34,12 @@
       </menuContribution>
       
    </extension>
+   <extension
+         point="org.eclipse.epsilon.common.dt.tool">
+      <tool
+            class="it.unibg.robotics.componentmodels.orocos.m2t.tools.OrocosXmlTools"
+            defaultName="it.unibg.robotics.componentmodels.orocos.m2t.tools.OrocosXmlTools">
+      </tool>
+   </extension>
 
 </plugin>

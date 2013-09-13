@@ -23,22 +23,30 @@
  * http://www.eclipse.org/legal/epl-v10.html
  * 
  * 
- *]
- <package>
-  <description brief="[%=architecture.name%]"></description>
-  <author>Alexander Bubeck</author>
-  <license></license>
-  <review status="unreviewed" notes=""/>
-  <url></url>
+ *] 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
   
-  [%
-for(package in architecture.packages) {
+[%  
+var importTemplate := TemplateFactory.load('XML/import.egl');
+importTemplate.populate('composite', mainComposite);
+out.print(importTemplate.process());
 %]
-  <depend package="[%=package.name%]"/>
- [%
- }
-%]  
-  
-</package>
+
+[%  
+var connectionTemplate := TemplateFactory.load('XML/connectionPolicy.egl');
+connectionTemplate.populate('composite', mainComposite);
+out.print(connectionTemplate.process());
+%]
+
+[%  
+var compositeTemplate := TemplateFactory.load('XML/composite.egl');
+compositeTemplate.populate('composite', mainComposite);
+out.print(compositeTemplate.process());
+%]
+
+
+</properties>
 
 

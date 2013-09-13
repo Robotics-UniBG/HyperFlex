@@ -24,30 +24,3 @@
  * 
  * 
  *]
-<!-- Start composite "[%=composite.name%]" -->
-
-[%
-for(child in composite.components) {
-%]
-	[%
-	if(child.isTypeOf(Node)){
-	%]
-		<node pkg="[%=child.packageName%]" type="[%=child.type%]" name="[%=child.name%]" output="screen">
-	
-		</node>
-	[%
-	}else if(child.isTypeOf(Composite)){
-	
-		var compositeTemplate := TemplateFactory.load('composite.egl');
-		compositeTemplate.populate('composite', child);
-	
-		out.print(compositeTemplate.process());
-	
-	}
-	%]
-[%
-}
-%]
-
-<!-- End composite "[%=composite.name%]" -->
-

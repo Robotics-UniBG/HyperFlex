@@ -88,6 +88,8 @@ public class TaskContextItemProvider
 			addClassNamePropertyDescriptor(object);
 			addPeriodPropertyDescriptor(object);
 			addPriorityPropertyDescriptor(object);
+			addAutoStartPropertyDescriptor(object);
+			addAutoConfPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -181,6 +183,50 @@ public class TaskContextItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Auto Start feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAutoStartPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TaskContext_autoStart_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskContext_autoStart_feature", "_UI_TaskContext_type"),
+				 orocoscomponentmodelPackage.Literals.TASK_CONTEXT__AUTO_START,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Auto Conf feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAutoConfPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TaskContext_autoConf_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskContext_autoConf_feature", "_UI_TaskContext_type"),
+				 orocoscomponentmodelPackage.Literals.TASK_CONTEXT__AUTO_CONF,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -255,6 +301,8 @@ public class TaskContextItemProvider
 			case orocoscomponentmodelPackage.TASK_CONTEXT__CLASS_NAME:
 			case orocoscomponentmodelPackage.TASK_CONTEXT__PERIOD:
 			case orocoscomponentmodelPackage.TASK_CONTEXT__PRIORITY:
+			case orocoscomponentmodelPackage.TASK_CONTEXT__AUTO_START:
+			case orocoscomponentmodelPackage.TASK_CONTEXT__AUTO_CONF:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case orocoscomponentmodelPackage.TASK_CONTEXT__INPUT_PORTS:
