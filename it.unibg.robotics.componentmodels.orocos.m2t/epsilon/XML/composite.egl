@@ -42,26 +42,44 @@ for(child in composite.components) {
 			<simple name="Period" type="double"><value>[%=child.period%]</value></simple>
 			<simple name="Scheduler" type="string"><value>ORO_SCHED_OTHER</value></simple>
 		</struct>
+		<simple name="AutoConf" type="boolean"><value>[%=child.autoConf%]</value></simple>
+		<simple name="AutoStart" type="boolean"><value>[%=child.autoStart%]</value></simple>
 		<struct name="Ports" type="PropertyBag">
 			<!-- Input ports -->
 			[%
 			for(port in child.inputPorts) {
-			var seq : Sequence := orocosHelper.getConnections(port);
-			for(conn in seq){	
-			%]
+				var seq : Sequence := orocosHelper.getConnections(port);
+					for(conn in seq){	
+					%]
 			<simple name="[%=port.name%]" type="string"><value>[%=conn.name%]</value></simple>
 			[% }} %]
 			<!-- Output ports -->
 			[%
 			for(port in child.outputPorts) {
-			var seq : Sequence := orocosHelper.getConnections(port);
-			for(conn in seq){	
-			%]
+				var seq : Sequence := orocosHelper.getConnections(port);
+					for(conn in seq){	
+					%]
 			<simple name="[%=port.name%]" type="string"><value>[%=conn.name%]</value></simple>
 			[% }} %]
 		</struct>
-		<simple name="AutoConf" type="boolean"><value>[%=child.autoConf%]</value></simple>
-		<simple name="AutoStart" type="boolean"><value>[%=child.autoStart%]</value></simple>
+		<struct name="Peers" type="PropertyBag">
+			<!-- Operations -->
+			[%
+			for(op in child.operations) {
+				var seq : Sequence := orocosHelper.getPeers(op);
+					for(taskContext in seq){	
+					%]
+			<simple type="string"><value>[%=taskContext.name%]</value></simple>
+			[% }} %]
+			<!-- Operation Callers -->
+			[%
+			for(opCallers in child.operationCallers) {
+				var seq : Sequence := orocosHelper.getPeers(opCallers);
+					for(taskContext in seq){	
+					%]
+			<simple type="string"><value>[%=taskContext.name%]</value></simple>
+			[% }} %]
+		</struct>
 		<simple name="UpdateProperties" type="string">
 			<value>properties/[%=child.name%].cpf</value> 
   		</simple>
@@ -70,7 +88,7 @@ for(child in composite.components) {
 	[%
 	}else if(child.isTypeOf(Composite)){
 	
-		var compositeTemplate := TemplateFactory.load('composite.egl');
+		var compositeTemplate := TemplateFactory.load('XML/composite.egl');
 		compositeTemplate.populate('composite', child);
 	
 		out.print(compositeTemplate.process());
