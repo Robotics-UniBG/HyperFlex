@@ -9,7 +9,7 @@
       </category>
       <command
             categoryId="it.unibg.robotics.componentmodels.tca.m2t.category"
-            id="it.unibg.robotics.componentmodels.orocos.m2t.tcaXML"
+            id="it.unibg.robotics.componentmodels.tca.m2t.tcaXML"
             name="Generate XML File for TCA deployment">
       </command>
 
