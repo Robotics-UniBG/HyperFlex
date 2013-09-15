@@ -24,3 +24,39 @@
  * 
  * 
  *]
+[%
+var orocosHelper =
+  new Native("it.unibg.robotics.componentmodels.orocos.m2t.tools.OrocosXmlTools");
+var seq : Sequence := orocosHelper.getCompositeConnectionPolicies(composite);
+for(conn in seq) {
+%]
+[%	if(conn.transport = ConnectionTransport#OROCOS){
+		if(conn.type = ConnectionType#DATA){
+		//
+		}else if(conn.type = ConnectionType#BUFFER){
+		%]
+	<!-- Buffer connection [%=conn.name%] -->
+	<struct name="[%=conn.name%]" type="ConnPolicy">
+		<simple name="type" type="long"><value>1</value></simple>   <!-- 0 = data, 1 = buffer -->
+		<simple name="size" type="long"><value>[%=conn.size%]</value></simple> 
+	</struct>
+	
+		[%
+		}else if(conn.type = ConnectionType#CIRCULAR_BUFFER){ 
+		//
+		}
+	}else if(conn.transport = ConnectionTransport#ROS){
+	%]
+	<!-- Buffer connection [%=conn.name%] to topic [%=conn.note%] -->
+	<struct name="[%=conn.name%]" type="ConnPolicy">
+  		<simple name="transport" type="long"><value>3</value></simple>  <!-- 3 = ROS -->  
+		<simple name="name_id" type="string"><value>[%=conn.note%]</value></simple> 
+	</struct> 
+	
+	[%
+	}else if(conn.transport = ConnectionTransport#MQUEUE){	
+	//
+	}
+  //<simple name="size" type="long"><value>10</value></simple> 
+}
+%]

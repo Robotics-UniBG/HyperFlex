@@ -23,7 +23,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  * 
  * 
- *] 
+ *]
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "cpf.dtd">
 <properties>
@@ -45,7 +45,6 @@ var compositeTemplate := TemplateFactory.load('XML/composite.egl');
 compositeTemplate.populate('composite', mainComposite);
 out.print(compositeTemplate.process());
 %]
-
 
 </properties>
 

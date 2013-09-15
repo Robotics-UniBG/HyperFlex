@@ -26,6 +26,7 @@
  */
 package it.unibg.robotics.componentmodels.orocos.m2t.tools;
 
+import it.unibg.robotics.orocoscomponentmodel.AbstractComponent;
 import it.unibg.robotics.orocoscomponentmodel.CompInputPort;
 import it.unibg.robotics.orocoscomponentmodel.CompOperation;
 import it.unibg.robotics.orocoscomponentmodel.CompOperationCaller;
@@ -58,19 +59,19 @@ public class OrocosXmlTools {
 	 * or output
 	 * @generated NOT
 	 */
-	public ArrayList<ConnectionPolicy> getConnections(DataPort port){
+	public ArrayList<ConnectionPolicy> getPortConnectionPolicies(DataPort port){
 
-		return getAllConnections(port);
-
-	}
-
-	/**
-	 * Returns the list of connections which connect a port directly or 
-	 * through promotions.
-	 * It performs a recursive search.
-	 * @generated NOT
-	 */
-	private ArrayList<ConnectionPolicy> getAllConnections(DataPort port){
+		//		return getAllPortConnectionPlocies(port);
+		//
+		//	}
+		//
+		//	/**
+		//	 * Returns the list of connections which connect a port directly or 
+		//	 * through promotions.
+		//	 * It performs a recursive search.
+		//	 * @generated NOT
+		//	 */
+		//	private ArrayList<ConnectionPolicy> getAllPortConnectionPolicies(DataPort port){
 
 		ArrayList<ConnectionPolicy> result = new ArrayList<ConnectionPolicy>();
 
@@ -82,7 +83,7 @@ public class OrocosXmlTools {
 		EList<ConnectionPolicy> compositeConnections = composite.getConnectionPolicies();
 
 		for(ConnectionPolicy conn : compositeConnections){
-
+			
 			if(conn.getSource().equals(port) || conn.getTarget().equals(port)){
 				result.add(conn);
 			}
@@ -97,7 +98,7 @@ public class OrocosXmlTools {
 				for(CompInputPort parentPort : composite.getInputPorts()){
 					// check if the port is exposed...this is recursive
 					if(parentPort.getExposedPort().equals(port)){
-						result.addAll(getAllConnections(parentPort));
+						result.addAll(getPortConnectionPolicies(parentPort));
 					}
 				}
 
@@ -105,7 +106,7 @@ public class OrocosXmlTools {
 				for(CompOutputPort parentPort : composite.getOutputPorts()){
 					// check if the port is exposed...this is recursive
 					if(parentPort.getExposedPort().equals(port)){
-						result.addAll(getAllConnections(parentPort));
+						result.addAll(getPortConnectionPolicies(parentPort));
 					}
 
 				}
@@ -121,19 +122,19 @@ public class OrocosXmlTools {
 	 * operation 
 	 * @generated NOT
 	 */
-	public ArrayList<TaskContext> getPeers(Operation operation){
+	public ArrayList<TaskContext> getOperationPeers(Operation operation){
 
-		return getAllPeers(operation);
-
-	}
-
-	/**
-	 * Returns the list of peers connections which connect an operation directly or 
-	 * through promotions.
-	 * It performs a recursive search.
-	 * @generated NOT
-	 */
-	private ArrayList<TaskContext> getAllPeers(Operation operation){
+		//		return getAllPeers(operation);
+		//
+		//	}
+		//
+		//	/**
+		//	 * Returns the list of peers connections which connect an operation directly or 
+		//	 * through promotions.
+		//	 * It performs a recursive search.
+		//	 * @generated NOT
+		//	 */
+		//	private ArrayList<TaskContext> getAllPeers(Operation operation){
 
 		ArrayList<TaskContext> result = new ArrayList<TaskContext>();
 
@@ -162,7 +163,7 @@ public class OrocosXmlTools {
 			for(CompOperation parentOperation : composite.getOperations()){
 				// check if the port is exposed...this is recursive
 				if(parentOperation.getExposedOp().equals(operation)){
-					result.addAll(getAllPeers(parentOperation));
+					result.addAll(getOperationPeers(parentOperation));
 				}
 			}
 
@@ -200,35 +201,35 @@ public class OrocosXmlTools {
 	 * operation caller
 	 * @generated NOT
 	 */
-	public ArrayList<TaskContext> getPeers(OperationCaller operationCaller){
+	public ArrayList<TaskContext> getOperationCallerPeers(OperationCaller operationCaller){
 
-		return getAllPeers(operationCaller);
-
-	}
-
-	/**
-	 * Returns the list of peers connections which connect an operation caller
-	 * directly or through promotions.
-	 * It performs a recursive search.
-	 * @generated NOT
-	 */
-	private ArrayList<TaskContext> getAllPeers(OperationCaller opCaller){
+		//		return getAllPeers(operationCaller);
+		//
+		//	}
+		//
+		//	/**
+		//	 * Returns the list of peers connections which connect an operation caller
+		//	 * directly or through promotions.
+		//	 * It performs a recursive search.
+		//	 * @generated NOT
+		//	 */
+		//	private ArrayList<TaskContext> getAllPeers(OperationCaller operationCaller){
 
 		ArrayList<TaskContext> result = new ArrayList<TaskContext>();
 
-		if(opCaller.eContainer().eContainer() == null || 
-				!(opCaller.eContainer().eContainer() instanceof Composite)){
+		if(operationCaller.eContainer().eContainer() == null || 
+				!(operationCaller.eContainer().eContainer() instanceof Composite)){
 			return result;
 		}
 
-		Composite composite = (Composite)opCaller.eContainer().eContainer();
+		Composite composite = (Composite)operationCaller.eContainer().eContainer();
 		EList<PeersConnection> compositePeersConnections = composite.getPeersConnections();
 
 		// first look for direct connection
 
 		for(PeersConnection conn : compositePeersConnections){
 
-			if(conn.getTarget().equals(opCaller)){
+			if(conn.getTarget().equals(operationCaller)){
 				result.add(getTaskContextFromOperation(conn.getSource()));
 			}
 
@@ -242,8 +243,8 @@ public class OrocosXmlTools {
 
 			for(CompOperationCaller parentOpCaller : composite.getOperationCallers()){
 				// check if the port is exposed...this is recursive
-				if(parentOpCaller.getExposedOpCaller().equals(opCaller)){
-					result.addAll(getAllPeers(parentOpCaller));
+				if(parentOpCaller.getExposedOpCaller().equals(operationCaller)){
+					result.addAll(getOperationCallerPeers(parentOpCaller));
 				}
 			}
 
@@ -251,9 +252,9 @@ public class OrocosXmlTools {
 
 		return result;
 	}
-	
-	
-	
+
+
+
 	/**
 	 * Returns the task context who is providing the input operation.
 	 * It performs a recursive search.
@@ -271,6 +272,32 @@ public class OrocosXmlTools {
 
 			Operation exposedOp = ((CompOperation) op).getExposedOp();
 			result = getTaskContextFromOperation(exposedOp);
+
+		}
+
+		return result;
+
+	}
+
+	/**
+	 * Returns the list of connections policies contained in the input composite
+	 * @generated NOT
+	 */
+	public ArrayList<ConnectionPolicy> getCompositeConnectionPolicies(Composite composite){
+
+		ArrayList<ConnectionPolicy> result = new ArrayList<ConnectionPolicy>();
+
+		for(ConnectionPolicy conn : composite.getConnectionPolicies()){
+			if(result.contains(conn) == false){
+				result.add(conn);
+			}
+		}
+
+		for(AbstractComponent comp : composite.getComponents()){
+
+			if(comp instanceof Composite){
+				result.addAll(getCompositeConnectionPolicies((Composite)comp));
+			}
 
 		}
 

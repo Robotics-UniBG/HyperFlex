@@ -24,7 +24,7 @@
  * 
  * 
  *]
-<!-- Start composite "[%=composite.name%]" -->
+	<!-- Start composite "[%=composite.name%]" -->
 
 [%
 var orocosHelper =
@@ -48,7 +48,7 @@ for(child in composite.components) {
 			<!-- Input ports -->
 			[%
 			for(port in child.inputPorts) {
-				var seq : Sequence := orocosHelper.getConnections(port);
+				var seq : Sequence := orocosHelper.getPortConnectionPolicies(port);
 					for(conn in seq){	
 					%]
 			<simple name="[%=port.name%]" type="string"><value>[%=conn.name%]</value></simple>
@@ -56,7 +56,7 @@ for(child in composite.components) {
 			<!-- Output ports -->
 			[%
 			for(port in child.outputPorts) {
-				var seq : Sequence := orocosHelper.getConnections(port);
+				var seq : Sequence := orocosHelper.getPortConnectionPolicies(port);
 					for(conn in seq){	
 					%]
 			<simple name="[%=port.name%]" type="string"><value>[%=conn.name%]</value></simple>
@@ -66,7 +66,7 @@ for(child in composite.components) {
 			<!-- Operations -->
 			[%
 			for(op in child.operations) {
-				var seq : Sequence := orocosHelper.getPeers(op);
+				var seq : Sequence := orocosHelper.getOperationPeers(op);
 					for(taskContext in seq){	
 					%]
 			<simple type="string"><value>[%=taskContext.name%]</value></simple>
@@ -74,7 +74,7 @@ for(child in composite.components) {
 			<!-- Operation Callers -->
 			[%
 			for(opCallers in child.operationCallers) {
-				var seq : Sequence := orocosHelper.getPeers(opCallers);
+				var seq : Sequence := orocosHelper.getOperationCallerPeers(opCallers);
 					for(taskContext in seq){	
 					%]
 			<simple type="string"><value>[%=taskContext.name%]</value></simple>
@@ -99,5 +99,5 @@ for(child in composite.components) {
 }
 %]
 
-<!-- End composite "[%=composite.name%]" -->
+	<!-- End composite "[%=composite.name%]" -->
 

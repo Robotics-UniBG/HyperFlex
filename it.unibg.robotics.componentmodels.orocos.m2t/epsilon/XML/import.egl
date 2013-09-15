@@ -24,3 +24,16 @@
  * 
  * 
  *]
+[%
+for(child in composite.components){
+	if(child.isTypeOf(TaskContext)){
+%]
+	<simple name="Import" type="string"><value>[%=child.name%]</value></simple>
+[%	
+	}else if(child.isTypeOf(Composite)){
+		var importTemplate := TemplateFactory.load('XML/import.egl');
+		importTemplate.populate('composite', child);
+		out.print(importTemplate.process());
+	}
+}
+%]
