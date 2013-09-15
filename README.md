@@ -2,6 +2,8 @@
 
 VARP is a collection of Eclipse plugins that support the development of robotics software product lines, a family of similar applications that are built reusing a set of software components and share the same architecture. The SPL life cycle consists in three main phases: domain analysis, product line development, and product derivation.
 
+This branch contains the version integrated with BRIDE.
+
 
 ### Domain Analysis
 
