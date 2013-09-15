@@ -1,18 +1,19 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
- * University of Bergamo
- * Dept. of Information Technology and Mathematics
+ * ETH Zurich
+ * Institute for Dynamic Systems and Control
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
  * 
  * ***********************************************************************************************
  * 
@@ -46,6 +47,7 @@ import it.unibg.robotics.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.util.Switch;
 
 /**
@@ -389,21 +391,6 @@ public class compositionmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Required Interface</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Required Interface</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRequiredInterface(RequiredInterface object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Provided Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -415,6 +402,21 @@ public class compositionmodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProvidedInterface(ProvidedInterface object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Required Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Required Interface</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRequiredInterface(RequiredInterface object) {
 		return null;
 	}
 

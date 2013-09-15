@@ -7,6 +7,7 @@ import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDR
 import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
 
 import java.util.Iterator;
+
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand;

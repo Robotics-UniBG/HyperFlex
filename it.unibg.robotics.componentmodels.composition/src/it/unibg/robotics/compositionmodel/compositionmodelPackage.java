@@ -1,18 +1,19 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
- * University of Bergamo
- * Dept. of Information Technology and Mathematics
+ * ETH Zurich
+ * Institute for Dynamic Systems and Control
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
  * 
  * ***********************************************************************************************
  * 
@@ -226,26 +227,6 @@ public interface compositionmodelPackage extends EPackage {
 	int INTERFACE_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.RequiredInterfaceImpl <em>Required Interface</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.RequiredInterfaceImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getRequiredInterface()
-	 * @generated
-	 */
-	int REQUIRED_INTERFACE = 11;
-
-	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.CompProvidedInterfImpl <em>Comp Provided Interf</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.CompProvidedInterfImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getCompProvidedInterf()
-	 * @generated
-	 */
-	int COMP_PROVIDED_INTERF = 2;
-
-	/**
 	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.ProvidedInterfaceImpl <em>Provided Interface</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -274,6 +255,16 @@ public interface compositionmodelPackage extends EPackage {
 	int PROVIDED_INTERFACE_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.CompProvidedInterfImpl <em>Comp Provided Interf</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see it.unibg.robotics.compositionmodel.impl.CompProvidedInterfImpl
+	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getCompProvidedInterf()
+	 * @generated
+	 */
+	int COMP_PROVIDED_INTERF = 2;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -290,6 +281,16 @@ public interface compositionmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMP_PROVIDED_INTERF_FEATURE_COUNT = PROVIDED_INTERFACE_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.RequiredInterfaceImpl <em>Required Interface</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see it.unibg.robotics.compositionmodel.impl.RequiredInterfaceImpl
+	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getRequiredInterface()
+	 * @generated
+	 */
+	int REQUIRED_INTERFACE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -886,17 +887,6 @@ public interface compositionmodelPackage extends EPackage {
 	EClass getConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.compositionmodel.Connection#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see it.unibg.robotics.compositionmodel.Connection#getTarget()
-	 * @see #getConnection()
-	 * @generated
-	 */
-	EReference getConnection_Target();
-
-	/**
 	 * Returns the meta object for the reference '{@link it.unibg.robotics.compositionmodel.Connection#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -906,6 +896,17 @@ public interface compositionmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getConnection_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link it.unibg.robotics.compositionmodel.Connection#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see it.unibg.robotics.compositionmodel.Connection#getTarget()
+	 * @see #getConnection()
+	 * @generated
+	 */
+	EReference getConnection_Target();
 
 	/**
 	 * Returns the meta object for the attribute '{@link it.unibg.robotics.compositionmodel.Connection#getName <em>Name</em>}'.
@@ -1035,16 +1036,6 @@ public interface compositionmodelPackage extends EPackage {
 	EReference getSystemRequiredInterf_Exposed();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.RequiredInterface <em>Required Interface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Required Interface</em>'.
-	 * @see it.unibg.robotics.compositionmodel.RequiredInterface
-	 * @generated
-	 */
-	EClass getRequiredInterface();
-
-	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.ProvidedInterface <em>Provided Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1053,6 +1044,16 @@ public interface compositionmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getProvidedInterface();
+
+	/**
+	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.RequiredInterface <em>Required Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Required Interface</em>'.
+	 * @see it.unibg.robotics.compositionmodel.RequiredInterface
+	 * @generated
+	 */
+	EClass getRequiredInterface();
 
 	/**
 	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.ComponentProperty <em>Component Property</em>}'.
@@ -1314,20 +1315,20 @@ public interface compositionmodelPackage extends EPackage {
 		EClass CONNECTION = eINSTANCE.getConnection();
 
 		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONNECTION__TARGET = eINSTANCE.getConnection_Target();
-
-		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference CONNECTION__SOURCE = eINSTANCE.getConnection_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION__TARGET = eINSTANCE.getConnection_Target();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1436,16 +1437,6 @@ public interface compositionmodelPackage extends EPackage {
 		EReference SYSTEM_REQUIRED_INTERF__EXPOSED = eINSTANCE.getSystemRequiredInterf_Exposed();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.RequiredInterfaceImpl <em>Required Interface</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.RequiredInterfaceImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getRequiredInterface()
-		 * @generated
-		 */
-		EClass REQUIRED_INTERFACE = eINSTANCE.getRequiredInterface();
-
-		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.ProvidedInterfaceImpl <em>Provided Interface</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1454,6 +1445,16 @@ public interface compositionmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PROVIDED_INTERFACE = eINSTANCE.getProvidedInterface();
+
+		/**
+		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.RequiredInterfaceImpl <em>Required Interface</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.unibg.robotics.compositionmodel.impl.RequiredInterfaceImpl
+		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getRequiredInterface()
+		 * @generated
+		 */
+		EClass REQUIRED_INTERFACE = eINSTANCE.getRequiredInterface();
 
 		/**
 		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.ComponentPropertyImpl <em>Component Property</em>}' class.

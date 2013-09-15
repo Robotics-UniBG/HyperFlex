@@ -1,11 +1,12 @@
 package it.unibg.robotics.compositionmodel.diagram.edit.parts;
 
 import it.unibg.robotics.compositionmodel.diagram.edit.policies.SystemProvidedInterfItemSemanticEditPolicy;
-
 import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
@@ -22,7 +23,6 @@ import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderItemEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;

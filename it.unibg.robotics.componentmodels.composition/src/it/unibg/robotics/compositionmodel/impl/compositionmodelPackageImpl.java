@@ -1,18 +1,19 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
- * University of Bergamo
- * Dept. of Information Technology and Mathematics
+ * ETH Zurich
+ * Institute for Dynamic Systems and Control
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
  * 
  * ***********************************************************************************************
  * 
@@ -49,6 +50,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -133,14 +135,14 @@ public class compositionmodelPackageImpl extends EPackageImpl implements composi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass requiredInterfaceEClass = null;
+	private EClass providedInterfaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass providedInterfaceEClass = null;
+	private EClass requiredInterfaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -376,8 +378,8 @@ public class compositionmodelPackageImpl extends EPackageImpl implements composi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_Target() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(1);
+	public EReference getConnection_Source() {
+		return (EReference)connectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -385,8 +387,8 @@ public class compositionmodelPackageImpl extends EPackageImpl implements composi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_Source() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(0);
+	public EReference getConnection_Target() {
+		return (EReference)connectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -502,8 +504,8 @@ public class compositionmodelPackageImpl extends EPackageImpl implements composi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRequiredInterface() {
-		return requiredInterfaceEClass;
+	public EClass getProvidedInterface() {
+		return providedInterfaceEClass;
 	}
 
 	/**
@@ -511,8 +513,8 @@ public class compositionmodelPackageImpl extends EPackageImpl implements composi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getProvidedInterface() {
-		return providedInterfaceEClass;
+	public EClass getRequiredInterface() {
+		return requiredInterfaceEClass;
 	}
 
 	/**

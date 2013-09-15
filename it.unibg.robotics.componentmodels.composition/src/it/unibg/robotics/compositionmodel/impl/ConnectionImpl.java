@@ -1,18 +1,19 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
- * University of Bergamo
- * Dept. of Information Technology and Mathematics
+ * ETH Zurich
+ * Institute for Dynamic Systems and Control
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
  * 
  * ***********************************************************************************************
  * 
@@ -31,8 +32,10 @@ import it.unibg.robotics.compositionmodel.RequiredInterface;
 import it.unibg.robotics.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
@@ -116,44 +119,6 @@ public class ConnectionImpl extends EObjectImpl implements Connection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProvidedInterface getTarget() {
-		if (target != null && target.eIsProxy()) {
-			InternalEObject oldTarget = (InternalEObject)target;
-			target = (ProvidedInterface)eResolveProxy(oldTarget);
-			if (target != oldTarget) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, compositionmodelPackage.CONNECTION__TARGET, oldTarget, target));
-			}
-		}
-		return target;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ProvidedInterface basicGetTarget() {
-		return target;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTarget(ProvidedInterface newTarget) {
-		ProvidedInterface oldTarget = target;
-		target = newTarget;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, compositionmodelPackage.CONNECTION__TARGET, oldTarget, target));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public RequiredInterface getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
@@ -185,6 +150,44 @@ public class ConnectionImpl extends EObjectImpl implements Connection {
 		source = newSource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, compositionmodelPackage.CONNECTION__SOURCE, oldSource, source));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProvidedInterface getTarget() {
+		if (target != null && target.eIsProxy()) {
+			InternalEObject oldTarget = (InternalEObject)target;
+			target = (ProvidedInterface)eResolveProxy(oldTarget);
+			if (target != oldTarget) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, compositionmodelPackage.CONNECTION__TARGET, oldTarget, target));
+			}
+		}
+		return target;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProvidedInterface basicGetTarget() {
+		return target;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTarget(ProvidedInterface newTarget) {
+		ProvidedInterface oldTarget = target;
+		target = newTarget;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, compositionmodelPackage.CONNECTION__TARGET, oldTarget, target));
 	}
 
 	/**

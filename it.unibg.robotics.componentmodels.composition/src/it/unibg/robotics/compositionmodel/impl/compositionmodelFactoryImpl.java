@@ -1,18 +1,19 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
- * University of Bergamo
- * Dept. of Information Technology and Mathematics
+ * ETH Zurich
+ * Institute for Dynamic Systems and Control
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
  * 
  * ***********************************************************************************************
  * 
@@ -40,7 +41,9 @@ import it.unibg.robotics.compositionmodel.compositionmodelPackage;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -58,7 +61,7 @@ public class compositionmodelFactoryImpl extends EFactoryImpl implements composi
 	 */
 	public static compositionmodelFactory init() {
 		try {
-			compositionmodelFactory thecompositionmodelFactory = (compositionmodelFactory)EPackage.Registry.INSTANCE.getEFactory("http://robotics.unibg.it/compositionmodels"); 
+			compositionmodelFactory thecompositionmodelFactory = (compositionmodelFactory)EPackage.Registry.INSTANCE.getEFactory(compositionmodelPackage.eNS_URI);
 			if (thecompositionmodelFactory != null) {
 				return thecompositionmodelFactory;
 			}

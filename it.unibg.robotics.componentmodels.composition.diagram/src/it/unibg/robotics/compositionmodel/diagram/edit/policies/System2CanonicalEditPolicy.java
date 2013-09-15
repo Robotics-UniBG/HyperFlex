@@ -1,6 +1,5 @@
 package it.unibg.robotics.compositionmodel.diagram.edit.policies;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
 import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramUpdater;

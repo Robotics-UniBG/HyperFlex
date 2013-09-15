@@ -44,7 +44,7 @@
   	  <wizard
   	     name="%newWizardName"
   	     icon="icons/obj16/roscomponentmodelDiagramFile.gif"
-  	     category="org.eclipse.ui.Examples"
+  	     category="it.robotics.unibg.hyperflex.wizard.category"
   	     class="it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelCreationWizard"
   	     id="it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelCreationWizardID">
   	  	 <description>%newWizardDesc</description>  

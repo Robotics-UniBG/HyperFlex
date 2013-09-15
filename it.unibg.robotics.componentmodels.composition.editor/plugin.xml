@@ -29,15 +29,14 @@
 
 <plugin>
 
+
    <extension point="org.eclipse.ui.newWizards">
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
+      <!-- @generated compositionModel -->
       <wizard
             id="it.unibg.robotics.compositionmodel.presentation.compositionmodelModelWizardID"
             name="%_UI_compositionmodelModelWizard_label"
             class="it.unibg.robotics.compositionmodel.presentation.compositionmodelModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            category="it.robotics.unibg.hyperflex.wizard.category"
             icon="icons/full/obj16/compositionmodelModelFile.gif">
          <description>%_UI_compositionmodelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>

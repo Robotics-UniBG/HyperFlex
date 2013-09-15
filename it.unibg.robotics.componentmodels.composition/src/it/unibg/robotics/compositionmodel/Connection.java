@@ -1,18 +1,19 @@
 /**
- * Variability Modeling And Resolution Plugins (VARP)
+ * HyperFlex toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
- * University of Bergamo
- * Dept. of Information Technology and Mathematics
+ * ETH Zurich
+ * Institute for Dynamic Systems and Control
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
  * 
  * ***********************************************************************************************
  * 
@@ -47,32 +48,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Connection extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target</em>' reference.
-	 * @see #setTarget(ProvidedInterface)
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getConnection_Target()
-	 * @model required="true"
-	 * @generated
-	 */
-	ProvidedInterface getTarget();
-
-	/**
-	 * Sets the value of the '{@link it.unibg.robotics.compositionmodel.Connection#getTarget <em>Target</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target</em>' reference.
-	 * @see #getTarget()
-	 * @generated
-	 */
-	void setTarget(ProvidedInterface value);
-
-	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -97,6 +72,32 @@ public interface Connection extends EObject {
 	 * @generated
 	 */
 	void setSource(RequiredInterface value);
+
+	/**
+	 * Returns the value of the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Target</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Target</em>' reference.
+	 * @see #setTarget(ProvidedInterface)
+	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getConnection_Target()
+	 * @model required="true"
+	 * @generated
+	 */
+	ProvidedInterface getTarget();
+
+	/**
+	 * Sets the value of the '{@link it.unibg.robotics.compositionmodel.Connection#getTarget <em>Target</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Target</em>' reference.
+	 * @see #getTarget()
+	 * @generated
+	 */
+	void setTarget(ProvidedInterface value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

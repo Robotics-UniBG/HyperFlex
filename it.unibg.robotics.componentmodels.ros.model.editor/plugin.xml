@@ -30,14 +30,11 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
       <wizard
             id="it.unibg.robotics.roscomponentmodel.presentation.roscomponentmodelModelWizardID"
             name="%_UI_roscomponentmodelModelWizard_label"
             class="it.unibg.robotics.roscomponentmodel.presentation.roscomponentmodelModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            category="it.robotics.unibg.hyperflex.wizard.category"
             icon="icons/full/obj16/roscomponentmodelModelFile.gif">
          <description>%_UI_roscomponentmodelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>

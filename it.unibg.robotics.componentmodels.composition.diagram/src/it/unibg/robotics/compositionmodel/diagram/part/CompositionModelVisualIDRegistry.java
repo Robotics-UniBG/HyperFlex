@@ -17,6 +17,7 @@ import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemNameEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
+import it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.EAnnotation;
@@ -163,11 +164,11 @@ public class CompositionModelVisualIDRegistry {
 			}
 			break;
 		case ROSCompositeEditPart.VISUAL_ID:
-			if (it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
+			if (roscompositionmodelPackage.eINSTANCE
 					.getROSMsgProducer().isSuperTypeOf(domainElement.eClass())) {
 				return ROSMsgProducerEditPart.VISUAL_ID;
 			}
-			if (it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
+			if (roscompositionmodelPackage.eINSTANCE
 					.getROSMsgConsumer().isSuperTypeOf(domainElement.eClass())) {
 				return ROSMsgConsumerEditPart.VISUAL_ID;
 			}
@@ -177,7 +178,7 @@ public class CompositionModelVisualIDRegistry {
 					.getSystemComposite().isSuperTypeOf(domainElement.eClass())) {
 				return SystemCompositeEditPart.VISUAL_ID;
 			}
-			if (it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
+			if (roscompositionmodelPackage.eINSTANCE
 					.getROSComposite().isSuperTypeOf(domainElement.eClass())) {
 				return ROSCompositeEditPart.VISUAL_ID;
 			}

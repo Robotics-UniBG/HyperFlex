@@ -19,6 +19,7 @@ import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemRequiredInter
 import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
 
 import java.util.ArrayList;
+
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EObject;

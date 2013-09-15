@@ -11,6 +11,7 @@
       itemSemanticEditPolicyClassName="ArchitectureModelItemSemanticEditPolicy"
       canonicalEditPolicyClassName="ArchitectureModelCanonicalEditPolicy"
       iconProviderPriority="Low"
+      creationWizardCategoryID="it.robotics.unibg.hyperflex.wizard.category"
       validationProviderPriority="Low">
     <diagramRunTimeClass
         href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>

@@ -13,8 +13,8 @@ import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
 import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
-
 import it.unibg.robotics.compositionmodel.diagram.part.Messages;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;

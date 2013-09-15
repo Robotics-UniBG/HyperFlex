@@ -1,7 +1,7 @@
 package it.unibg.robotics.compositionmodel.diagram.edit.commands;
 
-import it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite;
 import it.unibg.robotics.compositionmodel.System;
+import it.unibg.robotics.roscompositionmodel.ROSComposite;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
@@ -53,7 +53,7 @@ public class ROSCompositeCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		ROSComposite newElement = it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelFactory.eINSTANCE
+		ROSComposite newElement = it.unibg.robotics.roscompositionmodel.roscompositionmodelFactory.eINSTANCE
 				.createROSComposite();
 
 		System owner = (System) getElementToEdit();

@@ -1,20 +1,20 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: it.unibg.robotics.componentmodels.composition.ros.editor;singleton:=true
+Bundle-SymbolicName: it.unibg.robotics.compositionmodels.ros.model.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: it.unibg.robotics.componentmodels.roscompositionmodel.presentation.RosCompositionModelEditorPlugin$Implementation
+Bundle-Activator: it.unibg.robotics.roscompositionmodel.presentation.RosCompositionModelEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: it.unibg.robotics.componentmodels.roscompositionmodel.presentation
+Export-Package: it.unibg.robotics.roscompositionmodel.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
- it.unibg.robotics.componentmodels.composition.ros.edit;visibility:=reexport,
+ it.unibg.robotics.compositionmodels.ros.model.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
- it.unibg.robotics.componentmodels.composition.edit;visibility:=reexport,
+ it.unibg.robotics.compositionmodels.model.edit;visibility:=reexport,
  it.unibg.robotics.componentmodels.ros.model.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

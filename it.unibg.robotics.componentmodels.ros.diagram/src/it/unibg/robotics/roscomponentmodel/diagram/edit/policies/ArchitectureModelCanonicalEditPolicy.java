@@ -1,5 +1,6 @@
 package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
 
+import it.unibg.robotics.roscomponentmodel.AbstractComponent;
 import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
 import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
 import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
@@ -38,6 +39,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.emf.common.command.AbstractCommand;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.gef.EditPart;
@@ -255,9 +257,9 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 				if (diagramLinkObject == nextLinkDescriptor.getModelElement()
 						&& diagramLinkSrc == nextLinkDescriptor.getSource()
 						&& diagramLinkDst == nextLinkDescriptor
-								.getDestination()
+						.getDestination()
 						&& diagramLinkVisualID == nextLinkDescriptor
-								.getVisualID()) {
+						.getVisualID()) {
 					remove = true;
 					linkDescriptorsIterator.remove();
 					//					break;
@@ -469,10 +471,10 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 			CreateConnectionViewRequest.ConnectionViewDescriptor descriptor = new CreateConnectionViewRequest.ConnectionViewDescriptor(
 					nextLinkDescriptor.getSemanticAdapter(),
 					RosComponentModelVisualIDRegistry
-							.getType(nextLinkDescriptor.getVisualID()),
+					.getType(nextLinkDescriptor.getVisualID()),
 					ViewUtil.APPEND, false,
 					((IGraphicalEditPart) getHost())
-							.getDiagramPreferencesHint());
+					.getDiagramPreferencesHint());
 			CreateConnectionViewRequest ccr = new CreateConnectionViewRequest(
 					descriptor);
 			ccr.setType(RequestConstants.REQ_CONNECTION_START);

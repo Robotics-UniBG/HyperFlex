@@ -31,14 +31,11 @@
 
    <extension point="org.eclipse.ui.newWizards">
       <!-- @generated orocosComponentModel -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
       <wizard
             id="it.unibg.robotics.orocoscomponentmodel.presentation.orocoscomponentmodelModelWizardID"
             name="%_UI_orocoscomponentmodelModelWizard_label"
             class="it.unibg.robotics.orocoscomponentmodel.presentation.orocoscomponentmodelModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            category="it.robotics.unibg.hyperflex.wizard.category"
             icon="icons/full/obj16/orocoscomponentmodelModelFile.gif">
          <description>%_UI_orocoscomponentmodelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>

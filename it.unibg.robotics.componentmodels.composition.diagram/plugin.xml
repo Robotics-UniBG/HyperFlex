@@ -44,7 +44,7 @@
   	  <wizard
   	     name="%newWizardName"
   	     icon="icons/obj16/compositionmodelDiagramFile.gif"
-  	     category="org.eclipse.ui.Examples"
+  	     category="it.robotics.unibg.hyperflex.wizard.category"
   	     class="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelCreationWizard"
   	     id="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelCreationWizardID">
   	  	 <description>%newWizardDesc</description>  

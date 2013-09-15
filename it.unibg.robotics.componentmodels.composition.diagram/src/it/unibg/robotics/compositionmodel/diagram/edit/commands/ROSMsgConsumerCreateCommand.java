@@ -1,7 +1,8 @@
 package it.unibg.robotics.compositionmodel.diagram.edit.commands;
 
-import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgConsumer;
 import it.unibg.robotics.compositionmodel.Composite;
+import it.unibg.robotics.roscompositionmodel.ROSMsgConsumer;
+import it.unibg.robotics.roscompositionmodel.roscompositionmodelFactory;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
@@ -53,7 +54,7 @@ public class ROSMsgConsumerCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		ROSMsgConsumer newElement = it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelFactory.eINSTANCE
+		ROSMsgConsumer newElement = roscompositionmodelFactory.eINSTANCE
 				.createROSMsgConsumer();
 
 		Composite owner = (Composite) getElementToEdit();

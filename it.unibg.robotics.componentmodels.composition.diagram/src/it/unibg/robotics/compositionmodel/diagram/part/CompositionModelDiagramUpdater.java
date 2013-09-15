@@ -1,8 +1,5 @@
 package it.unibg.robotics.compositionmodel.diagram.part;
 
-import it.unibg.robotics.componentmodels.roscompositionmodel.ROSComposite;
-import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgConsumer;
-import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgProducer;
 import it.unibg.robotics.compositionmodel.ArchitectureModel;
 import it.unibg.robotics.compositionmodel.CompProvidedInterf;
 import it.unibg.robotics.compositionmodel.CompRequiredInterf;
@@ -28,15 +25,18 @@ import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeRequ
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
-
 import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
+import it.unibg.robotics.roscompositionmodel.ROSComposite;
+import it.unibg.robotics.roscompositionmodel.ROSMsgConsumer;
+import it.unibg.robotics.roscompositionmodel.ROSMsgProducer;
+
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-
 import java.util.Map;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;

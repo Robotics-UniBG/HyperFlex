@@ -29,9 +29,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated rosCompositionModel -->
       <package
             uri="http://robotics.unibg.it/compositionmodels.ros"
-            class="it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage"
+            class="it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage"
             genModel="models/rosCompositionModel.genmodel"/>
    </extension>
 

@@ -12,6 +12,7 @@ import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
 import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
 import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
+import it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage;
 
 import java.util.HashSet;
 import java.util.IdentityHashMap;
@@ -19,16 +20,12 @@ import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.ENamedElement;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages;
 import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes;
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;
 
 /**
@@ -183,17 +180,17 @@ public class CompositionModelElementTypes {
 
 			elements.put(
 					ROSComposite_3012,
-					it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
+					roscompositionmodelPackage.eINSTANCE
 							.getROSComposite());
 
 			elements.put(
 					ROSMsgProducer_3013,
-					it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
+					roscompositionmodelPackage.eINSTANCE
 							.getROSMsgProducer());
 
 			elements.put(
 					ROSMsgConsumer_3014,
-					it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
+					roscompositionmodelPackage.eINSTANCE
 							.getROSMsgConsumer());
 
 			elements.put(

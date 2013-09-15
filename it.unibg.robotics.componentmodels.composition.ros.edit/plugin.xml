@@ -2,20 +2,21 @@
 <?eclipse version="3.0"?>
 
 <!--
- Variability Analysis and Resolution Plugin (VARP)
+ HyperFlex toolchain
  
  Copyright (c) 2013
  All rights reserved.
  
  Luca Gherardi
- University of Bergamo
- Dept. of Information Technology and Mathematics
+ ETH Zurich
+ Institute for Dynamic Systems and Control
  
  ***********************************************************************************************
  
- Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  
- Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ In collaboration with: 
+   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
  
  ***********************************************************************************************
  
@@ -24,14 +25,16 @@
  which accompanies this distribution, and is available at
  http://www.eclipse.org/legal/epl-v10.html
  
+ 
 -->
 
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated rosCompositionModel -->
       <factory
             uri="http://robotics.unibg.it/compositionmodels.ros"
-            class="it.unibg.robotics.componentmodels.roscompositionmodel.provider.roscompositionmodelItemProviderAdapterFactory"
+            class="it.unibg.robotics.roscompositionmodel.provider.roscompositionmodelItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -41,9 +44,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated rosCompositionModel -->
       <extender
             uri="http://robotics.unibg.it/compositionmodels"
-            class="it.unibg.robotics.componentmodels.roscompositionmodel.provider.roscompositionmodelItemProviderAdapterFactory$compositionmodelChildCreationExtender"/>
+            class="it.unibg.robotics.roscompositionmodel.provider.roscompositionmodelItemProviderAdapterFactory$compositionmodelChildCreationExtender"/>
    </extension>
 
 </plugin>

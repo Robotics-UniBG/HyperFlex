@@ -1,11 +1,12 @@
 package it.unibg.robotics.compositionmodel.diagram.edit.commands;
 
-import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgConsumer;
-import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgProducer;
-import it.unibg.robotics.componentmodels.roscompositionmodel.roscompositionmodelFactory;
+
+
 import it.unibg.robotics.componentmodels.shared.filters.ViewerFileFilter;
 import it.unibg.robotics.compositionmodel.Composite;
-import it.unibg.robotics.compositionmodel.System;
+import it.unibg.robotics.roscompositionmodel.ROSMsgConsumer;
+import it.unibg.robotics.roscompositionmodel.ROSMsgProducer;
+import it.unibg.robotics.roscompositionmodel.roscompositionmodelFactory;
 
 import java.io.IOException;
 
@@ -139,7 +140,7 @@ public class ImportCompositeCreateCommand extends EditElementCommand {
 
 					}
 
-					System owner = (System) getElementToEdit();
+					it.unibg.robotics.compositionmodel.System owner = (it.unibg.robotics.compositionmodel.System) getElementToEdit();
 					owner.getComposites().add(newElement);
 
 					doConfigure(newElement, monitor, info);

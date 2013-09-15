@@ -1,9 +1,6 @@
 package it.unibg.robotics.compositionmodel.diagram.navigator;
 
-import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgConsumer;
-import it.unibg.robotics.componentmodels.roscompositionmodel.ROSMsgProducer;
 import it.unibg.robotics.compositionmodel.ArchitectureModel;
-import it.unibg.robotics.compositionmodel.SystemComposite;
 import it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf;
 import it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf;
 import it.unibg.robotics.compositionmodel.SystemProvidedInterf;
@@ -27,6 +24,8 @@ import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEd
 import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
 import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
 import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelParserProvider;
+import it.unibg.robotics.roscompositionmodel.ROSMsgConsumer;
+import it.unibg.robotics.roscompositionmodel.ROSMsgProducer;
 
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
 import org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions;

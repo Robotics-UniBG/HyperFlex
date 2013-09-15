@@ -2,20 +2,21 @@
 <?eclipse version="3.0"?>
 
 <!--
- Variability Analysis and Resolution Plugin (VARP)
+ HyperFlex toolchain
  
  Copyright (c) 2013
  All rights reserved.
  
  Luca Gherardi
- University of Bergamo
- Dept. of Information Technology and Mathematics
+ ETH Zurich
+ Institute for Dynamic Systems and Control
  
  ***********************************************************************************************
  
- Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  
- Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ In collaboration with: 
+   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
  
  ***********************************************************************************************
  
@@ -24,19 +25,18 @@
  which accompanies this distribution, and is available at
  http://www.eclipse.org/legal/epl-v10.html
  
+ 
 -->
 
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
+      <!-- @generated rosCompositionModel -->
       <wizard
-            id="it.unibg.robotics.componentmodels.roscompositionmodel.presentation.roscompositionmodelModelWizardID"
+            id="it.unibg.robotics.roscompositionmodel.presentation.roscompositionmodelModelWizardID"
             name="%_UI_roscompositionmodelModelWizard_label"
-            class="it.unibg.robotics.componentmodels.roscompositionmodel.presentation.roscompositionmodelModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            class="it.unibg.robotics.roscompositionmodel.presentation.roscompositionmodelModelWizard"
+            category="it.robotics.unibg.hyperflex.wizard.category"
             icon="icons/full/obj16/roscompositionmodelModelFile.gif">
          <description>%_UI_roscompositionmodelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
@@ -44,14 +44,14 @@
    </extension>
 
    <extension point="org.eclipse.ui.editors">
+      <!-- @generated rosCompositionModel -->
       <editor
-            id="it.unibg.robotics.componentmodels.roscompositionmodel.presentation.roscompositionmodelEditorID"
+            id="it.unibg.robotics.roscompositionmodel.presentation.roscompositionmodelEditorID"
             name="%_UI_roscompositionmodelEditor_label"
             icon="icons/full/obj16/roscompositionmodelModelFile.gif"
             extensions="roscompositionmodel"
-            class="it.unibg.robotics.componentmodels.roscompositionmodel.presentation.roscompositionmodelEditor"
-            contributorClass="it.unibg.robotics.componentmodels.roscompositionmodel.presentation.roscompositionmodelActionBarContributor">
+            class="it.unibg.robotics.roscompositionmodel.presentation.roscompositionmodelEditor"
+            contributorClass="it.unibg.robotics.roscompositionmodel.presentation.roscompositionmodelActionBarContributor">
       </editor>
    </extension>
-
 </plugin>

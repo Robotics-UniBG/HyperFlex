@@ -1,11 +1,12 @@
 package it.unibg.robotics.compositionmodel.diagram.edit.parts;
 
 import it.unibg.robotics.compositionmodel.diagram.edit.policies.SystemRequiredInterfItemSemanticEditPolicy;
-
 import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
