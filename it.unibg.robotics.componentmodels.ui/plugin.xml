@@ -5,7 +5,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:org.eclipse.ui.main.menu">
+            locationURI="menu:it.unibg.robotics.hyperflex.menu">
          <menu
                id="it.unibg.robotics.componentmodels.menu"
                label="Component Models">

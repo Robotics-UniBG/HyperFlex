@@ -1,5 +1,8 @@
 *.class
+<<<<<<< HEAD
 bin/
+=======
+>>>>>>> c5fe7276a8ccb5e52dfe50357495efce1b7be6f1
 .settings
 .metadata
 .svn
@@ -8,3 +11,7 @@ it.unibg.robotics.varp.updatesite/features/
 it.unibg.robotics.varp.updatesite/plugins/
 it.unibg.robotics.varp.updatesite/artifacts.jar
 it.unibg.robotics.varp.updatesite/content.jar
+<<<<<<< HEAD
+=======
+it.unibg.robotics.resolutionmodels.dsl*
+>>>>>>> c5fe7276a8ccb5e52dfe50357495efce1b7be6f1

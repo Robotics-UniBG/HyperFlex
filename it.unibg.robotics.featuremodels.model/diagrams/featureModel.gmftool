@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette
+      title="Feature Diagram"
+      description="FeatureDiagramMainPalette">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Nodes">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Feature">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Feature.gif"
+            bundle=""/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Containment Association">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/ContainmentAssociation.gif"
+            bundle=""/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Simple Attribute"
+          description="">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/SimpleAttribute.gif"
+            bundle=""/>
+      </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Connections">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Connection">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Connection.gif"
+            bundle=""/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>
