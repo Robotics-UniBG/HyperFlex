@@ -19,7 +19,7 @@ HyperFlex provides a tool for selecting the desired functionalties of an applica
 
 ## How to install the Plugin
 
-The plugin can be installed from source (by accessing the [github repository](https://github.com/Robotics-UniBG/HyperFlex) ) or by means of the [update site](http://) (coming soon).
+The plugin can be installed from source (by accessing the [github repository](https://github.com/Robotics-UniBG/HyperFlex) ) or by means of the [update site](http://http://lucagherardi.it/projects/HyperFlex/UpdateSite/) (coming soon).
 
 In order to install the plugin from source you need to setup the following environment:
 
