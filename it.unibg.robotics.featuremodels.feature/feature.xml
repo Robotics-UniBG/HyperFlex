@@ -6,7 +6,7 @@
       provider-name="Luca Gherardi">
 
    <description url="http://robotics-unibg.github.com/HyperFlex/">
-      The HyperFlex plugin
+      The HyperFlex Feature Model plugin
    </description>
 
    <copyright>
@@ -69,6 +69,7 @@ http://www.eclipse.org/legal/epl-v10.html
       <import plugin="it.unibg.robotics.featuremodels.model.diagram" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="it.unibg.robotics.featuremodels.commands.featureSelection" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="it.unibg.robotics.featuremodels.model.editor" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="it.unibg.robotics.featuremodels.ui" version="1.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
