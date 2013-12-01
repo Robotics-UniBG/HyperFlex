@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+HyperFlex toolchain
+
+Copyright (c) 2013
+All rights reserved.
+
+Luca Gherardi
+Institute for Dynamic Systems and Control
+ETH Zurich
+
+***********************************************************************************************
+
+Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
+
+In collaboration with: 
+  <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
+
+***********************************************************************************************
+
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+
+-->
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="rapyutacomponentmodel_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="rapyutacomponentmodel_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/rapyutacomponentmodelDiagramFile.gif"
+         extensions="rapyutacomponentmodel_diagram"
+         default="true"
+         class="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramEditor"
+         matchingStrategy="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelMatchingStrategy"
+         contributorClass="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="org.hyperflex.rapyutacomponentmodel.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/rapyutacomponentmodelDiagramFile.gif"
+  	     category="it.robotics.unibg.hyperflex.wizard.category"
+  	     class="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelCreationWizard"
+  	     id="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="org.hyperflex.componentmodels.rapyuta.diagram.InitDiagram"
+            nameFilter="*.rapyutacomponentmodel"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="org.hyperflex.componentmodels.rapyuta.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="RapyutaComponentModelPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="RapyutaComponentModelPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="RapyutaComponentModelRender">
+         <Priority name="Lowest"/>
+         <ViewId id="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="org.hyperflex.rapyutacomponentmodel.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="org.hyperflex.componentmodels.rapyuta.diagram.general"
+            name="%prefpage.org.hyperflex.componentmodels.rapyuta.diagram.general"
+            class="org.hyperflex.rapyutacomponentmodel.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="org.hyperflex.componentmodels.rapyuta.diagram.appearance"
+            name="%prefpage.org.hyperflex.componentmodels.rapyuta.diagram.appearance"
+            category="org.hyperflex.componentmodels.rapyuta.diagram.general"
+            class="org.hyperflex.rapyutacomponentmodel.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="org.hyperflex.componentmodels.rapyuta.diagram.connections"
+            name="%prefpage.org.hyperflex.componentmodels.rapyuta.diagram.connections"
+            category="org.hyperflex.componentmodels.rapyuta.diagram.general"
+            class="org.hyperflex.rapyutacomponentmodel.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="org.hyperflex.componentmodels.rapyuta.diagram.printing"
+            name="%prefpage.org.hyperflex.componentmodels.rapyuta.diagram.printing"
+            category="org.hyperflex.componentmodels.rapyuta.diagram.general"
+            class="org.hyperflex.rapyutacomponentmodel.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="org.hyperflex.componentmodels.rapyuta.diagram.rulersAndGrid"
+            name="%prefpage.org.hyperflex.componentmodels.rapyuta.diagram.rulersAndGrid"
+            category="org.hyperflex.componentmodels.rapyuta.diagram.general"
+            class="org.hyperflex.rapyutacomponentmodel.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="org.hyperflex.componentmodels.rapyuta.diagram"
+            labelProvider="org.hyperflex.rapyutacomponentmodel.diagram.sheet.RapyutaComponentModelSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="org.hyperflex.componentmodels.rapyuta.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="org.hyperflex.componentmodels.rapyuta.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="org.hyperflex.rapyutacomponentmodel.diagram.sheet.RapyutaComponentModelPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="RapyutaComponentModel"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3038,3018,3019,3020,3021,3022,3040,3024,3025,3026,3027,3028,3039,3030,3031,3032,3033,3034,3035"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4002,4003,4004,4005,4006,4007,4010,4009"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="RapyutaComponentModel"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3038,3018,3019,3020,3021,3022,3040,3024,3025,3026,3027,3028,3039,3030,3031,3032,3033,3034,3035"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4002,4003,4004,4005,4006,4007,4010,4009"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5007,5013,5002,5001,5003,5004,5016,5005,5018,5008,5017,5010,5012"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7001,7002,7009,7004,7011,7010"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.SystemEditPart" id="System_1000"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeEditPart" id="Composite_2001"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerEditPart" id="Container_2002"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeEditPart" id="Node_3001"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeParameterEditPart" id="NodeParameter_3002"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodePublisherEditPart" id="NodePublisher_3003"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriberEditPart" id="NodeSubscriber_3004"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServerEditPart" id="NodeSrvServer_3005"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvClientEditPart" id="NodeSrvClient_3006"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Composite2EditPart" id="Composite_3007"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositePublisherEditPart" id="CompositePublisher_3008"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriberEditPart" id="CompositeSubscriber_3009"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServerEditPart" id="CompositeSrvServer_3010"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvClientEditPart" id="CompositeSrvClient_3011"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositePublisher2EditPart" id="CompositePublisher_3012"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriber2EditPart" id="CompositeSubscriber_3013"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServer2EditPart" id="CompositeSrvServer_3014"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvClient2EditPart" id="CompositeSrvClient_3015"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.TopicEditPart" id="Topic_3016"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEditPart" id="RobotEndPoint_3038"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointParameterEditPart" id="EndPointParameter_3018"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointPublisherEditPart" id="EndPointPublisher_3019"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointSubscriberEditPart" id="EndPointSubscriber_3020"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointSrvServerEditPart" id="EndPointSrvServer_3021"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointSrvClientEditPart" id="EndPointSrvClient_3022"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Node2EditPart" id="Node_3040"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeParameter2EditPart" id="NodeParameter_3024"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodePublisher2EditPart" id="NodePublisher_3025"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriber2EditPart" id="NodeSubscriber_3026"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServer2EditPart" id="NodeSrvServer_3027"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvClient2EditPart" id="NodeSrvClient_3028"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EnvironmentEndPointEditPart" id="EnvironmentEndPoint_3039"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointParameter2EditPart" id="EndPointParameter_3030"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointPublisher2EditPart" id="EndPointPublisher_3031"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointSubscriber2EditPart" id="EndPointSubscriber_3032"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointSrvServer2EditPart" id="EndPointSrvServer_3033"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointSrvClient2EditPart" id="EndPointSrvClient_3034"/>
+         <object class="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Topic2EditPart" id="Topic_3035"/>
+         <context elements="System_1000,Composite_2001,Container_2002,Node_3001,NodeParameter_3002,NodePublisher_3003,NodeSubscriber_3004,NodeSrvServer_3005,NodeSrvClient_3006,Composite_3007,CompositePublisher_3008,CompositeSubscriber_3009,CompositeSrvServer_3010,CompositeSrvClient_3011,CompositePublisher_3012,CompositeSubscriber_3013,CompositeSrvServer_3014,CompositeSrvClient_3015,Topic_3016,RobotEndPoint_3038,EndPointParameter_3018,EndPointPublisher_3019,EndPointSubscriber_3020,EndPointSrvServer_3021,EndPointSrvClient_3022,Node_3040,NodeParameter_3024,NodePublisher_3025,NodeSubscriber_3026,NodeSrvServer_3027,NodeSrvClient_3028,EnvironmentEndPoint_3039,EndPointParameter_3030,EndPointPublisher_3031,EndPointSubscriber_3032,EndPointSrvServer_3033,EndPointSrvClient_3034,Topic_3035"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.System_1000"
+               name="%metatype.name.System_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="System"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.SystemEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.Composite_2001"
+               name="%metatype.name.Composite_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Composite"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.CompositeEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.Container_2002"
+               name="%metatype.name.Container_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Container"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.ContainerEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.Node_3001"
+               name="%metatype.name.Node_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Node"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.NodeEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.NodeParameter_3002"
+               name="%metatype.name.NodeParameter_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="NodeParameter"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.NodeParameterEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.NodePublisher_3003"
+               name="%metatype.name.NodePublisher_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="NodePublisher"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.NodePublisherEditHelper">
+            <param name="semanticHint" value="3003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.NodeSubscriber_3004"
+               name="%metatype.name.NodeSubscriber_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="NodeSubscriber"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.NodeSubscriberEditHelper">
+            <param name="semanticHint" value="3004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvServer_3005"
+               name="%metatype.name.NodeSrvServer_3005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="NodeSrvServer"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.NodeSrvServerEditHelper">
+            <param name="semanticHint" value="3005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvClient_3006"
+               name="%metatype.name.NodeSrvClient_3006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="NodeSrvClient"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.NodeSrvClientEditHelper">
+            <param name="semanticHint" value="3006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.Composite_3007"
+               name="%metatype.name.Composite_3007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.Composite_2001"/>
+            <param name="semanticHint" value="3007"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.CompositePublisher_3008"
+               name="%metatype.name.CompositePublisher_3008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CompositePublisher"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.CompositePublisherEditHelper">
+            <param name="semanticHint" value="3008"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSubscriber_3009"
+               name="%metatype.name.CompositeSubscriber_3009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CompositeSubscriber"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.CompositeSubscriberEditHelper">
+            <param name="semanticHint" value="3009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvServer_3010"
+               name="%metatype.name.CompositeSrvServer_3010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CompositeSrvServer"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.CompositeSrvServerEditHelper">
+            <param name="semanticHint" value="3010"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvClient_3011"
+               name="%metatype.name.CompositeSrvClient_3011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CompositeSrvClient"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.CompositeSrvClientEditHelper">
+            <param name="semanticHint" value="3011"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.CompositePublisher_3012"
+               name="%metatype.name.CompositePublisher_3012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.CompositePublisher_3008"/>
+            <param name="semanticHint" value="3012"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSubscriber_3013"
+               name="%metatype.name.CompositeSubscriber_3013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSubscriber_3009"/>
+            <param name="semanticHint" value="3013"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvServer_3014"
+               name="%metatype.name.CompositeSrvServer_3014"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvServer_3010"/>
+            <param name="semanticHint" value="3014"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvClient_3015"
+               name="%metatype.name.CompositeSrvClient_3015"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvClient_3011"/>
+            <param name="semanticHint" value="3015"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.Topic_3016"
+               name="%metatype.name.Topic_3016"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Topic"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.TopicEditHelper">
+            <param name="semanticHint" value="3016"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.RobotEndPoint_3038"
+               name="%metatype.name.RobotEndPoint_3038"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="RobotEndPoint"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.RobotEndPointEditHelper">
+            <param name="semanticHint" value="3038"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointParameter_3018"
+               name="%metatype.name.EndPointParameter_3018"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EndPointParameter"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.EndPointParameterEditHelper">
+            <param name="semanticHint" value="3018"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointPublisher_3019"
+               name="%metatype.name.EndPointPublisher_3019"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EndPointPublisher"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.EndPointPublisherEditHelper">
+            <param name="semanticHint" value="3019"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSubscriber_3020"
+               name="%metatype.name.EndPointSubscriber_3020"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EndPointSubscriber"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.EndPointSubscriberEditHelper">
+            <param name="semanticHint" value="3020"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvServer_3021"
+               name="%metatype.name.EndPointSrvServer_3021"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EndPointSrvServer"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.EndPointSrvServerEditHelper">
+            <param name="semanticHint" value="3021"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvClient_3022"
+               name="%metatype.name.EndPointSrvClient_3022"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EndPointSrvClient"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.EndPointSrvClientEditHelper">
+            <param name="semanticHint" value="3022"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.Node_3040"
+               name="%metatype.name.Node_3040"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.Node_3001"/>
+            <param name="semanticHint" value="3040"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.NodeParameter_3024"
+               name="%metatype.name.NodeParameter_3024"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.NodeParameter_3002"/>
+            <param name="semanticHint" value="3024"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.NodePublisher_3025"
+               name="%metatype.name.NodePublisher_3025"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.NodePublisher_3003"/>
+            <param name="semanticHint" value="3025"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.NodeSubscriber_3026"
+               name="%metatype.name.NodeSubscriber_3026"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.NodeSubscriber_3004"/>
+            <param name="semanticHint" value="3026"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvServer_3027"
+               name="%metatype.name.NodeSrvServer_3027"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvServer_3005"/>
+            <param name="semanticHint" value="3027"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvClient_3028"
+               name="%metatype.name.NodeSrvClient_3028"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvClient_3006"/>
+            <param name="semanticHint" value="3028"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EnvironmentEndPoint_3039"
+               name="%metatype.name.EnvironmentEndPoint_3039"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EnvironmentEndPoint"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.EnvironmentEndPointEditHelper">
+            <param name="semanticHint" value="3039"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointParameter_3030"
+               name="%metatype.name.EndPointParameter_3030"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointParameter_3018"/>
+            <param name="semanticHint" value="3030"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointPublisher_3031"
+               name="%metatype.name.EndPointPublisher_3031"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointPublisher_3019"/>
+            <param name="semanticHint" value="3031"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSubscriber_3032"
+               name="%metatype.name.EndPointSubscriber_3032"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSubscriber_3020"/>
+            <param name="semanticHint" value="3032"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvServer_3033"
+               name="%metatype.name.EndPointSrvServer_3033"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvServer_3021"/>
+            <param name="semanticHint" value="3033"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvClient_3034"
+               name="%metatype.name.EndPointSrvClient_3034"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvClient_3022"/>
+            <param name="semanticHint" value="3034"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.Topic_3035"
+               name="%metatype.name.Topic_3035"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.hyperflex.componentmodels.rapyuta.diagram.Topic_3016"/>
+            <param name="semanticHint" value="3035"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.MsgInterfaceConnection_4002"
+               name="%metatype.name.MsgInterfaceConnection_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.MsgInterfaceConnection_4003"
+               name="%metatype.name.MsgInterfaceConnection_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.CompositeMsgInterfaceExposed_4004"
+               name="%metatype.name.CompositeMsgInterfaceExposed_4004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <specializationType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.CompositeMsgInterfaceExposed_4005"
+               name="%metatype.name.CompositeMsgInterfaceExposed_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvConnection_4006"
+               name="%metatype.name.EndPointSrvConnection_4006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EndPointSrvConnection"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.EndPointSrvConnectionEditHelper">
+            <param name="semanticHint" value="4006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.EndPointMsgConnection_4007"
+               name="%metatype.name.EndPointMsgConnection_4007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EndPointMsgConnection"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.EndPointMsgConnectionEditHelper">
+            <param name="semanticHint" value="4007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvConnection_4010"
+               name="%metatype.name.CompositeSrvConnection_4010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CompositeSrvConnection"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.CompositeSrvConnectionEditHelper">
+            <param name="semanticHint" value="4010"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta">
+         <metamodelType
+               id="org.hyperflex.componentmodels.rapyuta.diagram.ContainerSrvConnection_4009"
+               name="%metatype.name.ContainerSrvConnection_4009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ContainerSrvConnection"
+               edithelper="org.hyperflex.rapyutacomponentmodel.diagram.edit.helpers.ContainerSrvConnectionEditHelper">
+            <param name="semanticHint" value="4009"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="org.hyperflex.componentmodels.rapyuta.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="org.hyperflex.componentmodels.rapyuta.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="org.hyperflex.componentmodels.rapyuta.diagram.TypeContext">
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.System_1000"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.Composite_2001"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.Container_2002"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.Node_3001"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.NodeParameter_3002"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.NodePublisher_3003"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.NodeSubscriber_3004"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvServer_3005"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvClient_3006"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.Composite_3007"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.CompositePublisher_3008"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSubscriber_3009"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvServer_3010"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvClient_3011"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.CompositePublisher_3012"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSubscriber_3013"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvServer_3014"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvClient_3015"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.Topic_3016"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.RobotEndPoint_3038"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EndPointParameter_3018"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EndPointPublisher_3019"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSubscriber_3020"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvServer_3021"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvClient_3022"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.Node_3040"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.NodeParameter_3024"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.NodePublisher_3025"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.NodeSubscriber_3026"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvServer_3027"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvClient_3028"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EnvironmentEndPoint_3039"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EndPointParameter_3030"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EndPointPublisher_3031"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSubscriber_3032"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvServer_3033"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvClient_3034"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.Topic_3035"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.MsgInterfaceConnection_4002"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.MsgInterfaceConnection_4003"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.CompositeMsgInterfaceExposed_4004"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.CompositeMsgInterfaceExposed_4005"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvConnection_4006"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.EndPointMsgConnection_4007"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvConnection_4010"/>
+         <elementType ref="org.hyperflex.componentmodels.rapyuta.diagram.ContainerSrvConnection_4009"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="org.hyperflex.componentmodels.rapyuta.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="org.hyperflex.componentmodels.rapyuta.diagram"
+           properties="isURIEditorInput"
+           class="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="org.hyperflex.componentmodels.rapyuta.diagram.resourceContent"/>
+			<contentExtension pattern="org.hyperflex.componentmodels.rapyuta.diagram.domainResourceContent"/>
+            <contentExtension pattern="org.hyperflex.componentmodels.rapyuta.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="org.hyperflex.componentmodels.rapyuta.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="org.hyperflex.componentmodels.rapyuta.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelNavigatorContentProvider" 
+            labelProvider="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelNavigatorLabelProvider"
+            icon="icons/obj16/rapyutacomponentmodelDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="rapyutacomponentmodel_diagram"/>
+               </and>
+               <instanceof value="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelAbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelAbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="org.hyperflex.componentmodels.rapyuta.diagram.navigatorSorter" 
+               class="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="rapyutacomponentmodel_diagram"/>
+                  </and>
+                  <instanceof value="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="org.hyperflex.componentmodels.rapyuta.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelDomainNavigatorContentProvider" 
+            labelProvider="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelDomainNavigatorLabelProvider"
+            icon="icons/obj16/rapyutacomponentmodelDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="rapyutacomponentmodel"/>
+               </and>
+               <instanceof value="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="org.hyperflex.componentmodels.rapyuta.diagram.navigatorActionProvider"
+            class="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelAbstractNavigatorItem"/>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="org.hyperflex.componentmodels.rapyuta.diagram.navigatorLinkHelper"
+            class="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="org.hyperflex.componentmodels.rapyuta.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="org.hyperflex.rapyutacomponentmodel.diagram.navigator.RapyutaComponentModelAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="org.hyperflex.rapyutacomponentmodel.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="org.hyperflex.rapyutacomponentmodel.diagram.updateDiagram"
+         contextId="org.hyperflex.rapyutacomponentmodel.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="org.hyperflex.componentmodels.rapyuta.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.SystemEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="org.hyperflex.componentmodels.rapyuta.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramEditorID"
+         defaultHandler="org.hyperflex.rapyutacomponentmodel.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

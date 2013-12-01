@@ -1,0 +1,7 @@
+# Tracing options for the org.hyperflex.componentmodels.rapyuta.diagram plug-in
+
+# Common issues
+org.hyperflex.componentmodels.rapyuta.diagram/debug=false
+
+# Visual IDs
+org.hyperflex.componentmodels.rapyuta.diagram/debug/visualID=false
