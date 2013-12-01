@@ -54,7 +54,8 @@
       <labels
           visualID="5019"
           editPartClassName="NodeNameEditPart"
-          itemSemanticEditPolicyClassName="NodeNameItemSemanticEditPolicy">
+          itemSemanticEditPolicyClassName="NodeNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="NodeNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -77,6 +78,7 @@
         visualID="3012"
         editPartClassName="NodePropertyEditPart"
         itemSemanticEditPolicyClassName="NodePropertyItemSemanticEditPolicy"
+        notationViewFactoryClassName="NodePropertyViewFactory"
         canonicalEditPolicyClassName="NodePropertyCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="NodePropertyGraphicalNodeEditPolicy"
         createCommandClassName="NodePropertyCreateCommand"
@@ -101,7 +103,8 @@
       <labels
           visualID="5018"
           editPartClassName="NodePropertyNameEditPart"
-          itemSemanticEditPolicyClassName="NodePropertyNameItemSemanticEditPolicy">
+          itemSemanticEditPolicyClassName="NodePropertyNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="NodePropertyNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -125,6 +128,7 @@
         visualID="3003"
         editPartClassName="NodeMsgProducerEditPart"
         itemSemanticEditPolicyClassName="NodeMsgProducerItemSemanticEditPolicy"
+        notationViewFactoryClassName="NodeMsgProducerViewFactory"
         canonicalEditPolicyClassName="NodeMsgProducerCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="NodeMsgProducerGraphicalNodeEditPolicy"
         createCommandClassName="NodeMsgProducerCreateCommand"
@@ -161,6 +165,7 @@
         visualID="3004"
         editPartClassName="NodeMsgConsumerEditPart"
         itemSemanticEditPolicyClassName="NodeMsgConsumerItemSemanticEditPolicy"
+        notationViewFactoryClassName="NodeMsgConsumerViewFactory"
         canonicalEditPolicyClassName="NodeMsgConsumerCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="NodeMsgConsumerGraphicalNodeEditPolicy"
         createCommandClassName="NodeMsgConsumerCreateCommand"
@@ -196,6 +201,7 @@
         visualID="3014"
         editPartClassName="Composite2EditPart"
         itemSemanticEditPolicyClassName="Composite2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositeViewFactory"
         canonicalEditPolicyClassName="Composite2CanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.5 //@diagram/@childNodes.6"
         graphicalNodeEditPolicyClassName="Composite2GraphicalNodeEditPolicy"
@@ -221,7 +227,8 @@
       <labels
           visualID="5020"
           editPartClassName="CompositeName2EditPart"
-          itemSemanticEditPolicyClassName="CompositeName2ItemSemanticEditPolicy">
+          itemSemanticEditPolicyClassName="CompositeName2ItemSemanticEditPolicy"
+          notationViewFactoryClassName="CompositeNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -245,6 +252,7 @@
         visualID="3015"
         editPartClassName="CompositeMsgProducerEditPart"
         itemSemanticEditPolicyClassName="CompositeMsgProducerItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositeMsgProducerViewFactory"
         canonicalEditPolicyClassName="CompositeMsgProducerCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="CompositeMsgProducerGraphicalNodeEditPolicy"
         createCommandClassName="CompositeMsgProducerCreateCommand"
@@ -281,6 +289,7 @@
         visualID="3016"
         editPartClassName="CompositeMsgConsumerEditPart"
         itemSemanticEditPolicyClassName="CompositeMsgConsumerItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositeMsgConsumerViewFactory"
         canonicalEditPolicyClassName="CompositeMsgConsumerCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="CompositeMsgConsumerGraphicalNodeEditPolicy"
         createCommandClassName="CompositeMsgConsumerCreateCommand"
@@ -317,6 +326,7 @@
         visualID="3017"
         editPartClassName="CompositeMsgProducer2EditPart"
         itemSemanticEditPolicyClassName="CompositeMsgProducer2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositeMsgProducerViewFactory"
         canonicalEditPolicyClassName="CompositeMsgProducer2CanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="CompositeMsgProducer2GraphicalNodeEditPolicy"
         createCommandClassName="CompositeMsgProducer2CreateCommand"
@@ -353,6 +363,7 @@
         visualID="3018"
         editPartClassName="CompositeMsgConsumer2EditPart"
         itemSemanticEditPolicyClassName="CompositeMsgConsumer2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositeMsgConsumerViewFactory"
         canonicalEditPolicyClassName="CompositeMsgConsumer2CanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="CompositeMsgConsumer2GraphicalNodeEditPolicy"
         createCommandClassName="CompositeMsgConsumer2CreateCommand"
@@ -388,6 +399,7 @@
         visualID="3019"
         editPartClassName="TopicEditPart"
         itemSemanticEditPolicyClassName="TopicItemSemanticEditPolicy"
+        notationViewFactoryClassName="TopicViewFactory"
         canonicalEditPolicyClassName="TopicCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="TopicGraphicalNodeEditPolicy"
         createCommandClassName="TopicCreateCommand"
@@ -416,7 +428,8 @@
       <labels
           visualID="5021"
           editPartClassName="TopicNameEditPart"
-          itemSemanticEditPolicyClassName="TopicNameItemSemanticEditPolicy">
+          itemSemanticEditPolicyClassName="TopicNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="TopicNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -439,6 +452,7 @@
         visualID="2003"
         editPartClassName="CompositeEditPart"
         itemSemanticEditPolicyClassName="CompositeItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositeViewFactory"
         canonicalEditPolicyClassName="CompositeCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.7 //@diagram/@childNodes.8"
         compartments="//@diagram/@compartments.0"
@@ -464,7 +478,8 @@
       <labels
           visualID="5022"
           editPartClassName="CompositeNameEditPart"
-          itemSemanticEditPolicyClassName="CompositeNameItemSemanticEditPolicy">
+          itemSemanticEditPolicyClassName="CompositeNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="CompositeNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -487,6 +502,7 @@
         visualID="4010"
         editPartClassName="MsgInterfaceConnectionEditPart"
         itemSemanticEditPolicyClassName="MsgInterfaceConnectionItemSemanticEditPolicy"
+        notationViewFactoryClassName="MsgInterfaceConnectionViewFactory"
         createCommandClassName="MsgInterfaceConnectionCreateCommand"
         reorientCommandClassName="MsgInterfaceConnectionReorientCommand">
       <diagramRunTimeClass
@@ -509,6 +525,7 @@
         visualID="4011"
         editPartClassName="MsgInterfaceConnection2EditPart"
         itemSemanticEditPolicyClassName="MsgInterfaceConnection2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="MsgInterfaceConnectionViewFactory"
         createCommandClassName="MsgInterfaceConnection2CreateCommand"
         reorientCommandClassName="MsgInterfaceConnection2ReorientCommand">
       <diagramRunTimeClass
@@ -531,6 +548,7 @@
         visualID="4007"
         editPartClassName="CompositeMsgInterfaceExposedEditPart"
         itemSemanticEditPolicyClassName="CompositeMsgInterfaceExposedItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositeMsgInterfaceExposedViewFactory"
         createCommandClassName="CompositeMsgInterfaceExposedCreateCommand"
         reorientCommandClassName="CompositeMsgInterfaceExposedReorientCommand">
       <diagramRunTimeClass
@@ -553,6 +571,7 @@
         visualID="4012"
         editPartClassName="CompositeMsgInterfaceExposed2EditPart"
         itemSemanticEditPolicyClassName="CompositeMsgInterfaceExposed2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositeMsgInterfaceExposedViewFactory"
         createCommandClassName="CompositeMsgInterfaceExposed2CreateCommand"
         reorientCommandClassName="CompositeMsgInterfaceExposed2ReorientCommand">
       <diagramRunTimeClass
@@ -575,6 +594,7 @@
         visualID="7004"
         editPartClassName="CompositeCompositeContainerCompartmentEditPart"
         itemSemanticEditPolicyClassName="CompositeCompositeContainerCompartmentItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositeCompositeContainerCompartmentViewFactory"
         canonicalEditPolicyClassName="CompositeCompositeContainerCompartmentCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.4 //@diagram/@childNodes.9"
         title="CompositeContainerCompartment"
@@ -593,6 +613,7 @@
         visualID="7005"
         editPartClassName="NodePropertiesCompartmentEditPart"
         itemSemanticEditPolicyClassName="NodePropertiesCompartmentItemSemanticEditPolicy"
+        notationViewFactoryClassName="NodePropertiesCompartmentViewFactory"
         canonicalEditPolicyClassName="NodePropertiesCompartmentCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.1"
         title="Properties Compartment"
@@ -634,9 +655,9 @@
             genNodes="//@diagram/@childNodes.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="Package"
-            description="Create new Package"
-            smallIconPath="icons/Package.gif"
+            title="Composite"
+            description="Create new Composite"
+            smallIconPath="icons/Composite.gif"
             genNodes="//@diagram/@topLevelNodes.0"/>
         <entries
             xsi:type="gmfgen:ToolEntry"

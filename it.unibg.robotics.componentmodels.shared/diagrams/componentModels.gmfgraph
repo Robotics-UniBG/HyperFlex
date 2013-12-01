@@ -530,7 +530,7 @@
       name="PropertiesName"
       figure="PropertiesFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+      accessor="//@figures.0/@descriptors.3/@accessors.0"/>
   <labels
       name="Producer1Name"
       figure="Producer1Figure"

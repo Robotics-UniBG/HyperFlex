@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rapyutacomponentmodel" nsURI="http://rwww.hyperflex.org/componentmodels.rapyuta"
+    nsPrefix="rapyutacomponentmodel">
+  <eClassifiers xsi:type="ecore:EClass" name="System">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containers" lowerBound="1"
+        upperBound="-1" eType="#//Container" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composites" lowerBound="1"
+        upperBound="-1" eType="#//Composite" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endPointSrvConnections"
+        upperBound="-1" eType="#//EndPointSrvConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endPointMsgConnections"
+        upperBound="-1" eType="#//EndPointMsgConnection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Container">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topics" upperBound="-1"
+        eType="#//Topic" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="srvConnections" upperBound="-1"
+        eType="#//ContainerSrvConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endPoint" lowerBound="1"
+        eType="#//EnvironmentEndPoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//AbstractComponent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractComponent" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//AbstractComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="publishers" upperBound="-1"
+        eType="#//NodePublisher" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subscribers" upperBound="-1"
+        eType="#//NodeSubscriber" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//NodeParameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="srvServers" upperBound="-1"
+        eType="#//NodeSrvServer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="srvClients" upperBound="-1"
+        eType="#//NodeSrvClient" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="packageName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//AbstractComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//AbstractComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="publishers" upperBound="-1"
+        eType="#//CompositePublisher" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subscribers" upperBound="-1"
+        eType="#//CompositeSubscriber" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topics" upperBound="-1"
+        eType="#//Topic" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="srvServers" upperBound="-1"
+        eType="#//CompositeSrvServer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="srvClients" upperBound="-1"
+        eType="#//CompositeSrvClient" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="srvConnections" upperBound="-1"
+        eType="#//CompositeSrvConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//CompositeParameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endPoint" eType="#//RobotEndPoint"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MsgInterface">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connection" eType="#//Topic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeMsgInterface" eSuperTypes="#//MsgInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exposed" lowerBound="1"
+        eType="#//Topic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeMsgInterface" eSuperTypes="#//MsgInterface">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="topicName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodePublisher" eSuperTypes="#//NodeMsgInterface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeSubscriber" eSuperTypes="#//NodeMsgInterface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositePublisher"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeSubscriber"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Topic">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeParameter" eSuperTypes="#//Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeParameter" eSuperTypes="#//Parameter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exposed" lowerBound="1"
+        eType="#//Parameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SrvServer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SrvClient">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeSrvServer" eSuperTypes="#//SrvServer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="promote" eType="#//SrvServer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeSrvServer" eSuperTypes="#//SrvServer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="srvName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeSrvClient" eSuperTypes="#//SrvClient">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="promote" eType="#//SrvClient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeSrvClient" eSuperTypes="#//SrvClient">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="srvName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SrvConnection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="server" lowerBound="1"
+        eType="#//SrvServer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="client" lowerBound="1"
+        eType="#//SrvClient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EndPoint" abstract="true" eSuperTypes="#//AbstractComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="publishers" upperBound="-1"
+        eType="#//EndPointPublisher" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subscribers" upperBound="-1"
+        eType="#//EndPointSubscriber" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="srvServers" upperBound="-1"
+        eType="#//EndPointSrvServer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="srvClients" upperBound="-1"
+        eType="#//EndPointSrvClient" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//EndPointParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RobotEndPoint" eSuperTypes="#//EndPoint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EnvironmentEndPoint" eSuperTypes="#//EndPoint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EndPointMsgInterface" abstract="true"
+      eSuperTypes="#//MsgInterface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EndPointPublisher" eSuperTypes="#//EndPointMsgInterface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EndPointSubscriber" eSuperTypes="#//EndPointMsgInterface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EndPointMsgConnection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="publisher" lowerBound="1"
+        eType="#//EndPointPublisher"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subscriber" lowerBound="1"
+        eType="#//EndPointSubscriber"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EndPointSrvServer" eSuperTypes="#//SrvServer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EndPointSrvClient" eSuperTypes="#//SrvClient"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EndPointSrvConnection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="server" lowerBound="1"
+        eType="#//EndPointSrvServer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="client" lowerBound="1"
+        eType="#//EndPointSrvClient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EndPointParameter" eSuperTypes="#//Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerSrvConnection" eSuperTypes="#//SrvConnection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeSrvConnection" eSuperTypes="#//SrvConnection"/>
+</ecore:EPackage>

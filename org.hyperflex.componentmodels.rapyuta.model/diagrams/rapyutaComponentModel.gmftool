@@ -5,14 +5,14 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <palette
-      title="rosComponentModelPalette">
+      title="rapyutaComponentModelPalette">
     <tools
         xsi:type="gmftool:ToolGroup"
         title="Entities"
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Component"
+          title="Node"
           description="Create new Node">
         <smallIcon
             xsi:type="gmftool:BundleImage"
@@ -36,7 +36,7 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Properties"
+          title="Parameter"
           description="Create new Parameter">
         <smallIcon
             xsi:type="gmftool:BundleImage"
@@ -48,7 +48,16 @@
           description="Create new Composite">
         <smallIcon
             xsi:type="gmftool:BundleImage"
-            path="icons/Composite.gif"/>
+            path="icons/Composite.gif"
+            bundle=""/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Container"
+          description="Create new Container">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Container.gif"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
@@ -66,6 +75,30 @@
             xsi:type="gmftool:BundleImage"
             path="icons/Topic.gif"/>
       </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="End Point"
+          description="Create new End Point">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/EnvEP.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Service Server"
+          description="Create new Service Server">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Publisher.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Service Client"
+          description="Create new Service Client">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Subscriber.gif"/>
+      </tools>
     </tools>
     <tools
         xsi:type="gmftool:ToolGroup"
@@ -81,8 +114,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Continue connection "
-          description="Create new Continue Connection">
+          title="Connection "
+          description="Create new Connection">
         <smallIcon
             xsi:type="gmftool:BundleImage"
             path="icons/ContinueConnection.gif"/>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="HyperFlex toolchain&#xA;&#xA;Copyright (c) 2013&#xA;All rights reserved.&#xA;&#xA;Luca Gherardi&#xA;Institute for Dynamic Systems and Control&#xA;ETH Zurich&#xA;&#xA;***********************************************************************************************&#xA;&#xA;Author: &lt;A HREF=&quot;mailto:lucagh@ethz.ch&quot;>Luca Gherardi&lt;/A>&#xA;&#xA;In collaboration with: &#xA;  &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;>Davide Brugali&lt;/A>, University of Bergamo&#xA;&#xA;***********************************************************************************************&#xA;&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;"
+    modelDirectory="/org.hyperflex.componentmodels.rapyuta.model/src" editDirectory="/org.hyperflex.componentmodels.rapyuta.model.edit/src"
+    editorDirectory="/org.hyperflex.componentmodels.rapyuta.model.editor/src" modelPluginID="org.hyperflex.componentmodels.rapyuta.model"
+    modelName="RapyutaComponentModel" modelPluginClass="" editPluginClass="org.hyperflex.rapyutacomponentmodel.provider.RapyutaComponentModelEditPlugin"
+    editorPluginClass="org.hyperflex.rapyutacomponentmodel.presentation.RapyutaComponentModelEditorPlugin"
+    testSuiteClass="org.hyperflex.rapyutacomponentmodel.tests.RapyutaComponentModelAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    language="English">
+  <foreignModel>rapyutaComponentModel.ecore</foreignModel>
+  <genPackages prefix="rapyutacomponentmodel" basePackage="org.hyperflex" disposableProviderFactory="true"
+      ecorePackage="rapyutaComponentModel.ecore#/">
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//System">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/containers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/composites"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/endPointSrvConnections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/endPointMsgConnections"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//Container">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//Container/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Container/topics"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Container/srvConnections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Container/endPoint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Container/components"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="rapyutaComponentModel.ecore#//AbstractComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//AbstractComponent/name"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//Node">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Node/publishers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Node/subscribers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Node/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Node/srvServers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Node/srvClients"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//Node/packageName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//Node/type"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//Composite">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/publishers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/subscribers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/topics"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/srvServers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/srvClients"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/srvConnections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/endPoint"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//MsgInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//MsgInterface/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//MsgInterface/connection"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//CompositeMsgInterface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//CompositeMsgInterface/exposed"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//NodeMsgInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//NodeMsgInterface/topicName"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//NodePublisher"/>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//NodeSubscriber"/>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//CompositePublisher"/>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//CompositeSubscriber"/>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//Topic">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//Topic/name"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//Parameter/name"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//NodeParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//NodeParameter/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//NodeParameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//CompositeParameter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//CompositeParameter/exposed"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//SrvServer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//SrvServer/name"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//SrvClient">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//SrvClient/name"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//CompositeSrvServer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//CompositeSrvServer/promote"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//NodeSrvServer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//NodeSrvServer/srvName"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//CompositeSrvClient">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//CompositeSrvClient/promote"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//NodeSrvClient">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//NodeSrvClient/srvName"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//SrvConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//SrvConnection/server"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//SrvConnection/client"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="rapyutaComponentModel.ecore#//EndPoint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//EndPoint/publishers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//EndPoint/subscribers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//EndPoint/srvServers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//EndPoint/srvClients"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//EndPoint/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//RobotEndPoint"/>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//EnvironmentEndPoint"/>
+    <genClasses image="false" ecoreClass="rapyutaComponentModel.ecore#//EndPointMsgInterface"/>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//EndPointPublisher"/>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//EndPointSubscriber"/>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//EndPointMsgConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//EndPointMsgConnection/publisher"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//EndPointMsgConnection/subscriber"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//EndPointSrvServer"/>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//EndPointSrvClient"/>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//EndPointSrvConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//EndPointSrvConnection/server"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//EndPointSrvConnection/client"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//EndPointParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//EndPointParameter/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//EndPointParameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//ContainerSrvConnection"/>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//CompositeSrvConnection"/>
+  </genPackages>
+</genmodel:GenModel>
