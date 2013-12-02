@@ -306,21 +306,21 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 			EObject diagramLinkObject = nextDiagramLink.getElement();
 			EObject diagramLinkSrc = nextDiagramLink.getSource().getElement();
 			EObject diagramLinkDst = nextDiagramLink.getTarget().getElement();
-//			for (Iterator<RapyutaComponentModelLinkDescriptor> linkDescriptorsIterator = linkDescriptors
-//					.iterator(); linkDescriptorsIterator.hasNext();) {
-//				RapyutaComponentModelLinkDescriptor nextLinkDescriptor = linkDescriptorsIterator
-//						.next();
-//				if (diagramLinkObject == nextLinkDescriptor.getModelElement()
-//						&& diagramLinkSrc == nextLinkDescriptor.getSource()
-//						&& diagramLinkDst == nextLinkDescriptor
-//								.getDestination()
-//						&& diagramLinkVisualID == nextLinkDescriptor
-//								.getVisualID()) {
-//					linksIterator.remove();
-//					linkDescriptorsIterator.remove();
-//					break;
-//				}
-//			}
+			//			for (Iterator<RapyutaComponentModelLinkDescriptor> linkDescriptorsIterator = linkDescriptors
+			//					.iterator(); linkDescriptorsIterator.hasNext();) {
+			//				RapyutaComponentModelLinkDescriptor nextLinkDescriptor = linkDescriptorsIterator
+			//						.next();
+			//				if (diagramLinkObject == nextLinkDescriptor.getModelElement()
+			//						&& diagramLinkSrc == nextLinkDescriptor.getSource()
+			//						&& diagramLinkDst == nextLinkDescriptor
+			//								.getDestination()
+			//						&& diagramLinkVisualID == nextLinkDescriptor
+			//								.getVisualID()) {
+			//					linksIterator.remove();
+			//					linkDescriptorsIterator.remove();
+			//					break;
+			//				}
+			//			}
 			boolean remove = false;
 			for (Iterator<RapyutaComponentModelLinkDescriptor> linkDescriptorsIterator = linkDescriptors
 					.iterator(); linkDescriptorsIterator.hasNext();) {
@@ -330,9 +330,9 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 				if (diagramLinkObject == nextLinkDescriptor.getModelElement()
 						&& diagramLinkSrc == nextLinkDescriptor.getSource()
 						&& diagramLinkDst == nextLinkDescriptor
-						.getDestination()
+								.getDestination()
 						&& diagramLinkVisualID == nextLinkDescriptor
-						.getVisualID()) {
+								.getVisualID()) {
 					remove = true;
 					linkDescriptorsIterator.remove();
 					//					break;
@@ -381,7 +381,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 							remove = true;
 						}
 
-					}else if (source instanceof CompositeMsgInterface) {
+					} else if (source instanceof CompositeMsgInterface) {
 
 						CompositeMsgInterface compositeSource = (CompositeMsgInterface) source;
 

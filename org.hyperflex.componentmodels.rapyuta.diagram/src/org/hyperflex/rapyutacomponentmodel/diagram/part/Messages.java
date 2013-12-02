@@ -469,12 +469,32 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String NavigatorGroupName_CompositePublisher_3008_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeSubscriber_3009_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
 	public static String NavigatorGroupName_CompositeSrvServer_3010_incominglinks;
 
 	/**
 	 * @generated
 	 */
 	public static String NavigatorGroupName_CompositeSrvClient_3011_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositePublisher_3012_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeSubscriber_3013_outgoinglinks;
 
 	/**
 	 * @generated
@@ -594,7 +614,17 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4004_source;
+
+	/**
+	 * @generated
+	 */
 	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4005_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4005_source;
 
 	/**
 	 * @generated

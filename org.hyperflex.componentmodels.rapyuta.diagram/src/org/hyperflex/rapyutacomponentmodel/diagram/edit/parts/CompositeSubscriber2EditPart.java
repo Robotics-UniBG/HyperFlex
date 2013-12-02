@@ -26,6 +26,9 @@
  */
 package org.hyperflex.rapyutacomponentmodel.diagram.edit.parts;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
@@ -42,12 +45,15 @@ import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderItemEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.policies.CompositeSubscriber2ItemSemanticEditPolicy;
+import org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelElementTypes;
 
 /**
  * @generated
@@ -212,6 +218,72 @@ public class CompositeSubscriber2EditPart extends AbstractBorderItemEditPart {
 		if (primaryShape instanceof Shape) {
 			((Shape) primaryShape).setLineStyle(style);
 		}
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMARelTypesOnSource() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
+		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
+		types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
+		types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005);
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMARelTypesOnSourceAndTarget(
+			IGraphicalEditPart targetEditPart) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
+		if (targetEditPart instanceof TopicEditPart) {
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
+		}
+		if (targetEditPart instanceof Topic2EditPart) {
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
+		}
+		if (targetEditPart instanceof TopicEditPart) {
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
+		}
+		if (targetEditPart instanceof Topic2EditPart) {
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
+		}
+		if (targetEditPart instanceof TopicEditPart) {
+			types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
+		}
+		if (targetEditPart instanceof Topic2EditPart) {
+			types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
+		}
+		if (targetEditPart instanceof TopicEditPart) {
+			types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005);
+		}
+		if (targetEditPart instanceof Topic2EditPart) {
+			types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
+		if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002) {
+			types.add(RapyutaComponentModelElementTypes.Topic_3016);
+			types.add(RapyutaComponentModelElementTypes.Topic_3035);
+		} else if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003) {
+			types.add(RapyutaComponentModelElementTypes.Topic_3016);
+			types.add(RapyutaComponentModelElementTypes.Topic_3035);
+		} else if (relationshipType == RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004) {
+			types.add(RapyutaComponentModelElementTypes.Topic_3016);
+			types.add(RapyutaComponentModelElementTypes.Topic_3035);
+		} else if (relationshipType == RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005) {
+			types.add(RapyutaComponentModelElementTypes.Topic_3016);
+			types.add(RapyutaComponentModelElementTypes.Topic_3035);
+		}
+		return types;
 	}
 
 	/**

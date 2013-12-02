@@ -41,8 +41,10 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
+import org.hyperflex.rapyutacomponentmodel.CompositePublisher;
 import org.hyperflex.rapyutacomponentmodel.CompositeSrvClient;
 import org.hyperflex.rapyutacomponentmodel.CompositeSrvServer;
+import org.hyperflex.rapyutacomponentmodel.CompositeSubscriber;
 import org.hyperflex.rapyutacomponentmodel.EndPointPublisher;
 import org.hyperflex.rapyutacomponentmodel.EndPointSrvClient;
 import org.hyperflex.rapyutacomponentmodel.EndPointSrvServer;
@@ -634,14 +636,30 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	 * @generated
 	 */
 	private String getCompositePublisher_3008Text(View view) {
-		return ""; //$NON-NLS-1$
+		CompositePublisher domainModelElement = (CompositePublisher) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3008); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**
 	 * @generated
 	 */
 	private String getCompositeSubscriber_3009Text(View view) {
-		return ""; //$NON-NLS-1$
+		CompositeSubscriber domainModelElement = (CompositeSubscriber) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3009); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**
@@ -678,14 +696,30 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	 * @generated
 	 */
 	private String getCompositePublisher_3012Text(View view) {
-		return ""; //$NON-NLS-1$
+		CompositePublisher domainModelElement = (CompositePublisher) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3012); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**
 	 * @generated
 	 */
 	private String getCompositeSubscriber_3013Text(View view) {
-		return ""; //$NON-NLS-1$
+		CompositeSubscriber domainModelElement = (CompositeSubscriber) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3013); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**

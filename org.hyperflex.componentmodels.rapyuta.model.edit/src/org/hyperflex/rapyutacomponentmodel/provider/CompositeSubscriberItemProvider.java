@@ -42,6 +42,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.hyperflex.rapyutacomponentmodel.CompositeSubscriber;
 
 /**
  * This is the item provider adapter for a {@link org.hyperflex.rapyutacomponentmodel.CompositeSubscriber} object.
@@ -50,7 +51,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * @generated
  */
 public class CompositeSubscriberItemProvider
-	extends ItemProviderAdapter
+	extends CompositeMsgInterfaceItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -101,7 +102,10 @@ public class CompositeSubscriberItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_CompositeSubscriber_type");
+		String label = ((CompositeSubscriber)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CompositeSubscriber_type") :
+			getString("_UI_CompositeSubscriber_type") + " " + label;
 	}
 
 	/**
@@ -127,17 +131,6 @@ public class CompositeSubscriberItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return RapyutaComponentModelEditPlugin.INSTANCE;
 	}
 
 }

@@ -1389,6 +1389,8 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		nodeMsgInterfaceEClass.getESuperTypes().add(this.getMsgInterface());
 		nodePublisherEClass.getESuperTypes().add(this.getNodeMsgInterface());
 		nodeSubscriberEClass.getESuperTypes().add(this.getNodeMsgInterface());
+		compositePublisherEClass.getESuperTypes().add(this.getCompositeMsgInterface());
+		compositeSubscriberEClass.getESuperTypes().add(this.getCompositeMsgInterface());
 		nodeParameterEClass.getESuperTypes().add(this.getParameter());
 		compositeParameterEClass.getESuperTypes().add(this.getParameter());
 		compositeSrvServerEClass.getESuperTypes().add(this.getSrvServer());

@@ -60,6 +60,13 @@ http://www.eclipse.org/legal/epl-v10.html
       <import plugin="org.eclipse.core.resources" version="3.8.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.ide" version="3.7.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.runtime" version="3.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.equinox.ds" version="1.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.equinox.util" version="1.0.400" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.8.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.epsilon.eol.engine" version="0.9.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.epsilon.etl.engine" version="0.9.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.epsilon.erl.engine" version="0.9.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.epsilon.egl.engine" version="1.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
@@ -85,6 +92,13 @@ http://www.eclipse.org/legal/epl-v10.html
 
    <plugin
          id="it.unibg.robotics.componentmodels.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.best_of_robotics.transform.service"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -196,12 +196,16 @@ public class rapyutacomponentmodelSwitch<T> extends Switch<T> {
 			case rapyutacomponentmodelPackage.COMPOSITE_PUBLISHER: {
 				CompositePublisher compositePublisher = (CompositePublisher)theEObject;
 				T result = caseCompositePublisher(compositePublisher);
+				if (result == null) result = caseCompositeMsgInterface(compositePublisher);
+				if (result == null) result = caseMsgInterface(compositePublisher);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case rapyutacomponentmodelPackage.COMPOSITE_SUBSCRIBER: {
 				CompositeSubscriber compositeSubscriber = (CompositeSubscriber)theEObject;
 				T result = caseCompositeSubscriber(compositeSubscriber);
+				if (result == null) result = caseCompositeMsgInterface(compositeSubscriber);
+				if (result == null) result = caseMsgInterface(compositeSubscriber);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

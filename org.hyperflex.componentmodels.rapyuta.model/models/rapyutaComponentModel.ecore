@@ -73,8 +73,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NodePublisher" eSuperTypes="#//NodeMsgInterface"/>
   <eClassifiers xsi:type="ecore:EClass" name="NodeSubscriber" eSuperTypes="#//NodeMsgInterface"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CompositePublisher"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CompositeSubscriber"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositePublisher" eSuperTypes="#//CompositeMsgInterface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeSubscriber" eSuperTypes="#//CompositeMsgInterface"/>
   <eClassifiers xsi:type="ecore:EClass" name="Topic">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

@@ -38,5 +38,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface CompositeSubscriber extends EObject {
+public interface CompositeSubscriber extends CompositeMsgInterface {
 } // CompositeSubscriber

@@ -40,6 +40,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
 import org.hyperflex.rapyutacomponentmodel.AbstractComponent;
 import org.hyperflex.rapyutacomponentmodel.Composite;
+import org.hyperflex.rapyutacomponentmodel.CompositeMsgInterface;
 import org.hyperflex.rapyutacomponentmodel.CompositePublisher;
 import org.hyperflex.rapyutacomponentmodel.CompositeSrvClient;
 import org.hyperflex.rapyutacomponentmodel.CompositeSrvConnection;
@@ -1136,7 +1137,14 @@ public class RapyutaComponentModelDiagramUpdater {
 	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getCompositePublisher_3008ContainedLinks(
 			View view) {
-		return Collections.emptyList();
+		CompositePublisher modelElement = (CompositePublisher) view
+				.getElement();
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4002(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4003(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4004(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4005(modelElement));
+		return result;
 	}
 
 	/**
@@ -1144,7 +1152,14 @@ public class RapyutaComponentModelDiagramUpdater {
 	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getCompositeSubscriber_3009ContainedLinks(
 			View view) {
-		return Collections.emptyList();
+		CompositeSubscriber modelElement = (CompositeSubscriber) view
+				.getElement();
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4002(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4003(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4004(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4005(modelElement));
+		return result;
 	}
 
 	/**
@@ -1168,7 +1183,14 @@ public class RapyutaComponentModelDiagramUpdater {
 	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getCompositePublisher_3012ContainedLinks(
 			View view) {
-		return Collections.emptyList();
+		CompositePublisher modelElement = (CompositePublisher) view
+				.getElement();
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4002(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4003(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4004(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4005(modelElement));
+		return result;
 	}
 
 	/**
@@ -1176,7 +1198,14 @@ public class RapyutaComponentModelDiagramUpdater {
 	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getCompositeSubscriber_3013ContainedLinks(
 			View view) {
-		return Collections.emptyList();
+		CompositeSubscriber modelElement = (CompositeSubscriber) view
+				.getElement();
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4002(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4003(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4004(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4005(modelElement));
+		return result;
 	}
 
 	/**
@@ -1922,7 +1951,14 @@ public class RapyutaComponentModelDiagramUpdater {
 	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getCompositePublisher_3008OutgoingLinks(
 			View view) {
-		return Collections.emptyList();
+		CompositePublisher modelElement = (CompositePublisher) view
+				.getElement();
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4002(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4003(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4004(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4005(modelElement));
+		return result;
 	}
 
 	/**
@@ -1930,7 +1966,14 @@ public class RapyutaComponentModelDiagramUpdater {
 	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getCompositeSubscriber_3009OutgoingLinks(
 			View view) {
-		return Collections.emptyList();
+		CompositeSubscriber modelElement = (CompositeSubscriber) view
+				.getElement();
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4002(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4003(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4004(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4005(modelElement));
+		return result;
 	}
 
 	/**
@@ -1959,7 +2002,14 @@ public class RapyutaComponentModelDiagramUpdater {
 	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getCompositePublisher_3012OutgoingLinks(
 			View view) {
-		return Collections.emptyList();
+		CompositePublisher modelElement = (CompositePublisher) view
+				.getElement();
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4002(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4003(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4004(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4005(modelElement));
+		return result;
 	}
 
 	/**
@@ -1967,7 +2017,14 @@ public class RapyutaComponentModelDiagramUpdater {
 	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getCompositeSubscriber_3013OutgoingLinks(
 			View view) {
-		return Collections.emptyList();
+		CompositeSubscriber modelElement = (CompositeSubscriber) view
+				.getElement();
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4002(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_MsgInterface_Connection_4003(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4004(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4005(modelElement));
+		return result;
 	}
 
 	/**
@@ -2586,6 +2643,42 @@ public class RapyutaComponentModelDiagramUpdater {
 		result.add(new RapyutaComponentModelLinkDescriptor(source, destination,
 				RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003,
 				MsgInterfaceConnection2EditPart.VISUAL_ID));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<RapyutaComponentModelLinkDescriptor> getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4004(
+			CompositeMsgInterface source) {
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		Topic destination = source.getExposed();
+		if (destination == null) {
+			return result;
+		}
+		result.add(new RapyutaComponentModelLinkDescriptor(
+				source,
+				destination,
+				RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004,
+				CompositeMsgInterfaceExposedEditPart.VISUAL_ID));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<RapyutaComponentModelLinkDescriptor> getOutgoingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4005(
+			CompositeMsgInterface source) {
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		Topic destination = source.getExposed();
+		if (destination == null) {
+			return result;
+		}
+		result.add(new RapyutaComponentModelLinkDescriptor(
+				source,
+				destination,
+				RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005,
+				CompositeMsgInterfaceExposed2EditPart.VISUAL_ID));
 		return result;
 	}
 

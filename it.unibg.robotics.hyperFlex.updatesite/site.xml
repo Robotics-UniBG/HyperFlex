@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/it.unibg.robotics.featuremodels.feature_1.0.0.201311291301.jar" id="it.unibg.robotics.featuremodels.feature" version="1.0.0.201311291301">
+   <feature url="features/it.unibg.robotics.componentmodels.feature_1.0.0.201312021559.jar" id="it.unibg.robotics.componentmodels.feature" version="1.0.0.201312021559">
       <category name="it.unibg.robotics.hyperflex.updatesite.category"/>
    </feature>
-   <feature url="features/it.unibg.robotics.componentmodels.feature_1.0.0.201311291301.jar" id="it.unibg.robotics.componentmodels.feature" version="1.0.0.201311291301">
+   <feature url="features/it.unibg.robotics.componentmodels.orocos.feature_1.0.0.201312021559.jar" id="it.unibg.robotics.componentmodels.orocos.feature" version="1.0.0.201312021559">
       <category name="it.unibg.robotics.hyperflex.updatesite.category"/>
    </feature>
-   <feature url="features/it.unibg.robotics.componentmodels.orocos.feature_1.0.0.201311291301.jar" id="it.unibg.robotics.componentmodels.orocos.feature" version="1.0.0.201311291301">
+   <feature url="features/it.unibg.robotics.componentmodels.ros.feature_1.0.0.201312021559.jar" id="it.unibg.robotics.componentmodels.ros.feature" version="1.0.0.201312021559">
       <category name="it.unibg.robotics.hyperflex.updatesite.category"/>
    </feature>
-   <feature url="features/it.unibg.robotics.componentmodels.ros.feature_1.0.0.201311291301.jar" id="it.unibg.robotics.componentmodels.ros.feature" version="1.0.0.201311291301">
+   <feature url="features/org.hyperflex.componentmodels.rapyuta.feature_1.0.0.201312021559.jar" id="org.hyperflex.componentmodels.rapyuta.feature" version="1.0.0.201312021559">
       <category name="it.unibg.robotics.hyperflex.updatesite.category"/>
    </feature>
-   <feature url="features/org.hyperflex.componentmodels.rapyuta.feature_1.0.0.qualifier.jar" id="org.hyperflex.componentmodels.rapyuta.feature" version="1.0.0.qualifier">
+   <feature url="features/it.unibg.robotics.featuremodels.feature_1.0.0.201312021559.jar" id="it.unibg.robotics.featuremodels.feature" version="1.0.0.201312021559">
       <category name="it.unibg.robotics.hyperflex.updatesite.category"/>
    </feature>
    <category-def name="it.unibg.robotics.hyperflex.updatesite.category" label="HyperFlex Plugins">

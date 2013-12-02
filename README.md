@@ -23,9 +23,10 @@ The plugin can be installed from source (by accessing the [github repository](ht
 
 In order to install the plugin from source you need to setup the following environment:
 
-* [Eclipse Modeling Tools](http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/junosr1)
-* with the Graphical Modeling Tooling [update site](http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/) 
-* Epsilon
+* Download Eclipse Modeling Tools version from [Eclipse website](http://www.eclipse.org/downloads/)
+* Install the Graphical Modeling Tooling plugin from this [update site](http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/)
+  *  
+* Install the Epsilon plugin from its update site ([Epsilon website](http://www.eclipse.org/epsilon/download/))
 
 ## Developers
 

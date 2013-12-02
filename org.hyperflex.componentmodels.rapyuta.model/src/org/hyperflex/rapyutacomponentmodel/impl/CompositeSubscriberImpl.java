@@ -42,7 +42,7 @@ import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
  *
  * @generated
  */
-public class CompositeSubscriberImpl extends EObjectImpl implements CompositeSubscriber {
+public class CompositeSubscriberImpl extends CompositeMsgInterfaceImpl implements CompositeSubscriber {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

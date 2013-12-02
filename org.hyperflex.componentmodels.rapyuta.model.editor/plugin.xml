@@ -32,11 +32,14 @@
 
    <extension point="org.eclipse.ui.newWizards">
       <!-- @generated rapyutaComponentModel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
       <wizard
             id="org.hyperflex.rapyutacomponentmodel.presentation.rapyutacomponentmodelModelWizardID"
             name="%_UI_rapyutacomponentmodelModelWizard_label"
             class="org.hyperflex.rapyutacomponentmodel.presentation.rapyutacomponentmodelModelWizard"
-            category="it.robotics.unibg.hyperflex.wizard.category"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/rapyutacomponentmodelModelFile.gif">
          <description>%_UI_rapyutacomponentmodelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>

@@ -658,13 +658,40 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int COMPOSITE_PUBLISHER = 10;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_PUBLISHER__NAME = COMPOSITE_MSG_INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_PUBLISHER__CONNECTION = COMPOSITE_MSG_INTERFACE__CONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>Exposed</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_PUBLISHER__EXPOSED = COMPOSITE_MSG_INTERFACE__EXPOSED;
+
+	/**
 	 * The number of structural features of the '<em>Composite Publisher</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_PUBLISHER_FEATURE_COUNT = 0;
+	int COMPOSITE_PUBLISHER_FEATURE_COUNT = COMPOSITE_MSG_INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.CompositeSubscriberImpl <em>Composite Subscriber</em>}' class.
@@ -677,13 +704,40 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int COMPOSITE_SUBSCRIBER = 11;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_SUBSCRIBER__NAME = COMPOSITE_MSG_INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_SUBSCRIBER__CONNECTION = COMPOSITE_MSG_INTERFACE__CONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>Exposed</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_SUBSCRIBER__EXPOSED = COMPOSITE_MSG_INTERFACE__EXPOSED;
+
+	/**
 	 * The number of structural features of the '<em>Composite Subscriber</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_SUBSCRIBER_FEATURE_COUNT = 0;
+	int COMPOSITE_SUBSCRIBER_FEATURE_COUNT = COMPOSITE_MSG_INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.TopicImpl <em>Topic</em>}' class.

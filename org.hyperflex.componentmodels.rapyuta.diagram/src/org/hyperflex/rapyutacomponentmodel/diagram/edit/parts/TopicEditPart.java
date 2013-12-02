@@ -287,9 +287,11 @@ public class TopicEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
 		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
 		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
+		types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
+		types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005);
 		return types;
 	}
 
@@ -301,6 +303,10 @@ public class TopicEditPart extends ShapeNodeEditPart {
 		if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002) {
 			types.add(RapyutaComponentModelElementTypes.NodePublisher_3003);
 			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3004);
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3008);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3009);
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3012);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3013);
 			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3019);
 			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3020);
 			types.add(RapyutaComponentModelElementTypes.NodePublisher_3025);
@@ -310,12 +316,26 @@ public class TopicEditPart extends ShapeNodeEditPart {
 		} else if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003) {
 			types.add(RapyutaComponentModelElementTypes.NodePublisher_3003);
 			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3004);
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3008);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3009);
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3012);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3013);
 			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3019);
 			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3020);
 			types.add(RapyutaComponentModelElementTypes.NodePublisher_3025);
 			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3026);
 			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3031);
 			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3032);
+		} else if (relationshipType == RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004) {
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3008);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3009);
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3012);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3013);
+		} else if (relationshipType == RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005) {
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3008);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3009);
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3012);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3013);
 		}
 		return types;
 	}
