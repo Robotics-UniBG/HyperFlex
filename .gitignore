@@ -6,10 +6,10 @@ bin/
 .metadata
 .svn
 .DS_Store
-it.unibg.robotics.hyperFlex.updatesite/features/
-it.unibg.robotics.hyperFlex.updatesite/plugins/
-it.unibg.robotics.hyperFlex.updatesite/artifacts.jar
-it.unibg.robotics.hyperFlex.updatesite/content.jar
+src/it.unibg.robotics.hyperFlex.updatesite/features/
+src/it.unibg.robotics.hyperFlex.updatesite/plugins/
+src/it.unibg.robotics.hyperFlex.updatesite/artifacts.jar
+src/it.unibg.robotics.hyperFlex.updatesite/content.jar
 
 
 it.unibg.robotics.resolutionmodels.dsl*
