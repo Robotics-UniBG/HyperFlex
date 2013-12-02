@@ -31,7 +31,7 @@ In order to install the plugin from source you need to setup the following envir
 
 Luca Gherardi (lucagh at ethz dot ch), Institute for Dynamic Systems and Control, ETH Zurich.
 
-Supervisor: Davide Brugali, Department of Engineering, University of Bergamo.
+In collaboration with Davide Brugali, Department of Engineering, University of Bergamo.
 
 ## More information
 
