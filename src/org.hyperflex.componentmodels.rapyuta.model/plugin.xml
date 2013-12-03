@@ -33,7 +33,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated rapyutaComponentModel -->
       <package
-            uri="http://rwww.hyperflex.org/componentmodels.rapyuta"
+            uri="http://www.hyperflex.org/componentmodels.rapyuta"
             class="org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage"
             genModel="models/rapyutaComponentModel.genmodel"/>
    </extension>

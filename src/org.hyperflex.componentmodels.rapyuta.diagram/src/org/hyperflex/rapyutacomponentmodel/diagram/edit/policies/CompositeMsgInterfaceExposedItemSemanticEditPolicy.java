@@ -42,7 +42,7 @@ public class CompositeMsgInterfaceExposedItemSemanticEditPolicy extends
 	 */
 	public CompositeMsgInterfaceExposedItemSemanticEditPolicy() {
 		super(
-				RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
+				RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4013);
 	}
 
 	/**

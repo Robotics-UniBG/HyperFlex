@@ -85,7 +85,7 @@ public class WrappingLabelEditPart extends LabelEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 6002;
+	public static final int VISUAL_ID = 6007;
 
 	/**
 	 * @generated
@@ -348,7 +348,7 @@ public class WrappingLabelEditPart extends LabelEditPart implements
 		if (parser == null) {
 			parser = RapyutaComponentModelParserProvider
 					.getParser(
-							RapyutaComponentModelElementTypes.EndPointSrvConnection_4006,
+							RapyutaComponentModelElementTypes.EndPointSrvConnection_4015,
 							getParserElement(),
 							RapyutaComponentModelVisualIDRegistry
 									.getType(org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.WrappingLabelEditPart.VISUAL_ID));

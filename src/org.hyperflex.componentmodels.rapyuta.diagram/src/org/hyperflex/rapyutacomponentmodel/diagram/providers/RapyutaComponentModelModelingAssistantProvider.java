@@ -98,75 +98,75 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof SystemEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-			types.add(RapyutaComponentModelElementTypes.Composite_2001);
-			types.add(RapyutaComponentModelElementTypes.Container_2002);
+			types.add(RapyutaComponentModelElementTypes.Composite_2003);
+			types.add(RapyutaComponentModelElementTypes.Container_2004);
 			return types;
 		}
 		if (editPart instanceof CompositeEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3012);
-			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3013);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3014);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3015);
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3052);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3053);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3054);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3055);
 			return types;
 		}
 		if (editPart instanceof NodeEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(5);
-			types.add(RapyutaComponentModelElementTypes.NodePublisher_3003);
-			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3004);
-			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3005);
-			types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3006);
-			types.add(RapyutaComponentModelElementTypes.NodeParameter_3002);
+			types.add(RapyutaComponentModelElementTypes.NodePublisher_3043);
+			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3044);
+			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3045);
+			types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3046);
+			types.add(RapyutaComponentModelElementTypes.NodeParameter_3042);
 			return types;
 		}
 		if (editPart instanceof Composite2EditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3008);
-			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3009);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3010);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3011);
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3048);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3049);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3050);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3051);
 			return types;
 		}
 		if (editPart instanceof RobotEndPointEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(5);
-			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3019);
-			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3020);
-			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3021);
-			types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3022);
-			types.add(RapyutaComponentModelElementTypes.EndPointParameter_3018);
+			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3059);
+			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3060);
+			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3061);
+			types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3062);
+			types.add(RapyutaComponentModelElementTypes.EndPointParameter_3058);
 			return types;
 		}
 		if (editPart instanceof Node2EditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(5);
-			types.add(RapyutaComponentModelElementTypes.NodePublisher_3025);
-			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3026);
-			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3027);
-			types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3028);
-			types.add(RapyutaComponentModelElementTypes.NodeParameter_3024);
+			types.add(RapyutaComponentModelElementTypes.NodePublisher_3065);
+			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3066);
+			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3067);
+			types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3068);
+			types.add(RapyutaComponentModelElementTypes.NodeParameter_3064);
 			return types;
 		}
 		if (editPart instanceof EnvironmentEndPointEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(5);
-			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3031);
-			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3032);
-			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3033);
-			types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3034);
-			types.add(RapyutaComponentModelElementTypes.EndPointParameter_3030);
+			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3071);
+			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3072);
+			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3073);
+			types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3074);
+			types.add(RapyutaComponentModelElementTypes.EndPointParameter_3070);
 			return types;
 		}
 		if (editPart instanceof CompositeCompositeContainerCompartmentEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(RapyutaComponentModelElementTypes.Node_3001);
-			types.add(RapyutaComponentModelElementTypes.Composite_3007);
-			types.add(RapyutaComponentModelElementTypes.Topic_3016);
-			types.add(RapyutaComponentModelElementTypes.RobotEndPoint_3038);
+			types.add(RapyutaComponentModelElementTypes.Node_3041);
+			types.add(RapyutaComponentModelElementTypes.Composite_3047);
+			types.add(RapyutaComponentModelElementTypes.Topic_3056);
+			types.add(RapyutaComponentModelElementTypes.RobotEndPoint_3057);
 			return types;
 		}
 		if (editPart instanceof ContainerContainerCompartmentEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
-			types.add(RapyutaComponentModelElementTypes.Node_3040);
-			types.add(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3039);
-			types.add(RapyutaComponentModelElementTypes.Topic_3035);
+			types.add(RapyutaComponentModelElementTypes.Node_3063);
+			types.add(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069);
+			types.add(RapyutaComponentModelElementTypes.Topic_3075);
 			return types;
 		}
 		return Collections.EMPTY_LIST;

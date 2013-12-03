@@ -77,7 +77,7 @@ public class RobotEndPointEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3038;
+	public static final int VISUAL_ID = 3057;
 
 	/**
 	 * @generated
@@ -388,7 +388,7 @@ public class RobotEndPointEditPart extends AbstractBorderedShapeEditPart {
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter
 					.getAdapter(IElementType.class);
-			if (type == RapyutaComponentModelElementTypes.EndPointParameter_3018) {
+			if (type == RapyutaComponentModelElementTypes.EndPointParameter_3058) {
 				return getChildBySemanticHint(RapyutaComponentModelVisualIDRegistry
 						.getType(RobotEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID));
 			}

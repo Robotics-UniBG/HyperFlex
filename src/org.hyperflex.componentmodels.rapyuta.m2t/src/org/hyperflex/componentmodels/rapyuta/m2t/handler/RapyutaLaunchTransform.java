@@ -61,7 +61,7 @@ public class RapyutaLaunchTransform extends AbstractHandler {
             if (input instanceof IFileEditorInput) {
             	sourcefile = ((IFileEditorInput)input).getFile();
             	System.out.println("File from editor: " + sourcefile.getLocation().toOSString());
-            	if(sourcefile.getFileExtension().compareTo("roscomponentmodel") != 0 && sourcefile.getFileExtension().compareTo("roscomponentmodel_diagram")!=0)
+            	if(sourcefile.getFileExtension().compareTo("rapyutacomponentmodel") != 0 && sourcefile.getFileExtension().compareTo("rapyutacomponentmodel_diagram")!=0)
             	{
             		sourcefile = null;
             		MessageDialog
@@ -94,11 +94,11 @@ public class RapyutaLaunchTransform extends AbstractHandler {
 		System.out.println("Taking transformation: " + fileURL );
 		
 		IEglTransformParameter eglTransformParameter = TransformParameterFactory.createEglTransformParameter();
-		eglTransformParameter.setTransformName("ROS System to roslaunch implementation");
+		eglTransformParameter.setTransformName("Rapyuta System to roslaunch implementation");
 		eglTransformParameter.setEglTransform(fileURL);
 		eglTransformParameter.setPluginID(Activator.PLUGIN_ID);
-		eglTransformParameter.setSourceMetaModelURI("http://robotics.unibg.it/componentmodels.ros");
-		eglTransformParameter.setSourceModelFilePath(sourcefile.getLocation().removeFileExtension().toOSString() + ".roscomponentmodel");
+		eglTransformParameter.setSourceMetaModelURI("http://www.hyperflex.org/componentmodels.rapyuta");
+		eglTransformParameter.setSourceModelFilePath(sourcefile.getLocation().removeFileExtension().toOSString() + ".rapyutacomponentmodel");
 		eglTransformParameter.setSourceName("Source");
 		eglTransformParameter.setSourceReadOnLoad(true);
 		eglTransformParameter.setSourceStoreOnDisposal(false);

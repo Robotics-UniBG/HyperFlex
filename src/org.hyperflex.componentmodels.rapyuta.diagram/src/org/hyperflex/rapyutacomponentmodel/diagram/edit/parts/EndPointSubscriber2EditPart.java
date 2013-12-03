@@ -64,7 +64,7 @@ public class EndPointSubscriber2EditPart extends AbstractBorderItemEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3032;
+	public static final int VISUAL_ID = 3072;
 
 	/**
 	 * @generated
@@ -226,8 +226,8 @@ public class EndPointSubscriber2EditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
-		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
+		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
+		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012);
 		return types;
 	}
 
@@ -238,16 +238,16 @@ public class EndPointSubscriber2EditPart extends AbstractBorderItemEditPart {
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
 		}
 		if (targetEditPart instanceof Topic2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
 		}
 		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012);
 		}
 		if (targetEditPart instanceof Topic2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012);
 		}
 		return types;
 	}
@@ -257,12 +257,12 @@ public class EndPointSubscriber2EditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002) {
-			types.add(RapyutaComponentModelElementTypes.Topic_3016);
-			types.add(RapyutaComponentModelElementTypes.Topic_3035);
-		} else if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003) {
-			types.add(RapyutaComponentModelElementTypes.Topic_3016);
-			types.add(RapyutaComponentModelElementTypes.Topic_3035);
+		if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011) {
+			types.add(RapyutaComponentModelElementTypes.Topic_3056);
+			types.add(RapyutaComponentModelElementTypes.Topic_3075);
+		} else if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012) {
+			types.add(RapyutaComponentModelElementTypes.Topic_3056);
+			types.add(RapyutaComponentModelElementTypes.Topic_3075);
 		}
 		return types;
 	}
@@ -272,7 +272,7 @@ public class EndPointSubscriber2EditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnTarget() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(RapyutaComponentModelElementTypes.EndPointMsgConnection_4007);
+		types.add(RapyutaComponentModelElementTypes.EndPointMsgConnection_4016);
 		return types;
 	}
 
@@ -281,9 +281,9 @@ public class EndPointSubscriber2EditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == RapyutaComponentModelElementTypes.EndPointMsgConnection_4007) {
-			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3019);
-			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3031);
+		if (relationshipType == RapyutaComponentModelElementTypes.EndPointMsgConnection_4016) {
+			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3059);
+			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3071);
 		}
 		return types;
 	}

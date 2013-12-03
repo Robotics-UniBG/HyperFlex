@@ -53,11 +53,11 @@ public class SystemItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.Composite_2001 == req
+		if (RapyutaComponentModelElementTypes.Composite_2003 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.Container_2002 == req
+		if (RapyutaComponentModelElementTypes.Container_2004 == req
 				.getElementType()) {
 			return getGEFWrapper(new ContainerCreateCommand(req));
 		}

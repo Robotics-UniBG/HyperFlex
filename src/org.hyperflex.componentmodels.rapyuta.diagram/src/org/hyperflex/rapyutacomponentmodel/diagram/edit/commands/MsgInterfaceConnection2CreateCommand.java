@@ -80,7 +80,7 @@ public class MsgInterfaceConnection2CreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canCreateMsgInterfaceConnection_4003(
+				.getLinkConstraints().canCreateMsgInterfaceConnection_4012(
 						getSource(), getTarget());
 	}
 

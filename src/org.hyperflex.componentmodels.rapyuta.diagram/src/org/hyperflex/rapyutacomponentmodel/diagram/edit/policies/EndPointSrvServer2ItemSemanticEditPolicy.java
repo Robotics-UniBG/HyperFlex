@@ -60,7 +60,7 @@ public class EndPointSrvServer2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public EndPointSrvServer2ItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.EndPointSrvServer_3033);
+		super(RapyutaComponentModelElementTypes.EndPointSrvServer_3073);
 	}
 
 	/**
@@ -122,15 +122,15 @@ public class EndPointSrvServer2ItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.EndPointSrvConnection_4006 == req
+		if (RapyutaComponentModelElementTypes.EndPointSrvConnection_4015 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSrvConnection_4010 == req
+		if (RapyutaComponentModelElementTypes.CompositeSrvConnection_4017 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.ContainerSrvConnection_4009 == req
+		if (RapyutaComponentModelElementTypes.ContainerSrvConnection_4018 == req
 				.getElementType()) {
 			return null;
 		}
@@ -142,17 +142,17 @@ public class EndPointSrvServer2ItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.EndPointSrvConnection_4006 == req
+		if (RapyutaComponentModelElementTypes.EndPointSrvConnection_4015 == req
 				.getElementType()) {
 			return getGEFWrapper(new EndPointSrvConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSrvConnection_4010 == req
+		if (RapyutaComponentModelElementTypes.CompositeSrvConnection_4017 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeSrvConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.ContainerSrvConnection_4009 == req
+		if (RapyutaComponentModelElementTypes.ContainerSrvConnection_4018 == req
 				.getElementType()) {
 			return getGEFWrapper(new ContainerSrvConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));

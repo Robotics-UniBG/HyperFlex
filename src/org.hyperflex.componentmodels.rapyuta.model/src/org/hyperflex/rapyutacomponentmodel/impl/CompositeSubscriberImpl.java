@@ -27,9 +27,6 @@
 package org.hyperflex.rapyutacomponentmodel.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.hyperflex.rapyutacomponentmodel.CompositeSubscriber;
 import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
 

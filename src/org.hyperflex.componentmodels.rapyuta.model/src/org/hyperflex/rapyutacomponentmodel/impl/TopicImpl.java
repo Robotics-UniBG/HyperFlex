@@ -27,12 +27,9 @@
 package org.hyperflex.rapyutacomponentmodel.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.hyperflex.rapyutacomponentmodel.Topic;
 import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
 
@@ -44,6 +41,7 @@ import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.TopicImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.TopicImpl#getMsg <em>Msg</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,6 +67,26 @@ public class TopicImpl extends EObjectImpl implements Topic {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMsg() <em>Msg</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMsg()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String MSG_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getMsg() <em>Msg</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMsg()
+	 * @generated
+	 * @ordered
+	 */
+	protected String msg = MSG_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,11 +133,34 @@ public class TopicImpl extends EObjectImpl implements Topic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getMsg() {
+		return msg;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMsg(String newMsg) {
+		String oldMsg = msg;
+		msg = newMsg;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, rapyutacomponentmodelPackage.TOPIC__MSG, oldMsg, msg));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case rapyutacomponentmodelPackage.TOPIC__NAME:
 				return getName();
+			case rapyutacomponentmodelPackage.TOPIC__MSG:
+				return getMsg();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -134,6 +175,9 @@ public class TopicImpl extends EObjectImpl implements Topic {
 		switch (featureID) {
 			case rapyutacomponentmodelPackage.TOPIC__NAME:
 				setName((String)newValue);
+				return;
+			case rapyutacomponentmodelPackage.TOPIC__MSG:
+				setMsg((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -150,6 +194,9 @@ public class TopicImpl extends EObjectImpl implements Topic {
 			case rapyutacomponentmodelPackage.TOPIC__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case rapyutacomponentmodelPackage.TOPIC__MSG:
+				setMsg(MSG_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -164,6 +211,8 @@ public class TopicImpl extends EObjectImpl implements Topic {
 		switch (featureID) {
 			case rapyutacomponentmodelPackage.TOPIC__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case rapyutacomponentmodelPackage.TOPIC__MSG:
+				return MSG_EDEFAULT == null ? msg != null : !MSG_EDEFAULT.equals(msg);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -180,6 +229,8 @@ public class TopicImpl extends EObjectImpl implements Topic {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", msg: ");
+		result.append(msg);
 		result.append(')');
 		return result.toString();
 	}

@@ -82,7 +82,7 @@ public class CompositeMsgInterfaceExposedCreateCommand extends
 		// target may be null here but it's possible to check constraint
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
 				.getLinkConstraints()
-				.canCreateCompositeMsgInterfaceExposed_4004(getSource(),
+				.canCreateCompositeMsgInterfaceExposed_4013(getSource(),
 						getTarget());
 	}
 

@@ -41,7 +41,7 @@ public class EndPointMsgConnectionItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public EndPointMsgConnectionItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.EndPointMsgConnection_4007);
+		super(RapyutaComponentModelElementTypes.EndPointMsgConnection_4016);
 	}
 
 	/**

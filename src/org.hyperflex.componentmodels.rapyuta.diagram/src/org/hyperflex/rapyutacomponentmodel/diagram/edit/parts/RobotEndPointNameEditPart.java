@@ -84,7 +84,7 @@ public class RobotEndPointNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5016;
+	public static final int VISUAL_ID = 5024;
 
 	/**
 	 * @generated
@@ -330,7 +330,7 @@ public class RobotEndPointNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = RapyutaComponentModelParserProvider
 					.getParser(
-							RapyutaComponentModelElementTypes.RobotEndPoint_3038,
+							RapyutaComponentModelElementTypes.RobotEndPoint_3057,
 							getParserElement(),
 							RapyutaComponentModelVisualIDRegistry
 									.getType(org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointNameEditPart.VISUAL_ID));

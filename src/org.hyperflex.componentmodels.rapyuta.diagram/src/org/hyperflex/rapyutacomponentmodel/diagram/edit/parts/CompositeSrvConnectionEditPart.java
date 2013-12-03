@@ -50,7 +50,7 @@ public class CompositeSrvConnectionEditPart extends ConnectionNodeEditPart
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 4010;
+	public static final int VISUAL_ID = 4017;
 
 	/**
 	 * @generated

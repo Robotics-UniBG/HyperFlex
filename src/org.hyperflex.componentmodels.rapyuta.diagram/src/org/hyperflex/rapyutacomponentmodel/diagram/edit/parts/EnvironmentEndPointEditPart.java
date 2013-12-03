@@ -77,7 +77,7 @@ public class EnvironmentEndPointEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3039;
+	public static final int VISUAL_ID = 3069;
 
 	/**
 	 * @generated
@@ -388,7 +388,7 @@ public class EnvironmentEndPointEditPart extends AbstractBorderedShapeEditPart {
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter
 					.getAdapter(IElementType.class);
-			if (type == RapyutaComponentModelElementTypes.EndPointParameter_3030) {
+			if (type == RapyutaComponentModelElementTypes.EndPointParameter_3070) {
 				return getChildBySemanticHint(RapyutaComponentModelVisualIDRegistry
 						.getType(EnvironmentEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID));
 			}

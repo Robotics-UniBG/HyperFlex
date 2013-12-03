@@ -370,7 +370,7 @@ public class RapyutaComponentModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canCreateMsgInterfaceConnection_4002(
+		public boolean canCreateMsgInterfaceConnection_4011(
 				MsgInterface source, Topic target) {
 			if (source != null) {
 				if (source.getConnection() != null) {
@@ -378,13 +378,13 @@ public class RapyutaComponentModelBaseItemSemanticEditPolicy extends
 				}
 			}
 
-			return canExistMsgInterfaceConnection_4002(source, target);
+			return canExistMsgInterfaceConnection_4011(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateMsgInterfaceConnection_4003(
+		public boolean canCreateMsgInterfaceConnection_4012(
 				MsgInterface source, Topic target) {
 			if (source != null) {
 				if (source.getConnection() != null) {
@@ -392,13 +392,13 @@ public class RapyutaComponentModelBaseItemSemanticEditPolicy extends
 				}
 			}
 
-			return canExistMsgInterfaceConnection_4003(source, target);
+			return canExistMsgInterfaceConnection_4012(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateCompositeMsgInterfaceExposed_4004(
+		public boolean canCreateCompositeMsgInterfaceExposed_4013(
 				CompositeMsgInterface source, Topic target) {
 			if (source != null) {
 				if (source.getExposed() != null) {
@@ -406,13 +406,13 @@ public class RapyutaComponentModelBaseItemSemanticEditPolicy extends
 				}
 			}
 
-			return canExistCompositeMsgInterfaceExposed_4004(source, target);
+			return canExistCompositeMsgInterfaceExposed_4013(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateCompositeMsgInterfaceExposed_4005(
+		public boolean canCreateCompositeMsgInterfaceExposed_4014(
 				CompositeMsgInterface source, Topic target) {
 			if (source != null) {
 				if (source.getExposed() != null) {
@@ -420,49 +420,49 @@ public class RapyutaComponentModelBaseItemSemanticEditPolicy extends
 				}
 			}
 
-			return canExistCompositeMsgInterfaceExposed_4005(source, target);
+			return canExistCompositeMsgInterfaceExposed_4014(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateEndPointSrvConnection_4006(System container,
+		public boolean canCreateEndPointSrvConnection_4015(System container,
 				EndPointSrvClient source, EndPointSrvServer target) {
-			return canExistEndPointSrvConnection_4006(container, null, source,
+			return canExistEndPointSrvConnection_4015(container, null, source,
 					target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateEndPointMsgConnection_4007(System container,
+		public boolean canCreateEndPointMsgConnection_4016(System container,
 				EndPointPublisher source, EndPointSubscriber target) {
-			return canExistEndPointMsgConnection_4007(container, null, source,
+			return canExistEndPointMsgConnection_4016(container, null, source,
 					target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateCompositeSrvConnection_4010(
+		public boolean canCreateCompositeSrvConnection_4017(
 				Composite container, SrvClient source, SrvServer target) {
-			return canExistCompositeSrvConnection_4010(container, null, source,
+			return canExistCompositeSrvConnection_4017(container, null, source,
 					target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateContainerSrvConnection_4009(
+		public boolean canCreateContainerSrvConnection_4018(
 				Container container, SrvClient source, SrvServer target) {
-			return canExistContainerSrvConnection_4009(container, null, source,
+			return canExistContainerSrvConnection_4018(container, null, source,
 					target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canExistMsgInterfaceConnection_4002(MsgInterface source,
+		public boolean canExistMsgInterfaceConnection_4011(MsgInterface source,
 				Topic target) {
 			try {
 				if (source == null) {
@@ -495,7 +495,7 @@ public class RapyutaComponentModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canExistMsgInterfaceConnection_4003(MsgInterface source,
+		public boolean canExistMsgInterfaceConnection_4012(MsgInterface source,
 				Topic target) {
 			try {
 				if (source == null) {
@@ -528,7 +528,7 @@ public class RapyutaComponentModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canExistCompositeMsgInterfaceExposed_4004(
+		public boolean canExistCompositeMsgInterfaceExposed_4013(
 				CompositeMsgInterface source, Topic target) {
 			try {
 				if (source == null) {
@@ -562,7 +562,7 @@ public class RapyutaComponentModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canExistCompositeMsgInterfaceExposed_4005(
+		public boolean canExistCompositeMsgInterfaceExposed_4014(
 				CompositeMsgInterface source, Topic target) {
 			try {
 				if (source == null) {
@@ -596,7 +596,7 @@ public class RapyutaComponentModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canExistEndPointSrvConnection_4006(System container,
+		public boolean canExistEndPointSrvConnection_4015(System container,
 				EndPointSrvConnection linkInstance, EndPointSrvClient source,
 				EndPointSrvServer target) {
 			try {
@@ -651,7 +651,7 @@ public class RapyutaComponentModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canExistEndPointMsgConnection_4007(System container,
+		public boolean canExistEndPointMsgConnection_4016(System container,
 				EndPointMsgConnection linkInstance, EndPointPublisher source,
 				EndPointSubscriber target) {
 			try {
@@ -706,7 +706,7 @@ public class RapyutaComponentModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canExistCompositeSrvConnection_4010(Composite container,
+		public boolean canExistCompositeSrvConnection_4017(Composite container,
 				CompositeSrvConnection linkInstance, SrvClient source,
 				SrvServer target) {
 			try {
@@ -759,7 +759,7 @@ public class RapyutaComponentModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canExistContainerSrvConnection_4009(Container container,
+		public boolean canExistContainerSrvConnection_4018(Container container,
 				ContainerSrvConnection linkInstance, SrvClient source,
 				SrvServer target) {
 			try {

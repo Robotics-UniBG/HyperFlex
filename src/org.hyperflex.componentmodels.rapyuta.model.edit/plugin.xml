@@ -33,7 +33,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated rapyutaComponentModel -->
       <factory
-            uri="http://rwww.hyperflex.org/componentmodels.rapyuta"
+            uri="http://www.hyperflex.org/componentmodels.rapyuta"
             class="org.hyperflex.rapyutacomponentmodel.provider.rapyutacomponentmodelItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

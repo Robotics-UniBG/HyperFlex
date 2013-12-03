@@ -93,8 +93,8 @@ public class RapyutaComponentModelPaletteFactory {
 	 */
 	private ToolEntry createNode1CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RapyutaComponentModelElementTypes.Node_3001);
-		types.add(RapyutaComponentModelElementTypes.Node_3040);
+		types.add(RapyutaComponentModelElementTypes.Node_3041);
+		types.add(RapyutaComponentModelElementTypes.Node_3063);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Node1CreationTool_title,
 				Messages.Node1CreationTool_desc, types);
@@ -110,12 +110,12 @@ public class RapyutaComponentModelPaletteFactory {
 	 */
 	private ToolEntry createPublisher2CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(6);
-		types.add(RapyutaComponentModelElementTypes.NodePublisher_3003);
-		types.add(RapyutaComponentModelElementTypes.CompositePublisher_3008);
-		types.add(RapyutaComponentModelElementTypes.CompositePublisher_3012);
-		types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3019);
-		types.add(RapyutaComponentModelElementTypes.NodePublisher_3025);
-		types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3031);
+		types.add(RapyutaComponentModelElementTypes.NodePublisher_3043);
+		types.add(RapyutaComponentModelElementTypes.CompositePublisher_3048);
+		types.add(RapyutaComponentModelElementTypes.CompositePublisher_3052);
+		types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3059);
+		types.add(RapyutaComponentModelElementTypes.NodePublisher_3065);
+		types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3071);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Publisher2CreationTool_title,
 				Messages.Publisher2CreationTool_desc, types);
@@ -131,12 +131,12 @@ public class RapyutaComponentModelPaletteFactory {
 	 */
 	private ToolEntry createSubscriber3CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(6);
-		types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3004);
-		types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3009);
-		types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3013);
-		types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3020);
-		types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3026);
-		types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3032);
+		types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3044);
+		types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3049);
+		types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3053);
+		types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3060);
+		types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3066);
+		types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3072);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Subscriber3CreationTool_title,
 				Messages.Subscriber3CreationTool_desc, types);
@@ -152,10 +152,10 @@ public class RapyutaComponentModelPaletteFactory {
 	 */
 	private ToolEntry createParameter4CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-		types.add(RapyutaComponentModelElementTypes.NodeParameter_3002);
-		types.add(RapyutaComponentModelElementTypes.EndPointParameter_3018);
-		types.add(RapyutaComponentModelElementTypes.NodeParameter_3024);
-		types.add(RapyutaComponentModelElementTypes.EndPointParameter_3030);
+		types.add(RapyutaComponentModelElementTypes.NodeParameter_3042);
+		types.add(RapyutaComponentModelElementTypes.EndPointParameter_3058);
+		types.add(RapyutaComponentModelElementTypes.NodeParameter_3064);
+		types.add(RapyutaComponentModelElementTypes.EndPointParameter_3070);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Parameter4CreationTool_title,
 				Messages.Parameter4CreationTool_desc, types);
@@ -171,8 +171,8 @@ public class RapyutaComponentModelPaletteFactory {
 	 */
 	private ToolEntry createComposite5CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RapyutaComponentModelElementTypes.Composite_2001);
-		types.add(RapyutaComponentModelElementTypes.Composite_3007);
+		types.add(RapyutaComponentModelElementTypes.Composite_2003);
+		types.add(RapyutaComponentModelElementTypes.Composite_3047);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Composite5CreationTool_title,
 				Messages.Composite5CreationTool_desc, types);
@@ -191,7 +191,7 @@ public class RapyutaComponentModelPaletteFactory {
 				Messages.Container6CreationTool_title,
 				Messages.Container6CreationTool_desc,
 				Collections
-						.singletonList(RapyutaComponentModelElementTypes.Container_2002));
+						.singletonList(RapyutaComponentModelElementTypes.Container_2004));
 		entry.setId("createContainer6CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Container.gif")); //$NON-NLS-1$
@@ -218,8 +218,8 @@ public class RapyutaComponentModelPaletteFactory {
 	 */
 	private ToolEntry createTopic8CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RapyutaComponentModelElementTypes.Topic_3016);
-		types.add(RapyutaComponentModelElementTypes.Topic_3035);
+		types.add(RapyutaComponentModelElementTypes.Topic_3056);
+		types.add(RapyutaComponentModelElementTypes.Topic_3075);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Topic8CreationTool_title,
 				Messages.Topic8CreationTool_desc, types);
@@ -235,8 +235,8 @@ public class RapyutaComponentModelPaletteFactory {
 	 */
 	private ToolEntry createEndPoint9CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RapyutaComponentModelElementTypes.RobotEndPoint_3038);
-		types.add(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3039);
+		types.add(RapyutaComponentModelElementTypes.RobotEndPoint_3057);
+		types.add(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.EndPoint9CreationTool_title,
 				Messages.EndPoint9CreationTool_desc, types);
@@ -252,11 +252,11 @@ public class RapyutaComponentModelPaletteFactory {
 	 */
 	private ToolEntry createServiceServer10CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(5);
-		types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3005);
-		types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3014);
-		types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3021);
-		types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3027);
-		types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3033);
+		types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3045);
+		types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3054);
+		types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3061);
+		types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3067);
+		types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3073);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.ServiceServer10CreationTool_title,
 				Messages.ServiceServer10CreationTool_desc, types);
@@ -272,13 +272,13 @@ public class RapyutaComponentModelPaletteFactory {
 	 */
 	private ToolEntry createServiceClient11CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(7);
-		types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3006);
-		types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3010);
-		types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3011);
-		types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3015);
-		types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3022);
-		types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3028);
-		types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3034);
+		types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3046);
+		types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3050);
+		types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3051);
+		types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3055);
+		types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3062);
+		types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3068);
+		types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3074);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.ServiceClient11CreationTool_title,
 				Messages.ServiceClient11CreationTool_desc, types);
@@ -294,8 +294,8 @@ public class RapyutaComponentModelPaletteFactory {
 	 */
 	private ToolEntry createPromoteConnection1CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
-		types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005);
+		types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4013);
+		types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4014);
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.PromoteConnection1CreationTool_title,
 				Messages.PromoteConnection1CreationTool_desc, types);
@@ -311,12 +311,12 @@ public class RapyutaComponentModelPaletteFactory {
 	 */
 	private ToolEntry createConnection2CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(6);
-		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
-		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
-		types.add(RapyutaComponentModelElementTypes.EndPointSrvConnection_4006);
-		types.add(RapyutaComponentModelElementTypes.EndPointMsgConnection_4007);
-		types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4010);
-		types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4009);
+		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
+		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012);
+		types.add(RapyutaComponentModelElementTypes.EndPointSrvConnection_4015);
+		types.add(RapyutaComponentModelElementTypes.EndPointMsgConnection_4016);
+		types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
+		types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.Connection2CreationTool_title,
 				Messages.Connection2CreationTool_desc, types);

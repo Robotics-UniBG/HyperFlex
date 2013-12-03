@@ -106,7 +106,7 @@ public class CompositeCompositeContainerCompartmentCanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getCompositeCompositeContainerCompartment_7001SemanticChildren(viewObject);
+				.getCompositeCompositeContainerCompartment_7012SemanticChildren(viewObject);
 		for (RapyutaComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -146,7 +146,7 @@ public class CompositeCompositeContainerCompartmentCanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getCompositeCompositeContainerCompartment_7001SemanticChildren((View) getHost()
+				.getCompositeCompositeContainerCompartment_7012SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

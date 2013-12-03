@@ -101,7 +101,7 @@ public class CompositeMsgInterfaceExposed2ReorientCommand extends
 		}
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
 				.getLinkConstraints()
-				.canExistCompositeMsgInterfaceExposed_4005(getNewSource(),
+				.canExistCompositeMsgInterfaceExposed_4014(getNewSource(),
 						getOldTarget());
 	}
 
@@ -114,7 +114,7 @@ public class CompositeMsgInterfaceExposed2ReorientCommand extends
 		}
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
 				.getLinkConstraints()
-				.canExistCompositeMsgInterfaceExposed_4005(getOldSource(),
+				.canExistCompositeMsgInterfaceExposed_4014(getOldSource(),
 						getNewTarget());
 	}
 

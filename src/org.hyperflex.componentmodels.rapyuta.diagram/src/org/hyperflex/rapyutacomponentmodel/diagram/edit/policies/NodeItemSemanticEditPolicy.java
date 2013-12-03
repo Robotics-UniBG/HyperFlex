@@ -68,26 +68,26 @@ public class NodeItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public NodeItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Node_3001);
+		super(RapyutaComponentModelElementTypes.Node_3041);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.NodePublisher_3003 == req
+		if (RapyutaComponentModelElementTypes.NodePublisher_3043 == req
 				.getElementType()) {
 			return getGEFWrapper(new NodePublisherCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.NodeSubscriber_3004 == req
+		if (RapyutaComponentModelElementTypes.NodeSubscriber_3044 == req
 				.getElementType()) {
 			return getGEFWrapper(new NodeSubscriberCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.NodeSrvServer_3005 == req
+		if (RapyutaComponentModelElementTypes.NodeSrvServer_3045 == req
 				.getElementType()) {
 			return getGEFWrapper(new NodeSrvServerCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.NodeSrvClient_3006 == req
+		if (RapyutaComponentModelElementTypes.NodeSrvClient_3046 == req
 				.getElementType()) {
 			return getGEFWrapper(new NodeSrvClientCreateCommand(req));
 		}

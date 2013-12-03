@@ -95,7 +95,7 @@ public class EndPointMsgConnectionCreateCommand extends EditElementCommand {
 			return false;
 		}
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canCreateEndPointMsgConnection_4007(
+				.getLinkConstraints().canCreateEndPointMsgConnection_4016(
 						getContainer(), getSource(), getTarget());
 	}
 

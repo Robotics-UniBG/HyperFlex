@@ -70,26 +70,26 @@ public class EnvironmentEndPointItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public EnvironmentEndPointItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3039);
+		super(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.EndPointPublisher_3031 == req
+		if (RapyutaComponentModelElementTypes.EndPointPublisher_3071 == req
 				.getElementType()) {
 			return getGEFWrapper(new EndPointPublisher2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.EndPointSubscriber_3032 == req
+		if (RapyutaComponentModelElementTypes.EndPointSubscriber_3072 == req
 				.getElementType()) {
 			return getGEFWrapper(new EndPointSubscriber2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.EndPointSrvServer_3033 == req
+		if (RapyutaComponentModelElementTypes.EndPointSrvServer_3073 == req
 				.getElementType()) {
 			return getGEFWrapper(new EndPointSrvServer2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.EndPointSrvClient_3034 == req
+		if (RapyutaComponentModelElementTypes.EndPointSrvClient_3074 == req
 				.getElementType()) {
 			return getGEFWrapper(new EndPointSrvClient2CreateCommand(req));
 		}

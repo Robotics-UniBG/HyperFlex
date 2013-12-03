@@ -95,7 +95,7 @@ public class EndPointSrvConnectionCreateCommand extends EditElementCommand {
 			return false;
 		}
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canCreateEndPointSrvConnection_4006(
+				.getLinkConstraints().canCreateEndPointSrvConnection_4015(
 						getContainer(), getSource(), getTarget());
 	}
 

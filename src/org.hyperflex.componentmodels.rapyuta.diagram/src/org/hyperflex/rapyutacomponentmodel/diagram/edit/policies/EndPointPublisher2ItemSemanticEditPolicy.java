@@ -63,7 +63,7 @@ public class EndPointPublisher2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public EndPointPublisher2ItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.EndPointPublisher_3031);
+		super(RapyutaComponentModelElementTypes.EndPointPublisher_3071);
 	}
 
 	/**
@@ -127,17 +127,17 @@ public class EndPointPublisher2ItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnection2CreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.EndPointMsgConnection_4007 == req
+		if (RapyutaComponentModelElementTypes.EndPointMsgConnection_4016 == req
 				.getElementType()) {
 			return getGEFWrapper(new EndPointMsgConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
@@ -150,15 +150,15 @@ public class EndPointPublisher2ItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.EndPointMsgConnection_4007 == req
+		if (RapyutaComponentModelElementTypes.EndPointMsgConnection_4016 == req
 				.getElementType()) {
 			return null;
 		}

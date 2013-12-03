@@ -122,183 +122,227 @@ public class RapyutaComponentModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Composite_2001 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Composite_2001"); //$NON-NLS-1$
+	public static final IElementType Composite_2003 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Composite_2003"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Container_2002 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Container_2002"); //$NON-NLS-1$
+	public static final IElementType Container_2004 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Container_2004"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Node_3001 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Node_3001"); //$NON-NLS-1$
+	public static final IElementType Node_3041 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Node_3041"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodeParameter_3002 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeParameter_3002"); //$NON-NLS-1$
+	public static final IElementType NodeParameter_3042 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeParameter_3042"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodePublisher_3003 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodePublisher_3003"); //$NON-NLS-1$
+	public static final IElementType NodePublisher_3043 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodePublisher_3043"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodeSubscriber_3004 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeSubscriber_3004"); //$NON-NLS-1$
+	public static final IElementType NodeSubscriber_3044 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeSubscriber_3044"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodeSrvServer_3005 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvServer_3005"); //$NON-NLS-1$
+	public static final IElementType NodeSrvServer_3045 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvServer_3045"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodeSrvClient_3006 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvClient_3006"); //$NON-NLS-1$
+	public static final IElementType NodeSrvClient_3046 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvClient_3046"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Composite_3007 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Composite_3007"); //$NON-NLS-1$
+	public static final IElementType Composite_3047 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Composite_3047"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositePublisher_3008 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositePublisher_3008"); //$NON-NLS-1$
+	public static final IElementType CompositePublisher_3048 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositePublisher_3048"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeSubscriber_3009 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSubscriber_3009"); //$NON-NLS-1$
+	public static final IElementType CompositeSubscriber_3049 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSubscriber_3049"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeSrvServer_3010 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvServer_3010"); //$NON-NLS-1$
+	public static final IElementType CompositeSrvServer_3050 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvServer_3050"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeSrvClient_3011 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvClient_3011"); //$NON-NLS-1$
+	public static final IElementType CompositeSrvClient_3051 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvClient_3051"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositePublisher_3012 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositePublisher_3012"); //$NON-NLS-1$
+	public static final IElementType CompositePublisher_3052 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositePublisher_3052"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeSubscriber_3013 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSubscriber_3013"); //$NON-NLS-1$
+	public static final IElementType CompositeSubscriber_3053 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSubscriber_3053"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeSrvServer_3014 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvServer_3014"); //$NON-NLS-1$
+	public static final IElementType CompositeSrvServer_3054 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvServer_3054"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeSrvClient_3015 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvClient_3015"); //$NON-NLS-1$
+	public static final IElementType CompositeSrvClient_3055 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvClient_3055"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Topic_3016 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Topic_3016"); //$NON-NLS-1$
+	public static final IElementType Topic_3056 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Topic_3056"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType RobotEndPoint_3038 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.RobotEndPoint_3038"); //$NON-NLS-1$
+	public static final IElementType RobotEndPoint_3057 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.RobotEndPoint_3057"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EndPointParameter_3018 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointParameter_3018"); //$NON-NLS-1$
+	public static final IElementType EndPointParameter_3058 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointParameter_3058"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EndPointPublisher_3019 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointPublisher_3019"); //$NON-NLS-1$
+	public static final IElementType EndPointPublisher_3059 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointPublisher_3059"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EndPointSubscriber_3020 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSubscriber_3020"); //$NON-NLS-1$
+	public static final IElementType EndPointSubscriber_3060 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSubscriber_3060"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EndPointSrvServer_3021 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvServer_3021"); //$NON-NLS-1$
+	public static final IElementType EndPointSrvServer_3061 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvServer_3061"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EndPointSrvClient_3022 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvClient_3022"); //$NON-NLS-1$
+	public static final IElementType EndPointSrvClient_3062 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvClient_3062"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Node_3040 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Node_3040"); //$NON-NLS-1$
+	public static final IElementType Node_3063 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Node_3063"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodeParameter_3024 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeParameter_3024"); //$NON-NLS-1$
+	public static final IElementType NodeParameter_3064 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeParameter_3064"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodePublisher_3025 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodePublisher_3025"); //$NON-NLS-1$
+	public static final IElementType NodePublisher_3065 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodePublisher_3065"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodeSubscriber_3026 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeSubscriber_3026"); //$NON-NLS-1$
+	public static final IElementType NodeSubscriber_3066 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeSubscriber_3066"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodeSrvServer_3027 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvServer_3027"); //$NON-NLS-1$
+	public static final IElementType NodeSrvServer_3067 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvServer_3067"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodeSrvClient_3028 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvClient_3028"); //$NON-NLS-1$
+	public static final IElementType NodeSrvClient_3068 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.NodeSrvClient_3068"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EnvironmentEndPoint_3039 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EnvironmentEndPoint_3039"); //$NON-NLS-1$
+	public static final IElementType EnvironmentEndPoint_3069 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EnvironmentEndPoint_3069"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EndPointParameter_3030 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointParameter_3030"); //$NON-NLS-1$
+	public static final IElementType EndPointParameter_3070 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointParameter_3070"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EndPointPublisher_3031 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointPublisher_3031"); //$NON-NLS-1$
+	public static final IElementType EndPointPublisher_3071 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointPublisher_3071"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EndPointSubscriber_3032 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSubscriber_3032"); //$NON-NLS-1$
+	public static final IElementType EndPointSubscriber_3072 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSubscriber_3072"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EndPointSrvServer_3033 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvServer_3033"); //$NON-NLS-1$
+	public static final IElementType EndPointSrvServer_3073 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvServer_3073"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EndPointSrvClient_3034 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvClient_3034"); //$NON-NLS-1$
+	public static final IElementType EndPointSrvClient_3074 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvClient_3074"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Topic_3035 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Topic_3035"); //$NON-NLS-1$
+	public static final IElementType Topic_3075 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Topic_3075"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType MsgInterfaceConnection_4002 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.MsgInterfaceConnection_4002"); //$NON-NLS-1$
+	public static final IElementType MsgInterfaceConnection_4011 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.MsgInterfaceConnection_4011"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType MsgInterfaceConnection_4003 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.MsgInterfaceConnection_4003"); //$NON-NLS-1$
+	public static final IElementType MsgInterfaceConnection_4012 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.MsgInterfaceConnection_4012"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeMsgInterfaceExposed_4004 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeMsgInterfaceExposed_4004"); //$NON-NLS-1$
+	public static final IElementType CompositeMsgInterfaceExposed_4013 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeMsgInterfaceExposed_4013"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeMsgInterfaceExposed_4005 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeMsgInterfaceExposed_4005"); //$NON-NLS-1$
+	public static final IElementType CompositeMsgInterfaceExposed_4014 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeMsgInterfaceExposed_4014"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EndPointSrvConnection_4006 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvConnection_4006"); //$NON-NLS-1$
+	public static final IElementType EndPointSrvConnection_4015 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvConnection_4015"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType EndPointMsgConnection_4007 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointMsgConnection_4007"); //$NON-NLS-1$
+	public static final IElementType EndPointMsgConnection_4016 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointMsgConnection_4016"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeSrvConnection_4010 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvConnection_4010"); //$NON-NLS-1$
+	public static final IElementType CompositeSrvConnection_4017 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CompositeSrvConnection_4017"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType ContainerSrvConnection_4009 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.ContainerSrvConnection_4009"); //$NON-NLS-1$
+	public static final IElementType ContainerSrvConnection_4018 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.ContainerSrvConnection_4018"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -344,227 +388,227 @@ public class RapyutaComponentModelElementTypes {
 							.getSystem());
 
 			elements.put(
-					Composite_2001,
+					Composite_2003,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getComposite());
 
 			elements.put(
-					Container_2002,
+					Container_2004,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getContainer());
 
 			elements.put(
-					Node_3001,
+					Node_3041,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNode());
 
 			elements.put(
-					NodeParameter_3002,
+					NodeParameter_3042,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNodeParameter());
 
 			elements.put(
-					NodePublisher_3003,
+					NodePublisher_3043,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNodePublisher());
 
 			elements.put(
-					NodeSubscriber_3004,
+					NodeSubscriber_3044,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNodeSubscriber());
 
 			elements.put(
-					NodeSrvServer_3005,
+					NodeSrvServer_3045,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNodeSrvServer());
 
 			elements.put(
-					NodeSrvClient_3006,
+					NodeSrvClient_3046,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNodeSrvClient());
 
 			elements.put(
-					Composite_3007,
+					Composite_3047,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getComposite());
 
 			elements.put(
-					CompositePublisher_3008,
+					CompositePublisher_3048,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getCompositePublisher());
 
 			elements.put(
-					CompositeSubscriber_3009,
+					CompositeSubscriber_3049,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getCompositeSubscriber());
 
 			elements.put(
-					CompositeSrvServer_3010,
+					CompositeSrvServer_3050,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getCompositeSrvServer());
 
 			elements.put(
-					CompositeSrvClient_3011,
+					CompositeSrvClient_3051,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getCompositeSrvClient());
 
 			elements.put(
-					CompositePublisher_3012,
+					CompositePublisher_3052,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getCompositePublisher());
 
 			elements.put(
-					CompositeSubscriber_3013,
+					CompositeSubscriber_3053,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getCompositeSubscriber());
 
 			elements.put(
-					CompositeSrvServer_3014,
+					CompositeSrvServer_3054,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getCompositeSrvServer());
 
 			elements.put(
-					CompositeSrvClient_3015,
+					CompositeSrvClient_3055,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getCompositeSrvClient());
 
 			elements.put(
-					Topic_3016,
+					Topic_3056,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getTopic());
 
 			elements.put(
-					RobotEndPoint_3038,
+					RobotEndPoint_3057,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getRobotEndPoint());
 
 			elements.put(
-					EndPointParameter_3018,
+					EndPointParameter_3058,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEndPointParameter());
 
 			elements.put(
-					EndPointPublisher_3019,
+					EndPointPublisher_3059,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEndPointPublisher());
 
 			elements.put(
-					EndPointSubscriber_3020,
+					EndPointSubscriber_3060,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEndPointSubscriber());
 
 			elements.put(
-					EndPointSrvServer_3021,
+					EndPointSrvServer_3061,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEndPointSrvServer());
 
 			elements.put(
-					EndPointSrvClient_3022,
+					EndPointSrvClient_3062,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEndPointSrvClient());
 
 			elements.put(
-					Node_3040,
+					Node_3063,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNode());
 
 			elements.put(
-					NodeParameter_3024,
+					NodeParameter_3064,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNodeParameter());
 
 			elements.put(
-					NodePublisher_3025,
+					NodePublisher_3065,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNodePublisher());
 
 			elements.put(
-					NodeSubscriber_3026,
+					NodeSubscriber_3066,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNodeSubscriber());
 
 			elements.put(
-					NodeSrvServer_3027,
+					NodeSrvServer_3067,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNodeSrvServer());
 
 			elements.put(
-					NodeSrvClient_3028,
+					NodeSrvClient_3068,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNodeSrvClient());
 
 			elements.put(
-					EnvironmentEndPoint_3039,
+					EnvironmentEndPoint_3069,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEnvironmentEndPoint());
 
 			elements.put(
-					EndPointParameter_3030,
+					EndPointParameter_3070,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEndPointParameter());
 
 			elements.put(
-					EndPointPublisher_3031,
+					EndPointPublisher_3071,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEndPointPublisher());
 
 			elements.put(
-					EndPointSubscriber_3032,
+					EndPointSubscriber_3072,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEndPointSubscriber());
 
 			elements.put(
-					EndPointSrvServer_3033,
+					EndPointSrvServer_3073,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEndPointSrvServer());
 
 			elements.put(
-					EndPointSrvClient_3034,
+					EndPointSrvClient_3074,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEndPointSrvClient());
 
 			elements.put(
-					Topic_3035,
+					Topic_3075,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getTopic());
 
 			elements.put(
-					MsgInterfaceConnection_4002,
+					MsgInterfaceConnection_4011,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getMsgInterface_Connection());
 
 			elements.put(
-					MsgInterfaceConnection_4003,
+					MsgInterfaceConnection_4012,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getMsgInterface_Connection());
 
 			elements.put(
-					CompositeMsgInterfaceExposed_4004,
+					CompositeMsgInterfaceExposed_4013,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getCompositeMsgInterface_Exposed());
 
 			elements.put(
-					CompositeMsgInterfaceExposed_4005,
+					CompositeMsgInterfaceExposed_4014,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getCompositeMsgInterface_Exposed());
 
 			elements.put(
-					EndPointSrvConnection_4006,
+					EndPointSrvConnection_4015,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEndPointSrvConnection());
 
 			elements.put(
-					EndPointMsgConnection_4007,
+					EndPointMsgConnection_4016,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEndPointMsgConnection());
 
 			elements.put(
-					CompositeSrvConnection_4010,
+					CompositeSrvConnection_4017,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getCompositeSrvConnection());
 
 			elements.put(
-					ContainerSrvConnection_4009,
+					ContainerSrvConnection_4018,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getContainerSrvConnection());
 		}
@@ -585,51 +629,51 @@ public class RapyutaComponentModelElementTypes {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(System_1000);
-			KNOWN_ELEMENT_TYPES.add(Composite_2001);
-			KNOWN_ELEMENT_TYPES.add(Container_2002);
-			KNOWN_ELEMENT_TYPES.add(Node_3001);
-			KNOWN_ELEMENT_TYPES.add(NodeParameter_3002);
-			KNOWN_ELEMENT_TYPES.add(NodePublisher_3003);
-			KNOWN_ELEMENT_TYPES.add(NodeSubscriber_3004);
-			KNOWN_ELEMENT_TYPES.add(NodeSrvServer_3005);
-			KNOWN_ELEMENT_TYPES.add(NodeSrvClient_3006);
-			KNOWN_ELEMENT_TYPES.add(Composite_3007);
-			KNOWN_ELEMENT_TYPES.add(CompositePublisher_3008);
-			KNOWN_ELEMENT_TYPES.add(CompositeSubscriber_3009);
-			KNOWN_ELEMENT_TYPES.add(CompositeSrvServer_3010);
-			KNOWN_ELEMENT_TYPES.add(CompositeSrvClient_3011);
-			KNOWN_ELEMENT_TYPES.add(CompositePublisher_3012);
-			KNOWN_ELEMENT_TYPES.add(CompositeSubscriber_3013);
-			KNOWN_ELEMENT_TYPES.add(CompositeSrvServer_3014);
-			KNOWN_ELEMENT_TYPES.add(CompositeSrvClient_3015);
-			KNOWN_ELEMENT_TYPES.add(Topic_3016);
-			KNOWN_ELEMENT_TYPES.add(RobotEndPoint_3038);
-			KNOWN_ELEMENT_TYPES.add(EndPointParameter_3018);
-			KNOWN_ELEMENT_TYPES.add(EndPointPublisher_3019);
-			KNOWN_ELEMENT_TYPES.add(EndPointSubscriber_3020);
-			KNOWN_ELEMENT_TYPES.add(EndPointSrvServer_3021);
-			KNOWN_ELEMENT_TYPES.add(EndPointSrvClient_3022);
-			KNOWN_ELEMENT_TYPES.add(Node_3040);
-			KNOWN_ELEMENT_TYPES.add(NodeParameter_3024);
-			KNOWN_ELEMENT_TYPES.add(NodePublisher_3025);
-			KNOWN_ELEMENT_TYPES.add(NodeSubscriber_3026);
-			KNOWN_ELEMENT_TYPES.add(NodeSrvServer_3027);
-			KNOWN_ELEMENT_TYPES.add(NodeSrvClient_3028);
-			KNOWN_ELEMENT_TYPES.add(EnvironmentEndPoint_3039);
-			KNOWN_ELEMENT_TYPES.add(EndPointParameter_3030);
-			KNOWN_ELEMENT_TYPES.add(EndPointPublisher_3031);
-			KNOWN_ELEMENT_TYPES.add(EndPointSubscriber_3032);
-			KNOWN_ELEMENT_TYPES.add(EndPointSrvServer_3033);
-			KNOWN_ELEMENT_TYPES.add(EndPointSrvClient_3034);
-			KNOWN_ELEMENT_TYPES.add(Topic_3035);
-			KNOWN_ELEMENT_TYPES.add(MsgInterfaceConnection_4002);
-			KNOWN_ELEMENT_TYPES.add(MsgInterfaceConnection_4003);
-			KNOWN_ELEMENT_TYPES.add(CompositeMsgInterfaceExposed_4004);
-			KNOWN_ELEMENT_TYPES.add(CompositeMsgInterfaceExposed_4005);
-			KNOWN_ELEMENT_TYPES.add(EndPointSrvConnection_4006);
-			KNOWN_ELEMENT_TYPES.add(EndPointMsgConnection_4007);
-			KNOWN_ELEMENT_TYPES.add(CompositeSrvConnection_4010);
-			KNOWN_ELEMENT_TYPES.add(ContainerSrvConnection_4009);
+			KNOWN_ELEMENT_TYPES.add(Composite_2003);
+			KNOWN_ELEMENT_TYPES.add(Container_2004);
+			KNOWN_ELEMENT_TYPES.add(Node_3041);
+			KNOWN_ELEMENT_TYPES.add(NodeParameter_3042);
+			KNOWN_ELEMENT_TYPES.add(NodePublisher_3043);
+			KNOWN_ELEMENT_TYPES.add(NodeSubscriber_3044);
+			KNOWN_ELEMENT_TYPES.add(NodeSrvServer_3045);
+			KNOWN_ELEMENT_TYPES.add(NodeSrvClient_3046);
+			KNOWN_ELEMENT_TYPES.add(Composite_3047);
+			KNOWN_ELEMENT_TYPES.add(CompositePublisher_3048);
+			KNOWN_ELEMENT_TYPES.add(CompositeSubscriber_3049);
+			KNOWN_ELEMENT_TYPES.add(CompositeSrvServer_3050);
+			KNOWN_ELEMENT_TYPES.add(CompositeSrvClient_3051);
+			KNOWN_ELEMENT_TYPES.add(CompositePublisher_3052);
+			KNOWN_ELEMENT_TYPES.add(CompositeSubscriber_3053);
+			KNOWN_ELEMENT_TYPES.add(CompositeSrvServer_3054);
+			KNOWN_ELEMENT_TYPES.add(CompositeSrvClient_3055);
+			KNOWN_ELEMENT_TYPES.add(Topic_3056);
+			KNOWN_ELEMENT_TYPES.add(RobotEndPoint_3057);
+			KNOWN_ELEMENT_TYPES.add(EndPointParameter_3058);
+			KNOWN_ELEMENT_TYPES.add(EndPointPublisher_3059);
+			KNOWN_ELEMENT_TYPES.add(EndPointSubscriber_3060);
+			KNOWN_ELEMENT_TYPES.add(EndPointSrvServer_3061);
+			KNOWN_ELEMENT_TYPES.add(EndPointSrvClient_3062);
+			KNOWN_ELEMENT_TYPES.add(Node_3063);
+			KNOWN_ELEMENT_TYPES.add(NodeParameter_3064);
+			KNOWN_ELEMENT_TYPES.add(NodePublisher_3065);
+			KNOWN_ELEMENT_TYPES.add(NodeSubscriber_3066);
+			KNOWN_ELEMENT_TYPES.add(NodeSrvServer_3067);
+			KNOWN_ELEMENT_TYPES.add(NodeSrvClient_3068);
+			KNOWN_ELEMENT_TYPES.add(EnvironmentEndPoint_3069);
+			KNOWN_ELEMENT_TYPES.add(EndPointParameter_3070);
+			KNOWN_ELEMENT_TYPES.add(EndPointPublisher_3071);
+			KNOWN_ELEMENT_TYPES.add(EndPointSubscriber_3072);
+			KNOWN_ELEMENT_TYPES.add(EndPointSrvServer_3073);
+			KNOWN_ELEMENT_TYPES.add(EndPointSrvClient_3074);
+			KNOWN_ELEMENT_TYPES.add(Topic_3075);
+			KNOWN_ELEMENT_TYPES.add(MsgInterfaceConnection_4011);
+			KNOWN_ELEMENT_TYPES.add(MsgInterfaceConnection_4012);
+			KNOWN_ELEMENT_TYPES.add(CompositeMsgInterfaceExposed_4013);
+			KNOWN_ELEMENT_TYPES.add(CompositeMsgInterfaceExposed_4014);
+			KNOWN_ELEMENT_TYPES.add(EndPointSrvConnection_4015);
+			KNOWN_ELEMENT_TYPES.add(EndPointMsgConnection_4016);
+			KNOWN_ELEMENT_TYPES.add(CompositeSrvConnection_4017);
+			KNOWN_ELEMENT_TYPES.add(ContainerSrvConnection_4018);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -642,95 +686,95 @@ public class RapyutaComponentModelElementTypes {
 		case SystemEditPart.VISUAL_ID:
 			return System_1000;
 		case CompositeEditPart.VISUAL_ID:
-			return Composite_2001;
+			return Composite_2003;
 		case ContainerEditPart.VISUAL_ID:
-			return Container_2002;
+			return Container_2004;
 		case NodeEditPart.VISUAL_ID:
-			return Node_3001;
+			return Node_3041;
 		case NodeParameterEditPart.VISUAL_ID:
-			return NodeParameter_3002;
+			return NodeParameter_3042;
 		case NodePublisherEditPart.VISUAL_ID:
-			return NodePublisher_3003;
+			return NodePublisher_3043;
 		case NodeSubscriberEditPart.VISUAL_ID:
-			return NodeSubscriber_3004;
+			return NodeSubscriber_3044;
 		case NodeSrvServerEditPart.VISUAL_ID:
-			return NodeSrvServer_3005;
+			return NodeSrvServer_3045;
 		case NodeSrvClientEditPart.VISUAL_ID:
-			return NodeSrvClient_3006;
+			return NodeSrvClient_3046;
 		case Composite2EditPart.VISUAL_ID:
-			return Composite_3007;
+			return Composite_3047;
 		case CompositePublisherEditPart.VISUAL_ID:
-			return CompositePublisher_3008;
+			return CompositePublisher_3048;
 		case CompositeSubscriberEditPart.VISUAL_ID:
-			return CompositeSubscriber_3009;
+			return CompositeSubscriber_3049;
 		case CompositeSrvServerEditPart.VISUAL_ID:
-			return CompositeSrvServer_3010;
+			return CompositeSrvServer_3050;
 		case CompositeSrvClientEditPart.VISUAL_ID:
-			return CompositeSrvClient_3011;
+			return CompositeSrvClient_3051;
 		case CompositePublisher2EditPart.VISUAL_ID:
-			return CompositePublisher_3012;
+			return CompositePublisher_3052;
 		case CompositeSubscriber2EditPart.VISUAL_ID:
-			return CompositeSubscriber_3013;
+			return CompositeSubscriber_3053;
 		case CompositeSrvServer2EditPart.VISUAL_ID:
-			return CompositeSrvServer_3014;
+			return CompositeSrvServer_3054;
 		case CompositeSrvClient2EditPart.VISUAL_ID:
-			return CompositeSrvClient_3015;
+			return CompositeSrvClient_3055;
 		case TopicEditPart.VISUAL_ID:
-			return Topic_3016;
+			return Topic_3056;
 		case RobotEndPointEditPart.VISUAL_ID:
-			return RobotEndPoint_3038;
+			return RobotEndPoint_3057;
 		case EndPointParameterEditPart.VISUAL_ID:
-			return EndPointParameter_3018;
+			return EndPointParameter_3058;
 		case EndPointPublisherEditPart.VISUAL_ID:
-			return EndPointPublisher_3019;
+			return EndPointPublisher_3059;
 		case EndPointSubscriberEditPart.VISUAL_ID:
-			return EndPointSubscriber_3020;
+			return EndPointSubscriber_3060;
 		case EndPointSrvServerEditPart.VISUAL_ID:
-			return EndPointSrvServer_3021;
+			return EndPointSrvServer_3061;
 		case EndPointSrvClientEditPart.VISUAL_ID:
-			return EndPointSrvClient_3022;
+			return EndPointSrvClient_3062;
 		case Node2EditPart.VISUAL_ID:
-			return Node_3040;
+			return Node_3063;
 		case NodeParameter2EditPart.VISUAL_ID:
-			return NodeParameter_3024;
+			return NodeParameter_3064;
 		case NodePublisher2EditPart.VISUAL_ID:
-			return NodePublisher_3025;
+			return NodePublisher_3065;
 		case NodeSubscriber2EditPart.VISUAL_ID:
-			return NodeSubscriber_3026;
+			return NodeSubscriber_3066;
 		case NodeSrvServer2EditPart.VISUAL_ID:
-			return NodeSrvServer_3027;
+			return NodeSrvServer_3067;
 		case NodeSrvClient2EditPart.VISUAL_ID:
-			return NodeSrvClient_3028;
+			return NodeSrvClient_3068;
 		case EnvironmentEndPointEditPart.VISUAL_ID:
-			return EnvironmentEndPoint_3039;
+			return EnvironmentEndPoint_3069;
 		case EndPointParameter2EditPart.VISUAL_ID:
-			return EndPointParameter_3030;
+			return EndPointParameter_3070;
 		case EndPointPublisher2EditPart.VISUAL_ID:
-			return EndPointPublisher_3031;
+			return EndPointPublisher_3071;
 		case EndPointSubscriber2EditPart.VISUAL_ID:
-			return EndPointSubscriber_3032;
+			return EndPointSubscriber_3072;
 		case EndPointSrvServer2EditPart.VISUAL_ID:
-			return EndPointSrvServer_3033;
+			return EndPointSrvServer_3073;
 		case EndPointSrvClient2EditPart.VISUAL_ID:
-			return EndPointSrvClient_3034;
+			return EndPointSrvClient_3074;
 		case Topic2EditPart.VISUAL_ID:
-			return Topic_3035;
+			return Topic_3075;
 		case MsgInterfaceConnectionEditPart.VISUAL_ID:
-			return MsgInterfaceConnection_4002;
+			return MsgInterfaceConnection_4011;
 		case MsgInterfaceConnection2EditPart.VISUAL_ID:
-			return MsgInterfaceConnection_4003;
+			return MsgInterfaceConnection_4012;
 		case CompositeMsgInterfaceExposedEditPart.VISUAL_ID:
-			return CompositeMsgInterfaceExposed_4004;
+			return CompositeMsgInterfaceExposed_4013;
 		case CompositeMsgInterfaceExposed2EditPart.VISUAL_ID:
-			return CompositeMsgInterfaceExposed_4005;
+			return CompositeMsgInterfaceExposed_4014;
 		case EndPointSrvConnectionEditPart.VISUAL_ID:
-			return EndPointSrvConnection_4006;
+			return EndPointSrvConnection_4015;
 		case EndPointMsgConnectionEditPart.VISUAL_ID:
-			return EndPointMsgConnection_4007;
+			return EndPointMsgConnection_4016;
 		case CompositeSrvConnectionEditPart.VISUAL_ID:
-			return CompositeSrvConnection_4010;
+			return CompositeSrvConnection_4017;
 		case ContainerSrvConnectionEditPart.VISUAL_ID:
-			return ContainerSrvConnection_4009;
+			return ContainerSrvConnection_4018;
 		}
 		return null;
 	}

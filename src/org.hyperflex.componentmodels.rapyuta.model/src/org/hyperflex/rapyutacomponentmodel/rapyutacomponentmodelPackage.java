@@ -61,7 +61,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://rwww.hyperflex.org/componentmodels.rapyuta";
+	String eNS_URI = "http://www.hyperflex.org/componentmodels.rapyuta";
 
 	/**
 	 * The package namespace name.
@@ -126,13 +126,58 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int SYSTEM__END_POINT_MSG_CONNECTIONS = 3;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__NAME = 4;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__URL = 5;
+
+	/**
+	 * The feature id for the '<em><b>User ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__USER_ID = 6;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__PASSWORD = 7;
+
+	/**
+	 * The feature id for the '<em><b>Robot ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__ROBOT_ID = 8;
+
+	/**
 	 * The number of structural features of the '<em>System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_FEATURE_COUNT = 4;
+	int SYSTEM_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.ContainerImpl <em>Container</em>}' class.
@@ -759,13 +804,22 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int TOPIC__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Msg</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOPIC__MSG = 1;
+
+	/**
 	 * The number of structural features of the '<em>Topic</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOPIC_FEATURE_COUNT = 1;
+	int TOPIC_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -898,13 +952,22 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int SRV_SERVER__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Srv</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SRV_SERVER__SRV = 1;
+
+	/**
 	 * The number of structural features of the '<em>Srv Server</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SRV_SERVER_FEATURE_COUNT = 1;
+	int SRV_SERVER_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.SrvClientImpl <em>Srv Client</em>}' class.
@@ -926,13 +989,22 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int SRV_CLIENT__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Srv</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SRV_CLIENT__SRV = 1;
+
+	/**
 	 * The number of structural features of the '<em>Srv Client</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SRV_CLIENT_FEATURE_COUNT = 1;
+	int SRV_CLIENT_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.CompositeSrvServerImpl <em>Composite Srv Server</em>}' class.
@@ -952,6 +1024,15 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_SRV_SERVER__NAME = SRV_SERVER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Srv</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_SRV_SERVER__SRV = SRV_SERVER__SRV;
 
 	/**
 	 * The feature id for the '<em><b>Promote</b></em>' reference.
@@ -991,6 +1072,15 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int NODE_SRV_SERVER__NAME = SRV_SERVER__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Srv</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_SRV_SERVER__SRV = SRV_SERVER__SRV;
+
+	/**
 	 * The feature id for the '<em><b>Srv Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1028,6 +1118,15 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int COMPOSITE_SRV_CLIENT__NAME = SRV_CLIENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Srv</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_SRV_CLIENT__SRV = SRV_CLIENT__SRV;
+
+	/**
 	 * The feature id for the '<em><b>Promote</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1063,6 +1162,15 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int NODE_SRV_CLIENT__NAME = SRV_CLIENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Srv</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_SRV_CLIENT__SRV = SRV_CLIENT__SRV;
 
 	/**
 	 * The feature id for the '<em><b>Srv Name</b></em>' attribute.
@@ -1506,6 +1614,15 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int END_POINT_SRV_SERVER__NAME = SRV_SERVER__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Srv</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_POINT_SRV_SERVER__SRV = SRV_SERVER__SRV;
+
+	/**
 	 * The number of structural features of the '<em>End Point Srv Server</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1532,6 +1649,15 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int END_POINT_SRV_CLIENT__NAME = SRV_CLIENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Srv</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_POINT_SRV_CLIENT__SRV = SRV_CLIENT__SRV;
 
 	/**
 	 * The number of structural features of the '<em>End Point Srv Client</em>' class.
@@ -1753,6 +1879,61 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSystem_EndPointMsgConnections();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.rapyutacomponentmodel.System#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.System#getName()
+	 * @see #getSystem()
+	 * @generated
+	 */
+	EAttribute getSystem_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.rapyutacomponentmodel.System#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.System#getUrl()
+	 * @see #getSystem()
+	 * @generated
+	 */
+	EAttribute getSystem_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.rapyutacomponentmodel.System#getUserID <em>User ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User ID</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.System#getUserID()
+	 * @see #getSystem()
+	 * @generated
+	 */
+	EAttribute getSystem_UserID();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.rapyutacomponentmodel.System#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.System#getPassword()
+	 * @see #getSystem()
+	 * @generated
+	 */
+	EAttribute getSystem_Password();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.rapyutacomponentmodel.System#getRobotID <em>Robot ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Robot ID</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.System#getRobotID()
+	 * @see #getSystem()
+	 * @generated
+	 */
+	EAttribute getSystem_RobotID();
 
 	/**
 	 * Returns the meta object for class '{@link org.hyperflex.rapyutacomponentmodel.Container <em>Container</em>}'.
@@ -2172,6 +2353,17 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	EAttribute getTopic_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.rapyutacomponentmodel.Topic#getMsg <em>Msg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Msg</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.Topic#getMsg()
+	 * @see #getTopic()
+	 * @generated
+	 */
+	EAttribute getTopic_Msg();
+
+	/**
 	 * Returns the meta object for class '{@link org.hyperflex.rapyutacomponentmodel.Parameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2267,6 +2459,17 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	EAttribute getSrvServer_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.rapyutacomponentmodel.SrvServer#getSrv <em>Srv</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Srv</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.SrvServer#getSrv()
+	 * @see #getSrvServer()
+	 * @generated
+	 */
+	EAttribute getSrvServer_Srv();
+
+	/**
 	 * Returns the meta object for class '{@link org.hyperflex.rapyutacomponentmodel.SrvClient <em>Srv Client</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2286,6 +2489,17 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSrvClient_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.rapyutacomponentmodel.SrvClient#getSrv <em>Srv</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Srv</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.SrvClient#getSrv()
+	 * @see #getSrvClient()
+	 * @generated
+	 */
+	EAttribute getSrvClient_Srv();
 
 	/**
 	 * Returns the meta object for class '{@link org.hyperflex.rapyutacomponentmodel.CompositeSrvServer <em>Composite Srv Server</em>}'.
@@ -2719,6 +2933,46 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 		EReference SYSTEM__END_POINT_MSG_CONNECTIONS = eINSTANCE.getSystem_EndPointMsgConnections();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SYSTEM__NAME = eINSTANCE.getSystem_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SYSTEM__URL = eINSTANCE.getSystem_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>User ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SYSTEM__USER_ID = eINSTANCE.getSystem_UserID();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SYSTEM__PASSWORD = eINSTANCE.getSystem_Password();
+
+		/**
+		 * The meta object literal for the '<em><b>Robot ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SYSTEM__ROBOT_ID = eINSTANCE.getSystem_RobotID();
+
+		/**
 		 * The meta object literal for the '{@link org.hyperflex.rapyutacomponentmodel.impl.ContainerImpl <em>Container</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3055,6 +3309,14 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 		EAttribute TOPIC__NAME = eINSTANCE.getTopic_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Msg</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOPIC__MSG = eINSTANCE.getTopic_Msg();
+
+		/**
 		 * The meta object literal for the '{@link org.hyperflex.rapyutacomponentmodel.impl.ParameterImpl <em>Parameter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3135,6 +3397,14 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 		EAttribute SRV_SERVER__NAME = eINSTANCE.getSrvServer_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Srv</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SRV_SERVER__SRV = eINSTANCE.getSrvServer_Srv();
+
+		/**
 		 * The meta object literal for the '{@link org.hyperflex.rapyutacomponentmodel.impl.SrvClientImpl <em>Srv Client</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3151,6 +3421,14 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SRV_CLIENT__NAME = eINSTANCE.getSrvClient_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Srv</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SRV_CLIENT__SRV = eINSTANCE.getSrvClient_Srv();
 
 		/**
 		 * The meta object literal for the '{@link org.hyperflex.rapyutacomponentmodel.impl.CompositeSrvServerImpl <em>Composite Srv Server</em>}' class.

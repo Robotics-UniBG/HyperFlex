@@ -70,7 +70,7 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2001;
+	public static final int VISUAL_ID = 2003;
 
 	/**
 	 * @generated

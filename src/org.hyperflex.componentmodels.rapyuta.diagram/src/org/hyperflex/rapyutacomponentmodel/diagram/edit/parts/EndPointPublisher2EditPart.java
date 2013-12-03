@@ -64,7 +64,7 @@ public class EndPointPublisher2EditPart extends AbstractBorderItemEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3031;
+	public static final int VISUAL_ID = 3071;
 
 	/**
 	 * @generated
@@ -226,9 +226,9 @@ public class EndPointPublisher2EditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
-		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
-		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
-		types.add(RapyutaComponentModelElementTypes.EndPointMsgConnection_4007);
+		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
+		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012);
+		types.add(RapyutaComponentModelElementTypes.EndPointMsgConnection_4016);
 		return types;
 	}
 
@@ -239,22 +239,22 @@ public class EndPointPublisher2EditPart extends AbstractBorderItemEditPart {
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
 		}
 		if (targetEditPart instanceof Topic2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
 		}
 		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012);
 		}
 		if (targetEditPart instanceof Topic2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012);
 		}
 		if (targetEditPart instanceof EndPointSubscriberEditPart) {
-			types.add(RapyutaComponentModelElementTypes.EndPointMsgConnection_4007);
+			types.add(RapyutaComponentModelElementTypes.EndPointMsgConnection_4016);
 		}
 		if (targetEditPart instanceof EndPointSubscriber2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.EndPointMsgConnection_4007);
+			types.add(RapyutaComponentModelElementTypes.EndPointMsgConnection_4016);
 		}
 		return types;
 	}
@@ -264,15 +264,15 @@ public class EndPointPublisher2EditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002) {
-			types.add(RapyutaComponentModelElementTypes.Topic_3016);
-			types.add(RapyutaComponentModelElementTypes.Topic_3035);
-		} else if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003) {
-			types.add(RapyutaComponentModelElementTypes.Topic_3016);
-			types.add(RapyutaComponentModelElementTypes.Topic_3035);
-		} else if (relationshipType == RapyutaComponentModelElementTypes.EndPointMsgConnection_4007) {
-			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3020);
-			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3032);
+		if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011) {
+			types.add(RapyutaComponentModelElementTypes.Topic_3056);
+			types.add(RapyutaComponentModelElementTypes.Topic_3075);
+		} else if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012) {
+			types.add(RapyutaComponentModelElementTypes.Topic_3056);
+			types.add(RapyutaComponentModelElementTypes.Topic_3075);
+		} else if (relationshipType == RapyutaComponentModelElementTypes.EndPointMsgConnection_4016) {
+			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3060);
+			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3072);
 		}
 		return types;
 	}

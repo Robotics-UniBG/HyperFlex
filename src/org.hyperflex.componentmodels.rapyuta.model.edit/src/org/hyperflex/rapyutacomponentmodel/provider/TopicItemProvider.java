@@ -32,9 +32,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -45,7 +43,6 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import org.hyperflex.rapyutacomponentmodel.Topic;
 import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
 
@@ -85,6 +82,7 @@ public class TopicItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addMsgPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -103,6 +101,28 @@ public class TopicItemProvider
 				 getString("_UI_Topic_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Topic_name_feature", "_UI_Topic_type"),
 				 rapyutacomponentmodelPackage.Literals.TOPIC__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Msg feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMsgPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Topic_msg_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Topic_msg_feature", "_UI_Topic_type"),
+				 rapyutacomponentmodelPackage.Literals.TOPIC__MSG,
 				 true,
 				 false,
 				 false,
@@ -149,6 +169,7 @@ public class TopicItemProvider
 
 		switch (notification.getFeatureID(Topic.class)) {
 			case rapyutacomponentmodelPackage.TOPIC__NAME:
+			case rapyutacomponentmodelPackage.TOPIC__MSG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

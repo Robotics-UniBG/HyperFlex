@@ -25,17 +25,13 @@
  * 
  *] 
 <launch>
-[%=out.startPreserve("<!--", "-->", "additional custom Launchfile statements in the beginning", true)%]
-[%=out.stopPreserve()%]
   
 [%  
 var compositeTemplate := TemplateFactory.load('composite.egl');
-compositeTemplate.populate('composite', mainComposite);
+compositeTemplate.populate('composite', composite);
 out.print(compositeTemplate.process());
 %]
 
-[%=out.startPreserve("<!--", "-->", "additional custom Launchfile statements in the end of launch file", true)%]
-[%=out.stopPreserve()%]
 
 </launch>
 

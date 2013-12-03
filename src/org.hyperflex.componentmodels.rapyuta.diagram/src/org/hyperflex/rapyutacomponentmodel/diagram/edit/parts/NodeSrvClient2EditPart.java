@@ -64,7 +64,7 @@ public class NodeSrvClient2EditPart extends AbstractBorderItemEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3028;
+	public static final int VISUAL_ID = 3068;
 
 	/**
 	 * @generated
@@ -226,8 +226,8 @@ public class NodeSrvClient2EditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4010);
-		types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4009);
+		types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
+		types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 		return types;
 	}
 
@@ -238,40 +238,40 @@ public class NodeSrvClient2EditPart extends AbstractBorderItemEditPart {
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof NodeSrvServerEditPart) {
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4010);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
 		}
 		if (targetEditPart instanceof CompositeSrvServerEditPart) {
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4010);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
 		}
 		if (targetEditPart instanceof CompositeSrvServer2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4010);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
 		}
 		if (targetEditPart instanceof EndPointSrvServerEditPart) {
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4010);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
 		}
 		if (targetEditPart instanceof NodeSrvServer2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4010);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
 		}
 		if (targetEditPart instanceof EndPointSrvServer2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4010);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
 		}
 		if (targetEditPart instanceof NodeSrvServerEditPart) {
-			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4009);
+			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 		}
 		if (targetEditPart instanceof CompositeSrvServerEditPart) {
-			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4009);
+			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 		}
 		if (targetEditPart instanceof CompositeSrvServer2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4009);
+			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 		}
 		if (targetEditPart instanceof EndPointSrvServerEditPart) {
-			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4009);
+			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 		}
 		if (targetEditPart instanceof NodeSrvServer2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4009);
+			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 		}
 		if (targetEditPart instanceof EndPointSrvServer2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4009);
+			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 		}
 		return types;
 	}
@@ -281,20 +281,20 @@ public class NodeSrvClient2EditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == RapyutaComponentModelElementTypes.CompositeSrvConnection_4010) {
-			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3005);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3010);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3014);
-			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3021);
-			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3027);
-			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3033);
-		} else if (relationshipType == RapyutaComponentModelElementTypes.ContainerSrvConnection_4009) {
-			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3005);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3010);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3014);
-			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3021);
-			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3027);
-			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3033);
+		if (relationshipType == RapyutaComponentModelElementTypes.CompositeSrvConnection_4017) {
+			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3045);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3050);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3054);
+			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3061);
+			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3067);
+			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3073);
+		} else if (relationshipType == RapyutaComponentModelElementTypes.ContainerSrvConnection_4018) {
+			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3045);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3050);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3054);
+			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3061);
+			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3067);
+			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3073);
 		}
 		return types;
 	}

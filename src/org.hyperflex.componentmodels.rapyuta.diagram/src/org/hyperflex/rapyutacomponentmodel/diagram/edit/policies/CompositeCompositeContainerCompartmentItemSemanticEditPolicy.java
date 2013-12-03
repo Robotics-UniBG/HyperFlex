@@ -44,25 +44,25 @@ public class CompositeCompositeContainerCompartmentItemSemanticEditPolicy
 	 * @generated
 	 */
 	public CompositeCompositeContainerCompartmentItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Composite_2001);
+		super(RapyutaComponentModelElementTypes.Composite_2003);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.Node_3001 == req.getElementType()) {
+		if (RapyutaComponentModelElementTypes.Node_3041 == req.getElementType()) {
 			return getGEFWrapper(new NodeCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.Composite_3007 == req
+		if (RapyutaComponentModelElementTypes.Composite_3047 == req
 				.getElementType()) {
 			return getGEFWrapper(new Composite2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.Topic_3016 == req
+		if (RapyutaComponentModelElementTypes.Topic_3056 == req
 				.getElementType()) {
 			return getGEFWrapper(new TopicCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.RobotEndPoint_3038 == req
+		if (RapyutaComponentModelElementTypes.RobotEndPoint_3057 == req
 				.getElementType()) {
 			return getGEFWrapper(new RobotEndPointCreateCommand(req));
 		}

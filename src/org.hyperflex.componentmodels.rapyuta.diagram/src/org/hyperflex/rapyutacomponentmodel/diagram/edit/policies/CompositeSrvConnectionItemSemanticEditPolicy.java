@@ -41,7 +41,7 @@ public class CompositeSrvConnectionItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public CompositeSrvConnectionItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.CompositeSrvConnection_4010);
+		super(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
 	}
 
 	/**

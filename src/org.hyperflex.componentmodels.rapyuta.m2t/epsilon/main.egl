@@ -1,17 +1,24 @@
 [%
 	
-	var mainComposite : Composite := Composite.allInstances().at(0);
-	//var composite : Composite := system.composite;
+	var rapyutaHelper = new Native("org.hyperflex.componentmodels.rapyuta.m2t.tools.RapyutaLaunchTools");
+  
+    var composite : Composite := Composite.allInstances().at(0);
+  	var system : System := rapyutaHelper.getSystem(composite);
+	var seq : Sequence := rapyutaHelper.getSystemComposites(composite);
 	
-	//launch File
-	var launchTemplate := TemplateFactory.load('launchFile.egl');
-	launchTemplate.populate('mainComposite', mainComposite);
-	var fileName := mainComposite.name + '.launch';
+	for(composite in system.composites) {
+		var launchTemplate := TemplateFactory.load('compositeLaunchFile.egl');
+		launchTemplate.populate('system', system);
+		launchTemplate.populate('composite', composite);
+		var fileName := composite.name + '_composite.launch';
+		launchTemplate.generate(fileName);
+	}
+	
+	var launchTemplate := TemplateFactory.load('containerLaunchFile.egl');
+	launchTemplate.populate('system', system);
+	var fileName := system.name + '.launch';
 	launchTemplate.generate(fileName);
 	
-	//manifest
-	//var manifestTemplate := TemplateFactory.load('manifest.egl');
-	//manifestTemplate.populate('mainComposite', mainComposite);
-	//manifestTemplate.generate('manifest.xml');
+	
 	
 %]

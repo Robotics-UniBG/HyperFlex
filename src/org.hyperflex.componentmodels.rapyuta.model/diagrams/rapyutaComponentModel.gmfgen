@@ -24,7 +24,7 @@
     <domainDiagramElement
         href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/System"/>
     <childNodes
-        visualID="3001"
+        visualID="3041"
         editPartClassName="NodeEditPart"
         itemSemanticEditPolicyClassName="NodeItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeViewFactory"
@@ -52,7 +52,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/components"/>
       </modelFacet>
       <labels
-          visualID="5002"
+          visualID="5020"
           editPartClassName="NodeNameEditPart"
           itemSemanticEditPolicyClassName="NodeNameItemSemanticEditPolicy"
           notationViewFactoryClassName="NodeNameViewFactory">
@@ -75,7 +75,7 @@
       </labels>
     </childNodes>
     <childNodes
-        visualID="3002"
+        visualID="3042"
         editPartClassName="NodeParameterEditPart"
         itemSemanticEditPolicyClassName="NodeParameterItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeParameterViewFactory"
@@ -101,7 +101,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Node/parameters"/>
       </modelFacet>
       <labels
-          visualID="5001"
+          visualID="5019"
           editPartClassName="NodeParameterNameEditPart"
           itemSemanticEditPolicyClassName="NodeParameterNameItemSemanticEditPolicy"
           notationViewFactoryClassName="NodeParameterNameViewFactory">
@@ -121,7 +121,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3003"
+        visualID="3043"
         editPartClassName="NodePublisherEditPart"
         itemSemanticEditPolicyClassName="NodePublisherItemSemanticEditPolicy"
         notationViewFactoryClassName="NodePublisherViewFactory"
@@ -158,7 +158,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3004"
+        visualID="3044"
         editPartClassName="NodeSubscriberEditPart"
         itemSemanticEditPolicyClassName="NodeSubscriberItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeSubscriberViewFactory"
@@ -195,7 +195,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3005"
+        visualID="3045"
         editPartClassName="NodeSrvServerEditPart"
         itemSemanticEditPolicyClassName="NodeSrvServerItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeSrvServerViewFactory"
@@ -232,7 +232,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3006"
+        visualID="3046"
         editPartClassName="NodeSrvClientEditPart"
         itemSemanticEditPolicyClassName="NodeSrvClientItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeSrvClientViewFactory"
@@ -268,7 +268,7 @@
       </modelFacet>
     </childNodes>
     <childNodes
-        visualID="3007"
+        visualID="3047"
         editPartClassName="Composite2EditPart"
         itemSemanticEditPolicyClassName="Composite2ItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeViewFactory"
@@ -295,7 +295,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/components"/>
       </modelFacet>
       <labels
-          visualID="5003"
+          visualID="5021"
           editPartClassName="CompositeName2EditPart"
           itemSemanticEditPolicyClassName="CompositeName2ItemSemanticEditPolicy"
           notationViewFactoryClassName="CompositeNameViewFactory">
@@ -320,7 +320,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3008"
+        visualID="3048"
         editPartClassName="CompositePublisherEditPart"
         itemSemanticEditPolicyClassName="CompositePublisherItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositePublisherViewFactory"
@@ -357,7 +357,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3009"
+        visualID="3049"
         editPartClassName="CompositeSubscriberEditPart"
         itemSemanticEditPolicyClassName="CompositeSubscriberItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeSubscriberViewFactory"
@@ -394,7 +394,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3010"
+        visualID="3050"
         editPartClassName="CompositeSrvServerEditPart"
         itemSemanticEditPolicyClassName="CompositeSrvServerItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeSrvServerViewFactory"
@@ -431,7 +431,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3011"
+        visualID="3051"
         editPartClassName="CompositeSrvClientEditPart"
         itemSemanticEditPolicyClassName="CompositeSrvClientItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeSrvClientViewFactory"
@@ -468,7 +468,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3012"
+        visualID="3052"
         editPartClassName="CompositePublisher2EditPart"
         itemSemanticEditPolicyClassName="CompositePublisher2ItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositePublisherViewFactory"
@@ -505,7 +505,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3013"
+        visualID="3053"
         editPartClassName="CompositeSubscriber2EditPart"
         itemSemanticEditPolicyClassName="CompositeSubscriber2ItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeSubscriberViewFactory"
@@ -542,7 +542,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3014"
+        visualID="3054"
         editPartClassName="CompositeSrvServer2EditPart"
         itemSemanticEditPolicyClassName="CompositeSrvServer2ItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeSrvServerViewFactory"
@@ -579,7 +579,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3015"
+        visualID="3055"
         editPartClassName="CompositeSrvClient2EditPart"
         itemSemanticEditPolicyClassName="CompositeSrvClient2ItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeSrvClientViewFactory"
@@ -615,7 +615,7 @@
       </modelFacet>
     </childNodes>
     <childNodes
-        visualID="3016"
+        visualID="3056"
         editPartClassName="TopicEditPart"
         itemSemanticEditPolicyClassName="TopicItemSemanticEditPolicy"
         notationViewFactoryClassName="TopicViewFactory"
@@ -645,7 +645,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/topics"/>
       </modelFacet>
       <labels
-          visualID="5004"
+          visualID="5022"
           editPartClassName="TopicNameEditPart"
           itemSemanticEditPolicyClassName="TopicNameItemSemanticEditPolicy"
           notationViewFactoryClassName="TopicNameViewFactory">
@@ -668,7 +668,7 @@
       </labels>
     </childNodes>
     <childNodes
-        visualID="3038"
+        visualID="3057"
         editPartClassName="RobotEndPointEditPart"
         itemSemanticEditPolicyClassName="RobotEndPointItemSemanticEditPolicy"
         notationViewFactoryClassName="RobotEndPointViewFactory"
@@ -696,7 +696,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/endPoint"/>
       </modelFacet>
       <labels
-          visualID="5016"
+          visualID="5024"
           editPartClassName="RobotEndPointNameEditPart"
           itemSemanticEditPolicyClassName="RobotEndPointNameItemSemanticEditPolicy"
           notationViewFactoryClassName="RobotEndPointNameViewFactory">
@@ -719,7 +719,7 @@
       </labels>
     </childNodes>
     <childNodes
-        visualID="3018"
+        visualID="3058"
         editPartClassName="EndPointParameterEditPart"
         itemSemanticEditPolicyClassName="EndPointParameterItemSemanticEditPolicy"
         notationViewFactoryClassName="EndPointParameterViewFactory"
@@ -745,7 +745,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/EndPoint/parameters"/>
       </modelFacet>
       <labels
-          visualID="5005"
+          visualID="5023"
           editPartClassName="EndPointParameterNameEditPart"
           itemSemanticEditPolicyClassName="EndPointParameterNameItemSemanticEditPolicy"
           notationViewFactoryClassName="EndPointParameterNameViewFactory">
@@ -765,7 +765,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3019"
+        visualID="3059"
         editPartClassName="EndPointPublisherEditPart"
         itemSemanticEditPolicyClassName="EndPointPublisherItemSemanticEditPolicy"
         notationViewFactoryClassName="EndPointPublisherViewFactory"
@@ -802,7 +802,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3020"
+        visualID="3060"
         editPartClassName="EndPointSubscriberEditPart"
         itemSemanticEditPolicyClassName="EndPointSubscriberItemSemanticEditPolicy"
         notationViewFactoryClassName="EndPointSubscriberViewFactory"
@@ -839,7 +839,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3021"
+        visualID="3061"
         editPartClassName="EndPointSrvServerEditPart"
         itemSemanticEditPolicyClassName="EndPointSrvServerItemSemanticEditPolicy"
         notationViewFactoryClassName="EndPointSrvServerViewFactory"
@@ -876,7 +876,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3022"
+        visualID="3062"
         editPartClassName="EndPointSrvClientEditPart"
         itemSemanticEditPolicyClassName="EndPointSrvClientItemSemanticEditPolicy"
         notationViewFactoryClassName="EndPointSrvClientViewFactory"
@@ -912,7 +912,7 @@
       </modelFacet>
     </childNodes>
     <childNodes
-        visualID="3040"
+        visualID="3063"
         editPartClassName="Node2EditPart"
         itemSemanticEditPolicyClassName="Node2ItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeViewFactory"
@@ -940,7 +940,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/components"/>
       </modelFacet>
       <labels
-          visualID="5018"
+          visualID="5027"
           editPartClassName="NodeName2EditPart"
           itemSemanticEditPolicyClassName="NodeName2ItemSemanticEditPolicy"
           notationViewFactoryClassName="NodeNameViewFactory">
@@ -963,7 +963,7 @@
       </labels>
     </childNodes>
     <childNodes
-        visualID="3024"
+        visualID="3064"
         editPartClassName="NodeParameter2EditPart"
         itemSemanticEditPolicyClassName="NodeParameter2ItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeParameterViewFactory"
@@ -989,7 +989,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Node/parameters"/>
       </modelFacet>
       <labels
-          visualID="5008"
+          visualID="5026"
           editPartClassName="NodeParameterName2EditPart"
           itemSemanticEditPolicyClassName="NodeParameterName2ItemSemanticEditPolicy"
           notationViewFactoryClassName="NodeParameterNameViewFactory">
@@ -1009,7 +1009,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3025"
+        visualID="3065"
         editPartClassName="NodePublisher2EditPart"
         itemSemanticEditPolicyClassName="NodePublisher2ItemSemanticEditPolicy"
         notationViewFactoryClassName="NodePublisherViewFactory"
@@ -1046,7 +1046,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3026"
+        visualID="3066"
         editPartClassName="NodeSubscriber2EditPart"
         itemSemanticEditPolicyClassName="NodeSubscriber2ItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeSubscriberViewFactory"
@@ -1083,7 +1083,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3027"
+        visualID="3067"
         editPartClassName="NodeSrvServer2EditPart"
         itemSemanticEditPolicyClassName="NodeSrvServer2ItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeSrvServerViewFactory"
@@ -1120,7 +1120,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3028"
+        visualID="3068"
         editPartClassName="NodeSrvClient2EditPart"
         itemSemanticEditPolicyClassName="NodeSrvClient2ItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeSrvClientViewFactory"
@@ -1156,7 +1156,7 @@
       </modelFacet>
     </childNodes>
     <childNodes
-        visualID="3039"
+        visualID="3069"
         editPartClassName="EnvironmentEndPointEditPart"
         itemSemanticEditPolicyClassName="EnvironmentEndPointItemSemanticEditPolicy"
         notationViewFactoryClassName="EnvironmentEndPointViewFactory"
@@ -1184,7 +1184,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/endPoint"/>
       </modelFacet>
       <labels
-          visualID="5017"
+          visualID="5029"
           editPartClassName="EnvironmentEndPointNameEditPart"
           itemSemanticEditPolicyClassName="EnvironmentEndPointNameItemSemanticEditPolicy"
           notationViewFactoryClassName="EnvironmentEndPointNameViewFactory">
@@ -1207,7 +1207,7 @@
       </labels>
     </childNodes>
     <childNodes
-        visualID="3030"
+        visualID="3070"
         editPartClassName="EndPointParameter2EditPart"
         itemSemanticEditPolicyClassName="EndPointParameter2ItemSemanticEditPolicy"
         notationViewFactoryClassName="EndPointParameterViewFactory"
@@ -1233,7 +1233,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/EndPoint/parameters"/>
       </modelFacet>
       <labels
-          visualID="5010"
+          visualID="5028"
           editPartClassName="EndPointParameterName2EditPart"
           itemSemanticEditPolicyClassName="EndPointParameterName2ItemSemanticEditPolicy"
           notationViewFactoryClassName="EndPointParameterNameViewFactory">
@@ -1253,7 +1253,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3031"
+        visualID="3071"
         editPartClassName="EndPointPublisher2EditPart"
         itemSemanticEditPolicyClassName="EndPointPublisher2ItemSemanticEditPolicy"
         notationViewFactoryClassName="EndPointPublisherViewFactory"
@@ -1290,7 +1290,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3032"
+        visualID="3072"
         editPartClassName="EndPointSubscriber2EditPart"
         itemSemanticEditPolicyClassName="EndPointSubscriber2ItemSemanticEditPolicy"
         notationViewFactoryClassName="EndPointSubscriberViewFactory"
@@ -1327,7 +1327,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3033"
+        visualID="3073"
         editPartClassName="EndPointSrvServer2EditPart"
         itemSemanticEditPolicyClassName="EndPointSrvServer2ItemSemanticEditPolicy"
         notationViewFactoryClassName="EndPointSrvServerViewFactory"
@@ -1364,7 +1364,7 @@
     </childNodes>
     <childNodes
         xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3034"
+        visualID="3074"
         editPartClassName="EndPointSrvClient2EditPart"
         itemSemanticEditPolicyClassName="EndPointSrvClient2ItemSemanticEditPolicy"
         notationViewFactoryClassName="EndPointSrvClientViewFactory"
@@ -1400,7 +1400,7 @@
       </modelFacet>
     </childNodes>
     <childNodes
-        visualID="3035"
+        visualID="3075"
         editPartClassName="Topic2EditPart"
         itemSemanticEditPolicyClassName="Topic2ItemSemanticEditPolicy"
         notationViewFactoryClassName="TopicViewFactory"
@@ -1430,7 +1430,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/topics"/>
       </modelFacet>
       <labels
-          visualID="5012"
+          visualID="5030"
           editPartClassName="TopicName2EditPart"
           itemSemanticEditPolicyClassName="TopicName2ItemSemanticEditPolicy"
           notationViewFactoryClassName="TopicNameViewFactory">
@@ -1453,7 +1453,7 @@
       </labels>
     </childNodes>
     <topLevelNodes
-        visualID="2001"
+        visualID="2003"
         editPartClassName="CompositeEditPart"
         itemSemanticEditPolicyClassName="CompositeItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeViewFactory"
@@ -1480,7 +1480,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/System/composites"/>
       </modelFacet>
       <labels
-          visualID="5007"
+          visualID="5025"
           editPartClassName="CompositeNameEditPart"
           itemSemanticEditPolicyClassName="CompositeNameItemSemanticEditPolicy"
           notationViewFactoryClassName="CompositeNameViewFactory">
@@ -1504,7 +1504,7 @@
       </labels>
     </topLevelNodes>
     <topLevelNodes
-        visualID="2002"
+        visualID="2004"
         editPartClassName="ContainerEditPart"
         itemSemanticEditPolicyClassName="ContainerItemSemanticEditPolicy"
         notationViewFactoryClassName="ContainerViewFactory"
@@ -1530,7 +1530,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/System/containers"/>
       </modelFacet>
       <labels
-          visualID="5013"
+          visualID="5031"
           editPartClassName="ContainerNameEditPart"
           itemSemanticEditPolicyClassName="ContainerNameItemSemanticEditPolicy"
           notationViewFactoryClassName="ContainerNameViewFactory">
@@ -1555,7 +1555,7 @@
       </labels>
     </topLevelNodes>
     <links
-        visualID="4002"
+        visualID="4011"
         editPartClassName="MsgInterfaceConnectionEditPart"
         itemSemanticEditPolicyClassName="MsgInterfaceConnectionItemSemanticEditPolicy"
         notationViewFactoryClassName="MsgInterfaceConnectionViewFactory"
@@ -1578,7 +1578,7 @@
           sourceEnd="//@expressionProviders/@providers.0/@expressions.0"/>
     </links>
     <links
-        visualID="4003"
+        visualID="4012"
         editPartClassName="MsgInterfaceConnection2EditPart"
         itemSemanticEditPolicyClassName="MsgInterfaceConnection2ItemSemanticEditPolicy"
         notationViewFactoryClassName="MsgInterfaceConnectionViewFactory"
@@ -1601,7 +1601,7 @@
           sourceEnd="//@expressionProviders/@providers.0/@expressions.1"/>
     </links>
     <links
-        visualID="4004"
+        visualID="4013"
         editPartClassName="CompositeMsgInterfaceExposedEditPart"
         itemSemanticEditPolicyClassName="CompositeMsgInterfaceExposedItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeMsgInterfaceExposedViewFactory"
@@ -1624,7 +1624,7 @@
           sourceEnd="//@expressionProviders/@providers.0/@expressions.2"/>
     </links>
     <links
-        visualID="4005"
+        visualID="4014"
         editPartClassName="CompositeMsgInterfaceExposed2EditPart"
         itemSemanticEditPolicyClassName="CompositeMsgInterfaceExposed2ItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeMsgInterfaceExposedViewFactory"
@@ -1647,7 +1647,7 @@
           sourceEnd="//@expressionProviders/@providers.0/@expressions.3"/>
     </links>
     <links
-        visualID="4006"
+        visualID="4015"
         editPartClassName="EndPointSrvConnectionEditPart"
         itemSemanticEditPolicyClassName="EndPointSrvConnectionItemSemanticEditPolicy"
         notationViewFactoryClassName="EndPointSrvConnectionViewFactory"
@@ -1676,7 +1676,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/EndPointSrvConnection/server"/>
       </modelFacet>
       <labels
-          visualID="6002"
+          visualID="6007"
           editPartClassName="WrappingLabelEditPart"
           itemSemanticEditPolicyClassName="WrappingLabelItemSemanticEditPolicy"
           notationViewFactoryClassName="EndPointSrvConnectionLabelViewFactory">
@@ -1701,7 +1701,7 @@
           targetEnd="//@expressionProviders/@providers.0/@expressions.5"/>
     </links>
     <links
-        visualID="4007"
+        visualID="4016"
         editPartClassName="EndPointMsgConnectionEditPart"
         itemSemanticEditPolicyClassName="EndPointMsgConnectionItemSemanticEditPolicy"
         notationViewFactoryClassName="EndPointMsgConnectionViewFactory"
@@ -1730,7 +1730,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/EndPointMsgConnection/subscriber"/>
       </modelFacet>
       <labels
-          visualID="6003"
+          visualID="6008"
           editPartClassName="WrappingLabel2EditPart"
           itemSemanticEditPolicyClassName="WrappingLabel2ItemSemanticEditPolicy"
           notationViewFactoryClassName="EndPointMsgConnectionLabelViewFactory">
@@ -1755,7 +1755,7 @@
           targetEnd="//@expressionProviders/@providers.0/@expressions.7"/>
     </links>
     <links
-        visualID="4010"
+        visualID="4017"
         editPartClassName="CompositeSrvConnectionEditPart"
         itemSemanticEditPolicyClassName="CompositeSrvConnectionItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeSrvConnectionViewFactory"
@@ -1784,7 +1784,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/SrvConnection/server"/>
       </modelFacet>
       <labels
-          visualID="6006"
+          visualID="6009"
           editPartClassName="WrappingLabel3EditPart"
           itemSemanticEditPolicyClassName="WrappingLabel3ItemSemanticEditPolicy"
           notationViewFactoryClassName="CompositeSrvConnectionLabelViewFactory">
@@ -1809,7 +1809,7 @@
           targetEnd="//@expressionProviders/@providers.0/@expressions.9"/>
     </links>
     <links
-        visualID="4009"
+        visualID="4018"
         editPartClassName="ContainerSrvConnectionEditPart"
         itemSemanticEditPolicyClassName="ContainerSrvConnectionItemSemanticEditPolicy"
         notationViewFactoryClassName="ContainerSrvConnectionViewFactory"
@@ -1838,7 +1838,7 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/SrvConnection/server"/>
       </modelFacet>
       <labels
-          visualID="6005"
+          visualID="6010"
           editPartClassName="WrappingLabel4EditPart"
           itemSemanticEditPolicyClassName="WrappingLabel4ItemSemanticEditPolicy"
           notationViewFactoryClassName="ContainerSrvConnectionLabelViewFactory">
@@ -1863,7 +1863,7 @@
           targetEnd="//@expressionProviders/@providers.0/@expressions.11"/>
     </links>
     <compartments
-        visualID="7001"
+        visualID="7012"
         editPartClassName="CompositeCompositeContainerCompartmentEditPart"
         itemSemanticEditPolicyClassName="CompositeCompositeContainerCompartmentItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeCompositeContainerCompartmentViewFactory"
@@ -1882,7 +1882,7 @@
           figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
     <compartments
-        visualID="7002"
+        visualID="7013"
         editPartClassName="NodePropertiesCompartmentEditPart"
         itemSemanticEditPolicyClassName="NodePropertiesCompartmentItemSemanticEditPolicy"
         notationViewFactoryClassName="NodePropertiesCompartmentViewFactory"
@@ -1898,7 +1898,7 @@
           figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
     <compartments
-        visualID="7009"
+        visualID="7014"
         editPartClassName="RobotEndPointEndPointPropertiesCompartmentEditPart"
         itemSemanticEditPolicyClassName="RobotEndPointEndPointPropertiesCompartmentItemSemanticEditPolicy"
         notationViewFactoryClassName="RobotEndPointEndPointPropertiesCompartmentViewFactory"
@@ -1914,7 +1914,7 @@
           figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
     <compartments
-        visualID="7004"
+        visualID="7015"
         editPartClassName="ContainerContainerCompartmentEditPart"
         itemSemanticEditPolicyClassName="ContainerContainerCompartmentItemSemanticEditPolicy"
         notationViewFactoryClassName="ContainerContainerCompartmentViewFactory"
@@ -1937,7 +1937,7 @@
       </viewmap>
     </compartments>
     <compartments
-        visualID="7011"
+        visualID="7016"
         editPartClassName="NodePropertiesCompartment2EditPart"
         itemSemanticEditPolicyClassName="NodePropertiesCompartment2ItemSemanticEditPolicy"
         notationViewFactoryClassName="NodePropertiesCompartmentViewFactory"
@@ -1953,7 +1953,7 @@
           figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
     <compartments
-        visualID="7010"
+        visualID="7017"
         editPartClassName="EnvironmentEndPointEndPointPropertiesCompartmentEditPart"
         itemSemanticEditPolicyClassName="EnvironmentEndPointEndPointPropertiesCompartmentItemSemanticEditPolicy"
         notationViewFactoryClassName="EnvironmentEndPointEndPointPropertiesCompartmentViewFactory"

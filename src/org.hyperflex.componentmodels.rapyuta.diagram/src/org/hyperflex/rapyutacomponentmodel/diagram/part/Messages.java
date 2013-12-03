@@ -449,222 +449,222 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_NodePublisher_3003_outgoinglinks;
+	public static String NavigatorGroupName_NodePublisher_3043_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_NodeSubscriber_3004_outgoinglinks;
+	public static String NavigatorGroupName_NodeSubscriber_3044_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_NodeSrvServer_3005_incominglinks;
+	public static String NavigatorGroupName_NodeSrvServer_3045_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_NodeSrvClient_3006_outgoinglinks;
+	public static String NavigatorGroupName_NodeSrvClient_3046_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositePublisher_3008_outgoinglinks;
+	public static String NavigatorGroupName_CompositePublisher_3048_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeSubscriber_3009_outgoinglinks;
+	public static String NavigatorGroupName_CompositeSubscriber_3049_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeSrvServer_3010_incominglinks;
+	public static String NavigatorGroupName_CompositeSrvServer_3050_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeSrvClient_3011_outgoinglinks;
+	public static String NavigatorGroupName_CompositeSrvClient_3051_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositePublisher_3012_outgoinglinks;
+	public static String NavigatorGroupName_CompositePublisher_3052_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeSubscriber_3013_outgoinglinks;
+	public static String NavigatorGroupName_CompositeSubscriber_3053_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeSrvServer_3014_incominglinks;
+	public static String NavigatorGroupName_CompositeSrvServer_3054_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeSrvClient_3015_outgoinglinks;
+	public static String NavigatorGroupName_CompositeSrvClient_3055_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Topic_3016_incominglinks;
+	public static String NavigatorGroupName_Topic_3056_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointPublisher_3019_outgoinglinks;
+	public static String NavigatorGroupName_EndPointPublisher_3059_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointSubscriber_3020_outgoinglinks;
+	public static String NavigatorGroupName_EndPointSubscriber_3060_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointSubscriber_3020_incominglinks;
+	public static String NavigatorGroupName_EndPointSubscriber_3060_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointSrvServer_3021_incominglinks;
+	public static String NavigatorGroupName_EndPointSrvServer_3061_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointSrvClient_3022_outgoinglinks;
+	public static String NavigatorGroupName_EndPointSrvClient_3062_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_NodePublisher_3025_outgoinglinks;
+	public static String NavigatorGroupName_NodePublisher_3065_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_NodeSubscriber_3026_outgoinglinks;
+	public static String NavigatorGroupName_NodeSubscriber_3066_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_NodeSrvServer_3027_incominglinks;
+	public static String NavigatorGroupName_NodeSrvServer_3067_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_NodeSrvClient_3028_outgoinglinks;
+	public static String NavigatorGroupName_NodeSrvClient_3068_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointPublisher_3031_outgoinglinks;
+	public static String NavigatorGroupName_EndPointPublisher_3071_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointSubscriber_3032_outgoinglinks;
+	public static String NavigatorGroupName_EndPointSubscriber_3072_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointSubscriber_3032_incominglinks;
+	public static String NavigatorGroupName_EndPointSubscriber_3072_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointSrvServer_3033_incominglinks;
+	public static String NavigatorGroupName_EndPointSrvServer_3073_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointSrvClient_3034_outgoinglinks;
+	public static String NavigatorGroupName_EndPointSrvClient_3074_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Topic_3035_incominglinks;
+	public static String NavigatorGroupName_Topic_3075_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_MsgInterfaceConnection_4002_target;
+	public static String NavigatorGroupName_MsgInterfaceConnection_4011_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_MsgInterfaceConnection_4002_source;
+	public static String NavigatorGroupName_MsgInterfaceConnection_4011_source;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_MsgInterfaceConnection_4003_target;
+	public static String NavigatorGroupName_MsgInterfaceConnection_4012_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_MsgInterfaceConnection_4003_source;
+	public static String NavigatorGroupName_MsgInterfaceConnection_4012_source;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4004_target;
+	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4013_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4004_source;
+	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4013_source;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4005_target;
+	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4014_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4005_source;
+	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4014_source;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointSrvConnection_4006_target;
+	public static String NavigatorGroupName_EndPointSrvConnection_4015_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointSrvConnection_4006_source;
+	public static String NavigatorGroupName_EndPointSrvConnection_4015_source;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointMsgConnection_4007_target;
+	public static String NavigatorGroupName_EndPointMsgConnection_4016_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EndPointMsgConnection_4007_source;
+	public static String NavigatorGroupName_EndPointMsgConnection_4016_source;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_ContainerSrvConnection_4009_target;
+	public static String NavigatorGroupName_CompositeSrvConnection_4017_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_ContainerSrvConnection_4009_source;
+	public static String NavigatorGroupName_CompositeSrvConnection_4017_source;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeSrvConnection_4010_target;
+	public static String NavigatorGroupName_ContainerSrvConnection_4018_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeSrvConnection_4010_source;
+	public static String NavigatorGroupName_ContainerSrvConnection_4018_source;
 
 	/**
 	 * @generated

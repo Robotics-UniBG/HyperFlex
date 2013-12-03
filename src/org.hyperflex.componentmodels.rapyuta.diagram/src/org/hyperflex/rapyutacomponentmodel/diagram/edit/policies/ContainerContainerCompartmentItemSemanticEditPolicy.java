@@ -43,21 +43,21 @@ public class ContainerContainerCompartmentItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public ContainerContainerCompartmentItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Container_2002);
+		super(RapyutaComponentModelElementTypes.Container_2004);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.Node_3040 == req.getElementType()) {
+		if (RapyutaComponentModelElementTypes.Node_3063 == req.getElementType()) {
 			return getGEFWrapper(new Node2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.EnvironmentEndPoint_3039 == req
+		if (RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069 == req
 				.getElementType()) {
 			return getGEFWrapper(new EnvironmentEndPointCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.Topic_3035 == req
+		if (RapyutaComponentModelElementTypes.Topic_3075 == req
 				.getElementType()) {
 			return getGEFWrapper(new Topic2CreateCommand(req));
 		}

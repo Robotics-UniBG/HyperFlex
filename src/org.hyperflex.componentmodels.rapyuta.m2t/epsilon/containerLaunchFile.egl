@@ -1,0 +1,76 @@
+[*
+ * HyperFlex toolchain
+ * 
+ * Copyright (c) 2013
+ * All rights reserved.
+ * 
+ * Luca Gherardi
+ * ETH Zurich
+ * Institute for Dynamic Systems and Control
+ * 
+ * ***********************************************************************************************
+ * 
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
+ * 
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
+ * 
+ * ***********************************************************************************************
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * 
+ *]
+{
+
+	"url"		: "[%=system.url%]"
+	"userID"	: "[%=system.userID%]"
+	"password"	: "[%=system.password%]"
+	"robotID"	: "[%=system.robotID%]"
+
+	"containers" : [
+[%
+var containerCount : Integer := 0;
+for(container in system.containers) {
+	if(containerCount > 0){
+%]
+ , {
+[%
+	}else{
+%]
+		{
+[%
+	}
+%]
+			"cTag"	:	"[%=container.name%]"
+		}  	
+[%
+containerCount = containerCount + 1;
+}
+%]
+	],
+	
+	"nodes : ["
+[%
+var nodesTemplate := TemplateFactory.load('nodes.egl');
+nodesTemplate.populate('system', system);
+out.print(nodesTemplate.process());
+%]
+	
+	],
+	
+	"interfaces" : [		
+[%
+var interfacesTemplate := TemplateFactory.load('interfaces.egl');
+interfacesTemplate.populate('system', system);
+out.print(interfacesTemplate.process());
+%]
+	
+	],
+
+
+}
+

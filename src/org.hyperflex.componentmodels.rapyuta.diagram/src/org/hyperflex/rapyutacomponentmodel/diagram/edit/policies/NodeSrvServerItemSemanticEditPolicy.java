@@ -57,7 +57,7 @@ public class NodeSrvServerItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public NodeSrvServerItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.NodeSrvServer_3005);
+		super(RapyutaComponentModelElementTypes.NodeSrvServer_3045);
 	}
 
 	/**
@@ -112,11 +112,11 @@ public class NodeSrvServerItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.CompositeSrvConnection_4010 == req
+		if (RapyutaComponentModelElementTypes.CompositeSrvConnection_4017 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.ContainerSrvConnection_4009 == req
+		if (RapyutaComponentModelElementTypes.ContainerSrvConnection_4018 == req
 				.getElementType()) {
 			return null;
 		}
@@ -128,12 +128,12 @@ public class NodeSrvServerItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.CompositeSrvConnection_4010 == req
+		if (RapyutaComponentModelElementTypes.CompositeSrvConnection_4017 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeSrvConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.ContainerSrvConnection_4009 == req
+		if (RapyutaComponentModelElementTypes.ContainerSrvConnection_4018 == req
 				.getElementType()) {
 			return getGEFWrapper(new ContainerSrvConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));

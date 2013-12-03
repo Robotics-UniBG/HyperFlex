@@ -41,7 +41,7 @@ public class ContainerSrvConnectionItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public ContainerSrvConnectionItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.ContainerSrvConnection_4009);
+		super(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 	}
 
 	/**

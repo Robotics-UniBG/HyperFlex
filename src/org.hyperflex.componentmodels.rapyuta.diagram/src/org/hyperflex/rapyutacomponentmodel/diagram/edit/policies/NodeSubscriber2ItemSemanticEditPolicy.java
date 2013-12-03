@@ -59,7 +59,7 @@ public class NodeSubscriber2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public NodeSubscriber2ItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.NodeSubscriber_3026);
+		super(RapyutaComponentModelElementTypes.NodeSubscriber_3066);
 	}
 
 	/**
@@ -116,12 +116,12 @@ public class NodeSubscriber2ItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnection2CreateCommand(req,
 					req.getSource(), req.getTarget()));
@@ -134,11 +134,11 @@ public class NodeSubscriber2ItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012 == req
 				.getElementType()) {
 			return null;
 		}

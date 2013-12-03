@@ -53,6 +53,7 @@ import org.hyperflex.rapyutacomponentmodel.NodePublisher;
 import org.hyperflex.rapyutacomponentmodel.NodeSrvClient;
 import org.hyperflex.rapyutacomponentmodel.NodeSrvServer;
 import org.hyperflex.rapyutacomponentmodel.NodeSubscriber;
+import org.hyperflex.rapyutacomponentmodel.System;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Composite2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
@@ -183,142 +184,142 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 		switch (RapyutaComponentModelVisualIDRegistry.getVisualID(view)) {
 		case SystemEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Diagram?http://rwww.hyperflex.org/componentmodels.rapyuta?System", RapyutaComponentModelElementTypes.System_1000); //$NON-NLS-1$
+					"Navigator?Diagram?http://www.hyperflex.org/componentmodels.rapyuta?System", RapyutaComponentModelElementTypes.System_1000); //$NON-NLS-1$
 		case CompositeEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://rwww.hyperflex.org/componentmodels.rapyuta?Composite", RapyutaComponentModelElementTypes.Composite_2001); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://www.hyperflex.org/componentmodels.rapyuta?Composite", RapyutaComponentModelElementTypes.Composite_2003); //$NON-NLS-1$
 		case ContainerEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://rwww.hyperflex.org/componentmodels.rapyuta?Container", RapyutaComponentModelElementTypes.Container_2002); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://www.hyperflex.org/componentmodels.rapyuta?Container", RapyutaComponentModelElementTypes.Container_2004); //$NON-NLS-1$
 		case NodeEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?Node", RapyutaComponentModelElementTypes.Node_3001); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?Node", RapyutaComponentModelElementTypes.Node_3041); //$NON-NLS-1$
 		case NodeParameterEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?NodeParameter", RapyutaComponentModelElementTypes.NodeParameter_3002); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?NodeParameter", RapyutaComponentModelElementTypes.NodeParameter_3042); //$NON-NLS-1$
 		case NodePublisherEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?NodePublisher", RapyutaComponentModelElementTypes.NodePublisher_3003); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?NodePublisher", RapyutaComponentModelElementTypes.NodePublisher_3043); //$NON-NLS-1$
 		case NodeSubscriberEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?NodeSubscriber", RapyutaComponentModelElementTypes.NodeSubscriber_3004); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?NodeSubscriber", RapyutaComponentModelElementTypes.NodeSubscriber_3044); //$NON-NLS-1$
 		case NodeSrvServerEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?NodeSrvServer", RapyutaComponentModelElementTypes.NodeSrvServer_3005); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?NodeSrvServer", RapyutaComponentModelElementTypes.NodeSrvServer_3045); //$NON-NLS-1$
 		case NodeSrvClientEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?NodeSrvClient", RapyutaComponentModelElementTypes.NodeSrvClient_3006); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?NodeSrvClient", RapyutaComponentModelElementTypes.NodeSrvClient_3046); //$NON-NLS-1$
 		case Composite2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?Composite", RapyutaComponentModelElementTypes.Composite_3007); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?Composite", RapyutaComponentModelElementTypes.Composite_3047); //$NON-NLS-1$
 		case CompositePublisherEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?CompositePublisher", RapyutaComponentModelElementTypes.CompositePublisher_3008); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?CompositePublisher", RapyutaComponentModelElementTypes.CompositePublisher_3048); //$NON-NLS-1$
 		case CompositeSubscriberEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?CompositeSubscriber", RapyutaComponentModelElementTypes.CompositeSubscriber_3009); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?CompositeSubscriber", RapyutaComponentModelElementTypes.CompositeSubscriber_3049); //$NON-NLS-1$
 		case CompositeSrvServerEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?CompositeSrvServer", RapyutaComponentModelElementTypes.CompositeSrvServer_3010); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?CompositeSrvServer", RapyutaComponentModelElementTypes.CompositeSrvServer_3050); //$NON-NLS-1$
 		case CompositeSrvClientEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?CompositeSrvClient", RapyutaComponentModelElementTypes.CompositeSrvClient_3011); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?CompositeSrvClient", RapyutaComponentModelElementTypes.CompositeSrvClient_3051); //$NON-NLS-1$
 		case CompositePublisher2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?CompositePublisher", RapyutaComponentModelElementTypes.CompositePublisher_3012); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?CompositePublisher", RapyutaComponentModelElementTypes.CompositePublisher_3052); //$NON-NLS-1$
 		case CompositeSubscriber2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?CompositeSubscriber", RapyutaComponentModelElementTypes.CompositeSubscriber_3013); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?CompositeSubscriber", RapyutaComponentModelElementTypes.CompositeSubscriber_3053); //$NON-NLS-1$
 		case CompositeSrvServer2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?CompositeSrvServer", RapyutaComponentModelElementTypes.CompositeSrvServer_3014); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?CompositeSrvServer", RapyutaComponentModelElementTypes.CompositeSrvServer_3054); //$NON-NLS-1$
 		case CompositeSrvClient2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?CompositeSrvClient", RapyutaComponentModelElementTypes.CompositeSrvClient_3015); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?CompositeSrvClient", RapyutaComponentModelElementTypes.CompositeSrvClient_3055); //$NON-NLS-1$
 		case TopicEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?Topic", RapyutaComponentModelElementTypes.Topic_3016); //$NON-NLS-1$
-		case EndPointParameterEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?EndPointParameter", RapyutaComponentModelElementTypes.EndPointParameter_3018); //$NON-NLS-1$
-		case EndPointPublisherEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?EndPointPublisher", RapyutaComponentModelElementTypes.EndPointPublisher_3019); //$NON-NLS-1$
-		case EndPointSubscriberEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?EndPointSubscriber", RapyutaComponentModelElementTypes.EndPointSubscriber_3020); //$NON-NLS-1$
-		case EndPointSrvServerEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?EndPointSrvServer", RapyutaComponentModelElementTypes.EndPointSrvServer_3021); //$NON-NLS-1$
-		case EndPointSrvClientEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?EndPointSrvClient", RapyutaComponentModelElementTypes.EndPointSrvClient_3022); //$NON-NLS-1$
-		case NodeParameter2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?NodeParameter", RapyutaComponentModelElementTypes.NodeParameter_3024); //$NON-NLS-1$
-		case NodePublisher2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?NodePublisher", RapyutaComponentModelElementTypes.NodePublisher_3025); //$NON-NLS-1$
-		case NodeSubscriber2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?NodeSubscriber", RapyutaComponentModelElementTypes.NodeSubscriber_3026); //$NON-NLS-1$
-		case NodeSrvServer2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?NodeSrvServer", RapyutaComponentModelElementTypes.NodeSrvServer_3027); //$NON-NLS-1$
-		case NodeSrvClient2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?NodeSrvClient", RapyutaComponentModelElementTypes.NodeSrvClient_3028); //$NON-NLS-1$
-		case EndPointParameter2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?EndPointParameter", RapyutaComponentModelElementTypes.EndPointParameter_3030); //$NON-NLS-1$
-		case EndPointPublisher2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?EndPointPublisher", RapyutaComponentModelElementTypes.EndPointPublisher_3031); //$NON-NLS-1$
-		case EndPointSubscriber2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?EndPointSubscriber", RapyutaComponentModelElementTypes.EndPointSubscriber_3032); //$NON-NLS-1$
-		case EndPointSrvServer2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?EndPointSrvServer", RapyutaComponentModelElementTypes.EndPointSrvServer_3033); //$NON-NLS-1$
-		case EndPointSrvClient2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?EndPointSrvClient", RapyutaComponentModelElementTypes.EndPointSrvClient_3034); //$NON-NLS-1$
-		case Topic2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?Topic", RapyutaComponentModelElementTypes.Topic_3035); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?Topic", RapyutaComponentModelElementTypes.Topic_3056); //$NON-NLS-1$
 		case RobotEndPointEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?RobotEndPoint", RapyutaComponentModelElementTypes.RobotEndPoint_3038); //$NON-NLS-1$
-		case EnvironmentEndPointEditPart.VISUAL_ID:
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?RobotEndPoint", RapyutaComponentModelElementTypes.RobotEndPoint_3057); //$NON-NLS-1$
+		case EndPointParameterEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?EnvironmentEndPoint", RapyutaComponentModelElementTypes.EnvironmentEndPoint_3039); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?EndPointParameter", RapyutaComponentModelElementTypes.EndPointParameter_3058); //$NON-NLS-1$
+		case EndPointPublisherEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?EndPointPublisher", RapyutaComponentModelElementTypes.EndPointPublisher_3059); //$NON-NLS-1$
+		case EndPointSubscriberEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?EndPointSubscriber", RapyutaComponentModelElementTypes.EndPointSubscriber_3060); //$NON-NLS-1$
+		case EndPointSrvServerEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?EndPointSrvServer", RapyutaComponentModelElementTypes.EndPointSrvServer_3061); //$NON-NLS-1$
+		case EndPointSrvClientEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?EndPointSrvClient", RapyutaComponentModelElementTypes.EndPointSrvClient_3062); //$NON-NLS-1$
 		case Node2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://rwww.hyperflex.org/componentmodels.rapyuta?Node", RapyutaComponentModelElementTypes.Node_3040); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?Node", RapyutaComponentModelElementTypes.Node_3063); //$NON-NLS-1$
+		case NodeParameter2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?NodeParameter", RapyutaComponentModelElementTypes.NodeParameter_3064); //$NON-NLS-1$
+		case NodePublisher2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?NodePublisher", RapyutaComponentModelElementTypes.NodePublisher_3065); //$NON-NLS-1$
+		case NodeSubscriber2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?NodeSubscriber", RapyutaComponentModelElementTypes.NodeSubscriber_3066); //$NON-NLS-1$
+		case NodeSrvServer2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?NodeSrvServer", RapyutaComponentModelElementTypes.NodeSrvServer_3067); //$NON-NLS-1$
+		case NodeSrvClient2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?NodeSrvClient", RapyutaComponentModelElementTypes.NodeSrvClient_3068); //$NON-NLS-1$
+		case EnvironmentEndPointEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?EnvironmentEndPoint", RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069); //$NON-NLS-1$
+		case EndPointParameter2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?EndPointParameter", RapyutaComponentModelElementTypes.EndPointParameter_3070); //$NON-NLS-1$
+		case EndPointPublisher2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?EndPointPublisher", RapyutaComponentModelElementTypes.EndPointPublisher_3071); //$NON-NLS-1$
+		case EndPointSubscriber2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?EndPointSubscriber", RapyutaComponentModelElementTypes.EndPointSubscriber_3072); //$NON-NLS-1$
+		case EndPointSrvServer2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?EndPointSrvServer", RapyutaComponentModelElementTypes.EndPointSrvServer_3073); //$NON-NLS-1$
+		case EndPointSrvClient2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?EndPointSrvClient", RapyutaComponentModelElementTypes.EndPointSrvClient_3074); //$NON-NLS-1$
+		case Topic2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://www.hyperflex.org/componentmodels.rapyuta?Topic", RapyutaComponentModelElementTypes.Topic_3075); //$NON-NLS-1$
 		case MsgInterfaceConnectionEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://rwww.hyperflex.org/componentmodels.rapyuta?MsgInterface?connection", RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002); //$NON-NLS-1$
+					"Navigator?Link?http://www.hyperflex.org/componentmodels.rapyuta?MsgInterface?connection", RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011); //$NON-NLS-1$
 		case MsgInterfaceConnection2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://rwww.hyperflex.org/componentmodels.rapyuta?MsgInterface?connection", RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003); //$NON-NLS-1$
+					"Navigator?Link?http://www.hyperflex.org/componentmodels.rapyuta?MsgInterface?connection", RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012); //$NON-NLS-1$
 		case CompositeMsgInterfaceExposedEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://rwww.hyperflex.org/componentmodels.rapyuta?CompositeMsgInterface?exposed", RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004); //$NON-NLS-1$
+					"Navigator?Link?http://www.hyperflex.org/componentmodels.rapyuta?CompositeMsgInterface?exposed", RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4013); //$NON-NLS-1$
 		case CompositeMsgInterfaceExposed2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://rwww.hyperflex.org/componentmodels.rapyuta?CompositeMsgInterface?exposed", RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005); //$NON-NLS-1$
+					"Navigator?Link?http://www.hyperflex.org/componentmodels.rapyuta?CompositeMsgInterface?exposed", RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4014); //$NON-NLS-1$
 		case EndPointSrvConnectionEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://rwww.hyperflex.org/componentmodels.rapyuta?EndPointSrvConnection", RapyutaComponentModelElementTypes.EndPointSrvConnection_4006); //$NON-NLS-1$
+					"Navigator?Link?http://www.hyperflex.org/componentmodels.rapyuta?EndPointSrvConnection", RapyutaComponentModelElementTypes.EndPointSrvConnection_4015); //$NON-NLS-1$
 		case EndPointMsgConnectionEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://rwww.hyperflex.org/componentmodels.rapyuta?EndPointMsgConnection", RapyutaComponentModelElementTypes.EndPointMsgConnection_4007); //$NON-NLS-1$
-		case ContainerSrvConnectionEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://rwww.hyperflex.org/componentmodels.rapyuta?ContainerSrvConnection", RapyutaComponentModelElementTypes.ContainerSrvConnection_4009); //$NON-NLS-1$
+					"Navigator?Link?http://www.hyperflex.org/componentmodels.rapyuta?EndPointMsgConnection", RapyutaComponentModelElementTypes.EndPointMsgConnection_4016); //$NON-NLS-1$
 		case CompositeSrvConnectionEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://rwww.hyperflex.org/componentmodels.rapyuta?CompositeSrvConnection", RapyutaComponentModelElementTypes.CompositeSrvConnection_4010); //$NON-NLS-1$
+					"Navigator?Link?http://www.hyperflex.org/componentmodels.rapyuta?CompositeSrvConnection", RapyutaComponentModelElementTypes.CompositeSrvConnection_4017); //$NON-NLS-1$
+		case ContainerSrvConnectionEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://www.hyperflex.org/componentmodels.rapyuta?ContainerSrvConnection", RapyutaComponentModelElementTypes.ContainerSrvConnection_4018); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -376,95 +377,95 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 		case SystemEditPart.VISUAL_ID:
 			return getSystem_1000Text(view);
 		case CompositeEditPart.VISUAL_ID:
-			return getComposite_2001Text(view);
+			return getComposite_2003Text(view);
 		case ContainerEditPart.VISUAL_ID:
-			return getContainer_2002Text(view);
+			return getContainer_2004Text(view);
 		case NodeEditPart.VISUAL_ID:
-			return getNode_3001Text(view);
+			return getNode_3041Text(view);
 		case NodeParameterEditPart.VISUAL_ID:
-			return getNodeParameter_3002Text(view);
+			return getNodeParameter_3042Text(view);
 		case NodePublisherEditPart.VISUAL_ID:
-			return getNodePublisher_3003Text(view);
+			return getNodePublisher_3043Text(view);
 		case NodeSubscriberEditPart.VISUAL_ID:
-			return getNodeSubscriber_3004Text(view);
+			return getNodeSubscriber_3044Text(view);
 		case NodeSrvServerEditPart.VISUAL_ID:
-			return getNodeSrvServer_3005Text(view);
+			return getNodeSrvServer_3045Text(view);
 		case NodeSrvClientEditPart.VISUAL_ID:
-			return getNodeSrvClient_3006Text(view);
+			return getNodeSrvClient_3046Text(view);
 		case Composite2EditPart.VISUAL_ID:
-			return getComposite_3007Text(view);
+			return getComposite_3047Text(view);
 		case CompositePublisherEditPart.VISUAL_ID:
-			return getCompositePublisher_3008Text(view);
+			return getCompositePublisher_3048Text(view);
 		case CompositeSubscriberEditPart.VISUAL_ID:
-			return getCompositeSubscriber_3009Text(view);
+			return getCompositeSubscriber_3049Text(view);
 		case CompositeSrvServerEditPart.VISUAL_ID:
-			return getCompositeSrvServer_3010Text(view);
+			return getCompositeSrvServer_3050Text(view);
 		case CompositeSrvClientEditPart.VISUAL_ID:
-			return getCompositeSrvClient_3011Text(view);
+			return getCompositeSrvClient_3051Text(view);
 		case CompositePublisher2EditPart.VISUAL_ID:
-			return getCompositePublisher_3012Text(view);
+			return getCompositePublisher_3052Text(view);
 		case CompositeSubscriber2EditPart.VISUAL_ID:
-			return getCompositeSubscriber_3013Text(view);
+			return getCompositeSubscriber_3053Text(view);
 		case CompositeSrvServer2EditPart.VISUAL_ID:
-			return getCompositeSrvServer_3014Text(view);
+			return getCompositeSrvServer_3054Text(view);
 		case CompositeSrvClient2EditPart.VISUAL_ID:
-			return getCompositeSrvClient_3015Text(view);
+			return getCompositeSrvClient_3055Text(view);
 		case TopicEditPart.VISUAL_ID:
-			return getTopic_3016Text(view);
-		case EndPointParameterEditPart.VISUAL_ID:
-			return getEndPointParameter_3018Text(view);
-		case EndPointPublisherEditPart.VISUAL_ID:
-			return getEndPointPublisher_3019Text(view);
-		case EndPointSubscriberEditPart.VISUAL_ID:
-			return getEndPointSubscriber_3020Text(view);
-		case EndPointSrvServerEditPart.VISUAL_ID:
-			return getEndPointSrvServer_3021Text(view);
-		case EndPointSrvClientEditPart.VISUAL_ID:
-			return getEndPointSrvClient_3022Text(view);
-		case NodeParameter2EditPart.VISUAL_ID:
-			return getNodeParameter_3024Text(view);
-		case NodePublisher2EditPart.VISUAL_ID:
-			return getNodePublisher_3025Text(view);
-		case NodeSubscriber2EditPart.VISUAL_ID:
-			return getNodeSubscriber_3026Text(view);
-		case NodeSrvServer2EditPart.VISUAL_ID:
-			return getNodeSrvServer_3027Text(view);
-		case NodeSrvClient2EditPart.VISUAL_ID:
-			return getNodeSrvClient_3028Text(view);
-		case EndPointParameter2EditPart.VISUAL_ID:
-			return getEndPointParameter_3030Text(view);
-		case EndPointPublisher2EditPart.VISUAL_ID:
-			return getEndPointPublisher_3031Text(view);
-		case EndPointSubscriber2EditPart.VISUAL_ID:
-			return getEndPointSubscriber_3032Text(view);
-		case EndPointSrvServer2EditPart.VISUAL_ID:
-			return getEndPointSrvServer_3033Text(view);
-		case EndPointSrvClient2EditPart.VISUAL_ID:
-			return getEndPointSrvClient_3034Text(view);
-		case Topic2EditPart.VISUAL_ID:
-			return getTopic_3035Text(view);
+			return getTopic_3056Text(view);
 		case RobotEndPointEditPart.VISUAL_ID:
-			return getRobotEndPoint_3038Text(view);
-		case EnvironmentEndPointEditPart.VISUAL_ID:
-			return getEnvironmentEndPoint_3039Text(view);
+			return getRobotEndPoint_3057Text(view);
+		case EndPointParameterEditPart.VISUAL_ID:
+			return getEndPointParameter_3058Text(view);
+		case EndPointPublisherEditPart.VISUAL_ID:
+			return getEndPointPublisher_3059Text(view);
+		case EndPointSubscriberEditPart.VISUAL_ID:
+			return getEndPointSubscriber_3060Text(view);
+		case EndPointSrvServerEditPart.VISUAL_ID:
+			return getEndPointSrvServer_3061Text(view);
+		case EndPointSrvClientEditPart.VISUAL_ID:
+			return getEndPointSrvClient_3062Text(view);
 		case Node2EditPart.VISUAL_ID:
-			return getNode_3040Text(view);
+			return getNode_3063Text(view);
+		case NodeParameter2EditPart.VISUAL_ID:
+			return getNodeParameter_3064Text(view);
+		case NodePublisher2EditPart.VISUAL_ID:
+			return getNodePublisher_3065Text(view);
+		case NodeSubscriber2EditPart.VISUAL_ID:
+			return getNodeSubscriber_3066Text(view);
+		case NodeSrvServer2EditPart.VISUAL_ID:
+			return getNodeSrvServer_3067Text(view);
+		case NodeSrvClient2EditPart.VISUAL_ID:
+			return getNodeSrvClient_3068Text(view);
+		case EnvironmentEndPointEditPart.VISUAL_ID:
+			return getEnvironmentEndPoint_3069Text(view);
+		case EndPointParameter2EditPart.VISUAL_ID:
+			return getEndPointParameter_3070Text(view);
+		case EndPointPublisher2EditPart.VISUAL_ID:
+			return getEndPointPublisher_3071Text(view);
+		case EndPointSubscriber2EditPart.VISUAL_ID:
+			return getEndPointSubscriber_3072Text(view);
+		case EndPointSrvServer2EditPart.VISUAL_ID:
+			return getEndPointSrvServer_3073Text(view);
+		case EndPointSrvClient2EditPart.VISUAL_ID:
+			return getEndPointSrvClient_3074Text(view);
+		case Topic2EditPart.VISUAL_ID:
+			return getTopic_3075Text(view);
 		case MsgInterfaceConnectionEditPart.VISUAL_ID:
-			return getMsgInterfaceConnection_4002Text(view);
+			return getMsgInterfaceConnection_4011Text(view);
 		case MsgInterfaceConnection2EditPart.VISUAL_ID:
-			return getMsgInterfaceConnection_4003Text(view);
+			return getMsgInterfaceConnection_4012Text(view);
 		case CompositeMsgInterfaceExposedEditPart.VISUAL_ID:
-			return getCompositeMsgInterfaceExposed_4004Text(view);
+			return getCompositeMsgInterfaceExposed_4013Text(view);
 		case CompositeMsgInterfaceExposed2EditPart.VISUAL_ID:
-			return getCompositeMsgInterfaceExposed_4005Text(view);
+			return getCompositeMsgInterfaceExposed_4014Text(view);
 		case EndPointSrvConnectionEditPart.VISUAL_ID:
-			return getEndPointSrvConnection_4006Text(view);
+			return getEndPointSrvConnection_4015Text(view);
 		case EndPointMsgConnectionEditPart.VISUAL_ID:
-			return getEndPointMsgConnection_4007Text(view);
-		case ContainerSrvConnectionEditPart.VISUAL_ID:
-			return getContainerSrvConnection_4009Text(view);
+			return getEndPointMsgConnection_4016Text(view);
 		case CompositeSrvConnectionEditPart.VISUAL_ID:
-			return getCompositeSrvConnection_4010Text(view);
+			return getCompositeSrvConnection_4017Text(view);
+		case ContainerSrvConnectionEditPart.VISUAL_ID:
+			return getContainerSrvConnection_4018Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -473,15 +474,22 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	 * @generated
 	 */
 	private String getSystem_1000Text(View view) {
-		return ""; //$NON-NLS-1$
+		System domainModelElement = (System) view.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 1000); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**
 	 * @generated
 	 */
-	private String getComposite_2001Text(View view) {
+	private String getComposite_2003Text(View view) {
 		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.Composite_2001, view
+				RapyutaComponentModelElementTypes.Composite_2003, view
 						.getElement() != null ? view.getElement() : view,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(CompositeNameEditPart.VISUAL_ID));
@@ -491,7 +499,7 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5007); //$NON-NLS-1$
+					"Parser was not found for label " + 5025); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -499,9 +507,9 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getContainer_2002Text(View view) {
+	private String getContainer_2004Text(View view) {
 		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.Container_2002, view
+				RapyutaComponentModelElementTypes.Container_2004, view
 						.getElement() != null ? view.getElement() : view,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(ContainerNameEditPart.VISUAL_ID));
@@ -511,7 +519,7 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5013); //$NON-NLS-1$
+					"Parser was not found for label " + 5031); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -519,9 +527,9 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getNode_3001Text(View view) {
+	private String getNode_3041Text(View view) {
 		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.Node_3001,
+				RapyutaComponentModelElementTypes.Node_3041,
 				view.getElement() != null ? view.getElement() : view,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(NodeNameEditPart.VISUAL_ID));
@@ -531,7 +539,7 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5002); //$NON-NLS-1$
+					"Parser was not found for label " + 5020); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -539,9 +547,9 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getNodeParameter_3002Text(View view) {
+	private String getNodeParameter_3042Text(View view) {
 		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.NodeParameter_3002, view
+				RapyutaComponentModelElementTypes.NodeParameter_3042, view
 						.getElement() != null ? view.getElement() : view,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(NodeParameterNameEditPart.VISUAL_ID));
@@ -551,7 +559,7 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5001); //$NON-NLS-1$
+					"Parser was not found for label " + 5019); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -559,13 +567,13 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getNodePublisher_3003Text(View view) {
+	private String getNodePublisher_3043Text(View view) {
 		NodePublisher domainModelElement = (NodePublisher) view.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3003); //$NON-NLS-1$
+					"No domain element for view with visualID = " + 3043); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -573,13 +581,13 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getNodeSubscriber_3004Text(View view) {
+	private String getNodeSubscriber_3044Text(View view) {
 		NodeSubscriber domainModelElement = (NodeSubscriber) view.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3004); //$NON-NLS-1$
+					"No domain element for view with visualID = " + 3044); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -587,13 +595,13 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getNodeSrvServer_3005Text(View view) {
+	private String getNodeSrvServer_3045Text(View view) {
 		NodeSrvServer domainModelElement = (NodeSrvServer) view.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3005); //$NON-NLS-1$
+					"No domain element for view with visualID = " + 3045); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -601,13 +609,13 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getNodeSrvClient_3006Text(View view) {
+	private String getNodeSrvClient_3046Text(View view) {
 		NodeSrvClient domainModelElement = (NodeSrvClient) view.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3006); //$NON-NLS-1$
+					"No domain element for view with visualID = " + 3046); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -615,9 +623,9 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getComposite_3007Text(View view) {
+	private String getComposite_3047Text(View view) {
 		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.Composite_3007, view
+				RapyutaComponentModelElementTypes.Composite_3047, view
 						.getElement() != null ? view.getElement() : view,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(CompositeName2EditPart.VISUAL_ID));
@@ -627,7 +635,7 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5003); //$NON-NLS-1$
+					"Parser was not found for label " + 5021); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -635,14 +643,14 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getCompositePublisher_3008Text(View view) {
+	private String getCompositePublisher_3048Text(View view) {
 		CompositePublisher domainModelElement = (CompositePublisher) view
 				.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3008); //$NON-NLS-1$
+					"No domain element for view with visualID = " + 3048); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -650,14 +658,14 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getCompositeSubscriber_3009Text(View view) {
+	private String getCompositeSubscriber_3049Text(View view) {
 		CompositeSubscriber domainModelElement = (CompositeSubscriber) view
 				.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3009); //$NON-NLS-1$
+					"No domain element for view with visualID = " + 3049); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -665,14 +673,14 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getCompositeSrvServer_3010Text(View view) {
+	private String getCompositeSrvServer_3050Text(View view) {
 		CompositeSrvServer domainModelElement = (CompositeSrvServer) view
 				.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3010); //$NON-NLS-1$
+					"No domain element for view with visualID = " + 3050); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -680,14 +688,14 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getCompositeSrvClient_3011Text(View view) {
+	private String getCompositeSrvClient_3051Text(View view) {
 		CompositeSrvClient domainModelElement = (CompositeSrvClient) view
 				.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3011); //$NON-NLS-1$
+					"No domain element for view with visualID = " + 3051); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -695,14 +703,14 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getCompositePublisher_3012Text(View view) {
+	private String getCompositePublisher_3052Text(View view) {
 		CompositePublisher domainModelElement = (CompositePublisher) view
 				.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3012); //$NON-NLS-1$
+					"No domain element for view with visualID = " + 3052); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -710,14 +718,14 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getCompositeSubscriber_3013Text(View view) {
+	private String getCompositeSubscriber_3053Text(View view) {
 		CompositeSubscriber domainModelElement = (CompositeSubscriber) view
 				.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3013); //$NON-NLS-1$
+					"No domain element for view with visualID = " + 3053); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -725,14 +733,14 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getCompositeSrvServer_3014Text(View view) {
+	private String getCompositeSrvServer_3054Text(View view) {
 		CompositeSrvServer domainModelElement = (CompositeSrvServer) view
 				.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3014); //$NON-NLS-1$
+					"No domain element for view with visualID = " + 3054); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -740,14 +748,14 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getCompositeSrvClient_3015Text(View view) {
+	private String getCompositeSrvClient_3055Text(View view) {
 		CompositeSrvClient domainModelElement = (CompositeSrvClient) view
 				.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3015); //$NON-NLS-1$
+					"No domain element for view with visualID = " + 3055); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -755,9 +763,9 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getTopic_3016Text(View view) {
+	private String getTopic_3056Text(View view) {
 		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.Topic_3016,
+				RapyutaComponentModelElementTypes.Topic_3056,
 				view.getElement() != null ? view.getElement() : view,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(TopicNameEditPart.VISUAL_ID));
@@ -767,7 +775,7 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5004); //$NON-NLS-1$
+					"Parser was not found for label " + 5022); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -775,265 +783,9 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getEndPointParameter_3018Text(View view) {
+	private String getRobotEndPoint_3057Text(View view) {
 		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.EndPointParameter_3018, view
-						.getElement() != null ? view.getElement() : view,
-				RapyutaComponentModelVisualIDRegistry
-						.getType(EndPointParameterNameEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5005); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getEndPointPublisher_3019Text(View view) {
-		EndPointPublisher domainModelElement = (EndPointPublisher) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3019); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getEndPointSubscriber_3020Text(View view) {
-		EndPointSubscriber domainModelElement = (EndPointSubscriber) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3020); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getEndPointSrvServer_3021Text(View view) {
-		EndPointSrvServer domainModelElement = (EndPointSrvServer) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3021); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getEndPointSrvClient_3022Text(View view) {
-		EndPointSrvClient domainModelElement = (EndPointSrvClient) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3022); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getNodeParameter_3024Text(View view) {
-		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.NodeParameter_3024, view
-						.getElement() != null ? view.getElement() : view,
-				RapyutaComponentModelVisualIDRegistry
-						.getType(NodeParameterName2EditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5008); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getNodePublisher_3025Text(View view) {
-		NodePublisher domainModelElement = (NodePublisher) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3025); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getNodeSubscriber_3026Text(View view) {
-		NodeSubscriber domainModelElement = (NodeSubscriber) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3026); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getNodeSrvServer_3027Text(View view) {
-		NodeSrvServer domainModelElement = (NodeSrvServer) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3027); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getNodeSrvClient_3028Text(View view) {
-		NodeSrvClient domainModelElement = (NodeSrvClient) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3028); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getEndPointParameter_3030Text(View view) {
-		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.EndPointParameter_3030, view
-						.getElement() != null ? view.getElement() : view,
-				RapyutaComponentModelVisualIDRegistry
-						.getType(EndPointParameterName2EditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5010); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getEndPointPublisher_3031Text(View view) {
-		EndPointPublisher domainModelElement = (EndPointPublisher) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3031); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getEndPointSubscriber_3032Text(View view) {
-		EndPointSubscriber domainModelElement = (EndPointSubscriber) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3032); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getEndPointSrvServer_3033Text(View view) {
-		EndPointSrvServer domainModelElement = (EndPointSrvServer) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3033); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getEndPointSrvClient_3034Text(View view) {
-		EndPointSrvClient domainModelElement = (EndPointSrvClient) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3034); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getTopic_3035Text(View view) {
-		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.Topic_3035,
-				view.getElement() != null ? view.getElement() : view,
-				RapyutaComponentModelVisualIDRegistry
-						.getType(TopicName2EditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5012); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getRobotEndPoint_3038Text(View view) {
-		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.RobotEndPoint_3038, view
+				RapyutaComponentModelElementTypes.RobotEndPoint_3057, view
 						.getElement() != null ? view.getElement() : view,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(RobotEndPointNameEditPart.VISUAL_ID));
@@ -1043,7 +795,7 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5016); //$NON-NLS-1$
+					"Parser was not found for label " + 5024); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -1051,19 +803,19 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getEnvironmentEndPoint_3039Text(View view) {
+	private String getEndPointParameter_3058Text(View view) {
 		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.EnvironmentEndPoint_3039,
-				view.getElement() != null ? view.getElement() : view,
+				RapyutaComponentModelElementTypes.EndPointParameter_3058, view
+						.getElement() != null ? view.getElement() : view,
 				RapyutaComponentModelVisualIDRegistry
-						.getType(EnvironmentEndPointNameEditPart.VISUAL_ID));
+						.getType(EndPointParameterNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5017); //$NON-NLS-1$
+					"Parser was not found for label " + 5023); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -1071,9 +823,69 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getNode_3040Text(View view) {
+	private String getEndPointPublisher_3059Text(View view) {
+		EndPointPublisher domainModelElement = (EndPointPublisher) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3059); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getEndPointSubscriber_3060Text(View view) {
+		EndPointSubscriber domainModelElement = (EndPointSubscriber) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3060); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getEndPointSrvServer_3061Text(View view) {
+		EndPointSrvServer domainModelElement = (EndPointSrvServer) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3061); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getEndPointSrvClient_3062Text(View view) {
+		EndPointSrvClient domainModelElement = (EndPointSrvClient) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3062); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getNode_3063Text(View view) {
 		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.Node_3040,
+				RapyutaComponentModelElementTypes.Node_3063,
 				view.getElement() != null ? view.getElement() : view,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(NodeName2EditPart.VISUAL_ID));
@@ -1083,7 +895,7 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5018); //$NON-NLS-1$
+					"Parser was not found for label " + 5027); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -1091,37 +903,233 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getMsgInterfaceConnection_4002Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getMsgInterfaceConnection_4003Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getCompositeMsgInterfaceExposed_4004Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getCompositeMsgInterfaceExposed_4005Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getEndPointSrvConnection_4006Text(View view) {
+	private String getNodeParameter_3064Text(View view) {
 		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.EndPointSrvConnection_4006,
+				RapyutaComponentModelElementTypes.NodeParameter_3064, view
+						.getElement() != null ? view.getElement() : view,
+				RapyutaComponentModelVisualIDRegistry
+						.getType(NodeParameterName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5026); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getNodePublisher_3065Text(View view) {
+		NodePublisher domainModelElement = (NodePublisher) view.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3065); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getNodeSubscriber_3066Text(View view) {
+		NodeSubscriber domainModelElement = (NodeSubscriber) view.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3066); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getNodeSrvServer_3067Text(View view) {
+		NodeSrvServer domainModelElement = (NodeSrvServer) view.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3067); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getNodeSrvClient_3068Text(View view) {
+		NodeSrvClient domainModelElement = (NodeSrvClient) view.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3068); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getEnvironmentEndPoint_3069Text(View view) {
+		IParser parser = RapyutaComponentModelParserProvider.getParser(
+				RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069,
+				view.getElement() != null ? view.getElement() : view,
+				RapyutaComponentModelVisualIDRegistry
+						.getType(EnvironmentEndPointNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5029); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getEndPointParameter_3070Text(View view) {
+		IParser parser = RapyutaComponentModelParserProvider.getParser(
+				RapyutaComponentModelElementTypes.EndPointParameter_3070, view
+						.getElement() != null ? view.getElement() : view,
+				RapyutaComponentModelVisualIDRegistry
+						.getType(EndPointParameterName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5028); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getEndPointPublisher_3071Text(View view) {
+		EndPointPublisher domainModelElement = (EndPointPublisher) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3071); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getEndPointSubscriber_3072Text(View view) {
+		EndPointSubscriber domainModelElement = (EndPointSubscriber) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3072); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getEndPointSrvServer_3073Text(View view) {
+		EndPointSrvServer domainModelElement = (EndPointSrvServer) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3073); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getEndPointSrvClient_3074Text(View view) {
+		EndPointSrvClient domainModelElement = (EndPointSrvClient) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3074); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getTopic_3075Text(View view) {
+		IParser parser = RapyutaComponentModelParserProvider.getParser(
+				RapyutaComponentModelElementTypes.Topic_3075,
+				view.getElement() != null ? view.getElement() : view,
+				RapyutaComponentModelVisualIDRegistry
+						.getType(TopicName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5030); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getMsgInterfaceConnection_4011Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getMsgInterfaceConnection_4012Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getCompositeMsgInterfaceExposed_4013Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getCompositeMsgInterfaceExposed_4014Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getEndPointSrvConnection_4015Text(View view) {
+		IParser parser = RapyutaComponentModelParserProvider.getParser(
+				RapyutaComponentModelElementTypes.EndPointSrvConnection_4015,
 				view.getElement() != null ? view.getElement() : view,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(WrappingLabelEditPart.VISUAL_ID));
@@ -1131,7 +1139,7 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6002); //$NON-NLS-1$
+					"Parser was not found for label " + 6007); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -1139,9 +1147,9 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getEndPointMsgConnection_4007Text(View view) {
+	private String getEndPointMsgConnection_4016Text(View view) {
 		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.EndPointMsgConnection_4007,
+				RapyutaComponentModelElementTypes.EndPointMsgConnection_4016,
 				view.getElement() != null ? view.getElement() : view,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(WrappingLabel2EditPart.VISUAL_ID));
@@ -1151,7 +1159,7 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6003); //$NON-NLS-1$
+					"Parser was not found for label " + 6008); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -1159,29 +1167,9 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getContainerSrvConnection_4009Text(View view) {
+	private String getCompositeSrvConnection_4017Text(View view) {
 		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.ContainerSrvConnection_4009,
-				view.getElement() != null ? view.getElement() : view,
-				RapyutaComponentModelVisualIDRegistry
-						.getType(WrappingLabel4EditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6005); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getCompositeSrvConnection_4010Text(View view) {
-		IParser parser = RapyutaComponentModelParserProvider.getParser(
-				RapyutaComponentModelElementTypes.CompositeSrvConnection_4010,
+				RapyutaComponentModelElementTypes.CompositeSrvConnection_4017,
 				view.getElement() != null ? view.getElement() : view,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(WrappingLabel3EditPart.VISUAL_ID));
@@ -1191,7 +1179,27 @@ public class RapyutaComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6006); //$NON-NLS-1$
+					"Parser was not found for label " + 6009); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getContainerSrvConnection_4018Text(View view) {
+		IParser parser = RapyutaComponentModelParserProvider.getParser(
+				RapyutaComponentModelElementTypes.ContainerSrvConnection_4018,
+				view.getElement() != null ? view.getElement() : view,
+				RapyutaComponentModelVisualIDRegistry
+						.getType(WrappingLabel4EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			RapyutaComponentModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 6010); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

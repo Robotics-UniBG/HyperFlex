@@ -50,7 +50,7 @@ public class CompositeMsgInterfaceExposed2EditPart extends
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 4005;
+	public static final int VISUAL_ID = 4014;
 
 	/**
 	 * @generated

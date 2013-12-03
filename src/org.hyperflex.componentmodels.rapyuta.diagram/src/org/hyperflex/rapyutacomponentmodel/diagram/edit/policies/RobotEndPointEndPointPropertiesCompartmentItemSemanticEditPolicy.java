@@ -41,14 +41,14 @@ public class RobotEndPointEndPointPropertiesCompartmentItemSemanticEditPolicy
 	 * @generated
 	 */
 	public RobotEndPointEndPointPropertiesCompartmentItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.RobotEndPoint_3038);
+		super(RapyutaComponentModelElementTypes.RobotEndPoint_3057);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.EndPointParameter_3018 == req
+		if (RapyutaComponentModelElementTypes.EndPointParameter_3058 == req
 				.getElementType()) {
 			return getGEFWrapper(new EndPointParameterCreateCommand(req));
 		}

@@ -16,6 +16,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/composites"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/endPointSrvConnections"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/endPointMsgConnections"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//System/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//System/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//System/userID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//System/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//System/robotID"/>
     </genClasses>
     <genClasses ecoreClass="rapyutaComponentModel.ecore#//Container">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//Container/name"/>
@@ -63,6 +68,7 @@
     <genClasses ecoreClass="rapyutaComponentModel.ecore#//CompositeSubscriber"/>
     <genClasses ecoreClass="rapyutaComponentModel.ecore#//Topic">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//Topic/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//Topic/msg"/>
     </genClasses>
     <genClasses ecoreClass="rapyutaComponentModel.ecore#//Parameter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//Parameter/name"/>
@@ -76,9 +82,11 @@
     </genClasses>
     <genClasses ecoreClass="rapyutaComponentModel.ecore#//SrvServer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//SrvServer/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//SrvServer/srv"/>
     </genClasses>
     <genClasses ecoreClass="rapyutaComponentModel.ecore#//SrvClient">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//SrvClient/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//SrvClient/srv"/>
     </genClasses>
     <genClasses ecoreClass="rapyutaComponentModel.ecore#//CompositeSrvServer">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//CompositeSrvServer/promote"/>

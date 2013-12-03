@@ -41,14 +41,14 @@ public class EnvironmentEndPointEndPointPropertiesCompartmentItemSemanticEditPol
 	 * @generated
 	 */
 	public EnvironmentEndPointEndPointPropertiesCompartmentItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3039);
+		super(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.EndPointParameter_3030 == req
+		if (RapyutaComponentModelElementTypes.EndPointParameter_3070 == req
 				.getElementType()) {
 			return getGEFWrapper(new EndPointParameter2CreateCommand(req));
 		}

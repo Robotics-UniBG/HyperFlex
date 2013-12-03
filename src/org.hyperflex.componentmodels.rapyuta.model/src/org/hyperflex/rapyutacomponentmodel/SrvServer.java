@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.SrvServer#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.rapyutacomponentmodel.SrvServer#getSrv <em>Srv</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,5 +71,31 @@ public interface SrvServer extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Srv</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Srv</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Srv</em>' attribute.
+	 * @see #setSrv(String)
+	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getSrvServer_Srv()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getSrv();
+
+	/**
+	 * Sets the value of the '{@link org.hyperflex.rapyutacomponentmodel.SrvServer#getSrv <em>Srv</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Srv</em>' attribute.
+	 * @see #getSrv()
+	 * @generated
+	 */
+	void setSrv(String value);
 
 } // SrvServer

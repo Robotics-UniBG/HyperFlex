@@ -99,7 +99,7 @@ public class ContainerSrvConnectionReorientCommand extends EditElementCommand {
 		}
 		Container container = (Container) getLink().eContainer();
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistContainerSrvConnection_4009(
+				.getLinkConstraints().canExistContainerSrvConnection_4018(
 						container, getLink(), getNewSource(), target);
 	}
 
@@ -116,7 +116,7 @@ public class ContainerSrvConnectionReorientCommand extends EditElementCommand {
 		}
 		Container container = (Container) getLink().eContainer();
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistContainerSrvConnection_4009(
+				.getLinkConstraints().canExistContainerSrvConnection_4018(
 						container, getLink(), source, getNewTarget());
 	}
 

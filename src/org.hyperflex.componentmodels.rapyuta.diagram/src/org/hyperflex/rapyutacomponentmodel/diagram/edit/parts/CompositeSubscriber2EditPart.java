@@ -29,6 +29,7 @@ package org.hyperflex.rapyutacomponentmodel.diagram.edit.parts;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
@@ -63,7 +64,7 @@ public class CompositeSubscriber2EditPart extends AbstractBorderItemEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3013;
+	public static final int VISUAL_ID = 3053;
 
 	/**
 	 * @generated
@@ -225,10 +226,10 @@ public class CompositeSubscriber2EditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
-		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
-		types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
-		types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005);
+		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
+		types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012);
+		types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4013);
+		types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4014);
 		return types;
 	}
 
@@ -239,28 +240,28 @@ public class CompositeSubscriber2EditPart extends AbstractBorderItemEditPart {
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
 		}
 		if (targetEditPart instanceof Topic2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
 		}
 		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012);
 		}
 		if (targetEditPart instanceof Topic2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003);
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012);
 		}
 		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
+			types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4013);
 		}
 		if (targetEditPart instanceof Topic2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
+			types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4013);
 		}
 		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005);
+			types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4014);
 		}
 		if (targetEditPart instanceof Topic2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005);
+			types.add(RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4014);
 		}
 		return types;
 	}
@@ -270,18 +271,18 @@ public class CompositeSubscriber2EditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002) {
-			types.add(RapyutaComponentModelElementTypes.Topic_3016);
-			types.add(RapyutaComponentModelElementTypes.Topic_3035);
-		} else if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003) {
-			types.add(RapyutaComponentModelElementTypes.Topic_3016);
-			types.add(RapyutaComponentModelElementTypes.Topic_3035);
-		} else if (relationshipType == RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004) {
-			types.add(RapyutaComponentModelElementTypes.Topic_3016);
-			types.add(RapyutaComponentModelElementTypes.Topic_3035);
-		} else if (relationshipType == RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005) {
-			types.add(RapyutaComponentModelElementTypes.Topic_3016);
-			types.add(RapyutaComponentModelElementTypes.Topic_3035);
+		if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011) {
+			types.add(RapyutaComponentModelElementTypes.Topic_3056);
+			types.add(RapyutaComponentModelElementTypes.Topic_3075);
+		} else if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012) {
+			types.add(RapyutaComponentModelElementTypes.Topic_3056);
+			types.add(RapyutaComponentModelElementTypes.Topic_3075);
+		} else if (relationshipType == RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4013) {
+			types.add(RapyutaComponentModelElementTypes.Topic_3056);
+			types.add(RapyutaComponentModelElementTypes.Topic_3075);
+		} else if (relationshipType == RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4014) {
+			types.add(RapyutaComponentModelElementTypes.Topic_3056);
+			types.add(RapyutaComponentModelElementTypes.Topic_3075);
 		}
 		return types;
 	}

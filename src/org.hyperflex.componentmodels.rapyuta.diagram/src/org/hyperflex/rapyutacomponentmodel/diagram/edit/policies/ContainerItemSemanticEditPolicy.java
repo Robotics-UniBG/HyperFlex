@@ -61,7 +61,7 @@ public class ContainerItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public ContainerItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Container_2002);
+		super(RapyutaComponentModelElementTypes.Container_2004);
 	}
 
 	/**

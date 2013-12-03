@@ -16,7 +16,7 @@
             allowMultiple="false"
             category="it.unibg.robotics.hyperflex.ui.views"
             class="it.unibg.robotics.featuremodels.ui.views.ConstraintView"
-            icon="icons/hf.gif"
+            icon="icons/HF.gif"
             id="it.unibg.robotics.featuremodels.ui.views.constraintview"
             name="Constraint View">
       </view>

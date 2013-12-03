@@ -99,7 +99,7 @@ public class MsgInterfaceConnectionReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistMsgInterfaceConnection_4002(
+				.getLinkConstraints().canExistMsgInterfaceConnection_4011(
 						getNewSource(), getOldTarget());
 	}
 
@@ -111,7 +111,7 @@ public class MsgInterfaceConnectionReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistMsgInterfaceConnection_4002(
+				.getLinkConstraints().canExistMsgInterfaceConnection_4011(
 						getOldSource(), getNewTarget());
 	}
 

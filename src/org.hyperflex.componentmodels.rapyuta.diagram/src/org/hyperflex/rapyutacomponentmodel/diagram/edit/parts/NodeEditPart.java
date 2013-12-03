@@ -77,7 +77,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3001;
+	public static final int VISUAL_ID = 3041;
 
 	/**
 	 * @generated
@@ -388,7 +388,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter
 					.getAdapter(IElementType.class);
-			if (type == RapyutaComponentModelElementTypes.NodeParameter_3002) {
+			if (type == RapyutaComponentModelElementTypes.NodeParameter_3042) {
 				return getChildBySemanticHint(RapyutaComponentModelVisualIDRegistry
 						.getType(NodePropertiesCompartmentEditPart.VISUAL_ID));
 			}

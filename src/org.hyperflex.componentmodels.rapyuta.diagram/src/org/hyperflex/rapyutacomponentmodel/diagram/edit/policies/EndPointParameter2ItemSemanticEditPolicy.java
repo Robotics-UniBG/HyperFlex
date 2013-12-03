@@ -45,7 +45,7 @@ public class EndPointParameter2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public EndPointParameter2ItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.EndPointParameter_3030);
+		super(RapyutaComponentModelElementTypes.EndPointParameter_3070);
 	}
 
 	/**

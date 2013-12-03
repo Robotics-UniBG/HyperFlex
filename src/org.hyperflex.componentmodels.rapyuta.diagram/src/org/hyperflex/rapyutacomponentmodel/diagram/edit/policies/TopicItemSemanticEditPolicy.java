@@ -65,7 +65,7 @@ public class TopicItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public TopicItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Topic_3016);
+		super(RapyutaComponentModelElementTypes.Topic_3056);
 	}
 
 	/**
@@ -138,19 +138,19 @@ public class TopicItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004 == req
+		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4013 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005 == req
+		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4014 == req
 				.getElementType()) {
 			return null;
 		}
@@ -162,22 +162,22 @@ public class TopicItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnection2CreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004 == req
+		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4013 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeMsgInterfaceExposedCreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005 == req
+		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4014 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeMsgInterfaceExposed2CreateCommand(
 					req, req.getSource(), req.getTarget()));

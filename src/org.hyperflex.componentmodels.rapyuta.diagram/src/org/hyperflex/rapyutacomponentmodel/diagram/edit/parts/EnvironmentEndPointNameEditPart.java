@@ -84,7 +84,7 @@ public class EnvironmentEndPointNameEditPart extends CompartmentEditPart
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5017;
+	public static final int VISUAL_ID = 5029;
 
 	/**
 	 * @generated
@@ -330,7 +330,7 @@ public class EnvironmentEndPointNameEditPart extends CompartmentEditPart
 		if (parser == null) {
 			parser = RapyutaComponentModelParserProvider
 					.getParser(
-							RapyutaComponentModelElementTypes.EnvironmentEndPoint_3039,
+							RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069,
 							getParserElement(),
 							RapyutaComponentModelVisualIDRegistry
 									.getType(org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EnvironmentEndPointNameEditPart.VISUAL_ID));

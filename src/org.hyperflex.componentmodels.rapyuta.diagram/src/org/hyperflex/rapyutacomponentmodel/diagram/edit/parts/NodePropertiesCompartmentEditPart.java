@@ -48,7 +48,7 @@ public class NodePropertiesCompartmentEditPart extends ListCompartmentEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7002;
+	public static final int VISUAL_ID = 7013;
 
 	/**
 	 * @generated

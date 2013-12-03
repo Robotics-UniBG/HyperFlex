@@ -63,241 +63,241 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
-	private IParser compositeName_5007Parser;
+	private IParser compositeName_5025Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getCompositeName_5007Parser() {
-		if (compositeName_5007Parser == null) {
+	private IParser getCompositeName_5025Parser() {
+		if (compositeName_5025Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			parser.setViewPattern("Composite - {0}"); //$NON-NLS-1$
 			parser.setEditorPattern("Composite - {0}"); //$NON-NLS-1$
 			parser.setEditPattern("Composite - {0}"); //$NON-NLS-1$
-			compositeName_5007Parser = parser;
+			compositeName_5025Parser = parser;
 		}
-		return compositeName_5007Parser;
+		return compositeName_5025Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser containerName_5013Parser;
+	private IParser containerName_5031Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getContainerName_5013Parser() {
-		if (containerName_5013Parser == null) {
+	private IParser getContainerName_5031Parser() {
+		if (containerName_5031Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getContainer_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			parser.setViewPattern("Container - {0}"); //$NON-NLS-1$
 			parser.setEditorPattern("Container - {0}"); //$NON-NLS-1$
 			parser.setEditPattern("Container - {0}"); //$NON-NLS-1$
-			containerName_5013Parser = parser;
+			containerName_5031Parser = parser;
 		}
-		return containerName_5013Parser;
+		return containerName_5031Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser nodeName_5002Parser;
+	private IParser nodeName_5020Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeName_5002Parser() {
-		if (nodeName_5002Parser == null) {
+	private IParser getNodeName_5020Parser() {
+		if (nodeName_5020Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			nodeName_5002Parser = parser;
+			nodeName_5020Parser = parser;
 		}
-		return nodeName_5002Parser;
+		return nodeName_5020Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser nodeParameterName_5001Parser;
+	private IParser nodeParameterName_5019Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeParameterName_5001Parser() {
-		if (nodeParameterName_5001Parser == null) {
+	private IParser getNodeParameterName_5019Parser() {
+		if (nodeParameterName_5019Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getParameter_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			nodeParameterName_5001Parser = parser;
+			nodeParameterName_5019Parser = parser;
 		}
-		return nodeParameterName_5001Parser;
+		return nodeParameterName_5019Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser compositeName_5003Parser;
+	private IParser compositeName_5021Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getCompositeName_5003Parser() {
-		if (compositeName_5003Parser == null) {
+	private IParser getCompositeName_5021Parser() {
+		if (compositeName_5021Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			compositeName_5003Parser = parser;
+			compositeName_5021Parser = parser;
 		}
-		return compositeName_5003Parser;
+		return compositeName_5021Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser topicName_5004Parser;
+	private IParser topicName_5022Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getTopicName_5004Parser() {
-		if (topicName_5004Parser == null) {
+	private IParser getTopicName_5022Parser() {
+		if (topicName_5022Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getTopic_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			topicName_5004Parser = parser;
+			topicName_5022Parser = parser;
 		}
-		return topicName_5004Parser;
+		return topicName_5022Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser robotEndPointName_5016Parser;
+	private IParser robotEndPointName_5024Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getRobotEndPointName_5016Parser() {
-		if (robotEndPointName_5016Parser == null) {
+	private IParser getRobotEndPointName_5024Parser() {
+		if (robotEndPointName_5024Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			robotEndPointName_5016Parser = parser;
+			robotEndPointName_5024Parser = parser;
 		}
-		return robotEndPointName_5016Parser;
+		return robotEndPointName_5024Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser endPointParameterName_5005Parser;
+	private IParser endPointParameterName_5023Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getEndPointParameterName_5005Parser() {
-		if (endPointParameterName_5005Parser == null) {
+	private IParser getEndPointParameterName_5023Parser() {
+		if (endPointParameterName_5023Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getParameter_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			endPointParameterName_5005Parser = parser;
+			endPointParameterName_5023Parser = parser;
 		}
-		return endPointParameterName_5005Parser;
+		return endPointParameterName_5023Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser nodeName_5018Parser;
+	private IParser nodeName_5027Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeName_5018Parser() {
-		if (nodeName_5018Parser == null) {
+	private IParser getNodeName_5027Parser() {
+		if (nodeName_5027Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			nodeName_5018Parser = parser;
+			nodeName_5027Parser = parser;
 		}
-		return nodeName_5018Parser;
+		return nodeName_5027Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser nodeParameterName_5008Parser;
+	private IParser nodeParameterName_5026Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeParameterName_5008Parser() {
-		if (nodeParameterName_5008Parser == null) {
+	private IParser getNodeParameterName_5026Parser() {
+		if (nodeParameterName_5026Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getParameter_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			nodeParameterName_5008Parser = parser;
+			nodeParameterName_5026Parser = parser;
 		}
-		return nodeParameterName_5008Parser;
+		return nodeParameterName_5026Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser environmentEndPointName_5017Parser;
+	private IParser environmentEndPointName_5029Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getEnvironmentEndPointName_5017Parser() {
-		if (environmentEndPointName_5017Parser == null) {
+	private IParser getEnvironmentEndPointName_5029Parser() {
+		if (environmentEndPointName_5029Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			environmentEndPointName_5017Parser = parser;
+			environmentEndPointName_5029Parser = parser;
 		}
-		return environmentEndPointName_5017Parser;
+		return environmentEndPointName_5029Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser endPointParameterName_5010Parser;
+	private IParser endPointParameterName_5028Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getEndPointParameterName_5010Parser() {
-		if (endPointParameterName_5010Parser == null) {
+	private IParser getEndPointParameterName_5028Parser() {
+		if (endPointParameterName_5028Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getParameter_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			endPointParameterName_5010Parser = parser;
+			endPointParameterName_5028Parser = parser;
 		}
-		return endPointParameterName_5010Parser;
+		return endPointParameterName_5028Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser topicName_5012Parser;
+	private IParser topicName_5030Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getTopicName_5012Parser() {
-		if (topicName_5012Parser == null) {
+	private IParser getTopicName_5030Parser() {
+		if (topicName_5030Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getTopic_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			topicName_5012Parser = parser;
+			topicName_5030Parser = parser;
 		}
-		return topicName_5012Parser;
+		return topicName_5030Parser;
 	}
 
 	/**
@@ -306,31 +306,31 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case CompositeNameEditPart.VISUAL_ID:
-			return getCompositeName_5007Parser();
+			return getCompositeName_5025Parser();
 		case ContainerNameEditPart.VISUAL_ID:
-			return getContainerName_5013Parser();
+			return getContainerName_5031Parser();
 		case NodeNameEditPart.VISUAL_ID:
-			return getNodeName_5002Parser();
+			return getNodeName_5020Parser();
 		case NodeParameterNameEditPart.VISUAL_ID:
-			return getNodeParameterName_5001Parser();
+			return getNodeParameterName_5019Parser();
 		case CompositeName2EditPart.VISUAL_ID:
-			return getCompositeName_5003Parser();
+			return getCompositeName_5021Parser();
 		case TopicNameEditPart.VISUAL_ID:
-			return getTopicName_5004Parser();
+			return getTopicName_5022Parser();
 		case RobotEndPointNameEditPart.VISUAL_ID:
-			return getRobotEndPointName_5016Parser();
+			return getRobotEndPointName_5024Parser();
 		case EndPointParameterNameEditPart.VISUAL_ID:
-			return getEndPointParameterName_5005Parser();
+			return getEndPointParameterName_5023Parser();
 		case NodeName2EditPart.VISUAL_ID:
-			return getNodeName_5018Parser();
+			return getNodeName_5027Parser();
 		case NodeParameterName2EditPart.VISUAL_ID:
-			return getNodeParameterName_5008Parser();
+			return getNodeParameterName_5026Parser();
 		case EnvironmentEndPointNameEditPart.VISUAL_ID:
-			return getEnvironmentEndPointName_5017Parser();
+			return getEnvironmentEndPointName_5029Parser();
 		case EndPointParameterName2EditPart.VISUAL_ID:
-			return getEndPointParameterName_5010Parser();
+			return getEndPointParameterName_5028Parser();
 		case TopicName2EditPart.VISUAL_ID:
-			return getTopicName_5012Parser();
+			return getTopicName_5030Parser();
 		}
 		return null;
 	}

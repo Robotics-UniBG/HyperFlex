@@ -27,6 +27,7 @@
 package org.hyperflex.rapyutacomponentmodel.diagram.edit.policies;
 
 import java.util.Iterator;
+
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand;
@@ -64,7 +65,7 @@ public class CompositeSubscriber2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public CompositeSubscriber2ItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.CompositeSubscriber_3013);
+		super(RapyutaComponentModelElementTypes.CompositeSubscriber_3053);
 	}
 
 	/**
@@ -137,22 +138,22 @@ public class CompositeSubscriber2ItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnection2CreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004 == req
+		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4013 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeMsgInterfaceExposedCreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005 == req
+		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4014 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeMsgInterfaceExposed2CreateCommand(
 					req, req.getSource(), req.getTarget()));
@@ -165,19 +166,19 @@ public class CompositeSubscriber2ItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4004 == req
+		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4013 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4005 == req
+		if (RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4014 == req
 				.getElementType()) {
 			return null;
 		}

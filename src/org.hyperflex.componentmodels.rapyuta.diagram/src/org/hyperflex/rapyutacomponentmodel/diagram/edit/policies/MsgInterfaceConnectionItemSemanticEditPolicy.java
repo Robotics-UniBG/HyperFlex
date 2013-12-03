@@ -41,7 +41,7 @@ public class MsgInterfaceConnectionItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public MsgInterfaceConnectionItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002);
+		super(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
 	}
 
 	/**

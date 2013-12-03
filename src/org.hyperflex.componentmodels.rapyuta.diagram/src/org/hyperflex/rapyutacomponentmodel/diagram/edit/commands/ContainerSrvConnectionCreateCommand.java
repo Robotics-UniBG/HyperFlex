@@ -95,7 +95,7 @@ public class ContainerSrvConnectionCreateCommand extends EditElementCommand {
 			return false;
 		}
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canCreateContainerSrvConnection_4009(
+				.getLinkConstraints().canCreateContainerSrvConnection_4018(
 						getContainer(), getSource(), getTarget());
 	}
 

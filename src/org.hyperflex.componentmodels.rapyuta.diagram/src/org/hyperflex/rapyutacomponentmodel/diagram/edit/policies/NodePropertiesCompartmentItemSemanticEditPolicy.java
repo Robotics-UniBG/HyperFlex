@@ -41,14 +41,14 @@ public class NodePropertiesCompartmentItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public NodePropertiesCompartmentItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Node_3001);
+		super(RapyutaComponentModelElementTypes.Node_3041);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.NodeParameter_3002 == req
+		if (RapyutaComponentModelElementTypes.NodeParameter_3042 == req
 				.getElementType()) {
 			return getGEFWrapper(new NodeParameterCreateCommand(req));
 		}

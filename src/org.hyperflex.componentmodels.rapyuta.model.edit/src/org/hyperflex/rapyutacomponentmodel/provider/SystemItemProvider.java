@@ -32,20 +32,18 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelFactory;
 import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
 
@@ -84,8 +82,123 @@ public class SystemItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
+			addUrlPropertyDescriptor(object);
+			addUserIDPropertyDescriptor(object);
+			addPasswordPropertyDescriptor(object);
+			addRobotIDPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_System_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_System_name_feature", "_UI_System_type"),
+				 rapyutacomponentmodelPackage.Literals.SYSTEM__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Url feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_System_url_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_System_url_feature", "_UI_System_type"),
+				 rapyutacomponentmodelPackage.Literals.SYSTEM__URL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the User ID feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUserIDPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_System_userID_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_System_userID_feature", "_UI_System_type"),
+				 rapyutacomponentmodelPackage.Literals.SYSTEM__USER_ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Password feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPasswordPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_System_password_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_System_password_feature", "_UI_System_type"),
+				 rapyutacomponentmodelPackage.Literals.SYSTEM__PASSWORD,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Robot ID feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRobotIDPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_System_robotID_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_System_robotID_feature", "_UI_System_type"),
+				 rapyutacomponentmodelPackage.Literals.SYSTEM__ROBOT_ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -140,7 +253,10 @@ public class SystemItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_System_type");
+		String label = ((org.hyperflex.rapyutacomponentmodel.System)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_System_type") :
+			getString("_UI_System_type") + " " + label;
 	}
 
 	/**
@@ -155,6 +271,13 @@ public class SystemItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(org.hyperflex.rapyutacomponentmodel.System.class)) {
+			case rapyutacomponentmodelPackage.SYSTEM__NAME:
+			case rapyutacomponentmodelPackage.SYSTEM__URL:
+			case rapyutacomponentmodelPackage.SYSTEM__USER_ID:
+			case rapyutacomponentmodelPackage.SYSTEM__PASSWORD:
+			case rapyutacomponentmodelPackage.SYSTEM__ROBOT_ID:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case rapyutacomponentmodelPackage.SYSTEM__CONTAINERS:
 			case rapyutacomponentmodelPackage.SYSTEM__COMPOSITES:
 			case rapyutacomponentmodelPackage.SYSTEM__END_POINT_SRV_CONNECTIONS:

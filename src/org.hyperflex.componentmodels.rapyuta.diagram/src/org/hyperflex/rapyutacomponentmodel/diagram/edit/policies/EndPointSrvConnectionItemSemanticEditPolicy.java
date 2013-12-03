@@ -41,7 +41,7 @@ public class EndPointSrvConnectionItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public EndPointSrvConnectionItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.EndPointSrvConnection_4006);
+		super(RapyutaComponentModelElementTypes.EndPointSrvConnection_4015);
 	}
 
 	/**

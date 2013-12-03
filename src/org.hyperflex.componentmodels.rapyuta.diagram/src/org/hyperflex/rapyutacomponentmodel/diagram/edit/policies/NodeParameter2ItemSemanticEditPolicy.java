@@ -45,7 +45,7 @@ public class NodeParameter2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public NodeParameter2ItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.NodeParameter_3024);
+		super(RapyutaComponentModelElementTypes.NodeParameter_3064);
 	}
 
 	/**

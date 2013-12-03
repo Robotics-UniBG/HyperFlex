@@ -446,7 +446,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getComposite_2001ContainedLinks(view));
+						.getComposite_2003ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -454,7 +454,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case ContainerEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getContainer_2002ContainedLinks(view));
+						.getContainer_2004ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -462,7 +462,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodeEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getNode_3001ContainedLinks(view));
+						.getNode_3041ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -470,7 +470,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodeParameterEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getNodeParameter_3002ContainedLinks(view));
+						.getNodeParameter_3042ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -478,7 +478,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodePublisherEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getNodePublisher_3003ContainedLinks(view));
+						.getNodePublisher_3043ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -486,7 +486,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodeSubscriberEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getNodeSubscriber_3004ContainedLinks(view));
+						.getNodeSubscriber_3044ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -494,7 +494,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodeSrvServerEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getNodeSrvServer_3005ContainedLinks(view));
+						.getNodeSrvServer_3045ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -502,7 +502,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodeSrvClientEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getNodeSrvClient_3006ContainedLinks(view));
+						.getNodeSrvClient_3046ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -510,7 +510,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case Composite2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getComposite_3007ContainedLinks(view));
+						.getComposite_3047ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -518,7 +518,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositePublisherEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getCompositePublisher_3008ContainedLinks(view));
+						.getCompositePublisher_3048ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -526,7 +526,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeSubscriberEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getCompositeSubscriber_3009ContainedLinks(view));
+						.getCompositeSubscriber_3049ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -534,7 +534,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeSrvServerEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getCompositeSrvServer_3010ContainedLinks(view));
+						.getCompositeSrvServer_3050ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -542,7 +542,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeSrvClientEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getCompositeSrvClient_3011ContainedLinks(view));
+						.getCompositeSrvClient_3051ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -550,7 +550,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositePublisher2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getCompositePublisher_3012ContainedLinks(view));
+						.getCompositePublisher_3052ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -558,7 +558,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeSubscriber2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getCompositeSubscriber_3013ContainedLinks(view));
+						.getCompositeSubscriber_3053ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -566,7 +566,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeSrvServer2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getCompositeSrvServer_3014ContainedLinks(view));
+						.getCompositeSrvServer_3054ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -574,7 +574,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeSrvClient2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getCompositeSrvClient_3015ContainedLinks(view));
+						.getCompositeSrvClient_3055ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -582,7 +582,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case TopicEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getTopic_3016ContainedLinks(view));
+						.getTopic_3056ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -590,7 +590,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case RobotEndPointEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getRobotEndPoint_3038ContainedLinks(view));
+						.getRobotEndPoint_3057ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -598,7 +598,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EndPointParameterEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEndPointParameter_3018ContainedLinks(view));
+						.getEndPointParameter_3058ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -606,7 +606,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EndPointPublisherEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEndPointPublisher_3019ContainedLinks(view));
+						.getEndPointPublisher_3059ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -614,7 +614,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EndPointSubscriberEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEndPointSubscriber_3020ContainedLinks(view));
+						.getEndPointSubscriber_3060ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -622,7 +622,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EndPointSrvServerEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEndPointSrvServer_3021ContainedLinks(view));
+						.getEndPointSrvServer_3061ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -630,7 +630,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EndPointSrvClientEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEndPointSrvClient_3022ContainedLinks(view));
+						.getEndPointSrvClient_3062ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -638,7 +638,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case Node2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getNode_3040ContainedLinks(view));
+						.getNode_3063ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -646,7 +646,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodeParameter2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getNodeParameter_3024ContainedLinks(view));
+						.getNodeParameter_3064ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -654,7 +654,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodePublisher2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getNodePublisher_3025ContainedLinks(view));
+						.getNodePublisher_3065ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -662,7 +662,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodeSubscriber2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getNodeSubscriber_3026ContainedLinks(view));
+						.getNodeSubscriber_3066ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -670,7 +670,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodeSrvServer2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getNodeSrvServer_3027ContainedLinks(view));
+						.getNodeSrvServer_3067ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -678,7 +678,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodeSrvClient2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getNodeSrvClient_3028ContainedLinks(view));
+						.getNodeSrvClient_3068ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -686,7 +686,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EnvironmentEndPointEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEnvironmentEndPoint_3039ContainedLinks(view));
+						.getEnvironmentEndPoint_3069ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -694,7 +694,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EndPointParameter2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEndPointParameter_3030ContainedLinks(view));
+						.getEndPointParameter_3070ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -702,7 +702,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EndPointPublisher2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEndPointPublisher_3031ContainedLinks(view));
+						.getEndPointPublisher_3071ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -710,7 +710,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EndPointSubscriber2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEndPointSubscriber_3032ContainedLinks(view));
+						.getEndPointSubscriber_3072ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -718,7 +718,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EndPointSrvServer2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEndPointSrvServer_3033ContainedLinks(view));
+						.getEndPointSrvServer_3073ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -726,7 +726,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EndPointSrvClient2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEndPointSrvClient_3034ContainedLinks(view));
+						.getEndPointSrvClient_3074ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -734,7 +734,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case Topic2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getTopic_3035ContainedLinks(view));
+						.getTopic_3075ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -742,7 +742,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EndPointSrvConnectionEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEndPointSrvConnection_4006ContainedLinks(view));
+						.getEndPointSrvConnection_4015ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -750,7 +750,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case EndPointMsgConnectionEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getEndPointMsgConnection_4007ContainedLinks(view));
+						.getEndPointMsgConnection_4016ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -758,7 +758,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeSrvConnectionEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getCompositeSrvConnection_4010ContainedLinks(view));
+						.getCompositeSrvConnection_4017ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -766,7 +766,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case ContainerSrvConnectionEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RapyutaComponentModelDiagramUpdater
-						.getContainerSrvConnection_4009ContainedLinks(view));
+						.getContainerSrvConnection_4018ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

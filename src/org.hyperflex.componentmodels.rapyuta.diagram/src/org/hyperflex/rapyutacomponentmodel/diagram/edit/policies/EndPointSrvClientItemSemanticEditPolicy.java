@@ -60,7 +60,7 @@ public class EndPointSrvClientItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public EndPointSrvClientItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.EndPointSrvClient_3022);
+		super(RapyutaComponentModelElementTypes.EndPointSrvClient_3062);
 	}
 
 	/**
@@ -122,17 +122,17 @@ public class EndPointSrvClientItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.EndPointSrvConnection_4006 == req
+		if (RapyutaComponentModelElementTypes.EndPointSrvConnection_4015 == req
 				.getElementType()) {
 			return getGEFWrapper(new EndPointSrvConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSrvConnection_4010 == req
+		if (RapyutaComponentModelElementTypes.CompositeSrvConnection_4017 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeSrvConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.ContainerSrvConnection_4009 == req
+		if (RapyutaComponentModelElementTypes.ContainerSrvConnection_4018 == req
 				.getElementType()) {
 			return getGEFWrapper(new ContainerSrvConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
@@ -145,15 +145,15 @@ public class EndPointSrvClientItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.EndPointSrvConnection_4006 == req
+		if (RapyutaComponentModelElementTypes.EndPointSrvConnection_4015 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSrvConnection_4010 == req
+		if (RapyutaComponentModelElementTypes.CompositeSrvConnection_4017 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.ContainerSrvConnection_4009 == req
+		if (RapyutaComponentModelElementTypes.ContainerSrvConnection_4018 == req
 				.getElementType()) {
 			return null;
 		}

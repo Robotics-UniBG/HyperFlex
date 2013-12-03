@@ -488,7 +488,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_NodePublisher_3003_outgoinglinks,
+					Messages.NavigatorGroupName_NodePublisher_3043_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -511,7 +511,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_NodeSubscriber_3004_outgoinglinks,
+					Messages.NavigatorGroupName_NodeSubscriber_3044_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -534,7 +534,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_NodeSrvServer_3005_incominglinks,
+					Messages.NavigatorGroupName_NodeSrvServer_3045_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -557,7 +557,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_NodeSrvClient_3006_outgoinglinks,
+					Messages.NavigatorGroupName_NodeSrvClient_3046_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -607,7 +607,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositePublisher_3008_outgoinglinks,
+					Messages.NavigatorGroupName_CompositePublisher_3048_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -642,7 +642,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeSubscriber_3009_outgoinglinks,
+					Messages.NavigatorGroupName_CompositeSubscriber_3049_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -677,7 +677,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeSrvServer_3010_incominglinks,
+					Messages.NavigatorGroupName_CompositeSrvServer_3050_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -700,7 +700,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeSrvClient_3011_outgoinglinks,
+					Messages.NavigatorGroupName_CompositeSrvClient_3051_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -723,7 +723,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositePublisher_3012_outgoinglinks,
+					Messages.NavigatorGroupName_CompositePublisher_3052_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -758,7 +758,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeSubscriber_3013_outgoinglinks,
+					Messages.NavigatorGroupName_CompositeSubscriber_3053_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -793,7 +793,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeSrvServer_3014_incominglinks,
+					Messages.NavigatorGroupName_CompositeSrvServer_3054_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -816,7 +816,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeSrvClient_3015_outgoinglinks,
+					Messages.NavigatorGroupName_CompositeSrvClient_3055_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -839,370 +839,7 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_Topic_3016_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeMsgInterfaceExposedEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeMsgInterfaceExposed2EditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case EndPointPublisherEditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointPublisher_3019_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointMsgConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case EndPointSubscriberEditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointSubscriber_3020_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointSubscriber_3020_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointMsgConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case EndPointSrvServerEditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointSrvServer_3021_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSrvConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(ContainerSrvConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case EndPointSrvClientEditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointSrvClient_3022_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSrvConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(ContainerSrvConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case NodePublisher2EditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_NodePublisher_3025_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case NodeSubscriber2EditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_NodeSubscriber_3026_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case NodeSrvServer2EditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_NodeSrvServer_3027_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(ContainerSrvConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case NodeSrvClient2EditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_NodeSrvClient_3028_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(ContainerSrvConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case EndPointPublisher2EditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointPublisher_3031_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointMsgConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case EndPointSubscriber2EditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointSubscriber_3032_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointSubscriber_3032_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointMsgConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case EndPointSrvServer2EditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointSrvServer_3033_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSrvConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(ContainerSrvConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case EndPointSrvClient2EditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointSrvClient_3034_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSrvConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(ContainerSrvConnectionEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case Topic2EditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_Topic_3035_incominglinks,
+					Messages.NavigatorGroupName_Topic_3056_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -1269,39 +906,121 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case EnvironmentEndPointEditPart.VISUAL_ID: {
+		case EndPointPublisherEditPart.VISUAL_ID: {
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_EndPointPublisher_3059_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(EnvironmentEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
+							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointParameter2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
+							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointPublisher2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
+							.getType(EndPointMsgConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case EndPointSubscriberEditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_EndPointSubscriber_3060_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_EndPointSubscriber_3060_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSubscriber2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
+							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSrvServer2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
+							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSrvClient2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
+							.getType(EndPointMsgConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case EndPointSrvServerEditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_EndPointSrvServer_3061_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSrvConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(ContainerSrvConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case EndPointSrvClientEditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_EndPointSrvClient_3062_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSrvConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(ContainerSrvConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
 			return result.toArray();
 		}
 
@@ -1341,14 +1060,295 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
+		case NodePublisher2EditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_NodePublisher_3065_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case NodeSubscriber2EditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_NodeSubscriber_3066_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case NodeSrvServer2EditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_NodeSrvServer_3067_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(ContainerSrvConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case NodeSrvClient2EditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_NodeSrvClient_3068_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(ContainerSrvConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case EnvironmentEndPointEditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EnvironmentEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointParameter2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointPublisher2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSubscriber2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSrvServer2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSrvClient2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case EndPointPublisher2EditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_EndPointPublisher_3071_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointMsgConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case EndPointSubscriber2EditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_EndPointSubscriber_3072_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_EndPointSubscriber_3072_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointMsgConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case EndPointSrvServer2EditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_EndPointSrvServer_3073_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSrvConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(ContainerSrvConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case EndPointSrvClient2EditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup outgoinglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_EndPointSrvClient_3074_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSrvConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(ContainerSrvConnectionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case Topic2EditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_Topic_3075_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeMsgInterfaceExposedEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeMsgInterfaceExposed2EditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
 		case MsgInterfaceConnectionEditPart.VISUAL_ID: {
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			RapyutaComponentModelNavigatorGroup target = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_MsgInterfaceConnection_4002_target,
+					Messages.NavigatorGroupName_MsgInterfaceConnection_4011_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			RapyutaComponentModelNavigatorGroup source = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_MsgInterfaceConnection_4002_source,
+					Messages.NavigatorGroupName_MsgInterfaceConnection_4011_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -1434,10 +1434,10 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			RapyutaComponentModelNavigatorGroup target = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_MsgInterfaceConnection_4003_target,
+					Messages.NavigatorGroupName_MsgInterfaceConnection_4012_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			RapyutaComponentModelNavigatorGroup source = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_MsgInterfaceConnection_4003_source,
+					Messages.NavigatorGroupName_MsgInterfaceConnection_4012_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -1523,10 +1523,10 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			RapyutaComponentModelNavigatorGroup target = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeMsgInterfaceExposed_4004_target,
+					Messages.NavigatorGroupName_CompositeMsgInterfaceExposed_4013_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			RapyutaComponentModelNavigatorGroup source = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeMsgInterfaceExposed_4004_source,
+					Messages.NavigatorGroupName_CompositeMsgInterfaceExposed_4013_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -1572,10 +1572,10 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			RapyutaComponentModelNavigatorGroup target = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeMsgInterfaceExposed_4005_target,
+					Messages.NavigatorGroupName_CompositeMsgInterfaceExposed_4014_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			RapyutaComponentModelNavigatorGroup source = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeMsgInterfaceExposed_4005_source,
+					Messages.NavigatorGroupName_CompositeMsgInterfaceExposed_4014_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -1621,10 +1621,10 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			RapyutaComponentModelNavigatorGroup target = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointSrvConnection_4006_target,
+					Messages.NavigatorGroupName_EndPointSrvConnection_4015_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			RapyutaComponentModelNavigatorGroup source = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointSrvConnection_4006_source,
+					Messages.NavigatorGroupName_EndPointSrvConnection_4015_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -1660,10 +1660,10 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			RapyutaComponentModelNavigatorGroup target = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointMsgConnection_4007_target,
+					Messages.NavigatorGroupName_EndPointMsgConnection_4016_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			RapyutaComponentModelNavigatorGroup source = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_EndPointMsgConnection_4007_source,
+					Messages.NavigatorGroupName_EndPointMsgConnection_4016_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -1695,14 +1695,14 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case ContainerSrvConnectionEditPart.VISUAL_ID: {
+		case CompositeSrvConnectionEditPart.VISUAL_ID: {
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			RapyutaComponentModelNavigatorGroup target = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_ContainerSrvConnection_4009_target,
+					Messages.NavigatorGroupName_CompositeSrvConnection_4017_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			RapyutaComponentModelNavigatorGroup source = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_ContainerSrvConnection_4009_source,
+					Messages.NavigatorGroupName_CompositeSrvConnection_4017_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -1774,14 +1774,14 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case CompositeSrvConnectionEditPart.VISUAL_ID: {
+		case ContainerSrvConnectionEditPart.VISUAL_ID: {
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			RapyutaComponentModelNavigatorGroup target = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeSrvConnection_4010_target,
+					Messages.NavigatorGroupName_ContainerSrvConnection_4018_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			RapyutaComponentModelNavigatorGroup source = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_CompositeSrvConnection_4010_source,
+					Messages.NavigatorGroupName_ContainerSrvConnection_4018_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),

@@ -37,7 +37,7 @@ public class RapyutaComponentModelNavigatorSorter extends ViewerSorter {
 	/**
 	 * @generated
 	 */
-	private static final int GROUP_CATEGORY = 7013;
+	private static final int GROUP_CATEGORY = 7019;
 
 	/**
 	 * @generated

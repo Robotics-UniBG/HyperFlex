@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.Topic#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.rapyutacomponentmodel.Topic#getMsg <em>Msg</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,5 +71,31 @@ public interface Topic extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Msg</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Msg</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Msg</em>' attribute.
+	 * @see #setMsg(String)
+	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getTopic_Msg()
+	 * @model
+	 * @generated
+	 */
+	String getMsg();
+
+	/**
+	 * Sets the value of the '{@link org.hyperflex.rapyutacomponentmodel.Topic#getMsg <em>Msg</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Msg</em>' attribute.
+	 * @see #getMsg()
+	 * @generated
+	 */
+	void setMsg(String value);
 
 } // Topic

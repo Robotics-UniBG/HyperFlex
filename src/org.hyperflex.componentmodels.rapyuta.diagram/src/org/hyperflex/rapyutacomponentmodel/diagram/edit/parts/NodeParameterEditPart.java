@@ -57,7 +57,7 @@ public class NodeParameterEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3002;
+	public static final int VISUAL_ID = 3042;
 
 	/**
 	 * @generated

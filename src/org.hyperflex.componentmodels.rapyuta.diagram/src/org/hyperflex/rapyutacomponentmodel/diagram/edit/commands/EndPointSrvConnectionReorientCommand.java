@@ -99,7 +99,7 @@ public class EndPointSrvConnectionReorientCommand extends EditElementCommand {
 		}
 		System container = (System) getLink().eContainer();
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistEndPointSrvConnection_4006(
+				.getLinkConstraints().canExistEndPointSrvConnection_4015(
 						container, getLink(), getNewSource(), target);
 	}
 
@@ -116,7 +116,7 @@ public class EndPointSrvConnectionReorientCommand extends EditElementCommand {
 		}
 		System container = (System) getLink().eContainer();
 		return RapyutaComponentModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistEndPointSrvConnection_4006(
+				.getLinkConstraints().canExistEndPointSrvConnection_4015(
 						container, getLink(), source, getNewTarget());
 	}
 

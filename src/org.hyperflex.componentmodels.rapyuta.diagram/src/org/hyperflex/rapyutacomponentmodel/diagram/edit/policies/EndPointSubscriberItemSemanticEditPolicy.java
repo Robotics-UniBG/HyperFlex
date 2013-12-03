@@ -63,7 +63,7 @@ public class EndPointSubscriberItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public EndPointSubscriberItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.EndPointSubscriber_3020);
+		super(RapyutaComponentModelElementTypes.EndPointSubscriber_3060);
 	}
 
 	/**
@@ -130,17 +130,17 @@ public class EndPointSubscriberItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnection2CreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RapyutaComponentModelElementTypes.EndPointMsgConnection_4007 == req
+		if (RapyutaComponentModelElementTypes.EndPointMsgConnection_4016 == req
 				.getElementType()) {
 			return null;
 		}
@@ -152,15 +152,15 @@ public class EndPointSubscriberItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4002 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4003 == req
+		if (RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RapyutaComponentModelElementTypes.EndPointMsgConnection_4007 == req
+		if (RapyutaComponentModelElementTypes.EndPointMsgConnection_4016 == req
 				.getElementType()) {
 			return getGEFWrapper(new EndPointMsgConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));

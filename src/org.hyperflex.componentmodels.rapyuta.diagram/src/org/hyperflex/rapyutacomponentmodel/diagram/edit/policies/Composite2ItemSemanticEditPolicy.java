@@ -68,26 +68,26 @@ public class Composite2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public Composite2ItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Composite_3007);
+		super(RapyutaComponentModelElementTypes.Composite_3047);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.CompositePublisher_3008 == req
+		if (RapyutaComponentModelElementTypes.CompositePublisher_3048 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositePublisherCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSubscriber_3009 == req
+		if (RapyutaComponentModelElementTypes.CompositeSubscriber_3049 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeSubscriberCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSrvServer_3010 == req
+		if (RapyutaComponentModelElementTypes.CompositeSrvServer_3050 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeSrvServerCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSrvClient_3011 == req
+		if (RapyutaComponentModelElementTypes.CompositeSrvClient_3051 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeSrvClientCreateCommand(req));
 		}

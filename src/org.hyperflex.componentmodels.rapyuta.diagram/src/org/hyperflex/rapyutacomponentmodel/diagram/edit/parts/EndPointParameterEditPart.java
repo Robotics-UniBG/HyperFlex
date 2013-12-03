@@ -57,7 +57,7 @@ public class EndPointParameterEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3018;
+	public static final int VISUAL_ID = 3058;
 
 	/**
 	 * @generated
