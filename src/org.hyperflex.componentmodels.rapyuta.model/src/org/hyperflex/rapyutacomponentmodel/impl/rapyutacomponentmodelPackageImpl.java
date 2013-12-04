@@ -26,6 +26,7 @@
  */
 package org.hyperflex.rapyutacomponentmodel.impl;
 
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -440,42 +441,6 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 */
 	public EAttribute getSystem_Name() {
 		return (EAttribute)systemEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSystem_Url() {
-		return (EAttribute)systemEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSystem_UserID() {
-		return (EAttribute)systemEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSystem_Password() {
-		return (EAttribute)systemEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSystem_RobotID() {
-		return (EAttribute)systemEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -933,6 +898,15 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSrvServer_SrvName() {
+		return (EAttribute)srvServerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSrvClient() {
 		return srvClientEClass;
 	}
@@ -953,6 +927,15 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 */
 	public EAttribute getSrvClient_Srv() {
 		return (EAttribute)srvClientEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSrvClient_SrvName() {
+		return (EAttribute)srvClientEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -987,15 +970,6 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNodeSrvServer_SrvName() {
-		return (EAttribute)nodeSrvServerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCompositeSrvClient() {
 		return compositeSrvClientEClass;
 	}
@@ -1016,15 +990,6 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 */
 	public EClass getNodeSrvClient() {
 		return nodeSrvClientEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getNodeSrvClient_SrvName() {
-		return (EAttribute)nodeSrvClientEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1115,6 +1080,42 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 */
 	public EClass getRobotEndPoint() {
 		return robotEndPointEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRobotEndPoint_Url() {
+		return (EAttribute)robotEndPointEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRobotEndPoint_UserID() {
+		return (EAttribute)robotEndPointEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRobotEndPoint_Password() {
+		return (EAttribute)robotEndPointEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRobotEndPoint_RobotID() {
+		return (EAttribute)robotEndPointEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1304,10 +1305,6 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		createEReference(systemEClass, SYSTEM__END_POINT_SRV_CONNECTIONS);
 		createEReference(systemEClass, SYSTEM__END_POINT_MSG_CONNECTIONS);
 		createEAttribute(systemEClass, SYSTEM__NAME);
-		createEAttribute(systemEClass, SYSTEM__URL);
-		createEAttribute(systemEClass, SYSTEM__USER_ID);
-		createEAttribute(systemEClass, SYSTEM__PASSWORD);
-		createEAttribute(systemEClass, SYSTEM__ROBOT_ID);
 
 		containerEClass = createEClass(CONTAINER);
 		createEAttribute(containerEClass, CONTAINER__NAME);
@@ -1374,22 +1371,22 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		srvServerEClass = createEClass(SRV_SERVER);
 		createEAttribute(srvServerEClass, SRV_SERVER__NAME);
 		createEAttribute(srvServerEClass, SRV_SERVER__SRV);
+		createEAttribute(srvServerEClass, SRV_SERVER__SRV_NAME);
 
 		srvClientEClass = createEClass(SRV_CLIENT);
 		createEAttribute(srvClientEClass, SRV_CLIENT__NAME);
 		createEAttribute(srvClientEClass, SRV_CLIENT__SRV);
+		createEAttribute(srvClientEClass, SRV_CLIENT__SRV_NAME);
 
 		compositeSrvServerEClass = createEClass(COMPOSITE_SRV_SERVER);
 		createEReference(compositeSrvServerEClass, COMPOSITE_SRV_SERVER__PROMOTE);
 
 		nodeSrvServerEClass = createEClass(NODE_SRV_SERVER);
-		createEAttribute(nodeSrvServerEClass, NODE_SRV_SERVER__SRV_NAME);
 
 		compositeSrvClientEClass = createEClass(COMPOSITE_SRV_CLIENT);
 		createEReference(compositeSrvClientEClass, COMPOSITE_SRV_CLIENT__PROMOTE);
 
 		nodeSrvClientEClass = createEClass(NODE_SRV_CLIENT);
-		createEAttribute(nodeSrvClientEClass, NODE_SRV_CLIENT__SRV_NAME);
 
 		srvConnectionEClass = createEClass(SRV_CONNECTION);
 		createEReference(srvConnectionEClass, SRV_CONNECTION__SERVER);
@@ -1403,6 +1400,10 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		createEReference(endPointEClass, END_POINT__PARAMETERS);
 
 		robotEndPointEClass = createEClass(ROBOT_END_POINT);
+		createEAttribute(robotEndPointEClass, ROBOT_END_POINT__URL);
+		createEAttribute(robotEndPointEClass, ROBOT_END_POINT__USER_ID);
+		createEAttribute(robotEndPointEClass, ROBOT_END_POINT__PASSWORD);
+		createEAttribute(robotEndPointEClass, ROBOT_END_POINT__ROBOT_ID);
 
 		environmentEndPointEClass = createEClass(ENVIRONMENT_END_POINT);
 
@@ -1494,10 +1495,6 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		initEReference(getSystem_EndPointSrvConnections(), this.getEndPointSrvConnection(), null, "endPointSrvConnections", null, 0, -1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSystem_EndPointMsgConnections(), this.getEndPointMsgConnection(), null, "endPointMsgConnections", null, 0, -1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSystem_Name(), ecorePackage.getEString(), "name", "System", 1, 1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSystem_Url(), ecorePackage.getEString(), "url", null, 1, 1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSystem_UserID(), ecorePackage.getEString(), "userID", null, 1, 1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSystem_Password(), ecorePackage.getEString(), "password", null, 1, 1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSystem_RobotID(), ecorePackage.getEString(), "robotID", null, 1, 1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(containerEClass, org.hyperflex.rapyutacomponentmodel.Container.class, "Container", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getContainer_Name(), ecorePackage.getEString(), "name", null, 0, 1, org.hyperflex.rapyutacomponentmodel.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1564,22 +1561,22 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		initEClass(srvServerEClass, SrvServer.class, "SrvServer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSrvServer_Name(), ecorePackage.getEString(), "name", null, 1, 1, SrvServer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSrvServer_Srv(), ecorePackage.getEString(), "srv", null, 1, 1, SrvServer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSrvServer_SrvName(), ecorePackage.getEString(), "srvName", null, 0, 1, SrvServer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(srvClientEClass, SrvClient.class, "SrvClient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSrvClient_Name(), ecorePackage.getEString(), "name", null, 1, 1, SrvClient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSrvClient_Srv(), ecorePackage.getEString(), "srv", null, 1, 1, SrvClient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSrvClient_SrvName(), ecorePackage.getEString(), "srvName", null, 0, 1, SrvClient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(compositeSrvServerEClass, CompositeSrvServer.class, "CompositeSrvServer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompositeSrvServer_Promote(), this.getSrvServer(), null, "promote", null, 0, 1, CompositeSrvServer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeSrvServerEClass, NodeSrvServer.class, "NodeSrvServer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNodeSrvServer_SrvName(), ecorePackage.getEString(), "srvName", null, 0, 1, NodeSrvServer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(compositeSrvClientEClass, CompositeSrvClient.class, "CompositeSrvClient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompositeSrvClient_Promote(), this.getSrvClient(), null, "promote", null, 0, 1, CompositeSrvClient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeSrvClientEClass, NodeSrvClient.class, "NodeSrvClient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNodeSrvClient_SrvName(), ecorePackage.getEString(), "srvName", null, 0, 1, NodeSrvClient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(srvConnectionEClass, SrvConnection.class, "SrvConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSrvConnection_Server(), this.getSrvServer(), null, "server", null, 1, 1, SrvConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1593,6 +1590,10 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		initEReference(getEndPoint_Parameters(), this.getEndPointParameter(), null, "parameters", null, 0, -1, EndPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(robotEndPointEClass, RobotEndPoint.class, "RobotEndPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRobotEndPoint_Url(), ecorePackage.getEString(), "url", null, 1, 1, RobotEndPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRobotEndPoint_UserID(), ecorePackage.getEString(), "userID", null, 1, 1, RobotEndPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRobotEndPoint_Password(), ecorePackage.getEString(), "password", null, 1, 1, RobotEndPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRobotEndPoint_RobotID(), ecorePackage.getEString(), "robotID", null, 1, 1, RobotEndPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(environmentEndPointEClass, EnvironmentEndPoint.class, "EnvironmentEndPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

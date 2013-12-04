@@ -42,6 +42,7 @@ import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
  * <ul>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SrvClientImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SrvClientImpl#getSrv <em>Srv</em>}</li>
+ *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SrvClientImpl#getSrvName <em>Srv Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -87,6 +88,26 @@ public class SrvClientImpl extends EObjectImpl implements SrvClient {
 	 * @ordered
 	 */
 	protected String srv = SRV_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSrvName() <em>Srv Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSrvName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SRV_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSrvName() <em>Srv Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSrvName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String srvName = SRV_NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,6 +175,27 @@ public class SrvClientImpl extends EObjectImpl implements SrvClient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getSrvName() {
+		return srvName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSrvName(String newSrvName) {
+		String oldSrvName = srvName;
+		srvName = newSrvName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, rapyutacomponentmodelPackage.SRV_CLIENT__SRV_NAME, oldSrvName, srvName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -161,6 +203,8 @@ public class SrvClientImpl extends EObjectImpl implements SrvClient {
 				return getName();
 			case rapyutacomponentmodelPackage.SRV_CLIENT__SRV:
 				return getSrv();
+			case rapyutacomponentmodelPackage.SRV_CLIENT__SRV_NAME:
+				return getSrvName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -178,6 +222,9 @@ public class SrvClientImpl extends EObjectImpl implements SrvClient {
 				return;
 			case rapyutacomponentmodelPackage.SRV_CLIENT__SRV:
 				setSrv((String)newValue);
+				return;
+			case rapyutacomponentmodelPackage.SRV_CLIENT__SRV_NAME:
+				setSrvName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -197,6 +244,9 @@ public class SrvClientImpl extends EObjectImpl implements SrvClient {
 			case rapyutacomponentmodelPackage.SRV_CLIENT__SRV:
 				setSrv(SRV_EDEFAULT);
 				return;
+			case rapyutacomponentmodelPackage.SRV_CLIENT__SRV_NAME:
+				setSrvName(SRV_NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -213,6 +263,8 @@ public class SrvClientImpl extends EObjectImpl implements SrvClient {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case rapyutacomponentmodelPackage.SRV_CLIENT__SRV:
 				return SRV_EDEFAULT == null ? srv != null : !SRV_EDEFAULT.equals(srv);
+			case rapyutacomponentmodelPackage.SRV_CLIENT__SRV_NAME:
+				return SRV_NAME_EDEFAULT == null ? srvName != null : !SRV_NAME_EDEFAULT.equals(srvName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -231,6 +283,8 @@ public class SrvClientImpl extends EObjectImpl implements SrvClient {
 		result.append(name);
 		result.append(", srv: ");
 		result.append(srv);
+		result.append(", srvName: ");
+		result.append(srvName);
 		result.append(')');
 		return result.toString();
 	}

@@ -32,13 +32,17 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.hyperflex.rapyutacomponentmodel.RobotEndPoint;
+import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
 
 /**
  * This is the item provider adapter for a {@link org.hyperflex.rapyutacomponentmodel.RobotEndPoint} object.
@@ -75,8 +79,100 @@ public class RobotEndPointItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addUrlPropertyDescriptor(object);
+			addUserIDPropertyDescriptor(object);
+			addPasswordPropertyDescriptor(object);
+			addRobotIDPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Url feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RobotEndPoint_url_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RobotEndPoint_url_feature", "_UI_RobotEndPoint_type"),
+				 rapyutacomponentmodelPackage.Literals.ROBOT_END_POINT__URL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the User ID feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUserIDPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RobotEndPoint_userID_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RobotEndPoint_userID_feature", "_UI_RobotEndPoint_type"),
+				 rapyutacomponentmodelPackage.Literals.ROBOT_END_POINT__USER_ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Password feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPasswordPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RobotEndPoint_password_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RobotEndPoint_password_feature", "_UI_RobotEndPoint_type"),
+				 rapyutacomponentmodelPackage.Literals.ROBOT_END_POINT__PASSWORD,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Robot ID feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRobotIDPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RobotEndPoint_robotID_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RobotEndPoint_robotID_feature", "_UI_RobotEndPoint_type"),
+				 rapyutacomponentmodelPackage.Literals.ROBOT_END_POINT__ROBOT_ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -114,6 +210,15 @@ public class RobotEndPointItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(RobotEndPoint.class)) {
+			case rapyutacomponentmodelPackage.ROBOT_END_POINT__URL:
+			case rapyutacomponentmodelPackage.ROBOT_END_POINT__USER_ID:
+			case rapyutacomponentmodelPackage.ROBOT_END_POINT__PASSWORD:
+			case rapyutacomponentmodelPackage.ROBOT_END_POINT__ROBOT_ID:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

@@ -55,10 +55,6 @@ import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SystemImpl#getEndPointSrvConnections <em>End Point Srv Connections</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SystemImpl#getEndPointMsgConnections <em>End Point Msg Connections</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SystemImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SystemImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SystemImpl#getUserID <em>User ID</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SystemImpl#getPassword <em>Password</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SystemImpl#getRobotID <em>Robot ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -124,86 +120,6 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.rapyutacomp
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String url = URL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUserID() <em>User ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUserID()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String USER_ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUserID() <em>User ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUserID()
-	 * @generated
-	 * @ordered
-	 */
-	protected String userID = USER_ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPassword() <em>Password</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPassword()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PASSWORD_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPassword() <em>Password</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPassword()
-	 * @generated
-	 * @ordered
-	 */
-	protected String password = PASSWORD_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getRobotID() <em>Robot ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRobotID()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ROBOT_ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getRobotID() <em>Robot ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRobotID()
-	 * @generated
-	 * @ordered
-	 */
-	protected String robotID = ROBOT_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -298,90 +214,6 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.rapyutacomp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrl() {
-		return url;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rapyutacomponentmodelPackage.SYSTEM__URL, oldUrl, url));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getUserID() {
-		return userID;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUserID(String newUserID) {
-		String oldUserID = userID;
-		userID = newUserID;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rapyutacomponentmodelPackage.SYSTEM__USER_ID, oldUserID, userID));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getPassword() {
-		return password;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPassword(String newPassword) {
-		String oldPassword = password;
-		password = newPassword;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rapyutacomponentmodelPackage.SYSTEM__PASSWORD, oldPassword, password));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRobotID() {
-		return robotID;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRobotID(String newRobotID) {
-		String oldRobotID = robotID;
-		robotID = newRobotID;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rapyutacomponentmodelPackage.SYSTEM__ROBOT_ID, oldRobotID, robotID));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -415,14 +247,6 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.rapyutacomp
 				return getEndPointMsgConnections();
 			case rapyutacomponentmodelPackage.SYSTEM__NAME:
 				return getName();
-			case rapyutacomponentmodelPackage.SYSTEM__URL:
-				return getUrl();
-			case rapyutacomponentmodelPackage.SYSTEM__USER_ID:
-				return getUserID();
-			case rapyutacomponentmodelPackage.SYSTEM__PASSWORD:
-				return getPassword();
-			case rapyutacomponentmodelPackage.SYSTEM__ROBOT_ID:
-				return getRobotID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -455,18 +279,6 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.rapyutacomp
 			case rapyutacomponentmodelPackage.SYSTEM__NAME:
 				setName((String)newValue);
 				return;
-			case rapyutacomponentmodelPackage.SYSTEM__URL:
-				setUrl((String)newValue);
-				return;
-			case rapyutacomponentmodelPackage.SYSTEM__USER_ID:
-				setUserID((String)newValue);
-				return;
-			case rapyutacomponentmodelPackage.SYSTEM__PASSWORD:
-				setPassword((String)newValue);
-				return;
-			case rapyutacomponentmodelPackage.SYSTEM__ROBOT_ID:
-				setRobotID((String)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -494,18 +306,6 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.rapyutacomp
 			case rapyutacomponentmodelPackage.SYSTEM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case rapyutacomponentmodelPackage.SYSTEM__URL:
-				setUrl(URL_EDEFAULT);
-				return;
-			case rapyutacomponentmodelPackage.SYSTEM__USER_ID:
-				setUserID(USER_ID_EDEFAULT);
-				return;
-			case rapyutacomponentmodelPackage.SYSTEM__PASSWORD:
-				setPassword(PASSWORD_EDEFAULT);
-				return;
-			case rapyutacomponentmodelPackage.SYSTEM__ROBOT_ID:
-				setRobotID(ROBOT_ID_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -528,14 +328,6 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.rapyutacomp
 				return endPointMsgConnections != null && !endPointMsgConnections.isEmpty();
 			case rapyutacomponentmodelPackage.SYSTEM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case rapyutacomponentmodelPackage.SYSTEM__URL:
-				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-			case rapyutacomponentmodelPackage.SYSTEM__USER_ID:
-				return USER_ID_EDEFAULT == null ? userID != null : !USER_ID_EDEFAULT.equals(userID);
-			case rapyutacomponentmodelPackage.SYSTEM__PASSWORD:
-				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
-			case rapyutacomponentmodelPackage.SYSTEM__ROBOT_ID:
-				return ROBOT_ID_EDEFAULT == null ? robotID != null : !ROBOT_ID_EDEFAULT.equals(robotID);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -552,14 +344,6 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.rapyutacomp
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", url: ");
-		result.append(url);
-		result.append(", userID: ");
-		result.append(userID);
-		result.append(", password: ");
-		result.append(password);
-		result.append(", robotID: ");
-		result.append(robotID);
 		result.append(')');
 		return result.toString();
 	}

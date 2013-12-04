@@ -11,5 +11,7 @@ src/it.unibg.robotics.hyperFlex.updatesite/plugins/
 src/it.unibg.robotics.hyperFlex.updatesite/artifacts.jar
 src/it.unibg.robotics.hyperFlex.updatesite/content.jar
 
+install/build
+install/eclipse
 
 it.unibg.robotics.resolutionmodels.dsl*

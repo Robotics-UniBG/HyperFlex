@@ -83,6 +83,7 @@ public class SrvServerItemProvider
 
 			addNamePropertyDescriptor(object);
 			addSrvPropertyDescriptor(object);
+			addSrvNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -132,6 +133,28 @@ public class SrvServerItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Srv Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSrvNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SrvServer_srvName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SrvServer_srvName_feature", "_UI_SrvServer_type"),
+				 rapyutacomponentmodelPackage.Literals.SRV_SERVER__SRV_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns SrvServer.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -170,6 +193,7 @@ public class SrvServerItemProvider
 		switch (notification.getFeatureID(SrvServer.class)) {
 			case rapyutacomponentmodelPackage.SRV_SERVER__NAME:
 			case rapyutacomponentmodelPackage.SRV_SERVER__SRV:
+			case rapyutacomponentmodelPackage.SRV_SERVER__SRV_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -38,6 +38,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.SrvClient#getName <em>Name</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.SrvClient#getSrv <em>Srv</em>}</li>
+ *   <li>{@link org.hyperflex.rapyutacomponentmodel.SrvClient#getSrvName <em>Srv Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -97,5 +98,31 @@ public interface SrvClient extends EObject {
 	 * @generated
 	 */
 	void setSrv(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Srv Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Srv Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Srv Name</em>' attribute.
+	 * @see #setSrvName(String)
+	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getSrvClient_SrvName()
+	 * @model
+	 * @generated
+	 */
+	String getSrvName();
+
+	/**
+	 * Sets the value of the '{@link org.hyperflex.rapyutacomponentmodel.SrvClient#getSrvName <em>Srv Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Srv Name</em>' attribute.
+	 * @see #getSrvName()
+	 * @generated
+	 */
+	void setSrvName(String value);
 
 } // SrvClient

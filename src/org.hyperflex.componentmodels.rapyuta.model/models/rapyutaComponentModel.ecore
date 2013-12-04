@@ -13,13 +13,6 @@
         upperBound="-1" eType="#//EndPointMsgConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="System"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userID" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="robotID" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Container">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -102,23 +95,21 @@
   <eClassifiers xsi:type="ecore:EClass" name="SrvServer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="srv" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="srvName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SrvClient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="srv" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="srvName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompositeSrvServer" eSuperTypes="#//SrvServer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="promote" eType="#//SrvServer"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NodeSrvServer" eSuperTypes="#//SrvServer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="srvName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeSrvServer" eSuperTypes="#//SrvServer"/>
   <eClassifiers xsi:type="ecore:EClass" name="CompositeSrvClient" eSuperTypes="#//SrvClient">
     <eStructuralFeatures xsi:type="ecore:EReference" name="promote" eType="#//SrvClient"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NodeSrvClient" eSuperTypes="#//SrvClient">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="srvName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeSrvClient" eSuperTypes="#//SrvClient"/>
   <eClassifiers xsi:type="ecore:EClass" name="SrvConnection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="server" lowerBound="1"
         eType="#//SrvServer"/>
@@ -137,7 +128,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
         eType="#//EndPointParameter" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RobotEndPoint" eSuperTypes="#//EndPoint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RobotEndPoint" eSuperTypes="#//EndPoint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="robotID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EnvironmentEndPoint" eSuperTypes="#//EndPoint"/>
   <eClassifiers xsi:type="ecore:EClass" name="EndPointMsgInterface" abstract="true"
       eSuperTypes="#//MsgInterface"/>

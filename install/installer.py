@@ -101,7 +101,7 @@ if __name__ == "__main__":
 		for repo in toinstall:
 			for package in toinstall[repo]:
 				install(repo, package)
-		install_local()
+		#install_local()
 	elif(len(sys.argv) == 3):
 		if(sys.argv[1] == '-u'):
 			stream = file(sys.argv[2], 'r') 

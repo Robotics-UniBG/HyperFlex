@@ -42,10 +42,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getEndPointSrvConnections <em>End Point Srv Connections</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getEndPointMsgConnections <em>End Point Msg Connections</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getName <em>Name</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getUrl <em>Url</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getUserID <em>User ID</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getPassword <em>Password</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getRobotID <em>Robot ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -144,109 +140,5 @@ public interface System extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url</em>' attribute.
-	 * @see #setUrl(String)
-	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getSystem_Url()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getUrl();
-
-	/**
-	 * Sets the value of the '{@link org.hyperflex.rapyutacomponentmodel.System#getUrl <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url</em>' attribute.
-	 * @see #getUrl()
-	 * @generated
-	 */
-	void setUrl(String value);
-
-	/**
-	 * Returns the value of the '<em><b>User ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>User ID</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User ID</em>' attribute.
-	 * @see #setUserID(String)
-	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getSystem_UserID()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getUserID();
-
-	/**
-	 * Sets the value of the '{@link org.hyperflex.rapyutacomponentmodel.System#getUserID <em>User ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User ID</em>' attribute.
-	 * @see #getUserID()
-	 * @generated
-	 */
-	void setUserID(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Password</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Password</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Password</em>' attribute.
-	 * @see #setPassword(String)
-	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getSystem_Password()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getPassword();
-
-	/**
-	 * Sets the value of the '{@link org.hyperflex.rapyutacomponentmodel.System#getPassword <em>Password</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Password</em>' attribute.
-	 * @see #getPassword()
-	 * @generated
-	 */
-	void setPassword(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Robot ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Robot ID</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Robot ID</em>' attribute.
-	 * @see #setRobotID(String)
-	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getSystem_RobotID()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getRobotID();
-
-	/**
-	 * Sets the value of the '{@link org.hyperflex.rapyutacomponentmodel.System#getRobotID <em>Robot ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Robot ID</em>' attribute.
-	 * @see #getRobotID()
-	 * @generated
-	 */
-	void setRobotID(String value);
 
 } // System
