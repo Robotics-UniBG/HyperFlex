@@ -4,12 +4,12 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel"
-    packageNamePrefix="it.unibg.robotics.featuremodels.model.diagram"
+    packageNamePrefix="it.unibg.robotics.featuremodels.diagram"
     diagramFileExtension="featuremodel_diagram"
     domainFileExtension="featuremodel"
     templateDirectory=""
-    copyrightText="Feature Model Plugin&#xA;&#xA;Copyright (c) 2011&#xA;All rights reserved.&#xA;&#xA;Luca Gherardi&#xA;University of Bergamo&#xA;Dept. of Information Technology and Mathematics&#xA;&#xA;***********************************************************************************************&#xA;&#xA;Author: &lt;A HREF=&quot;mailto:luca.gherardi@unibg.it&quot;>Luca Gherardi&lt;/A>&#xA;&#xA;Supervised by: &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;>Davide Brugali&lt;/A>&#xA;&#xA;***********************************************************************************************&#xA;&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;"
-    pluginDirectory="/it.unibg.robotics.featuremodels.model.diagram/src">
+    copyrightText="Feature Model Plugin&#xA;&#xA;Copyright (c) 2013&#xA;All rights reserved.&#xA;&#xA;Luca Gherardi&#xA;University of Bergamo&#xA;Dept. of Information Technology and Mathematics&#xA;&#xA;***********************************************************************************************&#xA;&#xA;Author: &lt;A HREF=&quot;mailto:lucagh@ethz.ch&quot;>Luca Gherardi&lt;/A>&#xA;&#xA;In collaboration with by: &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;>Davide Brugali&lt;/A>&#xA;&#xA;***********************************************************************************************&#xA;&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;"
+    pluginDirectory="/it.unibg.robotics.featuremodels.diagram/src">
   <diagram
       visualID="1000"
       editPartClassName="FeatureModelEditPart"
@@ -17,7 +17,7 @@
       canonicalEditPolicyClassName="FeatureModelCanonicalEditPolicy"
       iconProviderPriority="Low"
       creationWizardIconPath="icons/fd.ico"
-      creationWizardCategoryID="it.robotics.unibg.featuremodels.wizard.category"
+      creationWizardCategoryID="it.robotics.unibg.hyperflex.wizard.category"
       validationProviderPriority="Low">
     <diagramRunTimeClass
         href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
@@ -261,7 +261,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="FEATURE_ALTERNATIVE"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FEATURE_ALTERNATIVE extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FEATURE_ALTERNATIVE() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;it.unibg.robotics.featuremodels.model.diagram.figures.CircleDecoration df = new it.unibg.robotics.featuremodels.model.diagram.figures.CircleDecoration();&#xA;&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FEATURE_ALTERNATIVE extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FEATURE_ALTERNATIVE() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration df = new it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration();&#xA;&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
@@ -285,7 +285,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="FEATURE_MANDATORY"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FEATURE_MANDATORY extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FEATURE_MANDATORY() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;it.unibg.robotics.featuremodels.model.diagram.figures.CircleDecoration df = new it.unibg.robotics.featuremodels.model.diagram.figures.CircleDecoration();&#xA;&#x9;df.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FEATURE_MANDATORY extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FEATURE_MANDATORY() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration df = new it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration();&#xA;&#x9;df.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
@@ -309,7 +309,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="FEATURE_ALTERNATIVE"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FEATURE_ALTERNATIVE extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FEATURE_ALTERNATIVE() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;it.unibg.robotics.featuremodels.model.diagram.figures.CircleDecoration df = new it.unibg.robotics.featuremodels.model.diagram.figures.CircleDecoration();&#xA;&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FEATURE_ALTERNATIVE extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FEATURE_ALTERNATIVE() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration df = new it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration();&#xA;&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
@@ -333,7 +333,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="FEATURE_MANDATORY"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FEATURE_MANDATORY extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FEATURE_MANDATORY() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;it.unibg.robotics.featuremodels.model.diagram.figures.CircleDecoration df = new it.unibg.robotics.featuremodels.model.diagram.figures.CircleDecoration();&#xA;&#x9;df.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FEATURE_MANDATORY extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FEATURE_MANDATORY() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration df = new it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration();&#xA;&#x9;df.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
@@ -421,7 +421,7 @@
     </preferencePages>
   </diagram>
   <plugin
-      iD="it.unibg.robotics.featuremodels.model.diagram">
+      iD="it.unibg.robotics.featuremodels.diagram">
     <requiredPlugins>org.eclipse.gmf.tooling.runtime</requiredPlugins>
     <requiredPlugins>org.eclipse.draw2d</requiredPlugins>
     <requiredPlugins>org.eclipse.gmf.runtime.draw2d.ui</requiredPlugins>

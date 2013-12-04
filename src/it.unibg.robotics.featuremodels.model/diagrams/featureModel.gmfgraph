@@ -10,7 +10,7 @@
     <figures
         xsi:type="gmfgraph:CustomDecoration"
         name="OR_Decoration"
-        qualifiedClassName="featureModel.diagram.figures.CircleDecoration">
+        qualifiedClassName="it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration">
       <backgroundColor
           xsi:type="gmfgraph:ConstantColor"
           value="green"/>
@@ -18,7 +18,7 @@
     <figures
         xsi:type="gmfgraph:CustomDecoration"
         name="XOR_Decoration"
-        qualifiedClassName="featureModel.diagram.figures.CircleDecoration">
+        qualifiedClassName="it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration">
       <backgroundColor
           xsi:type="gmfgraph:ConstantColor"
           value="red"/>
@@ -26,7 +26,7 @@
     <figures
         xsi:type="gmfgraph:CustomDecoration"
         name="M_OR_Decoration"
-        qualifiedClassName="featureModel.diagram.figures.CircleDecoration">
+        qualifiedClassName="it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration">
       <backgroundColor
           xsi:type="gmfgraph:ConstantColor"
           value="yellow"/>
@@ -34,7 +34,7 @@
     <figures
         xsi:type="gmfgraph:CustomDecoration"
         name="MANDATORY_Decoration"
-        qualifiedClassName="it.unibg.robotics.featuremodels.model.diagram.figures.CircleDecoration">
+        qualifiedClassName="it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration">
       <backgroundColor
           xsi:type="gmfgraph:ConstantColor"
           value="black"/>
@@ -42,7 +42,7 @@
     <figures
         xsi:type="gmfgraph:CustomDecoration"
         name="ALTERNATIVE_Decoration"
-        qualifiedClassName="it.unibg.robotics.featuremodels.model.diagram.figures.CircleDecoration"/>
+        qualifiedClassName="it.unibg.robotics.featuremodels.diagram.figures.CircleDecoration"/>
     <descriptors
         name="FeatureBox">
       <actualFigure

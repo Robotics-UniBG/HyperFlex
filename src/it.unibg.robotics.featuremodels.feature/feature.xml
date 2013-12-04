@@ -38,49 +38,42 @@ http://www.eclipse.org/legal/epl-v10.html
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.emf.edit"/>
       <import plugin="org.eclipse.core.resources"/>
-      <import plugin="org.eclipse.core.expressions" version="3.4.200" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.jface"/>
-      <import plugin="org.eclipse.ui.ide"/>
-      <import plugin="org.eclipse.ui.views"/>
-      <import plugin="org.eclipse.ui.navigator"/>
-      <import plugin="org.eclipse.ui.navigator.resources"/>
       <import plugin="org.eclipse.emf.ecore.xmi"/>
       <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.expressions" version="3.4.200" match="greaterOrEqual"/>
       <import plugin="org.eclipse.gmf.runtime.emf.core"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor"/>
+      <import plugin="it.unibg.robotics.featuremodels.constraints" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="it.unibg.robotics.featuremodels.model" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.gmf.runtime.emf.commands.core"/>
       <import plugin="org.eclipse.gmf.runtime.emf.ui.properties"/>
-      <import plugin="org.eclipse.gmf.runtime.diagram.ui"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.properties"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.providers"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.providers.ide"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.render"/>
-      <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide"/>
+      <import plugin="it.unibg.robotics.featuremodels.commands.featureSelection" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="it.unibg.robotics.featuremodels.model.editor" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="it.unibg.robotics.featuremodels.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="org.eclipse.ui.navigator"/>
+      <import plugin="org.eclipse.ui.navigator.resources"/>
       <import plugin="org.eclipse.gmf.tooling.runtime"/>
       <import plugin="org.eclipse.draw2d"/>
       <import plugin="org.eclipse.gmf.runtime.draw2d.ui"/>
       <import plugin="org.eclipse.ocl.ecore"/>
       <import plugin="org.eclipse.gef"/>
-      <import plugin="org.eclipse.emf.edit"/>
-      <import plugin="org.eclipse.ui"/>
-      <import plugin="it.unibg.robotics.featuremodels.constraints" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.featuremodels.model" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.featuremodels.model.diagram" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.featuremodels.commands.featureSelection" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.featuremodels.model.editor" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.featuremodels.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="it.unibg.robotics.featuremodels.diagram" version="1.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
          id="it.unibg.robotics.featuremodels.model"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="it.unibg.robotics.featuremodels.model.diagram"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -122,6 +115,13 @@ http://www.eclipse.org/legal/epl-v10.html
 
    <plugin
          id="it.unibg.robotics.hyperflex.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="it.unibg.robotics.featuremodels.diagram"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -7,9 +7,9 @@ import it.unibg.robotics.featuremodels.FeatureModel;
 import it.unibg.robotics.featuremodels.Instance;
 import it.unibg.robotics.featuremodels.featuremodelsFactory;
 import it.unibg.robotics.featuremodels.constraints.utility.ConstraintChecker;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.FeatureModelEditPart;
-import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditor;
+import it.unibg.robotics.featuremodels.diagram.edit.parts.Feature2EditPart;
+import it.unibg.robotics.featuremodels.diagram.edit.parts.FeatureModelEditPart;
+import it.unibg.robotics.featuremodels.diagram.part.FeatureModelDiagramEditor;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;

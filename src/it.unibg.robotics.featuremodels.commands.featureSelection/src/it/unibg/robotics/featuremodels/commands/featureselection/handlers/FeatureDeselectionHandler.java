@@ -27,8 +27,8 @@ package it.unibg.robotics.featuremodels.commands.featureselection.handlers;
 
 import it.unibg.robotics.featuremodels.Feature;
 import it.unibg.robotics.featuremodels.Instance;
-import it.unibg.robotics.featuremodels.model.diagram.edit.parts.Feature2EditPart;
-import it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditor;
+import it.unibg.robotics.featuremodels.diagram.edit.parts.Feature2EditPart;
+import it.unibg.robotics.featuremodels.diagram.part.FeatureModelDiagramEditor;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;

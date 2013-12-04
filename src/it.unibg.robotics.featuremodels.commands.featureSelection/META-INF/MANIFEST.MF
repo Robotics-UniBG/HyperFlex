@@ -13,7 +13,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.gmf.runtime.diagram.ui.resources.editor,
  it.unibg.robotics.featuremodels.constraints;bundle-version="1.0.0",
  it.unibg.robotics.featuremodels.model;bundle-version="1.0.0",
- it.unibg.robotics.featuremodels.model.diagram;bundle-version="1.0.0"
+ it.unibg.robotics.featuremodels.diagram;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: Luca Gherardi

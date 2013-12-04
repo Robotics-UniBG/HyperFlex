@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: it.unibg.robotics.featuremodels.model.diagram; singleton:=true
+Bundle-SymbolicName: it.unibg.robotics.featuremodels.diagram; singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: it.unibg.robotics.featuremodels.model.diagram.part.FeatureModelDiagramEditorPlugin
+Bundle-Activator: it.unibg.robotics.featuremodels.diagram.part.FeatureModelDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: it.unibg.robotics.featuremodels.model.diagram.edit.parts,
- it.unibg.robotics.featuremodels.model.diagram.part,
- it.unibg.robotics.featuremodels.model.diagram.providers
+Export-Package: it.unibg.robotics.featuremodels.diagram.edit.parts,
+ it.unibg.robotics.featuremodels.diagram.part,
+ it.unibg.robotics.featuremodels.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.core.expressions,
