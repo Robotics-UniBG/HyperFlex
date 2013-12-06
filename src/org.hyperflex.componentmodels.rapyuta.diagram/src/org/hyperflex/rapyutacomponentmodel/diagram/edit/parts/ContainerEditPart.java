@@ -327,7 +327,7 @@ public class ContainerEditPart extends ShapeNodeEditPart {
 
 			fFigureContainerNameLabel = new WrappingLabel();
 
-			fFigureContainerNameLabel.setText("<É>");
+			fFigureContainerNameLabel.setText("<?>");
 			fFigureContainerNameLabel.setForegroundColor(ColorConstants.black);
 
 			fFigureContainerNameLabel.setFont(FFIGURECONTAINERNAMELABEL_FONT);

@@ -38,6 +38,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.hyperflex.rapyutacomponentmodel.CompositeSrvConnection;
 
 /**
  * This is the item provider adapter for a {@link org.hyperflex.rapyutacomponentmodel.CompositeSrvConnection} object.
@@ -97,7 +98,10 @@ public class CompositeSrvConnectionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_CompositeSrvConnection_type");
+		String label = ((CompositeSrvConnection)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CompositeSrvConnection_type") :
+			getString("_UI_CompositeSrvConnection_type") + " " + label;
 	}
 
 	/**

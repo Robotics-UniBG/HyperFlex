@@ -108,6 +108,29 @@
       <accessors
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0/@children.0"/>
     </descriptors>
+    <descriptors
+        name="EndPointConnectionFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="EndPointConnection"
+          lineWidth="2">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="red"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="EndPointConnectionLabel">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              height="15"/>
+        </children>
+        <sourceDecoration
+            xsi:type="gmfgraph:PolylineDecoration"
+            href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#//@figures.0/@figures.0"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
   </figures>
   <nodes
       name="Container"
@@ -115,6 +138,9 @@
   <nodes
       name="EndPoint"
       figure="EndPointFigure"/>
+  <connections
+      name="EndPointConnection"
+      figure="EndPointConnectionFigure"/>
   <compartments
       name="EndPoint Properties Compartment"
       figure="EndPointFigure"
@@ -130,6 +156,11 @@
       figure="ContainerFigure"
       elementIcon="false"
       accessor="//@figures.0/@descriptors.0/@accessors.1"/>
+  <labels
+      name="EndPointConnectionLabel"
+      figure="EndPointConnectionFigure"
+      elementIcon="false"
+      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
   <labels
       name="EndPointName"
       figure="EndPointFigure"

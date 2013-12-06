@@ -51,6 +51,9 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeParameterNameE
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.TopicName2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.TopicNameEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.WrappingLabel3EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.WrappingLabel4EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.WrappingLabelEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.parsers.MessageFormatParser;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVisualIDRegistry;
 
@@ -73,9 +76,6 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("Composite - {0}"); //$NON-NLS-1$
-			parser.setEditorPattern("Composite - {0}"); //$NON-NLS-1$
-			parser.setEditPattern("Composite - {0}"); //$NON-NLS-1$
 			compositeName_5025Parser = parser;
 		}
 		return compositeName_5025Parser;
@@ -94,9 +94,6 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getContainer_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("Container - {0}"); //$NON-NLS-1$
-			parser.setEditorPattern("Container - {0}"); //$NON-NLS-1$
-			parser.setEditPattern("Container - {0}"); //$NON-NLS-1$
 			containerName_5031Parser = parser;
 		}
 		return containerName_5031Parser;
@@ -303,6 +300,60 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
+	private IParser endPointSrvConnectionName_6007Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getEndPointSrvConnectionName_6007Parser() {
+		if (endPointSrvConnectionName_6007Parser == null) {
+			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getEndPointSrvConnection_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			endPointSrvConnectionName_6007Parser = parser;
+		}
+		return endPointSrvConnectionName_6007Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser compositeSrvConnectionName_6009Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCompositeSrvConnectionName_6009Parser() {
+		if (compositeSrvConnectionName_6009Parser == null) {
+			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getSrvConnection_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			compositeSrvConnectionName_6009Parser = parser;
+		}
+		return compositeSrvConnectionName_6009Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser containerSrvConnectionName_6010Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getContainerSrvConnectionName_6010Parser() {
+		if (containerSrvConnectionName_6010Parser == null) {
+			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getSrvConnection_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			containerSrvConnectionName_6010Parser = parser;
+		}
+		return containerSrvConnectionName_6010Parser;
+	}
+
+	/**
+	 * @generated
+	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case CompositeNameEditPart.VISUAL_ID:
@@ -331,6 +382,12 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 			return getEndPointParameterName_5028Parser();
 		case TopicName2EditPart.VISUAL_ID:
 			return getTopicName_5030Parser();
+		case WrappingLabelEditPart.VISUAL_ID:
+			return getEndPointSrvConnectionName_6007Parser();
+		case WrappingLabel3EditPart.VISUAL_ID:
+			return getCompositeSrvConnectionName_6009Parser();
+		case WrappingLabel4EditPart.VISUAL_ID:
+			return getContainerSrvConnectionName_6010Parser();
 		}
 		return null;
 	}

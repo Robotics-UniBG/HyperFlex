@@ -407,7 +407,7 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 
 			fFigurePackageContainerNameLabel = new WrappingLabel();
 
-			fFigurePackageContainerNameLabel.setText("<É>");
+			fFigurePackageContainerNameLabel.setText("<?>");
 
 			fFigurePackageContainerNameLabel
 					.setFont(FFIGUREPACKAGECONTAINERNAMELABEL_FONT);
