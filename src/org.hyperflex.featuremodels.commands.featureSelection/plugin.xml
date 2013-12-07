@@ -89,7 +89,7 @@
             allPopups="false"
             locationURI="toolbar:org.eclipse.ui.main.toolbar">
          <toolbar
-               id="it.robotics.unibg.featureModel.commands.featureSelection.toolbar1">
+               id="org.hyperflex.featureModel.commands.featureSelection.toolbar1">
             <command
                   commandId="org.hyperflex.featuremodels.commands.featureSelection.selection"
                   icon="icons/signed_yes.gif"

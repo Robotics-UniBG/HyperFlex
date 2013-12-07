@@ -17,7 +17,7 @@
       canonicalEditPolicyClassName="FeatureModelCanonicalEditPolicy"
       iconProviderPriority="Low"
       creationWizardIconPath="icons/fd.ico"
-      creationWizardCategoryID="it.robotics.unibg.hyperflex.wizard.category"
+      creationWizardCategoryID="org.hyperflex.wizard.category"
       validationProviderPriority="Low">
     <diagramRunTimeClass
         href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>

@@ -4,12 +4,12 @@
    <extension
          point="org.eclipse.ui.commands">
       <category
-            id="it.unibg.robotics.componentmodels.ros.m2t.category"
+            id="org.hyperflex.componentmodels.ros.m2t.category"
             name="ROS M2T">
       </category>
       <command
-            categoryId="it.unibg.robotics.componentmodels.ros.m2t.category"
-            id="it.unibg.robotics.componentmodels.ros.m2t.rosLaunch"
+            categoryId="org.hyperflex.componentmodels.ros.m2t.category"
+            id="org.hyperflex.componentmodels.ros.m2t.rosLaunch"
             name="Generate Launch File for ROS deployment">
       </command>
 
@@ -18,16 +18,16 @@
          point="org.eclipse.ui.handlers">
       <handler
             class="it.unibg.robotics.componentmodels.ros.m2t.handler.RosLaunchTransform"
-            commandId="it.unibg.robotics.componentmodels.ros.m2t.rosLaunch">
+            commandId="org.hyperflex.componentmodels.ros.m2t.rosLaunch">
       </handler>
    </extension>
    <extension
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:it.unibg.robotics.componentmodels.menu.m2t">
+            locationURI="menu:org.hyperflex.componentmodels.menu.m2t">
          <command
-               commandId="it.unibg.robotics.componentmodels.ros.m2t.rosLaunch"
+               commandId="org.hyperflex.componentmodels.ros.m2t.rosLaunch"
                label="Generate ROS Launch File"
                style="push">
          </command>

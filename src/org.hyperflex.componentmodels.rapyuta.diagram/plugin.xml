@@ -70,7 +70,7 @@ http://www.eclipse.org/legal/epl-v10.html
   	  <wizard
   	     name="%newWizardName"
   	     icon="icons/obj16/rapyutacomponentmodelDiagramFile.gif"
-  	     category="it.robotics.unibg.hyperflex.wizard.category"
+  	     category="org.hyperflex.wizard.category"
   	     class="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelCreationWizard"
   	     id="org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelCreationWizardID">
   	  	 <description>%newWizardDesc</description>  

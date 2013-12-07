@@ -68,7 +68,7 @@ http://www.eclipse.org/legal/epl-v10.html
   	  <wizard
   	     name="%newWizardName"
   	     icon="icons/fd.ico"
-  	     category="it.robotics.unibg.hyperflex.wizard.category"
+  	     category="org.hyperflex.wizard.category"
   	     class="org.hyperflex.featuremodels.diagram.part.FeatureModelCreationWizard"
   	     id="org.hyperflex.featuremodels.diagram.part.FeatureModelCreationWizardID">
   	  	 <description>%newWizardDesc</description>  
