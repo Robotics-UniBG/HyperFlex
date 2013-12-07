@@ -2,7 +2,7 @@
 <?eclipse version="3.0"?>
 
 <!--
- Feature Model Plugin
+ Variability Modeling And Resolution Plugins (VARP)
  
  Copyright (c) 2013
  All rights reserved.
@@ -29,16 +29,11 @@
 
 <plugin>
 
-   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <factory
-            uri="http://www.hyperflex.org/featuremodels"
-            class="org.hyperflex.featuremodels.provider.featuremodelsItemProviderAdapterFactory"
-            supportedTypes=
-              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
-               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
-               org.eclipse.emf.edit.provider.ITreeItemContentProvider
-               org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.hyperflex.org/componentmodels.ros"
+            class="org.hyperflex.roscomponentmodel.roscomponentmodelPackage"
+            genModel="models/rosComponentModel.genmodel"/>
    </extension>
 
 </plugin>

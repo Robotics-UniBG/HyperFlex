@@ -2,7 +2,7 @@
 <?eclipse version="3.0"?>
 
 <!--
- HyperFlex Plugins
+ Variability Modeling And Resolution Plugins (VARP)
  
  Copyright (c) 2013
  All rights reserved.
@@ -30,29 +30,27 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated orocosComponentModel -->
       <wizard
-            id="org.hyperflex.orocoscomponentmodel.presentation.orocoscomponentmodelModelWizardID"
-            name="%_UI_orocoscomponentmodelModelWizard_label"
-            class="org.hyperflex.orocoscomponentmodel.presentation.orocoscomponentmodelModelWizard"
+            id="org.hyperflex.roscomponentmodel.presentation.roscomponentmodelModelWizardID"
+            name="%_UI_roscomponentmodelModelWizard_label"
+            class="org.hyperflex.roscomponentmodel.presentation.roscomponentmodelModelWizard"
             category="org.hyperflex.wizard.category"
-            icon="icons/full/obj16/orocoscomponentmodelModelFile.gif">
+            icon="icons/full/obj16/roscomponentmodelModelFile.gif">
+         <description>%_UI_roscomponentmodelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
-         <description>
-            %_UI_orocoscomponentmodelModelWizard_description
-         </description>
       </wizard>
    </extension>
 
+
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated orocosComponentModel -->
       <editor
-            id="org.hyperflex.orocoscomponentmodel.presentation.orocoscomponentmodelEditorID"
-            name="%_UI_orocoscomponentmodelEditor_label"
-            icon="icons/full/obj16/orocoscomponentmodelModelFile.gif"
-            extensions="orocoscomponentmodel"
-            class="org.hyperflex.orocoscomponentmodel.presentation.orocoscomponentmodelEditor"
-            contributorClass="org.hyperflex.orocoscomponentmodel.presentation.orocoscomponentmodelActionBarContributor">
+            id="org.hyperflex.roscomponentmodel.presentation.roscomponentmodelEditorID"
+            name="%_UI_roscomponentmodelEditor_label"
+            icon="icons/full/obj16/roscomponentmodelModelFile.gif"
+            extensions="roscomponentmodel"
+            class="org.hyperflex.roscomponentmodel.presentation.roscomponentmodelEditor"
+            contributorClass="org.hyperflex.roscomponentmodel.presentation.roscomponentmodelActionBarContributor">
       </editor>
    </extension>
+
 </plugin>
