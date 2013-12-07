@@ -48,8 +48,9 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonContentProvider;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerContainerCompartmentEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Composite2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
@@ -62,8 +63,6 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServer
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriberEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerContainerCompartmentEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerSrvConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointMsgConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointParameter2EditPart;
@@ -95,6 +94,8 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServer2Edit
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriberEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerCompositeContainerCompartmentEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEndPointPropertiesCompartmentEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.SystemEditPart;
@@ -303,12 +304,12 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			Collection<View> connectedViews;
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeEditPart.VISUAL_ID));
+							.getType(RobotContainerEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(ContainerEditPart.VISUAL_ID));
+							.getType(CloudContainerEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
@@ -351,77 +352,14 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case CompositeEditPart.VISUAL_ID: {
+		case RobotContainerEditPart.VISUAL_ID: {
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			Collection<View> connectedViews;
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeCompositeContainerCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					RapyutaComponentModelVisualIDRegistry
-							.getType(NodeEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeCompositeContainerCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					RapyutaComponentModelVisualIDRegistry
-							.getType(Composite2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositePublisher2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSubscriber2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvServer2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvClient2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeCompositeContainerCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					RapyutaComponentModelVisualIDRegistry
-							.getType(TopicEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeCompositeContainerCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					RapyutaComponentModelVisualIDRegistry
-							.getType(RobotEndPointEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			return result.toArray();
-		}
-
-		case ContainerEditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(ContainerContainerCompartmentEditPart.VISUAL_ID));
+							.getType(RobotContainerCompositeContainerCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					RapyutaComponentModelVisualIDRegistry
 							.getType(Node2EditPart.VISUAL_ID));
@@ -430,7 +368,50 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(ContainerContainerCompartmentEditPart.VISUAL_ID));
+							.getType(RobotContainerCompositeContainerCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(RobotContainerCompositeContainerCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					RapyutaComponentModelVisualIDRegistry
+							.getType(Topic2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(RobotContainerCompositeContainerCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					RapyutaComponentModelVisualIDRegistry
+							.getType(RobotEndPointEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case CloudContainerEditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CloudContainerContainerCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					RapyutaComponentModelVisualIDRegistry
+							.getType(NodeEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CloudContainerContainerCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					RapyutaComponentModelVisualIDRegistry
 							.getType(EnvironmentEndPointEditPart.VISUAL_ID));
@@ -439,46 +420,15 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(ContainerContainerCompartmentEditPart.VISUAL_ID));
+							.getType(CloudContainerContainerCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					RapyutaComponentModelVisualIDRegistry
-							.getType(Topic2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			return result.toArray();
-		}
-
-		case NodeEditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(NodePropertiesCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					RapyutaComponentModelVisualIDRegistry
-							.getType(NodeParameterEditPart.VISUAL_ID));
+							.getType(TopicEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(NodePublisherEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(NodeSubscriberEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(NodeSrvServerEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(NodeSrvClientEditPart.VISUAL_ID));
+							.getType(Composite2EditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			return result.toArray();
@@ -573,33 +523,6 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
 			}
-			return result.toArray();
-		}
-
-		case Composite2EditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositePublisherEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSubscriberEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvServerEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvClientEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
 			return result.toArray();
 		}
 
@@ -835,77 +758,6 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case TopicEditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_Topic_3056_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeMsgInterfaceExposedEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeMsgInterfaceExposed2EditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case RobotEndPointEditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(RobotEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointParameterEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointPublisherEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSubscriberEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSrvServerEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSrvClientEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			return result.toArray();
-		}
-
 		case EndPointPublisherEditPart.VISUAL_ID: {
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
@@ -1034,27 +886,27 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 							.getType(NodePropertiesCompartment2EditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					RapyutaComponentModelVisualIDRegistry
-							.getType(NodeParameter2EditPart.VISUAL_ID));
+							.getType(NodeParameterEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(NodePublisher2EditPart.VISUAL_ID));
+							.getType(NodePublisherEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(NodeSubscriber2EditPart.VISUAL_ID));
+							.getType(NodeSubscriberEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(NodeSrvServer2EditPart.VISUAL_ID));
+							.getType(NodeSrvServerEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(NodeSrvClient2EditPart.VISUAL_ID));
+							.getType(NodeSrvClientEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			return result.toArray();
@@ -1149,42 +1001,6 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
 			}
-			return result.toArray();
-		}
-
-		case EnvironmentEndPointEditPart.VISUAL_ID: {
-			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EnvironmentEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID));
-			connectedViews = getChildrenByType(connectedViews,
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointParameter2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointPublisher2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSubscriber2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSrvServer2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(EndPointSrvClient2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
 			return result.toArray();
 		}
 
@@ -1341,6 +1157,203 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
+		case CompositeEditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositePublisherEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSubscriberEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvServerEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvClientEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case RobotEndPointEditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(RobotEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointParameterEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointPublisherEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSubscriberEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSrvServerEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSrvClientEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case NodeEditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(NodePropertiesCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					RapyutaComponentModelVisualIDRegistry
+							.getType(NodeParameter2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(NodePublisher2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(NodeSubscriber2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(NodeSrvServer2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(NodeSrvClient2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case EnvironmentEndPointEditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EnvironmentEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID));
+			connectedViews = getChildrenByType(connectedViews,
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointParameter2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointPublisher2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSubscriber2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSrvServer2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(EndPointSrvClient2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case TopicEditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			RapyutaComponentModelNavigatorGroup incominglinks = new RapyutaComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_Topic_3080_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnectionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(MsgInterfaceConnection2EditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeMsgInterfaceExposedEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeMsgInterfaceExposed2EditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case Composite2EditPart.VISUAL_ID: {
+			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositePublisher2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSubscriber2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvServer2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvClient2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
 		case MsgInterfaceConnectionEditPart.VISUAL_ID: {
 			LinkedList<RapyutaComponentModelAbstractNavigatorItem> result = new LinkedList<RapyutaComponentModelAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
@@ -1353,12 +1366,12 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(TopicEditPart.VISUAL_ID));
+							.getType(Topic2EditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(Topic2EditPart.VISUAL_ID));
+							.getType(TopicEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
@@ -1379,16 +1392,6 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
 							.getType(CompositeSubscriberEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositePublisher2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSubscriber2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
@@ -1419,6 +1422,16 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
 							.getType(EndPointSubscriber2EditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositePublisher2EditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSubscriber2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {
@@ -1442,12 +1455,12 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(TopicEditPart.VISUAL_ID));
+							.getType(Topic2EditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(Topic2EditPart.VISUAL_ID));
+							.getType(TopicEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
@@ -1468,16 +1481,6 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
 							.getType(CompositeSubscriberEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositePublisher2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSubscriber2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
@@ -1510,6 +1513,16 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 							.getType(EndPointSubscriber2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositePublisher2EditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSubscriber2EditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
 			if (!target.isEmpty()) {
 				result.add(target);
 			}
@@ -1531,12 +1544,12 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(TopicEditPart.VISUAL_ID));
+							.getType(Topic2EditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(Topic2EditPart.VISUAL_ID));
+							.getType(TopicEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
@@ -1580,12 +1593,12 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(TopicEditPart.VISUAL_ID));
+							.getType(Topic2EditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(Topic2EditPart.VISUAL_ID));
+							.getType(TopicEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
@@ -1717,11 +1730,6 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 					true));
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvServer2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
 							.getType(EndPointSrvServerEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
@@ -1735,6 +1743,11 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 							.getType(EndPointSrvServer2EditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvServer2EditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
 							.getType(NodeSrvClientEditPart.VISUAL_ID));
@@ -1743,11 +1756,6 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
 							.getType(CompositeSrvClientEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvClient2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
@@ -1763,6 +1771,11 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
 							.getType(EndPointSrvClient2EditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvClient2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {
@@ -1796,11 +1809,6 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 					true));
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvServer2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
 							.getType(EndPointSrvServerEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
@@ -1814,6 +1822,11 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 							.getType(EndPointSrvServer2EditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvServer2EditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
 							.getType(NodeSrvClientEditPart.VISUAL_ID));
@@ -1822,11 +1835,6 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
 							.getType(CompositeSrvClientEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					RapyutaComponentModelVisualIDRegistry
-							.getType(CompositeSrvClient2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
@@ -1842,6 +1850,11 @@ public class RapyutaComponentModelNavigatorContentProvider implements
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					RapyutaComponentModelVisualIDRegistry
 							.getType(EndPointSrvClient2EditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					RapyutaComponentModelVisualIDRegistry
+							.getType(CompositeSrvClient2EditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {

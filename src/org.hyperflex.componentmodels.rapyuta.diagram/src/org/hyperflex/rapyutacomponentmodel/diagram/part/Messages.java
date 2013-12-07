@@ -279,112 +279,112 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Node1CreationTool_title;
+	public static String RobotContainer1CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Node1CreationTool_desc;
+	public static String RobotContainer1CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Publisher2CreationTool_title;
+	public static String CloudContainer2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Publisher2CreationTool_desc;
+	public static String CloudContainer2CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Subscriber3CreationTool_title;
+	public static String Node3CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Subscriber3CreationTool_desc;
+	public static String Node3CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Parameter4CreationTool_title;
+	public static String ImportComposite4CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Parameter4CreationTool_desc;
+	public static String ImportComposite4CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Composite5CreationTool_title;
+	public static String EndPoint5CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Composite5CreationTool_desc;
+	public static String EndPoint5CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Container6CreationTool_title;
+	public static String Publisher6CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Container6CreationTool_desc;
+	public static String Publisher6CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String ImportComposite7CreationTool_title;
+	public static String Subscriber7CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String ImportComposite7CreationTool_desc;
+	public static String Subscriber7CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Topic8CreationTool_title;
+	public static String ServiceServer8CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Topic8CreationTool_desc;
+	public static String ServiceServer8CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String EndPoint9CreationTool_title;
+	public static String ServiceClient9CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String EndPoint9CreationTool_desc;
+	public static String ServiceClient9CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String ServiceServer10CreationTool_title;
+	public static String Parameter10CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String ServiceServer10CreationTool_desc;
+	public static String Parameter10CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String ServiceClient11CreationTool_title;
+	public static String Topic11CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String ServiceClient11CreationTool_desc;
+	public static String Topic11CreationTool_desc;
 
 	/**
 	 * @generated
@@ -409,7 +409,7 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String CompositeCompositeContainerCompartmentEditPart_title;
+	public static String RobotContainerCompositeContainerCompartmentEditPart_title;
 
 	/**
 	 * @generated
@@ -424,7 +424,7 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String ContainerContainerCompartmentEditPart_title;
+	public static String CloudContainerContainerCompartmentEditPart_title;
 
 	/**
 	 * @generated
@@ -509,11 +509,6 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Topic_3056_incominglinks;
-
-	/**
-	 * @generated
-	 */
 	public static String NavigatorGroupName_EndPointPublisher_3059_outgoinglinks;
 
 	/**
@@ -585,6 +580,11 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Topic_3075_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Topic_3080_incominglinks;
 
 	/**
 	 * @generated

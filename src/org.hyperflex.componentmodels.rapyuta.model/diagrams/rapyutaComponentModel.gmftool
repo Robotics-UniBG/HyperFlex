@@ -12,11 +12,44 @@
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
+          title="Robot Container"
+          description="Create new Robot Container">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Composite.gif"
+            bundle=""/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Cloud Container"
+          description="Create new Cloud Container">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Container.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
           title="Node"
           description="Create new Node">
         <smallIcon
             xsi:type="gmftool:BundleImage"
             path="icons/Node.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Import Composite"
+          description="Import existing composite">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Composite.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="End Point"
+          description="Create new End Point">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/EndPoint.gif"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
@@ -36,55 +69,6 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Parameter"
-          description="Create new Parameter">
-        <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="icons/Parameter.gif"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Composite"
-          description="Create new Composite">
-        <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="icons/Composite.gif"
-            bundle=""/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Container"
-          description="Create new Container">
-        <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="icons/Container.gif"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Import Composite"
-          description="Import existing composite">
-        <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="icons/Composite.gif"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Topic"
-          description="Create new Topic">
-        <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="icons/Topic.gif"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="End Point"
-          description="Create new End Point">
-        <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="icons/EndPoint.gif"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
           title="Service Server"
           description="Create new Service Server">
         <smallIcon
@@ -98,6 +82,22 @@
         <smallIcon
             xsi:type="gmftool:BundleImage"
             path="icons/ServiceClient.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Parameter"
+          description="Create new Parameter">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Parameter.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Topic"
+          description="Create new Topic">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Topic.gif"/>
       </tools>
     </tools>
     <tools

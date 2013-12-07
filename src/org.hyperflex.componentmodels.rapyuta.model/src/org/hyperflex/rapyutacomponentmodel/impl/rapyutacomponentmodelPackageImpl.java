@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.hyperflex.rapyutacomponentmodel.AbstractComponent;
+import org.hyperflex.rapyutacomponentmodel.CloudContainer;
 import org.hyperflex.rapyutacomponentmodel.Composite;
 import org.hyperflex.rapyutacomponentmodel.CompositeMsgInterface;
 import org.hyperflex.rapyutacomponentmodel.CompositeParameter;
@@ -61,6 +62,7 @@ import org.hyperflex.rapyutacomponentmodel.NodeSrvClient;
 import org.hyperflex.rapyutacomponentmodel.NodeSrvServer;
 import org.hyperflex.rapyutacomponentmodel.NodeSubscriber;
 import org.hyperflex.rapyutacomponentmodel.Parameter;
+import org.hyperflex.rapyutacomponentmodel.RobotContainer;
 import org.hyperflex.rapyutacomponentmodel.RobotEndPoint;
 import org.hyperflex.rapyutacomponentmodel.SrvClient;
 import org.hyperflex.rapyutacomponentmodel.SrvConnection;
@@ -89,6 +91,20 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 * @generated
 	 */
 	private EClass containerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cloudContainerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass robotContainerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -403,7 +419,7 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSystem_Containers() {
+	public EReference getSystem_CloudContainers() {
 		return (EReference)systemEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -412,7 +428,7 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSystem_Composites() {
+	public EReference getSystem_RobotContainers() {
 		return (EReference)systemEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -484,7 +500,7 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContainer_EndPoint() {
+	public EReference getContainer_Components() {
 		return (EReference)containerEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -493,8 +509,35 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContainer_Components() {
-		return (EReference)containerEClass.getEStructuralFeatures().get(4);
+	public EClass getCloudContainer() {
+		return cloudContainerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCloudContainer_EndPoint() {
+		return (EReference)cloudContainerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRobotContainer() {
+		return robotContainerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRobotContainer_EndPoint() {
+		return (EReference)robotContainerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -666,15 +709,6 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 */
 	public EReference getComposite_Parameters() {
 		return (EReference)compositeEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getComposite_EndPoint() {
-		return (EReference)compositeEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1087,6 +1121,15 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getEndPoint_Name() {
+		return (EAttribute)endPointEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRobotEndPoint() {
 		return robotEndPointEClass;
 	}
@@ -1318,8 +1361,8 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 
 		// Create classes and their features
 		systemEClass = createEClass(SYSTEM);
-		createEReference(systemEClass, SYSTEM__CONTAINERS);
-		createEReference(systemEClass, SYSTEM__COMPOSITES);
+		createEReference(systemEClass, SYSTEM__CLOUD_CONTAINERS);
+		createEReference(systemEClass, SYSTEM__ROBOT_CONTAINERS);
 		createEReference(systemEClass, SYSTEM__END_POINT_SRV_CONNECTIONS);
 		createEReference(systemEClass, SYSTEM__END_POINT_MSG_CONNECTIONS);
 		createEAttribute(systemEClass, SYSTEM__NAME);
@@ -1328,8 +1371,13 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		createEAttribute(containerEClass, CONTAINER__NAME);
 		createEReference(containerEClass, CONTAINER__TOPICS);
 		createEReference(containerEClass, CONTAINER__SRV_CONNECTIONS);
-		createEReference(containerEClass, CONTAINER__END_POINT);
 		createEReference(containerEClass, CONTAINER__COMPONENTS);
+
+		cloudContainerEClass = createEClass(CLOUD_CONTAINER);
+		createEReference(cloudContainerEClass, CLOUD_CONTAINER__END_POINT);
+
+		robotContainerEClass = createEClass(ROBOT_CONTAINER);
+		createEReference(robotContainerEClass, ROBOT_CONTAINER__END_POINT);
 
 		abstractComponentEClass = createEClass(ABSTRACT_COMPONENT);
 		createEAttribute(abstractComponentEClass, ABSTRACT_COMPONENT__NAME);
@@ -1352,7 +1400,6 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		createEReference(compositeEClass, COMPOSITE__SRV_CLIENTS);
 		createEReference(compositeEClass, COMPOSITE__SRV_CONNECTIONS);
 		createEReference(compositeEClass, COMPOSITE__PARAMETERS);
-		createEReference(compositeEClass, COMPOSITE__END_POINT);
 
 		msgInterfaceEClass = createEClass(MSG_INTERFACE);
 		createEAttribute(msgInterfaceEClass, MSG_INTERFACE__NAME);
@@ -1417,6 +1464,7 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		createEReference(endPointEClass, END_POINT__SRV_SERVERS);
 		createEReference(endPointEClass, END_POINT__SRV_CLIENTS);
 		createEReference(endPointEClass, END_POINT__PARAMETERS);
+		createEAttribute(endPointEClass, END_POINT__NAME);
 
 		robotEndPointEClass = createEClass(ROBOT_END_POINT);
 		createEAttribute(robotEndPointEClass, ROBOT_END_POINT__URL);
@@ -1482,6 +1530,8 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		cloudContainerEClass.getESuperTypes().add(this.getContainer());
+		robotContainerEClass.getESuperTypes().add(this.getContainer());
 		nodeEClass.getESuperTypes().add(this.getAbstractComponent());
 		compositeEClass.getESuperTypes().add(this.getAbstractComponent());
 		compositeMsgInterfaceEClass.getESuperTypes().add(this.getMsgInterface());
@@ -1496,7 +1546,6 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		nodeSrvServerEClass.getESuperTypes().add(this.getSrvServer());
 		compositeSrvClientEClass.getESuperTypes().add(this.getSrvClient());
 		nodeSrvClientEClass.getESuperTypes().add(this.getSrvClient());
-		endPointEClass.getESuperTypes().add(this.getAbstractComponent());
 		robotEndPointEClass.getESuperTypes().add(this.getEndPoint());
 		environmentEndPointEClass.getESuperTypes().add(this.getEndPoint());
 		endPointMsgInterfaceEClass.getESuperTypes().add(this.getMsgInterface());
@@ -1510,18 +1559,23 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(systemEClass, org.hyperflex.rapyutacomponentmodel.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSystem_Containers(), this.getContainer(), null, "containers", null, 1, -1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSystem_Composites(), this.getComposite(), null, "composites", null, 1, -1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystem_CloudContainers(), this.getCloudContainer(), null, "cloudContainers", null, 1, -1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystem_RobotContainers(), this.getRobotContainer(), null, "robotContainers", null, 1, -1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSystem_EndPointSrvConnections(), this.getEndPointSrvConnection(), null, "endPointSrvConnections", null, 0, -1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSystem_EndPointMsgConnections(), this.getEndPointMsgConnection(), null, "endPointMsgConnections", null, 0, -1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSystem_Name(), ecorePackage.getEString(), "name", "System", 1, 1, org.hyperflex.rapyutacomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(containerEClass, org.hyperflex.rapyutacomponentmodel.Container.class, "Container", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(containerEClass, org.hyperflex.rapyutacomponentmodel.Container.class, "Container", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getContainer_Name(), ecorePackage.getEString(), "name", null, 0, 1, org.hyperflex.rapyutacomponentmodel.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContainer_Topics(), this.getTopic(), null, "topics", null, 0, -1, org.hyperflex.rapyutacomponentmodel.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContainer_SrvConnections(), this.getContainerSrvConnection(), null, "srvConnections", null, 0, -1, org.hyperflex.rapyutacomponentmodel.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContainer_EndPoint(), this.getEnvironmentEndPoint(), null, "endPoint", null, 1, 1, org.hyperflex.rapyutacomponentmodel.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContainer_Components(), this.getAbstractComponent(), null, "components", null, 0, -1, org.hyperflex.rapyutacomponentmodel.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(cloudContainerEClass, CloudContainer.class, "CloudContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCloudContainer_EndPoint(), this.getEnvironmentEndPoint(), null, "endPoint", null, 1, 1, CloudContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(robotContainerEClass, RobotContainer.class, "RobotContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRobotContainer_EndPoint(), this.getRobotEndPoint(), null, "endPoint", null, 0, 1, RobotContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractComponentEClass, AbstractComponent.class, "AbstractComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbstractComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, AbstractComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1544,7 +1598,6 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		initEReference(getComposite_SrvClients(), this.getCompositeSrvClient(), null, "srvClients", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComposite_SrvConnections(), this.getCompositeSrvConnection(), null, "srvConnections", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComposite_Parameters(), this.getCompositeParameter(), null, "parameters", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComposite_EndPoint(), this.getRobotEndPoint(), null, "endPoint", null, 0, 1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(msgInterfaceEClass, MsgInterface.class, "MsgInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMsgInterface_Name(), ecorePackage.getEString(), "name", null, 0, 1, MsgInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1609,6 +1662,7 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		initEReference(getEndPoint_SrvServers(), this.getEndPointSrvServer(), null, "srvServers", null, 0, -1, EndPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEndPoint_SrvClients(), this.getEndPointSrvClient(), null, "srvClients", null, 0, -1, EndPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEndPoint_Parameters(), this.getEndPointParameter(), null, "parameters", null, 0, -1, EndPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEndPoint_Name(), ecorePackage.getEString(), "name", null, 0, 1, EndPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(robotEndPointEClass, RobotEndPoint.class, "RobotEndPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRobotEndPoint_Url(), ecorePackage.getEString(), "url", null, 1, 1, RobotEndPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

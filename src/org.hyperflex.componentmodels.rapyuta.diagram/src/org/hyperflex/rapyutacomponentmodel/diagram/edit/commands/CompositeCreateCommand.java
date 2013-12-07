@@ -38,7 +38,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 import org.hyperflex.rapyutacomponentmodel.Composite;
-import org.hyperflex.rapyutacomponentmodel.System;
+import org.hyperflex.rapyutacomponentmodel.Container;
 
 /**
  * @generated
@@ -81,8 +81,8 @@ public class CompositeCreateCommand extends EditElementCommand {
 		Composite newElement = org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelFactory.eINSTANCE
 				.createComposite();
 
-		System owner = (System) getElementToEdit();
-		owner.getComposites().add(newElement);
+		Container owner = (Container) getElementToEdit();
+		owner.getComponents().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

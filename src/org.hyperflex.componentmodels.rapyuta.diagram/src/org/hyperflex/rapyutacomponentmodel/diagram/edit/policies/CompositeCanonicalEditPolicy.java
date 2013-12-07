@@ -48,10 +48,10 @@ import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositePublisher2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvClient2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServer2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriber2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositePublisherEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvClientEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServerEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriberEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramUpdater;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelNodeDescriptor;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVisualIDRegistry;
@@ -108,7 +108,7 @@ public class CompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getComposite_2003SemanticChildren(viewObject);
+				.getComposite_3076SemanticChildren(viewObject);
 		for (RapyutaComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -130,10 +130,10 @@ public class CompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 	private boolean isMyDiagramElement(View view) {
 		int visualID = RapyutaComponentModelVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case CompositePublisher2EditPart.VISUAL_ID:
-		case CompositeSubscriber2EditPart.VISUAL_ID:
-		case CompositeSrvServer2EditPart.VISUAL_ID:
-		case CompositeSrvClient2EditPart.VISUAL_ID:
+		case CompositePublisherEditPart.VISUAL_ID:
+		case CompositeSubscriberEditPart.VISUAL_ID:
+		case CompositeSrvServerEditPart.VISUAL_ID:
+		case CompositeSrvClientEditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -148,7 +148,7 @@ public class CompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getComposite_2003SemanticChildren((View) getHost().getModel());
+				.getComposite_3076SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

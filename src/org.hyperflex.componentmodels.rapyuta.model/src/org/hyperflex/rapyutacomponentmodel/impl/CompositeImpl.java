@@ -63,7 +63,6 @@ import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.CompositeImpl#getSrvClients <em>Srv Clients</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.CompositeImpl#getSrvConnections <em>Srv Connections</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.CompositeImpl#getParameters <em>Parameters</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.CompositeImpl#getEndPoint <em>End Point</em>}</li>
  * </ul>
  * </p>
  *
@@ -149,16 +148,6 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 	 * @ordered
 	 */
 	protected EList<CompositeParameter> parameters;
-
-	/**
-	 * The cached value of the '{@link #getEndPoint() <em>End Point</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEndPoint()
-	 * @generated
-	 * @ordered
-	 */
-	protected RobotEndPoint endPoint;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -280,49 +269,6 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RobotEndPoint getEndPoint() {
-		return endPoint;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetEndPoint(RobotEndPoint newEndPoint, NotificationChain msgs) {
-		RobotEndPoint oldEndPoint = endPoint;
-		endPoint = newEndPoint;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, rapyutacomponentmodelPackage.COMPOSITE__END_POINT, oldEndPoint, newEndPoint);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEndPoint(RobotEndPoint newEndPoint) {
-		if (newEndPoint != endPoint) {
-			NotificationChain msgs = null;
-			if (endPoint != null)
-				msgs = ((InternalEObject)endPoint).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - rapyutacomponentmodelPackage.COMPOSITE__END_POINT, null, msgs);
-			if (newEndPoint != null)
-				msgs = ((InternalEObject)newEndPoint).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - rapyutacomponentmodelPackage.COMPOSITE__END_POINT, null, msgs);
-			msgs = basicSetEndPoint(newEndPoint, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rapyutacomponentmodelPackage.COMPOSITE__END_POINT, newEndPoint, newEndPoint));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -342,8 +288,6 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 				return ((InternalEList<?>)getSrvConnections()).basicRemove(otherEnd, msgs);
 			case rapyutacomponentmodelPackage.COMPOSITE__PARAMETERS:
 				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
-			case rapyutacomponentmodelPackage.COMPOSITE__END_POINT:
-				return basicSetEndPoint(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -372,8 +316,6 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 				return getSrvConnections();
 			case rapyutacomponentmodelPackage.COMPOSITE__PARAMETERS:
 				return getParameters();
-			case rapyutacomponentmodelPackage.COMPOSITE__END_POINT:
-				return getEndPoint();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -419,9 +361,6 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 				getParameters().clear();
 				getParameters().addAll((Collection<? extends CompositeParameter>)newValue);
 				return;
-			case rapyutacomponentmodelPackage.COMPOSITE__END_POINT:
-				setEndPoint((RobotEndPoint)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -458,9 +397,6 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 			case rapyutacomponentmodelPackage.COMPOSITE__PARAMETERS:
 				getParameters().clear();
 				return;
-			case rapyutacomponentmodelPackage.COMPOSITE__END_POINT:
-				setEndPoint((RobotEndPoint)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -489,8 +425,6 @@ public class CompositeImpl extends AbstractComponentImpl implements Composite {
 				return srvConnections != null && !srvConnections.isEmpty();
 			case rapyutacomponentmodelPackage.COMPOSITE__PARAMETERS:
 				return parameters != null && !parameters.isEmpty();
-			case rapyutacomponentmodelPackage.COMPOSITE__END_POINT:
-				return endPoint != null;
 		}
 		return super.eIsSet(featureID);
 	}

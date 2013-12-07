@@ -28,11 +28,9 @@ package org.hyperflex.rapyutacomponentmodel.diagram.edit.policies;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EObject;
@@ -49,9 +47,6 @@ import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Composite2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.TopicEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramUpdater;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelNodeDescriptor;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVisualIDRegistry;
@@ -59,13 +54,7 @@ import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVis
 /**
  * @generated
  */
-public class CompositeCompositeContainerCompartmentCanonicalEditPolicy extends
-		CanonicalEditPolicy {
-
-	/**
-	 * @generated
-	 */
-	private Set<EStructuralFeature> myFeaturesToSynchronize;
+public class CloudContainerCanonicalEditPolicy extends CanonicalEditPolicy {
 
 	/**
 	 * @generated
@@ -82,20 +71,9 @@ public class CompositeCompositeContainerCompartmentCanonicalEditPolicy extends
 	/**
 	 * @generated
 	 */
-	protected Set getFeaturesToSynchronize() {
-		if (myFeaturesToSynchronize == null) {
-			myFeaturesToSynchronize = new HashSet<EStructuralFeature>();
-			myFeaturesToSynchronize
-					.add(org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-							.getComposite_Components());
-			myFeaturesToSynchronize
-					.add(org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-							.getComposite_Topics());
-			myFeaturesToSynchronize
-					.add(org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-							.getComposite_EndPoint());
-		}
-		return myFeaturesToSynchronize;
+	protected EStructuralFeature getFeatureToSynchronize() {
+		return org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+				.getContainer_Components();
 	}
 
 	/**
@@ -106,7 +84,7 @@ public class CompositeCompositeContainerCompartmentCanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getCompositeCompositeContainerCompartment_7012SemanticChildren(viewObject);
+				.getCloudContainer_2006SemanticChildren(viewObject);
 		for (RapyutaComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -126,15 +104,8 @@ public class CompositeCompositeContainerCompartmentCanonicalEditPolicy extends
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		int visualID = RapyutaComponentModelVisualIDRegistry.getVisualID(view);
-		switch (visualID) {
-		case NodeEditPart.VISUAL_ID:
-		case Composite2EditPart.VISUAL_ID:
-		case TopicEditPart.VISUAL_ID:
-		case RobotEndPointEditPart.VISUAL_ID:
-			return true;
-		}
-		return false;
+		return Composite2EditPart.VISUAL_ID == RapyutaComponentModelVisualIDRegistry
+				.getVisualID(view);
 	}
 
 	/**
@@ -146,7 +117,7 @@ public class CompositeCompositeContainerCompartmentCanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getCompositeCompositeContainerCompartment_7012SemanticChildren((View) getHost()
+				.getCloudContainer_2006SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

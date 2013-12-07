@@ -84,7 +84,7 @@ public class NodeNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5020;
+	public static final int VISUAL_ID = 5035;
 
 	/**
 	 * @generated
@@ -330,7 +330,7 @@ public class NodeNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = RapyutaComponentModelParserProvider
 					.getParser(
-							RapyutaComponentModelElementTypes.Node_3041,
+							RapyutaComponentModelElementTypes.Node_3078,
 							getParserElement(),
 							RapyutaComponentModelVisualIDRegistry
 									.getType(org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeNameEditPart.VISUAL_ID));

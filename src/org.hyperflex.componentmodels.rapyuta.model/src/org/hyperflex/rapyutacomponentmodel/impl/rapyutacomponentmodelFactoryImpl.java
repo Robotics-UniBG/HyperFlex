@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.hyperflex.rapyutacomponentmodel.CloudContainer;
 import org.hyperflex.rapyutacomponentmodel.Composite;
 import org.hyperflex.rapyutacomponentmodel.CompositeMsgInterface;
 import org.hyperflex.rapyutacomponentmodel.CompositeParameter;
@@ -57,6 +58,7 @@ import org.hyperflex.rapyutacomponentmodel.NodeSrvClient;
 import org.hyperflex.rapyutacomponentmodel.NodeSrvServer;
 import org.hyperflex.rapyutacomponentmodel.NodeSubscriber;
 import org.hyperflex.rapyutacomponentmodel.Parameter;
+import org.hyperflex.rapyutacomponentmodel.RobotContainer;
 import org.hyperflex.rapyutacomponentmodel.RobotEndPoint;
 import org.hyperflex.rapyutacomponentmodel.SrvClient;
 import org.hyperflex.rapyutacomponentmodel.SrvConnection;
@@ -110,7 +112,8 @@ public class rapyutacomponentmodelFactoryImpl extends EFactoryImpl implements ra
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case rapyutacomponentmodelPackage.SYSTEM: return createSystem();
-			case rapyutacomponentmodelPackage.CONTAINER: return createContainer();
+			case rapyutacomponentmodelPackage.CLOUD_CONTAINER: return createCloudContainer();
+			case rapyutacomponentmodelPackage.ROBOT_CONTAINER: return createRobotContainer();
 			case rapyutacomponentmodelPackage.NODE: return createNode();
 			case rapyutacomponentmodelPackage.COMPOSITE: return createComposite();
 			case rapyutacomponentmodelPackage.MSG_INTERFACE: return createMsgInterface();
@@ -162,9 +165,19 @@ public class rapyutacomponentmodelFactoryImpl extends EFactoryImpl implements ra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.hyperflex.rapyutacomponentmodel.Container createContainer() {
-		ContainerImpl container = new ContainerImpl();
-		return container;
+	public CloudContainer createCloudContainer() {
+		CloudContainerImpl cloudContainer = new CloudContainerImpl();
+		return cloudContainer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RobotContainer createRobotContainer() {
+		RobotContainerImpl robotContainer = new RobotContainerImpl();
+		return robotContainer;
 	}
 
 	/**

@@ -90,22 +90,22 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int SYSTEM = 0;
 
 	/**
-	 * The feature id for the '<em><b>Containers</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Cloud Containers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__CONTAINERS = 0;
+	int SYSTEM__CLOUD_CONTAINERS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Composites</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Robot Containers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__COMPOSITES = 1;
+	int SYSTEM__ROBOT_CONTAINERS = 1;
 
 	/**
 	 * The feature id for the '<em><b>End Point Srv Connections</b></em>' containment reference list.
@@ -181,22 +181,13 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int CONTAINER__SRV_CONNECTIONS = 2;
 
 	/**
-	 * The feature id for the '<em><b>End Point</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER__END_POINT = 3;
-
-	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__COMPONENTS = 4;
+	int CONTAINER__COMPONENTS = 3;
 
 	/**
 	 * The number of structural features of the '<em>Container</em>' class.
@@ -205,7 +196,135 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_FEATURE_COUNT = 5;
+	int CONTAINER_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.CloudContainerImpl <em>Cloud Container</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.hyperflex.rapyutacomponentmodel.impl.CloudContainerImpl
+	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getCloudContainer()
+	 * @generated
+	 */
+	int CLOUD_CONTAINER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CONTAINER__NAME = CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Topics</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CONTAINER__TOPICS = CONTAINER__TOPICS;
+
+	/**
+	 * The feature id for the '<em><b>Srv Connections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CONTAINER__SRV_CONNECTIONS = CONTAINER__SRV_CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CONTAINER__COMPONENTS = CONTAINER__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>End Point</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CONTAINER__END_POINT = CONTAINER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Cloud Container</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CONTAINER_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.RobotContainerImpl <em>Robot Container</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.hyperflex.rapyutacomponentmodel.impl.RobotContainerImpl
+	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getRobotContainer()
+	 * @generated
+	 */
+	int ROBOT_CONTAINER = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROBOT_CONTAINER__NAME = CONTAINER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Topics</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROBOT_CONTAINER__TOPICS = CONTAINER__TOPICS;
+
+	/**
+	 * The feature id for the '<em><b>Srv Connections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROBOT_CONTAINER__SRV_CONNECTIONS = CONTAINER__SRV_CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROBOT_CONTAINER__COMPONENTS = CONTAINER__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>End Point</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROBOT_CONTAINER__END_POINT = CONTAINER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Robot Container</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROBOT_CONTAINER_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.AbstractComponentImpl <em>Abstract Component</em>}' class.
@@ -215,7 +334,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getAbstractComponent()
 	 * @generated
 	 */
-	int ABSTRACT_COMPONENT = 2;
+	int ABSTRACT_COMPONENT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -243,7 +362,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getNode()
 	 * @generated
 	 */
-	int NODE = 3;
+	int NODE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -334,7 +453,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getComposite()
 	 * @generated
 	 */
-	int COMPOSITE = 4;
+	int COMPOSITE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -418,22 +537,13 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int COMPOSITE__PARAMETERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>End Point</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE__END_POINT = ABSTRACT_COMPONENT_FEATURE_COUNT + 8;
-
-	/**
 	 * The number of structural features of the '<em>Composite</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_FEATURE_COUNT = ABSTRACT_COMPONENT_FEATURE_COUNT + 9;
+	int COMPOSITE_FEATURE_COUNT = ABSTRACT_COMPONENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.MsgInterfaceImpl <em>Msg Interface</em>}' class.
@@ -443,7 +553,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getMsgInterface()
 	 * @generated
 	 */
-	int MSG_INTERFACE = 5;
+	int MSG_INTERFACE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -480,7 +590,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getCompositeMsgInterface()
 	 * @generated
 	 */
-	int COMPOSITE_MSG_INTERFACE = 6;
+	int COMPOSITE_MSG_INTERFACE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -526,7 +636,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getNodeMsgInterface()
 	 * @generated
 	 */
-	int NODE_MSG_INTERFACE = 7;
+	int NODE_MSG_INTERFACE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -572,7 +682,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getNodePublisher()
 	 * @generated
 	 */
-	int NODE_PUBLISHER = 8;
+	int NODE_PUBLISHER = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -618,7 +728,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getNodeSubscriber()
 	 * @generated
 	 */
-	int NODE_SUBSCRIBER = 9;
+	int NODE_SUBSCRIBER = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -664,7 +774,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getCompositePublisher()
 	 * @generated
 	 */
-	int COMPOSITE_PUBLISHER = 10;
+	int COMPOSITE_PUBLISHER = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -710,7 +820,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getCompositeSubscriber()
 	 * @generated
 	 */
-	int COMPOSITE_SUBSCRIBER = 11;
+	int COMPOSITE_SUBSCRIBER = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -756,7 +866,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getTopic()
 	 * @generated
 	 */
-	int TOPIC = 12;
+	int TOPIC = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -793,7 +903,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getParameter()
 	 * @generated
 	 */
-	int PARAMETER = 13;
+	int PARAMETER = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -821,7 +931,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getNodeParameter()
 	 * @generated
 	 */
-	int NODE_PARAMETER = 14;
+	int NODE_PARAMETER = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -867,7 +977,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getCompositeParameter()
 	 * @generated
 	 */
-	int COMPOSITE_PARAMETER = 15;
+	int COMPOSITE_PARAMETER = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -904,7 +1014,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getSrvServer()
 	 * @generated
 	 */
-	int SRV_SERVER = 16;
+	int SRV_SERVER = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -950,7 +1060,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getSrvClient()
 	 * @generated
 	 */
-	int SRV_CLIENT = 17;
+	int SRV_CLIENT = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -996,7 +1106,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getCompositeSrvServer()
 	 * @generated
 	 */
-	int COMPOSITE_SRV_SERVER = 18;
+	int COMPOSITE_SRV_SERVER = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1051,7 +1161,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getNodeSrvServer()
 	 * @generated
 	 */
-	int NODE_SRV_SERVER = 19;
+	int NODE_SRV_SERVER = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1097,7 +1207,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getCompositeSrvClient()
 	 * @generated
 	 */
-	int COMPOSITE_SRV_CLIENT = 20;
+	int COMPOSITE_SRV_CLIENT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1152,7 +1262,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getNodeSrvClient()
 	 * @generated
 	 */
-	int NODE_SRV_CLIENT = 21;
+	int NODE_SRV_CLIENT = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1198,7 +1308,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getSrvConnection()
 	 * @generated
 	 */
-	int SRV_CONNECTION = 22;
+	int SRV_CONNECTION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Server</b></em>' reference.
@@ -1244,16 +1354,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getEndPoint()
 	 * @generated
 	 */
-	int END_POINT = 23;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int END_POINT__NAME = ABSTRACT_COMPONENT__NAME;
+	int END_POINT = 25;
 
 	/**
 	 * The feature id for the '<em><b>Publishers</b></em>' containment reference list.
@@ -1262,7 +1363,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int END_POINT__PUBLISHERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 0;
+	int END_POINT__PUBLISHERS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Subscribers</b></em>' containment reference list.
@@ -1271,7 +1372,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int END_POINT__SUBSCRIBERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 1;
+	int END_POINT__SUBSCRIBERS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Srv Servers</b></em>' containment reference list.
@@ -1280,7 +1381,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int END_POINT__SRV_SERVERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 2;
+	int END_POINT__SRV_SERVERS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Srv Clients</b></em>' containment reference list.
@@ -1289,7 +1390,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int END_POINT__SRV_CLIENTS = ABSTRACT_COMPONENT_FEATURE_COUNT + 3;
+	int END_POINT__SRV_CLIENTS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -1298,7 +1399,16 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int END_POINT__PARAMETERS = ABSTRACT_COMPONENT_FEATURE_COUNT + 4;
+	int END_POINT__PARAMETERS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_POINT__NAME = 5;
 
 	/**
 	 * The number of structural features of the '<em>End Point</em>' class.
@@ -1307,7 +1417,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int END_POINT_FEATURE_COUNT = ABSTRACT_COMPONENT_FEATURE_COUNT + 5;
+	int END_POINT_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.RobotEndPointImpl <em>Robot End Point</em>}' class.
@@ -1317,16 +1427,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getRobotEndPoint()
 	 * @generated
 	 */
-	int ROBOT_END_POINT = 24;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROBOT_END_POINT__NAME = END_POINT__NAME;
+	int ROBOT_END_POINT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Publishers</b></em>' containment reference list.
@@ -1372,6 +1473,15 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROBOT_END_POINT__PARAMETERS = END_POINT__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROBOT_END_POINT__NAME = END_POINT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -1426,16 +1536,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getEnvironmentEndPoint()
 	 * @generated
 	 */
-	int ENVIRONMENT_END_POINT = 25;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIRONMENT_END_POINT__NAME = END_POINT__NAME;
+	int ENVIRONMENT_END_POINT = 27;
 
 	/**
 	 * The feature id for the '<em><b>Publishers</b></em>' containment reference list.
@@ -1483,6 +1584,15 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int ENVIRONMENT_END_POINT__PARAMETERS = END_POINT__PARAMETERS;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENVIRONMENT_END_POINT__NAME = END_POINT__NAME;
+
+	/**
 	 * The number of structural features of the '<em>Environment End Point</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1499,7 +1609,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getEndPointMsgInterface()
 	 * @generated
 	 */
-	int END_POINT_MSG_INTERFACE = 26;
+	int END_POINT_MSG_INTERFACE = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1536,7 +1646,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getEndPointPublisher()
 	 * @generated
 	 */
-	int END_POINT_PUBLISHER = 27;
+	int END_POINT_PUBLISHER = 29;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1573,7 +1683,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getEndPointSubscriber()
 	 * @generated
 	 */
-	int END_POINT_SUBSCRIBER = 28;
+	int END_POINT_SUBSCRIBER = 30;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1610,7 +1720,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getEndPointMsgConnection()
 	 * @generated
 	 */
-	int END_POINT_MSG_CONNECTION = 29;
+	int END_POINT_MSG_CONNECTION = 31;
 
 	/**
 	 * The feature id for the '<em><b>Publisher</b></em>' reference.
@@ -1647,7 +1757,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getEndPointSrvServer()
 	 * @generated
 	 */
-	int END_POINT_SRV_SERVER = 30;
+	int END_POINT_SRV_SERVER = 32;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1693,7 +1803,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getEndPointSrvClient()
 	 * @generated
 	 */
-	int END_POINT_SRV_CLIENT = 31;
+	int END_POINT_SRV_CLIENT = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1739,7 +1849,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getEndPointSrvConnection()
 	 * @generated
 	 */
-	int END_POINT_SRV_CONNECTION = 32;
+	int END_POINT_SRV_CONNECTION = 34;
 
 	/**
 	 * The feature id for the '<em><b>Server</b></em>' reference.
@@ -1785,7 +1895,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getEndPointParameter()
 	 * @generated
 	 */
-	int END_POINT_PARAMETER = 33;
+	int END_POINT_PARAMETER = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1831,7 +1941,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getContainerSrvConnection()
 	 * @generated
 	 */
-	int CONTAINER_SRV_CONNECTION = 34;
+	int CONTAINER_SRV_CONNECTION = 36;
 
 	/**
 	 * The feature id for the '<em><b>Server</b></em>' reference.
@@ -1877,7 +1987,7 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getCompositeSrvConnection()
 	 * @generated
 	 */
-	int COMPOSITE_SRV_CONNECTION = 35;
+	int COMPOSITE_SRV_CONNECTION = 37;
 
 	/**
 	 * The feature id for the '<em><b>Server</b></em>' reference.
@@ -1927,26 +2037,26 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	EClass getSystem();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.hyperflex.rapyutacomponentmodel.System#getContainers <em>Containers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.rapyutacomponentmodel.System#getCloudContainers <em>Cloud Containers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Containers</em>'.
-	 * @see org.hyperflex.rapyutacomponentmodel.System#getContainers()
+	 * @return the meta object for the containment reference list '<em>Cloud Containers</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.System#getCloudContainers()
 	 * @see #getSystem()
 	 * @generated
 	 */
-	EReference getSystem_Containers();
+	EReference getSystem_CloudContainers();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.hyperflex.rapyutacomponentmodel.System#getComposites <em>Composites</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.rapyutacomponentmodel.System#getRobotContainers <em>Robot Containers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Composites</em>'.
-	 * @see org.hyperflex.rapyutacomponentmodel.System#getComposites()
+	 * @return the meta object for the containment reference list '<em>Robot Containers</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.System#getRobotContainers()
 	 * @see #getSystem()
 	 * @generated
 	 */
-	EReference getSystem_Composites();
+	EReference getSystem_RobotContainers();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.hyperflex.rapyutacomponentmodel.System#getEndPointSrvConnections <em>End Point Srv Connections</em>}'.
@@ -2025,17 +2135,6 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	EReference getContainer_SrvConnections();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.hyperflex.rapyutacomponentmodel.Container#getEndPoint <em>End Point</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>End Point</em>'.
-	 * @see org.hyperflex.rapyutacomponentmodel.Container#getEndPoint()
-	 * @see #getContainer()
-	 * @generated
-	 */
-	EReference getContainer_EndPoint();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link org.hyperflex.rapyutacomponentmodel.Container#getComponents <em>Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2045,6 +2144,48 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getContainer_Components();
+
+	/**
+	 * Returns the meta object for class '{@link org.hyperflex.rapyutacomponentmodel.CloudContainer <em>Cloud Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cloud Container</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.CloudContainer
+	 * @generated
+	 */
+	EClass getCloudContainer();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.hyperflex.rapyutacomponentmodel.CloudContainer#getEndPoint <em>End Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>End Point</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.CloudContainer#getEndPoint()
+	 * @see #getCloudContainer()
+	 * @generated
+	 */
+	EReference getCloudContainer_EndPoint();
+
+	/**
+	 * Returns the meta object for class '{@link org.hyperflex.rapyutacomponentmodel.RobotContainer <em>Robot Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Robot Container</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.RobotContainer
+	 * @generated
+	 */
+	EClass getRobotContainer();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.hyperflex.rapyutacomponentmodel.RobotContainer#getEndPoint <em>End Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>End Point</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.RobotContainer#getEndPoint()
+	 * @see #getRobotContainer()
+	 * @generated
+	 */
+	EReference getRobotContainer_EndPoint();
 
 	/**
 	 * Returns the meta object for class '{@link org.hyperflex.rapyutacomponentmodel.AbstractComponent <em>Abstract Component</em>}'.
@@ -2251,17 +2392,6 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComposite_Parameters();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.hyperflex.rapyutacomponentmodel.Composite#getEndPoint <em>End Point</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>End Point</em>'.
-	 * @see org.hyperflex.rapyutacomponentmodel.Composite#getEndPoint()
-	 * @see #getComposite()
-	 * @generated
-	 */
-	EReference getComposite_EndPoint();
 
 	/**
 	 * Returns the meta object for class '{@link org.hyperflex.rapyutacomponentmodel.MsgInterface <em>Msg Interface</em>}'.
@@ -2740,6 +2870,17 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	EReference getEndPoint_Parameters();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.rapyutacomponentmodel.EndPoint#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.EndPoint#getName()
+	 * @see #getEndPoint()
+	 * @generated
+	 */
+	EAttribute getEndPoint_Name();
+
+	/**
 	 * Returns the meta object for class '{@link org.hyperflex.rapyutacomponentmodel.RobotEndPoint <em>Robot End Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3013,20 +3154,20 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 		EClass SYSTEM = eINSTANCE.getSystem();
 
 		/**
-		 * The meta object literal for the '<em><b>Containers</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Cloud Containers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SYSTEM__CONTAINERS = eINSTANCE.getSystem_Containers();
+		EReference SYSTEM__CLOUD_CONTAINERS = eINSTANCE.getSystem_CloudContainers();
 
 		/**
-		 * The meta object literal for the '<em><b>Composites</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Robot Containers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SYSTEM__COMPOSITES = eINSTANCE.getSystem_Composites();
+		EReference SYSTEM__ROBOT_CONTAINERS = eINSTANCE.getSystem_RobotContainers();
 
 		/**
 		 * The meta object literal for the '<em><b>End Point Srv Connections</b></em>' containment reference list feature.
@@ -3087,20 +3228,48 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 		EReference CONTAINER__SRV_CONNECTIONS = eINSTANCE.getContainer_SrvConnections();
 
 		/**
-		 * The meta object literal for the '<em><b>End Point</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTAINER__END_POINT = eINSTANCE.getContainer_EndPoint();
-
-		/**
 		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference CONTAINER__COMPONENTS = eINSTANCE.getContainer_Components();
+
+		/**
+		 * The meta object literal for the '{@link org.hyperflex.rapyutacomponentmodel.impl.CloudContainerImpl <em>Cloud Container</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.hyperflex.rapyutacomponentmodel.impl.CloudContainerImpl
+		 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getCloudContainer()
+		 * @generated
+		 */
+		EClass CLOUD_CONTAINER = eINSTANCE.getCloudContainer();
+
+		/**
+		 * The meta object literal for the '<em><b>End Point</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLOUD_CONTAINER__END_POINT = eINSTANCE.getCloudContainer_EndPoint();
+
+		/**
+		 * The meta object literal for the '{@link org.hyperflex.rapyutacomponentmodel.impl.RobotContainerImpl <em>Robot Container</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.hyperflex.rapyutacomponentmodel.impl.RobotContainerImpl
+		 * @see org.hyperflex.rapyutacomponentmodel.impl.rapyutacomponentmodelPackageImpl#getRobotContainer()
+		 * @generated
+		 */
+		EClass ROBOT_CONTAINER = eINSTANCE.getRobotContainer();
+
+		/**
+		 * The meta object literal for the '<em><b>End Point</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROBOT_CONTAINER__END_POINT = eINSTANCE.getRobotContainer_EndPoint();
 
 		/**
 		 * The meta object literal for the '{@link org.hyperflex.rapyutacomponentmodel.impl.AbstractComponentImpl <em>Abstract Component</em>}' class.
@@ -3259,14 +3428,6 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPOSITE__PARAMETERS = eINSTANCE.getComposite_Parameters();
-
-		/**
-		 * The meta object literal for the '<em><b>End Point</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPOSITE__END_POINT = eINSTANCE.getComposite_EndPoint();
 
 		/**
 		 * The meta object literal for the '{@link org.hyperflex.rapyutacomponentmodel.impl.MsgInterfaceImpl <em>Msg Interface</em>}' class.
@@ -3665,6 +3826,14 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference END_POINT__PARAMETERS = eINSTANCE.getEndPoint_Parameters();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute END_POINT__NAME = eINSTANCE.getEndPoint_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.hyperflex.rapyutacomponentmodel.impl.RobotEndPointImpl <em>Robot End Point</em>}' class.

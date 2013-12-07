@@ -50,23 +50,23 @@ public class RapyutaComponentModelEditPartFactory implements EditPartFactory {
 			case SystemEditPart.VISUAL_ID:
 				return new SystemEditPart(view);
 
-			case CompositeEditPart.VISUAL_ID:
-				return new CompositeEditPart(view);
+			case RobotContainerEditPart.VISUAL_ID:
+				return new RobotContainerEditPart(view);
 
-			case CompositeNameEditPart.VISUAL_ID:
-				return new CompositeNameEditPart(view);
+			case RobotContainerNameEditPart.VISUAL_ID:
+				return new RobotContainerNameEditPart(view);
 
-			case ContainerEditPart.VISUAL_ID:
-				return new ContainerEditPart(view);
+			case CloudContainerEditPart.VISUAL_ID:
+				return new CloudContainerEditPart(view);
 
-			case ContainerNameEditPart.VISUAL_ID:
-				return new ContainerNameEditPart(view);
+			case CloudContainerNameEditPart.VISUAL_ID:
+				return new CloudContainerNameEditPart(view);
 
-			case NodeEditPart.VISUAL_ID:
-				return new NodeEditPart(view);
+			case Node2EditPart.VISUAL_ID:
+				return new Node2EditPart(view);
 
-			case NodeNameEditPart.VISUAL_ID:
-				return new NodeNameEditPart(view);
+			case NodeName2EditPart.VISUAL_ID:
+				return new NodeName2EditPart(view);
 
 			case NodeParameterEditPart.VISUAL_ID:
 				return new NodeParameterEditPart(view);
@@ -86,11 +86,11 @@ public class RapyutaComponentModelEditPartFactory implements EditPartFactory {
 			case NodeSrvClientEditPart.VISUAL_ID:
 				return new NodeSrvClientEditPart(view);
 
-			case Composite2EditPart.VISUAL_ID:
-				return new Composite2EditPart(view);
+			case CompositeEditPart.VISUAL_ID:
+				return new CompositeEditPart(view);
 
-			case CompositeName2EditPart.VISUAL_ID:
-				return new CompositeName2EditPart(view);
+			case CompositeNameEditPart.VISUAL_ID:
+				return new CompositeNameEditPart(view);
 
 			case CompositePublisherEditPart.VISUAL_ID:
 				return new CompositePublisherEditPart(view);
@@ -104,23 +104,11 @@ public class RapyutaComponentModelEditPartFactory implements EditPartFactory {
 			case CompositeSrvClientEditPart.VISUAL_ID:
 				return new CompositeSrvClientEditPart(view);
 
-			case CompositePublisher2EditPart.VISUAL_ID:
-				return new CompositePublisher2EditPart(view);
+			case Topic2EditPart.VISUAL_ID:
+				return new Topic2EditPart(view);
 
-			case CompositeSubscriber2EditPart.VISUAL_ID:
-				return new CompositeSubscriber2EditPart(view);
-
-			case CompositeSrvServer2EditPart.VISUAL_ID:
-				return new CompositeSrvServer2EditPart(view);
-
-			case CompositeSrvClient2EditPart.VISUAL_ID:
-				return new CompositeSrvClient2EditPart(view);
-
-			case TopicEditPart.VISUAL_ID:
-				return new TopicEditPart(view);
-
-			case TopicNameEditPart.VISUAL_ID:
-				return new TopicNameEditPart(view);
+			case TopicName2EditPart.VISUAL_ID:
+				return new TopicName2EditPart(view);
 
 			case RobotEndPointEditPart.VISUAL_ID:
 				return new RobotEndPointEditPart(view);
@@ -146,11 +134,11 @@ public class RapyutaComponentModelEditPartFactory implements EditPartFactory {
 			case EndPointSrvClientEditPart.VISUAL_ID:
 				return new EndPointSrvClientEditPart(view);
 
-			case Node2EditPart.VISUAL_ID:
-				return new Node2EditPart(view);
+			case NodeEditPart.VISUAL_ID:
+				return new NodeEditPart(view);
 
-			case NodeName2EditPart.VISUAL_ID:
-				return new NodeName2EditPart(view);
+			case NodeNameEditPart.VISUAL_ID:
+				return new NodeNameEditPart(view);
 
 			case NodeParameter2EditPart.VISUAL_ID:
 				return new NodeParameter2EditPart(view);
@@ -194,27 +182,46 @@ public class RapyutaComponentModelEditPartFactory implements EditPartFactory {
 			case EndPointSrvClient2EditPart.VISUAL_ID:
 				return new EndPointSrvClient2EditPart(view);
 
-			case Topic2EditPart.VISUAL_ID:
-				return new Topic2EditPart(view);
+			case TopicEditPart.VISUAL_ID:
+				return new TopicEditPart(view);
 
-			case TopicName2EditPart.VISUAL_ID:
-				return new TopicName2EditPart(view);
+			case TopicNameEditPart.VISUAL_ID:
+				return new TopicNameEditPart(view);
 
-			case CompositeCompositeContainerCompartmentEditPart.VISUAL_ID:
-				return new CompositeCompositeContainerCompartmentEditPart(view);
+			case Composite2EditPart.VISUAL_ID:
+				return new Composite2EditPart(view);
 
-			case NodePropertiesCompartmentEditPart.VISUAL_ID:
-				return new NodePropertiesCompartmentEditPart(view);
+			case CompositeName2EditPart.VISUAL_ID:
+				return new CompositeName2EditPart(view);
+
+			case CompositePublisher2EditPart.VISUAL_ID:
+				return new CompositePublisher2EditPart(view);
+
+			case CompositeSubscriber2EditPart.VISUAL_ID:
+				return new CompositeSubscriber2EditPart(view);
+
+			case CompositeSrvServer2EditPart.VISUAL_ID:
+				return new CompositeSrvServer2EditPart(view);
+
+			case CompositeSrvClient2EditPart.VISUAL_ID:
+				return new CompositeSrvClient2EditPart(view);
+
+			case RobotContainerCompositeContainerCompartmentEditPart.VISUAL_ID:
+				return new RobotContainerCompositeContainerCompartmentEditPart(
+						view);
+
+			case NodePropertiesCompartment2EditPart.VISUAL_ID:
+				return new NodePropertiesCompartment2EditPart(view);
 
 			case RobotEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID:
 				return new RobotEndPointEndPointPropertiesCompartmentEditPart(
 						view);
 
-			case ContainerContainerCompartmentEditPart.VISUAL_ID:
-				return new ContainerContainerCompartmentEditPart(view);
+			case CloudContainerContainerCompartmentEditPart.VISUAL_ID:
+				return new CloudContainerContainerCompartmentEditPart(view);
 
-			case NodePropertiesCompartment2EditPart.VISUAL_ID:
-				return new NodePropertiesCompartment2EditPart(view);
+			case NodePropertiesCompartmentEditPart.VISUAL_ID:
+				return new NodePropertiesCompartmentEditPart(view);
 
 			case EnvironmentEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID:
 				return new EnvironmentEndPointEndPointPropertiesCompartmentEditPart(

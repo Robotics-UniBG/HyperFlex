@@ -108,7 +108,7 @@ public class RobotEndPointCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getRobotEndPoint_3057SemanticChildren(viewObject);
+				.getRobotEndPoint_3077SemanticChildren(viewObject);
 		for (RapyutaComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -148,7 +148,7 @@ public class RobotEndPointCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getRobotEndPoint_3057SemanticChildren((View) getHost()
+				.getRobotEndPoint_3077SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

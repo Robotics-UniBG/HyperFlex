@@ -48,10 +48,10 @@ import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodePublisher2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvClient2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServer2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriber2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodePublisherEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvClientEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServerEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriberEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramUpdater;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelNodeDescriptor;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVisualIDRegistry;
@@ -130,10 +130,10 @@ public class Node2CanonicalEditPolicy extends CanonicalEditPolicy {
 	private boolean isMyDiagramElement(View view) {
 		int visualID = RapyutaComponentModelVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case NodePublisher2EditPart.VISUAL_ID:
-		case NodeSubscriber2EditPart.VISUAL_ID:
-		case NodeSrvServer2EditPart.VISUAL_ID:
-		case NodeSrvClient2EditPart.VISUAL_ID:
+		case NodePublisherEditPart.VISUAL_ID:
+		case NodeSubscriberEditPart.VISUAL_ID:
+		case NodeSrvServerEditPart.VISUAL_ID:
+		case NodeSrvClientEditPart.VISUAL_ID:
 			return true;
 		}
 		return false;

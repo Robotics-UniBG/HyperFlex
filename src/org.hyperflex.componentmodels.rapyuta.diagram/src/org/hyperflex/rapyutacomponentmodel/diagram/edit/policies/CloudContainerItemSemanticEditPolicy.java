@@ -35,33 +35,47 @@ import org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand;
 import org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand;
 import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand;
+import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.Composite2CreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerContainerCompartmentEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Composite2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerContainerCompartmentEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EnvironmentEndPointEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Node2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Topic2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.TopicEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVisualIDRegistry;
 import org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelElementTypes;
 
 /**
  * @generated
  */
-public class ContainerItemSemanticEditPolicy extends
+public class CloudContainerItemSemanticEditPolicy extends
 		RapyutaComponentModelBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated
 	 */
-	public ContainerItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Container_2004);
+	public CloudContainerItemSemanticEditPolicy() {
+		super(RapyutaComponentModelElementTypes.CloudContainer_2006);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected Command getCreateCommand(CreateElementRequest req) {
+		if (RapyutaComponentModelElementTypes.Composite_3081 == req
+				.getElementType()) {
+			return getGEFWrapper(new Composite2CreateCommand(req));
+		}
+		return super.getCreateCommand(req);
 	}
 
 	/**
@@ -93,13 +107,19 @@ public class ContainerItemSemanticEditPolicy extends
 		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
 			Node node = (Node) nit.next();
 			switch (RapyutaComponentModelVisualIDRegistry.getVisualID(node)) {
-			case ContainerContainerCompartmentEditPart.VISUAL_ID:
+			case Composite2EditPart.VISUAL_ID:
+				cmd.add(new DestroyElementCommand(new DestroyElementRequest(
+						getEditingDomain(), node.getElement(), false))); // directlyOwned: true
+				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
+				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
+				break;
+			case CloudContainerContainerCompartmentEditPart.VISUAL_ID:
 				for (Iterator<?> cit = node.getChildren().iterator(); cit
 						.hasNext();) {
 					Node cnode = (Node) cit.next();
 					switch (RapyutaComponentModelVisualIDRegistry
 							.getVisualID(cnode)) {
-					case Node2EditPart.VISUAL_ID:
+					case NodeEditPart.VISUAL_ID:
 						cmd.add(new DestroyElementCommand(
 								new DestroyElementRequest(getEditingDomain(),
 										cnode.getElement(), false))); // directlyOwned: true
@@ -113,7 +133,7 @@ public class ContainerItemSemanticEditPolicy extends
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
 						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
 						break;
-					case Topic2EditPart.VISUAL_ID:
+					case TopicEditPart.VISUAL_ID:
 						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it
 								.hasNext();) {
 							Edge incomingLink = (Edge) it.next();

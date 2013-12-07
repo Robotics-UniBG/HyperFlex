@@ -24,15 +24,15 @@
     <domainDiagramElement
         href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/System"/>
     <childNodes
-        visualID="3041"
-        editPartClassName="NodeEditPart"
-        itemSemanticEditPolicyClassName="NodeItemSemanticEditPolicy"
+        visualID="3063"
+        editPartClassName="Node2EditPart"
+        itemSemanticEditPolicyClassName="Node2ItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeViewFactory"
-        canonicalEditPolicyClassName="NodeCanonicalEditPolicy"
+        canonicalEditPolicyClassName="Node2CanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.2 //@diagram/@childNodes.3 //@diagram/@childNodes.4 //@diagram/@childNodes.5"
         compartments="//@diagram/@compartments.1"
-        graphicalNodeEditPolicyClassName="NodeGraphicalNodeEditPolicy"
-        createCommandClassName="NodeCreateCommand"
+        graphicalNodeEditPolicyClassName="Node2GraphicalNodeEditPolicy"
+        createCommandClassName="Node2CreateCommand"
         containers="//@diagram/@compartments.0">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -47,14 +47,14 @@
         <metaClass
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Node"/>
         <containmentMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/components"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/components"/>
         <childMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/components"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/components"/>
       </modelFacet>
       <labels
-          visualID="5020"
-          editPartClassName="NodeNameEditPart"
-          itemSemanticEditPolicyClassName="NodeNameItemSemanticEditPolicy"
+          visualID="5027"
+          editPartClassName="NodeName2EditPart"
+          itemSemanticEditPolicyClassName="NodeName2ItemSemanticEditPolicy"
           notationViewFactoryClassName="NodeNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -268,20 +268,20 @@
       </modelFacet>
     </childNodes>
     <childNodes
-        visualID="3047"
-        editPartClassName="Composite2EditPart"
-        itemSemanticEditPolicyClassName="Composite2ItemSemanticEditPolicy"
+        visualID="3076"
+        editPartClassName="CompositeEditPart"
+        itemSemanticEditPolicyClassName="CompositeItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeViewFactory"
-        canonicalEditPolicyClassName="Composite2CanonicalEditPolicy"
+        canonicalEditPolicyClassName="CompositeCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.7 //@diagram/@childNodes.8 //@diagram/@childNodes.9 //@diagram/@childNodes.10"
-        graphicalNodeEditPolicyClassName="Composite2GraphicalNodeEditPolicy"
-        createCommandClassName="Composite2CreateCommand"
+        graphicalNodeEditPolicyClassName="CompositeGraphicalNodeEditPolicy"
+        createCommandClassName="CompositeCreateCommand"
         containers="//@diagram/@compartments.0">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
-          xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@topLevelNodes.0/@elementType"/>
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="CompositeEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="CompositeFigure"
@@ -290,14 +290,14 @@
         <metaClass
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite"/>
         <containmentMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/components"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/components"/>
         <childMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/components"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/components"/>
       </modelFacet>
       <labels
-          visualID="5021"
-          editPartClassName="CompositeName2EditPart"
-          itemSemanticEditPolicyClassName="CompositeName2ItemSemanticEditPolicy"
+          visualID="5032"
+          editPartClassName="CompositeNameEditPart"
+          itemSemanticEditPolicyClassName="CompositeNameItemSemanticEditPolicy"
           notationViewFactoryClassName="CompositeNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -467,161 +467,13 @@
       </modelFacet>
     </childNodes>
     <childNodes
-        xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3052"
-        editPartClassName="CompositePublisher2EditPart"
-        itemSemanticEditPolicyClassName="CompositePublisher2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="CompositePublisherViewFactory"
-        canonicalEditPolicyClassName="CompositePublisher2CanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="CompositePublisher2GraphicalNodeEditPolicy"
-        createCommandClassName="CompositePublisher2CreateCommand"
-        containers="//@diagram/@topLevelNodes.0"
-        preferredSideName="WEST">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@childNodes.7/@elementType"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="Producer1Figure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class Producer1Figure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public Producer1Figure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.yellow);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
-        <attributes
-            xsi:type="gmfgen:StyleAttributes"
-            fixedBackground="true"/>
-        <attributes
-            xsi:type="gmfgen:DefaultSizeAttributes"
-            width="20"
-            height="20"/>
-      </viewmap>
-      <modelFacet>
-        <metaClass
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/CompositePublisher"/>
-        <containmentMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/publishers"/>
-        <childMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/publishers"/>
-      </modelFacet>
-    </childNodes>
-    <childNodes
-        xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3053"
-        editPartClassName="CompositeSubscriber2EditPart"
-        itemSemanticEditPolicyClassName="CompositeSubscriber2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="CompositeSubscriberViewFactory"
-        canonicalEditPolicyClassName="CompositeSubscriber2CanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="CompositeSubscriber2GraphicalNodeEditPolicy"
-        createCommandClassName="CompositeSubscriber2CreateCommand"
-        containers="//@diagram/@topLevelNodes.0"
-        preferredSideName="EAST">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@childNodes.8/@elementType"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="Consumer1Figure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class Consumer1Figure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public Consumer1Figure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.cyan);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
-        <attributes
-            xsi:type="gmfgen:StyleAttributes"
-            fixedBackground="true"/>
-        <attributes
-            xsi:type="gmfgen:DefaultSizeAttributes"
-            width="20"
-            height="20"/>
-      </viewmap>
-      <modelFacet>
-        <metaClass
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/CompositeSubscriber"/>
-        <containmentMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/subscribers"/>
-        <childMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/subscribers"/>
-      </modelFacet>
-    </childNodes>
-    <childNodes
-        xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3054"
-        editPartClassName="CompositeSrvServer2EditPart"
-        itemSemanticEditPolicyClassName="CompositeSrvServer2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="CompositeSrvServerViewFactory"
-        canonicalEditPolicyClassName="CompositeSrvServer2CanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="CompositeSrvServer2GraphicalNodeEditPolicy"
-        createCommandClassName="CompositeSrvServer2CreateCommand"
-        containers="//@diagram/@topLevelNodes.0"
-        preferredSideName="WEST">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@childNodes.9/@elementType"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="Producer2Figure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class Producer2Figure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public Producer2Figure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.green);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
-        <attributes
-            xsi:type="gmfgen:StyleAttributes"
-            fixedBackground="true"/>
-        <attributes
-            xsi:type="gmfgen:DefaultSizeAttributes"
-            width="20"
-            height="20"/>
-      </viewmap>
-      <modelFacet>
-        <metaClass
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/CompositeSrvServer"/>
-        <containmentMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/srvServers"/>
-        <childMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/srvServers"/>
-      </modelFacet>
-    </childNodes>
-    <childNodes
-        xsi:type="gmfgen:GenChildSideAffixedNode"
-        visualID="3055"
-        editPartClassName="CompositeSrvClient2EditPart"
-        itemSemanticEditPolicyClassName="CompositeSrvClient2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="CompositeSrvClientViewFactory"
-        canonicalEditPolicyClassName="CompositeSrvClient2CanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="CompositeSrvClient2GraphicalNodeEditPolicy"
-        createCommandClassName="CompositeSrvClient2CreateCommand"
-        containers="//@diagram/@topLevelNodes.0"
-        preferredSideName="EAST">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@childNodes.10/@elementType"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="Consumer2Figure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class Consumer2Figure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public Consumer2Figure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.red);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
-        <attributes
-            xsi:type="gmfgen:StyleAttributes"
-            fixedBackground="true"/>
-        <attributes
-            xsi:type="gmfgen:DefaultSizeAttributes"
-            width="20"
-            height="20"/>
-      </viewmap>
-      <modelFacet>
-        <metaClass
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/CompositeSrvClient"/>
-        <containmentMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/srvClients"/>
-        <childMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/srvClients"/>
-      </modelFacet>
-    </childNodes>
-    <childNodes
-        visualID="3056"
-        editPartClassName="TopicEditPart"
-        itemSemanticEditPolicyClassName="TopicItemSemanticEditPolicy"
+        visualID="3075"
+        editPartClassName="Topic2EditPart"
+        itemSemanticEditPolicyClassName="Topic2ItemSemanticEditPolicy"
         notationViewFactoryClassName="TopicViewFactory"
-        canonicalEditPolicyClassName="TopicCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="TopicGraphicalNodeEditPolicy"
-        createCommandClassName="TopicCreateCommand"
+        canonicalEditPolicyClassName="Topic2CanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="Topic2GraphicalNodeEditPolicy"
+        createCommandClassName="Topic2CreateCommand"
         containers="//@diagram/@compartments.0">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -640,14 +492,14 @@
         <metaClass
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Topic"/>
         <containmentMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/topics"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/topics"/>
         <childMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/topics"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/topics"/>
       </modelFacet>
       <labels
-          visualID="5022"
-          editPartClassName="TopicNameEditPart"
-          itemSemanticEditPolicyClassName="TopicNameItemSemanticEditPolicy"
+          visualID="5030"
+          editPartClassName="TopicName2EditPart"
+          itemSemanticEditPolicyClassName="TopicName2ItemSemanticEditPolicy"
           notationViewFactoryClassName="TopicNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -668,12 +520,12 @@
       </labels>
     </childNodes>
     <childNodes
-        visualID="3057"
+        visualID="3077"
         editPartClassName="RobotEndPointEditPart"
         itemSemanticEditPolicyClassName="RobotEndPointItemSemanticEditPolicy"
         notationViewFactoryClassName="RobotEndPointViewFactory"
         canonicalEditPolicyClassName="RobotEndPointCanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.18 //@diagram/@childNodes.19 //@diagram/@childNodes.20 //@diagram/@childNodes.21"
+        childNodes="//@diagram/@childNodes.14 //@diagram/@childNodes.15 //@diagram/@childNodes.16 //@diagram/@childNodes.17"
         compartments="//@diagram/@compartments.2"
         graphicalNodeEditPolicyClassName="RobotEndPointGraphicalNodeEditPolicy"
         createCommandClassName="RobotEndPointCreateCommand"
@@ -691,12 +543,12 @@
         <metaClass
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/RobotEndPoint"/>
         <containmentMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/endPoint"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/RobotContainer/endPoint"/>
         <childMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/endPoint"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/RobotContainer/endPoint"/>
       </modelFacet>
       <labels
-          visualID="5024"
+          visualID="5033"
           editPartClassName="RobotEndPointNameEditPart"
           itemSemanticEditPolicyClassName="RobotEndPointNameItemSemanticEditPolicy"
           notationViewFactoryClassName="RobotEndPointNameViewFactory">
@@ -714,7 +566,7 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/AbstractComponent/name"/>
+              href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/EndPoint/name"/>
         </modelFacet>
       </labels>
     </childNodes>
@@ -772,7 +624,7 @@
         canonicalEditPolicyClassName="EndPointPublisherCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="EndPointPublisherGraphicalNodeEditPolicy"
         createCommandClassName="EndPointPublisherCreateCommand"
-        containers="//@diagram/@childNodes.16"
+        containers="//@diagram/@childNodes.12"
         preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -809,7 +661,7 @@
         canonicalEditPolicyClassName="EndPointSubscriberCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="EndPointSubscriberGraphicalNodeEditPolicy"
         createCommandClassName="EndPointSubscriberCreateCommand"
-        containers="//@diagram/@childNodes.16"
+        containers="//@diagram/@childNodes.12"
         preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -846,7 +698,7 @@
         canonicalEditPolicyClassName="EndPointSrvServerCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="EndPointSrvServerGraphicalNodeEditPolicy"
         createCommandClassName="EndPointSrvServerCreateCommand"
-        containers="//@diagram/@childNodes.16"
+        containers="//@diagram/@childNodes.12"
         preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -883,7 +735,7 @@
         canonicalEditPolicyClassName="EndPointSrvClientCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="EndPointSrvClientGraphicalNodeEditPolicy"
         createCommandClassName="EndPointSrvClientCreateCommand"
-        containers="//@diagram/@childNodes.16"
+        containers="//@diagram/@childNodes.12"
         preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -912,15 +764,15 @@
       </modelFacet>
     </childNodes>
     <childNodes
-        visualID="3063"
-        editPartClassName="Node2EditPart"
-        itemSemanticEditPolicyClassName="Node2ItemSemanticEditPolicy"
+        visualID="3078"
+        editPartClassName="NodeEditPart"
+        itemSemanticEditPolicyClassName="NodeItemSemanticEditPolicy"
         notationViewFactoryClassName="NodeViewFactory"
-        canonicalEditPolicyClassName="Node2CanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.24 //@diagram/@childNodes.25 //@diagram/@childNodes.26 //@diagram/@childNodes.27"
+        canonicalEditPolicyClassName="NodeCanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.20 //@diagram/@childNodes.21 //@diagram/@childNodes.22 //@diagram/@childNodes.23"
         compartments="//@diagram/@compartments.4"
-        graphicalNodeEditPolicyClassName="Node2GraphicalNodeEditPolicy"
-        createCommandClassName="Node2CreateCommand"
+        graphicalNodeEditPolicyClassName="NodeGraphicalNodeEditPolicy"
+        createCommandClassName="NodeCreateCommand"
         containers="//@diagram/@compartments.3">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -940,9 +792,9 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/components"/>
       </modelFacet>
       <labels
-          visualID="5027"
-          editPartClassName="NodeName2EditPart"
-          itemSemanticEditPolicyClassName="NodeName2ItemSemanticEditPolicy"
+          visualID="5035"
+          editPartClassName="NodeNameEditPart"
+          itemSemanticEditPolicyClassName="NodeNameItemSemanticEditPolicy"
           notationViewFactoryClassName="NodeNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -1016,7 +868,7 @@
         canonicalEditPolicyClassName="NodePublisher2CanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="NodePublisher2GraphicalNodeEditPolicy"
         createCommandClassName="NodePublisher2CreateCommand"
-        containers="//@diagram/@childNodes.22"
+        containers="//@diagram/@childNodes.18"
         preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -1053,7 +905,7 @@
         canonicalEditPolicyClassName="NodeSubscriber2CanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="NodeSubscriber2GraphicalNodeEditPolicy"
         createCommandClassName="NodeSubscriber2CreateCommand"
-        containers="//@diagram/@childNodes.22"
+        containers="//@diagram/@childNodes.18"
         preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -1090,7 +942,7 @@
         canonicalEditPolicyClassName="NodeSrvServer2CanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="NodeSrvServer2GraphicalNodeEditPolicy"
         createCommandClassName="NodeSrvServer2CreateCommand"
-        containers="//@diagram/@childNodes.22"
+        containers="//@diagram/@childNodes.18"
         preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -1127,7 +979,7 @@
         canonicalEditPolicyClassName="NodeSrvClient2CanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="NodeSrvClient2GraphicalNodeEditPolicy"
         createCommandClassName="NodeSrvClient2CreateCommand"
-        containers="//@diagram/@childNodes.22"
+        containers="//@diagram/@childNodes.18"
         preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -1156,12 +1008,12 @@
       </modelFacet>
     </childNodes>
     <childNodes
-        visualID="3069"
+        visualID="3079"
         editPartClassName="EnvironmentEndPointEditPart"
         itemSemanticEditPolicyClassName="EnvironmentEndPointItemSemanticEditPolicy"
         notationViewFactoryClassName="EnvironmentEndPointViewFactory"
         canonicalEditPolicyClassName="EnvironmentEndPointCanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.30 //@diagram/@childNodes.31 //@diagram/@childNodes.32 //@diagram/@childNodes.33"
+        childNodes="//@diagram/@childNodes.26 //@diagram/@childNodes.27 //@diagram/@childNodes.28 //@diagram/@childNodes.29"
         compartments="//@diagram/@compartments.5"
         graphicalNodeEditPolicyClassName="EnvironmentEndPointGraphicalNodeEditPolicy"
         createCommandClassName="EnvironmentEndPointCreateCommand"
@@ -1179,12 +1031,12 @@
         <metaClass
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/EnvironmentEndPoint"/>
         <containmentMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/endPoint"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/CloudContainer/endPoint"/>
         <childMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/endPoint"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/CloudContainer/endPoint"/>
       </modelFacet>
       <labels
-          visualID="5029"
+          visualID="5036"
           editPartClassName="EnvironmentEndPointNameEditPart"
           itemSemanticEditPolicyClassName="EnvironmentEndPointNameItemSemanticEditPolicy"
           notationViewFactoryClassName="EnvironmentEndPointNameViewFactory">
@@ -1202,7 +1054,7 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/AbstractComponent/name"/>
+              href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/EndPoint/name"/>
         </modelFacet>
       </labels>
     </childNodes>
@@ -1219,7 +1071,7 @@
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@childNodes.17/@elementType"/>
+          metamodelType="//@diagram/@childNodes.13/@elementType"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="PropertiesFigure"
@@ -1260,13 +1112,13 @@
         canonicalEditPolicyClassName="EndPointPublisher2CanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="EndPointPublisher2GraphicalNodeEditPolicy"
         createCommandClassName="EndPointPublisher2CreateCommand"
-        containers="//@diagram/@childNodes.28"
+        containers="//@diagram/@childNodes.24"
         preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@childNodes.18/@elementType"/>
+          metamodelType="//@diagram/@childNodes.14/@elementType"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="Producer1Figure"
@@ -1297,13 +1149,13 @@
         canonicalEditPolicyClassName="EndPointSubscriber2CanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="EndPointSubscriber2GraphicalNodeEditPolicy"
         createCommandClassName="EndPointSubscriber2CreateCommand"
-        containers="//@diagram/@childNodes.28"
+        containers="//@diagram/@childNodes.24"
         preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@childNodes.19/@elementType"/>
+          metamodelType="//@diagram/@childNodes.15/@elementType"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="Consumer1Figure"
@@ -1334,13 +1186,13 @@
         canonicalEditPolicyClassName="EndPointSrvServer2CanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="EndPointSrvServer2GraphicalNodeEditPolicy"
         createCommandClassName="EndPointSrvServer2CreateCommand"
-        containers="//@diagram/@childNodes.28"
+        containers="//@diagram/@childNodes.24"
         preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@childNodes.20/@elementType"/>
+          metamodelType="//@diagram/@childNodes.16/@elementType"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="Producer2Figure"
@@ -1371,13 +1223,13 @@
         canonicalEditPolicyClassName="EndPointSrvClient2CanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="EndPointSrvClient2GraphicalNodeEditPolicy"
         createCommandClassName="EndPointSrvClient2CreateCommand"
-        containers="//@diagram/@childNodes.28"
+        containers="//@diagram/@childNodes.24"
         preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@childNodes.21/@elementType"/>
+          metamodelType="//@diagram/@childNodes.17/@elementType"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="Consumer2Figure"
@@ -1400,19 +1252,19 @@
       </modelFacet>
     </childNodes>
     <childNodes
-        visualID="3075"
-        editPartClassName="Topic2EditPart"
-        itemSemanticEditPolicyClassName="Topic2ItemSemanticEditPolicy"
+        visualID="3080"
+        editPartClassName="TopicEditPart"
+        itemSemanticEditPolicyClassName="TopicItemSemanticEditPolicy"
         notationViewFactoryClassName="TopicViewFactory"
-        canonicalEditPolicyClassName="Topic2CanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="Topic2GraphicalNodeEditPolicy"
-        createCommandClassName="Topic2CreateCommand"
+        canonicalEditPolicyClassName="TopicCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="TopicGraphicalNodeEditPolicy"
+        createCommandClassName="TopicCreateCommand"
         containers="//@diagram/@compartments.3">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@childNodes.15/@elementType"/>
+          metamodelType="//@diagram/@childNodes.11/@elementType"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="Channel1Figure"
@@ -1430,9 +1282,9 @@
             href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/topics"/>
       </modelFacet>
       <labels
-          visualID="5030"
-          editPartClassName="TopicName2EditPart"
-          itemSemanticEditPolicyClassName="TopicName2ItemSemanticEditPolicy"
+          visualID="5037"
+          editPartClassName="TopicNameEditPart"
+          itemSemanticEditPolicyClassName="TopicNameItemSemanticEditPolicy"
           notationViewFactoryClassName="TopicNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -1452,38 +1304,236 @@
         </modelFacet>
       </labels>
     </childNodes>
-    <topLevelNodes
-        visualID="2003"
-        editPartClassName="CompositeEditPart"
-        itemSemanticEditPolicyClassName="CompositeItemSemanticEditPolicy"
+    <childNodes
+        visualID="3081"
+        editPartClassName="Composite2EditPart"
+        itemSemanticEditPolicyClassName="Composite2ItemSemanticEditPolicy"
         notationViewFactoryClassName="CompositeViewFactory"
-        canonicalEditPolicyClassName="CompositeCanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.11 //@diagram/@childNodes.12 //@diagram/@childNodes.13 //@diagram/@childNodes.14"
+        canonicalEditPolicyClassName="Composite2CanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.32 //@diagram/@childNodes.33 //@diagram/@childNodes.34 //@diagram/@childNodes.35"
+        graphicalNodeEditPolicyClassName="Composite2GraphicalNodeEditPolicy"
+        createCommandClassName="Composite2CreateCommand"
+        containers="//@diagram/@topLevelNodes.1">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:SpecializationType"
+          metamodelType="//@diagram/@childNodes.6/@elementType"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="CompositeFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class CompositeFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigureCompositeProperties; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePackageNameLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public CompositeFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;org.eclipse.draw2d.RectangleFigure compositeInfo0 = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;&#x9;compositeInfo0.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightBlue);&#xA;&#xA;compositeInfo0.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintCompositeInfo0 = new org.eclipse.draw2d.GridData();&#xA;constraintCompositeInfo0.verticalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintCompositeInfo0.horizontalAlignment = org.eclipse.draw2d.GridData.FILL;&#xA;constraintCompositeInfo0.horizontalIndent = 0;&#xA;constraintCompositeInfo0.horizontalSpan = 1;&#xA;constraintCompositeInfo0.verticalSpan = 1;&#xA;constraintCompositeInfo0.grabExcessHorizontalSpace = true;&#xA;constraintCompositeInfo0.grabExcessVerticalSpace = false;&#xA;this.add(compositeInfo0, constraintCompositeInfo0);&#xA;&#xA;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutCompositeInfo0 = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutCompositeInfo0.numColumns = 1;&#xA;&#x9;layoutCompositeInfo0.makeColumnsEqualWidth = true;&#xA;&#x9;compositeInfo0.setLayoutManager(layoutCompositeInfo0);&#xA;&#xA;&#xA;&#xA;fFigurePackageNameLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigurePackageNameLabel.setText(&quot;&lt;…>&quot;);&#xA;&#xA;fFigurePackageNameLabel.setFont(FFIGUREPACKAGENAMELABEL_FONT);&#xA;&#xA;&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintFFigurePackageNameLabel = new org.eclipse.draw2d.GridData();&#xA;constraintFFigurePackageNameLabel.verticalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintFFigurePackageNameLabel.horizontalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintFFigurePackageNameLabel.horizontalIndent = 0;&#xA;constraintFFigurePackageNameLabel.horizontalSpan = 1;&#xA;constraintFFigurePackageNameLabel.verticalSpan = 1;&#xA;constraintFFigurePackageNameLabel.grabExcessHorizontalSpace = false;&#xA;constraintFFigurePackageNameLabel.grabExcessVerticalSpace = false;&#xA;compositeInfo0.add(fFigurePackageNameLabel, constraintFFigurePackageNameLabel);&#xA;&#xA;&#xA;&#xA;&#xA;org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel compositeLabel1 = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;compositeLabel1.setText(&quot;Composite&quot;);&#xA;&#xA;compositeLabel1.setFont(COMPOSITELABEL1_FONT);&#xA;&#xA;&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintCompositeLabel1 = new org.eclipse.draw2d.GridData();&#xA;constraintCompositeLabel1.verticalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintCompositeLabel1.horizontalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintCompositeLabel1.horizontalIndent = 0;&#xA;constraintCompositeLabel1.horizontalSpan = 1;&#xA;constraintCompositeLabel1.verticalSpan = 1;&#xA;constraintCompositeLabel1.grabExcessHorizontalSpace = false;&#xA;constraintCompositeLabel1.grabExcessVerticalSpace = false;&#xA;compositeInfo0.add(compositeLabel1, constraintCompositeLabel1);&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;fFigureCompositeProperties = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintFFigureCompositeProperties = new org.eclipse.draw2d.GridData();&#xA;constraintFFigureCompositeProperties.verticalAlignment = org.eclipse.draw2d.GridData.FILL;&#xA;constraintFFigureCompositeProperties.horizontalAlignment = org.eclipse.draw2d.GridData.FILL;&#xA;constraintFFigureCompositeProperties.horizontalIndent = 0;&#xA;constraintFFigureCompositeProperties.horizontalSpan = 1;&#xA;constraintFFigureCompositeProperties.verticalSpan = 1;&#xA;constraintFFigureCompositeProperties.grabExcessHorizontalSpace = true;&#xA;constraintFFigureCompositeProperties.grabExcessVerticalSpace = true;&#xA;this.add(fFigureCompositeProperties, constraintFFigureCompositeProperties);&#xA;&#xA;fFigureCompositeProperties.setLayoutManager(new org.eclipse.draw2d.StackLayout());&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigureCompositeProperties() {&#xA;&#x9;&#x9;return fFigureCompositeProperties;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePackageNameLabel() {&#xA;&#x9;&#x9;return fFigurePackageNameLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREPACKAGENAMELABEL_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font COMPOSITELABEL1_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite"/>
+        <containmentMetaFeature
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/components"/>
+        <childMetaFeature
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/components"/>
+      </modelFacet>
+      <labels
+          visualID="5038"
+          editPartClassName="CompositeName2EditPart"
+          itemSemanticEditPolicyClassName="CompositeName2ItemSemanticEditPolicy"
+          notationViewFactoryClassName="CompositeNameViewFactory">
+        <diagramRunTimeClass
+            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigurePackageNameLabel"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
+          <attributes
+              xsi:type="gmfgen:StyleAttributes"
+              fixedFont="true"/>
+        </viewmap>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0"
+            viewPattern="">
+          <metaFeatures
+              href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/AbstractComponent/name"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes
+        xsi:type="gmfgen:GenChildSideAffixedNode"
+        visualID="3052"
+        editPartClassName="CompositePublisher2EditPart"
+        itemSemanticEditPolicyClassName="CompositePublisher2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositePublisherViewFactory"
+        canonicalEditPolicyClassName="CompositePublisher2CanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="CompositePublisher2GraphicalNodeEditPolicy"
+        createCommandClassName="CompositePublisher2CreateCommand"
+        containers="//@diagram/@childNodes.31"
+        preferredSideName="WEST">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:SpecializationType"
+          metamodelType="//@diagram/@childNodes.7/@elementType"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="Producer1Figure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class Producer1Figure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public Producer1Figure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.yellow);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedBackground="true"/>
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="20"
+            height="20"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/CompositePublisher"/>
+        <containmentMetaFeature
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/publishers"/>
+        <childMetaFeature
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/publishers"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes
+        xsi:type="gmfgen:GenChildSideAffixedNode"
+        visualID="3053"
+        editPartClassName="CompositeSubscriber2EditPart"
+        itemSemanticEditPolicyClassName="CompositeSubscriber2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositeSubscriberViewFactory"
+        canonicalEditPolicyClassName="CompositeSubscriber2CanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="CompositeSubscriber2GraphicalNodeEditPolicy"
+        createCommandClassName="CompositeSubscriber2CreateCommand"
+        containers="//@diagram/@childNodes.31"
+        preferredSideName="EAST">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:SpecializationType"
+          metamodelType="//@diagram/@childNodes.8/@elementType"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="Consumer1Figure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class Consumer1Figure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public Consumer1Figure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.cyan);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedBackground="true"/>
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="20"
+            height="20"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/CompositeSubscriber"/>
+        <containmentMetaFeature
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/subscribers"/>
+        <childMetaFeature
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/subscribers"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes
+        xsi:type="gmfgen:GenChildSideAffixedNode"
+        visualID="3054"
+        editPartClassName="CompositeSrvServer2EditPart"
+        itemSemanticEditPolicyClassName="CompositeSrvServer2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositeSrvServerViewFactory"
+        canonicalEditPolicyClassName="CompositeSrvServer2CanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="CompositeSrvServer2GraphicalNodeEditPolicy"
+        createCommandClassName="CompositeSrvServer2CreateCommand"
+        containers="//@diagram/@childNodes.31"
+        preferredSideName="WEST">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:SpecializationType"
+          metamodelType="//@diagram/@childNodes.9/@elementType"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="Producer2Figure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class Producer2Figure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public Producer2Figure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.green);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedBackground="true"/>
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="20"
+            height="20"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/CompositeSrvServer"/>
+        <containmentMetaFeature
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/srvServers"/>
+        <childMetaFeature
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/srvServers"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes
+        xsi:type="gmfgen:GenChildSideAffixedNode"
+        visualID="3055"
+        editPartClassName="CompositeSrvClient2EditPart"
+        itemSemanticEditPolicyClassName="CompositeSrvClient2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="CompositeSrvClientViewFactory"
+        canonicalEditPolicyClassName="CompositeSrvClient2CanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="CompositeSrvClient2GraphicalNodeEditPolicy"
+        createCommandClassName="CompositeSrvClient2CreateCommand"
+        containers="//@diagram/@childNodes.31"
+        preferredSideName="EAST">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:SpecializationType"
+          metamodelType="//@diagram/@childNodes.10/@elementType"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="Consumer2Figure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class Consumer2Figure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public Consumer2Figure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.red);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedBackground="true"/>
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="20"
+            height="20"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/CompositeSrvClient"/>
+        <containmentMetaFeature
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/srvClients"/>
+        <childMetaFeature
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite/srvClients"/>
+      </modelFacet>
+    </childNodes>
+    <topLevelNodes
+        visualID="2005"
+        editPartClassName="RobotContainerEditPart"
+        itemSemanticEditPolicyClassName="RobotContainerItemSemanticEditPolicy"
+        notationViewFactoryClassName="RobotContainerViewFactory"
+        canonicalEditPolicyClassName="RobotContainerCanonicalEditPolicy"
         compartments="//@diagram/@compartments.0"
-        graphicalNodeEditPolicyClassName="CompositeGraphicalNodeEditPolicy"
-        createCommandClassName="CompositeCreateCommand">
+        graphicalNodeEditPolicyClassName="RobotContainerGraphicalNodeEditPolicy"
+        createCommandClassName="RobotContainerCreateCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="CompositeEditHelper"/>
+          editHelperClassName="RobotContainerEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="CompositeContainerFigure"
           classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class CompositeContainerFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigureCompositeContainerComponentsArea; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePackageContainerNameLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public CompositeContainerFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigurePackageContainerNameLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigurePackageContainerNameLabel.setText(&quot;&lt;…>&quot;);&#xA;&#xA;fFigurePackageContainerNameLabel.setFont(FFIGUREPACKAGECONTAINERNAMELABEL_FONT);&#xA;&#xA;&#xA;fFigurePackageContainerNameLabel.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigurePackageContainerNameLabel);&#xA;&#xA;&#xA;&#xA;fFigureCompositeContainerComponentsArea = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fFigureCompositeContainerComponentsArea.setLineWidth(0);&#xA;&#xA;this.add(fFigureCompositeContainerComponentsArea);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigureCompositeContainerComponentsArea() {&#xA;&#x9;&#x9;return fFigureCompositeContainerComponentsArea;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePackageContainerNameLabel() {&#xA;&#x9;&#x9;return fFigurePackageContainerNameLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREPACKAGECONTAINERNAMELABEL_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;"/>
       <modelFacet>
         <metaClass
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Composite"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/RobotContainer"/>
         <containmentMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/System/composites"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/System/robotContainers"/>
         <childMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/System/composites"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/System/robotContainers"/>
       </modelFacet>
       <labels
-          visualID="5025"
-          editPartClassName="CompositeNameEditPart"
-          itemSemanticEditPolicyClassName="CompositeNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="CompositeNameViewFactory">
+          visualID="5034"
+          editPartClassName="RobotContainerNameEditPart"
+          itemSemanticEditPolicyClassName="RobotContainerNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="RobotContainerNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -1499,41 +1549,42 @@
             parser="//@labelParsers/@implementations.0"
             viewPattern="">
           <metaFeatures
-              href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/AbstractComponent/name"/>
+              href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container/name"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
     <topLevelNodes
-        visualID="2004"
-        editPartClassName="ContainerEditPart"
-        itemSemanticEditPolicyClassName="ContainerItemSemanticEditPolicy"
-        notationViewFactoryClassName="ContainerViewFactory"
-        canonicalEditPolicyClassName="ContainerCanonicalEditPolicy"
+        visualID="2006"
+        editPartClassName="CloudContainerEditPart"
+        itemSemanticEditPolicyClassName="CloudContainerItemSemanticEditPolicy"
+        notationViewFactoryClassName="CloudContainerViewFactory"
+        canonicalEditPolicyClassName="CloudContainerCanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.31"
         compartments="//@diagram/@compartments.3"
-        graphicalNodeEditPolicyClassName="ContainerGraphicalNodeEditPolicy"
-        createCommandClassName="ContainerCreateCommand">
+        graphicalNodeEditPolicyClassName="CloudContainerGraphicalNodeEditPolicy"
+        createCommandClassName="CloudContainerCreateCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="ContainerEditHelper"/>
+          editHelperClassName="CloudContainerEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="ContainerFigure"
           classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ContainerFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigureContainerComponentsArea; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureContainerNameLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ContainerFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureContainerNameLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureContainerNameLabel.setText(&quot;&lt;…>&quot;);&#xA;&#x9;fFigureContainerNameLabel.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#xA;fFigureContainerNameLabel.setFont(FFIGURECONTAINERNAMELABEL_FONT);&#xA;&#xA;&#xA;fFigureContainerNameLabel.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigureContainerNameLabel);&#xA;&#xA;&#xA;&#xA;fFigureContainerComponentsArea = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fFigureContainerComponentsArea.setLineWidth(0);&#xA;&#x9;fFigureContainerComponentsArea.setBackgroundColor(FFIGURECONTAINERCOMPONENTSAREA_BACK&#xA;);&#xA;&#xA;this.add(fFigureContainerComponentsArea);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigureContainerComponentsArea() {&#xA;&#x9;&#x9;return fFigureContainerComponentsArea;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureContainerNameLabel() {&#xA;&#x9;&#x9;return fFigureContainerNameLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGURECONTAINERNAMELABEL_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 15, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color FFIGURECONTAINERCOMPONENTSAREA_BACK = new org.eclipse.swt.graphics.Color(null, 200, 255, 255);&#xA;&#xA;"/>
       <modelFacet>
         <metaClass
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/Container"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/CloudContainer"/>
         <containmentMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/System/containers"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/System/cloudContainers"/>
         <childMetaFeature
-            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/System/containers"/>
+            href="../models/rapyutaComponentModel.genmodel#//rapyutacomponentmodel/System/cloudContainers"/>
       </modelFacet>
       <labels
-          visualID="5031"
-          editPartClassName="ContainerNameEditPart"
-          itemSemanticEditPolicyClassName="ContainerNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="ContainerNameViewFactory">
+          visualID="5039"
+          editPartClassName="CloudContainerNameEditPart"
+          itemSemanticEditPolicyClassName="CloudContainerNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="CloudContainerNameViewFactory">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -1883,12 +1934,12 @@
           targetEnd="//@expressionProviders/@providers.0/@expressions.11"/>
     </links>
     <compartments
-        visualID="7012"
-        editPartClassName="CompositeCompositeContainerCompartmentEditPart"
-        itemSemanticEditPolicyClassName="CompositeCompositeContainerCompartmentItemSemanticEditPolicy"
-        notationViewFactoryClassName="CompositeCompositeContainerCompartmentViewFactory"
-        canonicalEditPolicyClassName="CompositeCompositeContainerCompartmentCanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.6 //@diagram/@childNodes.15 //@diagram/@childNodes.16"
+        visualID="7018"
+        editPartClassName="RobotContainerCompositeContainerCompartmentEditPart"
+        itemSemanticEditPolicyClassName="RobotContainerCompositeContainerCompartmentItemSemanticEditPolicy"
+        notationViewFactoryClassName="RobotContainerCompositeContainerCompartmentViewFactory"
+        canonicalEditPolicyClassName="RobotContainerCompositeContainerCompartmentCanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.6 //@diagram/@childNodes.11 //@diagram/@childNodes.12"
         title="CompositeContainerCompartment"
         canCollapse="false"
         needsTitle="false"
@@ -1902,11 +1953,11 @@
           figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
     <compartments
-        visualID="7013"
-        editPartClassName="NodePropertiesCompartmentEditPart"
-        itemSemanticEditPolicyClassName="NodePropertiesCompartmentItemSemanticEditPolicy"
+        visualID="7016"
+        editPartClassName="NodePropertiesCompartment2EditPart"
+        itemSemanticEditPolicyClassName="NodePropertiesCompartment2ItemSemanticEditPolicy"
         notationViewFactoryClassName="NodePropertiesCompartmentViewFactory"
-        canonicalEditPolicyClassName="NodePropertiesCompartmentCanonicalEditPolicy"
+        canonicalEditPolicyClassName="NodePropertiesCompartment2CanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.1"
         title="Properties Compartment"
         node="//@diagram/@childNodes.0">
@@ -1918,14 +1969,14 @@
           figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
     <compartments
-        visualID="7014"
+        visualID="7019"
         editPartClassName="RobotEndPointEndPointPropertiesCompartmentEditPart"
         itemSemanticEditPolicyClassName="RobotEndPointEndPointPropertiesCompartmentItemSemanticEditPolicy"
         notationViewFactoryClassName="RobotEndPointEndPointPropertiesCompartmentViewFactory"
         canonicalEditPolicyClassName="RobotEndPointEndPointPropertiesCompartmentCanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.17"
+        childNodes="//@diagram/@childNodes.13"
         title="EndPoint Properties Compartment"
-        node="//@diagram/@childNodes.16">
+        node="//@diagram/@childNodes.12">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap
@@ -1934,12 +1985,12 @@
           figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
     <compartments
-        visualID="7015"
-        editPartClassName="ContainerContainerCompartmentEditPart"
-        itemSemanticEditPolicyClassName="ContainerContainerCompartmentItemSemanticEditPolicy"
-        notationViewFactoryClassName="ContainerContainerCompartmentViewFactory"
-        canonicalEditPolicyClassName="ContainerContainerCompartmentCanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.22 //@diagram/@childNodes.28 //@diagram/@childNodes.34"
+        visualID="7020"
+        editPartClassName="CloudContainerContainerCompartmentEditPart"
+        itemSemanticEditPolicyClassName="CloudContainerContainerCompartmentItemSemanticEditPolicy"
+        notationViewFactoryClassName="CloudContainerContainerCompartmentViewFactory"
+        canonicalEditPolicyClassName="CloudContainerContainerCompartmentCanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.18 //@diagram/@childNodes.24 //@diagram/@childNodes.30"
         title="ContainerCompartment"
         canCollapse="false"
         needsTitle="false"
@@ -1957,14 +2008,14 @@
       </viewmap>
     </compartments>
     <compartments
-        visualID="7016"
-        editPartClassName="NodePropertiesCompartment2EditPart"
-        itemSemanticEditPolicyClassName="NodePropertiesCompartment2ItemSemanticEditPolicy"
+        visualID="7021"
+        editPartClassName="NodePropertiesCompartmentEditPart"
+        itemSemanticEditPolicyClassName="NodePropertiesCompartmentItemSemanticEditPolicy"
         notationViewFactoryClassName="NodePropertiesCompartmentViewFactory"
-        canonicalEditPolicyClassName="NodePropertiesCompartment2CanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.23"
+        canonicalEditPolicyClassName="NodePropertiesCompartmentCanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.19"
         title="Properties Compartment"
-        node="//@diagram/@childNodes.22">
+        node="//@diagram/@childNodes.18">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap
@@ -1973,14 +2024,14 @@
           figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
     </compartments>
     <compartments
-        visualID="7017"
+        visualID="7022"
         editPartClassName="EnvironmentEndPointEndPointPropertiesCompartmentEditPart"
         itemSemanticEditPolicyClassName="EnvironmentEndPointEndPointPropertiesCompartmentItemSemanticEditPolicy"
         notationViewFactoryClassName="EnvironmentEndPointEndPointPropertiesCompartmentViewFactory"
         canonicalEditPolicyClassName="EnvironmentEndPointEndPointPropertiesCompartmentCanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.29"
+        childNodes="//@diagram/@childNodes.25"
         title="EndPoint Properties Compartment"
-        node="//@diagram/@childNodes.28">
+        node="//@diagram/@childNodes.24">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap
@@ -1994,69 +2045,70 @@
           collapse="true">
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="Node"
-            description="Create new Node"
-            smallIconPath="icons/Node.gif"
-            genNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.22"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Publisher"
-            description="Create new Publisher"
-            smallIconPath="icons/Publisher.gif"
-            genNodes="//@diagram/@childNodes.2 //@diagram/@childNodes.7 //@diagram/@childNodes.11 //@diagram/@childNodes.18 //@diagram/@childNodes.24 //@diagram/@childNodes.30"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Subscriber"
-            description="Create new Subscriber"
-            smallIconPath="icons/Subscriber.gif"
-            genNodes="//@diagram/@childNodes.3 //@diagram/@childNodes.8 //@diagram/@childNodes.12 //@diagram/@childNodes.19 //@diagram/@childNodes.25 //@diagram/@childNodes.31"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Parameter"
-            description="Create new Parameter"
-            smallIconPath="icons/Parameter.gif"
-            genNodes="//@diagram/@childNodes.1 //@diagram/@childNodes.17 //@diagram/@childNodes.23 //@diagram/@childNodes.29"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Composite"
-            description="Create new Composite"
+            title="Robot Container"
+            description="Create new Robot Container"
             smallIconPath="icons/Composite.gif"
-            genNodes="//@diagram/@topLevelNodes.0 //@diagram/@childNodes.6"/>
+            genNodes="//@diagram/@topLevelNodes.0"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="Container"
-            description="Create new Container"
+            title="Cloud Container"
+            description="Create new Cloud Container"
             smallIconPath="icons/Container.gif"
             genNodes="//@diagram/@topLevelNodes.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="Import Composite"
-            description="Import existing composite"
-            smallIconPath="icons/Composite.gif"/>
+            title="Node"
+            description="Create new Node"
+            smallIconPath="icons/Node.gif"
+            genNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.18"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="Topic"
-            description="Create new Topic"
-            smallIconPath="icons/Topic.gif"
-            genNodes="//@diagram/@childNodes.15 //@diagram/@childNodes.34"/>
+            title="Import Composite"
+            description="Import existing composite"
+            smallIconPath="icons/Composite.gif"
+            genNodes="//@diagram/@childNodes.6 //@diagram/@childNodes.31"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="End Point"
             description="Create new End Point"
             smallIconPath="icons/EndPoint.gif"
-            genNodes="//@diagram/@childNodes.16 //@diagram/@childNodes.28"/>
+            genNodes="//@diagram/@childNodes.12 //@diagram/@childNodes.24"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Publisher"
+            description="Create new Publisher"
+            smallIconPath="icons/Publisher.gif"
+            genNodes="//@diagram/@childNodes.2 //@diagram/@childNodes.7 //@diagram/@childNodes.14 //@diagram/@childNodes.20 //@diagram/@childNodes.26 //@diagram/@childNodes.32"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Subscriber"
+            description="Create new Subscriber"
+            smallIconPath="icons/Subscriber.gif"
+            genNodes="//@diagram/@childNodes.3 //@diagram/@childNodes.8 //@diagram/@childNodes.15 //@diagram/@childNodes.21 //@diagram/@childNodes.27 //@diagram/@childNodes.33"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Service Server"
             description="Create new Service Server"
             smallIconPath="icons/ServiceServer.gif"
-            genNodes="//@diagram/@childNodes.4 //@diagram/@childNodes.13 //@diagram/@childNodes.20 //@diagram/@childNodes.26 //@diagram/@childNodes.32"/>
+            genNodes="//@diagram/@childNodes.4 //@diagram/@childNodes.9 //@diagram/@childNodes.16 //@diagram/@childNodes.22 //@diagram/@childNodes.28 //@diagram/@childNodes.34"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Service Client"
             description="Create new Service Client"
             smallIconPath="icons/ServiceClient.gif"
-            genNodes="//@diagram/@childNodes.5 //@diagram/@childNodes.9 //@diagram/@childNodes.10 //@diagram/@childNodes.14 //@diagram/@childNodes.21 //@diagram/@childNodes.27 //@diagram/@childNodes.33"/>
+            genNodes="//@diagram/@childNodes.5 //@diagram/@childNodes.10 //@diagram/@childNodes.17 //@diagram/@childNodes.23 //@diagram/@childNodes.29 //@diagram/@childNodes.35"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Parameter"
+            description="Create new Parameter"
+            smallIconPath="icons/Parameter.gif"
+            genNodes="//@diagram/@childNodes.1 //@diagram/@childNodes.13 //@diagram/@childNodes.19 //@diagram/@childNodes.25"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Topic"
+            description="Create new Topic"
+            smallIconPath="icons/Topic.gif"
+            genNodes="//@diagram/@childNodes.11 //@diagram/@childNodes.30"/>
       </groups>
       <groups
           title="Connections"
@@ -2147,77 +2199,80 @@
         parent="//@diagram/@topLevelNodes.0"
         child="//@diagram/@childNodes.11"/>
     <childReferences
-        parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@childNodes.12"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.0"
+        parent="//@diagram/@childNodes.12"
         child="//@diagram/@childNodes.13"/>
     <childReferences
-        parent="//@diagram/@topLevelNodes.0"
+        parent="//@diagram/@childNodes.12"
         child="//@diagram/@childNodes.14"/>
     <childReferences
-        parent="//@diagram/@topLevelNodes.0"
+        parent="//@diagram/@childNodes.12"
         child="//@diagram/@childNodes.15"/>
     <childReferences
-        parent="//@diagram/@childNodes.16"
+        parent="//@diagram/@childNodes.12"
+        child="//@diagram/@childNodes.16"/>
+    <childReferences
+        parent="//@diagram/@childNodes.12"
         child="//@diagram/@childNodes.17"/>
     <childReferences
-        parent="//@diagram/@childNodes.16"
-        child="//@diagram/@childNodes.18"/>
-    <childReferences
-        parent="//@diagram/@childNodes.16"
-        child="//@diagram/@childNodes.19"/>
-    <childReferences
-        parent="//@diagram/@childNodes.16"
-        child="//@diagram/@childNodes.20"/>
-    <childReferences
-        parent="//@diagram/@childNodes.16"
-        child="//@diagram/@childNodes.21"/>
-    <childReferences
         parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@childNodes.16"/>
+        child="//@diagram/@childNodes.12"/>
     <childReferences
         parent="//@diagram"
         child="//@diagram/@topLevelNodes.0"/>
     <childReferences
-        parent="//@diagram/@childNodes.22"
-        child="//@diagram/@childNodes.23"/>
+        parent="//@diagram/@childNodes.18"
+        child="//@diagram/@childNodes.19"/>
     <childReferences
-        parent="//@diagram/@childNodes.22"
-        child="//@diagram/@childNodes.24"/>
+        parent="//@diagram/@childNodes.18"
+        child="//@diagram/@childNodes.20"/>
     <childReferences
-        parent="//@diagram/@childNodes.22"
-        child="//@diagram/@childNodes.25"/>
+        parent="//@diagram/@childNodes.18"
+        child="//@diagram/@childNodes.21"/>
     <childReferences
-        parent="//@diagram/@childNodes.22"
-        child="//@diagram/@childNodes.26"/>
-    <childReferences
-        parent="//@diagram/@childNodes.22"
-        child="//@diagram/@childNodes.27"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.1"
+        parent="//@diagram/@childNodes.18"
         child="//@diagram/@childNodes.22"/>
     <childReferences
-        parent="//@diagram/@childNodes.28"
-        child="//@diagram/@childNodes.29"/>
-    <childReferences
-        parent="//@diagram/@childNodes.28"
-        child="//@diagram/@childNodes.30"/>
-    <childReferences
-        parent="//@diagram/@childNodes.28"
-        child="//@diagram/@childNodes.31"/>
-    <childReferences
-        parent="//@diagram/@childNodes.28"
-        child="//@diagram/@childNodes.32"/>
-    <childReferences
-        parent="//@diagram/@childNodes.28"
-        child="//@diagram/@childNodes.33"/>
+        parent="//@diagram/@childNodes.18"
+        child="//@diagram/@childNodes.23"/>
     <childReferences
         parent="//@diagram/@topLevelNodes.1"
+        child="//@diagram/@childNodes.18"/>
+    <childReferences
+        parent="//@diagram/@childNodes.24"
+        child="//@diagram/@childNodes.25"/>
+    <childReferences
+        parent="//@diagram/@childNodes.24"
+        child="//@diagram/@childNodes.26"/>
+    <childReferences
+        parent="//@diagram/@childNodes.24"
+        child="//@diagram/@childNodes.27"/>
+    <childReferences
+        parent="//@diagram/@childNodes.24"
         child="//@diagram/@childNodes.28"/>
     <childReferences
+        parent="//@diagram/@childNodes.24"
+        child="//@diagram/@childNodes.29"/>
+    <childReferences
         parent="//@diagram/@topLevelNodes.1"
+        child="//@diagram/@childNodes.24"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.1"
+        child="//@diagram/@childNodes.30"/>
+    <childReferences
+        parent="//@diagram/@childNodes.31"
+        child="//@diagram/@childNodes.32"/>
+    <childReferences
+        parent="//@diagram/@childNodes.31"
+        child="//@diagram/@childNodes.33"/>
+    <childReferences
+        parent="//@diagram/@childNodes.31"
         child="//@diagram/@childNodes.34"/>
+    <childReferences
+        parent="//@diagram/@childNodes.31"
+        child="//@diagram/@childNodes.35"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.1"
+        child="//@diagram/@childNodes.31"/>
     <childReferences
         parent="//@diagram"
         child="//@diagram/@topLevelNodes.1"/>
@@ -2228,24 +2283,24 @@
         groupIcon="icons/linksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
-        child="//@diagram/@childNodes.15"
+        child="//@diagram/@childNodes.11"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.15"
+        parent="//@diagram/@childNodes.11"
         child="//@diagram/@links.0"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
-        child="//@diagram/@childNodes.34"
+        child="//@diagram/@childNodes.30"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.34"
+        parent="//@diagram/@childNodes.30"
         child="//@diagram/@links.0"
         referenceType="in_source"
         groupName="incoming links"
@@ -2300,96 +2355,96 @@
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
-        child="//@diagram/@childNodes.11"
+        child="//@diagram/@childNodes.14"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.11"
+        parent="//@diagram/@childNodes.14"
         child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
-        child="//@diagram/@childNodes.12"
+        child="//@diagram/@childNodes.15"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.12"
+        parent="//@diagram/@childNodes.15"
         child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
-        child="//@diagram/@childNodes.18"
+        child="//@diagram/@childNodes.20"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.18"
+        parent="//@diagram/@childNodes.20"
         child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
-        child="//@diagram/@childNodes.19"
+        child="//@diagram/@childNodes.21"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.19"
+        parent="//@diagram/@childNodes.21"
         child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
-        child="//@diagram/@childNodes.24"
+        child="//@diagram/@childNodes.26"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.24"
+        parent="//@diagram/@childNodes.26"
         child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
-        child="//@diagram/@childNodes.25"
+        child="//@diagram/@childNodes.27"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.25"
+        parent="//@diagram/@childNodes.27"
         child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
-        child="//@diagram/@childNodes.30"
+        child="//@diagram/@childNodes.32"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.30"
+        parent="//@diagram/@childNodes.32"
         child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
-        child="//@diagram/@childNodes.31"
+        child="//@diagram/@childNodes.33"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.31"
+        parent="//@diagram/@childNodes.33"
         child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
@@ -2401,24 +2456,24 @@
         groupIcon="icons/linksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.1"
-        child="//@diagram/@childNodes.15"
+        child="//@diagram/@childNodes.11"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.15"
+        parent="//@diagram/@childNodes.11"
         child="//@diagram/@links.1"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.1"
-        child="//@diagram/@childNodes.34"
+        child="//@diagram/@childNodes.30"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.34"
+        parent="//@diagram/@childNodes.30"
         child="//@diagram/@links.1"
         referenceType="in_source"
         groupName="incoming links"
@@ -2473,303 +2528,303 @@
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.1"
-        child="//@diagram/@childNodes.11"
+        child="//@diagram/@childNodes.14"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.11"
+        parent="//@diagram/@childNodes.14"
         child="//@diagram/@links.1"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.1"
-        child="//@diagram/@childNodes.12"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.12"
-        child="//@diagram/@links.1"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.1"
-        child="//@diagram/@childNodes.18"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.18"
-        child="//@diagram/@links.1"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.1"
-        child="//@diagram/@childNodes.19"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.19"
-        child="//@diagram/@links.1"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.1"
-        child="//@diagram/@childNodes.24"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.24"
-        child="//@diagram/@links.1"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.1"
-        child="//@diagram/@childNodes.25"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.25"
-        child="//@diagram/@links.1"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.1"
-        child="//@diagram/@childNodes.30"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.30"
-        child="//@diagram/@links.1"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.1"
-        child="//@diagram/@childNodes.31"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.31"
-        child="//@diagram/@links.1"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@links.2"
-        groupName="links"
-        groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
         child="//@diagram/@childNodes.15"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@childNodes.15"
-        child="//@diagram/@links.2"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
-        child="//@diagram/@childNodes.34"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.34"
-        child="//@diagram/@links.2"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
-        child="//@diagram/@childNodes.7"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.7"
-        child="//@diagram/@links.2"
+        child="//@diagram/@links.1"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@links.2"
-        child="//@diagram/@childNodes.8"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.8"
-        child="//@diagram/@links.2"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
-        child="//@diagram/@childNodes.11"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.11"
-        child="//@diagram/@links.2"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
-        child="//@diagram/@childNodes.12"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.12"
-        child="//@diagram/@links.2"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@links.3"
-        groupName="links"
-        groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.3"
-        child="//@diagram/@childNodes.15"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.15"
-        child="//@diagram/@links.3"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.3"
-        child="//@diagram/@childNodes.34"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.34"
-        child="//@diagram/@links.3"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.3"
-        child="//@diagram/@childNodes.7"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.7"
-        child="//@diagram/@links.3"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.3"
-        child="//@diagram/@childNodes.8"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.8"
-        child="//@diagram/@links.3"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.3"
-        child="//@diagram/@childNodes.11"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.11"
-        child="//@diagram/@links.3"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.3"
-        child="//@diagram/@childNodes.12"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.12"
-        child="//@diagram/@links.3"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@links.4"
-        groupName="links"
-        groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.4"
+        parent="//@diagram/@links.1"
         child="//@diagram/@childNodes.20"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@childNodes.20"
-        child="//@diagram/@links.4"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.4"
-        child="//@diagram/@childNodes.32"
+        child="//@diagram/@links.1"
         referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.32"
-        child="//@diagram/@links.4"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.4"
+        parent="//@diagram/@links.1"
         child="//@diagram/@childNodes.21"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@childNodes.21"
-        child="//@diagram/@links.4"
+        child="//@diagram/@links.1"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@links.4"
+        parent="//@diagram/@links.1"
+        child="//@diagram/@childNodes.26"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.26"
+        child="//@diagram/@links.1"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.1"
+        child="//@diagram/@childNodes.27"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.27"
+        child="//@diagram/@links.1"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.1"
+        child="//@diagram/@childNodes.32"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.32"
+        child="//@diagram/@links.1"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.1"
         child="//@diagram/@childNodes.33"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@childNodes.33"
+        child="//@diagram/@links.1"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram"
+        child="//@diagram/@links.2"
+        groupName="links"
+        groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.2"
+        child="//@diagram/@childNodes.11"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.11"
+        child="//@diagram/@links.2"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.2"
+        child="//@diagram/@childNodes.30"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.30"
+        child="//@diagram/@links.2"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.2"
+        child="//@diagram/@childNodes.7"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.7"
+        child="//@diagram/@links.2"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.2"
+        child="//@diagram/@childNodes.8"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.8"
+        child="//@diagram/@links.2"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.2"
+        child="//@diagram/@childNodes.32"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.32"
+        child="//@diagram/@links.2"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.2"
+        child="//@diagram/@childNodes.33"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.33"
+        child="//@diagram/@links.2"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram"
+        child="//@diagram/@links.3"
+        groupName="links"
+        groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@childNodes.11"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.11"
+        child="//@diagram/@links.3"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@childNodes.30"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.30"
+        child="//@diagram/@links.3"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@childNodes.7"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.7"
+        child="//@diagram/@links.3"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@childNodes.8"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.8"
+        child="//@diagram/@links.3"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@childNodes.32"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.32"
+        child="//@diagram/@links.3"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.3"
+        child="//@diagram/@childNodes.33"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.33"
+        child="//@diagram/@links.3"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram"
+        child="//@diagram/@links.4"
+        groupName="links"
+        groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.4"
+        child="//@diagram/@childNodes.16"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.16"
+        child="//@diagram/@links.4"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.4"
+        child="//@diagram/@childNodes.28"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.28"
+        child="//@diagram/@links.4"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.4"
+        child="//@diagram/@childNodes.17"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.17"
+        child="//@diagram/@links.4"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.4"
+        child="//@diagram/@childNodes.29"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.29"
         child="//@diagram/@links.4"
         referenceType="out_target"
         groupName="outgoing links"
@@ -2781,48 +2836,48 @@
         groupIcon="icons/linksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.5"
-        child="//@diagram/@childNodes.19"
+        child="//@diagram/@childNodes.15"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.19"
+        parent="//@diagram/@childNodes.15"
         child="//@diagram/@links.5"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.5"
-        child="//@diagram/@childNodes.31"
+        child="//@diagram/@childNodes.27"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.31"
+        parent="//@diagram/@childNodes.27"
         child="//@diagram/@links.5"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.5"
-        child="//@diagram/@childNodes.18"
+        child="//@diagram/@childNodes.14"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.18"
+        parent="//@diagram/@childNodes.14"
         child="//@diagram/@links.5"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.5"
-        child="//@diagram/@childNodes.30"
+        child="//@diagram/@childNodes.26"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.30"
+        parent="//@diagram/@childNodes.26"
         child="//@diagram/@links.5"
         referenceType="out_target"
         groupName="outgoing links"
@@ -2858,48 +2913,48 @@
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.6"
-        child="//@diagram/@childNodes.13"
+        child="//@diagram/@childNodes.16"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.13"
+        parent="//@diagram/@childNodes.16"
         child="//@diagram/@links.6"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.6"
-        child="//@diagram/@childNodes.20"
+        child="//@diagram/@childNodes.22"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.20"
+        parent="//@diagram/@childNodes.22"
         child="//@diagram/@links.6"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.6"
-        child="//@diagram/@childNodes.26"
+        child="//@diagram/@childNodes.28"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.26"
+        parent="//@diagram/@childNodes.28"
         child="//@diagram/@links.6"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.6"
-        child="//@diagram/@childNodes.32"
+        child="//@diagram/@childNodes.34"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.32"
+        parent="//@diagram/@childNodes.34"
         child="//@diagram/@links.6"
         referenceType="in_source"
         groupName="incoming links"
@@ -2930,48 +2985,48 @@
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.6"
-        child="//@diagram/@childNodes.14"
+        child="//@diagram/@childNodes.17"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.14"
+        parent="//@diagram/@childNodes.17"
         child="//@diagram/@links.6"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.6"
-        child="//@diagram/@childNodes.21"
+        child="//@diagram/@childNodes.23"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.21"
+        parent="//@diagram/@childNodes.23"
         child="//@diagram/@links.6"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.6"
-        child="//@diagram/@childNodes.27"
+        child="//@diagram/@childNodes.29"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.27"
+        parent="//@diagram/@childNodes.29"
         child="//@diagram/@links.6"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.6"
-        child="//@diagram/@childNodes.33"
+        child="//@diagram/@childNodes.35"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.33"
+        parent="//@diagram/@childNodes.35"
         child="//@diagram/@links.6"
         referenceType="out_target"
         groupName="outgoing links"
@@ -3007,48 +3062,48 @@
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.7"
-        child="//@diagram/@childNodes.13"
+        child="//@diagram/@childNodes.16"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.13"
+        parent="//@diagram/@childNodes.16"
         child="//@diagram/@links.7"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.7"
-        child="//@diagram/@childNodes.20"
+        child="//@diagram/@childNodes.22"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.20"
+        parent="//@diagram/@childNodes.22"
         child="//@diagram/@links.7"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.7"
-        child="//@diagram/@childNodes.26"
+        child="//@diagram/@childNodes.28"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.26"
+        parent="//@diagram/@childNodes.28"
         child="//@diagram/@links.7"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.7"
-        child="//@diagram/@childNodes.32"
+        child="//@diagram/@childNodes.34"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.32"
+        parent="//@diagram/@childNodes.34"
         child="//@diagram/@links.7"
         referenceType="in_source"
         groupName="incoming links"
@@ -3079,48 +3134,48 @@
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.7"
-        child="//@diagram/@childNodes.14"
+        child="//@diagram/@childNodes.17"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.14"
+        parent="//@diagram/@childNodes.17"
         child="//@diagram/@links.7"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.7"
-        child="//@diagram/@childNodes.21"
+        child="//@diagram/@childNodes.23"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.21"
+        parent="//@diagram/@childNodes.23"
         child="//@diagram/@links.7"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.7"
-        child="//@diagram/@childNodes.27"
+        child="//@diagram/@childNodes.29"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.27"
+        parent="//@diagram/@childNodes.29"
         child="//@diagram/@links.7"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.7"
-        child="//@diagram/@childNodes.33"
+        child="//@diagram/@childNodes.35"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@childNodes.33"
+        parent="//@diagram/@childNodes.35"
         child="//@diagram/@links.7"
         referenceType="out_target"
         groupName="outgoing links"
@@ -3193,7 +3248,7 @@
       extensibleViaService="true">
     <implementations
         xsi:type="gmfgen:PredefinedParser"
-        uses="//@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.6/@labels.0/@modelFacet //@diagram/@childNodes.15/@labels.0/@modelFacet //@diagram/@childNodes.17/@labels.0/@modelFacet //@diagram/@childNodes.16/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.23/@labels.0/@modelFacet //@diagram/@childNodes.22/@labels.0/@modelFacet //@diagram/@childNodes.29/@labels.0/@modelFacet //@diagram/@childNodes.28/@labels.0/@modelFacet //@diagram/@childNodes.34/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@links.4/@labels.0/@modelFacet //@diagram/@links.6/@labels.0/@modelFacet //@diagram/@links.7/@labels.0/@modelFacet"/>
+        uses="//@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.6/@labels.0/@modelFacet //@diagram/@childNodes.11/@labels.0/@modelFacet //@diagram/@childNodes.13/@labels.0/@modelFacet //@diagram/@childNodes.12/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.19/@labels.0/@modelFacet //@diagram/@childNodes.18/@labels.0/@modelFacet //@diagram/@childNodes.25/@labels.0/@modelFacet //@diagram/@childNodes.24/@labels.0/@modelFacet //@diagram/@childNodes.30/@labels.0/@modelFacet //@diagram/@childNodes.31/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@links.4/@labels.0/@modelFacet //@diagram/@links.6/@labels.0/@modelFacet //@diagram/@links.7/@labels.0/@modelFacet"/>
     <implementations
         xsi:type="gmfgen:ExternalParser"
         uses="//@diagram/@links.5/@labels.0/@modelFacet"/>

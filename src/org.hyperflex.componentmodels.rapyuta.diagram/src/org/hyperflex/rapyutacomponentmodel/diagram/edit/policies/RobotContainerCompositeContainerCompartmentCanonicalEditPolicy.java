@@ -48,8 +48,9 @@ import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EnvironmentEndPointEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Node2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Topic2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramUpdater;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelNodeDescriptor;
@@ -58,8 +59,8 @@ import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVis
 /**
  * @generated
  */
-public class ContainerContainerCompartmentCanonicalEditPolicy extends
-		CanonicalEditPolicy {
+public class RobotContainerCompositeContainerCompartmentCanonicalEditPolicy
+		extends CanonicalEditPolicy {
 
 	/**
 	 * @generated
@@ -89,10 +90,10 @@ public class ContainerContainerCompartmentCanonicalEditPolicy extends
 							.getContainer_Components());
 			myFeaturesToSynchronize
 					.add(org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-							.getContainer_EndPoint());
+							.getContainer_Topics());
 			myFeaturesToSynchronize
 					.add(org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-							.getContainer_Topics());
+							.getRobotContainer_EndPoint());
 		}
 		return myFeaturesToSynchronize;
 	}
@@ -105,7 +106,7 @@ public class ContainerContainerCompartmentCanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getContainerContainerCompartment_7015SemanticChildren(viewObject);
+				.getRobotContainerCompositeContainerCompartment_7018SemanticChildren(viewObject);
 		for (RapyutaComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -126,9 +127,14 @@ public class ContainerContainerCompartmentCanonicalEditPolicy extends
 	 */
 	private boolean isMyDiagramElement(View view) {
 		int visualID = RapyutaComponentModelVisualIDRegistry.getVisualID(view);
-		return visualID == Node2EditPart.VISUAL_ID
-				|| visualID == EnvironmentEndPointEditPart.VISUAL_ID
-				|| visualID == Topic2EditPart.VISUAL_ID;
+		switch (visualID) {
+		case Node2EditPart.VISUAL_ID:
+		case CompositeEditPart.VISUAL_ID:
+		case Topic2EditPart.VISUAL_ID:
+		case RobotEndPointEditPart.VISUAL_ID:
+			return true;
+		}
+		return false;
 	}
 
 	/**
@@ -140,7 +146,7 @@ public class ContainerContainerCompartmentCanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getContainerContainerCompartment_7015SemanticChildren((View) getHost()
+				.getRobotContainerCompositeContainerCompartment_7018SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

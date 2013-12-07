@@ -8,27 +8,27 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
-        href="../models/rapyutaComponentModel.ecore#//System/composites"/>
+        href="../models/rapyutaComponentModel.ecore#//System/robotContainers"/>
     <ownedChild>
       <domainMetaElement
-          href="../models/rapyutaComponentModel.ecore#//Composite"/>
+          href="../models/rapyutaComponentModel.ecore#//RobotContainer"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping"
           viewPattern="">
         <diagramLabel
             href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerName"/>
         <features
-            href="../models/rapyutaComponentModel.ecore#//AbstractComponent/name"/>
+            href="../models/rapyutaComponentModel.ecore#//Container/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.4"/>
+          href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.0"/>
       <diagramNode
           href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainer"/>
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="../models/rapyutaComponentModel.ecore#//Composite/components"/>
+            href="../models/rapyutaComponentModel.ecore#//Container/components"/>
         <ownedChild>
           <domainMetaElement
               href="../models/rapyutaComponentModel.ecore#//Node"/>
@@ -41,7 +41,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.0"/>
+              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
               href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Component"/>
           <children
@@ -60,7 +60,7 @@
               </labelMappings>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.9"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Properties"/>
             </ownedChild>
@@ -73,7 +73,7 @@
                   href="../models/rapyutaComponentModel.ecore#//NodePublisher"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.5"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
             </ownedChild>
@@ -86,7 +86,7 @@
                   href="../models/rapyutaComponentModel.ecore#//NodeSubscriber"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
             </ownedChild>
@@ -99,7 +99,7 @@
                   href="../models/rapyutaComponentModel.ecore#//NodeSrvServer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.9"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
             </ownedChild>
@@ -112,7 +112,7 @@
                   href="../models/rapyutaComponentModel.ecore#//NodeSrvClient"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.10"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.8"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
             </ownedChild>
@@ -127,7 +127,7 @@
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="../models/rapyutaComponentModel.ecore#//Composite/components"/>
+            href="../models/rapyutaComponentModel.ecore#//Container/components"/>
         <ownedChild>
           <domainMetaElement
               href="../models/rapyutaComponentModel.ecore#//Composite"/>
@@ -141,7 +141,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.4"/>
+              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
           <diagramNode
               href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Composite"/>
           <children>
@@ -152,7 +152,7 @@
                   href="../models/rapyutaComponentModel.ecore#//CompositePublisher"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.5"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
             </ownedChild>
@@ -165,7 +165,7 @@
                   href="../models/rapyutaComponentModel.ecore#//CompositeSubscriber"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
             </ownedChild>
@@ -178,7 +178,7 @@
                   href="../models/rapyutaComponentModel.ecore#//CompositeSrvServer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.10"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
             </ownedChild>
@@ -191,69 +191,17 @@
                   href="../models/rapyutaComponentModel.ecore#//CompositeSrvClient"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.10"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.8"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
             </ownedChild>
           </children>
         </ownedChild>
       </children>
-      <children>
-        <containmentFeature
-            href="../models/rapyutaComponentModel.ecore#//Composite/publishers"/>
-        <ownedChild>
-          <domainMetaElement
-              href="../models/rapyutaComponentModel.ecore#//CompositePublisher"/>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
-          <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
-        </ownedChild>
-      </children>
-      <children>
-        <containmentFeature
-            href="../models/rapyutaComponentModel.ecore#//Composite/subscribers"/>
-        <ownedChild>
-          <domainMetaElement
-              href="../models/rapyutaComponentModel.ecore#//CompositeSubscriber"/>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
-          <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
-        </ownedChild>
-      </children>
-      <children>
-        <containmentFeature
-            href="../models/rapyutaComponentModel.ecore#//Composite/srvServers"/>
-        <ownedChild>
-          <domainMetaElement
-              href="../models/rapyutaComponentModel.ecore#//CompositeSrvServer"/>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.9"/>
-          <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
-        </ownedChild>
-      </children>
-      <children>
-        <containmentFeature
-            href="../models/rapyutaComponentModel.ecore#//Composite/srvClients"/>
-        <ownedChild>
-          <domainMetaElement
-              href="../models/rapyutaComponentModel.ecore#//CompositeSrvClient"/>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.10"/>
-          <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
-        </ownedChild>
-      </children>
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="../models/rapyutaComponentModel.ecore#//Composite/topics"/>
+            href="../models/rapyutaComponentModel.ecore#//Container/topics"/>
         <ownedChild>
           <domainMetaElement
               href="../models/rapyutaComponentModel.ecore#//Topic"/>
@@ -266,7 +214,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
+              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.10"/>
           <diagramNode
               href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Channel1"/>
         </ownedChild>
@@ -274,7 +222,7 @@
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="../models/rapyutaComponentModel.ecore#//Composite/endPoint"/>
+            href="../models/rapyutaComponentModel.ecore#//RobotContainer/endPoint"/>
         <ownedChild>
           <domainMetaElement
               href="../models/rapyutaComponentModel.ecore#//RobotEndPoint"/>
@@ -283,15 +231,15 @@
             <diagramLabel
                 href="rapyutaComponentModel.gmfgraph#EndPointName"/>
             <features
-                href="../models/rapyutaComponentModel.ecore#//AbstractComponent/name"/>
+                href="../models/rapyutaComponentModel.ecore#//EndPoint/name"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.8"/>
+              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.4"/>
           <diagramNode
               href="rapyutaComponentModel.gmfgraph#EndPoint"/>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.7/@ownedChild/@compartments.0">
+              compartment="//@nodes.0/@ownedChild/@children.3/@ownedChild/@compartments.0">
             <containmentFeature
                 href="../models/rapyutaComponentModel.ecore#//EndPoint/parameters"/>
             <ownedChild>
@@ -306,7 +254,7 @@
               </labelMappings>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.9"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Properties"/>
             </ownedChild>
@@ -319,7 +267,7 @@
                   href="../models/rapyutaComponentModel.ecore#//EndPointPublisher"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.5"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
             </ownedChild>
@@ -332,7 +280,7 @@
                   href="../models/rapyutaComponentModel.ecore#//EndPointSubscriber"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
             </ownedChild>
@@ -345,7 +293,7 @@
                   href="../models/rapyutaComponentModel.ecore#//EndPointSrvServer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.9"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
             </ownedChild>
@@ -358,20 +306,20 @@
                   href="../models/rapyutaComponentModel.ecore#//EndPointSrvClient"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.10"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.8"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
             </ownedChild>
           </children>
           <compartments
-              children="//@nodes.0/@ownedChild/@children.7/@ownedChild/@children.0">
+              children="//@nodes.0/@ownedChild/@children.3/@ownedChild/@children.0">
             <compartment
                 href="rapyutaComponentModel.gmfgraph#EndPoint Properties Compartment"/>
           </compartments>
         </ownedChild>
       </children>
       <compartments
-          children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.7">
+          children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.3">
         <compartment
             href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerCompartment"/>
       </compartments>
@@ -379,10 +327,10 @@
   </nodes>
   <nodes>
     <containmentFeature
-        href="../models/rapyutaComponentModel.ecore#//System/containers"/>
+        href="../models/rapyutaComponentModel.ecore#//System/cloudContainers"/>
     <ownedChild>
       <domainMetaElement
-          href="../models/rapyutaComponentModel.ecore#//Container"/>
+          href="../models/rapyutaComponentModel.ecore#//CloudContainer"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping"
           viewPattern="">
@@ -393,7 +341,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.5"/>
+          href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
       <diagramNode
           href="rapyutaComponentModel.gmfgraph#Container"/>
       <children
@@ -412,7 +360,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.0"/>
+              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
               href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Component"/>
           <children
@@ -431,7 +379,7 @@
               </labelMappings>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.9"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Properties"/>
             </ownedChild>
@@ -444,7 +392,7 @@
                   href="../models/rapyutaComponentModel.ecore#//NodePublisher"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.5"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
             </ownedChild>
@@ -457,7 +405,7 @@
                   href="../models/rapyutaComponentModel.ecore#//NodeSubscriber"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
             </ownedChild>
@@ -470,7 +418,7 @@
                   href="../models/rapyutaComponentModel.ecore#//NodeSrvServer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.9"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
             </ownedChild>
@@ -483,7 +431,7 @@
                   href="../models/rapyutaComponentModel.ecore#//NodeSrvClient"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.10"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.8"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
             </ownedChild>
@@ -498,7 +446,7 @@
       <children
           compartment="//@nodes.1/@ownedChild/@compartments.0">
         <containmentFeature
-            href="../models/rapyutaComponentModel.ecore#//Container/endPoint"/>
+            href="../models/rapyutaComponentModel.ecore#//CloudContainer/endPoint"/>
         <ownedChild>
           <domainMetaElement
               href="../models/rapyutaComponentModel.ecore#//EnvironmentEndPoint"/>
@@ -507,11 +455,11 @@
             <diagramLabel
                 href="rapyutaComponentModel.gmfgraph#EndPointName"/>
             <features
-                href="../models/rapyutaComponentModel.ecore#//AbstractComponent/name"/>
+                href="../models/rapyutaComponentModel.ecore#//EndPoint/name"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.8"/>
+              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.4"/>
           <diagramNode
               href="rapyutaComponentModel.gmfgraph#EndPoint"/>
           <children
@@ -530,7 +478,7 @@
               </labelMappings>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.9"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Properties"/>
             </ownedChild>
@@ -543,7 +491,7 @@
                   href="../models/rapyutaComponentModel.ecore#//EndPointPublisher"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.5"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
             </ownedChild>
@@ -556,7 +504,7 @@
                   href="../models/rapyutaComponentModel.ecore#//EndPointSubscriber"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
             </ownedChild>
@@ -569,7 +517,7 @@
                   href="../models/rapyutaComponentModel.ecore#//EndPointSrvServer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.9"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
             </ownedChild>
@@ -582,7 +530,7 @@
                   href="../models/rapyutaComponentModel.ecore#//EndPointSrvClient"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.10"/>
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.8"/>
               <diagramNode
                   href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
             </ownedChild>
@@ -610,9 +558,82 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
+              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.10"/>
           <diagramNode
               href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Channel1"/>
+        </ownedChild>
+      </children>
+      <children>
+        <containmentFeature
+            href="../models/rapyutaComponentModel.ecore#//Container/components"/>
+        <ownedChild>
+          <domainMetaElement
+              href="../models/rapyutaComponentModel.ecore#//Composite"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping"
+              viewPattern="">
+            <diagramLabel
+                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeName"/>
+            <features
+                href="../models/rapyutaComponentModel.ecore#//AbstractComponent/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
+          <diagramNode
+              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Composite"/>
+          <children>
+            <containmentFeature
+                href="../models/rapyutaComponentModel.ecore#//Composite/publishers"/>
+            <ownedChild>
+              <domainMetaElement
+                  href="../models/rapyutaComponentModel.ecore#//CompositePublisher"/>
+              <tool
+                  xsi:type="gmftool:CreationTool"
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.5"/>
+              <diagramNode
+                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
+            </ownedChild>
+          </children>
+          <children>
+            <containmentFeature
+                href="../models/rapyutaComponentModel.ecore#//Composite/subscribers"/>
+            <ownedChild>
+              <domainMetaElement
+                  href="../models/rapyutaComponentModel.ecore#//CompositeSubscriber"/>
+              <tool
+                  xsi:type="gmftool:CreationTool"
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
+              <diagramNode
+                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
+            </ownedChild>
+          </children>
+          <children>
+            <containmentFeature
+                href="../models/rapyutaComponentModel.ecore#//Composite/srvServers"/>
+            <ownedChild>
+              <domainMetaElement
+                  href="../models/rapyutaComponentModel.ecore#//CompositeSrvServer"/>
+              <tool
+                  xsi:type="gmftool:CreationTool"
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
+              <diagramNode
+                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
+            </ownedChild>
+          </children>
+          <children>
+            <containmentFeature
+                href="../models/rapyutaComponentModel.ecore#//Composite/srvClients"/>
+            <ownedChild>
+              <domainMetaElement
+                  href="../models/rapyutaComponentModel.ecore#//CompositeSrvClient"/>
+              <tool
+                  xsi:type="gmftool:CreationTool"
+                  href="rapyutaComponentModel.gmftool#//@palette/@tools.0/@tools.8"/>
+              <diagramNode
+                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
+            </ownedChild>
+          </children>
         </ownedChild>
       </children>
       <compartments

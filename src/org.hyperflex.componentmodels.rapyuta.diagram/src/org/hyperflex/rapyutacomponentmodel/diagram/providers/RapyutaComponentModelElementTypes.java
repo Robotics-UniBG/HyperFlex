@@ -39,6 +39,7 @@ import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages;
 import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Composite2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
@@ -52,7 +53,6 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServer
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriberEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerSrvConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointMsgConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointParameter2EditPart;
@@ -81,6 +81,7 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServer2Edit
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriberEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.SystemEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Topic2EditPart;
@@ -122,17 +123,12 @@ public class RapyutaComponentModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Composite_2003 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Composite_2003"); //$NON-NLS-1$
+	public static final IElementType RobotContainer_2005 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.RobotContainer_2005"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType Container_2004 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Container_2004"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType Node_3041 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Node_3041"); //$NON-NLS-1$
+	public static final IElementType CloudContainer_2006 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.CloudContainer_2006"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -162,7 +158,7 @@ public class RapyutaComponentModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Composite_3047 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Composite_3047"); //$NON-NLS-1$
+	public static final IElementType Composite_3076 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Composite_3076"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -207,16 +203,6 @@ public class RapyutaComponentModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Topic_3056 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Topic_3056"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType RobotEndPoint_3057 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.RobotEndPoint_3057"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
 	public static final IElementType EndPointParameter_3058 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointParameter_3058"); //$NON-NLS-1$
 
 	/**
@@ -238,6 +224,11 @@ public class RapyutaComponentModelElementTypes {
 	 * @generated
 	 */
 	public static final IElementType EndPointSrvClient_3062 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EndPointSrvClient_3062"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Node_3078 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Node_3078"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -272,7 +263,7 @@ public class RapyutaComponentModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType EnvironmentEndPoint_3069 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EnvironmentEndPoint_3069"); //$NON-NLS-1$
+	public static final IElementType EnvironmentEndPoint_3079 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.EnvironmentEndPoint_3079"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -302,7 +293,22 @@ public class RapyutaComponentModelElementTypes {
 	/**
 	 * @generated
 	 */
+	public static final IElementType Topic_3080 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Topic_3080"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Composite_3081 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Composite_3081"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
 	public static final IElementType Topic_3075 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.Topic_3075"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType RobotEndPoint_3077 = getElementType("org.hyperflex.componentmodels.rapyuta.diagram.RobotEndPoint_3077"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -388,17 +394,17 @@ public class RapyutaComponentModelElementTypes {
 							.getSystem());
 
 			elements.put(
-					Composite_2003,
+					RobotContainer_2005,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-							.getComposite());
+							.getRobotContainer());
 
 			elements.put(
-					Container_2004,
+					CloudContainer_2006,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-							.getContainer());
+							.getCloudContainer());
 
 			elements.put(
-					Node_3041,
+					Node_3063,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNode());
 
@@ -428,7 +434,7 @@ public class RapyutaComponentModelElementTypes {
 							.getNodeSrvClient());
 
 			elements.put(
-					Composite_3047,
+					Composite_3076,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getComposite());
 
@@ -453,32 +459,12 @@ public class RapyutaComponentModelElementTypes {
 							.getCompositeSrvClient());
 
 			elements.put(
-					CompositePublisher_3052,
-					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-							.getCompositePublisher());
-
-			elements.put(
-					CompositeSubscriber_3053,
-					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-							.getCompositeSubscriber());
-
-			elements.put(
-					CompositeSrvServer_3054,
-					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-							.getCompositeSrvServer());
-
-			elements.put(
-					CompositeSrvClient_3055,
-					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-							.getCompositeSrvClient());
-
-			elements.put(
-					Topic_3056,
+					Topic_3075,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getTopic());
 
 			elements.put(
-					RobotEndPoint_3057,
+					RobotEndPoint_3077,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getRobotEndPoint());
 
@@ -508,7 +494,7 @@ public class RapyutaComponentModelElementTypes {
 							.getEndPointSrvClient());
 
 			elements.put(
-					Node_3063,
+					Node_3078,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getNode());
 
@@ -538,7 +524,7 @@ public class RapyutaComponentModelElementTypes {
 							.getNodeSrvClient());
 
 			elements.put(
-					EnvironmentEndPoint_3069,
+					EnvironmentEndPoint_3079,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getEnvironmentEndPoint());
 
@@ -568,9 +554,34 @@ public class RapyutaComponentModelElementTypes {
 							.getEndPointSrvClient());
 
 			elements.put(
-					Topic_3075,
+					Topic_3080,
 					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 							.getTopic());
+
+			elements.put(
+					Composite_3081,
+					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+							.getComposite());
+
+			elements.put(
+					CompositePublisher_3052,
+					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+							.getCompositePublisher());
+
+			elements.put(
+					CompositeSubscriber_3053,
+					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+							.getCompositeSubscriber());
+
+			elements.put(
+					CompositeSrvServer_3054,
+					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+							.getCompositeSrvServer());
+
+			elements.put(
+					CompositeSrvClient_3055,
+					org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+							.getCompositeSrvClient());
 
 			elements.put(
 					MsgInterfaceConnection_4011,
@@ -629,43 +640,44 @@ public class RapyutaComponentModelElementTypes {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(System_1000);
-			KNOWN_ELEMENT_TYPES.add(Composite_2003);
-			KNOWN_ELEMENT_TYPES.add(Container_2004);
-			KNOWN_ELEMENT_TYPES.add(Node_3041);
+			KNOWN_ELEMENT_TYPES.add(RobotContainer_2005);
+			KNOWN_ELEMENT_TYPES.add(CloudContainer_2006);
+			KNOWN_ELEMENT_TYPES.add(Node_3063);
 			KNOWN_ELEMENT_TYPES.add(NodeParameter_3042);
 			KNOWN_ELEMENT_TYPES.add(NodePublisher_3043);
 			KNOWN_ELEMENT_TYPES.add(NodeSubscriber_3044);
 			KNOWN_ELEMENT_TYPES.add(NodeSrvServer_3045);
 			KNOWN_ELEMENT_TYPES.add(NodeSrvClient_3046);
-			KNOWN_ELEMENT_TYPES.add(Composite_3047);
+			KNOWN_ELEMENT_TYPES.add(Composite_3076);
 			KNOWN_ELEMENT_TYPES.add(CompositePublisher_3048);
 			KNOWN_ELEMENT_TYPES.add(CompositeSubscriber_3049);
 			KNOWN_ELEMENT_TYPES.add(CompositeSrvServer_3050);
 			KNOWN_ELEMENT_TYPES.add(CompositeSrvClient_3051);
-			KNOWN_ELEMENT_TYPES.add(CompositePublisher_3052);
-			KNOWN_ELEMENT_TYPES.add(CompositeSubscriber_3053);
-			KNOWN_ELEMENT_TYPES.add(CompositeSrvServer_3054);
-			KNOWN_ELEMENT_TYPES.add(CompositeSrvClient_3055);
-			KNOWN_ELEMENT_TYPES.add(Topic_3056);
-			KNOWN_ELEMENT_TYPES.add(RobotEndPoint_3057);
+			KNOWN_ELEMENT_TYPES.add(Topic_3075);
+			KNOWN_ELEMENT_TYPES.add(RobotEndPoint_3077);
 			KNOWN_ELEMENT_TYPES.add(EndPointParameter_3058);
 			KNOWN_ELEMENT_TYPES.add(EndPointPublisher_3059);
 			KNOWN_ELEMENT_TYPES.add(EndPointSubscriber_3060);
 			KNOWN_ELEMENT_TYPES.add(EndPointSrvServer_3061);
 			KNOWN_ELEMENT_TYPES.add(EndPointSrvClient_3062);
-			KNOWN_ELEMENT_TYPES.add(Node_3063);
+			KNOWN_ELEMENT_TYPES.add(Node_3078);
 			KNOWN_ELEMENT_TYPES.add(NodeParameter_3064);
 			KNOWN_ELEMENT_TYPES.add(NodePublisher_3065);
 			KNOWN_ELEMENT_TYPES.add(NodeSubscriber_3066);
 			KNOWN_ELEMENT_TYPES.add(NodeSrvServer_3067);
 			KNOWN_ELEMENT_TYPES.add(NodeSrvClient_3068);
-			KNOWN_ELEMENT_TYPES.add(EnvironmentEndPoint_3069);
+			KNOWN_ELEMENT_TYPES.add(EnvironmentEndPoint_3079);
 			KNOWN_ELEMENT_TYPES.add(EndPointParameter_3070);
 			KNOWN_ELEMENT_TYPES.add(EndPointPublisher_3071);
 			KNOWN_ELEMENT_TYPES.add(EndPointSubscriber_3072);
 			KNOWN_ELEMENT_TYPES.add(EndPointSrvServer_3073);
 			KNOWN_ELEMENT_TYPES.add(EndPointSrvClient_3074);
-			KNOWN_ELEMENT_TYPES.add(Topic_3075);
+			KNOWN_ELEMENT_TYPES.add(Topic_3080);
+			KNOWN_ELEMENT_TYPES.add(Composite_3081);
+			KNOWN_ELEMENT_TYPES.add(CompositePublisher_3052);
+			KNOWN_ELEMENT_TYPES.add(CompositeSubscriber_3053);
+			KNOWN_ELEMENT_TYPES.add(CompositeSrvServer_3054);
+			KNOWN_ELEMENT_TYPES.add(CompositeSrvClient_3055);
 			KNOWN_ELEMENT_TYPES.add(MsgInterfaceConnection_4011);
 			KNOWN_ELEMENT_TYPES.add(MsgInterfaceConnection_4012);
 			KNOWN_ELEMENT_TYPES.add(CompositeMsgInterfaceExposed_4013);
@@ -685,12 +697,12 @@ public class RapyutaComponentModelElementTypes {
 		switch (visualID) {
 		case SystemEditPart.VISUAL_ID:
 			return System_1000;
-		case CompositeEditPart.VISUAL_ID:
-			return Composite_2003;
-		case ContainerEditPart.VISUAL_ID:
-			return Container_2004;
-		case NodeEditPart.VISUAL_ID:
-			return Node_3041;
+		case RobotContainerEditPart.VISUAL_ID:
+			return RobotContainer_2005;
+		case CloudContainerEditPart.VISUAL_ID:
+			return CloudContainer_2006;
+		case Node2EditPart.VISUAL_ID:
+			return Node_3063;
 		case NodeParameterEditPart.VISUAL_ID:
 			return NodeParameter_3042;
 		case NodePublisherEditPart.VISUAL_ID:
@@ -701,8 +713,8 @@ public class RapyutaComponentModelElementTypes {
 			return NodeSrvServer_3045;
 		case NodeSrvClientEditPart.VISUAL_ID:
 			return NodeSrvClient_3046;
-		case Composite2EditPart.VISUAL_ID:
-			return Composite_3047;
+		case CompositeEditPart.VISUAL_ID:
+			return Composite_3076;
 		case CompositePublisherEditPart.VISUAL_ID:
 			return CompositePublisher_3048;
 		case CompositeSubscriberEditPart.VISUAL_ID:
@@ -711,18 +723,10 @@ public class RapyutaComponentModelElementTypes {
 			return CompositeSrvServer_3050;
 		case CompositeSrvClientEditPart.VISUAL_ID:
 			return CompositeSrvClient_3051;
-		case CompositePublisher2EditPart.VISUAL_ID:
-			return CompositePublisher_3052;
-		case CompositeSubscriber2EditPart.VISUAL_ID:
-			return CompositeSubscriber_3053;
-		case CompositeSrvServer2EditPart.VISUAL_ID:
-			return CompositeSrvServer_3054;
-		case CompositeSrvClient2EditPart.VISUAL_ID:
-			return CompositeSrvClient_3055;
-		case TopicEditPart.VISUAL_ID:
-			return Topic_3056;
+		case Topic2EditPart.VISUAL_ID:
+			return Topic_3075;
 		case RobotEndPointEditPart.VISUAL_ID:
-			return RobotEndPoint_3057;
+			return RobotEndPoint_3077;
 		case EndPointParameterEditPart.VISUAL_ID:
 			return EndPointParameter_3058;
 		case EndPointPublisherEditPart.VISUAL_ID:
@@ -733,8 +737,8 @@ public class RapyutaComponentModelElementTypes {
 			return EndPointSrvServer_3061;
 		case EndPointSrvClientEditPart.VISUAL_ID:
 			return EndPointSrvClient_3062;
-		case Node2EditPart.VISUAL_ID:
-			return Node_3063;
+		case NodeEditPart.VISUAL_ID:
+			return Node_3078;
 		case NodeParameter2EditPart.VISUAL_ID:
 			return NodeParameter_3064;
 		case NodePublisher2EditPart.VISUAL_ID:
@@ -746,7 +750,7 @@ public class RapyutaComponentModelElementTypes {
 		case NodeSrvClient2EditPart.VISUAL_ID:
 			return NodeSrvClient_3068;
 		case EnvironmentEndPointEditPart.VISUAL_ID:
-			return EnvironmentEndPoint_3069;
+			return EnvironmentEndPoint_3079;
 		case EndPointParameter2EditPart.VISUAL_ID:
 			return EndPointParameter_3070;
 		case EndPointPublisher2EditPart.VISUAL_ID:
@@ -757,8 +761,18 @@ public class RapyutaComponentModelElementTypes {
 			return EndPointSrvServer_3073;
 		case EndPointSrvClient2EditPart.VISUAL_ID:
 			return EndPointSrvClient_3074;
-		case Topic2EditPart.VISUAL_ID:
-			return Topic_3075;
+		case TopicEditPart.VISUAL_ID:
+			return Topic_3080;
+		case Composite2EditPart.VISUAL_ID:
+			return Composite_3081;
+		case CompositePublisher2EditPart.VISUAL_ID:
+			return CompositePublisher_3052;
+		case CompositeSubscriber2EditPart.VISUAL_ID:
+			return CompositeSubscriber_3053;
+		case CompositeSrvServer2EditPart.VISUAL_ID:
+			return CompositeSrvServer_3054;
+		case CompositeSrvClient2EditPart.VISUAL_ID:
+			return CompositeSrvClient_3055;
 		case MsgInterfaceConnectionEditPart.VISUAL_ID:
 			return MsgInterfaceConnection_4011;
 		case MsgInterfaceConnection2EditPart.VISUAL_ID:

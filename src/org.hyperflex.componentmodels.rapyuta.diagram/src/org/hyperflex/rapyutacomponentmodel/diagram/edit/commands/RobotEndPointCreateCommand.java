@@ -37,7 +37,7 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.rapyutacomponentmodel.Composite;
+import org.hyperflex.rapyutacomponentmodel.RobotContainer;
 import org.hyperflex.rapyutacomponentmodel.RobotEndPoint;
 
 /**
@@ -69,7 +69,7 @@ public class RobotEndPointCreateCommand extends EditElementCommand {
 	 * @generated
 	 */
 	public boolean canExecute() {
-		Composite container = (Composite) getElementToEdit();
+		RobotContainer container = (RobotContainer) getElementToEdit();
 		if (container.getEndPoint() != null) {
 			return false;
 		}
@@ -85,7 +85,7 @@ public class RobotEndPointCreateCommand extends EditElementCommand {
 		RobotEndPoint newElement = org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelFactory.eINSTANCE
 				.createRobotEndPoint();
 
-		Composite owner = (Composite) getElementToEdit();
+		RobotContainer owner = (RobotContainer) getElementToEdit();
 		owner.setEndPoint(newElement);
 
 		doConfigure(newElement, monitor, info);

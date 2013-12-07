@@ -44,7 +44,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.Composite#getSrvClients <em>Srv Clients</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.Composite#getSrvConnections <em>Srv Connections</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.Composite#getParameters <em>Parameters</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.Composite#getEndPoint <em>End Point</em>}</li>
  * </ul>
  * </p>
  *
@@ -180,31 +179,5 @@ public interface Composite extends AbstractComponent {
 	 * @generated
 	 */
 	EList<CompositeParameter> getParameters();
-
-	/**
-	 * Returns the value of the '<em><b>End Point</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>End Point</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>End Point</em>' containment reference.
-	 * @see #setEndPoint(RobotEndPoint)
-	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getComposite_EndPoint()
-	 * @model containment="true"
-	 * @generated
-	 */
-	RobotEndPoint getEndPoint();
-
-	/**
-	 * Sets the value of the '{@link org.hyperflex.rapyutacomponentmodel.Composite#getEndPoint <em>End Point</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>End Point</em>' containment reference.
-	 * @see #getEndPoint()
-	 * @generated
-	 */
-	void setEndPoint(RobotEndPoint value);
 
 } // Composite

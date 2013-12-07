@@ -70,7 +70,7 @@ public class RobotEndPointItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public RobotEndPointItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.RobotEndPoint_3057);
+		super(RapyutaComponentModelElementTypes.RobotEndPoint_3077);
 	}
 
 	/**

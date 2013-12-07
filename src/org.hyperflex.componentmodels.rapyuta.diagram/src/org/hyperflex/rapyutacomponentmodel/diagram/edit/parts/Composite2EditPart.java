@@ -73,7 +73,7 @@ public class Composite2EditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3047;
+	public static final int VISUAL_ID = 3081;
 
 	/**
 	 * @generated
@@ -121,10 +121,10 @@ public class Composite2EditPart extends AbstractBorderedShapeEditPart {
 				View childView = (View) child.getModel();
 				switch (RapyutaComponentModelVisualIDRegistry
 						.getVisualID(childView)) {
-				case CompositePublisherEditPart.VISUAL_ID:
-				case CompositeSubscriberEditPart.VISUAL_ID:
-				case CompositeSrvServerEditPart.VISUAL_ID:
-				case CompositeSrvClientEditPart.VISUAL_ID:
+				case CompositePublisher2EditPart.VISUAL_ID:
+				case CompositeSubscriber2EditPart.VISUAL_ID:
+				case CompositeSrvServer2EditPart.VISUAL_ID:
+				case CompositeSrvClient2EditPart.VISUAL_ID:
 					return new BorderItemSelectionEditPolicy();
 				}
 				EditPolicy result = child
@@ -169,35 +169,35 @@ public class Composite2EditPart extends AbstractBorderedShapeEditPart {
 					.getFigurePackageNameLabel());
 			return true;
 		}
-		if (childEditPart instanceof CompositePublisherEditPart) {
+		if (childEditPart instanceof CompositePublisher2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.WEST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((CompositePublisherEditPart) childEditPart).getFigure(),
+					((CompositePublisher2EditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
-		if (childEditPart instanceof CompositeSubscriberEditPart) {
+		if (childEditPart instanceof CompositeSubscriber2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.EAST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((CompositeSubscriberEditPart) childEditPart).getFigure(),
+					((CompositeSubscriber2EditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
-		if (childEditPart instanceof CompositeSrvServerEditPart) {
+		if (childEditPart instanceof CompositeSrvServer2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.WEST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((CompositeSrvServerEditPart) childEditPart).getFigure(),
+					((CompositeSrvServer2EditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
-		if (childEditPart instanceof CompositeSrvClientEditPart) {
+		if (childEditPart instanceof CompositeSrvClient2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.EAST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((CompositeSrvClientEditPart) childEditPart).getFigure(),
+					((CompositeSrvClient2EditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
@@ -211,24 +211,24 @@ public class Composite2EditPart extends AbstractBorderedShapeEditPart {
 		if (childEditPart instanceof CompositeName2EditPart) {
 			return true;
 		}
-		if (childEditPart instanceof CompositePublisherEditPart) {
+		if (childEditPart instanceof CompositePublisher2EditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((CompositePublisherEditPart) childEditPart).getFigure());
+					((CompositePublisher2EditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof CompositeSubscriberEditPart) {
+		if (childEditPart instanceof CompositeSubscriber2EditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((CompositeSubscriberEditPart) childEditPart).getFigure());
+					((CompositeSubscriber2EditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof CompositeSrvServerEditPart) {
+		if (childEditPart instanceof CompositeSrvServer2EditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((CompositeSrvServerEditPart) childEditPart).getFigure());
+					((CompositeSrvServer2EditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof CompositeSrvClientEditPart) {
+		if (childEditPart instanceof CompositeSrvClient2EditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((CompositeSrvClientEditPart) childEditPart).getFigure());
+					((CompositeSrvClient2EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;

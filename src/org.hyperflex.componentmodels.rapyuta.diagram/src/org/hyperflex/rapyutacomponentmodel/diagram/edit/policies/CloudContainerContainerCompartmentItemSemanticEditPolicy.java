@@ -29,37 +29,37 @@ package org.hyperflex.rapyutacomponentmodel.diagram.edit.policies;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.EnvironmentEndPointCreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.Node2CreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.Topic2CreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.NodeCreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.TopicCreateCommand;
 import org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelElementTypes;
 
 /**
  * @generated
  */
-public class ContainerContainerCompartmentItemSemanticEditPolicy extends
+public class CloudContainerContainerCompartmentItemSemanticEditPolicy extends
 		RapyutaComponentModelBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated
 	 */
-	public ContainerContainerCompartmentItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Container_2004);
+	public CloudContainerContainerCompartmentItemSemanticEditPolicy() {
+		super(RapyutaComponentModelElementTypes.CloudContainer_2006);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.Node_3063 == req.getElementType()) {
-			return getGEFWrapper(new Node2CreateCommand(req));
+		if (RapyutaComponentModelElementTypes.Node_3078 == req.getElementType()) {
+			return getGEFWrapper(new NodeCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069 == req
+		if (RapyutaComponentModelElementTypes.EnvironmentEndPoint_3079 == req
 				.getElementType()) {
 			return getGEFWrapper(new EnvironmentEndPointCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.Topic_3075 == req
+		if (RapyutaComponentModelElementTypes.Topic_3080 == req
 				.getElementType()) {
-			return getGEFWrapper(new Topic2CreateCommand(req));
+			return getGEFWrapper(new TopicCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

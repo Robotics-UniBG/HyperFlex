@@ -37,8 +37,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getContainers <em>Containers</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getComposites <em>Composites</em>}</li>
+ *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getCloudContainers <em>Cloud Containers</em>}</li>
+ *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getRobotContainers <em>Robot Containers</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getEndPointSrvConnections <em>End Point Srv Connections</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getEndPointMsgConnections <em>End Point Msg Connections</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.System#getName <em>Name</em>}</li>
@@ -51,36 +51,36 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface System extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Containers</b></em>' containment reference list.
-	 * The list contents are of type {@link org.hyperflex.rapyutacomponentmodel.Container}.
+	 * Returns the value of the '<em><b>Cloud Containers</b></em>' containment reference list.
+	 * The list contents are of type {@link org.hyperflex.rapyutacomponentmodel.CloudContainer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Containers</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Cloud Containers</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Containers</em>' containment reference list.
-	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getSystem_Containers()
+	 * @return the value of the '<em>Cloud Containers</em>' containment reference list.
+	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getSystem_CloudContainers()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Container> getContainers();
+	EList<CloudContainer> getCloudContainers();
 
 	/**
-	 * Returns the value of the '<em><b>Composites</b></em>' containment reference list.
-	 * The list contents are of type {@link org.hyperflex.rapyutacomponentmodel.Composite}.
+	 * Returns the value of the '<em><b>Robot Containers</b></em>' containment reference list.
+	 * The list contents are of type {@link org.hyperflex.rapyutacomponentmodel.RobotContainer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Composites</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Robot Containers</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Composites</em>' containment reference list.
-	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getSystem_Composites()
+	 * @return the value of the '<em>Robot Containers</em>' containment reference list.
+	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getSystem_RobotContainers()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Composite> getComposites();
+	EList<RobotContainer> getRobotContainers();
 
 	/**
 	 * Returns the value of the '<em><b>End Point Srv Connections</b></em>' containment reference list.

@@ -117,26 +117,49 @@ public class rapyutacomponentmodelItemProviderAdapterFactory extends rapyutacomp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.hyperflex.rapyutacomponentmodel.Container} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.rapyutacomponentmodel.CloudContainer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ContainerItemProvider containerItemProvider;
+	protected CloudContainerItemProvider cloudContainerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.hyperflex.rapyutacomponentmodel.Container}.
+	 * This creates an adapter for a {@link org.hyperflex.rapyutacomponentmodel.CloudContainer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createContainerAdapter() {
-		if (containerItemProvider == null) {
-			containerItemProvider = new ContainerItemProvider(this);
+	public Adapter createCloudContainerAdapter() {
+		if (cloudContainerItemProvider == null) {
+			cloudContainerItemProvider = new CloudContainerItemProvider(this);
 		}
 
-		return containerItemProvider;
+		return cloudContainerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.rapyutacomponentmodel.RobotContainer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RobotContainerItemProvider robotContainerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.hyperflex.rapyutacomponentmodel.RobotContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRobotContainerAdapter() {
+		if (robotContainerItemProvider == null) {
+			robotContainerItemProvider = new RobotContainerItemProvider(this);
+		}
+
+		return robotContainerItemProvider;
 	}
 
 	/**
@@ -952,7 +975,8 @@ public class rapyutacomponentmodelItemProviderAdapterFactory extends rapyutacomp
 	 */
 	public void dispose() {
 		if (systemItemProvider != null) systemItemProvider.dispose();
-		if (containerItemProvider != null) containerItemProvider.dispose();
+		if (cloudContainerItemProvider != null) cloudContainerItemProvider.dispose();
+		if (robotContainerItemProvider != null) robotContainerItemProvider.dispose();
 		if (nodeItemProvider != null) nodeItemProvider.dispose();
 		if (compositeItemProvider != null) compositeItemProvider.dispose();
 		if (msgInterfaceItemProvider != null) msgInterfaceItemProvider.dispose();

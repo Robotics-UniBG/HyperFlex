@@ -28,41 +28,41 @@ package org.hyperflex.rapyutacomponentmodel.diagram.edit.policies;
 
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.Composite2CreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.NodeCreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeCreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.Node2CreateCommand;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.RobotEndPointCreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.TopicCreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.Topic2CreateCommand;
 import org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelElementTypes;
 
 /**
  * @generated
  */
-public class CompositeCompositeContainerCompartmentItemSemanticEditPolicy
+public class RobotContainerCompositeContainerCompartmentItemSemanticEditPolicy
 		extends RapyutaComponentModelBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated
 	 */
-	public CompositeCompositeContainerCompartmentItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Composite_2003);
+	public RobotContainerCompositeContainerCompartmentItemSemanticEditPolicy() {
+		super(RapyutaComponentModelElementTypes.RobotContainer_2005);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.Node_3041 == req.getElementType()) {
-			return getGEFWrapper(new NodeCreateCommand(req));
+		if (RapyutaComponentModelElementTypes.Node_3063 == req.getElementType()) {
+			return getGEFWrapper(new Node2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.Composite_3047 == req
+		if (RapyutaComponentModelElementTypes.Composite_3076 == req
 				.getElementType()) {
-			return getGEFWrapper(new Composite2CreateCommand(req));
+			return getGEFWrapper(new CompositeCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.Topic_3056 == req
+		if (RapyutaComponentModelElementTypes.Topic_3075 == req
 				.getElementType()) {
-			return getGEFWrapper(new TopicCreateCommand(req));
+			return getGEFWrapper(new Topic2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.RobotEndPoint_3057 == req
+		if (RapyutaComponentModelElementTypes.RobotEndPoint_3077 == req
 				.getElementType()) {
 			return getGEFWrapper(new RobotEndPointCreateCommand(req));
 		}

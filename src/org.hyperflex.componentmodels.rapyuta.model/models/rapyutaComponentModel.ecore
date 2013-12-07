@@ -3,10 +3,10 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rapyutacomponentmodel" nsURI="http://www.hyperflex.org/componentmodels.rapyuta"
     nsPrefix="rapyutacomponentmodel">
   <eClassifiers xsi:type="ecore:EClass" name="System">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="containers" lowerBound="1"
-        upperBound="-1" eType="#//Container" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="composites" lowerBound="1"
-        upperBound="-1" eType="#//Composite" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cloudContainers" lowerBound="1"
+        upperBound="-1" eType="#//CloudContainer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="robotContainers" lowerBound="1"
+        upperBound="-1" eType="#//RobotContainer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="endPointSrvConnections"
         upperBound="-1" eType="#//EndPointSrvConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="endPointMsgConnections"
@@ -14,16 +14,22 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="System"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Container">
+  <eClassifiers xsi:type="ecore:EClass" name="Container" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="topics" upperBound="-1"
         eType="#//Topic" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="srvConnections" upperBound="-1"
         eType="#//ContainerSrvConnection" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="endPoint" lowerBound="1"
-        eType="#//EnvironmentEndPoint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
         eType="#//AbstractComponent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CloudContainer" eSuperTypes="#//Container">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endPoint" lowerBound="1"
+        eType="#//EnvironmentEndPoint" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RobotContainer" eSuperTypes="#//Container">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endPoint" eType="#//RobotEndPoint"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractComponent" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -59,8 +65,6 @@
         eType="#//CompositeSrvConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
         eType="#//CompositeParameter" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="endPoint" eType="#//RobotEndPoint"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MsgInterface">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -117,7 +121,7 @@
         eType="#//SrvClient"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EndPoint" abstract="true" eSuperTypes="#//AbstractComponent">
+  <eClassifiers xsi:type="ecore:EClass" name="EndPoint" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="publishers" upperBound="-1"
         eType="#//EndPointPublisher" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subscribers" upperBound="-1"
@@ -128,6 +132,7 @@
         eType="#//EndPointSrvClient" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
         eType="#//EndPointParameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RobotEndPoint" eSuperTypes="#//EndPoint">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
 import org.hyperflex.rapyutacomponentmodel.AbstractComponent;
+import org.hyperflex.rapyutacomponentmodel.CloudContainer;
 import org.hyperflex.rapyutacomponentmodel.Composite;
 import org.hyperflex.rapyutacomponentmodel.CompositeMsgInterface;
 import org.hyperflex.rapyutacomponentmodel.CompositePublisher;
@@ -63,13 +64,15 @@ import org.hyperflex.rapyutacomponentmodel.NodePublisher;
 import org.hyperflex.rapyutacomponentmodel.NodeSrvClient;
 import org.hyperflex.rapyutacomponentmodel.NodeSrvServer;
 import org.hyperflex.rapyutacomponentmodel.NodeSubscriber;
+import org.hyperflex.rapyutacomponentmodel.RobotContainer;
 import org.hyperflex.rapyutacomponentmodel.RobotEndPoint;
 import org.hyperflex.rapyutacomponentmodel.SrvClient;
 import org.hyperflex.rapyutacomponentmodel.SrvServer;
 import org.hyperflex.rapyutacomponentmodel.System;
 import org.hyperflex.rapyutacomponentmodel.Topic;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerContainerCompartmentEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Composite2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
@@ -82,8 +85,6 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServer
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriberEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerContainerCompartmentEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerSrvConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointMsgConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointParameter2EditPart;
@@ -115,6 +116,8 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServer2Edit
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriberEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerCompositeContainerCompartmentEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEndPointPropertiesCompartmentEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.SystemEditPart;
@@ -135,30 +138,32 @@ public class RapyutaComponentModelDiagramUpdater {
 		switch (RapyutaComponentModelVisualIDRegistry.getVisualID(view)) {
 		case SystemEditPart.VISUAL_ID:
 			return getSystem_1000SemanticChildren(view);
-		case CompositeEditPart.VISUAL_ID:
-			return getComposite_2003SemanticChildren(view);
-		case NodeEditPart.VISUAL_ID:
-			return getNode_3041SemanticChildren(view);
-		case Composite2EditPart.VISUAL_ID:
-			return getComposite_3047SemanticChildren(view);
-		case RobotEndPointEditPart.VISUAL_ID:
-			return getRobotEndPoint_3057SemanticChildren(view);
+		case CloudContainerEditPart.VISUAL_ID:
+			return getCloudContainer_2006SemanticChildren(view);
 		case Node2EditPart.VISUAL_ID:
 			return getNode_3063SemanticChildren(view);
+		case CompositeEditPart.VISUAL_ID:
+			return getComposite_3076SemanticChildren(view);
+		case RobotEndPointEditPart.VISUAL_ID:
+			return getRobotEndPoint_3077SemanticChildren(view);
+		case NodeEditPart.VISUAL_ID:
+			return getNode_3078SemanticChildren(view);
 		case EnvironmentEndPointEditPart.VISUAL_ID:
-			return getEnvironmentEndPoint_3069SemanticChildren(view);
-		case CompositeCompositeContainerCompartmentEditPart.VISUAL_ID:
-			return getCompositeCompositeContainerCompartment_7012SemanticChildren(view);
-		case NodePropertiesCompartmentEditPart.VISUAL_ID:
-			return getNodePropertiesCompartment_7013SemanticChildren(view);
-		case RobotEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID:
-			return getRobotEndPointEndPointPropertiesCompartment_7014SemanticChildren(view);
-		case ContainerContainerCompartmentEditPart.VISUAL_ID:
-			return getContainerContainerCompartment_7015SemanticChildren(view);
+			return getEnvironmentEndPoint_3079SemanticChildren(view);
+		case Composite2EditPart.VISUAL_ID:
+			return getComposite_3081SemanticChildren(view);
+		case RobotContainerCompositeContainerCompartmentEditPart.VISUAL_ID:
+			return getRobotContainerCompositeContainerCompartment_7018SemanticChildren(view);
 		case NodePropertiesCompartment2EditPart.VISUAL_ID:
 			return getNodePropertiesCompartment_7016SemanticChildren(view);
+		case RobotEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID:
+			return getRobotEndPointEndPointPropertiesCompartment_7019SemanticChildren(view);
+		case CloudContainerContainerCompartmentEditPart.VISUAL_ID:
+			return getCloudContainerContainerCompartment_7020SemanticChildren(view);
+		case NodePropertiesCompartmentEditPart.VISUAL_ID:
+			return getNodePropertiesCompartment_7021SemanticChildren(view);
 		case EnvironmentEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID:
-			return getEnvironmentEndPointEndPointPropertiesCompartment_7017SemanticChildren(view);
+			return getEnvironmentEndPointEndPointPropertiesCompartment_7022SemanticChildren(view);
 		}
 		return Collections.emptyList();
 	}
@@ -173,23 +178,23 @@ public class RapyutaComponentModelDiagramUpdater {
 		}
 		System modelElement = (System) view.getElement();
 		LinkedList<RapyutaComponentModelNodeDescriptor> result = new LinkedList<RapyutaComponentModelNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getComposites().iterator(); it
+		for (Iterator<?> it = modelElement.getRobotContainers().iterator(); it
 				.hasNext();) {
-			Composite childElement = (Composite) it.next();
+			RobotContainer childElement = (RobotContainer) it.next();
 			int visualID = RapyutaComponentModelVisualIDRegistry
 					.getNodeVisualID(view, childElement);
-			if (visualID == CompositeEditPart.VISUAL_ID) {
+			if (visualID == RobotContainerEditPart.VISUAL_ID) {
 				result.add(new RapyutaComponentModelNodeDescriptor(
 						childElement, visualID));
 				continue;
 			}
 		}
-		for (Iterator<?> it = modelElement.getContainers().iterator(); it
+		for (Iterator<?> it = modelElement.getCloudContainers().iterator(); it
 				.hasNext();) {
-			Container childElement = (Container) it.next();
+			CloudContainer childElement = (CloudContainer) it.next();
 			int visualID = RapyutaComponentModelVisualIDRegistry
 					.getNodeVisualID(view, childElement);
-			if (visualID == ContainerEditPart.VISUAL_ID) {
+			if (visualID == CloudContainerEditPart.VISUAL_ID) {
 				result.add(new RapyutaComponentModelNodeDescriptor(
 						childElement, visualID));
 				continue;
@@ -201,52 +206,19 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelNodeDescriptor> getComposite_2003SemanticChildren(
+	public static List<RapyutaComponentModelNodeDescriptor> getCloudContainer_2006SemanticChildren(
 			View view) {
 		if (!view.isSetElement()) {
 			return Collections.emptyList();
 		}
-		Composite modelElement = (Composite) view.getElement();
+		CloudContainer modelElement = (CloudContainer) view.getElement();
 		LinkedList<RapyutaComponentModelNodeDescriptor> result = new LinkedList<RapyutaComponentModelNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getPublishers().iterator(); it
+		for (Iterator<?> it = modelElement.getComponents().iterator(); it
 				.hasNext();) {
-			CompositePublisher childElement = (CompositePublisher) it.next();
+			AbstractComponent childElement = (AbstractComponent) it.next();
 			int visualID = RapyutaComponentModelVisualIDRegistry
 					.getNodeVisualID(view, childElement);
-			if (visualID == CompositePublisher2EditPart.VISUAL_ID) {
-				result.add(new RapyutaComponentModelNodeDescriptor(
-						childElement, visualID));
-				continue;
-			}
-		}
-		for (Iterator<?> it = modelElement.getSubscribers().iterator(); it
-				.hasNext();) {
-			CompositeSubscriber childElement = (CompositeSubscriber) it.next();
-			int visualID = RapyutaComponentModelVisualIDRegistry
-					.getNodeVisualID(view, childElement);
-			if (visualID == CompositeSubscriber2EditPart.VISUAL_ID) {
-				result.add(new RapyutaComponentModelNodeDescriptor(
-						childElement, visualID));
-				continue;
-			}
-		}
-		for (Iterator<?> it = modelElement.getSrvServers().iterator(); it
-				.hasNext();) {
-			CompositeSrvServer childElement = (CompositeSrvServer) it.next();
-			int visualID = RapyutaComponentModelVisualIDRegistry
-					.getNodeVisualID(view, childElement);
-			if (visualID == CompositeSrvServer2EditPart.VISUAL_ID) {
-				result.add(new RapyutaComponentModelNodeDescriptor(
-						childElement, visualID));
-				continue;
-			}
-		}
-		for (Iterator<?> it = modelElement.getSrvClients().iterator(); it
-				.hasNext();) {
-			CompositeSrvClient childElement = (CompositeSrvClient) it.next();
-			int visualID = RapyutaComponentModelVisualIDRegistry
-					.getNodeVisualID(view, childElement);
-			if (visualID == CompositeSrvClient2EditPart.VISUAL_ID) {
+			if (visualID == Composite2EditPart.VISUAL_ID) {
 				result.add(new RapyutaComponentModelNodeDescriptor(
 						childElement, visualID));
 				continue;
@@ -258,7 +230,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelNodeDescriptor> getNode_3041SemanticChildren(
+	public static List<RapyutaComponentModelNodeDescriptor> getNode_3063SemanticChildren(
 			View view) {
 		if (!view.isSetElement()) {
 			return Collections.emptyList();
@@ -315,7 +287,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelNodeDescriptor> getComposite_3047SemanticChildren(
+	public static List<RapyutaComponentModelNodeDescriptor> getComposite_3076SemanticChildren(
 			View view) {
 		if (!view.isSetElement()) {
 			return Collections.emptyList();
@@ -372,7 +344,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelNodeDescriptor> getRobotEndPoint_3057SemanticChildren(
+	public static List<RapyutaComponentModelNodeDescriptor> getRobotEndPoint_3077SemanticChildren(
 			View view) {
 		if (!view.isSetElement()) {
 			return Collections.emptyList();
@@ -429,7 +401,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelNodeDescriptor> getNode_3063SemanticChildren(
+	public static List<RapyutaComponentModelNodeDescriptor> getNode_3078SemanticChildren(
 			View view) {
 		if (!view.isSetElement()) {
 			return Collections.emptyList();
@@ -486,7 +458,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelNodeDescriptor> getEnvironmentEndPoint_3069SemanticChildren(
+	public static List<RapyutaComponentModelNodeDescriptor> getEnvironmentEndPoint_3079SemanticChildren(
 			View view) {
 		if (!view.isSetElement()) {
 			return Collections.emptyList();
@@ -544,7 +516,64 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelNodeDescriptor> getCompositeCompositeContainerCompartment_7012SemanticChildren(
+	public static List<RapyutaComponentModelNodeDescriptor> getComposite_3081SemanticChildren(
+			View view) {
+		if (!view.isSetElement()) {
+			return Collections.emptyList();
+		}
+		Composite modelElement = (Composite) view.getElement();
+		LinkedList<RapyutaComponentModelNodeDescriptor> result = new LinkedList<RapyutaComponentModelNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getPublishers().iterator(); it
+				.hasNext();) {
+			CompositePublisher childElement = (CompositePublisher) it.next();
+			int visualID = RapyutaComponentModelVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == CompositePublisher2EditPart.VISUAL_ID) {
+				result.add(new RapyutaComponentModelNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getSubscribers().iterator(); it
+				.hasNext();) {
+			CompositeSubscriber childElement = (CompositeSubscriber) it.next();
+			int visualID = RapyutaComponentModelVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == CompositeSubscriber2EditPart.VISUAL_ID) {
+				result.add(new RapyutaComponentModelNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getSrvServers().iterator(); it
+				.hasNext();) {
+			CompositeSrvServer childElement = (CompositeSrvServer) it.next();
+			int visualID = RapyutaComponentModelVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == CompositeSrvServer2EditPart.VISUAL_ID) {
+				result.add(new RapyutaComponentModelNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+		}
+		for (Iterator<?> it = modelElement.getSrvClients().iterator(); it
+				.hasNext();) {
+			CompositeSrvClient childElement = (CompositeSrvClient) it.next();
+			int visualID = RapyutaComponentModelVisualIDRegistry
+					.getNodeVisualID(view, childElement);
+			if (visualID == CompositeSrvClient2EditPart.VISUAL_ID) {
+				result.add(new RapyutaComponentModelNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<RapyutaComponentModelNodeDescriptor> getRobotContainerCompositeContainerCompartment_7018SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -553,19 +582,20 @@ public class RapyutaComponentModelDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		Composite modelElement = (Composite) containerView.getElement();
+		RobotContainer modelElement = (RobotContainer) containerView
+				.getElement();
 		LinkedList<RapyutaComponentModelNodeDescriptor> result = new LinkedList<RapyutaComponentModelNodeDescriptor>();
 		for (Iterator<?> it = modelElement.getComponents().iterator(); it
 				.hasNext();) {
 			AbstractComponent childElement = (AbstractComponent) it.next();
 			int visualID = RapyutaComponentModelVisualIDRegistry
 					.getNodeVisualID(view, childElement);
-			if (visualID == NodeEditPart.VISUAL_ID) {
+			if (visualID == Node2EditPart.VISUAL_ID) {
 				result.add(new RapyutaComponentModelNodeDescriptor(
 						childElement, visualID));
 				continue;
 			}
-			if (visualID == Composite2EditPart.VISUAL_ID) {
+			if (visualID == CompositeEditPart.VISUAL_ID) {
 				result.add(new RapyutaComponentModelNodeDescriptor(
 						childElement, visualID));
 				continue;
@@ -575,7 +605,7 @@ public class RapyutaComponentModelDiagramUpdater {
 			Topic childElement = (Topic) it.next();
 			int visualID = RapyutaComponentModelVisualIDRegistry
 					.getNodeVisualID(view, childElement);
-			if (visualID == TopicEditPart.VISUAL_ID) {
+			if (visualID == Topic2EditPart.VISUAL_ID) {
 				result.add(new RapyutaComponentModelNodeDescriptor(
 						childElement, visualID));
 				continue;
@@ -596,7 +626,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelNodeDescriptor> getNodePropertiesCompartment_7013SemanticChildren(
+	public static List<RapyutaComponentModelNodeDescriptor> getNodePropertiesCompartment_7016SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -624,7 +654,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelNodeDescriptor> getRobotEndPointEndPointPropertiesCompartment_7014SemanticChildren(
+	public static List<RapyutaComponentModelNodeDescriptor> getRobotEndPointEndPointPropertiesCompartment_7019SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -652,7 +682,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelNodeDescriptor> getContainerContainerCompartment_7015SemanticChildren(
+	public static List<RapyutaComponentModelNodeDescriptor> getCloudContainerContainerCompartment_7020SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -661,14 +691,15 @@ public class RapyutaComponentModelDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		Container modelElement = (Container) containerView.getElement();
+		CloudContainer modelElement = (CloudContainer) containerView
+				.getElement();
 		LinkedList<RapyutaComponentModelNodeDescriptor> result = new LinkedList<RapyutaComponentModelNodeDescriptor>();
 		for (Iterator<?> it = modelElement.getComponents().iterator(); it
 				.hasNext();) {
 			AbstractComponent childElement = (AbstractComponent) it.next();
 			int visualID = RapyutaComponentModelVisualIDRegistry
 					.getNodeVisualID(view, childElement);
-			if (visualID == Node2EditPart.VISUAL_ID) {
+			if (visualID == NodeEditPart.VISUAL_ID) {
 				result.add(new RapyutaComponentModelNodeDescriptor(
 						childElement, visualID));
 				continue;
@@ -687,7 +718,7 @@ public class RapyutaComponentModelDiagramUpdater {
 			Topic childElement = (Topic) it.next();
 			int visualID = RapyutaComponentModelVisualIDRegistry
 					.getNodeVisualID(view, childElement);
-			if (visualID == Topic2EditPart.VISUAL_ID) {
+			if (visualID == TopicEditPart.VISUAL_ID) {
 				result.add(new RapyutaComponentModelNodeDescriptor(
 						childElement, visualID));
 				continue;
@@ -699,7 +730,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelNodeDescriptor> getNodePropertiesCompartment_7016SemanticChildren(
+	public static List<RapyutaComponentModelNodeDescriptor> getNodePropertiesCompartment_7021SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -727,7 +758,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelNodeDescriptor> getEnvironmentEndPointEndPointPropertiesCompartment_7017SemanticChildren(
+	public static List<RapyutaComponentModelNodeDescriptor> getEnvironmentEndPointEndPointPropertiesCompartment_7022SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
 			return Collections.emptyList();
@@ -761,12 +792,12 @@ public class RapyutaComponentModelDiagramUpdater {
 		switch (RapyutaComponentModelVisualIDRegistry.getVisualID(view)) {
 		case SystemEditPart.VISUAL_ID:
 			return getSystem_1000ContainedLinks(view);
-		case CompositeEditPart.VISUAL_ID:
-			return getComposite_2003ContainedLinks(view);
-		case ContainerEditPart.VISUAL_ID:
-			return getContainer_2004ContainedLinks(view);
-		case NodeEditPart.VISUAL_ID:
-			return getNode_3041ContainedLinks(view);
+		case RobotContainerEditPart.VISUAL_ID:
+			return getRobotContainer_2005ContainedLinks(view);
+		case CloudContainerEditPart.VISUAL_ID:
+			return getCloudContainer_2006ContainedLinks(view);
+		case Node2EditPart.VISUAL_ID:
+			return getNode_3063ContainedLinks(view);
 		case NodeParameterEditPart.VISUAL_ID:
 			return getNodeParameter_3042ContainedLinks(view);
 		case NodePublisherEditPart.VISUAL_ID:
@@ -777,8 +808,8 @@ public class RapyutaComponentModelDiagramUpdater {
 			return getNodeSrvServer_3045ContainedLinks(view);
 		case NodeSrvClientEditPart.VISUAL_ID:
 			return getNodeSrvClient_3046ContainedLinks(view);
-		case Composite2EditPart.VISUAL_ID:
-			return getComposite_3047ContainedLinks(view);
+		case CompositeEditPart.VISUAL_ID:
+			return getComposite_3076ContainedLinks(view);
 		case CompositePublisherEditPart.VISUAL_ID:
 			return getCompositePublisher_3048ContainedLinks(view);
 		case CompositeSubscriberEditPart.VISUAL_ID:
@@ -787,18 +818,10 @@ public class RapyutaComponentModelDiagramUpdater {
 			return getCompositeSrvServer_3050ContainedLinks(view);
 		case CompositeSrvClientEditPart.VISUAL_ID:
 			return getCompositeSrvClient_3051ContainedLinks(view);
-		case CompositePublisher2EditPart.VISUAL_ID:
-			return getCompositePublisher_3052ContainedLinks(view);
-		case CompositeSubscriber2EditPart.VISUAL_ID:
-			return getCompositeSubscriber_3053ContainedLinks(view);
-		case CompositeSrvServer2EditPart.VISUAL_ID:
-			return getCompositeSrvServer_3054ContainedLinks(view);
-		case CompositeSrvClient2EditPart.VISUAL_ID:
-			return getCompositeSrvClient_3055ContainedLinks(view);
-		case TopicEditPart.VISUAL_ID:
-			return getTopic_3056ContainedLinks(view);
+		case Topic2EditPart.VISUAL_ID:
+			return getTopic_3075ContainedLinks(view);
 		case RobotEndPointEditPart.VISUAL_ID:
-			return getRobotEndPoint_3057ContainedLinks(view);
+			return getRobotEndPoint_3077ContainedLinks(view);
 		case EndPointParameterEditPart.VISUAL_ID:
 			return getEndPointParameter_3058ContainedLinks(view);
 		case EndPointPublisherEditPart.VISUAL_ID:
@@ -809,8 +832,8 @@ public class RapyutaComponentModelDiagramUpdater {
 			return getEndPointSrvServer_3061ContainedLinks(view);
 		case EndPointSrvClientEditPart.VISUAL_ID:
 			return getEndPointSrvClient_3062ContainedLinks(view);
-		case Node2EditPart.VISUAL_ID:
-			return getNode_3063ContainedLinks(view);
+		case NodeEditPart.VISUAL_ID:
+			return getNode_3078ContainedLinks(view);
 		case NodeParameter2EditPart.VISUAL_ID:
 			return getNodeParameter_3064ContainedLinks(view);
 		case NodePublisher2EditPart.VISUAL_ID:
@@ -822,7 +845,7 @@ public class RapyutaComponentModelDiagramUpdater {
 		case NodeSrvClient2EditPart.VISUAL_ID:
 			return getNodeSrvClient_3068ContainedLinks(view);
 		case EnvironmentEndPointEditPart.VISUAL_ID:
-			return getEnvironmentEndPoint_3069ContainedLinks(view);
+			return getEnvironmentEndPoint_3079ContainedLinks(view);
 		case EndPointParameter2EditPart.VISUAL_ID:
 			return getEndPointParameter_3070ContainedLinks(view);
 		case EndPointPublisher2EditPart.VISUAL_ID:
@@ -833,8 +856,18 @@ public class RapyutaComponentModelDiagramUpdater {
 			return getEndPointSrvServer_3073ContainedLinks(view);
 		case EndPointSrvClient2EditPart.VISUAL_ID:
 			return getEndPointSrvClient_3074ContainedLinks(view);
-		case Topic2EditPart.VISUAL_ID:
-			return getTopic_3075ContainedLinks(view);
+		case TopicEditPart.VISUAL_ID:
+			return getTopic_3080ContainedLinks(view);
+		case Composite2EditPart.VISUAL_ID:
+			return getComposite_3081ContainedLinks(view);
+		case CompositePublisher2EditPart.VISUAL_ID:
+			return getCompositePublisher_3052ContainedLinks(view);
+		case CompositeSubscriber2EditPart.VISUAL_ID:
+			return getCompositeSubscriber_3053ContainedLinks(view);
+		case CompositeSrvServer2EditPart.VISUAL_ID:
+			return getCompositeSrvServer_3054ContainedLinks(view);
+		case CompositeSrvClient2EditPart.VISUAL_ID:
+			return getCompositeSrvClient_3055ContainedLinks(view);
 		case EndPointSrvConnectionEditPart.VISUAL_ID:
 			return getEndPointSrvConnection_4015ContainedLinks(view);
 		case EndPointMsgConnectionEditPart.VISUAL_ID:
@@ -853,12 +886,12 @@ public class RapyutaComponentModelDiagramUpdater {
 	public static List<RapyutaComponentModelLinkDescriptor> getIncomingLinks(
 			View view) {
 		switch (RapyutaComponentModelVisualIDRegistry.getVisualID(view)) {
-		case CompositeEditPart.VISUAL_ID:
-			return getComposite_2003IncomingLinks(view);
-		case ContainerEditPart.VISUAL_ID:
-			return getContainer_2004IncomingLinks(view);
-		case NodeEditPart.VISUAL_ID:
-			return getNode_3041IncomingLinks(view);
+		case RobotContainerEditPart.VISUAL_ID:
+			return getRobotContainer_2005IncomingLinks(view);
+		case CloudContainerEditPart.VISUAL_ID:
+			return getCloudContainer_2006IncomingLinks(view);
+		case Node2EditPart.VISUAL_ID:
+			return getNode_3063IncomingLinks(view);
 		case NodeParameterEditPart.VISUAL_ID:
 			return getNodeParameter_3042IncomingLinks(view);
 		case NodePublisherEditPart.VISUAL_ID:
@@ -869,8 +902,8 @@ public class RapyutaComponentModelDiagramUpdater {
 			return getNodeSrvServer_3045IncomingLinks(view);
 		case NodeSrvClientEditPart.VISUAL_ID:
 			return getNodeSrvClient_3046IncomingLinks(view);
-		case Composite2EditPart.VISUAL_ID:
-			return getComposite_3047IncomingLinks(view);
+		case CompositeEditPart.VISUAL_ID:
+			return getComposite_3076IncomingLinks(view);
 		case CompositePublisherEditPart.VISUAL_ID:
 			return getCompositePublisher_3048IncomingLinks(view);
 		case CompositeSubscriberEditPart.VISUAL_ID:
@@ -879,18 +912,10 @@ public class RapyutaComponentModelDiagramUpdater {
 			return getCompositeSrvServer_3050IncomingLinks(view);
 		case CompositeSrvClientEditPart.VISUAL_ID:
 			return getCompositeSrvClient_3051IncomingLinks(view);
-		case CompositePublisher2EditPart.VISUAL_ID:
-			return getCompositePublisher_3052IncomingLinks(view);
-		case CompositeSubscriber2EditPart.VISUAL_ID:
-			return getCompositeSubscriber_3053IncomingLinks(view);
-		case CompositeSrvServer2EditPart.VISUAL_ID:
-			return getCompositeSrvServer_3054IncomingLinks(view);
-		case CompositeSrvClient2EditPart.VISUAL_ID:
-			return getCompositeSrvClient_3055IncomingLinks(view);
-		case TopicEditPart.VISUAL_ID:
-			return getTopic_3056IncomingLinks(view);
+		case Topic2EditPart.VISUAL_ID:
+			return getTopic_3075IncomingLinks(view);
 		case RobotEndPointEditPart.VISUAL_ID:
-			return getRobotEndPoint_3057IncomingLinks(view);
+			return getRobotEndPoint_3077IncomingLinks(view);
 		case EndPointParameterEditPart.VISUAL_ID:
 			return getEndPointParameter_3058IncomingLinks(view);
 		case EndPointPublisherEditPart.VISUAL_ID:
@@ -901,8 +926,8 @@ public class RapyutaComponentModelDiagramUpdater {
 			return getEndPointSrvServer_3061IncomingLinks(view);
 		case EndPointSrvClientEditPart.VISUAL_ID:
 			return getEndPointSrvClient_3062IncomingLinks(view);
-		case Node2EditPart.VISUAL_ID:
-			return getNode_3063IncomingLinks(view);
+		case NodeEditPart.VISUAL_ID:
+			return getNode_3078IncomingLinks(view);
 		case NodeParameter2EditPart.VISUAL_ID:
 			return getNodeParameter_3064IncomingLinks(view);
 		case NodePublisher2EditPart.VISUAL_ID:
@@ -914,7 +939,7 @@ public class RapyutaComponentModelDiagramUpdater {
 		case NodeSrvClient2EditPart.VISUAL_ID:
 			return getNodeSrvClient_3068IncomingLinks(view);
 		case EnvironmentEndPointEditPart.VISUAL_ID:
-			return getEnvironmentEndPoint_3069IncomingLinks(view);
+			return getEnvironmentEndPoint_3079IncomingLinks(view);
 		case EndPointParameter2EditPart.VISUAL_ID:
 			return getEndPointParameter_3070IncomingLinks(view);
 		case EndPointPublisher2EditPart.VISUAL_ID:
@@ -925,8 +950,18 @@ public class RapyutaComponentModelDiagramUpdater {
 			return getEndPointSrvServer_3073IncomingLinks(view);
 		case EndPointSrvClient2EditPart.VISUAL_ID:
 			return getEndPointSrvClient_3074IncomingLinks(view);
-		case Topic2EditPart.VISUAL_ID:
-			return getTopic_3075IncomingLinks(view);
+		case TopicEditPart.VISUAL_ID:
+			return getTopic_3080IncomingLinks(view);
+		case Composite2EditPart.VISUAL_ID:
+			return getComposite_3081IncomingLinks(view);
+		case CompositePublisher2EditPart.VISUAL_ID:
+			return getCompositePublisher_3052IncomingLinks(view);
+		case CompositeSubscriber2EditPart.VISUAL_ID:
+			return getCompositeSubscriber_3053IncomingLinks(view);
+		case CompositeSrvServer2EditPart.VISUAL_ID:
+			return getCompositeSrvServer_3054IncomingLinks(view);
+		case CompositeSrvClient2EditPart.VISUAL_ID:
+			return getCompositeSrvClient_3055IncomingLinks(view);
 		case EndPointSrvConnectionEditPart.VISUAL_ID:
 			return getEndPointSrvConnection_4015IncomingLinks(view);
 		case EndPointMsgConnectionEditPart.VISUAL_ID:
@@ -945,12 +980,12 @@ public class RapyutaComponentModelDiagramUpdater {
 	public static List<RapyutaComponentModelLinkDescriptor> getOutgoingLinks(
 			View view) {
 		switch (RapyutaComponentModelVisualIDRegistry.getVisualID(view)) {
-		case CompositeEditPart.VISUAL_ID:
-			return getComposite_2003OutgoingLinks(view);
-		case ContainerEditPart.VISUAL_ID:
-			return getContainer_2004OutgoingLinks(view);
-		case NodeEditPart.VISUAL_ID:
-			return getNode_3041OutgoingLinks(view);
+		case RobotContainerEditPart.VISUAL_ID:
+			return getRobotContainer_2005OutgoingLinks(view);
+		case CloudContainerEditPart.VISUAL_ID:
+			return getCloudContainer_2006OutgoingLinks(view);
+		case Node2EditPart.VISUAL_ID:
+			return getNode_3063OutgoingLinks(view);
 		case NodeParameterEditPart.VISUAL_ID:
 			return getNodeParameter_3042OutgoingLinks(view);
 		case NodePublisherEditPart.VISUAL_ID:
@@ -961,8 +996,8 @@ public class RapyutaComponentModelDiagramUpdater {
 			return getNodeSrvServer_3045OutgoingLinks(view);
 		case NodeSrvClientEditPart.VISUAL_ID:
 			return getNodeSrvClient_3046OutgoingLinks(view);
-		case Composite2EditPart.VISUAL_ID:
-			return getComposite_3047OutgoingLinks(view);
+		case CompositeEditPart.VISUAL_ID:
+			return getComposite_3076OutgoingLinks(view);
 		case CompositePublisherEditPart.VISUAL_ID:
 			return getCompositePublisher_3048OutgoingLinks(view);
 		case CompositeSubscriberEditPart.VISUAL_ID:
@@ -971,18 +1006,10 @@ public class RapyutaComponentModelDiagramUpdater {
 			return getCompositeSrvServer_3050OutgoingLinks(view);
 		case CompositeSrvClientEditPart.VISUAL_ID:
 			return getCompositeSrvClient_3051OutgoingLinks(view);
-		case CompositePublisher2EditPart.VISUAL_ID:
-			return getCompositePublisher_3052OutgoingLinks(view);
-		case CompositeSubscriber2EditPart.VISUAL_ID:
-			return getCompositeSubscriber_3053OutgoingLinks(view);
-		case CompositeSrvServer2EditPart.VISUAL_ID:
-			return getCompositeSrvServer_3054OutgoingLinks(view);
-		case CompositeSrvClient2EditPart.VISUAL_ID:
-			return getCompositeSrvClient_3055OutgoingLinks(view);
-		case TopicEditPart.VISUAL_ID:
-			return getTopic_3056OutgoingLinks(view);
+		case Topic2EditPart.VISUAL_ID:
+			return getTopic_3075OutgoingLinks(view);
 		case RobotEndPointEditPart.VISUAL_ID:
-			return getRobotEndPoint_3057OutgoingLinks(view);
+			return getRobotEndPoint_3077OutgoingLinks(view);
 		case EndPointParameterEditPart.VISUAL_ID:
 			return getEndPointParameter_3058OutgoingLinks(view);
 		case EndPointPublisherEditPart.VISUAL_ID:
@@ -993,8 +1020,8 @@ public class RapyutaComponentModelDiagramUpdater {
 			return getEndPointSrvServer_3061OutgoingLinks(view);
 		case EndPointSrvClientEditPart.VISUAL_ID:
 			return getEndPointSrvClient_3062OutgoingLinks(view);
-		case Node2EditPart.VISUAL_ID:
-			return getNode_3063OutgoingLinks(view);
+		case NodeEditPart.VISUAL_ID:
+			return getNode_3078OutgoingLinks(view);
 		case NodeParameter2EditPart.VISUAL_ID:
 			return getNodeParameter_3064OutgoingLinks(view);
 		case NodePublisher2EditPart.VISUAL_ID:
@@ -1006,7 +1033,7 @@ public class RapyutaComponentModelDiagramUpdater {
 		case NodeSrvClient2EditPart.VISUAL_ID:
 			return getNodeSrvClient_3068OutgoingLinks(view);
 		case EnvironmentEndPointEditPart.VISUAL_ID:
-			return getEnvironmentEndPoint_3069OutgoingLinks(view);
+			return getEnvironmentEndPoint_3079OutgoingLinks(view);
 		case EndPointParameter2EditPart.VISUAL_ID:
 			return getEndPointParameter_3070OutgoingLinks(view);
 		case EndPointPublisher2EditPart.VISUAL_ID:
@@ -1017,8 +1044,18 @@ public class RapyutaComponentModelDiagramUpdater {
 			return getEndPointSrvServer_3073OutgoingLinks(view);
 		case EndPointSrvClient2EditPart.VISUAL_ID:
 			return getEndPointSrvClient_3074OutgoingLinks(view);
-		case Topic2EditPart.VISUAL_ID:
-			return getTopic_3075OutgoingLinks(view);
+		case TopicEditPart.VISUAL_ID:
+			return getTopic_3080OutgoingLinks(view);
+		case Composite2EditPart.VISUAL_ID:
+			return getComposite_3081OutgoingLinks(view);
+		case CompositePublisher2EditPart.VISUAL_ID:
+			return getCompositePublisher_3052OutgoingLinks(view);
+		case CompositeSubscriber2EditPart.VISUAL_ID:
+			return getCompositeSubscriber_3053OutgoingLinks(view);
+		case CompositeSrvServer2EditPart.VISUAL_ID:
+			return getCompositeSrvServer_3054OutgoingLinks(view);
+		case CompositeSrvClient2EditPart.VISUAL_ID:
+			return getCompositeSrvClient_3055OutgoingLinks(view);
 		case EndPointSrvConnectionEditPart.VISUAL_ID:
 			return getEndPointSrvConnection_4015OutgoingLinks(view);
 		case EndPointMsgConnectionEditPart.VISUAL_ID:
@@ -1046,20 +1083,9 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getComposite_2003ContainedLinks(
+	public static List<RapyutaComponentModelLinkDescriptor> getRobotContainer_2005ContainedLinks(
 			View view) {
-		Composite modelElement = (Composite) view.getElement();
-		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
-		result.addAll(getContainedTypeModelFacetLinks_CompositeSrvConnection_4017(modelElement));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getContainer_2004ContainedLinks(
-			View view) {
-		Container modelElement = (Container) view.getElement();
+		RobotContainer modelElement = (RobotContainer) view.getElement();
 		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_ContainerSrvConnection_4018(modelElement));
 		return result;
@@ -1068,9 +1094,12 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getNode_3041ContainedLinks(
+	public static List<RapyutaComponentModelLinkDescriptor> getCloudContainer_2006ContainedLinks(
 			View view) {
-		return Collections.emptyList();
+		CloudContainer modelElement = (CloudContainer) view.getElement();
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_ContainerSrvConnection_4018(modelElement));
+		return result;
 	}
 
 	/**
@@ -1124,7 +1153,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getComposite_3047ContainedLinks(
+	public static List<RapyutaComponentModelLinkDescriptor> getComposite_3076ContainedLinks(
 			View view) {
 		Composite modelElement = (Composite) view.getElement();
 		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
@@ -1227,22 +1256,6 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getTopic_3056ContainedLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getRobotEndPoint_3057ContainedLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getEndPointParameter_3058ContainedLinks(
 			View view) {
 		return Collections.emptyList();
@@ -1285,6 +1298,14 @@ public class RapyutaComponentModelDiagramUpdater {
 	 * @generated
 	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getEndPointSrvClient_3062ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<RapyutaComponentModelLinkDescriptor> getNode_3078ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1348,7 +1369,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getEnvironmentEndPoint_3069ContainedLinks(
+	public static List<RapyutaComponentModelLinkDescriptor> getEnvironmentEndPoint_3079ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1405,7 +1426,34 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<RapyutaComponentModelLinkDescriptor> getTopic_3080ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<RapyutaComponentModelLinkDescriptor> getComposite_3081ContainedLinks(
+			View view) {
+		Composite modelElement = (Composite) view.getElement();
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_CompositeSrvConnection_4017(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getTopic_3075ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<RapyutaComponentModelLinkDescriptor> getRobotEndPoint_3077ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1445,7 +1493,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getComposite_2003IncomingLinks(
+	public static List<RapyutaComponentModelLinkDescriptor> getRobotContainer_2005IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1453,15 +1501,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getContainer_2004IncomingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getNode_3041IncomingLinks(
+	public static List<RapyutaComponentModelLinkDescriptor> getCloudContainer_2006IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1517,7 +1557,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getComposite_3047IncomingLinks(
+	public static List<RapyutaComponentModelLinkDescriptor> getComposite_3076IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1607,34 +1647,6 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getTopic_3056IncomingLinks(
-			View view) {
-		Topic modelElement = (Topic) view.getElement();
-		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
-				.find(view.eResource().getResourceSet().getResources());
-		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
-		result.addAll(getIncomingFeatureModelFacetLinks_MsgInterface_Connection_4011(
-				modelElement, crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_MsgInterface_Connection_4012(
-				modelElement, crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4013(
-				modelElement, crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4014(
-				modelElement, crossReferences));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getRobotEndPoint_3057IncomingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getEndPointParameter_3058IncomingLinks(
 			View view) {
 		return Collections.emptyList();
@@ -1685,6 +1697,14 @@ public class RapyutaComponentModelDiagramUpdater {
 	 * @generated
 	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getEndPointSrvClient_3062IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<RapyutaComponentModelLinkDescriptor> getNode_3078IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1748,7 +1768,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getEnvironmentEndPoint_3069IncomingLinks(
+	public static List<RapyutaComponentModelLinkDescriptor> getEnvironmentEndPoint_3079IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1813,6 +1833,34 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<RapyutaComponentModelLinkDescriptor> getTopic_3080IncomingLinks(
+			View view) {
+		Topic modelElement = (Topic) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<RapyutaComponentModelLinkDescriptor> result = new LinkedList<RapyutaComponentModelLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_MsgInterface_Connection_4011(
+				modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_MsgInterface_Connection_4012(
+				modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4013(
+				modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4014(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<RapyutaComponentModelLinkDescriptor> getComposite_3081IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getTopic_3075IncomingLinks(
 			View view) {
 		Topic modelElement = (Topic) view.getElement();
@@ -1828,6 +1876,14 @@ public class RapyutaComponentModelDiagramUpdater {
 		result.addAll(getIncomingFeatureModelFacetLinks_CompositeMsgInterface_Exposed_4014(
 				modelElement, crossReferences));
 		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<RapyutaComponentModelLinkDescriptor> getRobotEndPoint_3077IncomingLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
@@ -1865,7 +1921,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getComposite_2003OutgoingLinks(
+	public static List<RapyutaComponentModelLinkDescriptor> getRobotContainer_2005OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1873,15 +1929,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getContainer_2004OutgoingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getNode_3041OutgoingLinks(
+	public static List<RapyutaComponentModelLinkDescriptor> getCloudContainer_2006OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1941,7 +1989,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getComposite_3047OutgoingLinks(
+	public static List<RapyutaComponentModelLinkDescriptor> getComposite_3076OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -2051,22 +2099,6 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getTopic_3056OutgoingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getRobotEndPoint_3057OutgoingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getEndPointParameter_3058OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
@@ -2117,6 +2149,14 @@ public class RapyutaComponentModelDiagramUpdater {
 		result.addAll(getOutgoingTypeModelFacetLinks_CompositeSrvConnection_4017(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_ContainerSrvConnection_4018(modelElement));
 		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<RapyutaComponentModelLinkDescriptor> getNode_3078OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
@@ -2182,7 +2222,7 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<RapyutaComponentModelLinkDescriptor> getEnvironmentEndPoint_3069OutgoingLinks(
+	public static List<RapyutaComponentModelLinkDescriptor> getEnvironmentEndPoint_3079OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -2245,7 +2285,31 @@ public class RapyutaComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<RapyutaComponentModelLinkDescriptor> getTopic_3080OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<RapyutaComponentModelLinkDescriptor> getComposite_3081OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<RapyutaComponentModelLinkDescriptor> getTopic_3075OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<RapyutaComponentModelLinkDescriptor> getRobotEndPoint_3077OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}

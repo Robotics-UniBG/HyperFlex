@@ -26,7 +26,6 @@
  */
 package org.hyperflex.rapyutacomponentmodel.diagram.edit.parts;
 
-import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RectangleFigure;
@@ -53,18 +52,18 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.policies.ContainerItemSemanticEditPolicy;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.policies.RobotContainerItemSemanticEditPolicy;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVisualIDRegistry;
 
 /**
  * @generated
  */
-public class ContainerEditPart extends ShapeNodeEditPart {
+public class RobotContainerEditPart extends ShapeNodeEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2004;
+	public static final int VISUAL_ID = 2005;
 
 	/**
 	 * @generated
@@ -79,7 +78,7 @@ public class ContainerEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public ContainerEditPart(View view) {
+	public RobotContainerEditPart(View view) {
 		super(view);
 	}
 
@@ -89,7 +88,7 @@ public class ContainerEditPart extends ShapeNodeEditPart {
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new ContainerItemSemanticEditPolicy());
+				new RobotContainerItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -125,29 +124,31 @@ public class ContainerEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		return primaryShape = new ContainerFigure();
+		return primaryShape = new CompositeContainerFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public ContainerFigure getPrimaryShape() {
-		return (ContainerFigure) primaryShape;
+	public CompositeContainerFigure getPrimaryShape() {
+		return (CompositeContainerFigure) primaryShape;
 	}
 
 	/**
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof ContainerNameEditPart) {
-			((ContainerNameEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureContainerNameLabel());
+		if (childEditPart instanceof RobotContainerNameEditPart) {
+			((RobotContainerNameEditPart) childEditPart)
+					.setLabel(getPrimaryShape()
+							.getFigurePackageContainerNameLabel());
 			return true;
 		}
-		if (childEditPart instanceof ContainerContainerCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getFigureContainerComponentsArea();
+		if (childEditPart instanceof RobotContainerCompositeContainerCompartmentEditPart) {
+			IFigure pane = getPrimaryShape()
+					.getFigureCompositeContainerComponentsArea();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((ContainerContainerCompartmentEditPart) childEditPart)
+			pane.add(((RobotContainerCompositeContainerCompartmentEditPart) childEditPart)
 					.getFigure());
 			return true;
 		}
@@ -158,12 +159,13 @@ public class ContainerEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof ContainerNameEditPart) {
+		if (childEditPart instanceof RobotContainerNameEditPart) {
 			return true;
 		}
-		if (childEditPart instanceof ContainerContainerCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getFigureContainerComponentsArea();
-			pane.remove(((ContainerContainerCompartmentEditPart) childEditPart)
+		if (childEditPart instanceof RobotContainerCompositeContainerCompartmentEditPart) {
+			IFigure pane = getPrimaryShape()
+					.getFigureCompositeContainerComponentsArea();
+			pane.remove(((RobotContainerCompositeContainerCompartmentEditPart) childEditPart)
 					.getFigure());
 			return true;
 		}
@@ -194,8 +196,9 @@ public class ContainerEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof ContainerContainerCompartmentEditPart) {
-			return getPrimaryShape().getFigureContainerComponentsArea();
+		if (editPart instanceof RobotContainerCompositeContainerCompartmentEditPart) {
+			return getPrimaryShape()
+					.getFigureCompositeContainerComponentsArea();
 		}
 		return getContentPane();
 	}
@@ -291,27 +294,27 @@ public class ContainerEditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(RapyutaComponentModelVisualIDRegistry
-				.getType(ContainerNameEditPart.VISUAL_ID));
+				.getType(RobotContainerNameEditPart.VISUAL_ID));
 	}
 
 	/**
 	 * @generated
 	 */
-	public class ContainerFigure extends RoundedRectangle {
+	public class CompositeContainerFigure extends RoundedRectangle {
 
 		/**
 		 * @generated
 		 */
-		private RectangleFigure fFigureContainerComponentsArea;
+		private RectangleFigure fFigureCompositeContainerComponentsArea;
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureContainerNameLabel;
+		private WrappingLabel fFigurePackageContainerNameLabel;
 
 		/**
 		 * @generated
 		 */
-		public ContainerFigure() {
+		public CompositeContainerFigure() {
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
 					getMapMode().DPtoLP(8)));
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
@@ -325,40 +328,38 @@ public class ContainerEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigureContainerNameLabel = new WrappingLabel();
+			fFigurePackageContainerNameLabel = new WrappingLabel();
 
-			fFigureContainerNameLabel.setText("<?>");
-			fFigureContainerNameLabel.setForegroundColor(ColorConstants.black);
+			fFigurePackageContainerNameLabel.setText("<?>");
 
-			fFigureContainerNameLabel.setFont(FFIGURECONTAINERNAMELABEL_FONT);
+			fFigurePackageContainerNameLabel
+					.setFont(FFIGUREPACKAGECONTAINERNAMELABEL_FONT);
 
-			fFigureContainerNameLabel.setMaximumSize(new Dimension(getMapMode()
-					.DPtoLP(10000), getMapMode().DPtoLP(50)));
+			fFigurePackageContainerNameLabel.setMaximumSize(new Dimension(
+					getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
-			this.add(fFigureContainerNameLabel);
+			this.add(fFigurePackageContainerNameLabel);
 
-			fFigureContainerComponentsArea = new RectangleFigure();
+			fFigureCompositeContainerComponentsArea = new RectangleFigure();
 
-			fFigureContainerComponentsArea.setLineWidth(0);
-			fFigureContainerComponentsArea
-					.setBackgroundColor(FFIGURECONTAINERCOMPONENTSAREA_BACK);
+			fFigureCompositeContainerComponentsArea.setLineWidth(0);
 
-			this.add(fFigureContainerComponentsArea);
+			this.add(fFigureCompositeContainerComponentsArea);
 
 		}
 
 		/**
 		 * @generated
 		 */
-		public RectangleFigure getFigureContainerComponentsArea() {
-			return fFigureContainerComponentsArea;
+		public RectangleFigure getFigureCompositeContainerComponentsArea() {
+			return fFigureCompositeContainerComponentsArea;
 		}
 
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureContainerNameLabel() {
-			return fFigureContainerNameLabel;
+		public WrappingLabel getFigurePackageContainerNameLabel() {
+			return fFigurePackageContainerNameLabel;
 		}
 
 	}
@@ -366,14 +367,8 @@ public class ContainerEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Font FFIGURECONTAINERNAMELABEL_FONT = new Font(
+	static final Font FFIGUREPACKAGECONTAINERNAMELABEL_FONT = new Font(
 			Display.getCurrent(), Display.getDefault().getSystemFont()
 					.getFontData()[0].getName(), 15, SWT.BOLD);
-
-	/**
-	 * @generated
-	 */
-	static final Color FFIGURECONTAINERCOMPONENTSAREA_BACK = new Color(null,
-			200, 255, 255);
 
 }

@@ -61,17 +61,17 @@ public class RapyutaComponentModelPaletteFactory {
 		PaletteDrawer paletteContainer = new PaletteDrawer(
 				Messages.Entities1Group_title);
 		paletteContainer.setId("createEntities1Group"); //$NON-NLS-1$
-		paletteContainer.add(createNode1CreationTool());
-		paletteContainer.add(createPublisher2CreationTool());
-		paletteContainer.add(createSubscriber3CreationTool());
-		paletteContainer.add(createParameter4CreationTool());
-		paletteContainer.add(createComposite5CreationTool());
-		paletteContainer.add(createContainer6CreationTool());
-		paletteContainer.add(createImportComposite7CreationTool());
-		paletteContainer.add(createTopic8CreationTool());
-		paletteContainer.add(createEndPoint9CreationTool());
-		paletteContainer.add(createServiceServer10CreationTool());
-		paletteContainer.add(createServiceClient11CreationTool());
+		paletteContainer.add(createRobotContainer1CreationTool());
+		paletteContainer.add(createCloudContainer2CreationTool());
+		paletteContainer.add(createNode3CreationTool());
+		paletteContainer.add(createImportComposite4CreationTool());
+		paletteContainer.add(createEndPoint5CreationTool());
+		paletteContainer.add(createPublisher6CreationTool());
+		paletteContainer.add(createSubscriber7CreationTool());
+		paletteContainer.add(createServiceServer8CreationTool());
+		paletteContainer.add(createServiceClient9CreationTool());
+		paletteContainer.add(createParameter10CreationTool());
+		paletteContainer.add(createTopic11CreationTool());
 		return paletteContainer;
 	}
 
@@ -91,92 +91,13 @@ public class RapyutaComponentModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createNode1CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RapyutaComponentModelElementTypes.Node_3041);
-		types.add(RapyutaComponentModelElementTypes.Node_3063);
+	private ToolEntry createRobotContainer1CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Node1CreationTool_title,
-				Messages.Node1CreationTool_desc, types);
-		entry.setId("createNode1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
-				.findImageDescriptor("icons/Node.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createPublisher2CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(6);
-		types.add(RapyutaComponentModelElementTypes.NodePublisher_3043);
-		types.add(RapyutaComponentModelElementTypes.CompositePublisher_3048);
-		types.add(RapyutaComponentModelElementTypes.CompositePublisher_3052);
-		types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3059);
-		types.add(RapyutaComponentModelElementTypes.NodePublisher_3065);
-		types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3071);
-		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Publisher2CreationTool_title,
-				Messages.Publisher2CreationTool_desc, types);
-		entry.setId("createPublisher2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
-				.findImageDescriptor("icons/Publisher.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createSubscriber3CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(6);
-		types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3044);
-		types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3049);
-		types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3053);
-		types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3060);
-		types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3066);
-		types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3072);
-		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Subscriber3CreationTool_title,
-				Messages.Subscriber3CreationTool_desc, types);
-		entry.setId("createSubscriber3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
-				.findImageDescriptor("icons/Subscriber.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createParameter4CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-		types.add(RapyutaComponentModelElementTypes.NodeParameter_3042);
-		types.add(RapyutaComponentModelElementTypes.EndPointParameter_3058);
-		types.add(RapyutaComponentModelElementTypes.NodeParameter_3064);
-		types.add(RapyutaComponentModelElementTypes.EndPointParameter_3070);
-		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Parameter4CreationTool_title,
-				Messages.Parameter4CreationTool_desc, types);
-		entry.setId("createParameter4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
-				.findImageDescriptor("icons/Parameter.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createComposite5CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RapyutaComponentModelElementTypes.Composite_2003);
-		types.add(RapyutaComponentModelElementTypes.Composite_3047);
-		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Composite5CreationTool_title,
-				Messages.Composite5CreationTool_desc, types);
-		entry.setId("createComposite5CreationTool"); //$NON-NLS-1$
+				Messages.RobotContainer1CreationTool_title,
+				Messages.RobotContainer1CreationTool_desc,
+				Collections
+						.singletonList(RapyutaComponentModelElementTypes.RobotContainer_2005));
+		entry.setId("createRobotContainer1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Composite.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -186,13 +107,13 @@ public class RapyutaComponentModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createContainer6CreationTool() {
+	private ToolEntry createCloudContainer2CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Container6CreationTool_title,
-				Messages.Container6CreationTool_desc,
+				Messages.CloudContainer2CreationTool_title,
+				Messages.CloudContainer2CreationTool_desc,
 				Collections
-						.singletonList(RapyutaComponentModelElementTypes.Container_2004));
-		entry.setId("createContainer6CreationTool"); //$NON-NLS-1$
+						.singletonList(RapyutaComponentModelElementTypes.CloudContainer_2006));
+		entry.setId("createCloudContainer2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Container.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -202,30 +123,16 @@ public class RapyutaComponentModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createImportComposite7CreationTool() {
-		ToolEntry entry = new ToolEntry(
-				Messages.ImportComposite7CreationTool_title,
-				Messages.ImportComposite7CreationTool_desc, null, null) {
-		};
-		entry.setId("createImportComposite7CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
-				.findImageDescriptor("icons/Composite.gif")); //$NON-NLS-1$
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createTopic8CreationTool() {
+	private ToolEntry createNode3CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RapyutaComponentModelElementTypes.Topic_3056);
-		types.add(RapyutaComponentModelElementTypes.Topic_3075);
+		types.add(RapyutaComponentModelElementTypes.Node_3063);
+		types.add(RapyutaComponentModelElementTypes.Node_3078);
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Topic8CreationTool_title,
-				Messages.Topic8CreationTool_desc, types);
-		entry.setId("createTopic8CreationTool"); //$NON-NLS-1$
+				Messages.Node3CreationTool_title,
+				Messages.Node3CreationTool_desc, types);
+		entry.setId("createNode3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
-				.findImageDescriptor("icons/Topic.gif")); //$NON-NLS-1$
+				.findImageDescriptor("icons/Node.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -233,14 +140,31 @@ public class RapyutaComponentModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createEndPoint9CreationTool() {
+	private ToolEntry createImportComposite4CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RapyutaComponentModelElementTypes.RobotEndPoint_3057);
-		types.add(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069);
+		types.add(RapyutaComponentModelElementTypes.Composite_3076);
+		types.add(RapyutaComponentModelElementTypes.Composite_3081);
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.EndPoint9CreationTool_title,
-				Messages.EndPoint9CreationTool_desc, types);
-		entry.setId("createEndPoint9CreationTool"); //$NON-NLS-1$
+				Messages.ImportComposite4CreationTool_title,
+				Messages.ImportComposite4CreationTool_desc, types);
+		entry.setId("createImportComposite4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
+				.findImageDescriptor("icons/Composite.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createEndPoint5CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(RapyutaComponentModelElementTypes.RobotEndPoint_3077);
+		types.add(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3079);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.EndPoint5CreationTool_title,
+				Messages.EndPoint5CreationTool_desc, types);
+		entry.setId("createEndPoint5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/EndPoint.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -250,17 +174,60 @@ public class RapyutaComponentModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createServiceServer10CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(5);
+	private ToolEntry createPublisher6CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(6);
+		types.add(RapyutaComponentModelElementTypes.NodePublisher_3043);
+		types.add(RapyutaComponentModelElementTypes.CompositePublisher_3048);
+		types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3059);
+		types.add(RapyutaComponentModelElementTypes.NodePublisher_3065);
+		types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3071);
+		types.add(RapyutaComponentModelElementTypes.CompositePublisher_3052);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Publisher6CreationTool_title,
+				Messages.Publisher6CreationTool_desc, types);
+		entry.setId("createPublisher6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
+				.findImageDescriptor("icons/Publisher.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createSubscriber7CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(6);
+		types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3044);
+		types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3049);
+		types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3060);
+		types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3066);
+		types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3072);
+		types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3053);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Subscriber7CreationTool_title,
+				Messages.Subscriber7CreationTool_desc, types);
+		entry.setId("createSubscriber7CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
+				.findImageDescriptor("icons/Subscriber.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createServiceServer8CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(6);
 		types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3045);
-		types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3054);
+		types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3050);
 		types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3061);
 		types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3067);
 		types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3073);
+		types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3054);
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.ServiceServer10CreationTool_title,
-				Messages.ServiceServer10CreationTool_desc, types);
-		entry.setId("createServiceServer10CreationTool"); //$NON-NLS-1$
+				Messages.ServiceServer8CreationTool_title,
+				Messages.ServiceServer8CreationTool_desc, types);
+		entry.setId("createServiceServer8CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/ServiceServer.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -270,21 +237,56 @@ public class RapyutaComponentModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createServiceClient11CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(7);
+	private ToolEntry createServiceClient9CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(6);
 		types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3046);
-		types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3050);
 		types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3051);
-		types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3055);
 		types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3062);
 		types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3068);
 		types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3074);
+		types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3055);
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.ServiceClient11CreationTool_title,
-				Messages.ServiceClient11CreationTool_desc, types);
-		entry.setId("createServiceClient11CreationTool"); //$NON-NLS-1$
+				Messages.ServiceClient9CreationTool_title,
+				Messages.ServiceClient9CreationTool_desc, types);
+		entry.setId("createServiceClient9CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/ServiceClient.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createParameter10CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(RapyutaComponentModelElementTypes.NodeParameter_3042);
+		types.add(RapyutaComponentModelElementTypes.EndPointParameter_3058);
+		types.add(RapyutaComponentModelElementTypes.NodeParameter_3064);
+		types.add(RapyutaComponentModelElementTypes.EndPointParameter_3070);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Parameter10CreationTool_title,
+				Messages.Parameter10CreationTool_desc, types);
+		entry.setId("createParameter10CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
+				.findImageDescriptor("icons/Parameter.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createTopic11CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(RapyutaComponentModelElementTypes.Topic_3075);
+		types.add(RapyutaComponentModelElementTypes.Topic_3080);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Topic11CreationTool_title,
+				Messages.Topic11CreationTool_desc, types);
+		entry.setId("createTopic11CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(RapyutaComponentModelDiagramEditorPlugin
+				.findImageDescriptor("icons/Topic.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

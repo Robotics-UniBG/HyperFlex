@@ -28,10 +28,13 @@ package org.hyperflex.rapyutacomponentmodel.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.hyperflex.rapyutacomponentmodel.EndPoint;
@@ -54,12 +57,13 @@ import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.EndPointImpl#getSrvServers <em>Srv Servers</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.EndPointImpl#getSrvClients <em>Srv Clients</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.EndPointImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.EndPointImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public abstract class EndPointImpl extends AbstractComponentImpl implements EndPoint {
+public abstract class EndPointImpl extends EObjectImpl implements EndPoint {
 	/**
 	 * The cached value of the '{@link #getPublishers() <em>Publishers</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -109,6 +113,26 @@ public abstract class EndPointImpl extends AbstractComponentImpl implements EndP
 	 * @ordered
 	 */
 	protected EList<EndPointParameter> parameters;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -194,6 +218,27 @@ public abstract class EndPointImpl extends AbstractComponentImpl implements EndP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, rapyutacomponentmodelPackage.END_POINT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -229,6 +274,8 @@ public abstract class EndPointImpl extends AbstractComponentImpl implements EndP
 				return getSrvClients();
 			case rapyutacomponentmodelPackage.END_POINT__PARAMETERS:
 				return getParameters();
+			case rapyutacomponentmodelPackage.END_POINT__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -262,6 +309,9 @@ public abstract class EndPointImpl extends AbstractComponentImpl implements EndP
 				getParameters().clear();
 				getParameters().addAll((Collection<? extends EndPointParameter>)newValue);
 				return;
+			case rapyutacomponentmodelPackage.END_POINT__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -289,6 +339,9 @@ public abstract class EndPointImpl extends AbstractComponentImpl implements EndP
 			case rapyutacomponentmodelPackage.END_POINT__PARAMETERS:
 				getParameters().clear();
 				return;
+			case rapyutacomponentmodelPackage.END_POINT__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -311,8 +364,26 @@ public abstract class EndPointImpl extends AbstractComponentImpl implements EndP
 				return srvClients != null && !srvClients.isEmpty();
 			case rapyutacomponentmodelPackage.END_POINT__PARAMETERS:
 				return parameters != null && !parameters.isEmpty();
+			case rapyutacomponentmodelPackage.END_POINT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //EndPointImpl

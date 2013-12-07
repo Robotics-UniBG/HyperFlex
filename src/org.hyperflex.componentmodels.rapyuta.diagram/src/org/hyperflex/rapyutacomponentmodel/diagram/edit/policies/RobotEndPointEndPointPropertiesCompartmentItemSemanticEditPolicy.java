@@ -41,7 +41,7 @@ public class RobotEndPointEndPointPropertiesCompartmentItemSemanticEditPolicy
 	 * @generated
 	 */
 	public RobotEndPointEndPointPropertiesCompartmentItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.RobotEndPoint_3057);
+		super(RapyutaComponentModelElementTypes.RobotEndPoint_3077);
 	}
 
 	/**

@@ -4,35 +4,25 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:trace="http://www.eclipse.org/gmf/2006/Trace">
   <nodeTraces
-      visualID="2003"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Composite') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'System') and _containmentMF_.name = 'composites')">
+      visualID="2005"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'RobotContainer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'System') and _containmentMF_.name = 'robotContainers')">
     <nodeLabelTraces
-        visualID="5025"
+        visualID="5034"
         queryText="true"/>
     <compartmentTraces
-        visualID="7012"
+        visualID="7018"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
-      visualID="2004"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Container') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'System') and _containmentMF_.name = 'containers')">
+      visualID="2006"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'CloudContainer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'System') and _containmentMF_.name = 'cloudContainers')">
     <nodeLabelTraces
-        visualID="5031"
+        visualID="5039"
         queryText="true"/>
     <compartmentTraces
-        visualID="7015"
+        visualID="7020"
         queryText="true"/>
   </nodeTraces>
-  <childNodeTraces
-      visualID="3041"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Node') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Composite') and _containmentMF_.name = 'components')">
-    <nodeLabelTraces
-        visualID="5020"
-        queryText="true"/>
-    <compartmentTraces
-        visualID="7013"
-        queryText="true"/>
-  </childNodeTraces>
   <childNodeTraces
       visualID="3042"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'NodeParameter') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Node') and _containmentMF_.name = 'parameters')">
@@ -52,13 +42,6 @@
   <childNodeTraces
       visualID="3046"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'NodeSrvClient') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Node') and _containmentMF_.name = 'srvClients')"/>
-  <childNodeTraces
-      visualID="3047"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Composite') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Composite') and _containmentMF_.name = 'components')">
-    <nodeLabelTraces
-        visualID="5021"
-        queryText="true"/>
-  </childNodeTraces>
   <childNodeTraces
       visualID="3048"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'CompositePublisher') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Composite') and _containmentMF_.name = 'publishers')"/>
@@ -83,23 +66,6 @@
   <childNodeTraces
       visualID="3055"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'CompositeSrvClient') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Composite') and _containmentMF_.name = 'srvClients')"/>
-  <childNodeTraces
-      visualID="3056"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Topic') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Composite') and _containmentMF_.name = 'topics')">
-    <nodeLabelTraces
-        visualID="5022"
-        queryText="true"/>
-  </childNodeTraces>
-  <childNodeTraces
-      visualID="3057"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'RobotEndPoint') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Composite') and _containmentMF_.name = 'endPoint')">
-    <nodeLabelTraces
-        visualID="5024"
-        queryText="true"/>
-    <compartmentTraces
-        visualID="7014"
-        queryText="true"/>
-  </childNodeTraces>
   <childNodeTraces
       visualID="3058"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'EndPointParameter') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'EndPoint') and _containmentMF_.name = 'parameters')">
@@ -149,16 +115,6 @@
       visualID="3068"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'NodeSrvClient') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Node') and _containmentMF_.name = 'srvClients')"/>
   <childNodeTraces
-      visualID="3069"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'EnvironmentEndPoint') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Container') and _containmentMF_.name = 'endPoint')">
-    <nodeLabelTraces
-        visualID="5029"
-        queryText="true"/>
-    <compartmentTraces
-        visualID="7017"
-        queryText="true"/>
-  </childNodeTraces>
-  <childNodeTraces
       visualID="3070"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'EndPointParameter') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'EndPoint') and _containmentMF_.name = 'parameters')">
     <nodeLabelTraces
@@ -182,6 +138,57 @@
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Topic') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Container') and _containmentMF_.name = 'topics')">
     <nodeLabelTraces
         visualID="5030"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3076"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Composite') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Container') and _containmentMF_.name = 'components')">
+    <nodeLabelTraces
+        visualID="5032"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3077"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'RobotEndPoint') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'RobotContainer') and _containmentMF_.name = 'endPoint')">
+    <nodeLabelTraces
+        visualID="5033"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7019"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3078"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Node') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Container') and _containmentMF_.name = 'components')">
+    <nodeLabelTraces
+        visualID="5035"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7021"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3079"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'EnvironmentEndPoint') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'CloudContainer') and _containmentMF_.name = 'endPoint')">
+    <nodeLabelTraces
+        visualID="5036"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7022"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3080"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Topic') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Container') and _containmentMF_.name = 'topics')">
+    <nodeLabelTraces
+        visualID="5037"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3081"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Composite') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.hyperflex.org/componentmodels.rapyuta' and _eClass_.name = 'Container') and _containmentMF_.name = 'components')">
+    <nodeLabelTraces
+        visualID="5038"
         queryText="true"/>
   </childNodeTraces>
   <linkTraces

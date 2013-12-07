@@ -121,8 +121,8 @@ public class SystemItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(rapyutacomponentmodelPackage.Literals.SYSTEM__CONTAINERS);
-			childrenFeatures.add(rapyutacomponentmodelPackage.Literals.SYSTEM__COMPOSITES);
+			childrenFeatures.add(rapyutacomponentmodelPackage.Literals.SYSTEM__CLOUD_CONTAINERS);
+			childrenFeatures.add(rapyutacomponentmodelPackage.Literals.SYSTEM__ROBOT_CONTAINERS);
 			childrenFeatures.add(rapyutacomponentmodelPackage.Literals.SYSTEM__END_POINT_SRV_CONNECTIONS);
 			childrenFeatures.add(rapyutacomponentmodelPackage.Literals.SYSTEM__END_POINT_MSG_CONNECTIONS);
 		}
@@ -182,8 +182,8 @@ public class SystemItemProvider
 			case rapyutacomponentmodelPackage.SYSTEM__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case rapyutacomponentmodelPackage.SYSTEM__CONTAINERS:
-			case rapyutacomponentmodelPackage.SYSTEM__COMPOSITES:
+			case rapyutacomponentmodelPackage.SYSTEM__CLOUD_CONTAINERS:
+			case rapyutacomponentmodelPackage.SYSTEM__ROBOT_CONTAINERS:
 			case rapyutacomponentmodelPackage.SYSTEM__END_POINT_SRV_CONNECTIONS:
 			case rapyutacomponentmodelPackage.SYSTEM__END_POINT_MSG_CONNECTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -205,13 +205,13 @@ public class SystemItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(rapyutacomponentmodelPackage.Literals.SYSTEM__CONTAINERS,
-				 rapyutacomponentmodelFactory.eINSTANCE.createContainer()));
+				(rapyutacomponentmodelPackage.Literals.SYSTEM__CLOUD_CONTAINERS,
+				 rapyutacomponentmodelFactory.eINSTANCE.createCloudContainer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(rapyutacomponentmodelPackage.Literals.SYSTEM__COMPOSITES,
-				 rapyutacomponentmodelFactory.eINSTANCE.createComposite()));
+				(rapyutacomponentmodelPackage.Literals.SYSTEM__ROBOT_CONTAINERS,
+				 rapyutacomponentmodelFactory.eINSTANCE.createRobotContainer()));
 
 		newChildDescriptors.add
 			(createChildParameter

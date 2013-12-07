@@ -237,16 +237,16 @@ public class NodePublisherEditPart extends AbstractBorderItemEditPart {
 	public List<IElementType> getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
-		}
 		if (targetEditPart instanceof Topic2EditPart) {
 			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
 		}
 		if (targetEditPart instanceof TopicEditPart) {
+			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011);
+		}
+		if (targetEditPart instanceof Topic2EditPart) {
 			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012);
 		}
-		if (targetEditPart instanceof Topic2EditPart) {
+		if (targetEditPart instanceof TopicEditPart) {
 			types.add(RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012);
 		}
 		return types;
@@ -258,11 +258,11 @@ public class NodePublisherEditPart extends AbstractBorderItemEditPart {
 	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4011) {
-			types.add(RapyutaComponentModelElementTypes.Topic_3056);
 			types.add(RapyutaComponentModelElementTypes.Topic_3075);
+			types.add(RapyutaComponentModelElementTypes.Topic_3080);
 		} else if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012) {
-			types.add(RapyutaComponentModelElementTypes.Topic_3056);
 			types.add(RapyutaComponentModelElementTypes.Topic_3075);
+			types.add(RapyutaComponentModelElementTypes.Topic_3080);
 		}
 		return types;
 	}

@@ -41,7 +41,7 @@ public class EnvironmentEndPointEndPointPropertiesCompartmentItemSemanticEditPol
 	 * @generated
 	 */
 	public EnvironmentEndPointEndPointPropertiesCompartmentItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069);
+		super(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3079);
 	}
 
 	/**

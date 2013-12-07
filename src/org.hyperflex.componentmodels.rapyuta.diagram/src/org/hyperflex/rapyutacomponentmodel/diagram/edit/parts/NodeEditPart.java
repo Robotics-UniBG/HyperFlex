@@ -77,7 +77,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3041;
+	public static final int VISUAL_ID = 3078;
 
 	/**
 	 * @generated
@@ -125,10 +125,10 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 				View childView = (View) child.getModel();
 				switch (RapyutaComponentModelVisualIDRegistry
 						.getVisualID(childView)) {
-				case NodePublisherEditPart.VISUAL_ID:
-				case NodeSubscriberEditPart.VISUAL_ID:
-				case NodeSrvServerEditPart.VISUAL_ID:
-				case NodeSrvClientEditPart.VISUAL_ID:
+				case NodePublisher2EditPart.VISUAL_ID:
+				case NodeSubscriber2EditPart.VISUAL_ID:
+				case NodeSrvServer2EditPart.VISUAL_ID:
+				case NodeSrvClient2EditPart.VISUAL_ID:
 					return new BorderItemSelectionEditPolicy();
 				}
 				EditPolicy result = child
@@ -180,35 +180,35 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 					.getFigure());
 			return true;
 		}
-		if (childEditPart instanceof NodePublisherEditPart) {
+		if (childEditPart instanceof NodePublisher2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.WEST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((NodePublisherEditPart) childEditPart).getFigure(),
+					((NodePublisher2EditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
-		if (childEditPart instanceof NodeSubscriberEditPart) {
+		if (childEditPart instanceof NodeSubscriber2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.EAST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((NodeSubscriberEditPart) childEditPart).getFigure(),
+					((NodeSubscriber2EditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
-		if (childEditPart instanceof NodeSrvServerEditPart) {
+		if (childEditPart instanceof NodeSrvServer2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.WEST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((NodeSrvServerEditPart) childEditPart).getFigure(),
+					((NodeSrvServer2EditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
-		if (childEditPart instanceof NodeSrvClientEditPart) {
+		if (childEditPart instanceof NodeSrvClient2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.EAST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((NodeSrvClientEditPart) childEditPart).getFigure(),
+					((NodeSrvClient2EditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
@@ -228,24 +228,24 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 					.getFigure());
 			return true;
 		}
-		if (childEditPart instanceof NodePublisherEditPart) {
+		if (childEditPart instanceof NodePublisher2EditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((NodePublisherEditPart) childEditPart).getFigure());
+					((NodePublisher2EditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof NodeSubscriberEditPart) {
+		if (childEditPart instanceof NodeSubscriber2EditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((NodeSubscriberEditPart) childEditPart).getFigure());
+					((NodeSubscriber2EditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof NodeSrvServerEditPart) {
+		if (childEditPart instanceof NodeSrvServer2EditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((NodeSrvServerEditPart) childEditPart).getFigure());
+					((NodeSrvServer2EditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof NodeSrvClientEditPart) {
+		if (childEditPart instanceof NodeSrvClient2EditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((NodeSrvClientEditPart) childEditPart).getFigure());
+					((NodeSrvClient2EditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -388,7 +388,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter
 					.getAdapter(IElementType.class);
-			if (type == RapyutaComponentModelElementTypes.NodeParameter_3042) {
+			if (type == RapyutaComponentModelElementTypes.NodeParameter_3064) {
 				return getChildBySemanticHint(RapyutaComponentModelVisualIDRegistry
 						.getType(NodePropertiesCompartmentEditPart.VISUAL_ID));
 			}

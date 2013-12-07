@@ -70,7 +70,7 @@ public class EnvironmentEndPointItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public EnvironmentEndPointItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069);
+		super(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3079);
 	}
 
 	/**

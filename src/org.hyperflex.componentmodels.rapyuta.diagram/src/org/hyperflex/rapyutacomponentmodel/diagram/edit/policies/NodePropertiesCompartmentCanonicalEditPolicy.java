@@ -46,7 +46,7 @@ import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeParameterEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeParameter2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramUpdater;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelNodeDescriptor;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVisualIDRegistry;
@@ -85,7 +85,7 @@ public class NodePropertiesCompartmentCanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getNodePropertiesCompartment_7013SemanticChildren(viewObject);
+				.getNodePropertiesCompartment_7021SemanticChildren(viewObject);
 		for (RapyutaComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -105,7 +105,7 @@ public class NodePropertiesCompartmentCanonicalEditPolicy extends
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		return NodeParameterEditPart.VISUAL_ID == RapyutaComponentModelVisualIDRegistry
+		return NodeParameter2EditPart.VISUAL_ID == RapyutaComponentModelVisualIDRegistry
 				.getVisualID(view);
 	}
 
@@ -118,7 +118,7 @@ public class NodePropertiesCompartmentCanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getNodePropertiesCompartment_7013SemanticChildren((View) getHost()
+				.getNodePropertiesCompartment_7021SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

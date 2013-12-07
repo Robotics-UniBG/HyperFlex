@@ -46,8 +46,9 @@ import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerContainerCompartmentEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Composite2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositePublisher2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositePublisherEditPart;
@@ -57,7 +58,6 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServer
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriberEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerContainerCompartmentEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointPublisher2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointPublisherEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointSrvClient2EditPart;
@@ -77,6 +77,7 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServer2Edit
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriberEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerCompositeContainerCompartmentEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.SystemEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Topic2EditPart;
@@ -98,19 +99,16 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof SystemEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-			types.add(RapyutaComponentModelElementTypes.Composite_2003);
-			types.add(RapyutaComponentModelElementTypes.Container_2004);
+			types.add(RapyutaComponentModelElementTypes.RobotContainer_2005);
+			types.add(RapyutaComponentModelElementTypes.CloudContainer_2006);
 			return types;
 		}
-		if (editPart instanceof CompositeEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3052);
-			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3053);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3054);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3055);
+		if (editPart instanceof CloudContainerEditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			types.add(RapyutaComponentModelElementTypes.Composite_3081);
 			return types;
 		}
-		if (editPart instanceof NodeEditPart) {
+		if (editPart instanceof Node2EditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(5);
 			types.add(RapyutaComponentModelElementTypes.NodePublisher_3043);
 			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3044);
@@ -119,7 +117,7 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 			types.add(RapyutaComponentModelElementTypes.NodeParameter_3042);
 			return types;
 		}
-		if (editPart instanceof Composite2EditPart) {
+		if (editPart instanceof CompositeEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
 			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3048);
 			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3049);
@@ -136,7 +134,7 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 			types.add(RapyutaComponentModelElementTypes.EndPointParameter_3058);
 			return types;
 		}
-		if (editPart instanceof Node2EditPart) {
+		if (editPart instanceof NodeEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(5);
 			types.add(RapyutaComponentModelElementTypes.NodePublisher_3065);
 			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3066);
@@ -154,19 +152,27 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 			types.add(RapyutaComponentModelElementTypes.EndPointParameter_3070);
 			return types;
 		}
-		if (editPart instanceof CompositeCompositeContainerCompartmentEditPart) {
+		if (editPart instanceof Composite2EditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(RapyutaComponentModelElementTypes.Node_3041);
-			types.add(RapyutaComponentModelElementTypes.Composite_3047);
-			types.add(RapyutaComponentModelElementTypes.Topic_3056);
-			types.add(RapyutaComponentModelElementTypes.RobotEndPoint_3057);
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3052);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3053);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3054);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3055);
 			return types;
 		}
-		if (editPart instanceof ContainerContainerCompartmentEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+		if (editPart instanceof RobotContainerCompositeContainerCompartmentEditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
 			types.add(RapyutaComponentModelElementTypes.Node_3063);
-			types.add(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3069);
+			types.add(RapyutaComponentModelElementTypes.Composite_3076);
 			types.add(RapyutaComponentModelElementTypes.Topic_3075);
+			types.add(RapyutaComponentModelElementTypes.RobotEndPoint_3077);
+			return types;
+		}
+		if (editPart instanceof CloudContainerContainerCompartmentEditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+			types.add(RapyutaComponentModelElementTypes.Node_3078);
+			types.add(RapyutaComponentModelElementTypes.EnvironmentEndPoint_3079);
+			types.add(RapyutaComponentModelElementTypes.Topic_3080);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -200,18 +206,6 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 		}
 		if (sourceEditPart instanceof CompositeSrvClientEditPart) {
 			return ((CompositeSrvClientEditPart) sourceEditPart)
-					.getMARelTypesOnSource();
-		}
-		if (sourceEditPart instanceof CompositePublisher2EditPart) {
-			return ((CompositePublisher2EditPart) sourceEditPart)
-					.getMARelTypesOnSource();
-		}
-		if (sourceEditPart instanceof CompositeSubscriber2EditPart) {
-			return ((CompositeSubscriber2EditPart) sourceEditPart)
-					.getMARelTypesOnSource();
-		}
-		if (sourceEditPart instanceof CompositeSrvClient2EditPart) {
-			return ((CompositeSrvClient2EditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
 		if (sourceEditPart instanceof EndPointPublisherEditPart) {
@@ -250,6 +244,18 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 			return ((EndPointSrvClient2EditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
+		if (sourceEditPart instanceof CompositePublisher2EditPart) {
+			return ((CompositePublisher2EditPart) sourceEditPart)
+					.getMARelTypesOnSource();
+		}
+		if (sourceEditPart instanceof CompositeSubscriber2EditPart) {
+			return ((CompositeSubscriber2EditPart) sourceEditPart)
+					.getMARelTypesOnSource();
+		}
+		if (sourceEditPart instanceof CompositeSrvClient2EditPart) {
+			return ((CompositeSrvClient2EditPart) sourceEditPart)
+					.getMARelTypesOnSource();
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -267,12 +273,8 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 			return ((CompositeSrvServerEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
-		if (targetEditPart instanceof CompositeSrvServer2EditPart) {
-			return ((CompositeSrvServer2EditPart) targetEditPart)
-					.getMARelTypesOnTarget();
-		}
-		if (targetEditPart instanceof TopicEditPart) {
-			return ((TopicEditPart) targetEditPart).getMARelTypesOnTarget();
+		if (targetEditPart instanceof Topic2EditPart) {
+			return ((Topic2EditPart) targetEditPart).getMARelTypesOnTarget();
 		}
 		if (targetEditPart instanceof EndPointSubscriberEditPart) {
 			return ((EndPointSubscriberEditPart) targetEditPart)
@@ -294,8 +296,12 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 			return ((EndPointSrvServer2EditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
-		if (targetEditPart instanceof Topic2EditPart) {
-			return ((Topic2EditPart) targetEditPart).getMARelTypesOnTarget();
+		if (targetEditPart instanceof TopicEditPart) {
+			return ((TopicEditPart) targetEditPart).getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof CompositeSrvServer2EditPart) {
+			return ((CompositeSrvServer2EditPart) targetEditPart)
+					.getMARelTypesOnTarget();
 		}
 		return Collections.EMPTY_LIST;
 	}
@@ -333,18 +339,6 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 			return ((CompositeSrvClientEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
-		if (sourceEditPart instanceof CompositePublisher2EditPart) {
-			return ((CompositePublisher2EditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
-		if (sourceEditPart instanceof CompositeSubscriber2EditPart) {
-			return ((CompositeSubscriber2EditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
-		if (sourceEditPart instanceof CompositeSrvClient2EditPart) {
-			return ((CompositeSrvClient2EditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
 		if (sourceEditPart instanceof EndPointPublisherEditPart) {
 			return ((EndPointPublisherEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
@@ -381,6 +375,18 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 			return ((EndPointSrvClient2EditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
+		if (sourceEditPart instanceof CompositePublisher2EditPart) {
+			return ((CompositePublisher2EditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+		if (sourceEditPart instanceof CompositeSubscriber2EditPart) {
+			return ((CompositeSubscriber2EditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+		if (sourceEditPart instanceof CompositeSrvClient2EditPart) {
+			return ((CompositeSrvClient2EditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -399,12 +405,8 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 			return ((CompositeSrvServerEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
-		if (targetEditPart instanceof CompositeSrvServer2EditPart) {
-			return ((CompositeSrvServer2EditPart) targetEditPart)
-					.getMATypesForSource(relationshipType);
-		}
-		if (targetEditPart instanceof TopicEditPart) {
-			return ((TopicEditPart) targetEditPart)
+		if (targetEditPart instanceof Topic2EditPart) {
+			return ((Topic2EditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
 		if (targetEditPart instanceof EndPointSubscriberEditPart) {
@@ -427,8 +429,12 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 			return ((EndPointSrvServer2EditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
-		if (targetEditPart instanceof Topic2EditPart) {
-			return ((Topic2EditPart) targetEditPart)
+		if (targetEditPart instanceof TopicEditPart) {
+			return ((TopicEditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
+		if (targetEditPart instanceof CompositeSrvServer2EditPart) {
+			return ((CompositeSrvServer2EditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
 		return Collections.EMPTY_LIST;
@@ -465,18 +471,6 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 			return ((CompositeSrvClientEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
-		if (sourceEditPart instanceof CompositePublisher2EditPart) {
-			return ((CompositePublisher2EditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
-		if (sourceEditPart instanceof CompositeSubscriber2EditPart) {
-			return ((CompositeSubscriber2EditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
-		if (sourceEditPart instanceof CompositeSrvClient2EditPart) {
-			return ((CompositeSrvClient2EditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
 		if (sourceEditPart instanceof EndPointPublisherEditPart) {
 			return ((EndPointPublisherEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
@@ -511,6 +505,18 @@ public class RapyutaComponentModelModelingAssistantProvider extends
 		}
 		if (sourceEditPart instanceof EndPointSrvClient2EditPart) {
 			return ((EndPointSrvClient2EditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof CompositePublisher2EditPart) {
+			return ((CompositePublisher2EditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof CompositeSubscriber2EditPart) {
+			return ((CompositeSubscriber2EditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof CompositeSrvClient2EditPart) {
+			return ((CompositeSrvClient2EditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		return Collections.EMPTY_LIST;

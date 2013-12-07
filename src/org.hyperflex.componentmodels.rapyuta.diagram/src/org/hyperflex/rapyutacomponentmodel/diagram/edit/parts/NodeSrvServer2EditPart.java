@@ -238,17 +238,17 @@ public class NodeSrvServer2EditPart extends AbstractBorderItemEditPart {
 		if (relationshipType == RapyutaComponentModelElementTypes.CompositeSrvConnection_4017) {
 			types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3046);
 			types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3051);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3055);
 			types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3062);
 			types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3068);
 			types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3074);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3055);
 		} else if (relationshipType == RapyutaComponentModelElementTypes.ContainerSrvConnection_4018) {
 			types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3046);
 			types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3051);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3055);
 			types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3062);
 			types.add(RapyutaComponentModelElementTypes.NodeSrvClient_3068);
 			types.add(RapyutaComponentModelElementTypes.EndPointSrvClient_3074);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvClient_3055);
 		}
 		return types;
 	}

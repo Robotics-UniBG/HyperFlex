@@ -37,7 +37,7 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.rapyutacomponentmodel.Container;
+import org.hyperflex.rapyutacomponentmodel.CloudContainer;
 import org.hyperflex.rapyutacomponentmodel.EnvironmentEndPoint;
 
 /**
@@ -69,7 +69,7 @@ public class EnvironmentEndPointCreateCommand extends EditElementCommand {
 	 * @generated
 	 */
 	public boolean canExecute() {
-		Container container = (Container) getElementToEdit();
+		CloudContainer container = (CloudContainer) getElementToEdit();
 		if (container.getEndPoint() != null) {
 			return false;
 		}
@@ -85,7 +85,7 @@ public class EnvironmentEndPointCreateCommand extends EditElementCommand {
 		EnvironmentEndPoint newElement = org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelFactory.eINSTANCE
 				.createEnvironmentEndPoint();
 
-		Container owner = (Container) getElementToEdit();
+		CloudContainer owner = (CloudContainer) getElementToEdit();
 		owner.setEndPoint(newElement);
 
 		doConfigure(newElement, monitor, info);

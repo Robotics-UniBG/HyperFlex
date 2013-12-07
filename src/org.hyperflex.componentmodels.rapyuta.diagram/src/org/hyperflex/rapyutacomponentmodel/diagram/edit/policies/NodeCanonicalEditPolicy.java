@@ -48,10 +48,10 @@ import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodePublisherEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvClientEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServerEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriberEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodePublisher2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvClient2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServer2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramUpdater;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelNodeDescriptor;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVisualIDRegistry;
@@ -108,7 +108,7 @@ public class NodeCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getNode_3041SemanticChildren(viewObject);
+				.getNode_3078SemanticChildren(viewObject);
 		for (RapyutaComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -130,10 +130,10 @@ public class NodeCanonicalEditPolicy extends CanonicalEditPolicy {
 	private boolean isMyDiagramElement(View view) {
 		int visualID = RapyutaComponentModelVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case NodePublisherEditPart.VISUAL_ID:
-		case NodeSubscriberEditPart.VISUAL_ID:
-		case NodeSrvServerEditPart.VISUAL_ID:
-		case NodeSrvClientEditPart.VISUAL_ID:
+		case NodePublisher2EditPart.VISUAL_ID:
+		case NodeSubscriber2EditPart.VISUAL_ID:
+		case NodeSrvServer2EditPart.VISUAL_ID:
+		case NodeSrvClient2EditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -148,7 +148,7 @@ public class NodeCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getNode_3041SemanticChildren((View) getHost().getModel());
+				.getNode_3078SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

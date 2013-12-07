@@ -32,8 +32,8 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeCreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.ContainerCreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CloudContainerCreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.RobotContainerCreateCommand;
 import org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelElementTypes;
 
 /**
@@ -53,13 +53,13 @@ public class SystemItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.Composite_2003 == req
+		if (RapyutaComponentModelElementTypes.RobotContainer_2005 == req
 				.getElementType()) {
-			return getGEFWrapper(new CompositeCreateCommand(req));
+			return getGEFWrapper(new RobotContainerCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.Container_2004 == req
+		if (RapyutaComponentModelElementTypes.CloudContainer_2006 == req
 				.getElementType()) {
-			return getGEFWrapper(new ContainerCreateCommand(req));
+			return getGEFWrapper(new CloudContainerCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

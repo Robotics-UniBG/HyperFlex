@@ -250,9 +250,6 @@ public class EndPointSrvClientEditPart extends AbstractBorderItemEditPart {
 		if (targetEditPart instanceof CompositeSrvServerEditPart) {
 			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
 		}
-		if (targetEditPart instanceof CompositeSrvServer2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
-		}
 		if (targetEditPart instanceof EndPointSrvServerEditPart) {
 			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
 		}
@@ -260,6 +257,9 @@ public class EndPointSrvClientEditPart extends AbstractBorderItemEditPart {
 			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
 		}
 		if (targetEditPart instanceof EndPointSrvServer2EditPart) {
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
+		}
+		if (targetEditPart instanceof CompositeSrvServer2EditPart) {
 			types.add(RapyutaComponentModelElementTypes.CompositeSrvConnection_4017);
 		}
 		if (targetEditPart instanceof NodeSrvServerEditPart) {
@@ -268,9 +268,6 @@ public class EndPointSrvClientEditPart extends AbstractBorderItemEditPart {
 		if (targetEditPart instanceof CompositeSrvServerEditPart) {
 			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 		}
-		if (targetEditPart instanceof CompositeSrvServer2EditPart) {
-			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
-		}
 		if (targetEditPart instanceof EndPointSrvServerEditPart) {
 			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 		}
@@ -278,6 +275,9 @@ public class EndPointSrvClientEditPart extends AbstractBorderItemEditPart {
 			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 		}
 		if (targetEditPart instanceof EndPointSrvServer2EditPart) {
+			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
+		}
+		if (targetEditPart instanceof CompositeSrvServer2EditPart) {
 			types.add(RapyutaComponentModelElementTypes.ContainerSrvConnection_4018);
 		}
 		return types;
@@ -294,17 +294,17 @@ public class EndPointSrvClientEditPart extends AbstractBorderItemEditPart {
 		} else if (relationshipType == RapyutaComponentModelElementTypes.CompositeSrvConnection_4017) {
 			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3045);
 			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3050);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3054);
 			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3061);
 			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3067);
 			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3073);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3054);
 		} else if (relationshipType == RapyutaComponentModelElementTypes.ContainerSrvConnection_4018) {
 			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3045);
 			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3050);
-			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3054);
 			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3061);
 			types.add(RapyutaComponentModelElementTypes.NodeSrvServer_3067);
 			types.add(RapyutaComponentModelElementTypes.EndPointSrvServer_3073);
+			types.add(RapyutaComponentModelElementTypes.CompositeSrvServer_3054);
 		}
 		return types;
 	}

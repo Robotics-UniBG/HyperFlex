@@ -28,7 +28,7 @@ package org.hyperflex.rapyutacomponentmodel.diagram.edit.policies;
 
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.NodeParameter2CreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.NodeParameterCreateCommand;
 import org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelElementTypes;
 
 /**
@@ -48,9 +48,9 @@ public class NodePropertiesCompartment2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.NodeParameter_3064 == req
+		if (RapyutaComponentModelElementTypes.NodeParameter_3042 == req
 				.getElementType()) {
-			return getGEFWrapper(new NodeParameter2CreateCommand(req));
+			return getGEFWrapper(new NodeParameterCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

@@ -54,14 +54,13 @@ import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.ContainerImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.ContainerImpl#getTopics <em>Topics</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.ContainerImpl#getSrvConnections <em>Srv Connections</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.ContainerImpl#getEndPoint <em>End Point</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.ContainerImpl#getComponents <em>Components</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ContainerImpl extends EObjectImpl implements Container {
+public abstract class ContainerImpl extends EObjectImpl implements Container {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,16 +100,6 @@ public class ContainerImpl extends EObjectImpl implements Container {
 	 * @ordered
 	 */
 	protected EList<ContainerSrvConnection> srvConnections;
-
-	/**
-	 * The cached value of the '{@link #getEndPoint() <em>End Point</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEndPoint()
-	 * @generated
-	 * @ordered
-	 */
-	protected EnvironmentEndPoint endPoint;
 
 	/**
 	 * The cached value of the '{@link #getComponents() <em>Components</em>}' containment reference list.
@@ -191,49 +180,6 @@ public class ContainerImpl extends EObjectImpl implements Container {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnvironmentEndPoint getEndPoint() {
-		return endPoint;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetEndPoint(EnvironmentEndPoint newEndPoint, NotificationChain msgs) {
-		EnvironmentEndPoint oldEndPoint = endPoint;
-		endPoint = newEndPoint;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, rapyutacomponentmodelPackage.CONTAINER__END_POINT, oldEndPoint, newEndPoint);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEndPoint(EnvironmentEndPoint newEndPoint) {
-		if (newEndPoint != endPoint) {
-			NotificationChain msgs = null;
-			if (endPoint != null)
-				msgs = ((InternalEObject)endPoint).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - rapyutacomponentmodelPackage.CONTAINER__END_POINT, null, msgs);
-			if (newEndPoint != null)
-				msgs = ((InternalEObject)newEndPoint).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - rapyutacomponentmodelPackage.CONTAINER__END_POINT, null, msgs);
-			msgs = basicSetEndPoint(newEndPoint, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rapyutacomponentmodelPackage.CONTAINER__END_POINT, newEndPoint, newEndPoint));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<AbstractComponent> getComponents() {
 		if (components == null) {
 			components = new EObjectContainmentEList<AbstractComponent>(AbstractComponent.class, this, rapyutacomponentmodelPackage.CONTAINER__COMPONENTS);
@@ -253,8 +199,6 @@ public class ContainerImpl extends EObjectImpl implements Container {
 				return ((InternalEList<?>)getTopics()).basicRemove(otherEnd, msgs);
 			case rapyutacomponentmodelPackage.CONTAINER__SRV_CONNECTIONS:
 				return ((InternalEList<?>)getSrvConnections()).basicRemove(otherEnd, msgs);
-			case rapyutacomponentmodelPackage.CONTAINER__END_POINT:
-				return basicSetEndPoint(null, msgs);
 			case rapyutacomponentmodelPackage.CONTAINER__COMPONENTS:
 				return ((InternalEList<?>)getComponents()).basicRemove(otherEnd, msgs);
 		}
@@ -275,8 +219,6 @@ public class ContainerImpl extends EObjectImpl implements Container {
 				return getTopics();
 			case rapyutacomponentmodelPackage.CONTAINER__SRV_CONNECTIONS:
 				return getSrvConnections();
-			case rapyutacomponentmodelPackage.CONTAINER__END_POINT:
-				return getEndPoint();
 			case rapyutacomponentmodelPackage.CONTAINER__COMPONENTS:
 				return getComponents();
 		}
@@ -303,9 +245,6 @@ public class ContainerImpl extends EObjectImpl implements Container {
 				getSrvConnections().clear();
 				getSrvConnections().addAll((Collection<? extends ContainerSrvConnection>)newValue);
 				return;
-			case rapyutacomponentmodelPackage.CONTAINER__END_POINT:
-				setEndPoint((EnvironmentEndPoint)newValue);
-				return;
 			case rapyutacomponentmodelPackage.CONTAINER__COMPONENTS:
 				getComponents().clear();
 				getComponents().addAll((Collection<? extends AbstractComponent>)newValue);
@@ -331,9 +270,6 @@ public class ContainerImpl extends EObjectImpl implements Container {
 			case rapyutacomponentmodelPackage.CONTAINER__SRV_CONNECTIONS:
 				getSrvConnections().clear();
 				return;
-			case rapyutacomponentmodelPackage.CONTAINER__END_POINT:
-				setEndPoint((EnvironmentEndPoint)null);
-				return;
 			case rapyutacomponentmodelPackage.CONTAINER__COMPONENTS:
 				getComponents().clear();
 				return;
@@ -355,8 +291,6 @@ public class ContainerImpl extends EObjectImpl implements Container {
 				return topics != null && !topics.isEmpty();
 			case rapyutacomponentmodelPackage.CONTAINER__SRV_CONNECTIONS:
 				return srvConnections != null && !srvConnections.isEmpty();
-			case rapyutacomponentmodelPackage.CONTAINER__END_POINT:
-				return endPoint != null;
 			case rapyutacomponentmodelPackage.CONTAINER__COMPONENTS:
 				return components != null && !components.isEmpty();
 		}

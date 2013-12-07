@@ -26,6 +26,9 @@
  */
 package org.hyperflex.rapyutacomponentmodel.diagram.edit.parts;
 
+import org.eclipse.draw2d.ColorConstants;
+import org.eclipse.draw2d.GridData;
+import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.PositionConstants;
@@ -70,7 +73,7 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2003;
+	public static final int VISUAL_ID = 3076;
 
 	/**
 	 * @generated
@@ -118,10 +121,10 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 				View childView = (View) child.getModel();
 				switch (RapyutaComponentModelVisualIDRegistry
 						.getVisualID(childView)) {
-				case CompositePublisher2EditPart.VISUAL_ID:
-				case CompositeSubscriber2EditPart.VISUAL_ID:
-				case CompositeSrvServer2EditPart.VISUAL_ID:
-				case CompositeSrvClient2EditPart.VISUAL_ID:
+				case CompositePublisherEditPart.VISUAL_ID:
+				case CompositeSubscriberEditPart.VISUAL_ID:
+				case CompositeSrvServerEditPart.VISUAL_ID:
+				case CompositeSrvClientEditPart.VISUAL_ID:
 					return new BorderItemSelectionEditPolicy();
 				}
 				EditPolicy result = child
@@ -147,14 +150,14 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		return primaryShape = new CompositeContainerFigure();
+		return primaryShape = new CompositeFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public CompositeContainerFigure getPrimaryShape() {
-		return (CompositeContainerFigure) primaryShape;
+	public CompositeFigure getPrimaryShape() {
+		return (CompositeFigure) primaryShape;
 	}
 
 	/**
@@ -163,46 +166,38 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof CompositeNameEditPart) {
 			((CompositeNameEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigurePackageContainerNameLabel());
+					.getFigurePackageNameLabel());
 			return true;
 		}
-		if (childEditPart instanceof CompositeCompositeContainerCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFigureCompositeContainerComponentsArea();
-			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
-			pane.add(((CompositeCompositeContainerCompartmentEditPart) childEditPart)
-					.getFigure());
-			return true;
-		}
-		if (childEditPart instanceof CompositePublisher2EditPart) {
+		if (childEditPart instanceof CompositePublisherEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.WEST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((CompositePublisher2EditPart) childEditPart).getFigure(),
+					((CompositePublisherEditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
-		if (childEditPart instanceof CompositeSubscriber2EditPart) {
+		if (childEditPart instanceof CompositeSubscriberEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.EAST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((CompositeSubscriber2EditPart) childEditPart).getFigure(),
+					((CompositeSubscriberEditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
-		if (childEditPart instanceof CompositeSrvServer2EditPart) {
+		if (childEditPart instanceof CompositeSrvServerEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.WEST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((CompositeSrvServer2EditPart) childEditPart).getFigure(),
+					((CompositeSrvServerEditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
-		if (childEditPart instanceof CompositeSrvClient2EditPart) {
+		if (childEditPart instanceof CompositeSrvClientEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.EAST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((CompositeSrvClient2EditPart) childEditPart).getFigure(),
+					((CompositeSrvClientEditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
@@ -216,31 +211,24 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 		if (childEditPart instanceof CompositeNameEditPart) {
 			return true;
 		}
-		if (childEditPart instanceof CompositeCompositeContainerCompartmentEditPart) {
-			IFigure pane = getPrimaryShape()
-					.getFigureCompositeContainerComponentsArea();
-			pane.remove(((CompositeCompositeContainerCompartmentEditPart) childEditPart)
-					.getFigure());
+		if (childEditPart instanceof CompositePublisherEditPart) {
+			getBorderedFigure().getBorderItemContainer().remove(
+					((CompositePublisherEditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof CompositePublisher2EditPart) {
+		if (childEditPart instanceof CompositeSubscriberEditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((CompositePublisher2EditPart) childEditPart).getFigure());
+					((CompositeSubscriberEditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof CompositeSubscriber2EditPart) {
+		if (childEditPart instanceof CompositeSrvServerEditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((CompositeSubscriber2EditPart) childEditPart).getFigure());
+					((CompositeSrvServerEditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof CompositeSrvServer2EditPart) {
+		if (childEditPart instanceof CompositeSrvClientEditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((CompositeSrvServer2EditPart) childEditPart).getFigure());
-			return true;
-		}
-		if (childEditPart instanceof CompositeSrvClient2EditPart) {
-			getBorderedFigure().getBorderItemContainer().remove(
-					((CompositeSrvClient2EditPart) childEditPart).getFigure());
+					((CompositeSrvClientEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -270,10 +258,6 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 	 * @generated
 	 */
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof CompositeCompositeContainerCompartmentEditPart) {
-			return getPrimaryShape()
-					.getFigureCompositeContainerComponentsArea();
-		}
 		if (editPart instanceof IBorderItemEditPart) {
 			return getBorderedFigure().getBorderItemContainer();
 		}
@@ -377,26 +361,29 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public class CompositeContainerFigure extends RoundedRectangle {
+	public class CompositeFigure extends RoundedRectangle {
 
 		/**
 		 * @generated
 		 */
-		private RectangleFigure fFigureCompositeContainerComponentsArea;
+		private RectangleFigure fFigureCompositeProperties;
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigurePackageContainerNameLabel;
+		private WrappingLabel fFigurePackageNameLabel;
 
 		/**
 		 * @generated
 		 */
-		public CompositeContainerFigure() {
+		public CompositeFigure() {
+
+			GridLayout layoutThis = new GridLayout();
+			layoutThis.numColumns = 1;
+			layoutThis.makeColumnsEqualWidth = true;
+			this.setLayoutManager(layoutThis);
+
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
 					getMapMode().DPtoLP(8)));
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5)));
 			createContents();
 		}
 
@@ -405,38 +392,91 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 		 */
 		private void createContents() {
 
-			fFigurePackageContainerNameLabel = new WrappingLabel();
+			RectangleFigure compositeInfo0 = new RectangleFigure();
 
-			fFigurePackageContainerNameLabel.setText("<?>");
+			compositeInfo0.setBackgroundColor(ColorConstants.lightBlue);
 
-			fFigurePackageContainerNameLabel
-					.setFont(FFIGUREPACKAGECONTAINERNAMELABEL_FONT);
+			compositeInfo0.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5)));
 
-			fFigurePackageContainerNameLabel.setMaximumSize(new Dimension(
-					getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
+			GridData constraintCompositeInfo0 = new GridData();
+			constraintCompositeInfo0.verticalAlignment = GridData.BEGINNING;
+			constraintCompositeInfo0.horizontalAlignment = GridData.FILL;
+			constraintCompositeInfo0.horizontalIndent = 0;
+			constraintCompositeInfo0.horizontalSpan = 1;
+			constraintCompositeInfo0.verticalSpan = 1;
+			constraintCompositeInfo0.grabExcessHorizontalSpace = true;
+			constraintCompositeInfo0.grabExcessVerticalSpace = false;
+			this.add(compositeInfo0, constraintCompositeInfo0);
 
-			this.add(fFigurePackageContainerNameLabel);
+			GridLayout layoutCompositeInfo0 = new GridLayout();
+			layoutCompositeInfo0.numColumns = 1;
+			layoutCompositeInfo0.makeColumnsEqualWidth = true;
+			compositeInfo0.setLayoutManager(layoutCompositeInfo0);
 
-			fFigureCompositeContainerComponentsArea = new RectangleFigure();
+			fFigurePackageNameLabel = new WrappingLabel();
 
-			fFigureCompositeContainerComponentsArea.setLineWidth(0);
+			fFigurePackageNameLabel.setText("<?>");
 
-			this.add(fFigureCompositeContainerComponentsArea);
+			fFigurePackageNameLabel.setFont(FFIGUREPACKAGENAMELABEL_FONT);
+
+			GridData constraintFFigurePackageNameLabel = new GridData();
+			constraintFFigurePackageNameLabel.verticalAlignment = GridData.BEGINNING;
+			constraintFFigurePackageNameLabel.horizontalAlignment = GridData.BEGINNING;
+			constraintFFigurePackageNameLabel.horizontalIndent = 0;
+			constraintFFigurePackageNameLabel.horizontalSpan = 1;
+			constraintFFigurePackageNameLabel.verticalSpan = 1;
+			constraintFFigurePackageNameLabel.grabExcessHorizontalSpace = false;
+			constraintFFigurePackageNameLabel.grabExcessVerticalSpace = false;
+			compositeInfo0.add(fFigurePackageNameLabel,
+					constraintFFigurePackageNameLabel);
+
+			WrappingLabel compositeLabel1 = new WrappingLabel();
+
+			compositeLabel1.setText("Composite");
+
+			compositeLabel1.setFont(COMPOSITELABEL1_FONT);
+
+			GridData constraintCompositeLabel1 = new GridData();
+			constraintCompositeLabel1.verticalAlignment = GridData.BEGINNING;
+			constraintCompositeLabel1.horizontalAlignment = GridData.BEGINNING;
+			constraintCompositeLabel1.horizontalIndent = 0;
+			constraintCompositeLabel1.horizontalSpan = 1;
+			constraintCompositeLabel1.verticalSpan = 1;
+			constraintCompositeLabel1.grabExcessHorizontalSpace = false;
+			constraintCompositeLabel1.grabExcessVerticalSpace = false;
+			compositeInfo0.add(compositeLabel1, constraintCompositeLabel1);
+
+			fFigureCompositeProperties = new RectangleFigure();
+
+			GridData constraintFFigureCompositeProperties = new GridData();
+			constraintFFigureCompositeProperties.verticalAlignment = GridData.FILL;
+			constraintFFigureCompositeProperties.horizontalAlignment = GridData.FILL;
+			constraintFFigureCompositeProperties.horizontalIndent = 0;
+			constraintFFigureCompositeProperties.horizontalSpan = 1;
+			constraintFFigureCompositeProperties.verticalSpan = 1;
+			constraintFFigureCompositeProperties.grabExcessHorizontalSpace = true;
+			constraintFFigureCompositeProperties.grabExcessVerticalSpace = true;
+			this.add(fFigureCompositeProperties,
+					constraintFFigureCompositeProperties);
+
+			fFigureCompositeProperties.setLayoutManager(new StackLayout());
 
 		}
 
 		/**
 		 * @generated
 		 */
-		public RectangleFigure getFigureCompositeContainerComponentsArea() {
-			return fFigureCompositeContainerComponentsArea;
+		public RectangleFigure getFigureCompositeProperties() {
+			return fFigureCompositeProperties;
 		}
 
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigurePackageContainerNameLabel() {
-			return fFigurePackageContainerNameLabel;
+		public WrappingLabel getFigurePackageNameLabel() {
+			return fFigurePackageNameLabel;
 		}
 
 	}
@@ -444,8 +484,15 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Font FFIGUREPACKAGECONTAINERNAMELABEL_FONT = new Font(
+	static final Font FFIGUREPACKAGENAMELABEL_FONT = new Font(
 			Display.getCurrent(), Display.getDefault().getSystemFont()
 					.getFontData()[0].getName(), 15, SWT.BOLD);
+
+	/**
+	 * @generated
+	 */
+	static final Font COMPOSITELABEL1_FONT = new Font(Display.getCurrent(),
+			Display.getDefault().getSystemFont().getFontData()[0].getName(),
+			15, SWT.BOLD);
 
 }

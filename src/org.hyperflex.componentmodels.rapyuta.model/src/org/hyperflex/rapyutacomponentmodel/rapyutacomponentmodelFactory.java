@@ -55,13 +55,22 @@ public interface rapyutacomponentmodelFactory extends EFactory {
 	System createSystem();
 
 	/**
-	 * Returns a new object of class '<em>Container</em>'.
+	 * Returns a new object of class '<em>Cloud Container</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Container</em>'.
+	 * @return a new object of class '<em>Cloud Container</em>'.
 	 * @generated
 	 */
-	Container createContainer();
+	CloudContainer createCloudContainer();
+
+	/**
+	 * Returns a new object of class '<em>Robot Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Robot Container</em>'.
+	 * @generated
+	 */
+	RobotContainer createRobotContainer();
 
 	/**
 	 * Returns a new object of class '<em>Node</em>'.

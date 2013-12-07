@@ -41,17 +41,17 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositePublisherCreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeSrvClientCreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeSrvServerCreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeSubscriberCreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositePublisher2CreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeSrvClient2CreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeSrvServer2CreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeSubscriber2CreateCommand;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositePublisherEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvClientEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositePublisher2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvClient2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvConnectionEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServerEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriberEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServer2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerSrvConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
@@ -68,28 +68,28 @@ public class Composite2ItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public Composite2ItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Composite_3047);
+		super(RapyutaComponentModelElementTypes.Composite_3081);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.CompositePublisher_3048 == req
+		if (RapyutaComponentModelElementTypes.CompositePublisher_3052 == req
 				.getElementType()) {
-			return getGEFWrapper(new CompositePublisherCreateCommand(req));
+			return getGEFWrapper(new CompositePublisher2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSubscriber_3049 == req
+		if (RapyutaComponentModelElementTypes.CompositeSubscriber_3053 == req
 				.getElementType()) {
-			return getGEFWrapper(new CompositeSubscriberCreateCommand(req));
+			return getGEFWrapper(new CompositeSubscriber2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSrvServer_3050 == req
+		if (RapyutaComponentModelElementTypes.CompositeSrvServer_3054 == req
 				.getElementType()) {
-			return getGEFWrapper(new CompositeSrvServerCreateCommand(req));
+			return getGEFWrapper(new CompositeSrvServer2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSrvClient_3051 == req
+		if (RapyutaComponentModelElementTypes.CompositeSrvClient_3055 == req
 				.getElementType()) {
-			return getGEFWrapper(new CompositeSrvClientCreateCommand(req));
+			return getGEFWrapper(new CompositeSrvClient2CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}
@@ -123,7 +123,7 @@ public class Composite2ItemSemanticEditPolicy extends
 		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
 			Node node = (Node) nit.next();
 			switch (RapyutaComponentModelVisualIDRegistry.getVisualID(node)) {
-			case CompositePublisherEditPart.VISUAL_ID:
+			case CompositePublisher2EditPart.VISUAL_ID:
 				for (Iterator<?> it = node.getSourceEdges().iterator(); it
 						.hasNext();) {
 					Edge outgoingLink = (Edge) it.next();
@@ -173,7 +173,7 @@ public class Composite2ItemSemanticEditPolicy extends
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
-			case CompositeSubscriberEditPart.VISUAL_ID:
+			case CompositeSubscriber2EditPart.VISUAL_ID:
 				for (Iterator<?> it = node.getSourceEdges().iterator(); it
 						.hasNext();) {
 					Edge outgoingLink = (Edge) it.next();
@@ -223,7 +223,7 @@ public class Composite2ItemSemanticEditPolicy extends
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
-			case CompositeSrvServerEditPart.VISUAL_ID:
+			case CompositeSrvServer2EditPart.VISUAL_ID:
 				for (Iterator<?> it = node.getTargetEdges().iterator(); it
 						.hasNext();) {
 					Edge incomingLink = (Edge) it.next();
@@ -251,7 +251,7 @@ public class Composite2ItemSemanticEditPolicy extends
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
-			case CompositeSrvClientEditPart.VISUAL_ID:
+			case CompositeSrvClient2EditPart.VISUAL_ID:
 				for (Iterator<?> it = node.getSourceEdges().iterator(); it
 						.hasNext();) {
 					Edge outgoingLink = (Edge) it.next();

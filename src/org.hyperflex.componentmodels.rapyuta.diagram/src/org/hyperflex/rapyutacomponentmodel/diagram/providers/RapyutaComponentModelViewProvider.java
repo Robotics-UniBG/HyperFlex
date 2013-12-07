@@ -68,8 +68,10 @@ import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerContainerCompartmentEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Composite2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
@@ -84,9 +86,6 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServer
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriberEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerContainerCompartmentEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerSrvConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointMsgConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointParameter2EditPart;
@@ -125,6 +124,9 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServer2Edit
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriberEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerCompositeContainerCompartmentEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEndPointPropertiesCompartmentEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointNameEditPart;
@@ -233,19 +235,20 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 					return false; // foreign diagram
 				}
 				switch (visualID) {
-				case CompositeEditPart.VISUAL_ID:
-				case ContainerEditPart.VISUAL_ID:
-				case NodeEditPart.VISUAL_ID:
+				case RobotContainerEditPart.VISUAL_ID:
+				case CloudContainerEditPart.VISUAL_ID:
+				case Node2EditPart.VISUAL_ID:
 				case NodeParameterEditPart.VISUAL_ID:
 				case NodePublisherEditPart.VISUAL_ID:
 				case NodeSubscriberEditPart.VISUAL_ID:
 				case NodeSrvServerEditPart.VISUAL_ID:
 				case NodeSrvClientEditPart.VISUAL_ID:
+				case CompositeEditPart.VISUAL_ID:
 				case CompositePublisherEditPart.VISUAL_ID:
 				case CompositeSubscriberEditPart.VISUAL_ID:
 				case CompositeSrvServerEditPart.VISUAL_ID:
 				case CompositeSrvClientEditPart.VISUAL_ID:
-				case TopicEditPart.VISUAL_ID:
+				case Topic2EditPart.VISUAL_ID:
 				case RobotEndPointEditPart.VISUAL_ID:
 				case EndPointParameterEditPart.VISUAL_ID:
 				case EndPointPublisherEditPart.VISUAL_ID:
@@ -253,12 +256,7 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 				case EndPointSrvServerEditPart.VISUAL_ID:
 				case EndPointSrvClientEditPart.VISUAL_ID:
 				case EnvironmentEndPointEditPart.VISUAL_ID:
-				case Composite2EditPart.VISUAL_ID:
-				case CompositePublisher2EditPart.VISUAL_ID:
-				case CompositeSubscriber2EditPart.VISUAL_ID:
-				case CompositeSrvServer2EditPart.VISUAL_ID:
-				case CompositeSrvClient2EditPart.VISUAL_ID:
-				case Node2EditPart.VISUAL_ID:
+				case NodeEditPart.VISUAL_ID:
 				case NodeParameter2EditPart.VISUAL_ID:
 				case NodePublisher2EditPart.VISUAL_ID:
 				case NodeSubscriber2EditPart.VISUAL_ID:
@@ -269,7 +267,12 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 				case EndPointSubscriber2EditPart.VISUAL_ID:
 				case EndPointSrvServer2EditPart.VISUAL_ID:
 				case EndPointSrvClient2EditPart.VISUAL_ID:
-				case Topic2EditPart.VISUAL_ID:
+				case TopicEditPart.VISUAL_ID:
+				case Composite2EditPart.VISUAL_ID:
+				case CompositePublisher2EditPart.VISUAL_ID:
+				case CompositeSubscriber2EditPart.VISUAL_ID:
+				case CompositeSrvServer2EditPart.VISUAL_ID:
+				case CompositeSrvClient2EditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != RapyutaComponentModelVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -282,31 +285,27 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 				}
 			}
 		}
-		return CompositeEditPart.VISUAL_ID == visualID
-				|| ContainerEditPart.VISUAL_ID == visualID
-				|| NodeEditPart.VISUAL_ID == visualID
+		return RobotContainerEditPart.VISUAL_ID == visualID
+				|| CloudContainerEditPart.VISUAL_ID == visualID
+				|| Node2EditPart.VISUAL_ID == visualID
 				|| NodeParameterEditPart.VISUAL_ID == visualID
 				|| NodePublisherEditPart.VISUAL_ID == visualID
 				|| NodeSubscriberEditPart.VISUAL_ID == visualID
 				|| NodeSrvServerEditPart.VISUAL_ID == visualID
 				|| NodeSrvClientEditPart.VISUAL_ID == visualID
-				|| Composite2EditPart.VISUAL_ID == visualID
+				|| CompositeEditPart.VISUAL_ID == visualID
 				|| CompositePublisherEditPart.VISUAL_ID == visualID
 				|| CompositeSubscriberEditPart.VISUAL_ID == visualID
 				|| CompositeSrvServerEditPart.VISUAL_ID == visualID
 				|| CompositeSrvClientEditPart.VISUAL_ID == visualID
-				|| CompositePublisher2EditPart.VISUAL_ID == visualID
-				|| CompositeSubscriber2EditPart.VISUAL_ID == visualID
-				|| CompositeSrvServer2EditPart.VISUAL_ID == visualID
-				|| CompositeSrvClient2EditPart.VISUAL_ID == visualID
-				|| TopicEditPart.VISUAL_ID == visualID
+				|| Topic2EditPart.VISUAL_ID == visualID
 				|| RobotEndPointEditPart.VISUAL_ID == visualID
 				|| EndPointParameterEditPart.VISUAL_ID == visualID
 				|| EndPointPublisherEditPart.VISUAL_ID == visualID
 				|| EndPointSubscriberEditPart.VISUAL_ID == visualID
 				|| EndPointSrvServerEditPart.VISUAL_ID == visualID
 				|| EndPointSrvClientEditPart.VISUAL_ID == visualID
-				|| Node2EditPart.VISUAL_ID == visualID
+				|| NodeEditPart.VISUAL_ID == visualID
 				|| NodeParameter2EditPart.VISUAL_ID == visualID
 				|| NodePublisher2EditPart.VISUAL_ID == visualID
 				|| NodeSubscriber2EditPart.VISUAL_ID == visualID
@@ -318,7 +317,12 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 				|| EndPointSubscriber2EditPart.VISUAL_ID == visualID
 				|| EndPointSrvServer2EditPart.VISUAL_ID == visualID
 				|| EndPointSrvClient2EditPart.VISUAL_ID == visualID
-				|| Topic2EditPart.VISUAL_ID == visualID;
+				|| TopicEditPart.VISUAL_ID == visualID
+				|| Composite2EditPart.VISUAL_ID == visualID
+				|| CompositePublisher2EditPart.VISUAL_ID == visualID
+				|| CompositeSubscriber2EditPart.VISUAL_ID == visualID
+				|| CompositeSrvServer2EditPart.VISUAL_ID == visualID
+				|| CompositeSrvClient2EditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -377,14 +381,14 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 					.getVisualID(semanticHint);
 		}
 		switch (visualID) {
-		case CompositeEditPart.VISUAL_ID:
-			return createComposite_2003(domainElement, containerView, index,
-					persisted, preferencesHint);
-		case ContainerEditPart.VISUAL_ID:
-			return createContainer_2004(domainElement, containerView, index,
-					persisted, preferencesHint);
-		case NodeEditPart.VISUAL_ID:
-			return createNode_3041(domainElement, containerView, index,
+		case RobotContainerEditPart.VISUAL_ID:
+			return createRobotContainer_2005(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case CloudContainerEditPart.VISUAL_ID:
+			return createCloudContainer_2006(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case Node2EditPart.VISUAL_ID:
+			return createNode_3063(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case NodeParameterEditPart.VISUAL_ID:
 			return createNodeParameter_3042(domainElement, containerView,
@@ -401,8 +405,8 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 		case NodeSrvClientEditPart.VISUAL_ID:
 			return createNodeSrvClient_3046(domainElement, containerView,
 					index, persisted, preferencesHint);
-		case Composite2EditPart.VISUAL_ID:
-			return createComposite_3047(domainElement, containerView, index,
+		case CompositeEditPart.VISUAL_ID:
+			return createComposite_3076(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case CompositePublisherEditPart.VISUAL_ID:
 			return createCompositePublisher_3048(domainElement, containerView,
@@ -416,23 +420,11 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 		case CompositeSrvClientEditPart.VISUAL_ID:
 			return createCompositeSrvClient_3051(domainElement, containerView,
 					index, persisted, preferencesHint);
-		case CompositePublisher2EditPart.VISUAL_ID:
-			return createCompositePublisher_3052(domainElement, containerView,
-					index, persisted, preferencesHint);
-		case CompositeSubscriber2EditPart.VISUAL_ID:
-			return createCompositeSubscriber_3053(domainElement, containerView,
-					index, persisted, preferencesHint);
-		case CompositeSrvServer2EditPart.VISUAL_ID:
-			return createCompositeSrvServer_3054(domainElement, containerView,
-					index, persisted, preferencesHint);
-		case CompositeSrvClient2EditPart.VISUAL_ID:
-			return createCompositeSrvClient_3055(domainElement, containerView,
-					index, persisted, preferencesHint);
-		case TopicEditPart.VISUAL_ID:
-			return createTopic_3056(domainElement, containerView, index,
+		case Topic2EditPart.VISUAL_ID:
+			return createTopic_3075(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case RobotEndPointEditPart.VISUAL_ID:
-			return createRobotEndPoint_3057(domainElement, containerView,
+			return createRobotEndPoint_3077(domainElement, containerView,
 					index, persisted, preferencesHint);
 		case EndPointParameterEditPart.VISUAL_ID:
 			return createEndPointParameter_3058(domainElement, containerView,
@@ -449,8 +441,8 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 		case EndPointSrvClientEditPart.VISUAL_ID:
 			return createEndPointSrvClient_3062(domainElement, containerView,
 					index, persisted, preferencesHint);
-		case Node2EditPart.VISUAL_ID:
-			return createNode_3063(domainElement, containerView, index,
+		case NodeEditPart.VISUAL_ID:
+			return createNode_3078(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case NodeParameter2EditPart.VISUAL_ID:
 			return createNodeParameter_3064(domainElement, containerView,
@@ -468,7 +460,7 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 			return createNodeSrvClient_3068(domainElement, containerView,
 					index, persisted, preferencesHint);
 		case EnvironmentEndPointEditPart.VISUAL_ID:
-			return createEnvironmentEndPoint_3069(domainElement, containerView,
+			return createEnvironmentEndPoint_3079(domainElement, containerView,
 					index, persisted, preferencesHint);
 		case EndPointParameter2EditPart.VISUAL_ID:
 			return createEndPointParameter_3070(domainElement, containerView,
@@ -485,9 +477,24 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 		case EndPointSrvClient2EditPart.VISUAL_ID:
 			return createEndPointSrvClient_3074(domainElement, containerView,
 					index, persisted, preferencesHint);
-		case Topic2EditPart.VISUAL_ID:
-			return createTopic_3075(domainElement, containerView, index,
+		case TopicEditPart.VISUAL_ID:
+			return createTopic_3080(domainElement, containerView, index,
 					persisted, preferencesHint);
+		case Composite2EditPart.VISUAL_ID:
+			return createComposite_3081(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case CompositePublisher2EditPart.VISUAL_ID:
+			return createCompositePublisher_3052(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case CompositeSubscriber2EditPart.VISUAL_ID:
+			return createCompositeSubscriber_3053(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case CompositeSrvServer2EditPart.VISUAL_ID:
+			return createCompositeSrvServer_3054(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case CompositeSrvClient2EditPart.VISUAL_ID:
+			return createCompositeSrvClient_3055(domainElement, containerView,
+					index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -539,12 +546,13 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
-	public Node createComposite_2003(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
+	public Node createRobotContainer_2005(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(RapyutaComponentModelVisualIDRegistry
-				.getType(CompositeEditPart.VISUAL_ID));
+				.getType(RobotContainerEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -576,13 +584,13 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5025 = createLabel(node,
+		Node label5034 = createLabel(node,
 				RapyutaComponentModelVisualIDRegistry
-						.getType(CompositeNameEditPart.VISUAL_ID));
+						.getType(RobotContainerNameEditPart.VISUAL_ID));
 		createCompartment(
 				node,
 				RapyutaComponentModelVisualIDRegistry
-						.getType(CompositeCompositeContainerCompartmentEditPart.VISUAL_ID),
+						.getType(RobotContainerCompositeContainerCompartmentEditPart.VISUAL_ID),
 				false, false, false, false);
 		return node;
 	}
@@ -590,12 +598,13 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
-	public Node createContainer_2004(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
+	public Node createCloudContainer_2006(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(RapyutaComponentModelVisualIDRegistry
-				.getType(ContainerEditPart.VISUAL_ID));
+				.getType(CloudContainerEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -627,63 +636,14 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5031 = createLabel(node,
+		Node label5039 = createLabel(node,
 				RapyutaComponentModelVisualIDRegistry
-						.getType(ContainerNameEditPart.VISUAL_ID));
+						.getType(CloudContainerNameEditPart.VISUAL_ID));
 		createCompartment(
 				node,
 				RapyutaComponentModelVisualIDRegistry
-						.getType(ContainerContainerCompartmentEditPart.VISUAL_ID),
+						.getType(CloudContainerContainerCompartmentEditPart.VISUAL_ID),
 				false, false, false, false);
-		return node;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Node createNode_3041(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
-		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(RapyutaComponentModelVisualIDRegistry
-				.getType(NodeEditPart.VISUAL_ID));
-		ViewUtil.insertChildView(containerView, node, index, persisted);
-		node.setElement(domainElement);
-		// initializeFromPreferences 
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle nodeFontStyle = (FontStyle) node
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (nodeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			nodeFontStyle.setFontName(fontData.getName());
-			nodeFontStyle.setFontHeight(fontData.getHeight());
-			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5020 = createLabel(node,
-				RapyutaComponentModelVisualIDRegistry
-						.getType(NodeNameEditPart.VISUAL_ID));
-		createCompartment(node,
-				RapyutaComponentModelVisualIDRegistry
-						.getType(NodePropertiesCompartmentEditPart.VISUAL_ID),
-				true, true, true, true);
 		return node;
 	}
 
@@ -904,12 +864,12 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
-	public Node createComposite_3047(EObject domainElement, View containerView,
+	public Node createComposite_3076(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(RapyutaComponentModelVisualIDRegistry
-				.getType(Composite2EditPart.VISUAL_ID));
+				.getType(CompositeEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -940,9 +900,9 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5021 = createLabel(node,
+		Node label5032 = createLabel(node,
 				RapyutaComponentModelVisualIDRegistry
-						.getType(CompositeName2EditPart.VISUAL_ID));
+						.getType(CompositeNameEditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -1285,101 +1245,6 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
-	public Node createTopic_3056(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Node node = NotationFactory.eINSTANCE.createNode();
-		node.getStyles()
-				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
-		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
-		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(RapyutaComponentModelVisualIDRegistry
-				.getType(TopicEditPart.VISUAL_ID));
-		ViewUtil.insertChildView(containerView, node, index, persisted);
-		node.setElement(domainElement);
-		// initializeFromPreferences 
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle nodeFontStyle = (FontStyle) node
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (nodeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			nodeFontStyle.setFontName(fontData.getName());
-			nodeFontStyle.setFontHeight(fontData.getHeight());
-			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Node label5022 = createLabel(node,
-				RapyutaComponentModelVisualIDRegistry
-						.getType(TopicNameEditPart.VISUAL_ID));
-		return node;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Node createRobotEndPoint_3057(EObject domainElement,
-			View containerView, int index, boolean persisted,
-			PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
-		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(RapyutaComponentModelVisualIDRegistry
-				.getType(RobotEndPointEditPart.VISUAL_ID));
-		ViewUtil.insertChildView(containerView, node, index, persisted);
-		node.setElement(domainElement);
-		// initializeFromPreferences 
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle nodeFontStyle = (FontStyle) node
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (nodeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			nodeFontStyle.setFontName(fontData.getName());
-			nodeFontStyle.setFontHeight(fontData.getHeight());
-			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5024 = createLabel(node,
-				RapyutaComponentModelVisualIDRegistry
-						.getType(RobotEndPointNameEditPart.VISUAL_ID));
-		createCompartment(
-				node,
-				RapyutaComponentModelVisualIDRegistry
-						.getType(RobotEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID),
-				true, true, true, true);
-		return node;
-	}
-
-	/**
-	 * @generated
-	 */
 	public Node createEndPointParameter_3058(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
@@ -1588,6 +1453,55 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createNode_3078(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(RapyutaComponentModelVisualIDRegistry
+				.getType(NodeEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5035 = createLabel(node,
+				RapyutaComponentModelVisualIDRegistry
+						.getType(NodeNameEditPart.VISUAL_ID));
+		createCompartment(node,
+				RapyutaComponentModelVisualIDRegistry
+						.getType(NodePropertiesCompartmentEditPart.VISUAL_ID),
+				true, true, true, true);
 		return node;
 	}
 
@@ -1857,7 +1771,7 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
-	public Node createEnvironmentEndPoint_3069(EObject domainElement,
+	public Node createEnvironmentEndPoint_3079(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
@@ -1894,7 +1808,7 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5029 = createLabel(node,
+		Node label5036 = createLabel(node,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(EnvironmentEndPointNameEditPart.VISUAL_ID));
 		createCompartment(
@@ -2122,6 +2036,95 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
+	public Node createTopic_3080(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(RapyutaComponentModelVisualIDRegistry
+				.getType(TopicEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Node label5037 = createLabel(node,
+				RapyutaComponentModelVisualIDRegistry
+						.getType(TopicNameEditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createComposite_3081(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(RapyutaComponentModelVisualIDRegistry
+				.getType(Composite2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5038 = createLabel(node,
+				RapyutaComponentModelVisualIDRegistry
+						.getType(CompositeName2EditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
 	public Node createTopic_3075(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -2160,6 +2163,57 @@ public class RapyutaComponentModelViewProvider extends AbstractProvider
 		Node label5030 = createLabel(node,
 				RapyutaComponentModelVisualIDRegistry
 						.getType(TopicName2EditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createRobotEndPoint_3077(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(RapyutaComponentModelVisualIDRegistry
+				.getType(RobotEndPointEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		Node label5033 = createLabel(node,
+				RapyutaComponentModelVisualIDRegistry
+						.getType(RobotEndPointNameEditPart.VISUAL_ID));
+		createCompartment(
+				node,
+				RapyutaComponentModelVisualIDRegistry
+						.getType(RobotEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID),
+				true, true, true, true);
 		return node;
 	}
 

@@ -103,7 +103,6 @@ public class CompositeItemProvider
 			childrenFeatures.add(rapyutacomponentmodelPackage.Literals.COMPOSITE__SRV_CLIENTS);
 			childrenFeatures.add(rapyutacomponentmodelPackage.Literals.COMPOSITE__SRV_CONNECTIONS);
 			childrenFeatures.add(rapyutacomponentmodelPackage.Literals.COMPOSITE__PARAMETERS);
-			childrenFeatures.add(rapyutacomponentmodelPackage.Literals.COMPOSITE__END_POINT);
 		}
 		return childrenFeatures;
 	}
@@ -166,7 +165,6 @@ public class CompositeItemProvider
 			case rapyutacomponentmodelPackage.COMPOSITE__SRV_CLIENTS:
 			case rapyutacomponentmodelPackage.COMPOSITE__SRV_CONNECTIONS:
 			case rapyutacomponentmodelPackage.COMPOSITE__PARAMETERS:
-			case rapyutacomponentmodelPackage.COMPOSITE__END_POINT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -193,16 +191,6 @@ public class CompositeItemProvider
 			(createChildParameter
 				(rapyutacomponentmodelPackage.Literals.COMPOSITE__COMPONENTS,
 				 rapyutacomponentmodelFactory.eINSTANCE.createComposite()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(rapyutacomponentmodelPackage.Literals.COMPOSITE__COMPONENTS,
-				 rapyutacomponentmodelFactory.eINSTANCE.createRobotEndPoint()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(rapyutacomponentmodelPackage.Literals.COMPOSITE__COMPONENTS,
-				 rapyutacomponentmodelFactory.eINSTANCE.createEnvironmentEndPoint()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -238,34 +226,6 @@ public class CompositeItemProvider
 			(createChildParameter
 				(rapyutacomponentmodelPackage.Literals.COMPOSITE__PARAMETERS,
 				 rapyutacomponentmodelFactory.eINSTANCE.createCompositeParameter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(rapyutacomponentmodelPackage.Literals.COMPOSITE__END_POINT,
-				 rapyutacomponentmodelFactory.eINSTANCE.createRobotEndPoint()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == rapyutacomponentmodelPackage.Literals.COMPOSITE__COMPONENTS ||
-			childFeature == rapyutacomponentmodelPackage.Literals.COMPOSITE__END_POINT;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

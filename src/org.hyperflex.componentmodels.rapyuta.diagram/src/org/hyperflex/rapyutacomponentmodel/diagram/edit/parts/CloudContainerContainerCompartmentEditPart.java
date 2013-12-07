@@ -34,26 +34,26 @@ import org.eclipse.gmf.runtime.diagram.ui.figures.ResizableCompartmentFigure;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.policies.CompositeCompositeContainerCompartmentCanonicalEditPolicy;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.policies.CompositeCompositeContainerCompartmentItemSemanticEditPolicy;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.policies.CloudContainerContainerCompartmentCanonicalEditPolicy;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.policies.CloudContainerContainerCompartmentItemSemanticEditPolicy;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.Messages;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVisualIDRegistry;
 
 /**
  * @generated
  */
-public class CompositeCompositeContainerCompartmentEditPart extends
+public class CloudContainerContainerCompartmentEditPart extends
 		ShapeCompartmentEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7012;
+	public static final int VISUAL_ID = 7020;
 
 	/**
 	 * @generated
 	 */
-	public CompositeCompositeContainerCompartmentEditPart(View view) {
+	public CloudContainerContainerCompartmentEditPart(View view) {
 		super(view);
 	}
 
@@ -61,7 +61,7 @@ public class CompositeCompositeContainerCompartmentEditPart extends
 	 * @generated
 	 */
 	public String getCompartmentName() {
-		return Messages.CompositeCompositeContainerCompartmentEditPart_title;
+		return Messages.CloudContainerContainerCompartmentEditPart_title;
 	}
 
 	/**
@@ -79,16 +79,15 @@ public class CompositeCompositeContainerCompartmentEditPart extends
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(
-				EditPolicyRoles.SEMANTIC_ROLE,
-				new CompositeCompositeContainerCompartmentItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
+				new CloudContainerContainerCompartmentItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE,
 				new CreationEditPolicyWithCustomReparent(
 						RapyutaComponentModelVisualIDRegistry.TYPED_INSTANCE));
 		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE,
 				new DragDropEditPolicy());
 		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
-				new CompositeCompositeContainerCompartmentCanonicalEditPolicy());
+				new CloudContainerContainerCompartmentCanonicalEditPolicy());
 	}
 
 	/**

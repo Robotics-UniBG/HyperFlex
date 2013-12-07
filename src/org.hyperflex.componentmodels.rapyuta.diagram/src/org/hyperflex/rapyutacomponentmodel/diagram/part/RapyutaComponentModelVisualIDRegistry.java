@@ -33,8 +33,10 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.structure.DiagramStructure;
 import org.hyperflex.rapyutacomponentmodel.System;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerContainerCompartmentEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Composite2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeName2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeNameEditPart;
@@ -47,9 +49,6 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServer
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriberEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerContainerCompartmentEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerSrvConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointMsgConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointParameter2EditPart;
@@ -86,6 +85,9 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServer2Edit
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServerEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriberEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerCompositeContainerCompartmentEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEndPointPropertiesCompartmentEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointNameEditPart;
@@ -209,37 +211,21 @@ public class RapyutaComponentModelVisualIDRegistry {
 		switch (containerVisualID) {
 		case SystemEditPart.VISUAL_ID:
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getRobotContainer().isSuperTypeOf(domainElement.eClass())) {
+				return RobotContainerEditPart.VISUAL_ID;
+			}
+			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getCloudContainer().isSuperTypeOf(domainElement.eClass())) {
+				return CloudContainerEditPart.VISUAL_ID;
+			}
+			break;
+		case CloudContainerEditPart.VISUAL_ID:
+			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getComposite().isSuperTypeOf(domainElement.eClass())) {
-				return CompositeEditPart.VISUAL_ID;
-			}
-			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-					.getContainer().isSuperTypeOf(domainElement.eClass())) {
-				return ContainerEditPart.VISUAL_ID;
+				return Composite2EditPart.VISUAL_ID;
 			}
 			break;
-		case CompositeEditPart.VISUAL_ID:
-			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-					.getCompositePublisher().isSuperTypeOf(
-							domainElement.eClass())) {
-				return CompositePublisher2EditPart.VISUAL_ID;
-			}
-			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-					.getCompositeSubscriber().isSuperTypeOf(
-							domainElement.eClass())) {
-				return CompositeSubscriber2EditPart.VISUAL_ID;
-			}
-			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-					.getCompositeSrvServer().isSuperTypeOf(
-							domainElement.eClass())) {
-				return CompositeSrvServer2EditPart.VISUAL_ID;
-			}
-			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-					.getCompositeSrvClient().isSuperTypeOf(
-							domainElement.eClass())) {
-				return CompositeSrvClient2EditPart.VISUAL_ID;
-			}
-			break;
-		case NodeEditPart.VISUAL_ID:
+		case Node2EditPart.VISUAL_ID:
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getNodePublisher().isSuperTypeOf(domainElement.eClass())) {
 				return NodePublisherEditPart.VISUAL_ID;
@@ -257,7 +243,7 @@ public class RapyutaComponentModelVisualIDRegistry {
 				return NodeSrvClientEditPart.VISUAL_ID;
 			}
 			break;
-		case Composite2EditPart.VISUAL_ID:
+		case CompositeEditPart.VISUAL_ID:
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getCompositePublisher().isSuperTypeOf(
 							domainElement.eClass())) {
@@ -301,7 +287,7 @@ public class RapyutaComponentModelVisualIDRegistry {
 				return EndPointSrvClientEditPart.VISUAL_ID;
 			}
 			break;
-		case Node2EditPart.VISUAL_ID:
+		case NodeEditPart.VISUAL_ID:
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getNodePublisher().isSuperTypeOf(domainElement.eClass())) {
 				return NodePublisher2EditPart.VISUAL_ID;
@@ -341,25 +327,47 @@ public class RapyutaComponentModelVisualIDRegistry {
 				return EndPointSrvClient2EditPart.VISUAL_ID;
 			}
 			break;
-		case CompositeCompositeContainerCompartmentEditPart.VISUAL_ID:
+		case Composite2EditPart.VISUAL_ID:
+			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getCompositePublisher().isSuperTypeOf(
+							domainElement.eClass())) {
+				return CompositePublisher2EditPart.VISUAL_ID;
+			}
+			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getCompositeSubscriber().isSuperTypeOf(
+							domainElement.eClass())) {
+				return CompositeSubscriber2EditPart.VISUAL_ID;
+			}
+			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getCompositeSrvServer().isSuperTypeOf(
+							domainElement.eClass())) {
+				return CompositeSrvServer2EditPart.VISUAL_ID;
+			}
+			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getCompositeSrvClient().isSuperTypeOf(
+							domainElement.eClass())) {
+				return CompositeSrvClient2EditPart.VISUAL_ID;
+			}
+			break;
+		case RobotContainerCompositeContainerCompartmentEditPart.VISUAL_ID:
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getNode().isSuperTypeOf(domainElement.eClass())) {
-				return NodeEditPart.VISUAL_ID;
+				return Node2EditPart.VISUAL_ID;
 			}
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getComposite().isSuperTypeOf(domainElement.eClass())) {
-				return Composite2EditPart.VISUAL_ID;
+				return CompositeEditPart.VISUAL_ID;
 			}
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getTopic().isSuperTypeOf(domainElement.eClass())) {
-				return TopicEditPart.VISUAL_ID;
+				return Topic2EditPart.VISUAL_ID;
 			}
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getRobotEndPoint().isSuperTypeOf(domainElement.eClass())) {
 				return RobotEndPointEditPart.VISUAL_ID;
 			}
 			break;
-		case NodePropertiesCompartmentEditPart.VISUAL_ID:
+		case NodePropertiesCompartment2EditPart.VISUAL_ID:
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getNodeParameter().isSuperTypeOf(domainElement.eClass())) {
 				return NodeParameterEditPart.VISUAL_ID;
@@ -372,10 +380,10 @@ public class RapyutaComponentModelVisualIDRegistry {
 				return EndPointParameterEditPart.VISUAL_ID;
 			}
 			break;
-		case ContainerContainerCompartmentEditPart.VISUAL_ID:
+		case CloudContainerContainerCompartmentEditPart.VISUAL_ID:
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getNode().isSuperTypeOf(domainElement.eClass())) {
-				return Node2EditPart.VISUAL_ID;
+				return NodeEditPart.VISUAL_ID;
 			}
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getEnvironmentEndPoint().isSuperTypeOf(
@@ -384,10 +392,10 @@ public class RapyutaComponentModelVisualIDRegistry {
 			}
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getTopic().isSuperTypeOf(domainElement.eClass())) {
-				return Topic2EditPart.VISUAL_ID;
+				return TopicEditPart.VISUAL_ID;
 			}
 			break;
-		case NodePropertiesCompartment2EditPart.VISUAL_ID:
+		case NodePropertiesCompartmentEditPart.VISUAL_ID:
 			if (org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getNodeParameter().isSuperTypeOf(domainElement.eClass())) {
 				return NodeParameter2EditPart.VISUAL_ID;
@@ -426,46 +434,37 @@ public class RapyutaComponentModelVisualIDRegistry {
 		}
 		switch (containerVisualID) {
 		case SystemEditPart.VISUAL_ID:
-			if (CompositeEditPart.VISUAL_ID == nodeVisualID) {
+			if (RobotContainerEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (ContainerEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case CompositeEditPart.VISUAL_ID:
-			if (CompositeNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CompositeCompositeContainerCompartmentEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CompositePublisher2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CompositeSubscriber2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CompositeSrvServer2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (CompositeSrvClient2EditPart.VISUAL_ID == nodeVisualID) {
+			if (CloudContainerEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case ContainerEditPart.VISUAL_ID:
-			if (ContainerNameEditPart.VISUAL_ID == nodeVisualID) {
+		case RobotContainerEditPart.VISUAL_ID:
+			if (RobotContainerNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (ContainerContainerCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+			if (RobotContainerCompositeContainerCompartmentEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case NodeEditPart.VISUAL_ID:
-			if (NodeNameEditPart.VISUAL_ID == nodeVisualID) {
+		case CloudContainerEditPart.VISUAL_ID:
+			if (CloudContainerNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (NodePropertiesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+			if (CloudContainerContainerCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Composite2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case Node2EditPart.VISUAL_ID:
+			if (NodeName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (NodePropertiesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (NodePublisherEditPart.VISUAL_ID == nodeVisualID) {
@@ -486,8 +485,8 @@ public class RapyutaComponentModelVisualIDRegistry {
 				return true;
 			}
 			break;
-		case Composite2EditPart.VISUAL_ID:
-			if (CompositeName2EditPart.VISUAL_ID == nodeVisualID) {
+		case CompositeEditPart.VISUAL_ID:
+			if (CompositeNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (CompositePublisherEditPart.VISUAL_ID == nodeVisualID) {
@@ -503,8 +502,8 @@ public class RapyutaComponentModelVisualIDRegistry {
 				return true;
 			}
 			break;
-		case TopicEditPart.VISUAL_ID:
-			if (TopicNameEditPart.VISUAL_ID == nodeVisualID) {
+		case Topic2EditPart.VISUAL_ID:
+			if (TopicName2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -533,11 +532,11 @@ public class RapyutaComponentModelVisualIDRegistry {
 				return true;
 			}
 			break;
-		case Node2EditPart.VISUAL_ID:
-			if (NodeName2EditPart.VISUAL_ID == nodeVisualID) {
+		case NodeEditPart.VISUAL_ID:
+			if (NodeNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (NodePropertiesCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+			if (NodePropertiesCompartmentEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (NodePublisher2EditPart.VISUAL_ID == nodeVisualID) {
@@ -583,26 +582,43 @@ public class RapyutaComponentModelVisualIDRegistry {
 				return true;
 			}
 			break;
-		case Topic2EditPart.VISUAL_ID:
-			if (TopicName2EditPart.VISUAL_ID == nodeVisualID) {
+		case TopicEditPart.VISUAL_ID:
+			if (TopicNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case CompositeCompositeContainerCompartmentEditPart.VISUAL_ID:
-			if (NodeEditPart.VISUAL_ID == nodeVisualID) {
+		case Composite2EditPart.VISUAL_ID:
+			if (CompositeName2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Composite2EditPart.VISUAL_ID == nodeVisualID) {
+			if (CompositePublisher2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (TopicEditPart.VISUAL_ID == nodeVisualID) {
+			if (CompositeSubscriber2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CompositeSrvServer2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CompositeSrvClient2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case RobotContainerCompositeContainerCompartmentEditPart.VISUAL_ID:
+			if (Node2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CompositeEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (Topic2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (RobotEndPointEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case NodePropertiesCompartmentEditPart.VISUAL_ID:
+		case NodePropertiesCompartment2EditPart.VISUAL_ID:
 			if (NodeParameterEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -612,18 +628,18 @@ public class RapyutaComponentModelVisualIDRegistry {
 				return true;
 			}
 			break;
-		case ContainerContainerCompartmentEditPart.VISUAL_ID:
-			if (Node2EditPart.VISUAL_ID == nodeVisualID) {
+		case CloudContainerContainerCompartmentEditPart.VISUAL_ID:
+			if (NodeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (EnvironmentEndPointEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (Topic2EditPart.VISUAL_ID == nodeVisualID) {
+			if (TopicEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case NodePropertiesCompartment2EditPart.VISUAL_ID:
+		case NodePropertiesCompartmentEditPart.VISUAL_ID:
 			if (NodeParameter2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -715,11 +731,11 @@ public class RapyutaComponentModelVisualIDRegistry {
 	 */
 	public static boolean isCompartmentVisualID(int visualID) {
 		switch (visualID) {
-		case CompositeCompositeContainerCompartmentEditPart.VISUAL_ID:
-		case NodePropertiesCompartmentEditPart.VISUAL_ID:
-		case RobotEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID:
-		case ContainerContainerCompartmentEditPart.VISUAL_ID:
+		case RobotContainerCompositeContainerCompartmentEditPart.VISUAL_ID:
 		case NodePropertiesCompartment2EditPart.VISUAL_ID:
+		case RobotEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID:
+		case CloudContainerContainerCompartmentEditPart.VISUAL_ID:
+		case NodePropertiesCompartmentEditPart.VISUAL_ID:
 		case EnvironmentEndPointEndPointPropertiesCompartmentEditPart.VISUAL_ID:
 			return true;
 		default:
@@ -748,7 +764,6 @@ public class RapyutaComponentModelVisualIDRegistry {
 		case CompositeSubscriber2EditPart.VISUAL_ID:
 		case CompositeSrvServer2EditPart.VISUAL_ID:
 		case CompositeSrvClient2EditPart.VISUAL_ID:
-		case TopicEditPart.VISUAL_ID:
 		case EndPointParameterEditPart.VISUAL_ID:
 		case EndPointPublisherEditPart.VISUAL_ID:
 		case EndPointSubscriberEditPart.VISUAL_ID:
@@ -765,6 +780,7 @@ public class RapyutaComponentModelVisualIDRegistry {
 		case EndPointSrvServer2EditPart.VISUAL_ID:
 		case EndPointSrvClient2EditPart.VISUAL_ID:
 		case Topic2EditPart.VISUAL_ID:
+		case TopicEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

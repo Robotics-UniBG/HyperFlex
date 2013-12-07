@@ -84,7 +84,7 @@ public class TopicNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5022;
+	public static final int VISUAL_ID = 5037;
 
 	/**
 	 * @generated
@@ -330,7 +330,7 @@ public class TopicNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = RapyutaComponentModelParserProvider
 					.getParser(
-							RapyutaComponentModelElementTypes.Topic_3056,
+							RapyutaComponentModelElementTypes.Topic_3080,
 							getParserElement(),
 							RapyutaComponentModelVisualIDRegistry
 									.getType(org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.TopicNameEditPart.VISUAL_ID));

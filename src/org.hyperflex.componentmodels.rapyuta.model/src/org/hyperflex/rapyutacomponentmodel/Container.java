@@ -40,13 +40,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.Container#getName <em>Name</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.Container#getTopics <em>Topics</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.Container#getSrvConnections <em>Srv Connections</em>}</li>
- *   <li>{@link org.hyperflex.rapyutacomponentmodel.Container#getEndPoint <em>End Point</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.Container#getComponents <em>Components</em>}</li>
  * </ul>
  * </p>
  *
  * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getContainer()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Container extends EObject {
@@ -107,32 +106,6 @@ public interface Container extends EObject {
 	 * @generated
 	 */
 	EList<ContainerSrvConnection> getSrvConnections();
-
-	/**
-	 * Returns the value of the '<em><b>End Point</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>End Point</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>End Point</em>' containment reference.
-	 * @see #setEndPoint(EnvironmentEndPoint)
-	 * @see org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage#getContainer_EndPoint()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EnvironmentEndPoint getEndPoint();
-
-	/**
-	 * Sets the value of the '{@link org.hyperflex.rapyutacomponentmodel.Container#getEndPoint <em>End Point</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>End Point</em>' containment reference.
-	 * @see #getEndPoint()
-	 * @generated
-	 */
-	void setEndPoint(EnvironmentEndPoint value);
 
 	/**
 	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.

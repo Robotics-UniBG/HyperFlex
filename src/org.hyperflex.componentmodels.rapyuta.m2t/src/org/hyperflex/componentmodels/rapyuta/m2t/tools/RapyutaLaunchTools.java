@@ -49,13 +49,13 @@ public class RapyutaLaunchTools {
 	public org.hyperflex.rapyutacomponentmodel.System getSystem(Composite composite){
 
 		Composite tmpComposite = composite;
-		while((tmpComposite.eContainer() instanceof org.hyperflex.rapyutacomponentmodel.System) == false){
+		while((tmpComposite.eContainer() instanceof org.hyperflex.rapyutacomponentmodel.Container) == false){
 
 			tmpComposite = (Composite)tmpComposite.eContainer();
 
 		}
 
-		return (org.hyperflex.rapyutacomponentmodel.System)tmpComposite.eContainer();
+		return (org.hyperflex.rapyutacomponentmodel.System)tmpComposite.eContainer().eContainer();
 
 	}
 
@@ -77,31 +77,6 @@ public class RapyutaLaunchTools {
 	}
 
 	/**
-	 * Returns the list of composites directly contained in the System
-	 * @generated NOT
-	 */
-	public ArrayList<Composite> getSystemComposites(Composite composite){
-
-		Composite tmpComposite = composite;
-		while((tmpComposite.eContainer() instanceof org.hyperflex.rapyutacomponentmodel.System) == false){
-
-			tmpComposite = (Composite)tmpComposite.eContainer();
-
-		}
-
-		org.hyperflex.rapyutacomponentmodel.System system = (org.hyperflex.rapyutacomponentmodel.System)tmpComposite.eContainer();
-
-		ArrayList<Composite> result = new ArrayList<Composite>();
-
-		for(Composite comp : system.getComposites()){
-			result.add(comp);
-		}
-
-		return result;
-
-	}
-
-	/**
 	 * Returns the list of containers directly contained in the System
 	 * @generated NOT
 	 */
@@ -118,7 +93,10 @@ public class RapyutaLaunchTools {
 
 		ArrayList<Container> result = new ArrayList<Container>();
 
-		for(Container cont : system.getContainers()){
+		for(Container cont : system.getRobotContainers()){
+			result.add(cont);
+		}
+		for(Container cont : system.getCloudContainers()){
 			result.add(cont);
 		}
 

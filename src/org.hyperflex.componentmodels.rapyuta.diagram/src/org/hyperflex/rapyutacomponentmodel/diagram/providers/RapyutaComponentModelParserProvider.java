@@ -38,9 +38,9 @@ import org.eclipse.gmf.runtime.common.ui.services.parser.ParserService;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CloudContainerNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeName2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeNameEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointParameterName2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EndPointParameterNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.EnvironmentEndPointNameEditPart;
@@ -48,6 +48,7 @@ import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeName2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeParameterName2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeParameterNameEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointNameEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.TopicName2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.TopicNameEditPart;
@@ -66,55 +67,37 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
-	private IParser compositeName_5025Parser;
+	private IParser robotContainerName_5034Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getCompositeName_5025Parser() {
-		if (compositeName_5025Parser == null) {
-			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-					.getAbstractComponent_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			compositeName_5025Parser = parser;
-		}
-		return compositeName_5025Parser;
-	}
-
-	/**
-	 * @generated
-	 */
-	private IParser containerName_5031Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getContainerName_5031Parser() {
-		if (containerName_5031Parser == null) {
+	private IParser getRobotContainerName_5034Parser() {
+		if (robotContainerName_5034Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getContainer_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			containerName_5031Parser = parser;
+			robotContainerName_5034Parser = parser;
 		}
-		return containerName_5031Parser;
+		return robotContainerName_5034Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser nodeName_5020Parser;
+	private IParser cloudContainerName_5039Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeName_5020Parser() {
-		if (nodeName_5020Parser == null) {
+	private IParser getCloudContainerName_5039Parser() {
+		if (cloudContainerName_5039Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-					.getAbstractComponent_Name() };
+					.getContainer_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			nodeName_5020Parser = parser;
+			cloudContainerName_5039Parser = parser;
 		}
-		return nodeName_5020Parser;
+		return cloudContainerName_5039Parser;
 	}
 
 	/**
@@ -138,55 +121,19 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
-	private IParser compositeName_5021Parser;
+	private IParser compositeName_5032Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getCompositeName_5021Parser() {
-		if (compositeName_5021Parser == null) {
+	private IParser getCompositeName_5032Parser() {
+		if (compositeName_5032Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
 					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			compositeName_5021Parser = parser;
+			compositeName_5032Parser = parser;
 		}
-		return compositeName_5021Parser;
-	}
-
-	/**
-	 * @generated
-	 */
-	private IParser topicName_5022Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getTopicName_5022Parser() {
-		if (topicName_5022Parser == null) {
-			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-					.getTopic_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			topicName_5022Parser = parser;
-		}
-		return topicName_5022Parser;
-	}
-
-	/**
-	 * @generated
-	 */
-	private IParser robotEndPointName_5024Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getRobotEndPointName_5024Parser() {
-		if (robotEndPointName_5024Parser == null) {
-			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-					.getAbstractComponent_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			robotEndPointName_5024Parser = parser;
-		}
-		return robotEndPointName_5024Parser;
+		return compositeName_5032Parser;
 	}
 
 	/**
@@ -205,6 +152,24 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 			endPointParameterName_5023Parser = parser;
 		}
 		return endPointParameterName_5023Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser nodeName_5035Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getNodeName_5035Parser() {
+		if (nodeName_5035Parser == null) {
+			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getAbstractComponent_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			nodeName_5035Parser = parser;
+		}
+		return nodeName_5035Parser;
 	}
 
 	/**
@@ -246,19 +211,19 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
-	private IParser environmentEndPointName_5029Parser;
+	private IParser environmentEndPointName_5036Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getEnvironmentEndPointName_5029Parser() {
-		if (environmentEndPointName_5029Parser == null) {
+	private IParser getEnvironmentEndPointName_5036Parser() {
+		if (environmentEndPointName_5036Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
-					.getAbstractComponent_Name() };
+					.getEndPoint_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			environmentEndPointName_5029Parser = parser;
+			environmentEndPointName_5036Parser = parser;
 		}
-		return environmentEndPointName_5029Parser;
+		return environmentEndPointName_5036Parser;
 	}
 
 	/**
@@ -282,6 +247,42 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
+	private IParser topicName_5037Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getTopicName_5037Parser() {
+		if (topicName_5037Parser == null) {
+			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getTopic_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			topicName_5037Parser = parser;
+		}
+		return topicName_5037Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser compositeName_5038Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getCompositeName_5038Parser() {
+		if (compositeName_5038Parser == null) {
+			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getAbstractComponent_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			compositeName_5038Parser = parser;
+		}
+		return compositeName_5038Parser;
+	}
+
+	/**
+	 * @generated
+	 */
 	private IParser topicName_5030Parser;
 
 	/**
@@ -295,6 +296,24 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 			topicName_5030Parser = parser;
 		}
 		return topicName_5030Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser robotEndPointName_5033Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getRobotEndPointName_5033Parser() {
+		if (robotEndPointName_5033Parser == null) {
+			EAttribute[] features = new EAttribute[] { org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage.eINSTANCE
+					.getEndPoint_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			robotEndPointName_5033Parser = parser;
+		}
+		return robotEndPointName_5033Parser;
 	}
 
 	/**
@@ -356,32 +375,34 @@ public class RapyutaComponentModelParserProvider extends AbstractProvider
 	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case CompositeNameEditPart.VISUAL_ID:
-			return getCompositeName_5025Parser();
-		case ContainerNameEditPart.VISUAL_ID:
-			return getContainerName_5031Parser();
-		case NodeNameEditPart.VISUAL_ID:
-			return getNodeName_5020Parser();
-		case NodeParameterNameEditPart.VISUAL_ID:
-			return getNodeParameterName_5019Parser();
-		case CompositeName2EditPart.VISUAL_ID:
-			return getCompositeName_5021Parser();
-		case TopicNameEditPart.VISUAL_ID:
-			return getTopicName_5022Parser();
-		case RobotEndPointNameEditPart.VISUAL_ID:
-			return getRobotEndPointName_5024Parser();
-		case EndPointParameterNameEditPart.VISUAL_ID:
-			return getEndPointParameterName_5023Parser();
+		case RobotContainerNameEditPart.VISUAL_ID:
+			return getRobotContainerName_5034Parser();
+		case CloudContainerNameEditPart.VISUAL_ID:
+			return getCloudContainerName_5039Parser();
 		case NodeName2EditPart.VISUAL_ID:
 			return getNodeName_5027Parser();
+		case NodeParameterNameEditPart.VISUAL_ID:
+			return getNodeParameterName_5019Parser();
+		case CompositeNameEditPart.VISUAL_ID:
+			return getCompositeName_5032Parser();
+		case TopicName2EditPart.VISUAL_ID:
+			return getTopicName_5030Parser();
+		case RobotEndPointNameEditPart.VISUAL_ID:
+			return getRobotEndPointName_5033Parser();
+		case EndPointParameterNameEditPart.VISUAL_ID:
+			return getEndPointParameterName_5023Parser();
+		case NodeNameEditPart.VISUAL_ID:
+			return getNodeName_5035Parser();
 		case NodeParameterName2EditPart.VISUAL_ID:
 			return getNodeParameterName_5026Parser();
 		case EnvironmentEndPointNameEditPart.VISUAL_ID:
-			return getEnvironmentEndPointName_5029Parser();
+			return getEnvironmentEndPointName_5036Parser();
 		case EndPointParameterName2EditPart.VISUAL_ID:
 			return getEndPointParameterName_5028Parser();
-		case TopicName2EditPart.VISUAL_ID:
-			return getTopicName_5030Parser();
+		case TopicNameEditPart.VISUAL_ID:
+			return getTopicName_5037Parser();
+		case CompositeName2EditPart.VISUAL_ID:
+			return getCompositeName_5038Parser();
 		case WrappingLabelEditPart.VISUAL_ID:
 			return getEndPointSrvConnectionName_6007Parser();
 		case WrappingLabel3EditPart.VISUAL_ID:

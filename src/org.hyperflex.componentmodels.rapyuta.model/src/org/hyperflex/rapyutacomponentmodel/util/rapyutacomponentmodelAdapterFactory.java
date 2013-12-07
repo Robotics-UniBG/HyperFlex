@@ -31,6 +31,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.hyperflex.rapyutacomponentmodel.AbstractComponent;
+import org.hyperflex.rapyutacomponentmodel.CloudContainer;
 import org.hyperflex.rapyutacomponentmodel.Composite;
 import org.hyperflex.rapyutacomponentmodel.CompositeMsgInterface;
 import org.hyperflex.rapyutacomponentmodel.CompositeParameter;
@@ -60,6 +61,7 @@ import org.hyperflex.rapyutacomponentmodel.NodeSrvClient;
 import org.hyperflex.rapyutacomponentmodel.NodeSrvServer;
 import org.hyperflex.rapyutacomponentmodel.NodeSubscriber;
 import org.hyperflex.rapyutacomponentmodel.Parameter;
+import org.hyperflex.rapyutacomponentmodel.RobotContainer;
 import org.hyperflex.rapyutacomponentmodel.RobotEndPoint;
 import org.hyperflex.rapyutacomponentmodel.SrvClient;
 import org.hyperflex.rapyutacomponentmodel.SrvConnection;
@@ -130,6 +132,14 @@ public class rapyutacomponentmodelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseContainer(Container object) {
 				return createContainerAdapter();
+			}
+			@Override
+			public Adapter caseCloudContainer(CloudContainer object) {
+				return createCloudContainerAdapter();
+			}
+			@Override
+			public Adapter caseRobotContainer(RobotContainer object) {
+				return createRobotContainerAdapter();
 			}
 			@Override
 			public Adapter caseAbstractComponent(AbstractComponent object) {
@@ -312,6 +322,34 @@ public class rapyutacomponentmodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.rapyutacomponentmodel.CloudContainer <em>Cloud Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.hyperflex.rapyutacomponentmodel.CloudContainer
+	 * @generated
+	 */
+	public Adapter createCloudContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.rapyutacomponentmodel.RobotContainer <em>Robot Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.hyperflex.rapyutacomponentmodel.RobotContainer
+	 * @generated
+	 */
+	public Adapter createRobotContainerAdapter() {
 		return null;
 	}
 

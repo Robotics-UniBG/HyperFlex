@@ -41,25 +41,20 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositePublisher2CreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeSrvClient2CreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeSrvServer2CreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeSubscriber2CreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.Composite2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositePublisherCreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeSrvClientCreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeSrvServerCreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.CompositeSubscriberCreateCommand;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositePublisher2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvClient2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositePublisherEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvClientEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvConnectionEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServer2EditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriber2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvServerEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSubscriberEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerSrvConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotEndPointEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.TopicEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVisualIDRegistry;
 import org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelElementTypes;
 
@@ -73,28 +68,28 @@ public class CompositeItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public CompositeItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Composite_2003);
+		super(RapyutaComponentModelElementTypes.Composite_3076);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.CompositePublisher_3052 == req
+		if (RapyutaComponentModelElementTypes.CompositePublisher_3048 == req
 				.getElementType()) {
-			return getGEFWrapper(new CompositePublisher2CreateCommand(req));
+			return getGEFWrapper(new CompositePublisherCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSubscriber_3053 == req
+		if (RapyutaComponentModelElementTypes.CompositeSubscriber_3049 == req
 				.getElementType()) {
-			return getGEFWrapper(new CompositeSubscriber2CreateCommand(req));
+			return getGEFWrapper(new CompositeSubscriberCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSrvServer_3054 == req
+		if (RapyutaComponentModelElementTypes.CompositeSrvServer_3050 == req
 				.getElementType()) {
-			return getGEFWrapper(new CompositeSrvServer2CreateCommand(req));
+			return getGEFWrapper(new CompositeSrvServerCreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.CompositeSrvClient_3055 == req
+		if (RapyutaComponentModelElementTypes.CompositeSrvClient_3051 == req
 				.getElementType()) {
-			return getGEFWrapper(new CompositeSrvClient2CreateCommand(req));
+			return getGEFWrapper(new CompositeSrvClientCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}
@@ -128,7 +123,7 @@ public class CompositeItemSemanticEditPolicy extends
 		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
 			Node node = (Node) nit.next();
 			switch (RapyutaComponentModelVisualIDRegistry.getVisualID(node)) {
-			case CompositePublisher2EditPart.VISUAL_ID:
+			case CompositePublisherEditPart.VISUAL_ID:
 				for (Iterator<?> it = node.getSourceEdges().iterator(); it
 						.hasNext();) {
 					Edge outgoingLink = (Edge) it.next();
@@ -178,7 +173,7 @@ public class CompositeItemSemanticEditPolicy extends
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
-			case CompositeSubscriber2EditPart.VISUAL_ID:
+			case CompositeSubscriberEditPart.VISUAL_ID:
 				for (Iterator<?> it = node.getSourceEdges().iterator(); it
 						.hasNext();) {
 					Edge outgoingLink = (Edge) it.next();
@@ -228,7 +223,7 @@ public class CompositeItemSemanticEditPolicy extends
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
-			case CompositeSrvServer2EditPart.VISUAL_ID:
+			case CompositeSrvServerEditPart.VISUAL_ID:
 				for (Iterator<?> it = node.getTargetEdges().iterator(); it
 						.hasNext();) {
 					Edge incomingLink = (Edge) it.next();
@@ -256,7 +251,7 @@ public class CompositeItemSemanticEditPolicy extends
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
-			case CompositeSrvClient2EditPart.VISUAL_ID:
+			case CompositeSrvClientEditPart.VISUAL_ID:
 				for (Iterator<?> it = node.getSourceEdges().iterator(); it
 						.hasNext();) {
 					Edge outgoingLink = (Edge) it.next();
@@ -283,91 +278,6 @@ public class CompositeItemSemanticEditPolicy extends
 						getEditingDomain(), node.getElement(), false))); // directlyOwned: true
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
-				break;
-			case CompositeCompositeContainerCompartmentEditPart.VISUAL_ID:
-				for (Iterator<?> cit = node.getChildren().iterator(); cit
-						.hasNext();) {
-					Node cnode = (Node) cit.next();
-					switch (RapyutaComponentModelVisualIDRegistry
-							.getVisualID(cnode)) {
-					case NodeEditPart.VISUAL_ID:
-						cmd.add(new DestroyElementCommand(
-								new DestroyElementRequest(getEditingDomain(),
-										cnode.getElement(), false))); // directlyOwned: true
-						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
-						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
-						break;
-					case Composite2EditPart.VISUAL_ID:
-						cmd.add(new DestroyElementCommand(
-								new DestroyElementRequest(getEditingDomain(),
-										cnode.getElement(), false))); // directlyOwned: true
-						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
-						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
-						break;
-					case TopicEditPart.VISUAL_ID:
-						for (Iterator<?> it = cnode.getTargetEdges().iterator(); it
-								.hasNext();) {
-							Edge incomingLink = (Edge) it.next();
-							if (RapyutaComponentModelVisualIDRegistry
-									.getVisualID(incomingLink) == MsgInterfaceConnectionEditPart.VISUAL_ID) {
-								DestroyReferenceRequest r = new DestroyReferenceRequest(
-										incomingLink.getSource().getElement(),
-										null, incomingLink.getTarget()
-												.getElement(), false);
-								cmd.add(new DestroyReferenceCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										incomingLink));
-								continue;
-							}
-							if (RapyutaComponentModelVisualIDRegistry
-									.getVisualID(incomingLink) == MsgInterfaceConnection2EditPart.VISUAL_ID) {
-								DestroyReferenceRequest r = new DestroyReferenceRequest(
-										incomingLink.getSource().getElement(),
-										null, incomingLink.getTarget()
-												.getElement(), false);
-								cmd.add(new DestroyReferenceCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										incomingLink));
-								continue;
-							}
-							if (RapyutaComponentModelVisualIDRegistry
-									.getVisualID(incomingLink) == CompositeMsgInterfaceExposedEditPart.VISUAL_ID) {
-								DestroyReferenceRequest r = new DestroyReferenceRequest(
-										incomingLink.getSource().getElement(),
-										null, incomingLink.getTarget()
-												.getElement(), false);
-								cmd.add(new DestroyReferenceCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										incomingLink));
-								continue;
-							}
-							if (RapyutaComponentModelVisualIDRegistry
-									.getVisualID(incomingLink) == CompositeMsgInterfaceExposed2EditPart.VISUAL_ID) {
-								DestroyReferenceRequest r = new DestroyReferenceRequest(
-										incomingLink.getSource().getElement(),
-										null, incomingLink.getTarget()
-												.getElement(), false);
-								cmd.add(new DestroyReferenceCommand(r));
-								cmd.add(new DeleteCommand(getEditingDomain(),
-										incomingLink));
-								continue;
-							}
-						}
-						cmd.add(new DestroyElementCommand(
-								new DestroyElementRequest(getEditingDomain(),
-										cnode.getElement(), false))); // directlyOwned: true
-						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
-						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
-						break;
-					case RobotEndPointEditPart.VISUAL_ID:
-						cmd.add(new DestroyElementCommand(
-								new DestroyElementRequest(getEditingDomain(),
-										cnode.getElement(), false))); // directlyOwned: true
-						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
-						// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), cnode));
-						break;
-					}
-				}
 				break;
 			}
 		}

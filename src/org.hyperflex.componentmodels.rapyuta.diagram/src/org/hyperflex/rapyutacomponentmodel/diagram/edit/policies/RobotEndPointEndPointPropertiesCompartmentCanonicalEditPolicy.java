@@ -85,7 +85,7 @@ public class RobotEndPointEndPointPropertiesCompartmentCanonicalEditPolicy
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getRobotEndPointEndPointPropertiesCompartment_7014SemanticChildren(viewObject);
+				.getRobotEndPointEndPointPropertiesCompartment_7019SemanticChildren(viewObject);
 		for (RapyutaComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -118,7 +118,7 @@ public class RobotEndPointEndPointPropertiesCompartmentCanonicalEditPolicy
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RapyutaComponentModelNodeDescriptor> childDescriptors = RapyutaComponentModelDiagramUpdater
-				.getRobotEndPointEndPointPropertiesCompartment_7014SemanticChildren((View) getHost()
+				.getRobotEndPointEndPointPropertiesCompartment_7019SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

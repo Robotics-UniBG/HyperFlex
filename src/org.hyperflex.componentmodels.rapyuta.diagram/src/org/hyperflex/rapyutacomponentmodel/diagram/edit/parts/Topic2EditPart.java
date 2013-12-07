@@ -305,27 +305,27 @@ public class Topic2EditPart extends ShapeNodeEditPart {
 			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3044);
 			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3048);
 			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3049);
-			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3052);
-			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3053);
 			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3059);
 			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3060);
 			types.add(RapyutaComponentModelElementTypes.NodePublisher_3065);
 			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3066);
 			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3071);
 			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3072);
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3052);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3053);
 		} else if (relationshipType == RapyutaComponentModelElementTypes.MsgInterfaceConnection_4012) {
 			types.add(RapyutaComponentModelElementTypes.NodePublisher_3043);
 			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3044);
 			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3048);
 			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3049);
-			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3052);
-			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3053);
 			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3059);
 			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3060);
 			types.add(RapyutaComponentModelElementTypes.NodePublisher_3065);
 			types.add(RapyutaComponentModelElementTypes.NodeSubscriber_3066);
 			types.add(RapyutaComponentModelElementTypes.EndPointPublisher_3071);
 			types.add(RapyutaComponentModelElementTypes.EndPointSubscriber_3072);
+			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3052);
+			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3053);
 		} else if (relationshipType == RapyutaComponentModelElementTypes.CompositeMsgInterfaceExposed_4013) {
 			types.add(RapyutaComponentModelElementTypes.CompositePublisher_3048);
 			types.add(RapyutaComponentModelElementTypes.CompositeSubscriber_3049);

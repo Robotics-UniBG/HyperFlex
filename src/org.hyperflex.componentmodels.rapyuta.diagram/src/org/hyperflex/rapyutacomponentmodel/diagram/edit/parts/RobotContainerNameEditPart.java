@@ -78,13 +78,13 @@ import org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentMod
 /**
  * @generated
  */
-public class ContainerNameEditPart extends CompartmentEditPart implements
+public class RobotContainerNameEditPart extends CompartmentEditPart implements
 		ITextAwareEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5031;
+	public static final int VISUAL_ID = 5034;
 
 	/**
 	 * @generated
@@ -114,7 +114,7 @@ public class ContainerNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public ContainerNameEditPart(View view) {
+	public RobotContainerNameEditPart(View view) {
 		super(view);
 	}
 
@@ -330,10 +330,10 @@ public class ContainerNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = RapyutaComponentModelParserProvider
 					.getParser(
-							RapyutaComponentModelElementTypes.Container_2004,
+							RapyutaComponentModelElementTypes.RobotContainer_2005,
 							getParserElement(),
 							RapyutaComponentModelVisualIDRegistry
-									.getType(org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerNameEditPart.VISUAL_ID));
+									.getType(org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.RobotContainerNameEditPart.VISUAL_ID));
 		}
 		return parser;
 	}

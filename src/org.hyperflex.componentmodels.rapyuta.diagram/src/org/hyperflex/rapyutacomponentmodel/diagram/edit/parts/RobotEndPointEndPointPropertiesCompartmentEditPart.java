@@ -49,7 +49,7 @@ public class RobotEndPointEndPointPropertiesCompartmentEditPart extends
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7014;
+	public static final int VISUAL_ID = 7019;
 
 	/**
 	 * @generated

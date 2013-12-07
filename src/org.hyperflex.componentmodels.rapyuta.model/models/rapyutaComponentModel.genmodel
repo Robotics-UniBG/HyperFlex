@@ -12,8 +12,8 @@
   <genPackages prefix="rapyutacomponentmodel" basePackage="org.hyperflex" disposableProviderFactory="true"
       ecorePackage="rapyutaComponentModel.ecore#/">
     <genClasses ecoreClass="rapyutaComponentModel.ecore#//System">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/containers"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/composites"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/cloudContainers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/robotContainers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/endPointSrvConnections"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//System/endPointMsgConnections"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//System/name"/>
@@ -22,8 +22,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//Container/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Container/topics"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Container/srvConnections"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Container/endPoint"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Container/components"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//CloudContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//CloudContainer/endPoint"/>
+    </genClasses>
+    <genClasses ecoreClass="rapyutaComponentModel.ecore#//RobotContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//RobotContainer/endPoint"/>
     </genClasses>
     <genClasses image="false" ecoreClass="rapyutaComponentModel.ecore#//AbstractComponent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//AbstractComponent/name"/>
@@ -46,7 +51,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/srvClients"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/srvConnections"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/parameters"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//Composite/endPoint"/>
     </genClasses>
     <genClasses ecoreClass="rapyutaComponentModel.ecore#//MsgInterface">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//MsgInterface/name"/>
@@ -105,6 +109,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//EndPoint/srvServers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//EndPoint/srvClients"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rapyutaComponentModel.ecore#//EndPoint/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//EndPoint/name"/>
     </genClasses>
     <genClasses ecoreClass="rapyutaComponentModel.ecore#//RobotEndPoint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rapyutaComponentModel.ecore#//RobotEndPoint/url"/>

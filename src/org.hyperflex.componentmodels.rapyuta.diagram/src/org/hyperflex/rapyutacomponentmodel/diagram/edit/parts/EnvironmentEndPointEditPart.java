@@ -77,7 +77,7 @@ public class EnvironmentEndPointEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3069;
+	public static final int VISUAL_ID = 3079;
 
 	/**
 	 * @generated

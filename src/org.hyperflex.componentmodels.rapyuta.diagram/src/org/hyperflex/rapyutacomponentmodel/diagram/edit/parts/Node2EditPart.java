@@ -125,10 +125,10 @@ public class Node2EditPart extends AbstractBorderedShapeEditPart {
 				View childView = (View) child.getModel();
 				switch (RapyutaComponentModelVisualIDRegistry
 						.getVisualID(childView)) {
-				case NodePublisher2EditPart.VISUAL_ID:
-				case NodeSubscriber2EditPart.VISUAL_ID:
-				case NodeSrvServer2EditPart.VISUAL_ID:
-				case NodeSrvClient2EditPart.VISUAL_ID:
+				case NodePublisherEditPart.VISUAL_ID:
+				case NodeSubscriberEditPart.VISUAL_ID:
+				case NodeSrvServerEditPart.VISUAL_ID:
+				case NodeSrvClientEditPart.VISUAL_ID:
 					return new BorderItemSelectionEditPolicy();
 				}
 				EditPolicy result = child
@@ -180,35 +180,35 @@ public class Node2EditPart extends AbstractBorderedShapeEditPart {
 					.getFigure());
 			return true;
 		}
-		if (childEditPart instanceof NodePublisher2EditPart) {
+		if (childEditPart instanceof NodePublisherEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.WEST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((NodePublisher2EditPart) childEditPart).getFigure(),
+					((NodePublisherEditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
-		if (childEditPart instanceof NodeSubscriber2EditPart) {
+		if (childEditPart instanceof NodeSubscriberEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.EAST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((NodeSubscriber2EditPart) childEditPart).getFigure(),
+					((NodeSubscriberEditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
-		if (childEditPart instanceof NodeSrvServer2EditPart) {
+		if (childEditPart instanceof NodeSrvServerEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.WEST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((NodeSrvServer2EditPart) childEditPart).getFigure(),
+					((NodeSrvServerEditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
-		if (childEditPart instanceof NodeSrvClient2EditPart) {
+		if (childEditPart instanceof NodeSrvClientEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.EAST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((NodeSrvClient2EditPart) childEditPart).getFigure(),
+					((NodeSrvClientEditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
@@ -228,24 +228,24 @@ public class Node2EditPart extends AbstractBorderedShapeEditPart {
 					.getFigure());
 			return true;
 		}
-		if (childEditPart instanceof NodePublisher2EditPart) {
+		if (childEditPart instanceof NodePublisherEditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((NodePublisher2EditPart) childEditPart).getFigure());
+					((NodePublisherEditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof NodeSubscriber2EditPart) {
+		if (childEditPart instanceof NodeSubscriberEditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((NodeSubscriber2EditPart) childEditPart).getFigure());
+					((NodeSubscriberEditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof NodeSrvServer2EditPart) {
+		if (childEditPart instanceof NodeSrvServerEditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((NodeSrvServer2EditPart) childEditPart).getFigure());
+					((NodeSrvServerEditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof NodeSrvClient2EditPart) {
+		if (childEditPart instanceof NodeSrvClientEditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((NodeSrvClient2EditPart) childEditPart).getFigure());
+					((NodeSrvClientEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -388,7 +388,7 @@ public class Node2EditPart extends AbstractBorderedShapeEditPart {
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter
 					.getAdapter(IElementType.class);
-			if (type == RapyutaComponentModelElementTypes.NodeParameter_3064) {
+			if (type == RapyutaComponentModelElementTypes.NodeParameter_3042) {
 				return getChildBySemanticHint(RapyutaComponentModelVisualIDRegistry
 						.getType(NodePropertiesCompartment2EditPart.VISUAL_ID));
 			}

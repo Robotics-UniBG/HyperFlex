@@ -41,20 +41,20 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.NodePublisherCreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.NodeSrvClientCreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.NodeSrvServerCreateCommand;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.NodeSubscriberCreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.NodePublisher2CreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.NodeSrvClient2CreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.NodeSrvServer2CreateCommand;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.commands.NodeSubscriber2CreateCommand;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.CompositeSrvConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.ContainerSrvConnectionEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeParameterEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeParameter2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodePublisherEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvClientEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServerEditPart;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriberEditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodePublisher2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvClient2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSrvServer2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeSubscriber2EditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVisualIDRegistry;
 import org.hyperflex.rapyutacomponentmodel.diagram.providers.RapyutaComponentModelElementTypes;
 
@@ -68,28 +68,28 @@ public class NodeItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public NodeItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Node_3041);
+		super(RapyutaComponentModelElementTypes.Node_3078);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RapyutaComponentModelElementTypes.NodePublisher_3043 == req
+		if (RapyutaComponentModelElementTypes.NodePublisher_3065 == req
 				.getElementType()) {
-			return getGEFWrapper(new NodePublisherCreateCommand(req));
+			return getGEFWrapper(new NodePublisher2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.NodeSubscriber_3044 == req
+		if (RapyutaComponentModelElementTypes.NodeSubscriber_3066 == req
 				.getElementType()) {
-			return getGEFWrapper(new NodeSubscriberCreateCommand(req));
+			return getGEFWrapper(new NodeSubscriber2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.NodeSrvServer_3045 == req
+		if (RapyutaComponentModelElementTypes.NodeSrvServer_3067 == req
 				.getElementType()) {
-			return getGEFWrapper(new NodeSrvServerCreateCommand(req));
+			return getGEFWrapper(new NodeSrvServer2CreateCommand(req));
 		}
-		if (RapyutaComponentModelElementTypes.NodeSrvClient_3046 == req
+		if (RapyutaComponentModelElementTypes.NodeSrvClient_3068 == req
 				.getElementType()) {
-			return getGEFWrapper(new NodeSrvClientCreateCommand(req));
+			return getGEFWrapper(new NodeSrvClient2CreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}
@@ -123,7 +123,7 @@ public class NodeItemSemanticEditPolicy extends
 		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
 			Node node = (Node) nit.next();
 			switch (RapyutaComponentModelVisualIDRegistry.getVisualID(node)) {
-			case NodePublisherEditPart.VISUAL_ID:
+			case NodePublisher2EditPart.VISUAL_ID:
 				for (Iterator<?> it = node.getSourceEdges().iterator(); it
 						.hasNext();) {
 					Edge outgoingLink = (Edge) it.next();
@@ -153,7 +153,7 @@ public class NodeItemSemanticEditPolicy extends
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
-			case NodeSubscriberEditPart.VISUAL_ID:
+			case NodeSubscriber2EditPart.VISUAL_ID:
 				for (Iterator<?> it = node.getSourceEdges().iterator(); it
 						.hasNext();) {
 					Edge outgoingLink = (Edge) it.next();
@@ -183,7 +183,7 @@ public class NodeItemSemanticEditPolicy extends
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
-			case NodeSrvServerEditPart.VISUAL_ID:
+			case NodeSrvServer2EditPart.VISUAL_ID:
 				for (Iterator<?> it = node.getTargetEdges().iterator(); it
 						.hasNext();) {
 					Edge incomingLink = (Edge) it.next();
@@ -211,7 +211,7 @@ public class NodeItemSemanticEditPolicy extends
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
-			case NodeSrvClientEditPart.VISUAL_ID:
+			case NodeSrvClient2EditPart.VISUAL_ID:
 				for (Iterator<?> it = node.getSourceEdges().iterator(); it
 						.hasNext();) {
 					Edge outgoingLink = (Edge) it.next();
@@ -245,7 +245,7 @@ public class NodeItemSemanticEditPolicy extends
 					Node cnode = (Node) cit.next();
 					switch (RapyutaComponentModelVisualIDRegistry
 							.getVisualID(cnode)) {
-					case NodeParameterEditPart.VISUAL_ID:
+					case NodeParameter2EditPart.VISUAL_ID:
 						cmd.add(new DestroyElementCommand(
 								new DestroyElementRequest(getEditingDomain(),
 										cnode.getElement(), false))); // directlyOwned: true

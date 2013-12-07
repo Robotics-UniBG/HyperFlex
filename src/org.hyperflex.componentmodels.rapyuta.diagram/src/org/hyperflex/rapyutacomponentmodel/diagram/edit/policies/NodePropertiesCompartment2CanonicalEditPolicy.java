@@ -46,7 +46,7 @@ import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeParameter2EditPart;
+import org.hyperflex.rapyutacomponentmodel.diagram.edit.parts.NodeParameterEditPart;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelDiagramUpdater;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelNodeDescriptor;
 import org.hyperflex.rapyutacomponentmodel.diagram.part.RapyutaComponentModelVisualIDRegistry;
@@ -105,7 +105,7 @@ public class NodePropertiesCompartment2CanonicalEditPolicy extends
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		return NodeParameter2EditPart.VISUAL_ID == RapyutaComponentModelVisualIDRegistry
+		return NodeParameterEditPart.VISUAL_ID == RapyutaComponentModelVisualIDRegistry
 				.getVisualID(view);
 	}
 

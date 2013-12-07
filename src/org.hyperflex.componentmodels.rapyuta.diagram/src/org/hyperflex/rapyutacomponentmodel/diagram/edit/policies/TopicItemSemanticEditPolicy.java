@@ -65,7 +65,7 @@ public class TopicItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public TopicItemSemanticEditPolicy() {
-		super(RapyutaComponentModelElementTypes.Topic_3056);
+		super(RapyutaComponentModelElementTypes.Topic_3080);
 	}
 
 	/**

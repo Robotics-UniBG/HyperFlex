@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.hyperflex.rapyutacomponentmodel.AbstractComponent;
+import org.hyperflex.rapyutacomponentmodel.CloudContainer;
 import org.hyperflex.rapyutacomponentmodel.Composite;
 import org.hyperflex.rapyutacomponentmodel.CompositeMsgInterface;
 import org.hyperflex.rapyutacomponentmodel.CompositeParameter;
@@ -59,6 +60,7 @@ import org.hyperflex.rapyutacomponentmodel.NodeSrvClient;
 import org.hyperflex.rapyutacomponentmodel.NodeSrvServer;
 import org.hyperflex.rapyutacomponentmodel.NodeSubscriber;
 import org.hyperflex.rapyutacomponentmodel.Parameter;
+import org.hyperflex.rapyutacomponentmodel.RobotContainer;
 import org.hyperflex.rapyutacomponentmodel.RobotEndPoint;
 import org.hyperflex.rapyutacomponentmodel.SrvClient;
 import org.hyperflex.rapyutacomponentmodel.SrvConnection;
@@ -132,6 +134,20 @@ public class rapyutacomponentmodelSwitch<T> extends Switch<T> {
 			case rapyutacomponentmodelPackage.CONTAINER: {
 				Container container = (Container)theEObject;
 				T result = caseContainer(container);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case rapyutacomponentmodelPackage.CLOUD_CONTAINER: {
+				CloudContainer cloudContainer = (CloudContainer)theEObject;
+				T result = caseCloudContainer(cloudContainer);
+				if (result == null) result = caseContainer(cloudContainer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case rapyutacomponentmodelPackage.ROBOT_CONTAINER: {
+				RobotContainer robotContainer = (RobotContainer)theEObject;
+				T result = caseRobotContainer(robotContainer);
+				if (result == null) result = caseContainer(robotContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -282,7 +298,6 @@ public class rapyutacomponentmodelSwitch<T> extends Switch<T> {
 			case rapyutacomponentmodelPackage.END_POINT: {
 				EndPoint endPoint = (EndPoint)theEObject;
 				T result = caseEndPoint(endPoint);
-				if (result == null) result = caseAbstractComponent(endPoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -290,7 +305,6 @@ public class rapyutacomponentmodelSwitch<T> extends Switch<T> {
 				RobotEndPoint robotEndPoint = (RobotEndPoint)theEObject;
 				T result = caseRobotEndPoint(robotEndPoint);
 				if (result == null) result = caseEndPoint(robotEndPoint);
-				if (result == null) result = caseAbstractComponent(robotEndPoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -298,7 +312,6 @@ public class rapyutacomponentmodelSwitch<T> extends Switch<T> {
 				EnvironmentEndPoint environmentEndPoint = (EnvironmentEndPoint)theEObject;
 				T result = caseEnvironmentEndPoint(environmentEndPoint);
 				if (result == null) result = caseEndPoint(environmentEndPoint);
-				if (result == null) result = caseAbstractComponent(environmentEndPoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -403,6 +416,36 @@ public class rapyutacomponentmodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseContainer(Container object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cloud Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cloud Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCloudContainer(CloudContainer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Robot Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Robot Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRobotContainer(RobotContainer object) {
 		return null;
 	}
 

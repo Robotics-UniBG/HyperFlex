@@ -37,18 +37,18 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.rapyutacomponentmodel.Container;
+import org.hyperflex.rapyutacomponentmodel.RobotContainer;
 import org.hyperflex.rapyutacomponentmodel.System;
 
 /**
  * @generated
  */
-public class ContainerCreateCommand extends EditElementCommand {
+public class RobotContainerCreateCommand extends EditElementCommand {
 
 	/**
 	 * @generated
 	 */
-	public ContainerCreateCommand(CreateElementRequest req) {
+	public RobotContainerCreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
@@ -78,11 +78,11 @@ public class ContainerCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		Container newElement = org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelFactory.eINSTANCE
-				.createContainer();
+		RobotContainer newElement = org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelFactory.eINSTANCE
+				.createRobotContainer();
 
 		System owner = (System) getElementToEdit();
-		owner.getContainers().add(newElement);
+		owner.getRobotContainers().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 
@@ -93,8 +93,9 @@ public class ContainerCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(Container newElement, IProgressMonitor monitor,
-			IAdaptable info) throws ExecutionException {
+	protected void doConfigure(RobotContainer newElement,
+			IProgressMonitor monitor, IAdaptable info)
+			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())
 				.getElementType();
 		ConfigureRequest configureRequest = new ConfigureRequest(
