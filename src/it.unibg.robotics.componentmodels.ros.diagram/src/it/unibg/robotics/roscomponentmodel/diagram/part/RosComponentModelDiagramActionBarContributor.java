@@ -1,4 +1,4 @@
-package it.unibg.robotics.roscomponentmodel.diagram.part;
+package org.hyperflex.roscomponentmodel.diagram.part;
 
 import org.eclipse.gmf.runtime.diagram.ui.parts.DiagramActionBarContributor;
 import org.eclipse.jface.action.IMenuManager;

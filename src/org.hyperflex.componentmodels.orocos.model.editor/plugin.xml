@@ -2,7 +2,7 @@
 <?eclipse version="3.0"?>
 
 <!--
- HyperFlex Plugins (VARP)
+ HyperFlex Plugins
  
  Copyright (c) 2013
  All rights reserved.
@@ -32,12 +32,11 @@
    <extension point="org.eclipse.ui.newWizards">
       <!-- @generated orocosComponentModel -->
       <wizard
-            id="it.unibg.robotics.orocoscomponentmodel.presentation.orocoscomponentmodelModelWizardID"
+            id="org.hyperflex.orocoscomponentmodel.presentation.orocoscomponentmodelModelWizardID"
             name="%_UI_orocoscomponentmodelModelWizard_label"
-            class="it.unibg.robotics.orocoscomponentmodel.presentation.orocoscomponentmodelModelWizard"
-            category="it.robotics.unibg.hyperflex.wizard.category"
+            class="org.hyperflex.orocoscomponentmodel.presentation.orocoscomponentmodelModelWizard"
+            category="org.hyperflex.wizard.category"
             icon="icons/full/obj16/orocoscomponentmodelModelFile.gif">
-         <description>%_UI_orocoscomponentmodelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -45,13 +44,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated orocosComponentModel -->
       <editor
-            id="it.unibg.robotics.orocoscomponentmodel.presentation.orocoscomponentmodelEditorID"
+            id="org.hyperflex.orocoscomponentmodel.presentation.orocoscomponentmodelEditorID"
             name="%_UI_orocoscomponentmodelEditor_label"
             icon="icons/full/obj16/orocoscomponentmodelModelFile.gif"
             extensions="orocoscomponentmodel"
-            class="it.unibg.robotics.orocoscomponentmodel.presentation.orocoscomponentmodelEditor"
-            contributorClass="it.unibg.robotics.orocoscomponentmodel.presentation.orocoscomponentmodelActionBarContributor">
+            class="org.hyperflex.orocoscomponentmodel.presentation.orocoscomponentmodelEditor"
+            contributorClass="org.hyperflex.orocoscomponentmodel.presentation.orocoscomponentmodelActionBarContributor">
       </editor>
    </extension>
-
 </plugin>

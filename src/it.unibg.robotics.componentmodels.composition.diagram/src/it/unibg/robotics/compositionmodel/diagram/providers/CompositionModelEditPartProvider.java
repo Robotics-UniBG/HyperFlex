@@ -1,8 +1,8 @@
-package it.unibg.robotics.compositionmodel.diagram.providers;
+package org.hyperflex.compositionmodel.diagram.providers;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.CompositionModelEditPartFactory;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.edit.parts.CompositionModelEditPartFactory;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
 
 import org.eclipse.gmf.tooling.runtime.providers.DefaultEditPartProvider;
 

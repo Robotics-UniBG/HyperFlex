@@ -1,4 +1,4 @@
-package it.unibg.robotics.roscomponentmodel.diagram.navigator;
+package org.hyperflex.roscomponentmodel.diagram.navigator;
 
 import org.eclipse.core.runtime.IAdapterFactory;
 import org.eclipse.core.runtime.Platform;
@@ -24,8 +24,8 @@ public class RosComponentModelDomainNavigatorItem extends PlatformObject {
 
 					public Object getAdapter(Object adaptableObject,
 							Class adapterType) {
-						if (adaptableObject instanceof it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelDomainNavigatorItem) {
-							it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelDomainNavigatorItem domainNavigatorItem = (it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelDomainNavigatorItem) adaptableObject;
+						if (adaptableObject instanceof org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelDomainNavigatorItem) {
+							org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelDomainNavigatorItem domainNavigatorItem = (org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelDomainNavigatorItem) adaptableObject;
 							EObject eObject = domainNavigatorItem.getEObject();
 							if (adapterType == EObject.class) {
 								return eObject;
@@ -44,7 +44,7 @@ public class RosComponentModelDomainNavigatorItem extends PlatformObject {
 						return supportedTypes;
 					}
 				},
-				it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelDomainNavigatorItem.class);
+				org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelDomainNavigatorItem.class);
 	}
 
 	/**
@@ -97,11 +97,11 @@ public class RosComponentModelDomainNavigatorItem extends PlatformObject {
 	 * @generated
 	 */
 	public boolean equals(Object obj) {
-		if (obj instanceof it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelDomainNavigatorItem) {
+		if (obj instanceof org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelDomainNavigatorItem) {
 			return EcoreUtil
 					.getURI(getEObject())
 					.equals(EcoreUtil
-							.getURI(((it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelDomainNavigatorItem) obj)
+							.getURI(((org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelDomainNavigatorItem) obj)
 									.getEObject()));
 		}
 		return super.equals(obj);

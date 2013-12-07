@@ -1,34 +1,34 @@
-package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
+package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import it.unibg.robotics.roscomponentmodel.AbstractComponent;
-import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
-import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
-import it.unibg.robotics.roscomponentmodel.MsgInterface;
-import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.NodeMsgInterface;
-import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
-import it.unibg.robotics.roscomponentmodel.Topic;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelLinkDescriptor;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.AbstractComponent;
+import org.hyperflex.roscomponentmodel.CompositeMsgConsumer;
+import org.hyperflex.roscomponentmodel.CompositeMsgInterface;
+import org.hyperflex.roscomponentmodel.CompositeMsgProducer;
+import org.hyperflex.roscomponentmodel.MsgInterface;
+import org.hyperflex.roscomponentmodel.NodeMsgConsumer;
+import org.hyperflex.roscomponentmodel.NodeMsgInterface;
+import org.hyperflex.roscomponentmodel.NodeMsgProducer;
+import org.hyperflex.roscomponentmodel.Topic;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelLinkDescriptor;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -81,7 +81,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 	 * @generated
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+		return org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 				.getSystem_Composite();
 	}
 

@@ -1,4 +1,4 @@
-package it.unibg.robotics.roscomponentmodel.diagram.sheet;
+package org.hyperflex.roscomponentmodel.diagram.sheet;
 
 import org.eclipse.gmf.tooling.runtime.sheet.DefaultPropertySection;
 import org.eclipse.ui.views.properties.IPropertySourceProvider;

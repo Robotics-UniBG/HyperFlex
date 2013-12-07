@@ -23,10 +23,10 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.impl;
+package org.hyperflex.roscomponentmodel.impl;
 
-import it.unibg.robotics.roscomponentmodel.Composite;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
+import org.hyperflex.roscomponentmodel.Composite;
+import org.hyperflex.roscomponentmodel.roscomponentmodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -42,13 +42,13 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.SystemImpl#getComposite <em>Composite</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.SystemImpl#getComposite <em>Composite</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SystemImpl extends EObjectImpl implements it.unibg.robotics.roscomponentmodel.System {
+public class SystemImpl extends EObjectImpl implements org.hyperflex.roscomponentmodel.System {
 	/**
 	 * The cached value of the '{@link #getComposite() <em>Composite</em>}' containment reference.
 	 * <!-- begin-user-doc -->

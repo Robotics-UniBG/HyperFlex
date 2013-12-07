@@ -1,8 +1,8 @@
-package it.unibg.robotics.roscomponentmodel.diagram.part;
+package org.hyperflex.roscomponentmodel.diagram.part;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.RosComponentModelBaseItemSemanticEditPolicy;
-import it.unibg.robotics.roscomponentmodel.diagram.expressions.RosComponentModelOCLFactory;
-import it.unibg.robotics.roscomponentmodel.diagram.providers.ElementInitializers;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.RosComponentModelBaseItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.expressions.RosComponentModelOCLFactory;
+import org.hyperflex.roscomponentmodel.diagram.providers.ElementInitializers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class RosComponentModelDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
-	public static final String ID = "it.unibg.robotics.componentmodels.ros.diagram"; //$NON-NLS-1$
+	public static final String ID = "org.hyperflex.componentmodels.ros.diagram"; //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -121,7 +121,7 @@ public class RosComponentModelDiagramEditorPlugin extends AbstractUIPlugin {
 	 */
 	protected void fillItemProviderFactories(List<AdapterFactory> factories) {
 		factories
-				.add(new it.unibg.robotics.roscomponentmodel.provider.roscomponentmodelItemProviderAdapterFactory());
+				.add(new org.hyperflex.roscomponentmodel.provider.roscomponentmodelItemProviderAdapterFactory());
 		factories.add(new ResourceItemProviderAdapterFactory());
 		factories.add(new ReflectiveItemProviderAdapterFactory());
 	}

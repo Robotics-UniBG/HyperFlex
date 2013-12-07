@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel;
+package org.hyperflex.compositionmodel;
 
 
 /**
@@ -35,11 +35,11 @@ package it.unibg.robotics.compositionmodel;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf#getImpl <em>Impl</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.SystemCompositeRequiredInterf#getImpl <em>Impl</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getSystemCompositeRequiredInterf()
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage#getSystemCompositeRequiredInterf()
  * @model
  * @generated
  */
@@ -54,14 +54,14 @@ public interface SystemCompositeRequiredInterf extends CompRequiredInterf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Impl</em>' reference.
 	 * @see #setImpl(SystemRequiredInterf)
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getSystemCompositeRequiredInterf_Impl()
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getSystemCompositeRequiredInterf_Impl()
 	 * @model required="true"
 	 * @generated
 	 */
 	SystemRequiredInterf getImpl();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf#getImpl <em>Impl</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.compositionmodel.SystemCompositeRequiredInterf#getImpl <em>Impl</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Impl</em>' reference.

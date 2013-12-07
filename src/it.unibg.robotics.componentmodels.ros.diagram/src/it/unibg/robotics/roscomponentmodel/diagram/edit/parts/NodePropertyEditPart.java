@@ -1,7 +1,7 @@
-package it.unibg.robotics.roscomponentmodel.diagram.edit.parts;
+package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.NodePropertyItemSemanticEditPolicy;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.NodePropertyItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.RectangleFigure;

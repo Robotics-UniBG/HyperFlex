@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.diagram.edit.helpers;
+package org.hyperflex.roscomponentmodel.diagram.edit.helpers;
 
 /**
  * @generated

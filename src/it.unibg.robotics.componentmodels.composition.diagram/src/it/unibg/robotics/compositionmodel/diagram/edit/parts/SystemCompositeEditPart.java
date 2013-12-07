@@ -1,8 +1,8 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.parts;
+package org.hyperflex.compositionmodel.diagram.edit.parts;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.policies.SystemCompositeCanonicalEditPolicy;
-import it.unibg.robotics.compositionmodel.diagram.edit.policies.SystemCompositeItemSemanticEditPolicy;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.edit.policies.SystemCompositeCanonicalEditPolicy;
+import org.hyperflex.compositionmodel.diagram.edit.policies.SystemCompositeItemSemanticEditPolicy;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
 
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.GridData;

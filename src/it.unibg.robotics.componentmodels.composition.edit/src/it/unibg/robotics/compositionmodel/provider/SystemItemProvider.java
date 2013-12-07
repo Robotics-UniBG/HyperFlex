@@ -24,11 +24,11 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.provider;
+package org.hyperflex.compositionmodel.provider;
 
 
-import it.unibg.robotics.compositionmodel.compositionmodelFactory;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.compositionmodelFactory;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -53,7 +53,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link it.unibg.robotics.compositionmodel.System} object.
+ * This is the item provider adapter for a {@link org.hyperflex.compositionmodel.System} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -167,7 +167,7 @@ public class SystemItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((it.unibg.robotics.compositionmodel.System)object).getName();
+		String label = ((org.hyperflex.compositionmodel.System)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_System_type") :
 			getString("_UI_System_type") + " " + label;
@@ -184,7 +184,7 @@ public class SystemItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(it.unibg.robotics.compositionmodel.System.class)) {
+		switch (notification.getFeatureID(org.hyperflex.compositionmodel.System.class)) {
 			case compositionmodelPackage.SYSTEM__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

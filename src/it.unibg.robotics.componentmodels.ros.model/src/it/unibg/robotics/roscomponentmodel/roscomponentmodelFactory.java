@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage
  * @generated
  */
 public interface roscomponentmodelFactory extends EFactory {
@@ -42,7 +42,7 @@ public interface roscomponentmodelFactory extends EFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	roscomponentmodelFactory eINSTANCE = it.unibg.robotics.roscomponentmodel.impl.roscomponentmodelFactoryImpl.init();
+	roscomponentmodelFactory eINSTANCE = org.hyperflex.roscomponentmodel.impl.roscomponentmodelFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Composite</em>'.

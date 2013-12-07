@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel;
+package org.hyperflex.compositionmodel;
 
 
 /**
@@ -33,7 +33,7 @@ package it.unibg.robotics.compositionmodel;
  * <!-- end-user-doc -->
  *
  *
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getCompProvidedInterf()
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage#getCompProvidedInterf()
  * @model abstract="true"
  * @generated
  */

@@ -1,10 +1,10 @@
-package it.unibg.robotics.compositionmodel.diagram.navigator;
+package org.hyperflex.compositionmodel.diagram.navigator;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditor;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
-import it.unibg.robotics.compositionmodel.diagram.part.Messages;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditor;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.part.Messages;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.common.ui.URIEditorInput;

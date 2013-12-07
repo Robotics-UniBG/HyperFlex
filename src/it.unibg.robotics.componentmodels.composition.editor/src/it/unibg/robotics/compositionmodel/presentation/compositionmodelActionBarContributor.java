@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.presentation;
+package org.hyperflex.compositionmodel.presentation;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -202,7 +202,7 @@ public class compositionmodelActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(CompositionModelEditorPlugin.INSTANCE.getString("_UI_compositionmodelEditor_menu"), "it.unibg.robotics.compositionmodelMenuID");
+		IMenuManager submenuManager = new MenuManager(CompositionModelEditorPlugin.INSTANCE.getString("_UI_compositionmodelEditor_menu"), "org.hyperflex.compositionmodelMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));

@@ -1,10 +1,10 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.commands;
+package org.hyperflex.compositionmodel.diagram.edit.commands;
 
-import it.unibg.robotics.compositionmodel.Connection;
-import it.unibg.robotics.compositionmodel.ProvidedInterface;
-import it.unibg.robotics.compositionmodel.RequiredInterface;
-import it.unibg.robotics.compositionmodel.System;
-import it.unibg.robotics.compositionmodel.diagram.edit.policies.CompositionModelBaseItemSemanticEditPolicy;
+import org.hyperflex.compositionmodel.Connection;
+import org.hyperflex.compositionmodel.ProvidedInterface;
+import org.hyperflex.compositionmodel.RequiredInterface;
+import org.hyperflex.compositionmodel.System;
+import org.hyperflex.compositionmodel.diagram.edit.policies.CompositionModelBaseItemSemanticEditPolicy;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
@@ -84,7 +84,7 @@ public class ConnectionCreateCommand extends EditElementCommand {
 					"Invalid arguments in create link command"); //$NON-NLS-1$
 		}
 
-		Connection newElement = it.unibg.robotics.compositionmodel.compositionmodelFactory.eINSTANCE
+		Connection newElement = org.hyperflex.compositionmodel.compositionmodelFactory.eINSTANCE
 				.createConnection();
 		getContainer().getConnections().add(newElement);
 		newElement.setSource(getSource());

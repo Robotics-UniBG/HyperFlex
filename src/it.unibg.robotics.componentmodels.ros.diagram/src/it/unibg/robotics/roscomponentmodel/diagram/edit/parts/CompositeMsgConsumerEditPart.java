@@ -23,10 +23,10 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.diagram.edit.parts;
+package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.CompositeMsgConsumerItemSemanticEditPolicy;
-import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.CompositeMsgConsumerItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

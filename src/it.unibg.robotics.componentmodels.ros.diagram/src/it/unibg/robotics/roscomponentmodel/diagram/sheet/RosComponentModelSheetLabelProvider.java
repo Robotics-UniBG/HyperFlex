@@ -1,8 +1,8 @@
-package it.unibg.robotics.roscomponentmodel.diagram.sheet;
+package org.hyperflex.roscomponentmodel.diagram.sheet;
 
-import it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorGroup;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
+import org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorGroup;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;

@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.navigator;
+package org.hyperflex.compositionmodel.diagram.navigator;
 
 import java.util.Collection;
 import java.util.LinkedList;
@@ -79,8 +79,8 @@ public class CompositionModelNavigatorGroup extends
 	 * @generated
 	 */
 	public boolean equals(Object obj) {
-		if (obj instanceof it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorGroup) {
-			it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorGroup anotherGroup = (it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorGroup) obj;
+		if (obj instanceof org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorGroup) {
+			org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorGroup anotherGroup = (org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorGroup) obj;
 			if (getGroupName().equals(anotherGroup.getGroupName())) {
 				return getParent().equals(anotherGroup.getParent());
 			}

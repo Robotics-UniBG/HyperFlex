@@ -1,4 +1,4 @@
-package it.unibg.robotics.roscomponentmodel.diagram.navigator;
+package org.hyperflex.roscomponentmodel.diagram.navigator;
 
 import java.util.Collection;
 import java.util.LinkedList;
@@ -79,8 +79,8 @@ public class RosComponentModelNavigatorGroup extends
 	 * @generated
 	 */
 	public boolean equals(Object obj) {
-		if (obj instanceof it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorGroup) {
-			it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorGroup anotherGroup = (it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorGroup) obj;
+		if (obj instanceof org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorGroup) {
+			org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorGroup anotherGroup = (org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorGroup) obj;
 			if (getGroupName().equals(anotherGroup.getGroupName())) {
 				return getParent().equals(anotherGroup.getParent());
 			}

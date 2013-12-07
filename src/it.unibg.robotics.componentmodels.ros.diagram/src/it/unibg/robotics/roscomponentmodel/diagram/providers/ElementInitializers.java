@@ -1,6 +1,6 @@
-package it.unibg.robotics.roscomponentmodel.diagram.providers;
+package org.hyperflex.roscomponentmodel.diagram.providers;
 
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
 
 /**
  * @generated

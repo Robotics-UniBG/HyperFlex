@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.presentation;
+package org.hyperflex.roscomponentmodel.presentation;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -201,7 +201,7 @@ public class roscomponentmodelActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(RosComponentModelEditorPlugin.INSTANCE.getString("_UI_roscomponentmodelEditor_menu"), "it.unibg.robotics.roscomponentmodelMenuID");
+		IMenuManager submenuManager = new MenuManager(RosComponentModelEditorPlugin.INSTANCE.getString("_UI_roscomponentmodelEditor_menu"), "org.hyperflex.roscomponentmodelMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));

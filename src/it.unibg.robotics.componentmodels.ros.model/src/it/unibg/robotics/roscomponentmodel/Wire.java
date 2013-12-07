@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -35,12 +35,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Wire#getSource <em>Source</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Wire#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Wire#getSource <em>Source</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Wire#getTarget <em>Target</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getWire()
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getWire()
  * @model
  * @generated
  */
@@ -55,14 +55,14 @@ public interface Wire extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(SrvProducer)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getWire_Source()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getWire_Source()
 	 * @model required="true"
 	 * @generated
 	 */
 	SrvProducer getSource();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.Wire#getSource <em>Source</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.Wire#getSource <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Source</em>' reference.
@@ -81,14 +81,14 @@ public interface Wire extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
 	 * @see #setTarget(SrvConsumer)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getWire_Target()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getWire_Target()
 	 * @model required="true"
 	 * @generated
 	 */
 	SrvConsumer getTarget();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.Wire#getTarget <em>Target</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.Wire#getTarget <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Target</em>' reference.

@@ -1,6 +1,6 @@
-package it.unibg.robotics.roscomponentmodel.diagram.part;
+package org.hyperflex.roscomponentmodel.diagram.part;
 
-import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 import java.util.ArrayList;
 import java.util.Collections;

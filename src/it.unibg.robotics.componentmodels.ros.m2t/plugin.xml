@@ -17,7 +17,7 @@
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="it.unibg.robotics.componentmodels.ros.m2t.handler.RosLaunchTransform"
+            class="org.hyperflex.componentmodels.ros.m2t.handler.RosLaunchTransform"
             commandId="org.hyperflex.componentmodels.ros.m2t.rosLaunch">
       </handler>
    </extension>

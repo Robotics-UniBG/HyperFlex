@@ -1,11 +1,11 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.commands;
+package org.hyperflex.compositionmodel.diagram.edit.commands;
 
 
 
-import it.unibg.robotics.compositionmodel.Composite;
-import it.unibg.robotics.roscompositionmodel.ROSMsgConsumer;
-import it.unibg.robotics.roscompositionmodel.ROSMsgProducer;
-import it.unibg.robotics.roscompositionmodel.roscompositionmodelFactory;
+import org.hyperflex.compositionmodel.Composite;
+import org.hyperflex.roscompositionmodel.ROSMsgConsumer;
+import org.hyperflex.roscompositionmodel.ROSMsgProducer;
+import org.hyperflex.roscompositionmodel.roscompositionmodelFactory;
 
 import java.io.IOException;
 
@@ -108,19 +108,19 @@ public class ImportCompositeCreateCommand extends EditElementCommand {
 							.newErrorCommandResult("File Selection Error");
 				}
 
-				if ((ecoreResource.getContents().get(0) instanceof it.unibg.robotics.roscomponentmodel.System)) {
+				if ((ecoreResource.getContents().get(0) instanceof org.hyperflex.roscomponentmodel.System)) {
 
 
 					newElement = roscompositionmodelFactory.eINSTANCE.createROSComposite();
 					
-					it.unibg.robotics.roscomponentmodel.Composite originalComposite = 
-							((it.unibg.robotics.roscomponentmodel.System) ecoreResource
+					org.hyperflex.roscomponentmodel.Composite originalComposite = 
+							((org.hyperflex.roscomponentmodel.System) ecoreResource
 							.getContents().get(0)).getComposite();
 
 					newElement.setName(originalComposite.getName());
 
 					
-					for (it.unibg.robotics.roscomponentmodel.CompositeMsgProducer msgProducer : originalComposite.getMsgProducers()) {
+					for (org.hyperflex.roscomponentmodel.CompositeMsgProducer msgProducer : originalComposite.getMsgProducers()) {
 
 						ROSMsgProducer providedInterface = roscompositionmodelFactory.eINSTANCE
 								.createROSMsgProducer();
@@ -130,7 +130,7 @@ public class ImportCompositeCreateCommand extends EditElementCommand {
 
 					}
 
-					for (it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer msgConsumer : originalComposite.getMsgConsumers()) {
+					for (org.hyperflex.roscomponentmodel.CompositeMsgConsumer msgConsumer : originalComposite.getMsgConsumers()) {
 
 						ROSMsgConsumer requiredInterface = roscompositionmodelFactory.eINSTANCE
 								.createROSMsgConsumer();
@@ -140,7 +140,7 @@ public class ImportCompositeCreateCommand extends EditElementCommand {
 
 					}
 
-					it.unibg.robotics.compositionmodel.System owner = (it.unibg.robotics.compositionmodel.System) getElementToEdit();
+					org.hyperflex.compositionmodel.System owner = (org.hyperflex.compositionmodel.System) getElementToEdit();
 					owner.getComposites().add(newElement);
 
 					doConfigure(newElement, monitor, info);
@@ -148,7 +148,7 @@ public class ImportCompositeCreateCommand extends EditElementCommand {
 					((CreateElementRequest) getRequest()).setNewElement(newElement);
 					return CommandResult.newOKCommandResult(newElement);
 				}else if ((ecoreResource.getContents().get(0) instanceof 
-						it.unibg.robotics.orocoscomponentmodel.System)) {
+						org.hyperflex.orocoscomponentmodel.System)) {
 					//TODO
 				}
 				else{

@@ -23,15 +23,15 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.impl;
+package org.hyperflex.roscomponentmodel.impl;
 
-import it.unibg.robotics.roscomponentmodel.Node;
-import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
-import it.unibg.robotics.roscomponentmodel.NodeProperty;
-import it.unibg.robotics.roscomponentmodel.NodeSrvConsumer;
-import it.unibg.robotics.roscomponentmodel.NodeSrvProducer;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
+import org.hyperflex.roscomponentmodel.Node;
+import org.hyperflex.roscomponentmodel.NodeMsgConsumer;
+import org.hyperflex.roscomponentmodel.NodeMsgProducer;
+import org.hyperflex.roscomponentmodel.NodeProperty;
+import org.hyperflex.roscomponentmodel.NodeSrvConsumer;
+import org.hyperflex.roscomponentmodel.NodeSrvProducer;
+import org.hyperflex.roscomponentmodel.roscomponentmodelPackage;
 
 import java.util.Collection;
 
@@ -51,13 +51,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getMsgProducers <em>Msg Producers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getMsgConsumers <em>Msg Consumers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getParameters <em>Parameters</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getSrvProducers <em>Srv Producers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getSrvConsumers <em>Srv Consumers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getPackageName <em>Package Name</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.NodeImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.NodeImpl#getMsgProducers <em>Msg Producers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.NodeImpl#getMsgConsumers <em>Msg Consumers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.NodeImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.NodeImpl#getSrvProducers <em>Srv Producers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.NodeImpl#getSrvConsumers <em>Srv Consumers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.NodeImpl#getPackageName <em>Package Name</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.NodeImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *

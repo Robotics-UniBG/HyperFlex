@@ -1,19 +1,19 @@
-package it.unibg.robotics.compositionmodel.diagram.navigator;
+package org.hyperflex.compositionmodel.diagram.navigator;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.System2EditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
-import it.unibg.robotics.compositionmodel.diagram.part.Messages;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.System2EditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.part.Messages;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: it.unibg.robotics.compositionmodels.diagram;singleton:=true
+Bundle-SymbolicName: org.hyperflex.compositionmodels.diagram;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin
+Bundle-Activator: org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: it.unibg.robotics.compositionmodel.diagram.edit.parts,
- it.unibg.robotics.compositionmodel.diagram.part,
- it.unibg.robotics.compositionmodel.diagram.providers
+Export-Package: org.hyperflex.compositionmodel.diagram.edit.parts,
+ org.hyperflex.compositionmodel.diagram.part,
+ org.hyperflex.compositionmodel.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.core.expressions,
@@ -34,13 +34,13 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gmf.tooling.runtime;visibility:=reexport,
  org.eclipse.draw2d;visibility:=reexport,
  org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport,
- it.unibg.robotics.compositionmodels.model;visibility:=reexport,
- it.unibg.robotics.compositionmodels.model.edit;visibility:=reexport,
+ org.hyperflex.compositionmodels.model;visibility:=reexport,
+ org.hyperflex.compositionmodels.model.edit;visibility:=reexport,
  org.eclipse.gef;visibility:=reexport,
  org.hyperflex.componentmodels.shared;bundle-version="1.0.0",
- it.unibg.robotics.compositionmodels.ros.model;bundle-version="1.0.0",
- it.unibg.robotics.compositionmodels.ros.model.edit;bundle-version="1.0.0",
- it.unibg.robotics.componentmodels.orocos.model;bundle-version="1.0.0",
- it.unibg.robotics.componentmodels.orocos.model.edit;bundle-version="1.0.0"
+ org.hyperflex.compositionmodels.ros.model;bundle-version="1.0.0",
+ org.hyperflex.compositionmodels.ros.model.edit;bundle-version="1.0.0",
+ org.hyperflex.componentmodels.orocos.model;bundle-version="1.0.0",
+ org.hyperflex.componentmodels.orocos.model.edit;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

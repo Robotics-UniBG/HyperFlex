@@ -1,10 +1,10 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.policies;
+package org.hyperflex.compositionmodel.diagram.edit.policies;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramUpdater;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelNodeDescriptor;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramUpdater;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelNodeDescriptor;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -49,7 +49,7 @@ public class SystemCompositeContainerCompartmentCanonicalEditPolicy extends
 	 * @generated
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+		return org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 				.getSystem_Composites();
 	}
 

@@ -1,6 +1,6 @@
-package it.unibg.robotics.compositionmodel.diagram.preferences;
+package org.hyperflex.compositionmodel.diagram.preferences;
 
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
 
 import org.eclipse.gmf.runtime.diagram.ui.preferences.RulerGridPreferencePage;
 

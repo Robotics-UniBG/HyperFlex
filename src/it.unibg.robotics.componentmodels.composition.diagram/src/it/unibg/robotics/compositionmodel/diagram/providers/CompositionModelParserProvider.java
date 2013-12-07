@@ -1,11 +1,11 @@
-package it.unibg.robotics.compositionmodel.diagram.providers;
+package org.hyperflex.compositionmodel.diagram.providers;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionNameEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeNameEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeNameEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemNameEditPart;
-import it.unibg.robotics.compositionmodel.diagram.parsers.MessageFormatParser;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionNameEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeNameEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeNameEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemNameEditPart;
+import org.hyperflex.compositionmodel.diagram.parsers.MessageFormatParser;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EAttribute;
@@ -36,7 +36,7 @@ public class CompositionModelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSystemName_5006Parser() {
 		if (systemName_5006Parser == null) {
-			EAttribute[] features = new EAttribute[] { it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getSystem_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			systemName_5006Parser = parser;
@@ -54,7 +54,7 @@ public class CompositionModelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getSystemCompositeName_5007Parser() {
 		if (systemCompositeName_5007Parser == null) {
-			EAttribute[] features = new EAttribute[] { it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getComposite_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			systemCompositeName_5007Parser = parser;
@@ -72,7 +72,7 @@ public class CompositionModelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getROSCompositeName_5008Parser() {
 		if (rOSCompositeName_5008Parser == null) {
-			EAttribute[] features = new EAttribute[] { it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getComposite_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			rOSCompositeName_5008Parser = parser;
@@ -90,7 +90,7 @@ public class CompositionModelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getConnectionName_6001Parser() {
 		if (connectionName_6001Parser == null) {
-			EAttribute[] features = new EAttribute[] { it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getConnection_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			connectionName_6001Parser = parser;

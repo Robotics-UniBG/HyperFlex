@@ -1,6 +1,6 @@
-package it.unibg.robotics.roscomponentmodel.diagram.part;
+package org.hyperflex.roscomponentmodel.diagram.part;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.common.util.URI;

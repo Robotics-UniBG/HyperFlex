@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.part;
+package org.hyperflex.compositionmodel.diagram.part;
 
 import org.eclipse.core.expressions.PropertyTester;
 import org.eclipse.emf.common.ui.URIEditorInput;

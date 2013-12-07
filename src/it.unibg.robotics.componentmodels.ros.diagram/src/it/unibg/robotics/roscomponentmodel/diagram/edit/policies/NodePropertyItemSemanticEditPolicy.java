@@ -1,6 +1,6 @@
-package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
+package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.gef.commands.Command;

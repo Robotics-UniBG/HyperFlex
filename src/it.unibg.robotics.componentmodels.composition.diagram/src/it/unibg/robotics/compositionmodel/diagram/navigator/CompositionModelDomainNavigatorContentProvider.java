@@ -1,6 +1,6 @@
-package it.unibg.robotics.compositionmodel.diagram.navigator;
+package org.hyperflex.compositionmodel.diagram.navigator;
 
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
 
 import java.util.ArrayList;
 import java.util.Collection;

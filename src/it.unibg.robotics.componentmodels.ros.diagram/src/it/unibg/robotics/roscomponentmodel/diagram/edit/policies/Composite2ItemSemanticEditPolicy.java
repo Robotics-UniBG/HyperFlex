@@ -23,18 +23,18 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
+package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.commands.CompositeMsgConsumerCreateCommand;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.commands.CompositeMsgProducerCreateCommand;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.CompositeMsgConsumerCreateCommand;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.CompositeMsgProducerCreateCommand;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 import java.util.Iterator;
 

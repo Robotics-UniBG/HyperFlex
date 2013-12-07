@@ -31,9 +31,9 @@
 
    <extension point="org.eclipse.ui.newWizards">
       <wizard
-            id="it.unibg.robotics.roscomponentmodel.presentation.roscomponentmodelModelWizardID"
+            id="org.hyperflex.roscomponentmodel.presentation.roscomponentmodelModelWizardID"
             name="%_UI_roscomponentmodelModelWizard_label"
-            class="it.unibg.robotics.roscomponentmodel.presentation.roscomponentmodelModelWizard"
+            class="org.hyperflex.roscomponentmodel.presentation.roscomponentmodelModelWizard"
             category="it.robotics.unibg.hyperflex.wizard.category"
             icon="icons/full/obj16/roscomponentmodelModelFile.gif">
          <description>%_UI_roscomponentmodelModelWizard_description</description>
@@ -43,12 +43,12 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="it.unibg.robotics.roscomponentmodel.presentation.roscomponentmodelEditorID"
+            id="org.hyperflex.roscomponentmodel.presentation.roscomponentmodelEditorID"
             name="%_UI_roscomponentmodelEditor_label"
             icon="icons/full/obj16/roscomponentmodelModelFile.gif"
             extensions="roscomponentmodel"
-            class="it.unibg.robotics.roscomponentmodel.presentation.roscomponentmodelEditor"
-            contributorClass="it.unibg.robotics.roscomponentmodel.presentation.roscomponentmodelActionBarContributor">
+            class="org.hyperflex.roscomponentmodel.presentation.roscomponentmodelEditor"
+            contributorClass="org.hyperflex.roscomponentmodel.presentation.roscomponentmodelActionBarContributor">
       </editor>
    </extension>
 

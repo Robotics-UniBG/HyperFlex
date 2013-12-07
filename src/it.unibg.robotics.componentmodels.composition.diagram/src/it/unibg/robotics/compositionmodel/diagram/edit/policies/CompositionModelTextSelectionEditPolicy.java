@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.policies;
+package org.hyperflex.compositionmodel.diagram.edit.policies;
 
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Figure;

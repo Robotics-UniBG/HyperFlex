@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.policies;
+package org.hyperflex.compositionmodel.diagram.edit.policies;
 
 import java.util.Collections;
 import java.util.List;

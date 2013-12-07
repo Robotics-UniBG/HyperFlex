@@ -33,9 +33,9 @@
    <extension point="org.eclipse.ui.newWizards">
       <!-- @generated compositionModel -->
       <wizard
-            id="it.unibg.robotics.compositionmodel.presentation.compositionmodelModelWizardID"
+            id="org.hyperflex.compositionmodel.presentation.compositionmodelModelWizardID"
             name="%_UI_compositionmodelModelWizard_label"
-            class="it.unibg.robotics.compositionmodel.presentation.compositionmodelModelWizard"
+            class="org.hyperflex.compositionmodel.presentation.compositionmodelModelWizard"
             category="it.robotics.unibg.hyperflex.wizard.category"
             icon="icons/full/obj16/compositionmodelModelFile.gif">
          <description>%_UI_compositionmodelModelWizard_description</description>
@@ -45,12 +45,12 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="it.unibg.robotics.compositionmodel.presentation.compositionmodelEditorID"
+            id="org.hyperflex.compositionmodel.presentation.compositionmodelEditorID"
             name="%_UI_compositionmodelEditor_label"
             icon="icons/full/obj16/compositionmodelModelFile.gif"
             extensions="compositionmodel"
-            class="it.unibg.robotics.compositionmodel.presentation.compositionmodelEditor"
-            contributorClass="it.unibg.robotics.compositionmodel.presentation.compositionmodelActionBarContributor">
+            class="org.hyperflex.compositionmodel.presentation.compositionmodelEditor"
+            contributorClass="org.hyperflex.compositionmodel.presentation.compositionmodelActionBarContributor">
       </editor>
    </extension>
 

@@ -24,10 +24,10 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.impl;
+package org.hyperflex.compositionmodel.impl;
 
-import it.unibg.robotics.compositionmodel.Interface;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.Interface;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -43,7 +43,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.InterfaceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.InterfaceImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *

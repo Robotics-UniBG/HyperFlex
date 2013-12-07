@@ -98,7 +98,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_yy8j-NglEeKV69VwfWrdmA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_yy7V0dglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//ProvidedInterfaceImpl"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//ProvidedInterfaceImpl"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yy7V0tglEeKV69VwfWrdmA" x="63" y="405" width="163"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_yy9LANglEeKV69VwfWrdmA" type="1001">
@@ -117,7 +117,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_yy9yGNglEeKV69VwfWrdmA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_yy9LAdglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//RequiredInterface"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//RequiredInterface"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yy9LAtglEeKV69VwfWrdmA" x="693" y="279" width="156"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_yy-ZINglEeKV69VwfWrdmA" type="1001">
@@ -127,7 +127,7 @@
     <children xmi:type="notation:Node" xmi:id="_yy_AMNglEeKV69VwfWrdmA" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_yy_AMdglEeKV69VwfWrdmA" type="5001">
       <children xmi:type="notation:Node" xmi:id="_yzO30NglEeKV69VwfWrdmA" type="2001">
-        <element xmi:type="ecore:EAttribute" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//Composite/name"/>
+        <element xmi:type="ecore:EAttribute" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//Composite/name"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_yzO30dglEeKV69VwfWrdmA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_yy_AMtglEeKV69VwfWrdmA"/>
@@ -140,7 +140,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_yy_AONglEeKV69VwfWrdmA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_yy-ZIdglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//Composite"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//Composite"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yy-ZItglEeKV69VwfWrdmA" x="279" y="135"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_yy_nQNglEeKV69VwfWrdmA" type="1001">
@@ -159,7 +159,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_yzAOWNglEeKV69VwfWrdmA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_yy_nQdglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//ProvidedInterface"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//ProvidedInterface"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yy_nQtglEeKV69VwfWrdmA" x="81" y="279" width="153"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_yzA1YNglEeKV69VwfWrdmA" type="1001">
@@ -178,7 +178,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_yzBcd9glEeKV69VwfWrdmA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_yzA1YdglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//CompositeImpl"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//CompositeImpl"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yzA1YtglEeKV69VwfWrdmA" x="666" y="63" width="165"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_yzCDgNglEeKV69VwfWrdmA" type="1001">
@@ -197,7 +197,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_yzCql9glEeKV69VwfWrdmA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_yzCDgdglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//System"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//System"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yzCDgtglEeKV69VwfWrdmA" x="279" y="27"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_yzDRoNglEeKV69VwfWrdmA" type="1001">
@@ -216,7 +216,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_yzD4s9glEeKV69VwfWrdmA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_yzDRodglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//RequiredInterfaceImpl"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//RequiredInterfaceImpl"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yzDRotglEeKV69VwfWrdmA" x="684" y="405" width="183"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_ofY0ANgmEeKV69VwfWrdmA" type="1001">
@@ -235,7 +235,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_ofaCI9gmEeKV69VwfWrdmA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_ofY0AdgmEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//PackageMsgProducer"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//PackageMsgProducer"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ofY0AtgmEeKV69VwfWrdmA" y="675"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_0e7IINgmEeKV69VwfWrdmA" type="1001">
@@ -254,7 +254,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_0e8WQ9gmEeKV69VwfWrdmA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_0e7IIdgmEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//PackageMsgConsumer"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//PackageMsgConsumer"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0e7IItgmEeKV69VwfWrdmA" x="792" y="684"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_2LUYgNgmEeKV69VwfWrdmA" type="1001">
@@ -273,7 +273,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_2LU_mNgmEeKV69VwfWrdmA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_2LUYgdgmEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//PackageSrvConsumer"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//PackageSrvConsumer"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2LUYgtgmEeKV69VwfWrdmA" x="612" y="693"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_30G7QNgmEeKV69VwfWrdmA" type="1001">
@@ -292,7 +292,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_30HiU9gmEeKV69VwfWrdmA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_30G7QdgmEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.ecore#//PackageSrvProducer"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//PackageSrvProducer"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_30G7QtgmEeKV69VwfWrdmA" x="153" y="675"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="__wKSMNguEeKV69VwfWrdmA" type="1001">
@@ -311,7 +311,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="__wNViNguEeKV69VwfWrdmA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="__wKSMdguEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//Connection"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//Connection"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="__wKSMtguEeKV69VwfWrdmA" x="405" y="387"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_GIJH8NgvEeKV69VwfWrdmA" type="1001">
@@ -341,7 +341,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_yzjA4NglEeKV69VwfWrdmA" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_yzjA4dglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//ProvidedInterface/impl"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//ProvidedInterface/impl"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yzjA4tglEeKV69VwfWrdmA" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y032kdglEeKV69VwfWrdmA" id="(0.5,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y032ktglEeKV69VwfWrdmA" id="(0.5039370078740157,1.0)"/>
@@ -367,7 +367,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_yzpukdglEeKV69VwfWrdmA" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_yzpuktglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//RequiredInterface/impl"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//RequiredInterface/impl"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yzpuk9glEeKV69VwfWrdmA" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y04doNglEeKV69VwfWrdmA" id="(0.5,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y04dodglEeKV69VwfWrdmA" id="(0.4883720930232558,1.0)"/>
@@ -381,7 +381,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_yzrjwdglEeKV69VwfWrdmA" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_yzrjwtglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//Composite/reqInterfaces"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//Composite/reqInterfaces"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yzrjw9glEeKV69VwfWrdmA" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y02ocdglEeKV69VwfWrdmA" id="(0.5,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y03PgNglEeKV69VwfWrdmA" id="(0.5,1.0)"/>
@@ -395,7 +395,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_yzvOIdglEeKV69VwfWrdmA" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_yzvOItglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//Composite/impl"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//Composite/impl"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yzvOI9glEeKV69VwfWrdmA" points="[0, 0, -376, 13]$[295, -54, -81, -41]$[295, -54, -81, -41]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y02BYNglEeKV69VwfWrdmA" id="(0.746031746031746,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y02BYdglEeKV69VwfWrdmA" id="(0.5,1.0)"/>
@@ -409,7 +409,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_yzwcQdglEeKV69VwfWrdmA" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_yzwcQtglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//Composite/provInterfaces"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//Composite/provInterfaces"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yzxDUNglEeKV69VwfWrdmA" points="[0, 0, 154, 60]$[-154, -60, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y02BYtglEeKV69VwfWrdmA" id="(0.24603174603174602,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y02ocNglEeKV69VwfWrdmA" id="(0.5,1.0)"/>
@@ -423,7 +423,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_yzyRcdglEeKV69VwfWrdmA" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_yzyRctglEeKV69VwfWrdmA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="platform:/resource/it.unibg.robotics.componentmodels.composition/models/compositionModel.ecore#//System/composites"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.hyperflex.componentmodels.composition/models/compositionModel.ecore#//System/composites"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yzyRc9glEeKV69VwfWrdmA" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y03PgdglEeKV69VwfWrdmA" id="(0.5,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y032kNglEeKV69VwfWrdmA" id="(0.5,1.0)"/>

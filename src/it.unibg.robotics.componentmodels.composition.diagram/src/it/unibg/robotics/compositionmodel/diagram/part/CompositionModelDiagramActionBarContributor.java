@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.part;
+package org.hyperflex.compositionmodel.diagram.part;
 
 import org.eclipse.gmf.runtime.diagram.ui.parts.DiagramActionBarContributor;
 import org.eclipse.jface.action.IMenuManager;

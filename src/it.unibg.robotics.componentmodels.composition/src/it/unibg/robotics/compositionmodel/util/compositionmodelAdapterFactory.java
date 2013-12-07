@@ -24,26 +24,26 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.util;
+package org.hyperflex.compositionmodel.util;
 
-import it.unibg.robotics.compositionmodel.ArchitectureModel;
-import it.unibg.robotics.compositionmodel.CompProvidedInterf;
-import it.unibg.robotics.compositionmodel.CompRequiredInterf;
-import it.unibg.robotics.compositionmodel.ComponentProperty;
-import it.unibg.robotics.compositionmodel.Composite;
-import it.unibg.robotics.compositionmodel.Connection;
-import it.unibg.robotics.compositionmodel.Interface;
-import it.unibg.robotics.compositionmodel.Property;
-import it.unibg.robotics.compositionmodel.ProvidedInterface;
-import it.unibg.robotics.compositionmodel.RequiredInterface;
-import it.unibg.robotics.compositionmodel.SystemComposite;
-import it.unibg.robotics.compositionmodel.SystemCompositeProperty;
-import it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf;
-import it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf;
-import it.unibg.robotics.compositionmodel.SystemProperty;
-import it.unibg.robotics.compositionmodel.SystemProvidedInterf;
-import it.unibg.robotics.compositionmodel.SystemRequiredInterf;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.ArchitectureModel;
+import org.hyperflex.compositionmodel.CompProvidedInterf;
+import org.hyperflex.compositionmodel.CompRequiredInterf;
+import org.hyperflex.compositionmodel.ComponentProperty;
+import org.hyperflex.compositionmodel.Composite;
+import org.hyperflex.compositionmodel.Connection;
+import org.hyperflex.compositionmodel.Interface;
+import org.hyperflex.compositionmodel.Property;
+import org.hyperflex.compositionmodel.ProvidedInterface;
+import org.hyperflex.compositionmodel.RequiredInterface;
+import org.hyperflex.compositionmodel.SystemComposite;
+import org.hyperflex.compositionmodel.SystemCompositeProperty;
+import org.hyperflex.compositionmodel.SystemCompositeProvidedInterf;
+import org.hyperflex.compositionmodel.SystemCompositeRequiredInterf;
+import org.hyperflex.compositionmodel.SystemProperty;
+import org.hyperflex.compositionmodel.SystemProvidedInterf;
+import org.hyperflex.compositionmodel.SystemRequiredInterf;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -57,7 +57,7 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage
  * @generated
  */
 public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
@@ -109,7 +109,7 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	protected compositionmodelSwitch<Adapter> modelSwitch =
 		new compositionmodelSwitch<Adapter>() {
 			@Override
-			public Adapter caseSystem(it.unibg.robotics.compositionmodel.System object) {
+			public Adapter caseSystem(org.hyperflex.compositionmodel.System object) {
 				return createSystemAdapter();
 			}
 			@Override
@@ -201,13 +201,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.System <em>System</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.System <em>System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.System
+	 * @see org.hyperflex.compositionmodel.System
 	 * @generated
 	 */
 	public Adapter createSystemAdapter() {
@@ -215,13 +215,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.Composite <em>Composite</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.Composite <em>Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.Composite
+	 * @see org.hyperflex.compositionmodel.Composite
 	 * @generated
 	 */
 	public Adapter createCompositeAdapter() {
@@ -229,13 +229,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.CompProvidedInterf <em>Comp Provided Interf</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.CompProvidedInterf <em>Comp Provided Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.CompProvidedInterf
+	 * @see org.hyperflex.compositionmodel.CompProvidedInterf
 	 * @generated
 	 */
 	public Adapter createCompProvidedInterfAdapter() {
@@ -243,13 +243,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.CompRequiredInterf <em>Comp Required Interf</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.CompRequiredInterf <em>Comp Required Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.CompRequiredInterf
+	 * @see org.hyperflex.compositionmodel.CompRequiredInterf
 	 * @generated
 	 */
 	public Adapter createCompRequiredInterfAdapter() {
@@ -257,13 +257,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.Connection <em>Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.Connection <em>Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.Connection
+	 * @see org.hyperflex.compositionmodel.Connection
 	 * @generated
 	 */
 	public Adapter createConnectionAdapter() {
@@ -271,13 +271,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.ArchitectureModel <em>Architecture Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.ArchitectureModel <em>Architecture Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.ArchitectureModel
+	 * @see org.hyperflex.compositionmodel.ArchitectureModel
 	 * @generated
 	 */
 	public Adapter createArchitectureModelAdapter() {
@@ -285,13 +285,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.SystemComposite <em>System Composite</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.SystemComposite <em>System Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.SystemComposite
+	 * @see org.hyperflex.compositionmodel.SystemComposite
 	 * @generated
 	 */
 	public Adapter createSystemCompositeAdapter() {
@@ -299,13 +299,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.Interface <em>Interface</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.Interface <em>Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.Interface
+	 * @see org.hyperflex.compositionmodel.Interface
 	 * @generated
 	 */
 	public Adapter createInterfaceAdapter() {
@@ -313,13 +313,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.SystemProvidedInterf <em>System Provided Interf</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.SystemProvidedInterf <em>System Provided Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.SystemProvidedInterf
+	 * @see org.hyperflex.compositionmodel.SystemProvidedInterf
 	 * @generated
 	 */
 	public Adapter createSystemProvidedInterfAdapter() {
@@ -327,13 +327,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.SystemRequiredInterf <em>System Required Interf</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.SystemRequiredInterf <em>System Required Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.SystemRequiredInterf
+	 * @see org.hyperflex.compositionmodel.SystemRequiredInterf
 	 * @generated
 	 */
 	public Adapter createSystemRequiredInterfAdapter() {
@@ -341,13 +341,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.ProvidedInterface <em>Provided Interface</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.ProvidedInterface <em>Provided Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.ProvidedInterface
+	 * @see org.hyperflex.compositionmodel.ProvidedInterface
 	 * @generated
 	 */
 	public Adapter createProvidedInterfaceAdapter() {
@@ -355,13 +355,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.RequiredInterface <em>Required Interface</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.RequiredInterface <em>Required Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.RequiredInterface
+	 * @see org.hyperflex.compositionmodel.RequiredInterface
 	 * @generated
 	 */
 	public Adapter createRequiredInterfaceAdapter() {
@@ -369,13 +369,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.ComponentProperty <em>Component Property</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.ComponentProperty <em>Component Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.ComponentProperty
+	 * @see org.hyperflex.compositionmodel.ComponentProperty
 	 * @generated
 	 */
 	public Adapter createComponentPropertyAdapter() {
@@ -383,13 +383,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.Property <em>Property</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.Property <em>Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.Property
+	 * @see org.hyperflex.compositionmodel.Property
 	 * @generated
 	 */
 	public Adapter createPropertyAdapter() {
@@ -397,13 +397,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf <em>System Composite Provided Interf</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.SystemCompositeProvidedInterf <em>System Composite Provided Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf
+	 * @see org.hyperflex.compositionmodel.SystemCompositeProvidedInterf
 	 * @generated
 	 */
 	public Adapter createSystemCompositeProvidedInterfAdapter() {
@@ -411,13 +411,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf <em>System Composite Required Interf</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.SystemCompositeRequiredInterf <em>System Composite Required Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf
+	 * @see org.hyperflex.compositionmodel.SystemCompositeRequiredInterf
 	 * @generated
 	 */
 	public Adapter createSystemCompositeRequiredInterfAdapter() {
@@ -425,13 +425,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.SystemProperty <em>System Property</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.SystemProperty <em>System Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.SystemProperty
+	 * @see org.hyperflex.compositionmodel.SystemProperty
 	 * @generated
 	 */
 	public Adapter createSystemPropertyAdapter() {
@@ -439,13 +439,13 @@ public class compositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.SystemCompositeProperty <em>System Composite Property</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.SystemCompositeProperty <em>System Composite Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.SystemCompositeProperty
+	 * @see org.hyperflex.compositionmodel.SystemCompositeProperty
 	 * @generated
 	 */
 	public Adapter createSystemCompositePropertyAdapter() {

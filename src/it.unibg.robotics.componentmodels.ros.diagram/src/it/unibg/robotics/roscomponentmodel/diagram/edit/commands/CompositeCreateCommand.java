@@ -23,10 +23,10 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.diagram.edit.commands;
+package org.hyperflex.roscomponentmodel.diagram.edit.commands;
 
-import it.unibg.robotics.roscomponentmodel.Composite;
-import it.unibg.robotics.roscomponentmodel.System;
+import org.hyperflex.roscomponentmodel.Composite;
+import org.hyperflex.roscomponentmodel.System;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
@@ -82,7 +82,7 @@ public class CompositeCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		Composite newElement = it.unibg.robotics.roscomponentmodel.roscomponentmodelFactory.eINSTANCE
+		Composite newElement = org.hyperflex.roscomponentmodel.roscomponentmodelFactory.eINSTANCE
 				.createComposite();
 
 		System owner = (System) getElementToEdit();

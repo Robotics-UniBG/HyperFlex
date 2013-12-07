@@ -15,7 +15,7 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerName"/>
+            href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerName"/>
         <features
             href="../models/orocosComponentModel.ecore#//AbstractComponent/name"/>
       </labelMappings>
@@ -23,7 +23,7 @@
           xsi:type="gmftool:CreationTool"
           href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.4"/>
       <diagramNode
-          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainer"/>
+          href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainer"/>
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
@@ -34,7 +34,7 @@
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ComponentName"/>
+                href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ComponentName"/>
             <features
                 href="../models/orocosComponentModel.ecore#//AbstractComponent/name"/>
           </labelMappings>
@@ -42,7 +42,7 @@
               xsi:type="gmftool:CreationTool"
               href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.0"/>
           <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Component"/>
+              href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Component"/>
           <children>
             <containmentFeature
                 href="../models/orocosComponentModel.ecore#//TaskContext/inputPorts"/>
@@ -53,7 +53,7 @@
                   xsi:type="gmftool:CreationTool"
                   href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
             </ownedChild>
           </children>
           <children>
@@ -66,7 +66,7 @@
                   xsi:type="gmftool:CreationTool"
                   href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
             </ownedChild>
           </children>
           <children
@@ -79,7 +79,7 @@
               <labelMappings
                   xsi:type="gmfmap:FeatureLabelMapping">
                 <diagramLabel
-                    href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#PropertiesName"/>
+                    href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#PropertiesName"/>
                 <features
                     href="../models/orocosComponentModel.ecore#//Property/name"/>
               </labelMappings>
@@ -87,7 +87,7 @@
                   xsi:type="gmftool:CreationTool"
                   href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Properties"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Properties"/>
             </ownedChild>
           </children>
           <children>
@@ -100,7 +100,7 @@
                   xsi:type="gmftool:CreationTool"
                   href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
             </ownedChild>
           </children>
           <children>
@@ -113,13 +113,13 @@
                   xsi:type="gmftool:CreationTool"
                   href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
             </ownedChild>
           </children>
           <compartments
               children="//@nodes.0/@ownedChild/@children.0/@ownedChild/@children.2">
             <compartment
-                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Properties Compartment"/>
+                href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Properties Compartment"/>
           </compartments>
         </ownedChild>
       </children>
@@ -133,7 +133,7 @@
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeName"/>
+                href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeName"/>
             <features
                 href="../models/orocosComponentModel.ecore#//AbstractComponent/name"/>
           </labelMappings>
@@ -141,7 +141,7 @@
               xsi:type="gmftool:CreationTool"
               href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.5"/>
           <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Composite"/>
+              href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Composite"/>
           <children>
             <containmentFeature
                 href="../models/orocosComponentModel.ecore#//Composite/inputPorts"/>
@@ -152,7 +152,7 @@
                   xsi:type="gmftool:CreationTool"
                   href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
             </ownedChild>
           </children>
           <children>
@@ -165,7 +165,7 @@
                   xsi:type="gmftool:CreationTool"
                   href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
             </ownedChild>
           </children>
           <children>
@@ -178,7 +178,7 @@
                   xsi:type="gmftool:CreationTool"
                   href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
             </ownedChild>
           </children>
           <children>
@@ -191,7 +191,7 @@
                   xsi:type="gmftool:CreationTool"
                   href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
             </ownedChild>
           </children>
         </ownedChild>
@@ -206,7 +206,7 @@
               xsi:type="gmftool:CreationTool"
               href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
+              href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
         </ownedChild>
       </children>
       <children>
@@ -219,7 +219,7 @@
               xsi:type="gmftool:CreationTool"
               href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
           <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
+              href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
         </ownedChild>
       </children>
       <children>
@@ -232,7 +232,7 @@
               xsi:type="gmftool:CreationTool"
               href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
           <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
+              href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
         </ownedChild>
       </children>
       <children>
@@ -245,13 +245,13 @@
               xsi:type="gmftool:CreationTool"
               href="orocosComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
           <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
+              href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
         </ownedChild>
       </children>
       <compartments
           children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1">
         <compartment
-            href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerCompartment"/>
+            href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerCompartment"/>
       </compartments>
     </ownedChild>
   </nodes>
@@ -261,7 +261,7 @@
     <labelMappings
         xsi:type="gmfmap:FeatureLabelMapping">
       <diagramLabel
-          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnectionName"/>
+          href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnectionName"/>
       <features
           href="../models/orocosComponentModel.ecore#//ConnectionPolicy/name"/>
     </labelMappings>
@@ -271,7 +271,7 @@
         xsi:type="gmftool:CreationTool"
         href="orocosComponentModel.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnection"/>
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnection"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
         href="../models/orocosComponentModel.ecore#//ConnectionPolicy/target"/>
@@ -289,7 +289,7 @@
         editorPattern=""
         editPattern="">
       <diagramLabel
-          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeProducerConnectionNameLabel"/>
+          href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeProducerConnectionNameLabel"/>
       <features
           href="../models/orocosComponentModel.ecore#//DataPort/name"/>
     </labelMappings>
@@ -299,7 +299,7 @@
         xsi:type="gmftool:CreationTool"
         href="orocosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeProducerConnection"/>
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeProducerConnection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="../models/orocosComponentModel.ecore#//CompOutputPort/exposedPort"/>
@@ -311,7 +311,7 @@
         xsi:type="gmfmap:FeatureLabelMapping"
         readOnly="true">
       <diagramLabel
-          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeConsumerConnectionNameLabel"/>
+          href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeConsumerConnectionNameLabel"/>
       <features
           href="../models/orocosComponentModel.ecore#//DataPort/name"/>
     </labelMappings>
@@ -321,7 +321,7 @@
         xsi:type="gmftool:CreationTool"
         href="orocosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeConsumerConnection"/>
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeConsumerConnection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="../models/orocosComponentModel.ecore#//CompInputPort/exposedPort"/>
@@ -332,7 +332,7 @@
     <labelMappings
         xsi:type="gmfmap:FeatureLabelMapping">
       <diagramLabel
-          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnectionName"/>
+          href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnectionName"/>
       <features
           href="../models/orocosComponentModel.ecore#//PeersConnection/name"/>
     </labelMappings>
@@ -342,7 +342,7 @@
         xsi:type="gmftool:CreationTool"
         href="orocosComponentModel.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnection"/>
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnection"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
         href="../models/orocosComponentModel.ecore#//PeersConnection/target"/>
@@ -360,7 +360,7 @@
         editorPattern=""
         editPattern="">
       <diagramLabel
-          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeProducerConnectionNameLabel"/>
+          href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeProducerConnectionNameLabel"/>
       <features
           href="../models/orocosComponentModel.ecore#//Operation/name"/>
     </labelMappings>
@@ -370,7 +370,7 @@
         xsi:type="gmftool:CreationTool"
         href="orocosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeProducerConnection"/>
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeProducerConnection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="../models/orocosComponentModel.ecore#//CompOperation/exposedOp"/>
@@ -382,7 +382,7 @@
         xsi:type="gmfmap:FeatureLabelMapping"
         readOnly="true">
       <diagramLabel
-          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeConsumerConnectionNameLabel"/>
+          href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeConsumerConnectionNameLabel"/>
       <features
           href="../models/orocosComponentModel.ecore#//OperationCaller/name"/>
     </labelMappings>
@@ -392,14 +392,14 @@
         xsi:type="gmftool:CreationTool"
         href="orocosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeConsumerConnection"/>
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeConsumerConnection"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="../models/orocosComponentModel.ecore#//CompOperationCaller/exposedOpCaller"/>
   </links>
   <diagram>
     <diagramCanvas
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#componentDiagram"/>
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#componentDiagram"/>
     <domainModel
         href="../models/orocosComponentModel.ecore#/"/>
     <domainMetaElement

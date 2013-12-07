@@ -1,3 +1,3 @@
-package it.unibg.robotics.compositionmodel.diagram.parsers;
+package org.hyperflex.compositionmodel.diagram.parsers;
 
 

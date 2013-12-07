@@ -1,9 +1,9 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.parts;
+package org.hyperflex.compositionmodel.diagram.edit.parts;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.policies.CompositionModelTextSelectionEditPolicy;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
-import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
-import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelParserProvider;
+import org.hyperflex.compositionmodel.diagram.edit.policies.CompositionModelTextSelectionEditPolicy;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes;
+import org.hyperflex.compositionmodel.diagram.providers.CompositionModelParserProvider;
 
 import java.util.Collections;
 import java.util.List;
@@ -308,7 +308,7 @@ public class SystemNameEditPart extends CompartmentEditPart implements
 							CompositionModelElementTypes.System_2002,
 							getParserElement(),
 							CompositionModelVisualIDRegistry
-									.getType(it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemNameEditPart.VISUAL_ID));
+									.getType(org.hyperflex.compositionmodel.diagram.edit.parts.SystemNameEditPart.VISUAL_ID));
 		}
 		return parser;
 	}

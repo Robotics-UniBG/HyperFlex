@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="HyperFlex toolchain&#xA;&#xA;Copyright (c) 2013&#xA;All rights reserved.&#xA;&#xA;Luca Gherardi&#xA;ETH Zurich&#xA;Institute for Dynamic Systems and Control&#xA;&#xA;***********************************************************************************************&#xA;&#xA;Author: &lt;A HREF=&quot;mailto:lucagh@ethz.ch&quot;>Luca Gherardi&lt;/A>&#xA;&#xA;In collaboration with: &#xA;  &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;>Davide Brugali&lt;/A>, University of Bergamo&#xA;&#xA;***********************************************************************************************&#xA;&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;"
-    modelDirectory="/it.unibg.robotics.compositionmodels.ros.model/src" editDirectory="/it.unibg.robotics.compositionmodels.ros.model.edit/src"
-    editorDirectory="/it.unibg.robotics.compositionmodels.ros.model.editor/src" modelPluginID="it.unibg.robotics.compositionmodels.ros.model"
+    modelDirectory="/org.hyperflex.compositionmodels.ros.model/src" editDirectory="/org.hyperflex.compositionmodels.ros.model.edit/src"
+    editorDirectory="/org.hyperflex.compositionmodels.ros.model.editor/src" modelPluginID="org.hyperflex.compositionmodels.ros.model"
     modelName="RosCompositionModel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
-    copyrightFields="false" editPluginID="it.unibg.robotics.compositionmodels.ros.model.edit"
-    editorPluginID="it.unibg.robotics.compositionmodels.ros.model.editor" language="English"
-    usedGenPackages="../../it.unibg.robotics.compositionmodels.model/models/compositionModel.genmodel#//compositionmodel ../../it.unibg.robotics.componentmodels.ros.model/models/rosComponentModel.genmodel#//roscomponentmodel">
+    copyrightFields="false" editPluginID="org.hyperflex.compositionmodels.ros.model.edit"
+    editorPluginID="org.hyperflex.compositionmodels.ros.model.editor" language="English"
+    usedGenPackages="../../org.hyperflex.compositionmodels.model/models/compositionModel.genmodel#//compositionmodel ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.genmodel#//roscomponentmodel">
   <foreignModel>rosCompositionModel.ecore</foreignModel>
-  <genPackages prefix="roscompositionmodel" basePackage="it.unibg.robotics" disposableProviderFactory="true"
+  <genPackages prefix="roscompositionmodel" basePackage="org.hyperflex" disposableProviderFactory="true"
       childCreationExtenders="true" ecorePackage="rosCompositionModel.ecore#/">
     <genClasses ecoreClass="rosCompositionModel.ecore#//ROSComposite">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosCompositionModel.ecore#//ROSComposite/composite"/>

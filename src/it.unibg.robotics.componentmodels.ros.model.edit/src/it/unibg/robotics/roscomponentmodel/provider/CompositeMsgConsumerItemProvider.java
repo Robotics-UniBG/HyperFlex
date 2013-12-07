@@ -23,10 +23,10 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.provider;
+package org.hyperflex.roscomponentmodel.provider;
 
 
-import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
+import org.hyperflex.roscomponentmodel.CompositeMsgConsumer;
 
 import java.util.Collection;
 import java.util.List;
@@ -41,7 +41,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 /**
- * This is the item provider adapter for a {@link it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer} object.
+ * This is the item provider adapter for a {@link org.hyperflex.roscomponentmodel.CompositeMsgConsumer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

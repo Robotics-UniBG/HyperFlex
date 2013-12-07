@@ -1,8 +1,8 @@
-package it.unibg.robotics.compositionmodel.diagram.sheet;
+package org.hyperflex.compositionmodel.diagram.sheet;
 
-import it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorGroup;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
-import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
+import org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorGroup;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;

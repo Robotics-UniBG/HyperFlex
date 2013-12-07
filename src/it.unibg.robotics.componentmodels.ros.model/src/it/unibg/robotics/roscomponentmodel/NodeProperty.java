@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 
 /**
@@ -34,12 +34,12 @@ package it.unibg.robotics.roscomponentmodel;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.NodeProperty#getValue <em>Value</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.NodeProperty#getType <em>Type</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.NodeProperty#getValue <em>Value</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.NodeProperty#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNodeProperty()
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNodeProperty()
  * @model
  * @generated
  */
@@ -54,14 +54,14 @@ public interface NodeProperty extends Property {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNodeProperty_Value()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNodeProperty_Value()
 	 * @model
 	 * @generated
 	 */
 	String getValue();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.NodeProperty#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.NodeProperty#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.
@@ -80,14 +80,14 @@ public interface NodeProperty extends Property {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNodeProperty_Type()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNodeProperty_Type()
 	 * @model
 	 * @generated
 	 */
 	String getType();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.NodeProperty#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.NodeProperty#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.

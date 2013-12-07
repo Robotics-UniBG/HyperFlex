@@ -1,4 +1,4 @@
-package it.unibg.robotics.roscomponentmodel.diagram.navigator;
+package org.hyperflex.roscomponentmodel.diagram.navigator;
 
 import org.eclipse.core.runtime.IAdapterFactory;
 import org.eclipse.core.runtime.Platform;
@@ -18,7 +18,7 @@ public abstract class RosComponentModelAbstractNavigatorItem extends
 		final Class[] supportedTypes = new Class[] { ITabbedPropertySheetPageContributor.class };
 		final ITabbedPropertySheetPageContributor propertySheetPageContributor = new ITabbedPropertySheetPageContributor() {
 			public String getContributorId() {
-				return "it.unibg.robotics.componentmodels.ros.diagram"; //$NON-NLS-1$
+				return "org.hyperflex.componentmodels.ros.diagram"; //$NON-NLS-1$
 			}
 		};
 		Platform.getAdapterManager().registerAdapters(
@@ -26,7 +26,7 @@ public abstract class RosComponentModelAbstractNavigatorItem extends
 
 					public Object getAdapter(Object adaptableObject,
 							Class adapterType) {
-						if (adaptableObject instanceof it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelAbstractNavigatorItem
+						if (adaptableObject instanceof org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelAbstractNavigatorItem
 								&& adapterType == ITabbedPropertySheetPageContributor.class) {
 							return propertySheetPageContributor;
 						}
@@ -37,7 +37,7 @@ public abstract class RosComponentModelAbstractNavigatorItem extends
 						return supportedTypes;
 					}
 				},
-				it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelAbstractNavigatorItem.class);
+				org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelAbstractNavigatorItem.class);
 	}
 
 	/**

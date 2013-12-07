@@ -1,7 +1,7 @@
-package it.unibg.robotics.compositionmodel.diagram.parsers;
+package org.hyperflex.compositionmodel.diagram.parsers;
 
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
-import it.unibg.robotics.compositionmodel.diagram.part.Messages;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
+import org.hyperflex.compositionmodel.diagram.part.Messages;
 
 import java.text.FieldPosition;
 import java.text.MessageFormat;

@@ -1,22 +1,22 @@
-package it.unibg.robotics.roscomponentmodel.diagram.providers;
+package org.hyperflex.roscomponentmodel.diagram.providers;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
 
 import java.util.HashSet;
 import java.util.IdentityHashMap;
@@ -63,77 +63,77 @@ public class RosComponentModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType System_1000 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.System_1000"); //$NON-NLS-1$
+	public static final IElementType System_1000 = getElementType("org.hyperflex.componentmodels.ros.diagram.System_1000"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType Composite_2003 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Composite_2003"); //$NON-NLS-1$
+	public static final IElementType Composite_2003 = getElementType("org.hyperflex.componentmodels.ros.diagram.Composite_2003"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType Node_3013 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Node_3013"); //$NON-NLS-1$
+	public static final IElementType Node_3013 = getElementType("org.hyperflex.componentmodels.ros.diagram.Node_3013"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodeProperty_3012 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.NodeProperty_3012"); //$NON-NLS-1$
+	public static final IElementType NodeProperty_3012 = getElementType("org.hyperflex.componentmodels.ros.diagram.NodeProperty_3012"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodeMsgProducer_3003 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.NodeMsgProducer_3003"); //$NON-NLS-1$
+	public static final IElementType NodeMsgProducer_3003 = getElementType("org.hyperflex.componentmodels.ros.diagram.NodeMsgProducer_3003"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType NodeMsgConsumer_3004 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.NodeMsgConsumer_3004"); //$NON-NLS-1$
+	public static final IElementType NodeMsgConsumer_3004 = getElementType("org.hyperflex.componentmodels.ros.diagram.NodeMsgConsumer_3004"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType Composite_3014 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Composite_3014"); //$NON-NLS-1$
+	public static final IElementType Composite_3014 = getElementType("org.hyperflex.componentmodels.ros.diagram.Composite_3014"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeMsgProducer_3015 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgProducer_3015"); //$NON-NLS-1$
+	public static final IElementType CompositeMsgProducer_3015 = getElementType("org.hyperflex.componentmodels.ros.diagram.CompositeMsgProducer_3015"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeMsgConsumer_3016 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgConsumer_3016"); //$NON-NLS-1$
+	public static final IElementType CompositeMsgConsumer_3016 = getElementType("org.hyperflex.componentmodels.ros.diagram.CompositeMsgConsumer_3016"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeMsgProducer_3017 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgProducer_3017"); //$NON-NLS-1$
+	public static final IElementType CompositeMsgProducer_3017 = getElementType("org.hyperflex.componentmodels.ros.diagram.CompositeMsgProducer_3017"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeMsgConsumer_3018 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgConsumer_3018"); //$NON-NLS-1$
+	public static final IElementType CompositeMsgConsumer_3018 = getElementType("org.hyperflex.componentmodels.ros.diagram.CompositeMsgConsumer_3018"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType Topic_3019 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.Topic_3019"); //$NON-NLS-1$
+	public static final IElementType Topic_3019 = getElementType("org.hyperflex.componentmodels.ros.diagram.Topic_3019"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType MsgInterfaceConnection_4010 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.MsgInterfaceConnection_4010"); //$NON-NLS-1$
+	public static final IElementType MsgInterfaceConnection_4010 = getElementType("org.hyperflex.componentmodels.ros.diagram.MsgInterfaceConnection_4010"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType MsgInterfaceConnection_4011 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.MsgInterfaceConnection_4011"); //$NON-NLS-1$
+	public static final IElementType MsgInterfaceConnection_4011 = getElementType("org.hyperflex.componentmodels.ros.diagram.MsgInterfaceConnection_4011"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeMsgInterfaceExposed_4007 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4007"); //$NON-NLS-1$
+	public static final IElementType CompositeMsgInterfaceExposed_4007 = getElementType("org.hyperflex.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4007"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType CompositeMsgInterfaceExposed_4012 = getElementType("it.unibg.robotics.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4012"); //$NON-NLS-1$
+	public static final IElementType CompositeMsgInterfaceExposed_4012 = getElementType("org.hyperflex.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4012"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -175,82 +175,82 @@ public class RosComponentModelElementTypes {
 
 			elements.put(
 					System_1000,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getSystem());
 
 			elements.put(
 					Composite_2003,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getComposite());
 
 			elements.put(
 					Node_3013,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getNode());
 
 			elements.put(
 					NodeProperty_3012,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getNodeProperty());
 
 			elements.put(
 					NodeMsgProducer_3003,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getNodeMsgProducer());
 
 			elements.put(
 					NodeMsgConsumer_3004,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getNodeMsgConsumer());
 
 			elements.put(
 					Composite_3014,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getComposite());
 
 			elements.put(
 					CompositeMsgProducer_3015,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getCompositeMsgProducer());
 
 			elements.put(
 					CompositeMsgConsumer_3016,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getCompositeMsgConsumer());
 
 			elements.put(
 					CompositeMsgProducer_3017,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getCompositeMsgProducer());
 
 			elements.put(
 					CompositeMsgConsumer_3018,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getCompositeMsgConsumer());
 
 			elements.put(
 					Topic_3019,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getTopic());
 
 			elements.put(
 					MsgInterfaceConnection_4010,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getMsgInterface_Connection());
 
 			elements.put(
 					MsgInterfaceConnection_4011,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getMsgInterface_Connection());
 
 			elements.put(
 					CompositeMsgInterfaceExposed_4007,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getCompositeMsgInterface_Exposed());
 
 			elements.put(
 					CompositeMsgInterfaceExposed_4012,
-					it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getCompositeMsgInterface_Exposed());
 		}
 		return (ENamedElement) elements.get(type);
@@ -341,7 +341,7 @@ public class RosComponentModelElementTypes {
 		 */
 		@Override
 		public boolean isKnownElementType(IElementType elementType) {
-			return it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes
+			return org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes
 					.isKnownElementType(elementType);
 		}
 
@@ -350,7 +350,7 @@ public class RosComponentModelElementTypes {
 		 */
 		@Override
 		public IElementType getElementTypeForVisualId(int visualID) {
-			return it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes
+			return org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes
 					.getElementType(visualID);
 		}
 
@@ -360,7 +360,7 @@ public class RosComponentModelElementTypes {
 		@Override
 		public ENamedElement getDefiningNamedElement(
 				IAdaptable elementTypeAdapter) {
-			return it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes
+			return org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes
 					.getElement(elementTypeAdapter);
 		}
 	};

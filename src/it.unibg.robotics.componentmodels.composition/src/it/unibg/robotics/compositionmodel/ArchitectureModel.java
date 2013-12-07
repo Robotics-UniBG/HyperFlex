@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel;
+package org.hyperflex.compositionmodel;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -36,12 +36,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.ArchitectureModel#getSystem <em>System</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.ArchitectureModel#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.ArchitectureModel#getSystem <em>System</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.ArchitectureModel#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getArchitectureModel()
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage#getArchitectureModel()
  * @model
  * @generated
  */
@@ -55,22 +55,22 @@ public interface ArchitectureModel extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>System</em>' containment reference.
-	 * @see #setSystem(it.unibg.robotics.compositionmodel.System)
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getArchitectureModel_System()
+	 * @see #setSystem(org.hyperflex.compositionmodel.System)
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getArchitectureModel_System()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	it.unibg.robotics.compositionmodel.System getSystem();
+	org.hyperflex.compositionmodel.System getSystem();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.compositionmodel.ArchitectureModel#getSystem <em>System</em>}' containment reference.
+	 * Sets the value of the '{@link org.hyperflex.compositionmodel.ArchitectureModel#getSystem <em>System</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>System</em>' containment reference.
 	 * @see #getSystem()
 	 * @generated
 	 */
-	void setSystem(it.unibg.robotics.compositionmodel.System value);
+	void setSystem(org.hyperflex.compositionmodel.System value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -82,14 +82,14 @@ public interface ArchitectureModel extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getArchitectureModel_Name()
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getArchitectureModel_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.compositionmodel.ArchitectureModel#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.compositionmodel.ArchitectureModel#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.

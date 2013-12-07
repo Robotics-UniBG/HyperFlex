@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel;
+package org.hyperflex.compositionmodel;
 
 
 /**
@@ -35,11 +35,11 @@ package it.unibg.robotics.compositionmodel;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.SystemComposite#getImpl <em>Impl</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.SystemComposite#getImpl <em>Impl</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getSystemComposite()
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage#getSystemComposite()
  * @model
  * @generated
  */
@@ -53,21 +53,21 @@ public interface SystemComposite extends Composite {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Impl</em>' reference.
-	 * @see #setImpl(it.unibg.robotics.compositionmodel.System)
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getSystemComposite_Impl()
+	 * @see #setImpl(org.hyperflex.compositionmodel.System)
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getSystemComposite_Impl()
 	 * @model required="true"
 	 * @generated
 	 */
-	it.unibg.robotics.compositionmodel.System getImpl();
+	org.hyperflex.compositionmodel.System getImpl();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.compositionmodel.SystemComposite#getImpl <em>Impl</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.compositionmodel.SystemComposite#getImpl <em>Impl</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Impl</em>' reference.
 	 * @see #getImpl()
 	 * @generated
 	 */
-	void setImpl(it.unibg.robotics.compositionmodel.System value);
+	void setImpl(org.hyperflex.compositionmodel.System value);
 
 } // SystemComposite

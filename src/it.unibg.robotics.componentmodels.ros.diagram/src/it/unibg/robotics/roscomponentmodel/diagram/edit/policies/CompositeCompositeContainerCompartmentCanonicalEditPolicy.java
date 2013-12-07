@@ -23,14 +23,14 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
+package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -85,10 +85,10 @@ public class CompositeCompositeContainerCompartmentCanonicalEditPolicy extends
 		if (myFeaturesToSynchronize == null) {
 			myFeaturesToSynchronize = new HashSet<EStructuralFeature>();
 			myFeaturesToSynchronize
-					.add(it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					.add(org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getComposite_Components());
 			myFeaturesToSynchronize
-					.add(it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					.add(org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getComposite_Topics());
 		}
 		return myFeaturesToSynchronize;

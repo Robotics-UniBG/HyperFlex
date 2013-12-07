@@ -24,11 +24,11 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.provider;
+package org.hyperflex.compositionmodel.provider;
 
 
-import it.unibg.robotics.compositionmodel.Interface;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.Interface;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -51,7 +51,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link it.unibg.robotics.compositionmodel.Interface} object.
+ * This is the item provider adapter for a {@link org.hyperflex.compositionmodel.Interface} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

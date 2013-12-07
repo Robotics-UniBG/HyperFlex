@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel;
+package org.hyperflex.compositionmodel;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -38,20 +38,20 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.Composite#getProvInterfaces <em>Prov Interfaces</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.Composite#getReqInterfaces <em>Req Interfaces</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.Composite#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.Composite#getProvInterfaces <em>Prov Interfaces</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.Composite#getReqInterfaces <em>Req Interfaces</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.Composite#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getComposite()
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage#getComposite()
  * @model abstract="true"
  * @generated
  */
 public interface Composite extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Prov Interfaces</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.compositionmodel.CompProvidedInterf}.
+	 * The list contents are of type {@link org.hyperflex.compositionmodel.CompProvidedInterf}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Prov Interfaces</em>' containment reference list isn't clear,
@@ -59,7 +59,7 @@ public interface Composite extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Prov Interfaces</em>' containment reference list.
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getComposite_ProvInterfaces()
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getComposite_ProvInterfaces()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface Composite extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Req Interfaces</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.compositionmodel.CompRequiredInterf}.
+	 * The list contents are of type {@link org.hyperflex.compositionmodel.CompRequiredInterf}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Req Interfaces</em>' containment reference list isn't clear,
@@ -75,7 +75,7 @@ public interface Composite extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Req Interfaces</em>' containment reference list.
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getComposite_ReqInterfaces()
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getComposite_ReqInterfaces()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -91,14 +91,14 @@ public interface Composite extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getComposite_Name()
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getComposite_Name()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.compositionmodel.Composite#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.compositionmodel.Composite#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.

@@ -1,9 +1,9 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.parts;
+package org.hyperflex.compositionmodel.diagram.edit.parts;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.policies.CompositionModelTextSelectionEditPolicy;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
-import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
-import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelParserProvider;
+import org.hyperflex.compositionmodel.diagram.edit.policies.CompositionModelTextSelectionEditPolicy;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes;
+import org.hyperflex.compositionmodel.diagram.providers.CompositionModelParserProvider;
 
 import java.util.Collections;
 import java.util.List;
@@ -93,7 +93,7 @@ public class ConnectionNameEditPart extends LabelEditPart implements
 	static {
 		registerSnapBackPosition(
 				CompositionModelVisualIDRegistry
-						.getType(it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionNameEditPart.VISUAL_ID),
+						.getType(org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionNameEditPart.VISUAL_ID),
 				new Point(0, 40));
 	}
 
@@ -326,7 +326,7 @@ public class ConnectionNameEditPart extends LabelEditPart implements
 							CompositionModelElementTypes.Connection_4002,
 							getParserElement(),
 							CompositionModelVisualIDRegistry
-									.getType(it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionNameEditPart.VISUAL_ID));
+									.getType(org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionNameEditPart.VISUAL_ID));
 		}
 		return parser;
 	}

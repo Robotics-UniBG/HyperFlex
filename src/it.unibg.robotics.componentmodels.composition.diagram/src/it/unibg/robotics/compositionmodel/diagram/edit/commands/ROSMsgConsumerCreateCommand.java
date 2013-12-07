@@ -1,8 +1,8 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.commands;
+package org.hyperflex.compositionmodel.diagram.edit.commands;
 
-import it.unibg.robotics.compositionmodel.Composite;
-import it.unibg.robotics.roscompositionmodel.ROSMsgConsumer;
-import it.unibg.robotics.roscompositionmodel.roscompositionmodelFactory;
+import org.hyperflex.compositionmodel.Composite;
+import org.hyperflex.roscompositionmodel.ROSMsgConsumer;
+import org.hyperflex.roscompositionmodel.roscompositionmodelFactory;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;

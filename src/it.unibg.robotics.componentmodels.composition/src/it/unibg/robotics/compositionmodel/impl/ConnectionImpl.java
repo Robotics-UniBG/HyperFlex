@@ -24,12 +24,12 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.impl;
+package org.hyperflex.compositionmodel.impl;
 
-import it.unibg.robotics.compositionmodel.Connection;
-import it.unibg.robotics.compositionmodel.ProvidedInterface;
-import it.unibg.robotics.compositionmodel.RequiredInterface;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.Connection;
+import org.hyperflex.compositionmodel.ProvidedInterface;
+import org.hyperflex.compositionmodel.RequiredInterface;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -46,9 +46,9 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.ConnectionImpl#getSource <em>Source</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.ConnectionImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.ConnectionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.ConnectionImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.ConnectionImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.ConnectionImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *

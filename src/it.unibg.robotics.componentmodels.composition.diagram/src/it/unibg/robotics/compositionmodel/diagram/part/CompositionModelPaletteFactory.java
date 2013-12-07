@@ -1,6 +1,6 @@
-package it.unibg.robotics.compositionmodel.diagram.part;
+package org.hyperflex.compositionmodel.diagram.part;
 
-import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
+import org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes;
 
 import java.util.ArrayList;
 import java.util.Collections;

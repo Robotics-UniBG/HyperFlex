@@ -1,7 +1,7 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.commands;
+package org.hyperflex.compositionmodel.diagram.edit.commands;
 
-import it.unibg.robotics.compositionmodel.System;
-import it.unibg.robotics.compositionmodel.SystemRequiredInterf;
+import org.hyperflex.compositionmodel.System;
+import org.hyperflex.compositionmodel.SystemRequiredInterf;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
@@ -53,7 +53,7 @@ public class SystemRequiredInterfCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		SystemRequiredInterf newElement = it.unibg.robotics.compositionmodel.compositionmodelFactory.eINSTANCE
+		SystemRequiredInterf newElement = org.hyperflex.compositionmodel.compositionmodelFactory.eINSTANCE
 				.createSystemRequiredInterf();
 
 		System owner = (System) getElementToEdit();

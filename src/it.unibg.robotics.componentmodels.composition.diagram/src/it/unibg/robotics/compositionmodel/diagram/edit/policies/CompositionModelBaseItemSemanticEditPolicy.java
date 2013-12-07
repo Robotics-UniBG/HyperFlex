@@ -1,12 +1,12 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.policies;
+package org.hyperflex.compositionmodel.diagram.edit.policies;
 
-import it.unibg.robotics.compositionmodel.Connection;
-import it.unibg.robotics.compositionmodel.ProvidedInterface;
-import it.unibg.robotics.compositionmodel.RequiredInterface;
-import it.unibg.robotics.compositionmodel.System;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
-import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
+import org.hyperflex.compositionmodel.Connection;
+import org.hyperflex.compositionmodel.ProvidedInterface;
+import org.hyperflex.compositionmodel.RequiredInterface;
+import org.hyperflex.compositionmodel.System;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes;
 
 import java.util.Iterator;
 

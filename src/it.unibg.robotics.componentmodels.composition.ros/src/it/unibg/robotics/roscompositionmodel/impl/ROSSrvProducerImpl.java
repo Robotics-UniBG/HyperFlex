@@ -24,14 +24,14 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel.impl;
+package org.hyperflex.roscompositionmodel.impl;
 
-import it.unibg.robotics.compositionmodel.impl.CompProvidedInterfImpl;
+import org.hyperflex.compositionmodel.impl.CompProvidedInterfImpl;
 
-import it.unibg.robotics.roscomponentmodel.CompositeSrvProducer;
+import org.hyperflex.roscomponentmodel.CompositeSrvProducer;
 
-import it.unibg.robotics.roscompositionmodel.ROSSrvProducer;
-import it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage;
+import org.hyperflex.roscompositionmodel.ROSSrvProducer;
+import org.hyperflex.roscompositionmodel.roscompositionmodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -47,7 +47,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscompositionmodel.impl.ROSSrvProducerImpl#getSrvProducer <em>Srv Producer</em>}</li>
+ *   <li>{@link org.hyperflex.roscompositionmodel.impl.ROSSrvProducerImpl#getSrvProducer <em>Srv Producer</em>}</li>
  * </ul>
  * </p>
  *

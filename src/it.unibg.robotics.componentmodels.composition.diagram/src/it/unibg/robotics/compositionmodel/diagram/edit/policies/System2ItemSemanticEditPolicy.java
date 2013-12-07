@@ -1,15 +1,15 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.policies;
+package org.hyperflex.compositionmodel.diagram.edit.policies;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.commands.SystemProvidedInterfCreateCommand;
-import it.unibg.robotics.compositionmodel.diagram.edit.commands.SystemRequiredInterfCreateCommand;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
-import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
+import org.hyperflex.compositionmodel.diagram.edit.commands.SystemProvidedInterfCreateCommand;
+import org.hyperflex.compositionmodel.diagram.edit.commands.SystemRequiredInterfCreateCommand;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes;
 
 import java.util.Iterator;
 

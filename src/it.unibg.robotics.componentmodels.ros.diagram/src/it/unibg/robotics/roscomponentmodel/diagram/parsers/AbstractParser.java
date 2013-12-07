@@ -1,2 +1,2 @@
-package it.unibg.robotics.roscomponentmodel.diagram.parsers;
+package org.hyperflex.roscomponentmodel.diagram.parsers;
 

@@ -23,31 +23,31 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.impl;
+package org.hyperflex.roscomponentmodel.impl;
 
-import it.unibg.robotics.roscomponentmodel.AbstractComponent;
-import it.unibg.robotics.roscomponentmodel.Composite;
-import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
-import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
-import it.unibg.robotics.roscomponentmodel.CompositeProperty;
-import it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer;
-import it.unibg.robotics.roscomponentmodel.CompositeSrvProducer;
-import it.unibg.robotics.roscomponentmodel.MsgInterface;
-import it.unibg.robotics.roscomponentmodel.Node;
-import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.NodeMsgInterface;
-import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
-import it.unibg.robotics.roscomponentmodel.NodeProperty;
-import it.unibg.robotics.roscomponentmodel.NodeSrvConsumer;
-import it.unibg.robotics.roscomponentmodel.NodeSrvProducer;
-import it.unibg.robotics.roscomponentmodel.Property;
-import it.unibg.robotics.roscomponentmodel.SrvConsumer;
-import it.unibg.robotics.roscomponentmodel.SrvProducer;
-import it.unibg.robotics.roscomponentmodel.Topic;
-import it.unibg.robotics.roscomponentmodel.Wire;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelFactory;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
+import org.hyperflex.roscomponentmodel.AbstractComponent;
+import org.hyperflex.roscomponentmodel.Composite;
+import org.hyperflex.roscomponentmodel.CompositeMsgConsumer;
+import org.hyperflex.roscomponentmodel.CompositeMsgInterface;
+import org.hyperflex.roscomponentmodel.CompositeMsgProducer;
+import org.hyperflex.roscomponentmodel.CompositeProperty;
+import org.hyperflex.roscomponentmodel.CompositeSrvConsumer;
+import org.hyperflex.roscomponentmodel.CompositeSrvProducer;
+import org.hyperflex.roscomponentmodel.MsgInterface;
+import org.hyperflex.roscomponentmodel.Node;
+import org.hyperflex.roscomponentmodel.NodeMsgConsumer;
+import org.hyperflex.roscomponentmodel.NodeMsgInterface;
+import org.hyperflex.roscomponentmodel.NodeMsgProducer;
+import org.hyperflex.roscomponentmodel.NodeProperty;
+import org.hyperflex.roscomponentmodel.NodeSrvConsumer;
+import org.hyperflex.roscomponentmodel.NodeSrvProducer;
+import org.hyperflex.roscomponentmodel.Property;
+import org.hyperflex.roscomponentmodel.SrvConsumer;
+import org.hyperflex.roscomponentmodel.SrvProducer;
+import org.hyperflex.roscomponentmodel.Topic;
+import org.hyperflex.roscomponentmodel.Wire;
+import org.hyperflex.roscomponentmodel.roscomponentmodelFactory;
+import org.hyperflex.roscomponentmodel.roscomponentmodelPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -227,7 +227,7 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#eNS_URI
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
@@ -987,8 +987,8 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 		initEReference(getWire_Source(), this.getSrvProducer(), null, "source", null, 1, 1, Wire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWire_Target(), this.getSrvConsumer(), null, "target", null, 1, 1, Wire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(systemEClass, it.unibg.robotics.roscomponentmodel.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSystem_Composite(), this.getComposite(), null, "composite", null, 1, 1, it.unibg.robotics.roscomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(systemEClass, org.hyperflex.roscomponentmodel.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSystem_Composite(), this.getComposite(), null, "composite", null, 1, 1, org.hyperflex.roscomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(msgInterfaceEClass, MsgInterface.class, "MsgInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMsgInterface_Name(), ecorePackage.getEString(), "name", null, 0, 1, MsgInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

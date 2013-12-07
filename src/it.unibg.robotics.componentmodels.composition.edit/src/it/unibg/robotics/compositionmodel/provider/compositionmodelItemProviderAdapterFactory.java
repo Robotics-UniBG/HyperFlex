@@ -24,11 +24,11 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.provider;
+package org.hyperflex.compositionmodel.provider;
 
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
-import it.unibg.robotics.compositionmodel.util.compositionmodelAdapterFactory;
+import org.hyperflex.compositionmodel.util.compositionmodelAdapterFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -113,7 +113,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.compositionmodel.System} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.compositionmodel.System} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +121,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	protected SystemItemProvider systemItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.compositionmodel.System}.
+	 * This creates an adapter for a {@link org.hyperflex.compositionmodel.System}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -136,7 +136,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.compositionmodel.Connection} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.compositionmodel.Connection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -144,7 +144,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	protected ConnectionItemProvider connectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.compositionmodel.Connection}.
+	 * This creates an adapter for a {@link org.hyperflex.compositionmodel.Connection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -159,7 +159,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.compositionmodel.ArchitectureModel} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.compositionmodel.ArchitectureModel} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -167,7 +167,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	protected ArchitectureModelItemProvider architectureModelItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.compositionmodel.ArchitectureModel}.
+	 * This creates an adapter for a {@link org.hyperflex.compositionmodel.ArchitectureModel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -182,7 +182,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.compositionmodel.SystemComposite} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.compositionmodel.SystemComposite} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -190,7 +190,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	protected SystemCompositeItemProvider systemCompositeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.compositionmodel.SystemComposite}.
+	 * This creates an adapter for a {@link org.hyperflex.compositionmodel.SystemComposite}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -205,7 +205,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.compositionmodel.SystemProvidedInterf} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.compositionmodel.SystemProvidedInterf} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -213,7 +213,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	protected SystemProvidedInterfItemProvider systemProvidedInterfItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.compositionmodel.SystemProvidedInterf}.
+	 * This creates an adapter for a {@link org.hyperflex.compositionmodel.SystemProvidedInterf}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -228,7 +228,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.compositionmodel.SystemRequiredInterf} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.compositionmodel.SystemRequiredInterf} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -236,7 +236,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	protected SystemRequiredInterfItemProvider systemRequiredInterfItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.compositionmodel.SystemRequiredInterf}.
+	 * This creates an adapter for a {@link org.hyperflex.compositionmodel.SystemRequiredInterf}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -251,7 +251,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.compositionmodel.SystemCompositeProvidedInterf} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -259,7 +259,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	protected SystemCompositeProvidedInterfItemProvider systemCompositeProvidedInterfItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf}.
+	 * This creates an adapter for a {@link org.hyperflex.compositionmodel.SystemCompositeProvidedInterf}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -274,7 +274,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.compositionmodel.SystemCompositeRequiredInterf} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -282,7 +282,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	protected SystemCompositeRequiredInterfItemProvider systemCompositeRequiredInterfItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf}.
+	 * This creates an adapter for a {@link org.hyperflex.compositionmodel.SystemCompositeRequiredInterf}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -297,7 +297,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.compositionmodel.SystemProperty} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.compositionmodel.SystemProperty} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -305,7 +305,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	protected SystemPropertyItemProvider systemPropertyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.compositionmodel.SystemProperty}.
+	 * This creates an adapter for a {@link org.hyperflex.compositionmodel.SystemProperty}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -320,7 +320,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.compositionmodel.SystemCompositeProperty} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.compositionmodel.SystemCompositeProperty} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -328,7 +328,7 @@ public class compositionmodelItemProviderAdapterFactory extends compositionmodel
 	protected SystemCompositePropertyItemProvider systemCompositePropertyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.compositionmodel.SystemCompositeProperty}.
+	 * This creates an adapter for a {@link org.hyperflex.compositionmodel.SystemCompositeProperty}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

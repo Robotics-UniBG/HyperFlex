@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>it.unibg.robotics.compositionmodels.model.editor</name>
+	<name>org.hyperflex.compositionmodels.model.editor</name>
 	<comment></comment>
 	<projects>
 	</projects>

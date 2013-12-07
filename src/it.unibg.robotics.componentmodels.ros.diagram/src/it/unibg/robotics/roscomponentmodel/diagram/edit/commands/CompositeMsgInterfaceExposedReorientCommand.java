@@ -1,8 +1,8 @@
-package it.unibg.robotics.roscomponentmodel.diagram.edit.commands;
+package org.hyperflex.roscomponentmodel.diagram.edit.commands;
 
-import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
-import it.unibg.robotics.roscomponentmodel.Topic;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.RosComponentModelBaseItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.CompositeMsgInterface;
+import org.hyperflex.roscomponentmodel.Topic;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.RosComponentModelBaseItemSemanticEditPolicy;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;

@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.navigator;
+package org.hyperflex.compositionmodel.diagram.navigator;
 
 import org.eclipse.core.runtime.IAdapterFactory;
 import org.eclipse.core.runtime.Platform;
@@ -22,9 +22,9 @@ public class CompositionModelNavigatorItem extends
 
 					public Object getAdapter(Object adaptableObject,
 							Class adapterType) {
-						if (adaptableObject instanceof it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorItem
+						if (adaptableObject instanceof org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorItem
 								&& (adapterType == View.class || adapterType == EObject.class)) {
-							return ((it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorItem) adaptableObject)
+							return ((org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorItem) adaptableObject)
 									.getView();
 						}
 						return null;
@@ -34,7 +34,7 @@ public class CompositionModelNavigatorItem extends
 						return supportedTypes;
 					}
 				},
-				it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorItem.class);
+				org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorItem.class);
 	}
 
 	/**
@@ -75,11 +75,11 @@ public class CompositionModelNavigatorItem extends
 	 * @generated
 	 */
 	public boolean equals(Object obj) {
-		if (obj instanceof it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorItem) {
+		if (obj instanceof org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorItem) {
 			return EcoreUtil
 					.getURI(getView())
 					.equals(EcoreUtil
-							.getURI(((it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorItem) obj)
+							.getURI(((org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorItem) obj)
 									.getView()));
 		}
 		return super.equals(obj);

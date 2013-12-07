@@ -1,8 +1,8 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.parts;
+package org.hyperflex.compositionmodel.diagram.edit.parts;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.policies.System2CanonicalEditPolicy;
-import it.unibg.robotics.compositionmodel.diagram.edit.policies.System2ItemSemanticEditPolicy;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.edit.policies.System2CanonicalEditPolicy;
+import org.hyperflex.compositionmodel.diagram.edit.policies.System2ItemSemanticEditPolicy;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;

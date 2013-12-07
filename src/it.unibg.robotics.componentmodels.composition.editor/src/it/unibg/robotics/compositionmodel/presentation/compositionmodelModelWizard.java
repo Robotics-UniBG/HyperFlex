@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.presentation;
+package org.hyperflex.compositionmodel.presentation;
 
 
 import java.util.ArrayList;
@@ -93,9 +93,9 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import it.unibg.robotics.compositionmodel.compositionmodelFactory;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
-import it.unibg.robotics.compositionmodel.provider.CompositionModelEditPlugin;
+import org.hyperflex.compositionmodel.compositionmodelFactory;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.provider.CompositionModelEditPlugin;
 
 
 import org.eclipse.core.runtime.Path;

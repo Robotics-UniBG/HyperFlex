@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="it.unibg.robotics.componentmodels.orocos.feature"
+      id="org.hyperflex.componentmodels.orocos.feature"
       label="HyperFlex Orocos Component Model Plugin"
       version="1.0.0.qualifier"
       provider-name="Luca Gherardi">
@@ -38,7 +38,15 @@ http://www.eclipse.org/legal/epl-v10.html
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.core.resources" version="3.8.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.expressions"/>
+      <import plugin="org.eclipse.jface"/>
       <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="org.eclipse.ui.navigator"/>
+      <import plugin="org.eclipse.ui.navigator.resources"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.emf.edit.ui"/>
       <import plugin="org.eclipse.gmf.runtime.emf.core"/>
       <import plugin="org.eclipse.gmf.runtime.emf.commands.core"/>
       <import plugin="org.eclipse.gmf.runtime.emf.ui.properties"/>
@@ -49,70 +57,62 @@ http://www.eclipse.org/legal/epl-v10.html
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.render"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide"/>
-      <import plugin="org.eclipse.ui"/>
-      <import plugin="org.eclipse.ui.ide" version="3.7.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.epsilon.egl.engine" version="0.9.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.epsilon.emc.emf" version="0.9.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.transaction" version="1.4.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.epsilon.common.dt" version="0.9.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.epsilon.eol.dt" version="0.9.1" match="greaterOrEqual"/>
-      <import plugin="org.best_of_robotics.transform.service" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.componentmodels.ui" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.expressions"/>
-      <import plugin="org.eclipse.jface"/>
-      <import plugin="org.eclipse.ui.views"/>
-      <import plugin="org.eclipse.ui.navigator"/>
-      <import plugin="org.eclipse.ui.navigator.resources"/>
-      <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="org.eclipse.emf.ecore.xmi"/>
-      <import plugin="org.eclipse.emf.edit.ui"/>
       <import plugin="org.eclipse.gmf.tooling.runtime"/>
       <import plugin="org.eclipse.draw2d"/>
       <import plugin="org.eclipse.gmf.runtime.draw2d.ui"/>
       <import plugin="org.eclipse.gef"/>
       <import plugin="org.eclipse.ocl.ecore"/>
-      <import plugin="it.unibg.robotics.componentmodels.shared" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.core.resources" version="3.7.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.ide" version="3.7.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.epsilon.egl.engine" version="0.9.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.epsilon.emc.emf" version="0.9.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.epsilon.eol.engine" version="0.9.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.transaction" version="1.4.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.gmf.runtime.emf.core" version="1.4.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui" version="1.5.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor" version="1.4.1" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.componentmodels.m2t" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.componentmodels.orocos.diagram" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.componentmodels.orocos.model" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.epsilon.common.dt" version="0.9.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.epsilon.eol.dt" version="0.9.1" match="greaterOrEqual"/>
+      <import plugin="org.best_of_robotics.transform.service" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.hyperflex.componentmodels.shared" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.componentmodels.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.componentmodels.m2t" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.componentmodels.orocos.diagram" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.componentmodels.orocos.model" version="1.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
-         id="it.unibg.robotics.componentmodels.orocos.diagram"
+         id="org.hyperflex.componentmodels.orocos.diagram"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.componentmodels.orocos.m2t"
+         id="org.hyperflex.componentmodels.orocos.m2t"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.componentmodels.orocos.model"
+         id="org.hyperflex.componentmodels.orocos.model"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.componentmodels.orocos.model.edit"
+         id="org.hyperflex.componentmodels.orocos.model.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.componentmodels.orocos.model.editor"
+         id="org.hyperflex.componentmodels.orocos.model.editor"
          download-size="0"
          install-size="0"
          version="0.0.0"

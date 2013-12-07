@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: it.unibg.robotics.componentmodels.orocos.diagram; singleton:=true
+Bundle-SymbolicName: org.hyperflex.componentmodels.orocos.diagram; singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorPlugin
+Bundle-Activator: org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts,
- it.unibg.robotics.orocoscomponentmodel.diagram.part,
- it.unibg.robotics.orocoscomponentmodel.diagram.providers
+Export-Package: org.hyperflex.orocoscomponentmodel.diagram.edit.parts,
+ org.hyperflex.orocoscomponentmodel.diagram.part,
+ org.hyperflex.orocoscomponentmodel.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.core.expressions,
@@ -34,8 +34,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gmf.tooling.runtime;visibility:=reexport,
  org.eclipse.draw2d;visibility:=reexport,
  org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport,
- it.unibg.robotics.componentmodels.orocos.model;visibility:=reexport,
- it.unibg.robotics.componentmodels.orocos.model.edit;visibility:=reexport,
+ org.hyperflex.componentmodels.orocos.model;visibility:=reexport,
+ org.hyperflex.componentmodels.orocos.model.edit;visibility:=reexport,
  org.eclipse.gef;visibility:=reexport,
  org.eclipse.ocl.ecore;visibility:=reexport,
  org.hyperflex.componentmodels.shared;bundle-version="1.0.0"

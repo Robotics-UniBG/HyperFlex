@@ -1,7 +1,7 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.parts;
+package org.hyperflex.compositionmodel.diagram.edit.parts;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.policies.ROSMsgProducerItemSemanticEditPolicy;
-import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
+import org.hyperflex.compositionmodel.diagram.edit.policies.ROSMsgProducerItemSemanticEditPolicy;
+import org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

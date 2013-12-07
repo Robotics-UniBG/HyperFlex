@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -35,11 +35,11 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.SrvConsumer#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.SrvConsumer#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getSrvConsumer()
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getSrvConsumer()
  * @model
  * @generated
  */
@@ -54,14 +54,14 @@ public interface SrvConsumer extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getSrvConsumer_Name()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getSrvConsumer_Name()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.SrvConsumer#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.SrvConsumer#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.

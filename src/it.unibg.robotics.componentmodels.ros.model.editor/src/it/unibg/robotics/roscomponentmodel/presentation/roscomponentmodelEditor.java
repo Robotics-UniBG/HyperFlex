@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.presentation;
+package org.hyperflex.roscomponentmodel.presentation;
 
 
 import java.io.IOException;
@@ -177,7 +177,7 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import it.unibg.robotics.roscomponentmodel.provider.roscomponentmodelItemProviderAdapterFactory;
+import org.hyperflex.roscomponentmodel.provider.roscomponentmodelItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
@@ -641,7 +641,7 @@ public class roscomponentmodelEditor
 			BasicDiagnostic diagnostic =
 				new BasicDiagnostic
 					(Diagnostic.OK,
-					 "it.unibg.robotics.componentmodels.ros.model.editor",
+					 "org.hyperflex.componentmodels.ros.model.editor",
 					 0,
 					 null,
 					 new Object [] { editingDomain.getResourceSet() });
@@ -1004,7 +1004,7 @@ public class roscomponentmodelEditor
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "it.unibg.robotics.componentmodels.ros.model.editor",
+					 "org.hyperflex.componentmodels.ros.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object [] { exception == null ? (Object)resource : exception });
@@ -1015,7 +1015,7 @@ public class roscomponentmodelEditor
 			return
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "it.unibg.robotics.componentmodels.ros.model.editor",
+					 "org.hyperflex.componentmodels.ros.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object[] { exception });

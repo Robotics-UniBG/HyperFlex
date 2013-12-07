@@ -1,6 +1,6 @@
-package it.unibg.robotics.roscomponentmodel.diagram.navigator;
+package org.hyperflex.roscomponentmodel.diagram.navigator;
 
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 import org.eclipse.jface.viewers.ViewerSorter;
 

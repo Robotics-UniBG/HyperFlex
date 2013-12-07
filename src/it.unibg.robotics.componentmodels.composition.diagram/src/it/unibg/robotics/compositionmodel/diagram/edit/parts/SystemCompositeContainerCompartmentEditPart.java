@@ -1,9 +1,9 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.parts;
+package org.hyperflex.compositionmodel.diagram.edit.parts;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.policies.SystemCompositeContainerCompartmentCanonicalEditPolicy;
-import it.unibg.robotics.compositionmodel.diagram.edit.policies.SystemCompositeContainerCompartmentItemSemanticEditPolicy;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
-import it.unibg.robotics.compositionmodel.diagram.part.Messages;
+import org.hyperflex.compositionmodel.diagram.edit.policies.SystemCompositeContainerCompartmentCanonicalEditPolicy;
+import org.hyperflex.compositionmodel.diagram.edit.policies.SystemCompositeContainerCompartmentItemSemanticEditPolicy;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.part.Messages;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeCompartmentEditPart;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="it.unibg.robotics.componentmodels.ros.feature"
+      id="org.hyperflex.componentmodels.ros.feature"
       label="HyperFlex ROS Component Model Plugin"
       version="1.0.0.qualifier"
       provider-name="Luca Gherardi">
@@ -61,7 +61,7 @@ http://www.eclipse.org/legal/epl-v10.html
       <import plugin="org.eclipse.draw2d"/>
       <import plugin="org.eclipse.gmf.runtime.draw2d.ui"/>
       <import plugin="org.eclipse.gef"/>
-      <import plugin="it.unibg.robotics.componentmodels.shared" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.componentmodels.shared" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ocl.ecore"/>
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.core.resources" version="3.7.100" match="greaterOrEqual"/>
@@ -75,44 +75,44 @@ http://www.eclipse.org/legal/epl-v10.html
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor" version="1.4.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.epsilon.common.dt" version="0.9.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.epsilon.eol.dt" version="0.9.1" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.componentmodels.ros.diagram" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.componentmodels.ros.model" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.componentmodels.ros.diagram" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.componentmodels.ros.model" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.best_of_robotics.transform.service" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.componentmodels.ui" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.componentmodels.m2t" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.componentmodels.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.componentmodels.m2t" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit"/>
    </requires>
 
    <plugin
-         id="it.unibg.robotics.componentmodels.ros.diagram"
+         id="org.hyperflex.componentmodels.ros.diagram"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.componentmodels.ros.m2t"
+         id="org.hyperflex.componentmodels.ros.m2t"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.componentmodels.ros.model"
+         id="org.hyperflex.componentmodels.ros.model"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.componentmodels.ros.model.edit"
+         id="org.hyperflex.componentmodels.ros.model.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.componentmodels.ros.model.editor"
+         id="org.hyperflex.componentmodels.ros.model.editor"
          download-size="0"
          install-size="0"
          version="0.0.0"

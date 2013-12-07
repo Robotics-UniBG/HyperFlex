@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel;
+package org.hyperflex.compositionmodel;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -36,18 +36,18 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.ComponentProperty#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.ComponentProperty#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getComponentProperty()
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage#getComponentProperty()
  * @model abstract="true"
  * @generated
  */
 public interface ComponentProperty extends Property {
 	/**
 	 * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.compositionmodel.Composite}.
+	 * The list contents are of type {@link org.hyperflex.compositionmodel.Composite}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
@@ -55,7 +55,7 @@ public interface ComponentProperty extends Property {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Properties</em>' containment reference list.
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getComponentProperty_Properties()
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getComponentProperty_Properties()
 	 * @model containment="true"
 	 * @generated
 	 */

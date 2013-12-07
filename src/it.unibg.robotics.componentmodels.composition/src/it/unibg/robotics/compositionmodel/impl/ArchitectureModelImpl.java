@@ -24,10 +24,10 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.impl;
+package org.hyperflex.compositionmodel.impl;
 
-import it.unibg.robotics.compositionmodel.ArchitectureModel;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.ArchitectureModel;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -45,8 +45,8 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.ArchitectureModelImpl#getSystem <em>System</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.ArchitectureModelImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.ArchitectureModelImpl#getSystem <em>System</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.ArchitectureModelImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,7 +61,7 @@ public class ArchitectureModelImpl extends EObjectImpl implements ArchitectureMo
 	 * @generated
 	 * @ordered
 	 */
-	protected it.unibg.robotics.compositionmodel.System system;
+	protected org.hyperflex.compositionmodel.System system;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -107,7 +107,7 @@ public class ArchitectureModelImpl extends EObjectImpl implements ArchitectureMo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public it.unibg.robotics.compositionmodel.System getSystem() {
+	public org.hyperflex.compositionmodel.System getSystem() {
 		return system;
 	}
 
@@ -116,8 +116,8 @@ public class ArchitectureModelImpl extends EObjectImpl implements ArchitectureMo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSystem(it.unibg.robotics.compositionmodel.System newSystem, NotificationChain msgs) {
-		it.unibg.robotics.compositionmodel.System oldSystem = system;
+	public NotificationChain basicSetSystem(org.hyperflex.compositionmodel.System newSystem, NotificationChain msgs) {
+		org.hyperflex.compositionmodel.System oldSystem = system;
 		system = newSystem;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, compositionmodelPackage.ARCHITECTURE_MODEL__SYSTEM, oldSystem, newSystem);
@@ -131,7 +131,7 @@ public class ArchitectureModelImpl extends EObjectImpl implements ArchitectureMo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSystem(it.unibg.robotics.compositionmodel.System newSystem) {
+	public void setSystem(org.hyperflex.compositionmodel.System newSystem) {
 		if (newSystem != system) {
 			NotificationChain msgs = null;
 			if (system != null)
@@ -205,7 +205,7 @@ public class ArchitectureModelImpl extends EObjectImpl implements ArchitectureMo
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case compositionmodelPackage.ARCHITECTURE_MODEL__SYSTEM:
-				setSystem((it.unibg.robotics.compositionmodel.System)newValue);
+				setSystem((org.hyperflex.compositionmodel.System)newValue);
 				return;
 			case compositionmodelPackage.ARCHITECTURE_MODEL__NAME:
 				setName((String)newValue);
@@ -223,7 +223,7 @@ public class ArchitectureModelImpl extends EObjectImpl implements ArchitectureMo
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case compositionmodelPackage.ARCHITECTURE_MODEL__SYSTEM:
-				setSystem((it.unibg.robotics.compositionmodel.System)null);
+				setSystem((org.hyperflex.compositionmodel.System)null);
 				return;
 			case compositionmodelPackage.ARCHITECTURE_MODEL__NAME:
 				setName(NAME_EDEFAULT);

@@ -1,23 +1,23 @@
-package it.unibg.robotics.compositionmodel.diagram.part;
+package org.hyperflex.compositionmodel.diagram.part;
 
-import it.unibg.robotics.compositionmodel.ArchitectureModel;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionNameEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeNameEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.System2EditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeNameEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemNameEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
-import it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage;
+import org.hyperflex.compositionmodel.ArchitectureModel;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionNameEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeNameEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.System2EditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeNameEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemNameEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
+import org.hyperflex.roscompositionmodel.roscompositionmodelPackage;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.EAnnotation;
@@ -38,7 +38,7 @@ public class CompositionModelVisualIDRegistry {
 	/**
 	 * @generated
 	 */
-	private static final String DEBUG_KEY = "it.unibg.robotics.componentmodels.composition.diagram/debug/visualID"; //$NON-NLS-1$
+	private static final String DEBUG_KEY = "org.hyperflex.componentmodels.composition.diagram/debug/visualID"; //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -51,7 +51,7 @@ public class CompositionModelVisualIDRegistry {
 				return -1;
 			}
 		}
-		return it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
+		return org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
 				.getVisualID(view.getType());
 	}
 
@@ -101,7 +101,7 @@ public class CompositionModelVisualIDRegistry {
 		if (domainElement == null) {
 			return -1;
 		}
-		if (it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+		if (org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 				.getArchitectureModel().isSuperTypeOf(domainElement.eClass())
 				&& isDiagram((ArchitectureModel) domainElement)) {
 			return SystemEditPart.VISUAL_ID;
@@ -116,14 +116,14 @@ public class CompositionModelVisualIDRegistry {
 		if (domainElement == null) {
 			return -1;
 		}
-		String containerModelID = it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
+		String containerModelID = org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
 				.getModelID(containerView);
 		if (!SystemEditPart.MODEL_ID.equals(containerModelID)) {
 			return -1;
 		}
 		int containerVisualID;
 		if (SystemEditPart.MODEL_ID.equals(containerModelID)) {
-			containerVisualID = it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
+			containerVisualID = org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
 					.getVisualID(containerView);
 		} else {
 			if (containerView instanceof Diagram) {
@@ -134,30 +134,30 @@ public class CompositionModelVisualIDRegistry {
 		}
 		switch (containerVisualID) {
 		case SystemEditPart.VISUAL_ID:
-			if (it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+			if (org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getSystem().isSuperTypeOf(domainElement.eClass())) {
 				return System2EditPart.VISUAL_ID;
 			}
 			break;
 		case System2EditPart.VISUAL_ID:
-			if (it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+			if (org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getSystemProvidedInterf().isSuperTypeOf(
 							domainElement.eClass())) {
 				return SystemProvidedInterfEditPart.VISUAL_ID;
 			}
-			if (it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+			if (org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getSystemRequiredInterf().isSuperTypeOf(
 							domainElement.eClass())) {
 				return SystemRequiredInterfEditPart.VISUAL_ID;
 			}
 			break;
 		case SystemCompositeEditPart.VISUAL_ID:
-			if (it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+			if (org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getSystemCompositeProvidedInterf().isSuperTypeOf(
 							domainElement.eClass())) {
 				return SystemCompositeProvidedInterfEditPart.VISUAL_ID;
 			}
-			if (it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+			if (org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getSystemCompositeRequiredInterf().isSuperTypeOf(
 							domainElement.eClass())) {
 				return SystemCompositeRequiredInterfEditPart.VISUAL_ID;
@@ -174,7 +174,7 @@ public class CompositionModelVisualIDRegistry {
 			}
 			break;
 		case SystemCompositeContainerCompartmentEditPart.VISUAL_ID:
-			if (it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+			if (org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getSystemComposite().isSuperTypeOf(domainElement.eClass())) {
 				return SystemCompositeEditPart.VISUAL_ID;
 			}
@@ -191,14 +191,14 @@ public class CompositionModelVisualIDRegistry {
 	 * @generated
 	 */
 	public static boolean canCreateNode(View containerView, int nodeVisualID) {
-		String containerModelID = it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
+		String containerModelID = org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
 				.getModelID(containerView);
 		if (!SystemEditPart.MODEL_ID.equals(containerModelID)) {
 			return false;
 		}
 		int containerVisualID;
 		if (SystemEditPart.MODEL_ID.equals(containerModelID)) {
-			containerVisualID = it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
+			containerVisualID = org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
 					.getVisualID(containerView);
 		} else {
 			if (containerView instanceof Diagram) {
@@ -273,7 +273,7 @@ public class CompositionModelVisualIDRegistry {
 		if (domainElement == null) {
 			return -1;
 		}
-		if (it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+		if (org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 				.getConnection().isSuperTypeOf(domainElement.eClass())) {
 			return ConnectionEditPart.VISUAL_ID;
 		}
@@ -345,7 +345,7 @@ public class CompositionModelVisualIDRegistry {
 		 */
 		@Override
 		public int getVisualID(View view) {
-			return it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
+			return org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
 					.getVisualID(view);
 		}
 
@@ -354,7 +354,7 @@ public class CompositionModelVisualIDRegistry {
 		 */
 		@Override
 		public String getModelID(View view) {
-			return it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
+			return org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
 					.getModelID(view);
 		}
 
@@ -363,7 +363,7 @@ public class CompositionModelVisualIDRegistry {
 		 */
 		@Override
 		public int getNodeVisualID(View containerView, EObject domainElement) {
-			return it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
+			return org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
 					.getNodeVisualID(containerView, domainElement);
 		}
 
@@ -373,7 +373,7 @@ public class CompositionModelVisualIDRegistry {
 		@Override
 		public boolean checkNodeVisualID(View containerView,
 				EObject domainElement, int candidate) {
-			return it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
+			return org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
 					.checkNodeVisualID(containerView, domainElement, candidate);
 		}
 
@@ -382,7 +382,7 @@ public class CompositionModelVisualIDRegistry {
 		 */
 		@Override
 		public boolean isCompartmentVisualID(int visualID) {
-			return it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
+			return org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
 					.isCompartmentVisualID(visualID);
 		}
 
@@ -391,7 +391,7 @@ public class CompositionModelVisualIDRegistry {
 		 */
 		@Override
 		public boolean isSemanticLeafVisualID(int visualID) {
-			return it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
+			return org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry
 					.isSemanticLeafVisualID(visualID);
 		}
 	};

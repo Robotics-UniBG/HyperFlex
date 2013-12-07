@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.part;
+package org.hyperflex.compositionmodel.diagram.part;
 
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;

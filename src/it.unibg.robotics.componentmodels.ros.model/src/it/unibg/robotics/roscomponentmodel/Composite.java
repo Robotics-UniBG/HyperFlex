@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -35,25 +35,25 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Composite#getComponents <em>Components</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Composite#getMsgProducers <em>Msg Producers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Composite#getMsgConsumers <em>Msg Consumers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Composite#getTopics <em>Topics</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Composite#getSrvProducers <em>Srv Producers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Composite#getSrvConsumers <em>Srv Consumers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Composite#getWires <em>Wires</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Composite#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Composite#getComponents <em>Components</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Composite#getMsgProducers <em>Msg Producers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Composite#getMsgConsumers <em>Msg Consumers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Composite#getTopics <em>Topics</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Composite#getSrvProducers <em>Srv Producers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Composite#getSrvConsumers <em>Srv Consumers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Composite#getWires <em>Wires</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Composite#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getComposite()
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getComposite()
  * @model
  * @generated
  */
 public interface Composite extends AbstractComponent {
 	/**
 	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.AbstractComponent}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.AbstractComponent}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Components</em>' containment reference list isn't clear,
@@ -61,7 +61,7 @@ public interface Composite extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Components</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getComposite_Components()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getComposite_Components()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -69,7 +69,7 @@ public interface Composite extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Msg Producers</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.CompositeMsgProducer}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.CompositeMsgProducer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Msg Producers</em>' containment reference list isn't clear,
@@ -77,7 +77,7 @@ public interface Composite extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Msg Producers</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getComposite_MsgProducers()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getComposite_MsgProducers()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface Composite extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Msg Consumers</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.CompositeMsgConsumer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Msg Consumers</em>' containment reference list isn't clear,
@@ -93,7 +93,7 @@ public interface Composite extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Msg Consumers</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getComposite_MsgConsumers()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getComposite_MsgConsumers()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -101,7 +101,7 @@ public interface Composite extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Topics</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.Topic}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.Topic}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Topics</em>' containment reference list isn't clear,
@@ -109,7 +109,7 @@ public interface Composite extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Topics</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getComposite_Topics()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getComposite_Topics()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -117,7 +117,7 @@ public interface Composite extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Srv Producers</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.CompositeSrvProducer}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.CompositeSrvProducer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Srv Producers</em>' containment reference list isn't clear,
@@ -125,7 +125,7 @@ public interface Composite extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Srv Producers</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getComposite_SrvProducers()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getComposite_SrvProducers()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -133,7 +133,7 @@ public interface Composite extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Srv Consumers</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.CompositeSrvConsumer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Srv Consumers</em>' containment reference list isn't clear,
@@ -141,7 +141,7 @@ public interface Composite extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Srv Consumers</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getComposite_SrvConsumers()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getComposite_SrvConsumers()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -149,7 +149,7 @@ public interface Composite extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Wires</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.Wire}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.Wire}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Wires</em>' containment reference list isn't clear,
@@ -157,7 +157,7 @@ public interface Composite extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Wires</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getComposite_Wires()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getComposite_Wires()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -165,7 +165,7 @@ public interface Composite extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.CompositeProperty}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.CompositeProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
@@ -173,7 +173,7 @@ public interface Composite extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Properties</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getComposite_Properties()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getComposite_Properties()
 	 * @model containment="true"
 	 * @generated
 	 */

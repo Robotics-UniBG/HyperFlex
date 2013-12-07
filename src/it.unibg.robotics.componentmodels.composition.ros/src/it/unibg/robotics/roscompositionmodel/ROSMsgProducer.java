@@ -24,11 +24,11 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel;
+package org.hyperflex.roscompositionmodel;
 
-import it.unibg.robotics.compositionmodel.CompProvidedInterf;
+import org.hyperflex.compositionmodel.CompProvidedInterf;
 
-import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
+import org.hyperflex.roscomponentmodel.CompositeMsgProducer;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,11 +38,11 @@ import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscompositionmodel.ROSMsgProducer#getMsgProducer <em>Msg Producer</em>}</li>
+ *   <li>{@link org.hyperflex.roscompositionmodel.ROSMsgProducer#getMsgProducer <em>Msg Producer</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getROSMsgProducer()
+ * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getROSMsgProducer()
  * @model
  * @generated
  */
@@ -57,14 +57,14 @@ public interface ROSMsgProducer extends CompProvidedInterf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Msg Producer</em>' reference.
 	 * @see #setMsgProducer(CompositeMsgProducer)
-	 * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getROSMsgProducer_MsgProducer()
+	 * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getROSMsgProducer_MsgProducer()
 	 * @model required="true"
 	 * @generated
 	 */
 	CompositeMsgProducer getMsgProducer();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscompositionmodel.ROSMsgProducer#getMsgProducer <em>Msg Producer</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.roscompositionmodel.ROSMsgProducer#getMsgProducer <em>Msg Producer</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Msg Producer</em>' reference.

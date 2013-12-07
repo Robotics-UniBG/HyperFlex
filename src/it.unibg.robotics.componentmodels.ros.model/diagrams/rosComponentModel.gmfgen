@@ -691,26 +691,26 @@
     </palette>
     <preferencePages
         xsi:type="gmfgen:GenStandardPreferencePage"
-        iD="it.unibg.robotics.componentmodels.ros.diagram.general"
+        iD="org.hyperflex.componentmodels.ros.diagram.general"
         name="RosComponentModel Diagram">
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="it.unibg.robotics.componentmodels.ros.diagram.appearance"
+          iD="org.hyperflex.componentmodels.ros.diagram.appearance"
           name="Appearance"
           kind="Appearance"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="it.unibg.robotics.componentmodels.ros.diagram.connections"
+          iD="org.hyperflex.componentmodels.ros.diagram.connections"
           name="Connections"
           kind="Connections"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="it.unibg.robotics.componentmodels.ros.diagram.printing"
+          iD="org.hyperflex.componentmodels.ros.diagram.printing"
           name="Printing"
           kind="Printing"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="it.unibg.robotics.componentmodels.ros.diagram.rulersAndGrid"
+          iD="org.hyperflex.componentmodels.ros.diagram.rulersAndGrid"
           name="Rulers And Grid"
           kind="RulersAndGrid"/>
     </preferencePages>

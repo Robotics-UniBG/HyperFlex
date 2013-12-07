@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.presentation;
+package org.hyperflex.compositionmodel.presentation;
 
 import org.eclipse.emf.common.EMFPlugin;
 

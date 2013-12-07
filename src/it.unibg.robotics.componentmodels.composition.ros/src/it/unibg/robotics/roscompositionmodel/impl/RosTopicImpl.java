@@ -24,12 +24,12 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel.impl;
+package org.hyperflex.roscompositionmodel.impl;
 
-import it.unibg.robotics.compositionmodel.impl.ConnectionImpl;
+import org.hyperflex.compositionmodel.impl.ConnectionImpl;
 
-import it.unibg.robotics.roscompositionmodel.RosTopic;
-import it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage;
+import org.hyperflex.roscompositionmodel.RosTopic;
+import org.hyperflex.roscompositionmodel.roscompositionmodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 

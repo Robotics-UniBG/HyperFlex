@@ -1,6 +1,6 @@
-package it.unibg.robotics.roscomponentmodel.diagram.expressions;
+package org.hyperflex.roscomponentmodel.diagram.expressions;
 
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;

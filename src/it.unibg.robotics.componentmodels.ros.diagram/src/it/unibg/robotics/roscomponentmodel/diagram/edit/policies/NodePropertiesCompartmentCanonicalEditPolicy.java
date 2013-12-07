@@ -1,9 +1,9 @@
-package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
+package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -48,7 +48,7 @@ public class NodePropertiesCompartmentCanonicalEditPolicy extends
 	 * @generated
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+		return org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 				.getNode_Parameters();
 	}
 

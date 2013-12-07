@@ -23,12 +23,12 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.provider;
+package org.hyperflex.roscomponentmodel.provider;
 
 
-import it.unibg.robotics.roscomponentmodel.Composite;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelFactory;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
+import org.hyperflex.roscomponentmodel.Composite;
+import org.hyperflex.roscomponentmodel.roscomponentmodelFactory;
+import org.hyperflex.roscomponentmodel.roscomponentmodelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -45,7 +45,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link it.unibg.robotics.roscomponentmodel.Composite} object.
+ * This is the item provider adapter for a {@link org.hyperflex.roscomponentmodel.Composite} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

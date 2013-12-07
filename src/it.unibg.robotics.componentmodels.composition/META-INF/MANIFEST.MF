@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: it.unibg.robotics.compositionmodels.model;singleton:=true
+Bundle-SymbolicName: org.hyperflex.compositionmodels.model;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: it.unibg.robotics.compositionmodel,
- it.unibg.robotics.compositionmodel.impl,
- it.unibg.robotics.compositionmodel.util
+Export-Package: org.hyperflex.compositionmodel,
+ org.hyperflex.compositionmodel.impl,
+ org.hyperflex.compositionmodel.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

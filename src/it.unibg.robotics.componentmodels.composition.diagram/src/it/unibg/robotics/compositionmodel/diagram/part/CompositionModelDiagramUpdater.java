@@ -1,34 +1,34 @@
-package it.unibg.robotics.compositionmodel.diagram.part;
+package org.hyperflex.compositionmodel.diagram.part;
 
-import it.unibg.robotics.compositionmodel.ArchitectureModel;
-import it.unibg.robotics.compositionmodel.CompProvidedInterf;
-import it.unibg.robotics.compositionmodel.CompRequiredInterf;
-import it.unibg.robotics.compositionmodel.Composite;
-import it.unibg.robotics.compositionmodel.Connection;
-import it.unibg.robotics.compositionmodel.ProvidedInterface;
-import it.unibg.robotics.compositionmodel.RequiredInterface;
-import it.unibg.robotics.compositionmodel.System;
-import it.unibg.robotics.compositionmodel.SystemComposite;
-import it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf;
-import it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf;
-import it.unibg.robotics.compositionmodel.SystemProvidedInterf;
-import it.unibg.robotics.compositionmodel.SystemRequiredInterf;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.System2EditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes;
-import it.unibg.robotics.roscompositionmodel.ROSComposite;
-import it.unibg.robotics.roscompositionmodel.ROSMsgConsumer;
-import it.unibg.robotics.roscompositionmodel.ROSMsgProducer;
+import org.hyperflex.compositionmodel.ArchitectureModel;
+import org.hyperflex.compositionmodel.CompProvidedInterf;
+import org.hyperflex.compositionmodel.CompRequiredInterf;
+import org.hyperflex.compositionmodel.Composite;
+import org.hyperflex.compositionmodel.Connection;
+import org.hyperflex.compositionmodel.ProvidedInterface;
+import org.hyperflex.compositionmodel.RequiredInterface;
+import org.hyperflex.compositionmodel.System;
+import org.hyperflex.compositionmodel.SystemComposite;
+import org.hyperflex.compositionmodel.SystemCompositeProvidedInterf;
+import org.hyperflex.compositionmodel.SystemCompositeRequiredInterf;
+import org.hyperflex.compositionmodel.SystemProvidedInterf;
+import org.hyperflex.compositionmodel.SystemRequiredInterf;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.System2EditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes;
+import org.hyperflex.roscompositionmodel.ROSComposite;
+import org.hyperflex.roscompositionmodel.ROSMsgConsumer;
+import org.hyperflex.roscompositionmodel.ROSMsgProducer;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -640,7 +640,7 @@ public class CompositionModelDiagramUpdater {
 		Collection<EStructuralFeature.Setting> settings = crossReferences
 				.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() != it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+			if (setting.getEStructuralFeature() != org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getConnection_Target()
 					|| false == setting.getEObject() instanceof Connection) {
 				continue;

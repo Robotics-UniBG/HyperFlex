@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.presentation;
+package org.hyperflex.roscomponentmodel.presentation;
 
 
 import java.util.ArrayList;
@@ -92,9 +92,9 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelFactory;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
-import it.unibg.robotics.roscomponentmodel.provider.RosComponentModelEditPlugin;
+import org.hyperflex.roscomponentmodel.roscomponentmodelFactory;
+import org.hyperflex.roscomponentmodel.roscomponentmodelPackage;
+import org.hyperflex.roscomponentmodel.provider.RosComponentModelEditPlugin;
 
 
 import org.eclipse.core.runtime.Path;

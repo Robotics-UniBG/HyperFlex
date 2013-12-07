@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 
 /**
@@ -32,7 +32,7 @@ package it.unibg.robotics.roscomponentmodel;
  * <!-- end-user-doc -->
  *
  *
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNodeMsgProducer()
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNodeMsgProducer()
  * @model
  * @generated
  */

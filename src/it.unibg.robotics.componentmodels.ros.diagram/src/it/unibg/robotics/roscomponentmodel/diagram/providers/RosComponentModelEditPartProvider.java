@@ -1,8 +1,8 @@
-package it.unibg.robotics.roscomponentmodel.diagram.providers;
+package org.hyperflex.roscomponentmodel.diagram.providers;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.RosComponentModelEditPartFactory;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.RosComponentModelEditPartFactory;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 import org.eclipse.gmf.tooling.runtime.providers.DefaultEditPartProvider;
 

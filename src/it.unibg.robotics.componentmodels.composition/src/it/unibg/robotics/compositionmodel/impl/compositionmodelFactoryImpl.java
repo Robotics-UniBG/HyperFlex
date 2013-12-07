@@ -24,19 +24,19 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.impl;
+package org.hyperflex.compositionmodel.impl;
 
-import it.unibg.robotics.compositionmodel.ArchitectureModel;
-import it.unibg.robotics.compositionmodel.Connection;
-import it.unibg.robotics.compositionmodel.SystemComposite;
-import it.unibg.robotics.compositionmodel.SystemCompositeProperty;
-import it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf;
-import it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf;
-import it.unibg.robotics.compositionmodel.SystemProperty;
-import it.unibg.robotics.compositionmodel.SystemProvidedInterf;
-import it.unibg.robotics.compositionmodel.SystemRequiredInterf;
-import it.unibg.robotics.compositionmodel.compositionmodelFactory;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.ArchitectureModel;
+import org.hyperflex.compositionmodel.Connection;
+import org.hyperflex.compositionmodel.SystemComposite;
+import org.hyperflex.compositionmodel.SystemCompositeProperty;
+import org.hyperflex.compositionmodel.SystemCompositeProvidedInterf;
+import org.hyperflex.compositionmodel.SystemCompositeRequiredInterf;
+import org.hyperflex.compositionmodel.SystemProperty;
+import org.hyperflex.compositionmodel.SystemProvidedInterf;
+import org.hyperflex.compositionmodel.SystemRequiredInterf;
+import org.hyperflex.compositionmodel.compositionmodelFactory;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -110,7 +110,7 @@ public class compositionmodelFactoryImpl extends EFactoryImpl implements composi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public it.unibg.robotics.compositionmodel.System createSystem() {
+	public org.hyperflex.compositionmodel.System createSystem() {
 		SystemImpl system = new SystemImpl();
 		return system;
 	}

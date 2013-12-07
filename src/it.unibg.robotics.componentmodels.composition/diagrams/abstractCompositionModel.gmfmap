@@ -15,7 +15,7 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerName"/>
+            href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerName"/>
         <features
             href="../models/compositionModel.ecore#//System/name"/>
       </labelMappings>
@@ -23,7 +23,7 @@
           xsi:type="gmftool:CreationTool"
           href="abstractCompositionModel.gmftool#//@palette/@tools.0/@tools.2"/>
       <diagramNode
-          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainer"/>
+          href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainer"/>
       <children>
         <containmentFeature
             href="../models/compositionModel.ecore#//System/provInterfaces"/>
@@ -34,7 +34,7 @@
               xsi:type="gmftool:CreationTool"
               href="abstractCompositionModel.gmftool#//@palette/@tools.0/@tools.3"/>
           <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
+              href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
         </ownedChild>
       </children>
       <children>
@@ -47,7 +47,7 @@
               xsi:type="gmftool:CreationTool"
               href="abstractCompositionModel.gmftool#//@palette/@tools.0/@tools.4"/>
           <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
+              href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
         </ownedChild>
       </children>
       <children
@@ -60,7 +60,7 @@
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeName"/>
+                href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeName"/>
             <features
                 href="../models/compositionModel.ecore#//Composite/name"/>
           </labelMappings>
@@ -68,7 +68,7 @@
               xsi:type="gmftool:CreationTool"
               href="abstractCompositionModel.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Composite"/>
+              href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Composite"/>
           <children>
             <containmentFeature
                 href="../models/compositionModel.ecore#//Composite/provInterfaces"/>
@@ -79,7 +79,7 @@
                   xsi:type="gmftool:CreationTool"
                   href="abstractCompositionModel.gmftool#//@palette/@tools.0/@tools.3"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
             </ownedChild>
           </children>
           <children>
@@ -92,7 +92,7 @@
                   xsi:type="gmftool:CreationTool"
                   href="abstractCompositionModel.gmftool#//@palette/@tools.0/@tools.4"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
             </ownedChild>
           </children>
         </ownedChild>
@@ -103,11 +103,11 @@
             href="../models/compositionModel.ecore#//System/composites"/>
         <ownedChild>
           <domainMetaElement
-              href="../../it.unibg.robotics.componentmodels.composition.ros/models/rosCompositionModel.ecore#//ROSComposite"/>
+              href="../../org.hyperflex.componentmodels.composition.ros/models/rosCompositionModel.ecore#//ROSComposite"/>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeName"/>
+                href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeName"/>
             <features
                 href="../models/compositionModel.ecore#//Composite/name"/>
           </labelMappings>
@@ -115,18 +115,18 @@
               xsi:type="gmftool:CreationTool"
               href="abstractCompositionModel.gmftool#//@palette/@tools.0/@tools.0"/>
           <diagramNode
-              href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Composite"/>
+              href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Composite"/>
           <children>
             <containmentFeature
                 href="../models/compositionModel.ecore#//Composite/provInterfaces"/>
             <ownedChild>
               <domainMetaElement
-                  href="../../it.unibg.robotics.componentmodels.composition.ros/models/rosCompositionModel.ecore#//ROSMsgProducer"/>
+                  href="../../org.hyperflex.componentmodels.composition.ros/models/rosCompositionModel.ecore#//ROSMsgProducer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
                   href="abstractCompositionModel.gmftool#//@palette/@tools.0/@tools.3"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
             </ownedChild>
           </children>
           <children>
@@ -134,12 +134,12 @@
                 href="../models/compositionModel.ecore#//Composite/reqInterfaces"/>
             <ownedChild>
               <domainMetaElement
-                  href="../../it.unibg.robotics.componentmodels.composition.ros/models/rosCompositionModel.ecore#//ROSMsgConsumer"/>
+                  href="../../org.hyperflex.componentmodels.composition.ros/models/rosCompositionModel.ecore#//ROSMsgConsumer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
                   href="abstractCompositionModel.gmftool#//@palette/@tools.0/@tools.4"/>
               <diagramNode
-                  href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
             </ownedChild>
           </children>
         </ownedChild>
@@ -147,7 +147,7 @@
       <compartments
           children="//@nodes.0/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.3">
         <compartment
-            href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerCompartment"/>
+            href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerCompartment"/>
       </compartments>
     </ownedChild>
   </nodes>
@@ -157,7 +157,7 @@
     <labelMappings
         xsi:type="gmfmap:FeatureLabelMapping">
       <diagramLabel
-          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnectionName"/>
+          href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnectionName"/>
       <features
           href="../models/compositionModel.ecore#//Connection/name"/>
     </labelMappings>
@@ -167,7 +167,7 @@
         xsi:type="gmftool:CreationTool"
         href="abstractCompositionModel.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnection"/>
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnection"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
         href="../models/compositionModel.ecore#//Connection/source"/>
@@ -177,7 +177,7 @@
   </links>
   <diagram>
     <diagramCanvas
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#componentDiagram"/>
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#componentDiagram"/>
     <domainModel
         href="../models/compositionModel.ecore#/"/>
     <domainMetaElement

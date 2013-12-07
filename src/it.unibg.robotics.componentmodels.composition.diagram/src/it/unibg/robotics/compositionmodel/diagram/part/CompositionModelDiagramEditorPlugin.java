@@ -1,7 +1,7 @@
-package it.unibg.robotics.compositionmodel.diagram.part;
+package org.hyperflex.compositionmodel.diagram.part;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.policies.CompositionModelBaseItemSemanticEditPolicy;
-import it.unibg.robotics.compositionmodel.diagram.providers.ElementInitializers;
+import org.hyperflex.compositionmodel.diagram.edit.policies.CompositionModelBaseItemSemanticEditPolicy;
+import org.hyperflex.compositionmodel.diagram.providers.ElementInitializers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,7 @@ public class CompositionModelDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
-	public static final String ID = "it.unibg.robotics.componentmodels.composition.diagram"; //$NON-NLS-1$
+	public static final String ID = "org.hyperflex.componentmodels.composition.diagram"; //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -114,7 +114,7 @@ public class CompositionModelDiagramEditorPlugin extends AbstractUIPlugin {
 	 */
 	protected void fillItemProviderFactories(List<AdapterFactory> factories) {
 		factories
-				.add(new it.unibg.robotics.compositionmodel.provider.compositionmodelItemProviderAdapterFactory());
+				.add(new org.hyperflex.compositionmodel.provider.compositionmodelItemProviderAdapterFactory());
 		factories.add(new ResourceItemProviderAdapterFactory());
 		factories.add(new ReflectiveItemProviderAdapterFactory());
 	}

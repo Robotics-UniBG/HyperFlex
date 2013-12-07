@@ -1,6 +1,6 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.parts;
+package org.hyperflex.compositionmodel.diagram.edit.parts;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.policies.ConnectionItemSemanticEditPolicy;
+import org.hyperflex.compositionmodel.diagram.edit.policies.ConnectionItemSemanticEditPolicy;
 
 import org.eclipse.draw2d.Connection;
 import org.eclipse.draw2d.PolylineDecoration;

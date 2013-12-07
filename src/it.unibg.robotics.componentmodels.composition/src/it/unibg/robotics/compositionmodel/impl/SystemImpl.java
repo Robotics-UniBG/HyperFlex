@@ -24,14 +24,14 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.impl;
+package org.hyperflex.compositionmodel.impl;
 
-import it.unibg.robotics.compositionmodel.Composite;
-import it.unibg.robotics.compositionmodel.Connection;
-import it.unibg.robotics.compositionmodel.SystemProperty;
-import it.unibg.robotics.compositionmodel.SystemProvidedInterf;
-import it.unibg.robotics.compositionmodel.SystemRequiredInterf;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.Composite;
+import org.hyperflex.compositionmodel.Connection;
+import org.hyperflex.compositionmodel.SystemProperty;
+import org.hyperflex.compositionmodel.SystemProvidedInterf;
+import org.hyperflex.compositionmodel.SystemRequiredInterf;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import java.util.Collection;
 
@@ -56,18 +56,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.SystemImpl#getComposites <em>Composites</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.SystemImpl#getProvInterfaces <em>Prov Interfaces</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.SystemImpl#getReqInterfaces <em>Req Interfaces</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.SystemImpl#getProperties <em>Properties</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.SystemImpl#getName <em>Name</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.SystemImpl#getConnections <em>Connections</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.SystemImpl#getComposites <em>Composites</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.SystemImpl#getProvInterfaces <em>Prov Interfaces</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.SystemImpl#getReqInterfaces <em>Req Interfaces</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.SystemImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.SystemImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.SystemImpl#getConnections <em>Connections</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SystemImpl extends EObjectImpl implements it.unibg.robotics.compositionmodel.System {
+public class SystemImpl extends EObjectImpl implements org.hyperflex.compositionmodel.System {
 	/**
 	 * The cached value of the '{@link #getComposites() <em>Composites</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

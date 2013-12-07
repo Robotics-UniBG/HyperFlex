@@ -23,11 +23,11 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.provider;
+package org.hyperflex.roscomponentmodel.provider;
 
 
-import it.unibg.robotics.roscomponentmodel.NodeMsgInterface;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
+import org.hyperflex.roscomponentmodel.NodeMsgInterface;
+import org.hyperflex.roscomponentmodel.roscomponentmodelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -45,7 +45,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link it.unibg.robotics.roscomponentmodel.NodeMsgInterface} object.
+ * This is the item provider adapter for a {@link org.hyperflex.roscomponentmodel.NodeMsgInterface} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

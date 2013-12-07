@@ -33,9 +33,9 @@
    <extension point="org.eclipse.ui.newWizards">
       <!-- @generated rosCompositionModel -->
       <wizard
-            id="it.unibg.robotics.roscompositionmodel.presentation.roscompositionmodelModelWizardID"
+            id="org.hyperflex.roscompositionmodel.presentation.roscompositionmodelModelWizardID"
             name="%_UI_roscompositionmodelModelWizard_label"
-            class="it.unibg.robotics.roscompositionmodel.presentation.roscompositionmodelModelWizard"
+            class="org.hyperflex.roscompositionmodel.presentation.roscompositionmodelModelWizard"
             category="it.robotics.unibg.hyperflex.wizard.category"
             icon="icons/full/obj16/roscompositionmodelModelFile.gif">
          <description>%_UI_roscompositionmodelModelWizard_description</description>
@@ -46,12 +46,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated rosCompositionModel -->
       <editor
-            id="it.unibg.robotics.roscompositionmodel.presentation.roscompositionmodelEditorID"
+            id="org.hyperflex.roscompositionmodel.presentation.roscompositionmodelEditorID"
             name="%_UI_roscompositionmodelEditor_label"
             icon="icons/full/obj16/roscompositionmodelModelFile.gif"
             extensions="roscompositionmodel"
-            class="it.unibg.robotics.roscompositionmodel.presentation.roscompositionmodelEditor"
-            contributorClass="it.unibg.robotics.roscompositionmodel.presentation.roscompositionmodelActionBarContributor">
+            class="org.hyperflex.roscompositionmodel.presentation.roscompositionmodelEditor"
+            contributorClass="org.hyperflex.roscompositionmodel.presentation.roscompositionmodelActionBarContributor">
       </editor>
    </extension>
 </plugin>

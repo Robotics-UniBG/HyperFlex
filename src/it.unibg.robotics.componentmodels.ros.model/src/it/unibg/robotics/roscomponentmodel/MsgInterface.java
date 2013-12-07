@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -35,12 +35,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.MsgInterface#getName <em>Name</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.MsgInterface#getConnection <em>Connection</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.MsgInterface#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.MsgInterface#getConnection <em>Connection</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getMsgInterface()
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getMsgInterface()
  * @model
  * @generated
  */
@@ -55,14 +55,14 @@ public interface MsgInterface extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getMsgInterface_Name()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getMsgInterface_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.MsgInterface#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.MsgInterface#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -81,14 +81,14 @@ public interface MsgInterface extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Connection</em>' reference.
 	 * @see #setConnection(Topic)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getMsgInterface_Connection()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getMsgInterface_Connection()
 	 * @model
 	 * @generated
 	 */
 	Topic getConnection();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.MsgInterface#getConnection <em>Connection</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.MsgInterface#getConnection <em>Connection</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Connection</em>' reference.

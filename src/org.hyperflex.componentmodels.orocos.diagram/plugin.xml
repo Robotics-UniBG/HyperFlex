@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.0"?>
 <!--
-HyperFlex Plugins (VARP)
+HyperFlex Plugins
 
 Copyright (c) 2013
 All rights reserved.
@@ -43,14 +43,14 @@ http://www.eclipse.org/legal/epl-v10.html
    <extension point="org.eclipse.ui.editors" id="gmf-editor">
       <?gmfgen generated="true"?>
       <editor
-         id="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID"
+         id="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID"
          name="%editorName"
          icon="icons/obj16/orocoscomponentmodelDiagramFile.gif"
          extensions="orocoscomponentmodel_diagram"
          default="true"
-         class="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditor"
-         matchingStrategy="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelMatchingStrategy"
-         contributorClass="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramActionBarContributor">
+         class="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditor"
+         matchingStrategy="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelMatchingStrategy"
+         contributorClass="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramActionBarContributor">
       </editor>
    </extension>
    
@@ -58,7 +58,7 @@ http://www.eclipse.org/legal/epl-v10.html
       <?gmfgen generated="true"?>
       <context
          description="%context.description"
-         id="it.unibg.robotics.orocoscomponentmodel.diagram.ui.diagramContext"
+         id="org.hyperflex.orocoscomponentmodel.diagram.ui.diagramContext"
          name="%context.name"
          parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
       </context>
@@ -69,9 +69,9 @@ http://www.eclipse.org/legal/epl-v10.html
   	  <wizard
   	     name="%newWizardName"
   	     icon="icons/obj16/orocoscomponentmodelDiagramFile.gif"
-  	     category="it.robotics.unibg.hyperflex.wizard.category"
-  	     class="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelCreationWizard"
-  	     id="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelCreationWizardID">
+  	     category="org.hyperflex.wizard.category"
+  	     class="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelCreationWizard"
+  	     id="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelCreationWizardID">
   	  	 <description>%newWizardDesc</description>  
       </wizard>
    </extension>
@@ -79,15 +79,15 @@ http://www.eclipse.org/legal/epl-v10.html
    <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
       <?gmfgen generated="true"?>
       <objectContribution
-            id="it.unibg.robotics.componentmodels.orocos.diagram.InitDiagram"
+            id="org.hyperflex.componentmodels.orocos.diagram.InitDiagram"
             nameFilter="*.orocoscomponentmodel"
             objectClass="org.eclipse.core.resources.IFile">
          <action
                label="%initDiagramActionLabel"
-               class="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelInitDiagramFileAction"
+               class="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelInitDiagramFileAction"
                menubarPath="additions"
                enablesFor="1"
-               id="it.unibg.robotics.componentmodels.orocos.diagram.InitDiagramAction">
+               id="org.hyperflex.componentmodels.orocos.diagram.InitDiagramAction">
          </action>
       </objectContribution>
    </extension>
@@ -98,7 +98,7 @@ http://www.eclipse.org/legal/epl-v10.html
          class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
          id="OrocosComponentModelPresentation">
          <Priority name="Lowest"/>
-         <ViewId id="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID">
+         <ViewId id="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="delete"/>
             </ElementType>
@@ -115,7 +115,7 @@ http://www.eclipse.org/legal/epl-v10.html
          class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
          id="OrocosComponentModelPresentationIDE">
          <Priority name="Lowest"/>
-         <ViewId id="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID">
+         <ViewId id="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="bookmark"/>
             </ElementType>
@@ -125,7 +125,7 @@ http://www.eclipse.org/legal/epl-v10.html
             class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
             id="OrocosComponentModelRender">
          <Priority name="Lowest"/>
-         <ViewId id="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID">
+         <ViewId id="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="cut"/>
                <GlobalActionId actionId="copy"/>
@@ -138,47 +138,47 @@ http://www.eclipse.org/legal/epl-v10.html
 
    <extension point="org.eclipse.core.runtime.preferences" id="prefs">
       <?gmfgen generated="true"?>
-      <initializer class="it.unibg.robotics.orocoscomponentmodel.diagram.preferences.DiagramPreferenceInitializer"/>
+      <initializer class="org.hyperflex.orocoscomponentmodel.diagram.preferences.DiagramPreferenceInitializer"/>
    </extension>
 
    <extension point="org.eclipse.ui.preferencePages" id="prefpages">
       <?gmfgen generated="true"?>
       <page
-            id="it.unibg.robotics.componentmodels.orocos.diagram.general"
-            name="%prefpage.it.unibg.robotics.componentmodels.orocos.diagram.general"
-            class="it.unibg.robotics.orocoscomponentmodel.diagram.preferences.DiagramGeneralPreferencePage">
+            id="org.hyperflex.componentmodels.orocos.diagram.general"
+            name="%prefpage.org.hyperflex.componentmodels.orocos.diagram.general"
+            class="org.hyperflex.orocoscomponentmodel.diagram.preferences.DiagramGeneralPreferencePage">
       </page>
       <page
-            id="it.unibg.robotics.componentmodels.orocos.diagram.appearance"
-            name="%prefpage.it.unibg.robotics.componentmodels.orocos.diagram.appearance"
-            category="it.unibg.robotics.componentmodels.orocos.diagram.general"
-            class="it.unibg.robotics.orocoscomponentmodel.diagram.preferences.DiagramAppearancePreferencePage">
+            id="org.hyperflex.componentmodels.orocos.diagram.appearance"
+            name="%prefpage.org.hyperflex.componentmodels.orocos.diagram.appearance"
+            category="org.hyperflex.componentmodels.orocos.diagram.general"
+            class="org.hyperflex.orocoscomponentmodel.diagram.preferences.DiagramAppearancePreferencePage">
       </page>
       <page
-            id="it.unibg.robotics.componentmodels.orocos.diagram.connections"
-            name="%prefpage.it.unibg.robotics.componentmodels.orocos.diagram.connections"
-            category="it.unibg.robotics.componentmodels.orocos.diagram.general"
-            class="it.unibg.robotics.orocoscomponentmodel.diagram.preferences.DiagramConnectionsPreferencePage">
+            id="org.hyperflex.componentmodels.orocos.diagram.connections"
+            name="%prefpage.org.hyperflex.componentmodels.orocos.diagram.connections"
+            category="org.hyperflex.componentmodels.orocos.diagram.general"
+            class="org.hyperflex.orocoscomponentmodel.diagram.preferences.DiagramConnectionsPreferencePage">
       </page>
       <page
-            id="it.unibg.robotics.componentmodels.orocos.diagram.printing"
-            name="%prefpage.it.unibg.robotics.componentmodels.orocos.diagram.printing"
-            category="it.unibg.robotics.componentmodels.orocos.diagram.general"
-            class="it.unibg.robotics.orocoscomponentmodel.diagram.preferences.DiagramPrintingPreferencePage">
+            id="org.hyperflex.componentmodels.orocos.diagram.printing"
+            name="%prefpage.org.hyperflex.componentmodels.orocos.diagram.printing"
+            category="org.hyperflex.componentmodels.orocos.diagram.general"
+            class="org.hyperflex.orocoscomponentmodel.diagram.preferences.DiagramPrintingPreferencePage">
       </page>
       <page
-            id="it.unibg.robotics.componentmodels.orocos.diagram.rulersAndGrid"
-            name="%prefpage.it.unibg.robotics.componentmodels.orocos.diagram.rulersAndGrid"
-            category="it.unibg.robotics.componentmodels.orocos.diagram.general"
-            class="it.unibg.robotics.orocoscomponentmodel.diagram.preferences.DiagramRulersAndGridPreferencePage">
+            id="org.hyperflex.componentmodels.orocos.diagram.rulersAndGrid"
+            name="%prefpage.org.hyperflex.componentmodels.orocos.diagram.rulersAndGrid"
+            category="org.hyperflex.componentmodels.orocos.diagram.general"
+            class="org.hyperflex.orocoscomponentmodel.diagram.preferences.DiagramRulersAndGridPreferencePage">
       </page>
    </extension>
 
    <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
       <?gmfgen generated="true"?>
       <propertyContributor
-            contributorId="it.unibg.robotics.componentmodels.orocos.diagram"
-            labelProvider="it.unibg.robotics.orocoscomponentmodel.diagram.sheet.OrocosComponentModelSheetLabelProvider">
+            contributorId="org.hyperflex.componentmodels.orocos.diagram"
+            labelProvider="org.hyperflex.orocoscomponentmodel.diagram.sheet.OrocosComponentModelSheetLabelProvider">
          <propertyCategory category="domain"/>
          <propertyCategory category="visual"/>
          <propertyCategory category="extra"/>
@@ -187,7 +187,7 @@ http://www.eclipse.org/legal/epl-v10.html
 
    <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
       <?gmfgen generated="true"?>   
-      <propertyTabs contributorId="it.unibg.robotics.componentmodels.orocos.diagram">
+      <propertyTabs contributorId="org.hyperflex.componentmodels.orocos.diagram">
          <propertyTab
              category="visual"
              id="property.tab.AppearancePropertySection"
@@ -205,7 +205,7 @@ http://www.eclipse.org/legal/epl-v10.html
 
    <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
       <?gmfgen generated="true"?>   
-      <propertySections contributorId="it.unibg.robotics.componentmodels.orocos.diagram">
+      <propertySections contributorId="org.hyperflex.componentmodels.orocos.diagram">
          <propertySection id="property.section.ConnectorAppearancePropertySection" 
             filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
             class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
@@ -229,42 +229,42 @@ http://www.eclipse.org/legal/epl-v10.html
          <propertySection
             id="property.section.domain" 
             tab="property.tab.domain"
-            class="it.unibg.robotics.orocoscomponentmodel.diagram.sheet.OrocosComponentModelPropertySection">
+            class="org.hyperflex.orocoscomponentmodel.diagram.sheet.OrocosComponentModelPropertySection">
             <input type="org.eclipse.gmf.runtime.notation.View"/>
             <input type="org.eclipse.gef.EditPart"/>
-            <input type="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelAbstractNavigatorItem"/>
+            <input type="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelAbstractNavigatorItem"/>
          </propertySection>
       </propertySections>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
       <?gmfgen generated="true"?>
-      <viewProvider class="it.unibg.robotics.orocoscomponentmodel.diagram.providers.OrocosComponentModelViewProvider">
+      <viewProvider class="org.hyperflex.orocoscomponentmodel.diagram.providers.OrocosComponentModelViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="OrocosComponentModel"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,3001,3002,3003,3016,3010,3011,3005,3006,3007,3012,3013,3008,3009,3014,3015"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4004,4005,4007,4008,4009"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2002,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4010,4011,4012,4013,4014,4015"/>
       </viewProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
       <?gmfgen generated="true"?>
-      <editpartProvider class="it.unibg.robotics.orocoscomponentmodel.diagram.providers.OrocosComponentModelEditPartProvider">
+      <editpartProvider class="org.hyperflex.orocoscomponentmodel.diagram.providers.OrocosComponentModelEditPartProvider">
          <Priority name="Lowest"/>
          <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
             <method name="getType()" value="OrocosComponentModel"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,3001,3002,3003,3016,3010,3011,3005,3006,3007,3012,3013,3008,3009,3014,3015"/>
+            <method name="getType()" value="2002,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4001,4004,4005,4007,4008,4009"/>
+            <method name="getType()" value="4010,4011,4012,4013,4014,4015"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5003,5001,5005,5002"/>
+            <method name="getType()" value="5009,5007,5006,5008"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value="7001,7002"/>
+            <method name="getType()" value="7003,7004"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -272,312 +272,312 @@ http://www.eclipse.org/legal/epl-v10.html
 
    <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
       <?gmfgen generated="true"?>
-      <modelingAssistantProvider class="it.unibg.robotics.orocoscomponentmodel.diagram.providers.OrocosComponentModelModelingAssistantProvider">
+      <modelingAssistantProvider class="org.hyperflex.orocoscomponentmodel.diagram.providers.OrocosComponentModelModelingAssistantProvider">
          <Priority name="Lowest"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.SystemEditPart" id="System_1000"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompositeEditPart" id="Composite_2001"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TaskContextEditPart" id="TaskContext_3001"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCInputDataPortEditPart" id="TCInputDataPort_3002"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOutputDataPortEditPart" id="TCOutputDataPort_3003"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCPropertyEditPart" id="TCProperty_3016"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationEditPart" id="TCOperation_3010"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.TCOperationCallerEditPart" id="TCOperationCaller_3011"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.Composite2EditPart" id="Composite_3005"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompInputPortEditPart" id="CompInputPort_3006"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompOutputPortEditPart" id="CompOutputPort_3007"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompOperationEditPart" id="CompOperation_3012"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompOperationCallerEditPart" id="CompOperationCaller_3013"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompInputPort2EditPart" id="CompInputPort_3008"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompOutputPort2EditPart" id="CompOutputPort_3009"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompOperation2EditPart" id="CompOperation_3014"/>
-         <object class="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.CompOperationCaller2EditPart" id="CompOperationCaller_3015"/>
-         <context elements="System_1000,Composite_2001,TaskContext_3001,TCInputDataPort_3002,TCOutputDataPort_3003,TCProperty_3016,TCOperation_3010,TCOperationCaller_3011,Composite_3005,CompInputPort_3006,CompOutputPort_3007,CompOperation_3012,CompOperationCaller_3013,CompInputPort_3008,CompOutputPort_3009,CompOperation_3014,CompOperationCaller_3015"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.SystemEditPart" id="System_1000"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.CompositeEditPart" id="Composite_2002"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.TaskContextEditPart" id="TaskContext_3017"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.TCInputDataPortEditPart" id="TCInputDataPort_3018"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.TCOutputDataPortEditPart" id="TCOutputDataPort_3019"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.TCPropertyEditPart" id="TCProperty_3020"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.TCOperationEditPart" id="TCOperation_3021"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.TCOperationCallerEditPart" id="TCOperationCaller_3022"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.Composite2EditPart" id="Composite_3023"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.CompInputPortEditPart" id="CompInputPort_3024"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.CompOutputPortEditPart" id="CompOutputPort_3025"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.CompOperationEditPart" id="CompOperation_3026"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.CompOperationCallerEditPart" id="CompOperationCaller_3027"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.CompInputPort2EditPart" id="CompInputPort_3028"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.CompOutputPort2EditPart" id="CompOutputPort_3029"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.CompOperation2EditPart" id="CompOperation_3030"/>
+         <object class="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.CompOperationCaller2EditPart" id="CompOperationCaller_3031"/>
+         <context elements="System_1000,Composite_2002,TaskContext_3017,TCInputDataPort_3018,TCOutputDataPort_3019,TCProperty_3020,TCOperation_3021,TCOperationCaller_3022,Composite_3023,CompInputPort_3024,CompOutputPort_3025,CompOperation_3026,CompOperationCaller_3027,CompInputPort_3028,CompOutputPort_3029,CompOperation_3030,CompOperationCaller_3031"/>
       </modelingAssistantProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
       <?gmfgen generated="true"?>
-      <IconProvider class="it.unibg.robotics.orocoscomponentmodel.diagram.providers.OrocosComponentModelIconProvider">
+      <IconProvider class="org.hyperflex.orocoscomponentmodel.diagram.providers.OrocosComponentModelIconProvider">
          <Priority name="Low"/>
       </IconProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
       <?gmfgen generated="true"?>
-      <ParserProvider class="it.unibg.robotics.orocoscomponentmodel.diagram.providers.OrocosComponentModelParserProvider">
+      <ParserProvider class="org.hyperflex.orocoscomponentmodel.diagram.providers.OrocosComponentModelParserProvider">
          <Priority name="Lowest"/>
       </ParserProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
       <?gmfgen generated="true"?>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.System_1000"
+               id="org.hyperflex.componentmodels.orocos.diagram.System_1000"
                name="%metatype.name.System_1000"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="System"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.SystemEditHelper">
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.SystemEditHelper">
             <param name="semanticHint" value="1000"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.Composite_2001"
-               name="%metatype.name.Composite_2001"
+               id="org.hyperflex.componentmodels.orocos.diagram.Composite_2002"
+               name="%metatype.name.Composite_2002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Composite"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.CompositeEditHelper">
-            <param name="semanticHint" value="2001"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.CompositeEditHelper">
+            <param name="semanticHint" value="2002"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.TaskContext_3001"
-               name="%metatype.name.TaskContext_3001"
+               id="org.hyperflex.componentmodels.orocos.diagram.TaskContext_3017"
+               name="%metatype.name.TaskContext_3017"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="TaskContext"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.TaskContextEditHelper">
-            <param name="semanticHint" value="3001"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.TaskContextEditHelper">
+            <param name="semanticHint" value="3017"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.TCInputDataPort_3002"
-               name="%metatype.name.TCInputDataPort_3002"
+               id="org.hyperflex.componentmodels.orocos.diagram.TCInputDataPort_3018"
+               name="%metatype.name.TCInputDataPort_3018"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="TCInputDataPort"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.TCInputDataPortEditHelper">
-            <param name="semanticHint" value="3002"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.TCInputDataPortEditHelper">
+            <param name="semanticHint" value="3018"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.TCOutputDataPort_3003"
-               name="%metatype.name.TCOutputDataPort_3003"
+               id="org.hyperflex.componentmodels.orocos.diagram.TCOutputDataPort_3019"
+               name="%metatype.name.TCOutputDataPort_3019"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="TCOutputDataPort"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.TCOutputDataPortEditHelper">
-            <param name="semanticHint" value="3003"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.TCOutputDataPortEditHelper">
+            <param name="semanticHint" value="3019"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.TCProperty_3016"
-               name="%metatype.name.TCProperty_3016"
+               id="org.hyperflex.componentmodels.orocos.diagram.TCProperty_3020"
+               name="%metatype.name.TCProperty_3020"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="TCProperty"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.TCPropertyEditHelper">
-            <param name="semanticHint" value="3016"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.TCPropertyEditHelper">
+            <param name="semanticHint" value="3020"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.TCOperation_3010"
-               name="%metatype.name.TCOperation_3010"
+               id="org.hyperflex.componentmodels.orocos.diagram.TCOperation_3021"
+               name="%metatype.name.TCOperation_3021"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="TCOperation"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.TCOperationEditHelper">
-            <param name="semanticHint" value="3010"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.TCOperationEditHelper">
+            <param name="semanticHint" value="3021"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.TCOperationCaller_3011"
-               name="%metatype.name.TCOperationCaller_3011"
+               id="org.hyperflex.componentmodels.orocos.diagram.TCOperationCaller_3022"
+               name="%metatype.name.TCOperationCaller_3022"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="TCOperationCaller"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.TCOperationCallerEditHelper">
-            <param name="semanticHint" value="3011"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.TCOperationCallerEditHelper">
+            <param name="semanticHint" value="3022"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <specializationType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.Composite_3005"
-               name="%metatype.name.Composite_3005"
+               id="org.hyperflex.componentmodels.orocos.diagram.Composite_3023"
+               name="%metatype.name.Composite_3023"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="it.unibg.robotics.componentmodels.orocos.diagram.Composite_2001"/>
-            <param name="semanticHint" value="3005"/>
+            <specializes id="org.hyperflex.componentmodels.orocos.diagram.Composite_2002"/>
+            <param name="semanticHint" value="3023"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.CompInputPort_3006"
-               name="%metatype.name.CompInputPort_3006"
+               id="org.hyperflex.componentmodels.orocos.diagram.CompInputPort_3024"
+               name="%metatype.name.CompInputPort_3024"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="CompInputPort"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.CompInputPortEditHelper">
-            <param name="semanticHint" value="3006"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.CompInputPortEditHelper">
+            <param name="semanticHint" value="3024"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.CompOutputPort_3007"
-               name="%metatype.name.CompOutputPort_3007"
+               id="org.hyperflex.componentmodels.orocos.diagram.CompOutputPort_3025"
+               name="%metatype.name.CompOutputPort_3025"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="CompOutputPort"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.CompOutputPortEditHelper">
-            <param name="semanticHint" value="3007"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.CompOutputPortEditHelper">
+            <param name="semanticHint" value="3025"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.CompOperation_3012"
-               name="%metatype.name.CompOperation_3012"
+               id="org.hyperflex.componentmodels.orocos.diagram.CompOperation_3026"
+               name="%metatype.name.CompOperation_3026"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="CompOperation"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.CompOperationEditHelper">
-            <param name="semanticHint" value="3012"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.CompOperationEditHelper">
+            <param name="semanticHint" value="3026"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.CompOperationCaller_3013"
-               name="%metatype.name.CompOperationCaller_3013"
+               id="org.hyperflex.componentmodels.orocos.diagram.CompOperationCaller_3027"
+               name="%metatype.name.CompOperationCaller_3027"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="CompOperationCaller"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.CompOperationCallerEditHelper">
-            <param name="semanticHint" value="3013"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.CompOperationCallerEditHelper">
+            <param name="semanticHint" value="3027"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <specializationType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.CompInputPort_3008"
-               name="%metatype.name.CompInputPort_3008"
+               id="org.hyperflex.componentmodels.orocos.diagram.CompInputPort_3028"
+               name="%metatype.name.CompInputPort_3028"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="it.unibg.robotics.componentmodels.orocos.diagram.CompInputPort_3006"/>
-            <param name="semanticHint" value="3008"/>
+            <specializes id="org.hyperflex.componentmodels.orocos.diagram.CompInputPort_3024"/>
+            <param name="semanticHint" value="3028"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <specializationType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.CompOutputPort_3009"
-               name="%metatype.name.CompOutputPort_3009"
+               id="org.hyperflex.componentmodels.orocos.diagram.CompOutputPort_3029"
+               name="%metatype.name.CompOutputPort_3029"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="it.unibg.robotics.componentmodels.orocos.diagram.CompOutputPort_3007"/>
-            <param name="semanticHint" value="3009"/>
+            <specializes id="org.hyperflex.componentmodels.orocos.diagram.CompOutputPort_3025"/>
+            <param name="semanticHint" value="3029"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <specializationType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.CompOperation_3014"
-               name="%metatype.name.CompOperation_3014"
+               id="org.hyperflex.componentmodels.orocos.diagram.CompOperation_3030"
+               name="%metatype.name.CompOperation_3030"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="it.unibg.robotics.componentmodels.orocos.diagram.CompOperation_3012"/>
-            <param name="semanticHint" value="3014"/>
+            <specializes id="org.hyperflex.componentmodels.orocos.diagram.CompOperation_3026"/>
+            <param name="semanticHint" value="3030"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <specializationType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.CompOperationCaller_3015"
-               name="%metatype.name.CompOperationCaller_3015"
+               id="org.hyperflex.componentmodels.orocos.diagram.CompOperationCaller_3031"
+               name="%metatype.name.CompOperationCaller_3031"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="it.unibg.robotics.componentmodels.orocos.diagram.CompOperationCaller_3013"/>
-            <param name="semanticHint" value="3015"/>
+            <specializes id="org.hyperflex.componentmodels.orocos.diagram.CompOperationCaller_3027"/>
+            <param name="semanticHint" value="3031"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.ConnectionPolicy_4001"
-               name="%metatype.name.ConnectionPolicy_4001"
+               id="org.hyperflex.componentmodels.orocos.diagram.ConnectionPolicy_4010"
+               name="%metatype.name.ConnectionPolicy_4010"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="ConnectionPolicy"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.ConnectionPolicyEditHelper">
-            <param name="semanticHint" value="4001"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.ConnectionPolicyEditHelper">
+            <param name="semanticHint" value="4010"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <specializationType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.CompOutputPort_4004"
-               name="%metatype.name.CompOutputPort_4004"
+               id="org.hyperflex.componentmodels.orocos.diagram.CompOutputPort_4011"
+               name="%metatype.name.CompOutputPort_4011"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="it.unibg.robotics.componentmodels.orocos.diagram.CompOutputPort_3007"/>
-            <param name="semanticHint" value="4004"/>
+            <specializes id="org.hyperflex.componentmodels.orocos.diagram.CompOutputPort_3025"/>
+            <param name="semanticHint" value="4011"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <specializationType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.CompInputPort_4005"
-               name="%metatype.name.CompInputPort_4005"
+               id="org.hyperflex.componentmodels.orocos.diagram.CompInputPort_4012"
+               name="%metatype.name.CompInputPort_4012"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="it.unibg.robotics.componentmodels.orocos.diagram.CompInputPort_3006"/>
-            <param name="semanticHint" value="4005"/>
+            <specializes id="org.hyperflex.componentmodels.orocos.diagram.CompInputPort_3024"/>
+            <param name="semanticHint" value="4012"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.PeersConnection_4007"
-               name="%metatype.name.PeersConnection_4007"
+               id="org.hyperflex.componentmodels.orocos.diagram.PeersConnection_4013"
+               name="%metatype.name.PeersConnection_4013"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="PeersConnection"
-               edithelper="it.unibg.robotics.orocoscomponentmodel.diagram.edit.helpers.PeersConnectionEditHelper">
-            <param name="semanticHint" value="4007"/>
+               edithelper="org.hyperflex.orocoscomponentmodel.diagram.edit.helpers.PeersConnectionEditHelper">
+            <param name="semanticHint" value="4013"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <specializationType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.CompOperation_4008"
-               name="%metatype.name.CompOperation_4008"
+               id="org.hyperflex.componentmodels.orocos.diagram.CompOperation_4014"
+               name="%metatype.name.CompOperation_4014"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="it.unibg.robotics.componentmodels.orocos.diagram.CompOperation_3012"/>
-            <param name="semanticHint" value="4008"/>
+            <specializes id="org.hyperflex.componentmodels.orocos.diagram.CompOperation_3026"/>
+            <param name="semanticHint" value="4014"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="http://robotics.unibg.it/componentmodels.orocos">
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.orocos">
          <specializationType
-               id="it.unibg.robotics.componentmodels.orocos.diagram.CompOperationCaller_4009"
-               name="%metatype.name.CompOperationCaller_4009"
+               id="org.hyperflex.componentmodels.orocos.diagram.CompOperationCaller_4015"
+               name="%metatype.name.CompOperationCaller_4015"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="it.unibg.robotics.componentmodels.orocos.diagram.CompOperationCaller_3013"/>
-            <param name="semanticHint" value="4009"/>
+            <specializes id="org.hyperflex.componentmodels.orocos.diagram.CompOperationCaller_3027"/>
+            <param name="semanticHint" value="4015"/>
          </specializationType>
       </metamodel>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
       <?gmfgen generated="true"?>
-      <clientContext id="it.unibg.robotics.componentmodels.orocos.diagram.TypeContext">
+      <clientContext id="org.hyperflex.componentmodels.orocos.diagram.TypeContext">
          <enablement>
             <test
                property="org.eclipse.gmf.runtime.emf.core.editingDomain"
-               value="it.unibg.robotics.componentmodels.orocos.diagram.EditingDomain"/>
+               value="org.hyperflex.componentmodels.orocos.diagram.EditingDomain"/>
          </enablement>
       </clientContext> 
-      <binding context="it.unibg.robotics.componentmodels.orocos.diagram.TypeContext">
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.System_1000"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.Composite_2001"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.TaskContext_3001"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.TCInputDataPort_3002"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.TCOutputDataPort_3003"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.TCProperty_3016"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.TCOperation_3010"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.TCOperationCaller_3011"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.Composite_3005"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.CompInputPort_3006"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.CompOutputPort_3007"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.CompOperation_3012"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.CompOperationCaller_3013"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.CompInputPort_3008"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.CompOutputPort_3009"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.CompOperation_3014"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.CompOperationCaller_3015"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.ConnectionPolicy_4001"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.CompOutputPort_4004"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.CompInputPort_4005"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.PeersConnection_4007"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.CompOperation_4008"/>
-         <elementType ref="it.unibg.robotics.componentmodels.orocos.diagram.CompOperationCaller_4009"/>
+      <binding context="org.hyperflex.componentmodels.orocos.diagram.TypeContext">
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.System_1000"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.Composite_2002"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.TaskContext_3017"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.TCInputDataPort_3018"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.TCOutputDataPort_3019"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.TCProperty_3020"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.TCOperation_3021"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.TCOperationCaller_3022"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.Composite_3023"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.CompInputPort_3024"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.CompOutputPort_3025"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.CompOperation_3026"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.CompOperationCaller_3027"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.CompInputPort_3028"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.CompOutputPort_3029"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.CompOperation_3030"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.CompOperationCaller_3031"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.ConnectionPolicy_4010"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.CompOutputPort_4011"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.CompInputPort_4012"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.PeersConnection_4013"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.CompOperation_4014"/>
+         <elementType ref="org.hyperflex.componentmodels.orocos.diagram.CompOperationCaller_4015"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>
 	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
       <?gmfgen generated="true"?>
        <propertyTester
-           id="it.unibg.robotics.componentmodels.orocos.diagram.URIEditorInputPropertyTester"
+           id="org.hyperflex.componentmodels.orocos.diagram.URIEditorInputPropertyTester"
            type="org.eclipse.emf.common.ui.URIEditorInput"
-           namespace="it.unibg.robotics.componentmodels.orocos.diagram"
+           namespace="org.hyperflex.componentmodels.orocos.diagram"
            properties="isURIEditorInput"
-           class="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelUriEditorInputTester">
+           class="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelUriEditorInputTester">
        </propertyTester>
    </extension>
 
@@ -585,14 +585,14 @@ http://www.eclipse.org/legal/epl-v10.html
       <?gmfgen generated="true"?>
       <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
          <includes>
-            <contentExtension pattern="it.unibg.robotics.componentmodels.orocos.diagram.resourceContent"/>
-			<contentExtension pattern="it.unibg.robotics.componentmodels.orocos.diagram.domainResourceContent"/>
-            <contentExtension pattern="it.unibg.robotics.componentmodels.orocos.diagram.navigatorLinkHelper"/>
+            <contentExtension pattern="org.hyperflex.componentmodels.orocos.diagram.resourceContent"/>
+			<contentExtension pattern="org.hyperflex.componentmodels.orocos.diagram.domainResourceContent"/>
+            <contentExtension pattern="org.hyperflex.componentmodels.orocos.diagram.navigatorLinkHelper"/>
          </includes>
       </viewerContentBinding>
       <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
          <includes>
-            <actionExtension pattern="it.unibg.robotics.componentmodels.orocos.diagram.navigatorActionProvider"/>
+            <actionExtension pattern="org.hyperflex.componentmodels.orocos.diagram.navigatorActionProvider"/>
          </includes>
       </viewerActionBinding>
    </extension>
@@ -600,11 +600,11 @@ http://www.eclipse.org/legal/epl-v10.html
    <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
       <?gmfgen generated="true"?>
       <navigatorContent
-            id="it.unibg.robotics.componentmodels.orocos.diagram.resourceContent" 
+            id="org.hyperflex.componentmodels.orocos.diagram.resourceContent" 
             name="%navigatorContentName" 
             priority="normal" 
-            contentProvider="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelNavigatorContentProvider" 
-            labelProvider="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelNavigatorLabelProvider"
+            contentProvider="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelNavigatorContentProvider" 
+            labelProvider="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelNavigatorLabelProvider"
             icon="icons/obj16/orocoscomponentmodelDiagramFile.gif"
             activeByDefault="true">
          <triggerPoints>
@@ -613,34 +613,34 @@ http://www.eclipse.org/legal/epl-v10.html
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
         	      <test property="org.eclipse.core.resources.extension" value="orocoscomponentmodel_diagram"/>
                </and>
-               <instanceof value="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelAbstractNavigatorItem"/>
+               <instanceof value="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelAbstractNavigatorItem"/>
             </or>
          </triggerPoints>
          <possibleChildren>
             <or>
-         	   <instanceof value="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelAbstractNavigatorItem"/>
+         	   <instanceof value="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelAbstractNavigatorItem"/>
             </or>
          </possibleChildren>
          <commonSorter 
-               id="it.unibg.robotics.componentmodels.orocos.diagram.navigatorSorter" 
-               class="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelNavigatorSorter">
+               id="org.hyperflex.componentmodels.orocos.diagram.navigatorSorter" 
+               class="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelNavigatorSorter">
             <parentExpression>
                <or>
 	              <and>
     	             <instanceof value="org.eclipse.core.resources.IFile"/>
         	         <test property="org.eclipse.core.resources.extension" value="orocoscomponentmodel_diagram"/>
                   </and>
-                  <instanceof value="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelAbstractNavigatorItem"/>
+                  <instanceof value="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelAbstractNavigatorItem"/>
                </or>
             </parentExpression>
          </commonSorter>
       </navigatorContent>
       <navigatorContent
-            id="it.unibg.robotics.componentmodels.orocos.diagram.domainResourceContent" 
+            id="org.hyperflex.componentmodels.orocos.diagram.domainResourceContent" 
             name="%domainNavigatorContentName" 
             priority="normal" 
-            contentProvider="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelDomainNavigatorContentProvider" 
-            labelProvider="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelDomainNavigatorLabelProvider"
+            contentProvider="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelDomainNavigatorContentProvider" 
+            labelProvider="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelDomainNavigatorLabelProvider"
             icon="icons/obj16/orocoscomponentmodelDiagramFile.gif"
             activeByDefault="true">
          <triggerPoints>
@@ -649,19 +649,19 @@ http://www.eclipse.org/legal/epl-v10.html
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
         	      <test property="org.eclipse.core.resources.extension" value="orocoscomponentmodel"/>
                </and>
-               <instanceof value="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelDomainNavigatorItem"/>
+               <instanceof value="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelDomainNavigatorItem"/>
             </or>
          </triggerPoints>
          <possibleChildren>
-            <instanceof value="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelDomainNavigatorItem"/>
+            <instanceof value="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelDomainNavigatorItem"/>
          </possibleChildren>
       </navigatorContent>
       <actionProvider
-            id="it.unibg.robotics.componentmodels.orocos.diagram.navigatorActionProvider"
-            class="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelNavigatorActionProvider">
+            id="org.hyperflex.componentmodels.orocos.diagram.navigatorActionProvider"
+            class="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelNavigatorActionProvider">
          <enablement>
             <or>
-               <instanceof value="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelAbstractNavigatorItem"/>
+               <instanceof value="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelAbstractNavigatorItem"/>
             </or>
          </enablement>
       </actionProvider>
@@ -670,16 +670,16 @@ http://www.eclipse.org/legal/epl-v10.html
 	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
       <?gmfgen generated="true"?>
       <linkHelper
-            id="it.unibg.robotics.componentmodels.orocos.diagram.navigatorLinkHelper"
-            class="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelNavigatorLinkHelper">
+            id="org.hyperflex.componentmodels.orocos.diagram.navigatorLinkHelper"
+            class="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelNavigatorLinkHelper">
          <editorInputEnablement>
             <and>
                <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
-               <test property="it.unibg.robotics.componentmodels.orocos.diagram.isURIEditorInput"/>
+               <test property="org.hyperflex.componentmodels.orocos.diagram.isURIEditorInput"/>
             </and>
          </editorInputEnablement>
          <selectionEnablement>
-            <instanceof value="it.unibg.robotics.orocoscomponentmodel.diagram.navigator.OrocosComponentModelAbstractNavigatorItem"/>
+            <instanceof value="org.hyperflex.orocoscomponentmodel.diagram.navigator.OrocosComponentModelAbstractNavigatorItem"/>
          </selectionEnablement>
       </linkHelper>
    </extension>
@@ -687,17 +687,17 @@ http://www.eclipse.org/legal/epl-v10.html
       <?gmfgen generated="true"?>
       <command
          categoryId="org.eclipse.ui.category.edit"
-         defaultHandler="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramUpdateCommand"
+         defaultHandler="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramUpdateCommand"
          description="%update.diagram.description"
-         id="it.unibg.robotics.orocoscomponentmodel.diagram.updateDiagram"
+         id="org.hyperflex.orocoscomponentmodel.diagram.updateDiagram"
          name="%update.diagram.name"/>
    </extension>
    
    <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
       <?gmfgen generated="true"?>
       <key 
-         commandId="it.unibg.robotics.orocoscomponentmodel.diagram.updateDiagram"
-         contextId="it.unibg.robotics.orocoscomponentmodel.diagram.ui.diagramContext"
+         commandId="org.hyperflex.orocoscomponentmodel.diagram.updateDiagram"
+         contextId="org.hyperflex.orocoscomponentmodel.diagram.ui.diagramContext"
          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
          sequence="F5"/>
    </extension>
@@ -709,12 +709,12 @@ http://www.eclipse.org/legal/epl-v10.html
       <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
       </menuContribution -->
       <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
-         <command commandId="it.unibg.robotics.componentmodels.orocos.diagram.LoadResourceAction">
+         <command commandId="org.hyperflex.componentmodels.orocos.diagram.LoadResourceAction">
             <visibleWhen>
                <and>
-                  <with variable="activePartId"><equals value="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID"/></with>
+                  <with variable="activePartId"><equals value="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID"/></with>
                   <with variable="selection"><iterate ifEmpty="false"> 
-                     <instanceof value="it.unibg.robotics.orocoscomponentmodel.diagram.edit.parts.SystemEditPart"/>
+                     <instanceof value="org.hyperflex.orocoscomponentmodel.diagram.edit.parts.SystemEditPart"/>
                   </iterate></with>
                </and>
             </visibleWhen>
@@ -724,11 +724,11 @@ http://www.eclipse.org/legal/epl-v10.html
 
    <extension point="org.eclipse.ui.commands" id="menu-commands">
       <?gmfgen generated="true"?>
-      <category id="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
-      <command id="it.unibg.robotics.componentmodels.orocos.diagram.LoadResourceAction"
+      <category id="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="org.hyperflex.componentmodels.orocos.diagram.LoadResourceAction"
          name="Load Resource"
-         categoryId="it.unibg.robotics.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID"
-         defaultHandler="it.unibg.robotics.orocoscomponentmodel.diagram.part.LoadResourceAction"/>
+         categoryId="org.hyperflex.orocoscomponentmodel.diagram.part.OrocosComponentModelDiagramEditorID"
+         defaultHandler="org.hyperflex.orocoscomponentmodel.diagram.part.LoadResourceAction"/>
    </extension>
 
    <extension point="org.eclipse.ui.handlers" id="menu-handlers">

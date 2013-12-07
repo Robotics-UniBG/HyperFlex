@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel;
+package org.hyperflex.compositionmodel;
 
 
 /**
@@ -35,11 +35,11 @@ package it.unibg.robotics.compositionmodel;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.SystemProvidedInterf#getExposed <em>Exposed</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.SystemProvidedInterf#getExposed <em>Exposed</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getSystemProvidedInterf()
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage#getSystemProvidedInterf()
  * @model
  * @generated
  */
@@ -54,14 +54,14 @@ public interface SystemProvidedInterf extends ProvidedInterface {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exposed</em>' reference.
 	 * @see #setExposed(ProvidedInterface)
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getSystemProvidedInterf_Exposed()
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getSystemProvidedInterf_Exposed()
 	 * @model required="true"
 	 * @generated
 	 */
 	ProvidedInterface getExposed();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.compositionmodel.SystemProvidedInterf#getExposed <em>Exposed</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.compositionmodel.SystemProvidedInterf#getExposed <em>Exposed</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Exposed</em>' reference.

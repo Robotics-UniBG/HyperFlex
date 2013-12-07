@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -35,24 +35,24 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getMsgProducers <em>Msg Producers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getMsgConsumers <em>Msg Consumers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getParameters <em>Parameters</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getSrvProducers <em>Srv Producers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getSrvConsumers <em>Srv Consumers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getPackageName <em>Package Name</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.Node#getType <em>Type</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Node#getMsgProducers <em>Msg Producers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Node#getMsgConsumers <em>Msg Consumers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Node#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Node#getSrvProducers <em>Srv Producers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Node#getSrvConsumers <em>Srv Consumers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Node#getPackageName <em>Package Name</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Node#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNode()
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNode()
  * @model
  * @generated
  */
 public interface Node extends AbstractComponent {
 	/**
 	 * Returns the value of the '<em><b>Msg Producers</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.NodeMsgProducer}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.NodeMsgProducer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Msg Producers</em>' containment reference list isn't clear,
@@ -60,7 +60,7 @@ public interface Node extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Msg Producers</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNode_MsgProducers()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNode_MsgProducers()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -68,7 +68,7 @@ public interface Node extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Msg Consumers</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.NodeMsgConsumer}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.NodeMsgConsumer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Msg Consumers</em>' containment reference list isn't clear,
@@ -76,7 +76,7 @@ public interface Node extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Msg Consumers</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNode_MsgConsumers()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNode_MsgConsumers()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -84,7 +84,7 @@ public interface Node extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.NodeProperty}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.NodeProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parameters</em>' containment reference list isn't clear,
@@ -92,7 +92,7 @@ public interface Node extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameters</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNode_Parameters()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNode_Parameters()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -100,7 +100,7 @@ public interface Node extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Srv Producers</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.NodeSrvProducer}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.NodeSrvProducer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Srv Producers</em>' containment reference list isn't clear,
@@ -108,7 +108,7 @@ public interface Node extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Srv Producers</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNode_SrvProducers()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNode_SrvProducers()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -116,7 +116,7 @@ public interface Node extends AbstractComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Srv Consumers</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.roscomponentmodel.NodeSrvConsumer}.
+	 * The list contents are of type {@link org.hyperflex.roscomponentmodel.NodeSrvConsumer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Srv Consumers</em>' containment reference list isn't clear,
@@ -124,7 +124,7 @@ public interface Node extends AbstractComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Srv Consumers</em>' containment reference list.
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNode_SrvConsumers()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNode_SrvConsumers()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -140,14 +140,14 @@ public interface Node extends AbstractComponent {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Package Name</em>' attribute.
 	 * @see #setPackageName(String)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNode_PackageName()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNode_PackageName()
 	 * @model
 	 * @generated
 	 */
 	String getPackageName();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.Node#getPackageName <em>Package Name</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.Node#getPackageName <em>Package Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Package Name</em>' attribute.
@@ -166,14 +166,14 @@ public interface Node extends AbstractComponent {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNode_Type()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNode_Type()
 	 * @model
 	 * @generated
 	 */
 	String getType();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.Node#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.Node#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.

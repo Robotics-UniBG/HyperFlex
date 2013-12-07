@@ -24,18 +24,18 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel.util;
+package org.hyperflex.roscompositionmodel.util;
 
-import it.unibg.robotics.compositionmodel.CompProvidedInterf;
-import it.unibg.robotics.compositionmodel.CompRequiredInterf;
-import it.unibg.robotics.compositionmodel.Composite;
-import it.unibg.robotics.compositionmodel.Connection;
-import it.unibg.robotics.compositionmodel.Interface;
-import it.unibg.robotics.compositionmodel.Property;
-import it.unibg.robotics.compositionmodel.ProvidedInterface;
-import it.unibg.robotics.compositionmodel.RequiredInterface;
+import org.hyperflex.compositionmodel.CompProvidedInterf;
+import org.hyperflex.compositionmodel.CompRequiredInterf;
+import org.hyperflex.compositionmodel.Composite;
+import org.hyperflex.compositionmodel.Connection;
+import org.hyperflex.compositionmodel.Interface;
+import org.hyperflex.compositionmodel.Property;
+import org.hyperflex.compositionmodel.ProvidedInterface;
+import org.hyperflex.compositionmodel.RequiredInterface;
 
-import it.unibg.robotics.roscompositionmodel.*;
+import org.hyperflex.roscompositionmodel.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -52,7 +52,7 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage
+ * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage
  * @generated
  */
 public class roscompositionmodelSwitch<T> extends Switch<T> {

@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.presentation;
+package org.hyperflex.roscomponentmodel.presentation;
 
 import org.eclipse.emf.common.EMFPlugin;
 

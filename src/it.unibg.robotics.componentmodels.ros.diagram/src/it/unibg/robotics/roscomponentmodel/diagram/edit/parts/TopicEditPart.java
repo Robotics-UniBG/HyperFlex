@@ -1,8 +1,8 @@
-package it.unibg.robotics.roscomponentmodel.diagram.edit.parts;
+package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.TopicItemSemanticEditPolicy;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.TopicItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

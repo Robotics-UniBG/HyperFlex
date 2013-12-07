@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.presentation;
+package org.hyperflex.compositionmodel.presentation;
 
 
 import java.io.IOException;
@@ -178,7 +178,7 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import it.unibg.robotics.compositionmodel.provider.compositionmodelItemProviderAdapterFactory;
+import org.hyperflex.compositionmodel.provider.compositionmodelItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
@@ -642,7 +642,7 @@ public class compositionmodelEditor
 			BasicDiagnostic diagnostic =
 				new BasicDiagnostic
 					(Diagnostic.OK,
-					 "it.unibg.robotics.compositionmodels.model.editor",
+					 "org.hyperflex.compositionmodels.model.editor",
 					 0,
 					 null,
 					 new Object [] { editingDomain.getResourceSet() });
@@ -1005,7 +1005,7 @@ public class compositionmodelEditor
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "it.unibg.robotics.compositionmodels.model.editor",
+					 "org.hyperflex.compositionmodels.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object [] { exception == null ? (Object)resource : exception });
@@ -1016,7 +1016,7 @@ public class compositionmodelEditor
 			return
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "it.unibg.robotics.compositionmodels.model.editor",
+					 "org.hyperflex.compositionmodels.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object[] { exception });

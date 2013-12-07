@@ -1,12 +1,12 @@
-package it.unibg.robotics.roscomponentmodel.diagram.providers;
+package org.hyperflex.roscomponentmodel.diagram.providers;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeName2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.parsers.MessageFormatParser;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeName2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.parsers.MessageFormatParser;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EAttribute;
@@ -37,7 +37,7 @@ public class RosComponentModelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getCompositeName_5022Parser() {
 		if (compositeName_5022Parser == null) {
-			EAttribute[] features = new EAttribute[] { it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			compositeName_5022Parser = parser;
@@ -55,7 +55,7 @@ public class RosComponentModelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodeName_5019Parser() {
 		if (nodeName_5019Parser == null) {
-			EAttribute[] features = new EAttribute[] { it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			nodeName_5019Parser = parser;
@@ -73,7 +73,7 @@ public class RosComponentModelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getNodePropertyName_5018Parser() {
 		if (nodePropertyName_5018Parser == null) {
-			EAttribute[] features = new EAttribute[] { it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getProperty_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			nodePropertyName_5018Parser = parser;
@@ -91,7 +91,7 @@ public class RosComponentModelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getCompositeName_5020Parser() {
 		if (compositeName_5020Parser == null) {
-			EAttribute[] features = new EAttribute[] { it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getAbstractComponent_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			compositeName_5020Parser = parser;
@@ -109,7 +109,7 @@ public class RosComponentModelParserProvider extends AbstractProvider implements
 	 */
 	private IParser getTopicName_5021Parser() {
 		if (topicName_5021Parser == null) {
-			EAttribute[] features = new EAttribute[] { it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			EAttribute[] features = new EAttribute[] { org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getTopic_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			topicName_5021Parser = parser;

@@ -1,6 +1,6 @@
-package it.unibg.robotics.roscomponentmodel.diagram.part;
+package org.hyperflex.roscomponentmodel.diagram.part;
 
-import it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem;
+import org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
@@ -52,12 +52,12 @@ public class RosComponentModelDiagramEditor extends DiagramDocumentEditor
 	/**
 	 * @generated
 	 */
-	public static final String ID = "it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorID"; //$NON-NLS-1$
+	public static final String ID = "org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorID"; //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final String CONTEXT_ID = "it.unibg.robotics.roscomponentmodel.diagram.ui.diagramContext"; //$NON-NLS-1$
+	public static final String CONTEXT_ID = "org.hyperflex.roscomponentmodel.diagram.ui.diagramContext"; //$NON-NLS-1$
 
 	/**
 	 * @generated

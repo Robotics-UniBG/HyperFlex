@@ -1,6 +1,6 @@
-package it.unibg.robotics.compositionmodel.diagram.providers;
+package org.hyperflex.compositionmodel.diagram.providers;
 
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
 
 /**
  * @generated

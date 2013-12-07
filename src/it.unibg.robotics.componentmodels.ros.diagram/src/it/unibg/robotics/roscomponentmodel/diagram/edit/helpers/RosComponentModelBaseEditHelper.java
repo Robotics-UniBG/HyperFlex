@@ -1,4 +1,4 @@
-package it.unibg.robotics.roscomponentmodel.diagram.edit.helpers;
+package org.hyperflex.roscomponentmodel.diagram.edit.helpers;
 
 import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 

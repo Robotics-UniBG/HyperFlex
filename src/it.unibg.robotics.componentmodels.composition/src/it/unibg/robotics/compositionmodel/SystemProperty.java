@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel;
+package org.hyperflex.compositionmodel;
 
 
 /**
@@ -35,11 +35,11 @@ package it.unibg.robotics.compositionmodel;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.SystemProperty#getExposed <em>Exposed</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.SystemProperty#getExposed <em>Exposed</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getSystemProperty()
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage#getSystemProperty()
  * @model
  * @generated
  */
@@ -54,14 +54,14 @@ public interface SystemProperty extends Property {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exposed</em>' reference.
 	 * @see #setExposed(Property)
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getSystemProperty_Exposed()
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getSystemProperty_Exposed()
 	 * @model required="true"
 	 * @generated
 	 */
 	Property getExposed();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.compositionmodel.SystemProperty#getExposed <em>Exposed</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.compositionmodel.SystemProperty#getExposed <em>Exposed</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Exposed</em>' reference.

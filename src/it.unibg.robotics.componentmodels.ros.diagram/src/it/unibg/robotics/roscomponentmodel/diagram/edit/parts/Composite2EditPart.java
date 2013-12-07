@@ -23,11 +23,11 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.diagram.edit.parts;
+package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.Composite2CanonicalEditPolicy;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.Composite2ItemSemanticEditPolicy;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.Composite2CanonicalEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.Composite2ItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.GridData;

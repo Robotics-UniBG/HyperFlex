@@ -23,18 +23,18 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.impl;
+package org.hyperflex.roscomponentmodel.impl;
 
-import it.unibg.robotics.roscomponentmodel.AbstractComponent;
-import it.unibg.robotics.roscomponentmodel.Composite;
-import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
-import it.unibg.robotics.roscomponentmodel.CompositeProperty;
-import it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer;
-import it.unibg.robotics.roscomponentmodel.CompositeSrvProducer;
-import it.unibg.robotics.roscomponentmodel.Topic;
-import it.unibg.robotics.roscomponentmodel.Wire;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
+import org.hyperflex.roscomponentmodel.AbstractComponent;
+import org.hyperflex.roscomponentmodel.Composite;
+import org.hyperflex.roscomponentmodel.CompositeMsgConsumer;
+import org.hyperflex.roscomponentmodel.CompositeMsgProducer;
+import org.hyperflex.roscomponentmodel.CompositeProperty;
+import org.hyperflex.roscomponentmodel.CompositeSrvConsumer;
+import org.hyperflex.roscomponentmodel.CompositeSrvProducer;
+import org.hyperflex.roscomponentmodel.Topic;
+import org.hyperflex.roscomponentmodel.Wire;
+import org.hyperflex.roscomponentmodel.roscomponentmodelPackage;
 
 import java.util.Collection;
 
@@ -52,14 +52,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.CompositeImpl#getComponents <em>Components</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.CompositeImpl#getMsgProducers <em>Msg Producers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.CompositeImpl#getMsgConsumers <em>Msg Consumers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.CompositeImpl#getTopics <em>Topics</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.CompositeImpl#getSrvProducers <em>Srv Producers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.CompositeImpl#getSrvConsumers <em>Srv Consumers</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.CompositeImpl#getWires <em>Wires</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.CompositeImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.CompositeImpl#getComponents <em>Components</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.CompositeImpl#getMsgProducers <em>Msg Producers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.CompositeImpl#getMsgConsumers <em>Msg Consumers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.CompositeImpl#getTopics <em>Topics</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.CompositeImpl#getSrvProducers <em>Srv Producers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.CompositeImpl#getSrvConsumers <em>Srv Consumers</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.CompositeImpl#getWires <em>Wires</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.CompositeImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *

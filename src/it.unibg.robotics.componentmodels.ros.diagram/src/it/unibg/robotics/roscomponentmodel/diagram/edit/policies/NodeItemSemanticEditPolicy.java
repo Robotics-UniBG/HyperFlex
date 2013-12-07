@@ -1,15 +1,15 @@
-package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
+package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.commands.NodeMsgConsumerCreateCommand;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.commands.NodeMsgProducerCreateCommand;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.NodeMsgConsumerCreateCommand;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.NodeMsgProducerCreateCommand;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 import java.util.Iterator;
 

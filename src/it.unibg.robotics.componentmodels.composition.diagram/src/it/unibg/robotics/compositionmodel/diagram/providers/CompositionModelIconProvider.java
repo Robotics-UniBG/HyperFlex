@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.providers;
+package org.hyperflex.compositionmodel.diagram.providers;
 
 import org.eclipse.gmf.runtime.common.ui.services.icon.IIconProvider;
 import org.eclipse.gmf.tooling.runtime.providers.DefaultElementTypeIconProvider;

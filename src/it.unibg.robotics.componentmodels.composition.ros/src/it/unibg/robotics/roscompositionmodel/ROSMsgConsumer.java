@@ -24,11 +24,11 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel;
+package org.hyperflex.roscompositionmodel;
 
-import it.unibg.robotics.compositionmodel.CompRequiredInterf;
+import org.hyperflex.compositionmodel.CompRequiredInterf;
 
-import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
+import org.hyperflex.roscomponentmodel.CompositeMsgConsumer;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,11 +38,11 @@ import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscompositionmodel.ROSMsgConsumer#getMsgConsumer <em>Msg Consumer</em>}</li>
+ *   <li>{@link org.hyperflex.roscompositionmodel.ROSMsgConsumer#getMsgConsumer <em>Msg Consumer</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getROSMsgConsumer()
+ * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getROSMsgConsumer()
  * @model
  * @generated
  */
@@ -57,14 +57,14 @@ public interface ROSMsgConsumer extends CompRequiredInterf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Msg Consumer</em>' reference.
 	 * @see #setMsgConsumer(CompositeMsgConsumer)
-	 * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getROSMsgConsumer_MsgConsumer()
+	 * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getROSMsgConsumer_MsgConsumer()
 	 * @model required="true"
 	 * @generated
 	 */
 	CompositeMsgConsumer getMsgConsumer();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscompositionmodel.ROSMsgConsumer#getMsgConsumer <em>Msg Consumer</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.roscompositionmodel.ROSMsgConsumer#getMsgConsumer <em>Msg Consumer</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Msg Consumer</em>' reference.

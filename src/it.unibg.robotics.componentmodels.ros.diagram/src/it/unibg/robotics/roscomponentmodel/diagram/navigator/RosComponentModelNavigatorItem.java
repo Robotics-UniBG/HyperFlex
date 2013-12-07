@@ -1,4 +1,4 @@
-package it.unibg.robotics.roscomponentmodel.diagram.navigator;
+package org.hyperflex.roscomponentmodel.diagram.navigator;
 
 import org.eclipse.core.runtime.IAdapterFactory;
 import org.eclipse.core.runtime.Platform;
@@ -22,9 +22,9 @@ public class RosComponentModelNavigatorItem extends
 
 					public Object getAdapter(Object adaptableObject,
 							Class adapterType) {
-						if (adaptableObject instanceof it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem
+						if (adaptableObject instanceof org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem
 								&& (adapterType == View.class || adapterType == EObject.class)) {
-							return ((it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem) adaptableObject)
+							return ((org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem) adaptableObject)
 									.getView();
 						}
 						return null;
@@ -34,7 +34,7 @@ public class RosComponentModelNavigatorItem extends
 						return supportedTypes;
 					}
 				},
-				it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem.class);
+				org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem.class);
 	}
 
 	/**
@@ -75,11 +75,11 @@ public class RosComponentModelNavigatorItem extends
 	 * @generated
 	 */
 	public boolean equals(Object obj) {
-		if (obj instanceof it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem) {
+		if (obj instanceof org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem) {
 			return EcoreUtil
 					.getURI(getView())
 					.equals(EcoreUtil
-							.getURI(((it.unibg.robotics.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem) obj)
+							.getURI(((org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem) obj)
 									.getView()));
 		}
 		return super.equals(obj);

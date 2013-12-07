@@ -24,11 +24,11 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel;
+package org.hyperflex.roscompositionmodel;
 
-import it.unibg.robotics.compositionmodel.CompRequiredInterf;
+import org.hyperflex.compositionmodel.CompRequiredInterf;
 
-import it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer;
+import org.hyperflex.roscomponentmodel.CompositeSrvConsumer;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,11 +38,11 @@ import it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscompositionmodel.ROSSrvConsumer#getSrvConsumer <em>Srv Consumer</em>}</li>
+ *   <li>{@link org.hyperflex.roscompositionmodel.ROSSrvConsumer#getSrvConsumer <em>Srv Consumer</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getROSSrvConsumer()
+ * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getROSSrvConsumer()
  * @model
  * @generated
  */
@@ -57,14 +57,14 @@ public interface ROSSrvConsumer extends CompRequiredInterf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Srv Consumer</em>' reference.
 	 * @see #setSrvConsumer(CompositeSrvConsumer)
-	 * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getROSSrvConsumer_SrvConsumer()
+	 * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getROSSrvConsumer_SrvConsumer()
 	 * @model required="true"
 	 * @generated
 	 */
 	CompositeSrvConsumer getSrvConsumer();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscompositionmodel.ROSSrvConsumer#getSrvConsumer <em>Srv Consumer</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.roscompositionmodel.ROSSrvConsumer#getSrvConsumer <em>Srv Consumer</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Srv Consumer</em>' reference.

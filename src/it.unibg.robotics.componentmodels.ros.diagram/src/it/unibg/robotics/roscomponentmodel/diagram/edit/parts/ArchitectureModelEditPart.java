@@ -1,8 +1,8 @@
-package it.unibg.robotics.roscomponentmodel.diagram.edit.parts;
+package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.ArchitectureModelCanonicalEditPolicy;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.ArchitectureModelItemSemanticEditPolicy;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.ArchitectureModelCanonicalEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.ArchitectureModelItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;

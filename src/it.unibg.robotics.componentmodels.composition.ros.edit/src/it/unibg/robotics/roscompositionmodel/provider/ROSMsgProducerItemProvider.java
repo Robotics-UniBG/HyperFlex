@@ -24,13 +24,13 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel.provider;
+package org.hyperflex.roscompositionmodel.provider;
 
 
-import it.unibg.robotics.compositionmodel.provider.CompProvidedInterfItemProvider;
+import org.hyperflex.compositionmodel.provider.CompProvidedInterfItemProvider;
 
-import it.unibg.robotics.roscompositionmodel.ROSMsgProducer;
-import it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage;
+import org.hyperflex.roscompositionmodel.ROSMsgProducer;
+import org.hyperflex.roscompositionmodel.roscompositionmodelPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -49,7 +49,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 /**
- * This is the item provider adapter for a {@link it.unibg.robotics.roscompositionmodel.ROSMsgProducer} object.
+ * This is the item provider adapter for a {@link org.hyperflex.roscompositionmodel.ROSMsgProducer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

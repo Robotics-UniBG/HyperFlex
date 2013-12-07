@@ -1,25 +1,25 @@
-package it.unibg.robotics.roscomponentmodel.diagram.part;
+package org.hyperflex.roscomponentmodel.diagram.part;
 
-import it.unibg.robotics.roscomponentmodel.System;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeName2EditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicEditPart;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
+import org.hyperflex.roscomponentmodel.System;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeName2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.EAnnotation;
@@ -40,7 +40,7 @@ public class RosComponentModelVisualIDRegistry {
 	/**
 	 * @generated
 	 */
-	private static final String DEBUG_KEY = "it.unibg.robotics.componentmodels.ros.diagram/debug/visualID"; //$NON-NLS-1$
+	private static final String DEBUG_KEY = "org.hyperflex.componentmodels.ros.diagram/debug/visualID"; //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -53,7 +53,7 @@ public class RosComponentModelVisualIDRegistry {
 				return -1;
 			}
 		}
-		return it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
+		return org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
 				.getVisualID(view.getType());
 	}
 
@@ -103,7 +103,7 @@ public class RosComponentModelVisualIDRegistry {
 		if (domainElement == null) {
 			return -1;
 		}
-		if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+		if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 				.getSystem().isSuperTypeOf(domainElement.eClass())
 				&& isDiagram((System) domainElement)) {
 			return ArchitectureModelEditPart.VISUAL_ID;
@@ -118,14 +118,14 @@ public class RosComponentModelVisualIDRegistry {
 		if (domainElement == null) {
 			return -1;
 		}
-		String containerModelID = it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
+		String containerModelID = org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
 				.getModelID(containerView);
 		if (!ArchitectureModelEditPart.MODEL_ID.equals(containerModelID)) {
 			return -1;
 		}
 		int containerVisualID;
 		if (ArchitectureModelEditPart.MODEL_ID.equals(containerModelID)) {
-			containerVisualID = it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
+			containerVisualID = org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
 					.getVisualID(containerView);
 		} else {
 			if (containerView instanceof Diagram) {
@@ -136,61 +136,61 @@ public class RosComponentModelVisualIDRegistry {
 		}
 		switch (containerVisualID) {
 		case ArchitectureModelEditPart.VISUAL_ID:
-			if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getComposite().isSuperTypeOf(domainElement.eClass())) {
 				return CompositeEditPart.VISUAL_ID;
 			}
 			break;
 		case CompositeEditPart.VISUAL_ID:
-			if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getCompositeMsgProducer().isSuperTypeOf(
 							domainElement.eClass())) {
 				return CompositeMsgProducer2EditPart.VISUAL_ID;
 			}
-			if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getCompositeMsgConsumer().isSuperTypeOf(
 							domainElement.eClass())) {
 				return CompositeMsgConsumer2EditPart.VISUAL_ID;
 			}
 			break;
 		case NodeEditPart.VISUAL_ID:
-			if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getNodeMsgProducer().isSuperTypeOf(domainElement.eClass())) {
 				return NodeMsgProducerEditPart.VISUAL_ID;
 			}
-			if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getNodeMsgConsumer().isSuperTypeOf(domainElement.eClass())) {
 				return NodeMsgConsumerEditPart.VISUAL_ID;
 			}
 			break;
 		case Composite2EditPart.VISUAL_ID:
-			if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getCompositeMsgProducer().isSuperTypeOf(
 							domainElement.eClass())) {
 				return CompositeMsgProducerEditPart.VISUAL_ID;
 			}
-			if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getCompositeMsgConsumer().isSuperTypeOf(
 							domainElement.eClass())) {
 				return CompositeMsgConsumerEditPart.VISUAL_ID;
 			}
 			break;
 		case CompositeCompositeContainerCompartmentEditPart.VISUAL_ID:
-			if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getNode().isSuperTypeOf(domainElement.eClass())) {
 				return NodeEditPart.VISUAL_ID;
 			}
-			if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getComposite().isSuperTypeOf(domainElement.eClass())) {
 				return Composite2EditPart.VISUAL_ID;
 			}
-			if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getTopic().isSuperTypeOf(domainElement.eClass())) {
 				return TopicEditPart.VISUAL_ID;
 			}
 			break;
 		case NodePropertiesCompartmentEditPart.VISUAL_ID:
-			if (it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getNodeProperty().isSuperTypeOf(domainElement.eClass())) {
 				return NodePropertyEditPart.VISUAL_ID;
 			}
@@ -203,14 +203,14 @@ public class RosComponentModelVisualIDRegistry {
 	 * @generated
 	 */
 	public static boolean canCreateNode(View containerView, int nodeVisualID) {
-		String containerModelID = it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
+		String containerModelID = org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
 				.getModelID(containerView);
 		if (!ArchitectureModelEditPart.MODEL_ID.equals(containerModelID)) {
 			return false;
 		}
 		int containerVisualID;
 		if (ArchitectureModelEditPart.MODEL_ID.equals(containerModelID)) {
-			containerVisualID = it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
+			containerVisualID = org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
 					.getVisualID(containerView);
 		} else {
 			if (containerView instanceof Diagram) {
@@ -372,7 +372,7 @@ public class RosComponentModelVisualIDRegistry {
 		 */
 		@Override
 		public int getVisualID(View view) {
-			return it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
+			return org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
 					.getVisualID(view);
 		}
 
@@ -381,7 +381,7 @@ public class RosComponentModelVisualIDRegistry {
 		 */
 		@Override
 		public String getModelID(View view) {
-			return it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
+			return org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
 					.getModelID(view);
 		}
 
@@ -390,7 +390,7 @@ public class RosComponentModelVisualIDRegistry {
 		 */
 		@Override
 		public int getNodeVisualID(View containerView, EObject domainElement) {
-			return it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
+			return org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
 					.getNodeVisualID(containerView, domainElement);
 		}
 
@@ -400,7 +400,7 @@ public class RosComponentModelVisualIDRegistry {
 		@Override
 		public boolean checkNodeVisualID(View containerView,
 				EObject domainElement, int candidate) {
-			return it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
+			return org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
 					.checkNodeVisualID(containerView, domainElement, candidate);
 		}
 
@@ -409,7 +409,7 @@ public class RosComponentModelVisualIDRegistry {
 		 */
 		@Override
 		public boolean isCompartmentVisualID(int visualID) {
-			return it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
+			return org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
 					.isCompartmentVisualID(visualID);
 		}
 
@@ -418,7 +418,7 @@ public class RosComponentModelVisualIDRegistry {
 		 */
 		@Override
 		public boolean isSemanticLeafVisualID(int visualID) {
-			return it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
+			return org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry
 					.isSemanticLeafVisualID(visualID);
 		}
 	};

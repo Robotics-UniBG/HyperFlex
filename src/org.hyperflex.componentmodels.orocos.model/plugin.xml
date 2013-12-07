@@ -2,7 +2,7 @@
 <?eclipse version="3.0"?>
 
 <!--
- HyperFlex Plugins (VARP)
+ HyperFlex Plugins
  
  Copyright (c) 2013
  All rights reserved.
@@ -32,8 +32,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated orocosComponentModel -->
       <package
-            uri="http://robotics.unibg.it/componentmodels.orocos"
-            class="it.unibg.robotics.orocoscomponentmodel.orocoscomponentmodelPackage"
+            uri="http://www.hyperflex.org/componentmodels.orocos"
+            class="org.hyperflex.orocoscomponentmodel.orocoscomponentmodelPackage"
             genModel="models/orocosComponentModel.genmodel"/>
    </extension>
 

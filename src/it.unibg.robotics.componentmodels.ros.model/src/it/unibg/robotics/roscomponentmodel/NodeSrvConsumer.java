@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 
 /**
@@ -34,11 +34,11 @@ package it.unibg.robotics.roscomponentmodel;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.NodeSrvConsumer#getSrvName <em>Srv Name</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.NodeSrvConsumer#getSrvName <em>Srv Name</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNodeSrvConsumer()
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNodeSrvConsumer()
  * @model
  * @generated
  */
@@ -53,14 +53,14 @@ public interface NodeSrvConsumer extends SrvConsumer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Srv Name</em>' attribute.
 	 * @see #setSrvName(String)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNodeSrvConsumer_SrvName()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNodeSrvConsumer_SrvName()
 	 * @model
 	 * @generated
 	 */
 	String getSrvName();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.NodeSrvConsumer#getSrvName <em>Srv Name</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.NodeSrvConsumer#getSrvName <em>Srv Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Srv Name</em>' attribute.

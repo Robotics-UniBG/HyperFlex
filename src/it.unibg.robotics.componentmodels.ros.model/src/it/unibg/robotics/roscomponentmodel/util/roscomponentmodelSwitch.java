@@ -23,30 +23,30 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.util;
+package org.hyperflex.roscomponentmodel.util;
 
-import it.unibg.robotics.roscomponentmodel.AbstractComponent;
-import it.unibg.robotics.roscomponentmodel.Composite;
-import it.unibg.robotics.roscomponentmodel.CompositeMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
-import it.unibg.robotics.roscomponentmodel.CompositeMsgProducer;
-import it.unibg.robotics.roscomponentmodel.CompositeProperty;
-import it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer;
-import it.unibg.robotics.roscomponentmodel.CompositeSrvProducer;
-import it.unibg.robotics.roscomponentmodel.MsgInterface;
-import it.unibg.robotics.roscomponentmodel.Node;
-import it.unibg.robotics.roscomponentmodel.NodeMsgConsumer;
-import it.unibg.robotics.roscomponentmodel.NodeMsgInterface;
-import it.unibg.robotics.roscomponentmodel.NodeMsgProducer;
-import it.unibg.robotics.roscomponentmodel.NodeProperty;
-import it.unibg.robotics.roscomponentmodel.NodeSrvConsumer;
-import it.unibg.robotics.roscomponentmodel.NodeSrvProducer;
-import it.unibg.robotics.roscomponentmodel.Property;
-import it.unibg.robotics.roscomponentmodel.SrvConsumer;
-import it.unibg.robotics.roscomponentmodel.SrvProducer;
-import it.unibg.robotics.roscomponentmodel.Topic;
-import it.unibg.robotics.roscomponentmodel.Wire;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
+import org.hyperflex.roscomponentmodel.AbstractComponent;
+import org.hyperflex.roscomponentmodel.Composite;
+import org.hyperflex.roscomponentmodel.CompositeMsgConsumer;
+import org.hyperflex.roscomponentmodel.CompositeMsgInterface;
+import org.hyperflex.roscomponentmodel.CompositeMsgProducer;
+import org.hyperflex.roscomponentmodel.CompositeProperty;
+import org.hyperflex.roscomponentmodel.CompositeSrvConsumer;
+import org.hyperflex.roscomponentmodel.CompositeSrvProducer;
+import org.hyperflex.roscomponentmodel.MsgInterface;
+import org.hyperflex.roscomponentmodel.Node;
+import org.hyperflex.roscomponentmodel.NodeMsgConsumer;
+import org.hyperflex.roscomponentmodel.NodeMsgInterface;
+import org.hyperflex.roscomponentmodel.NodeMsgProducer;
+import org.hyperflex.roscomponentmodel.NodeProperty;
+import org.hyperflex.roscomponentmodel.NodeSrvConsumer;
+import org.hyperflex.roscomponentmodel.NodeSrvProducer;
+import org.hyperflex.roscomponentmodel.Property;
+import org.hyperflex.roscomponentmodel.SrvConsumer;
+import org.hyperflex.roscomponentmodel.SrvProducer;
+import org.hyperflex.roscomponentmodel.Topic;
+import org.hyperflex.roscomponentmodel.Wire;
+import org.hyperflex.roscomponentmodel.roscomponentmodelPackage;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -62,7 +62,7 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage
  * @generated
  */
 public class roscomponentmodelSwitch<T> extends Switch<T> {
@@ -214,7 +214,7 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case roscomponentmodelPackage.SYSTEM: {
-				it.unibg.robotics.roscomponentmodel.System system = (it.unibg.robotics.roscomponentmodel.System)theEObject;
+				org.hyperflex.roscomponentmodel.System system = (org.hyperflex.roscomponentmodel.System)theEObject;
 				T result = caseSystem(system);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -499,7 +499,7 @@ public class roscomponentmodelSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSystem(it.unibg.robotics.roscomponentmodel.System object) {
+	public T caseSystem(org.hyperflex.roscomponentmodel.System object) {
 		return null;
 	}
 

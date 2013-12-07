@@ -1,6 +1,6 @@
-package it.unibg.robotics.roscomponentmodel.diagram.edit.parts;
+package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.CompositeMsgInterfaceExposedItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.CompositeMsgInterfaceExposedItemSemanticEditPolicy;
 
 import org.eclipse.draw2d.Connection;
 import org.eclipse.draw2d.Graphics;

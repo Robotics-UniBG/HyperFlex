@@ -24,26 +24,26 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.util;
+package org.hyperflex.compositionmodel.util;
 
-import it.unibg.robotics.compositionmodel.ArchitectureModel;
-import it.unibg.robotics.compositionmodel.CompProvidedInterf;
-import it.unibg.robotics.compositionmodel.CompRequiredInterf;
-import it.unibg.robotics.compositionmodel.ComponentProperty;
-import it.unibg.robotics.compositionmodel.Composite;
-import it.unibg.robotics.compositionmodel.Connection;
-import it.unibg.robotics.compositionmodel.Interface;
-import it.unibg.robotics.compositionmodel.Property;
-import it.unibg.robotics.compositionmodel.ProvidedInterface;
-import it.unibg.robotics.compositionmodel.RequiredInterface;
-import it.unibg.robotics.compositionmodel.SystemComposite;
-import it.unibg.robotics.compositionmodel.SystemCompositeProperty;
-import it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf;
-import it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf;
-import it.unibg.robotics.compositionmodel.SystemProperty;
-import it.unibg.robotics.compositionmodel.SystemProvidedInterf;
-import it.unibg.robotics.compositionmodel.SystemRequiredInterf;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.ArchitectureModel;
+import org.hyperflex.compositionmodel.CompProvidedInterf;
+import org.hyperflex.compositionmodel.CompRequiredInterf;
+import org.hyperflex.compositionmodel.ComponentProperty;
+import org.hyperflex.compositionmodel.Composite;
+import org.hyperflex.compositionmodel.Connection;
+import org.hyperflex.compositionmodel.Interface;
+import org.hyperflex.compositionmodel.Property;
+import org.hyperflex.compositionmodel.ProvidedInterface;
+import org.hyperflex.compositionmodel.RequiredInterface;
+import org.hyperflex.compositionmodel.SystemComposite;
+import org.hyperflex.compositionmodel.SystemCompositeProperty;
+import org.hyperflex.compositionmodel.SystemCompositeProvidedInterf;
+import org.hyperflex.compositionmodel.SystemCompositeRequiredInterf;
+import org.hyperflex.compositionmodel.SystemProperty;
+import org.hyperflex.compositionmodel.SystemProvidedInterf;
+import org.hyperflex.compositionmodel.SystemRequiredInterf;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -60,7 +60,7 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage
  * @generated
  */
 public class compositionmodelSwitch<T> extends Switch<T> {
@@ -108,7 +108,7 @@ public class compositionmodelSwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case compositionmodelPackage.SYSTEM: {
-				it.unibg.robotics.compositionmodel.System system = (it.unibg.robotics.compositionmodel.System)theEObject;
+				org.hyperflex.compositionmodel.System system = (org.hyperflex.compositionmodel.System)theEObject;
 				T result = caseSystem(system);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -251,7 +251,7 @@ public class compositionmodelSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSystem(it.unibg.robotics.compositionmodel.System object) {
+	public T caseSystem(org.hyperflex.compositionmodel.System object) {
 		return null;
 	}
 

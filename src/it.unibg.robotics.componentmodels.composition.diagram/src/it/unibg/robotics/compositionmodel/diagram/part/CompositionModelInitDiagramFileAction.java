@@ -1,6 +1,6 @@
-package it.unibg.robotics.compositionmodel.diagram.part;
+package org.hyperflex.compositionmodel.diagram.part;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.common.util.URI;

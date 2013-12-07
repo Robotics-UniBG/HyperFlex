@@ -24,21 +24,21 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel.impl;
+package org.hyperflex.roscompositionmodel.impl;
 
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
+import org.hyperflex.roscomponentmodel.roscomponentmodelPackage;
 
-import it.unibg.robotics.roscompositionmodel.ROSComposite;
-import it.unibg.robotics.roscompositionmodel.ROSMsgConsumer;
-import it.unibg.robotics.roscompositionmodel.ROSMsgProducer;
-import it.unibg.robotics.roscompositionmodel.ROSProperty;
-import it.unibg.robotics.roscompositionmodel.ROSSrvConsumer;
-import it.unibg.robotics.roscompositionmodel.ROSSrvProducer;
-import it.unibg.robotics.roscompositionmodel.RosTopic;
-import it.unibg.robotics.roscompositionmodel.roscompositionmodelFactory;
-import it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage;
+import org.hyperflex.roscompositionmodel.ROSComposite;
+import org.hyperflex.roscompositionmodel.ROSMsgConsumer;
+import org.hyperflex.roscompositionmodel.ROSMsgProducer;
+import org.hyperflex.roscompositionmodel.ROSProperty;
+import org.hyperflex.roscompositionmodel.ROSSrvConsumer;
+import org.hyperflex.roscompositionmodel.ROSSrvProducer;
+import org.hyperflex.roscompositionmodel.RosTopic;
+import org.hyperflex.roscompositionmodel.roscompositionmodelFactory;
+import org.hyperflex.roscompositionmodel.roscompositionmodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -113,7 +113,7 @@ public class roscompositionmodelPackageImpl extends EPackageImpl implements rosc
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#eNS_URI
+	 * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */

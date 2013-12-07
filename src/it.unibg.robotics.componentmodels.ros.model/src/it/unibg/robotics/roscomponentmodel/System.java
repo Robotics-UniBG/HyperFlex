@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -35,11 +35,11 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.System#getComposite <em>Composite</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.System#getComposite <em>Composite</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getSystem()
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getSystem()
  * @model
  * @generated
  */
@@ -54,14 +54,14 @@ public interface System extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Composite</em>' containment reference.
 	 * @see #setComposite(Composite)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getSystem_Composite()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getSystem_Composite()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Composite getComposite();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.System#getComposite <em>Composite</em>}' containment reference.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.System#getComposite <em>Composite</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Composite</em>' containment reference.

@@ -1,6 +1,6 @@
-package it.unibg.robotics.compositionmodel.diagram.part;
+package org.hyperflex.compositionmodel.diagram.part;
 
-import it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorItem;
+import org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorItem;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
@@ -52,12 +52,12 @@ public class CompositionModelDiagramEditor extends DiagramDocumentEditor
 	/**
 	 * @generated
 	 */
-	public static final String ID = "it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorID"; //$NON-NLS-1$
+	public static final String ID = "org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorID"; //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final String CONTEXT_ID = "it.unibg.robotics.compositionmodel.diagram.ui.diagramContext"; //$NON-NLS-1$
+	public static final String CONTEXT_ID = "org.hyperflex.compositionmodel.diagram.ui.diagramContext"; //$NON-NLS-1$
 
 	/**
 	 * @generated

@@ -24,17 +24,17 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel.provider;
+package org.hyperflex.roscompositionmodel.provider;
 
-import it.unibg.robotics.compositionmodel.ComponentProperty;
-import it.unibg.robotics.compositionmodel.Composite;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.ComponentProperty;
+import org.hyperflex.compositionmodel.Composite;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
-import it.unibg.robotics.compositionmodel.util.compositionmodelSwitch;
+import org.hyperflex.compositionmodel.util.compositionmodelSwitch;
 
-import it.unibg.robotics.roscompositionmodel.roscompositionmodelFactory;
+import org.hyperflex.roscompositionmodel.roscompositionmodelFactory;
 
-import it.unibg.robotics.roscompositionmodel.util.roscompositionmodelAdapterFactory;
+import org.hyperflex.roscompositionmodel.util.roscompositionmodelAdapterFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -114,7 +114,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscompositionmodel.ROSComposite} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.roscompositionmodel.ROSComposite} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -122,7 +122,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	protected ROSCompositeItemProvider rosCompositeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscompositionmodel.ROSComposite}.
+	 * This creates an adapter for a {@link org.hyperflex.roscompositionmodel.ROSComposite}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -137,7 +137,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscompositionmodel.ROSMsgProducer} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.roscompositionmodel.ROSMsgProducer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -145,7 +145,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	protected ROSMsgProducerItemProvider rosMsgProducerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscompositionmodel.ROSMsgProducer}.
+	 * This creates an adapter for a {@link org.hyperflex.roscompositionmodel.ROSMsgProducer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -160,7 +160,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscompositionmodel.ROSMsgConsumer} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.roscompositionmodel.ROSMsgConsumer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -168,7 +168,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	protected ROSMsgConsumerItemProvider rosMsgConsumerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscompositionmodel.ROSMsgConsumer}.
+	 * This creates an adapter for a {@link org.hyperflex.roscompositionmodel.ROSMsgConsumer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -183,7 +183,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscompositionmodel.ROSSrvProducer} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.roscompositionmodel.ROSSrvProducer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -191,7 +191,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	protected ROSSrvProducerItemProvider rosSrvProducerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscompositionmodel.ROSSrvProducer}.
+	 * This creates an adapter for a {@link org.hyperflex.roscompositionmodel.ROSSrvProducer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -206,7 +206,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscompositionmodel.ROSSrvConsumer} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.roscompositionmodel.ROSSrvConsumer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -214,7 +214,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	protected ROSSrvConsumerItemProvider rosSrvConsumerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscompositionmodel.ROSSrvConsumer}.
+	 * This creates an adapter for a {@link org.hyperflex.roscompositionmodel.ROSSrvConsumer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -229,7 +229,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscompositionmodel.RosTopic} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.roscompositionmodel.RosTopic} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -237,7 +237,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	protected RosTopicItemProvider rosTopicItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscompositionmodel.RosTopic}.
+	 * This creates an adapter for a {@link org.hyperflex.roscompositionmodel.RosTopic}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -252,7 +252,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.roscompositionmodel.ROSProperty} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.roscompositionmodel.ROSProperty} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -260,7 +260,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 	protected ROSPropertyItemProvider rosPropertyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.roscompositionmodel.ROSProperty}.
+	 * This creates an adapter for a {@link org.hyperflex.roscompositionmodel.ROSProperty}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -428,7 +428,7 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 			 * @generated
 			 */
 			@Override
-			public Object caseSystem(it.unibg.robotics.compositionmodel.System object) {
+			public Object caseSystem(org.hyperflex.compositionmodel.System object) {
 				newChildDescriptors.add
 					(createChildParameter
 						(compositionmodelPackage.Literals.SYSTEM__COMPOSITES,

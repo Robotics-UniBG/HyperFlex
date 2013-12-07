@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel;
+package org.hyperflex.compositionmodel;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.compositionmodel.compositionmodelFactory
+ * @see org.hyperflex.compositionmodel.compositionmodelFactory
  * @model kind="package"
  * @generated
  */
@@ -77,14 +77,14 @@ public interface compositionmodelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	compositionmodelPackage eINSTANCE = it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl.init();
+	compositionmodelPackage eINSTANCE = org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.SystemImpl <em>System</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.SystemImpl <em>System</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.SystemImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystem()
+	 * @see org.hyperflex.compositionmodel.impl.SystemImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystem()
 	 * @generated
 	 */
 	int SYSTEM = 0;
@@ -153,11 +153,11 @@ public interface compositionmodelPackage extends EPackage {
 	int SYSTEM_FEATURE_COUNT = 6;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.CompositeImpl <em>Composite</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.CompositeImpl <em>Composite</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.CompositeImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getComposite()
+	 * @see org.hyperflex.compositionmodel.impl.CompositeImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getComposite()
 	 * @generated
 	 */
 	int COMPOSITE = 1;
@@ -199,11 +199,11 @@ public interface compositionmodelPackage extends EPackage {
 	int COMPOSITE_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.InterfaceImpl <em>Interface</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.InterfaceImpl <em>Interface</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.InterfaceImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getInterface()
+	 * @see org.hyperflex.compositionmodel.impl.InterfaceImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getInterface()
 	 * @generated
 	 */
 	int INTERFACE = 7;
@@ -227,11 +227,11 @@ public interface compositionmodelPackage extends EPackage {
 	int INTERFACE_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.ProvidedInterfaceImpl <em>Provided Interface</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.ProvidedInterfaceImpl <em>Provided Interface</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.ProvidedInterfaceImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getProvidedInterface()
+	 * @see org.hyperflex.compositionmodel.impl.ProvidedInterfaceImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getProvidedInterface()
 	 * @generated
 	 */
 	int PROVIDED_INTERFACE = 10;
@@ -255,11 +255,11 @@ public interface compositionmodelPackage extends EPackage {
 	int PROVIDED_INTERFACE_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.CompProvidedInterfImpl <em>Comp Provided Interf</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.CompProvidedInterfImpl <em>Comp Provided Interf</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.CompProvidedInterfImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getCompProvidedInterf()
+	 * @see org.hyperflex.compositionmodel.impl.CompProvidedInterfImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getCompProvidedInterf()
 	 * @generated
 	 */
 	int COMP_PROVIDED_INTERF = 2;
@@ -283,11 +283,11 @@ public interface compositionmodelPackage extends EPackage {
 	int COMP_PROVIDED_INTERF_FEATURE_COUNT = PROVIDED_INTERFACE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.RequiredInterfaceImpl <em>Required Interface</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.RequiredInterfaceImpl <em>Required Interface</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.RequiredInterfaceImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getRequiredInterface()
+	 * @see org.hyperflex.compositionmodel.impl.RequiredInterfaceImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getRequiredInterface()
 	 * @generated
 	 */
 	int REQUIRED_INTERFACE = 11;
@@ -311,11 +311,11 @@ public interface compositionmodelPackage extends EPackage {
 	int REQUIRED_INTERFACE_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.CompRequiredInterfImpl <em>Comp Required Interf</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.CompRequiredInterfImpl <em>Comp Required Interf</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.CompRequiredInterfImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getCompRequiredInterf()
+	 * @see org.hyperflex.compositionmodel.impl.CompRequiredInterfImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getCompRequiredInterf()
 	 * @generated
 	 */
 	int COMP_REQUIRED_INTERF = 3;
@@ -339,11 +339,11 @@ public interface compositionmodelPackage extends EPackage {
 	int COMP_REQUIRED_INTERF_FEATURE_COUNT = REQUIRED_INTERFACE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.ConnectionImpl <em>Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.ConnectionImpl <em>Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.ConnectionImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getConnection()
+	 * @see org.hyperflex.compositionmodel.impl.ConnectionImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getConnection()
 	 * @generated
 	 */
 	int CONNECTION = 4;
@@ -385,11 +385,11 @@ public interface compositionmodelPackage extends EPackage {
 	int CONNECTION_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.ArchitectureModelImpl <em>Architecture Model</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.ArchitectureModelImpl <em>Architecture Model</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.ArchitectureModelImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getArchitectureModel()
+	 * @see org.hyperflex.compositionmodel.impl.ArchitectureModelImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getArchitectureModel()
 	 * @generated
 	 */
 	int ARCHITECTURE_MODEL = 5;
@@ -422,11 +422,11 @@ public interface compositionmodelPackage extends EPackage {
 	int ARCHITECTURE_MODEL_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.SystemCompositeImpl <em>System Composite</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.SystemCompositeImpl <em>System Composite</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.SystemCompositeImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemComposite()
+	 * @see org.hyperflex.compositionmodel.impl.SystemCompositeImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemComposite()
 	 * @generated
 	 */
 	int SYSTEM_COMPOSITE = 6;
@@ -477,11 +477,11 @@ public interface compositionmodelPackage extends EPackage {
 	int SYSTEM_COMPOSITE_FEATURE_COUNT = COMPOSITE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.SystemProvidedInterfImpl <em>System Provided Interf</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.SystemProvidedInterfImpl <em>System Provided Interf</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.SystemProvidedInterfImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemProvidedInterf()
+	 * @see org.hyperflex.compositionmodel.impl.SystemProvidedInterfImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemProvidedInterf()
 	 * @generated
 	 */
 	int SYSTEM_PROVIDED_INTERF = 8;
@@ -514,11 +514,11 @@ public interface compositionmodelPackage extends EPackage {
 	int SYSTEM_PROVIDED_INTERF_FEATURE_COUNT = PROVIDED_INTERFACE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.SystemRequiredInterfImpl <em>System Required Interf</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.SystemRequiredInterfImpl <em>System Required Interf</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.SystemRequiredInterfImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemRequiredInterf()
+	 * @see org.hyperflex.compositionmodel.impl.SystemRequiredInterfImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemRequiredInterf()
 	 * @generated
 	 */
 	int SYSTEM_REQUIRED_INTERF = 9;
@@ -551,11 +551,11 @@ public interface compositionmodelPackage extends EPackage {
 	int SYSTEM_REQUIRED_INTERF_FEATURE_COUNT = REQUIRED_INTERFACE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.PropertyImpl <em>Property</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.PropertyImpl <em>Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.PropertyImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getProperty()
+	 * @see org.hyperflex.compositionmodel.impl.PropertyImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getProperty()
 	 * @generated
 	 */
 	int PROPERTY = 13;
@@ -570,11 +570,11 @@ public interface compositionmodelPackage extends EPackage {
 	int PROPERTY_FEATURE_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.ComponentPropertyImpl <em>Component Property</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.ComponentPropertyImpl <em>Component Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.ComponentPropertyImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getComponentProperty()
+	 * @see org.hyperflex.compositionmodel.impl.ComponentPropertyImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getComponentProperty()
 	 * @generated
 	 */
 	int COMPONENT_PROPERTY = 12;
@@ -598,11 +598,11 @@ public interface compositionmodelPackage extends EPackage {
 	int COMPONENT_PROPERTY_FEATURE_COUNT = PROPERTY_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.SystemCompositeProvidedInterfImpl <em>System Composite Provided Interf</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.SystemCompositeProvidedInterfImpl <em>System Composite Provided Interf</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.SystemCompositeProvidedInterfImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemCompositeProvidedInterf()
+	 * @see org.hyperflex.compositionmodel.impl.SystemCompositeProvidedInterfImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemCompositeProvidedInterf()
 	 * @generated
 	 */
 	int SYSTEM_COMPOSITE_PROVIDED_INTERF = 14;
@@ -635,11 +635,11 @@ public interface compositionmodelPackage extends EPackage {
 	int SYSTEM_COMPOSITE_PROVIDED_INTERF_FEATURE_COUNT = COMP_PROVIDED_INTERF_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.SystemCompositeRequiredInterfImpl <em>System Composite Required Interf</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.SystemCompositeRequiredInterfImpl <em>System Composite Required Interf</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.SystemCompositeRequiredInterfImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemCompositeRequiredInterf()
+	 * @see org.hyperflex.compositionmodel.impl.SystemCompositeRequiredInterfImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemCompositeRequiredInterf()
 	 * @generated
 	 */
 	int SYSTEM_COMPOSITE_REQUIRED_INTERF = 15;
@@ -672,11 +672,11 @@ public interface compositionmodelPackage extends EPackage {
 	int SYSTEM_COMPOSITE_REQUIRED_INTERF_FEATURE_COUNT = COMP_REQUIRED_INTERF_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.SystemPropertyImpl <em>System Property</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.SystemPropertyImpl <em>System Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.SystemPropertyImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemProperty()
+	 * @see org.hyperflex.compositionmodel.impl.SystemPropertyImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemProperty()
 	 * @generated
 	 */
 	int SYSTEM_PROPERTY = 16;
@@ -700,11 +700,11 @@ public interface compositionmodelPackage extends EPackage {
 	int SYSTEM_PROPERTY_FEATURE_COUNT = PROPERTY_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.compositionmodel.impl.SystemCompositePropertyImpl <em>System Composite Property</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.compositionmodel.impl.SystemCompositePropertyImpl <em>System Composite Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.compositionmodel.impl.SystemCompositePropertyImpl
-	 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemCompositeProperty()
+	 * @see org.hyperflex.compositionmodel.impl.SystemCompositePropertyImpl
+	 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemCompositeProperty()
 	 * @generated
 	 */
 	int SYSTEM_COMPOSITE_PROPERTY = 17;
@@ -738,433 +738,433 @@ public interface compositionmodelPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.System <em>System</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.System <em>System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>System</em>'.
-	 * @see it.unibg.robotics.compositionmodel.System
+	 * @see org.hyperflex.compositionmodel.System
 	 * @generated
 	 */
 	EClass getSystem();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.compositionmodel.System#getComposites <em>Composites</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.compositionmodel.System#getComposites <em>Composites</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Composites</em>'.
-	 * @see it.unibg.robotics.compositionmodel.System#getComposites()
+	 * @see org.hyperflex.compositionmodel.System#getComposites()
 	 * @see #getSystem()
 	 * @generated
 	 */
 	EReference getSystem_Composites();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.compositionmodel.System#getProvInterfaces <em>Prov Interfaces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.compositionmodel.System#getProvInterfaces <em>Prov Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Prov Interfaces</em>'.
-	 * @see it.unibg.robotics.compositionmodel.System#getProvInterfaces()
+	 * @see org.hyperflex.compositionmodel.System#getProvInterfaces()
 	 * @see #getSystem()
 	 * @generated
 	 */
 	EReference getSystem_ProvInterfaces();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.compositionmodel.System#getReqInterfaces <em>Req Interfaces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.compositionmodel.System#getReqInterfaces <em>Req Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Req Interfaces</em>'.
-	 * @see it.unibg.robotics.compositionmodel.System#getReqInterfaces()
+	 * @see org.hyperflex.compositionmodel.System#getReqInterfaces()
 	 * @see #getSystem()
 	 * @generated
 	 */
 	EReference getSystem_ReqInterfaces();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.compositionmodel.System#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.compositionmodel.System#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Properties</em>'.
-	 * @see it.unibg.robotics.compositionmodel.System#getProperties()
+	 * @see org.hyperflex.compositionmodel.System#getProperties()
 	 * @see #getSystem()
 	 * @generated
 	 */
 	EReference getSystem_Properties();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.compositionmodel.System#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.compositionmodel.System#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see it.unibg.robotics.compositionmodel.System#getName()
+	 * @see org.hyperflex.compositionmodel.System#getName()
 	 * @see #getSystem()
 	 * @generated
 	 */
 	EAttribute getSystem_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.compositionmodel.System#getConnections <em>Connections</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.compositionmodel.System#getConnections <em>Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Connections</em>'.
-	 * @see it.unibg.robotics.compositionmodel.System#getConnections()
+	 * @see org.hyperflex.compositionmodel.System#getConnections()
 	 * @see #getSystem()
 	 * @generated
 	 */
 	EReference getSystem_Connections();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.Composite <em>Composite</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.Composite <em>Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Composite</em>'.
-	 * @see it.unibg.robotics.compositionmodel.Composite
+	 * @see org.hyperflex.compositionmodel.Composite
 	 * @generated
 	 */
 	EClass getComposite();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.compositionmodel.Composite#getProvInterfaces <em>Prov Interfaces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.compositionmodel.Composite#getProvInterfaces <em>Prov Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Prov Interfaces</em>'.
-	 * @see it.unibg.robotics.compositionmodel.Composite#getProvInterfaces()
+	 * @see org.hyperflex.compositionmodel.Composite#getProvInterfaces()
 	 * @see #getComposite()
 	 * @generated
 	 */
 	EReference getComposite_ProvInterfaces();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.compositionmodel.Composite#getReqInterfaces <em>Req Interfaces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.compositionmodel.Composite#getReqInterfaces <em>Req Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Req Interfaces</em>'.
-	 * @see it.unibg.robotics.compositionmodel.Composite#getReqInterfaces()
+	 * @see org.hyperflex.compositionmodel.Composite#getReqInterfaces()
 	 * @see #getComposite()
 	 * @generated
 	 */
 	EReference getComposite_ReqInterfaces();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.compositionmodel.Composite#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.compositionmodel.Composite#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see it.unibg.robotics.compositionmodel.Composite#getName()
+	 * @see org.hyperflex.compositionmodel.Composite#getName()
 	 * @see #getComposite()
 	 * @generated
 	 */
 	EAttribute getComposite_Name();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.CompProvidedInterf <em>Comp Provided Interf</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.CompProvidedInterf <em>Comp Provided Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Comp Provided Interf</em>'.
-	 * @see it.unibg.robotics.compositionmodel.CompProvidedInterf
+	 * @see org.hyperflex.compositionmodel.CompProvidedInterf
 	 * @generated
 	 */
 	EClass getCompProvidedInterf();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.CompRequiredInterf <em>Comp Required Interf</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.CompRequiredInterf <em>Comp Required Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Comp Required Interf</em>'.
-	 * @see it.unibg.robotics.compositionmodel.CompRequiredInterf
+	 * @see org.hyperflex.compositionmodel.CompRequiredInterf
 	 * @generated
 	 */
 	EClass getCompRequiredInterf();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.Connection <em>Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.Connection <em>Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Connection</em>'.
-	 * @see it.unibg.robotics.compositionmodel.Connection
+	 * @see org.hyperflex.compositionmodel.Connection
 	 * @generated
 	 */
 	EClass getConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.compositionmodel.Connection#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.compositionmodel.Connection#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see it.unibg.robotics.compositionmodel.Connection#getSource()
+	 * @see org.hyperflex.compositionmodel.Connection#getSource()
 	 * @see #getConnection()
 	 * @generated
 	 */
 	EReference getConnection_Source();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.compositionmodel.Connection#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.compositionmodel.Connection#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see it.unibg.robotics.compositionmodel.Connection#getTarget()
+	 * @see org.hyperflex.compositionmodel.Connection#getTarget()
 	 * @see #getConnection()
 	 * @generated
 	 */
 	EReference getConnection_Target();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.compositionmodel.Connection#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.compositionmodel.Connection#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see it.unibg.robotics.compositionmodel.Connection#getName()
+	 * @see org.hyperflex.compositionmodel.Connection#getName()
 	 * @see #getConnection()
 	 * @generated
 	 */
 	EAttribute getConnection_Name();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.ArchitectureModel <em>Architecture Model</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.ArchitectureModel <em>Architecture Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Architecture Model</em>'.
-	 * @see it.unibg.robotics.compositionmodel.ArchitectureModel
+	 * @see org.hyperflex.compositionmodel.ArchitectureModel
 	 * @generated
 	 */
 	EClass getArchitectureModel();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link it.unibg.robotics.compositionmodel.ArchitectureModel#getSystem <em>System</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.hyperflex.compositionmodel.ArchitectureModel#getSystem <em>System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>System</em>'.
-	 * @see it.unibg.robotics.compositionmodel.ArchitectureModel#getSystem()
+	 * @see org.hyperflex.compositionmodel.ArchitectureModel#getSystem()
 	 * @see #getArchitectureModel()
 	 * @generated
 	 */
 	EReference getArchitectureModel_System();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.compositionmodel.ArchitectureModel#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.compositionmodel.ArchitectureModel#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see it.unibg.robotics.compositionmodel.ArchitectureModel#getName()
+	 * @see org.hyperflex.compositionmodel.ArchitectureModel#getName()
 	 * @see #getArchitectureModel()
 	 * @generated
 	 */
 	EAttribute getArchitectureModel_Name();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.SystemComposite <em>System Composite</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.SystemComposite <em>System Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>System Composite</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemComposite
+	 * @see org.hyperflex.compositionmodel.SystemComposite
 	 * @generated
 	 */
 	EClass getSystemComposite();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.compositionmodel.SystemComposite#getImpl <em>Impl</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.compositionmodel.SystemComposite#getImpl <em>Impl</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Impl</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemComposite#getImpl()
+	 * @see org.hyperflex.compositionmodel.SystemComposite#getImpl()
 	 * @see #getSystemComposite()
 	 * @generated
 	 */
 	EReference getSystemComposite_Impl();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.Interface <em>Interface</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.Interface <em>Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Interface</em>'.
-	 * @see it.unibg.robotics.compositionmodel.Interface
+	 * @see org.hyperflex.compositionmodel.Interface
 	 * @generated
 	 */
 	EClass getInterface();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.compositionmodel.Interface#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.compositionmodel.Interface#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see it.unibg.robotics.compositionmodel.Interface#getName()
+	 * @see org.hyperflex.compositionmodel.Interface#getName()
 	 * @see #getInterface()
 	 * @generated
 	 */
 	EAttribute getInterface_Name();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.SystemProvidedInterf <em>System Provided Interf</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.SystemProvidedInterf <em>System Provided Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>System Provided Interf</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemProvidedInterf
+	 * @see org.hyperflex.compositionmodel.SystemProvidedInterf
 	 * @generated
 	 */
 	EClass getSystemProvidedInterf();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.compositionmodel.SystemProvidedInterf#getExposed <em>Exposed</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.compositionmodel.SystemProvidedInterf#getExposed <em>Exposed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Exposed</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemProvidedInterf#getExposed()
+	 * @see org.hyperflex.compositionmodel.SystemProvidedInterf#getExposed()
 	 * @see #getSystemProvidedInterf()
 	 * @generated
 	 */
 	EReference getSystemProvidedInterf_Exposed();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.SystemRequiredInterf <em>System Required Interf</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.SystemRequiredInterf <em>System Required Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>System Required Interf</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemRequiredInterf
+	 * @see org.hyperflex.compositionmodel.SystemRequiredInterf
 	 * @generated
 	 */
 	EClass getSystemRequiredInterf();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.compositionmodel.SystemRequiredInterf#getExposed <em>Exposed</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.compositionmodel.SystemRequiredInterf#getExposed <em>Exposed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Exposed</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemRequiredInterf#getExposed()
+	 * @see org.hyperflex.compositionmodel.SystemRequiredInterf#getExposed()
 	 * @see #getSystemRequiredInterf()
 	 * @generated
 	 */
 	EReference getSystemRequiredInterf_Exposed();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.ProvidedInterface <em>Provided Interface</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.ProvidedInterface <em>Provided Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Provided Interface</em>'.
-	 * @see it.unibg.robotics.compositionmodel.ProvidedInterface
+	 * @see org.hyperflex.compositionmodel.ProvidedInterface
 	 * @generated
 	 */
 	EClass getProvidedInterface();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.RequiredInterface <em>Required Interface</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.RequiredInterface <em>Required Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Required Interface</em>'.
-	 * @see it.unibg.robotics.compositionmodel.RequiredInterface
+	 * @see org.hyperflex.compositionmodel.RequiredInterface
 	 * @generated
 	 */
 	EClass getRequiredInterface();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.ComponentProperty <em>Component Property</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.ComponentProperty <em>Component Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Component Property</em>'.
-	 * @see it.unibg.robotics.compositionmodel.ComponentProperty
+	 * @see org.hyperflex.compositionmodel.ComponentProperty
 	 * @generated
 	 */
 	EClass getComponentProperty();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.compositionmodel.ComponentProperty#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.compositionmodel.ComponentProperty#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Properties</em>'.
-	 * @see it.unibg.robotics.compositionmodel.ComponentProperty#getProperties()
+	 * @see org.hyperflex.compositionmodel.ComponentProperty#getProperties()
 	 * @see #getComponentProperty()
 	 * @generated
 	 */
 	EReference getComponentProperty_Properties();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.Property <em>Property</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.Property <em>Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Property</em>'.
-	 * @see it.unibg.robotics.compositionmodel.Property
+	 * @see org.hyperflex.compositionmodel.Property
 	 * @generated
 	 */
 	EClass getProperty();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf <em>System Composite Provided Interf</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.SystemCompositeProvidedInterf <em>System Composite Provided Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>System Composite Provided Interf</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf
+	 * @see org.hyperflex.compositionmodel.SystemCompositeProvidedInterf
 	 * @generated
 	 */
 	EClass getSystemCompositeProvidedInterf();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf#getImpl <em>Impl</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.compositionmodel.SystemCompositeProvidedInterf#getImpl <em>Impl</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Impl</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemCompositeProvidedInterf#getImpl()
+	 * @see org.hyperflex.compositionmodel.SystemCompositeProvidedInterf#getImpl()
 	 * @see #getSystemCompositeProvidedInterf()
 	 * @generated
 	 */
 	EReference getSystemCompositeProvidedInterf_Impl();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf <em>System Composite Required Interf</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.SystemCompositeRequiredInterf <em>System Composite Required Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>System Composite Required Interf</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf
+	 * @see org.hyperflex.compositionmodel.SystemCompositeRequiredInterf
 	 * @generated
 	 */
 	EClass getSystemCompositeRequiredInterf();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf#getImpl <em>Impl</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.compositionmodel.SystemCompositeRequiredInterf#getImpl <em>Impl</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Impl</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf#getImpl()
+	 * @see org.hyperflex.compositionmodel.SystemCompositeRequiredInterf#getImpl()
 	 * @see #getSystemCompositeRequiredInterf()
 	 * @generated
 	 */
 	EReference getSystemCompositeRequiredInterf_Impl();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.SystemProperty <em>System Property</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.SystemProperty <em>System Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>System Property</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemProperty
+	 * @see org.hyperflex.compositionmodel.SystemProperty
 	 * @generated
 	 */
 	EClass getSystemProperty();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.compositionmodel.SystemProperty#getExposed <em>Exposed</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.compositionmodel.SystemProperty#getExposed <em>Exposed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Exposed</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemProperty#getExposed()
+	 * @see org.hyperflex.compositionmodel.SystemProperty#getExposed()
 	 * @see #getSystemProperty()
 	 * @generated
 	 */
 	EReference getSystemProperty_Exposed();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.compositionmodel.SystemCompositeProperty <em>System Composite Property</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.compositionmodel.SystemCompositeProperty <em>System Composite Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>System Composite Property</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemCompositeProperty
+	 * @see org.hyperflex.compositionmodel.SystemCompositeProperty
 	 * @generated
 	 */
 	EClass getSystemCompositeProperty();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.compositionmodel.SystemCompositeProperty#getImpl <em>Impl</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.compositionmodel.SystemCompositeProperty#getImpl <em>Impl</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Impl</em>'.
-	 * @see it.unibg.robotics.compositionmodel.SystemCompositeProperty#getImpl()
+	 * @see org.hyperflex.compositionmodel.SystemCompositeProperty#getImpl()
 	 * @see #getSystemCompositeProperty()
 	 * @generated
 	 */
@@ -1193,11 +1193,11 @@ public interface compositionmodelPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.SystemImpl <em>System</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.SystemImpl <em>System</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.SystemImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystem()
+		 * @see org.hyperflex.compositionmodel.impl.SystemImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystem()
 		 * @generated
 		 */
 		EClass SYSTEM = eINSTANCE.getSystem();
@@ -1251,11 +1251,11 @@ public interface compositionmodelPackage extends EPackage {
 		EReference SYSTEM__CONNECTIONS = eINSTANCE.getSystem_Connections();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.CompositeImpl <em>Composite</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.CompositeImpl <em>Composite</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.CompositeImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getComposite()
+		 * @see org.hyperflex.compositionmodel.impl.CompositeImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getComposite()
 		 * @generated
 		 */
 		EClass COMPOSITE = eINSTANCE.getComposite();
@@ -1285,31 +1285,31 @@ public interface compositionmodelPackage extends EPackage {
 		EAttribute COMPOSITE__NAME = eINSTANCE.getComposite_Name();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.CompProvidedInterfImpl <em>Comp Provided Interf</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.CompProvidedInterfImpl <em>Comp Provided Interf</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.CompProvidedInterfImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getCompProvidedInterf()
+		 * @see org.hyperflex.compositionmodel.impl.CompProvidedInterfImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getCompProvidedInterf()
 		 * @generated
 		 */
 		EClass COMP_PROVIDED_INTERF = eINSTANCE.getCompProvidedInterf();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.CompRequiredInterfImpl <em>Comp Required Interf</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.CompRequiredInterfImpl <em>Comp Required Interf</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.CompRequiredInterfImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getCompRequiredInterf()
+		 * @see org.hyperflex.compositionmodel.impl.CompRequiredInterfImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getCompRequiredInterf()
 		 * @generated
 		 */
 		EClass COMP_REQUIRED_INTERF = eINSTANCE.getCompRequiredInterf();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.ConnectionImpl <em>Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.ConnectionImpl <em>Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.ConnectionImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getConnection()
+		 * @see org.hyperflex.compositionmodel.impl.ConnectionImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getConnection()
 		 * @generated
 		 */
 		EClass CONNECTION = eINSTANCE.getConnection();
@@ -1339,11 +1339,11 @@ public interface compositionmodelPackage extends EPackage {
 		EAttribute CONNECTION__NAME = eINSTANCE.getConnection_Name();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.ArchitectureModelImpl <em>Architecture Model</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.ArchitectureModelImpl <em>Architecture Model</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.ArchitectureModelImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getArchitectureModel()
+		 * @see org.hyperflex.compositionmodel.impl.ArchitectureModelImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getArchitectureModel()
 		 * @generated
 		 */
 		EClass ARCHITECTURE_MODEL = eINSTANCE.getArchitectureModel();
@@ -1365,11 +1365,11 @@ public interface compositionmodelPackage extends EPackage {
 		EAttribute ARCHITECTURE_MODEL__NAME = eINSTANCE.getArchitectureModel_Name();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.SystemCompositeImpl <em>System Composite</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.SystemCompositeImpl <em>System Composite</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.SystemCompositeImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemComposite()
+		 * @see org.hyperflex.compositionmodel.impl.SystemCompositeImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemComposite()
 		 * @generated
 		 */
 		EClass SYSTEM_COMPOSITE = eINSTANCE.getSystemComposite();
@@ -1383,11 +1383,11 @@ public interface compositionmodelPackage extends EPackage {
 		EReference SYSTEM_COMPOSITE__IMPL = eINSTANCE.getSystemComposite_Impl();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.InterfaceImpl <em>Interface</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.InterfaceImpl <em>Interface</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.InterfaceImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getInterface()
+		 * @see org.hyperflex.compositionmodel.impl.InterfaceImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getInterface()
 		 * @generated
 		 */
 		EClass INTERFACE = eINSTANCE.getInterface();
@@ -1401,11 +1401,11 @@ public interface compositionmodelPackage extends EPackage {
 		EAttribute INTERFACE__NAME = eINSTANCE.getInterface_Name();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.SystemProvidedInterfImpl <em>System Provided Interf</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.SystemProvidedInterfImpl <em>System Provided Interf</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.SystemProvidedInterfImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemProvidedInterf()
+		 * @see org.hyperflex.compositionmodel.impl.SystemProvidedInterfImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemProvidedInterf()
 		 * @generated
 		 */
 		EClass SYSTEM_PROVIDED_INTERF = eINSTANCE.getSystemProvidedInterf();
@@ -1419,11 +1419,11 @@ public interface compositionmodelPackage extends EPackage {
 		EReference SYSTEM_PROVIDED_INTERF__EXPOSED = eINSTANCE.getSystemProvidedInterf_Exposed();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.SystemRequiredInterfImpl <em>System Required Interf</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.SystemRequiredInterfImpl <em>System Required Interf</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.SystemRequiredInterfImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemRequiredInterf()
+		 * @see org.hyperflex.compositionmodel.impl.SystemRequiredInterfImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemRequiredInterf()
 		 * @generated
 		 */
 		EClass SYSTEM_REQUIRED_INTERF = eINSTANCE.getSystemRequiredInterf();
@@ -1437,31 +1437,31 @@ public interface compositionmodelPackage extends EPackage {
 		EReference SYSTEM_REQUIRED_INTERF__EXPOSED = eINSTANCE.getSystemRequiredInterf_Exposed();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.ProvidedInterfaceImpl <em>Provided Interface</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.ProvidedInterfaceImpl <em>Provided Interface</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.ProvidedInterfaceImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getProvidedInterface()
+		 * @see org.hyperflex.compositionmodel.impl.ProvidedInterfaceImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getProvidedInterface()
 		 * @generated
 		 */
 		EClass PROVIDED_INTERFACE = eINSTANCE.getProvidedInterface();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.RequiredInterfaceImpl <em>Required Interface</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.RequiredInterfaceImpl <em>Required Interface</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.RequiredInterfaceImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getRequiredInterface()
+		 * @see org.hyperflex.compositionmodel.impl.RequiredInterfaceImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getRequiredInterface()
 		 * @generated
 		 */
 		EClass REQUIRED_INTERFACE = eINSTANCE.getRequiredInterface();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.ComponentPropertyImpl <em>Component Property</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.ComponentPropertyImpl <em>Component Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.ComponentPropertyImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getComponentProperty()
+		 * @see org.hyperflex.compositionmodel.impl.ComponentPropertyImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getComponentProperty()
 		 * @generated
 		 */
 		EClass COMPONENT_PROPERTY = eINSTANCE.getComponentProperty();
@@ -1475,21 +1475,21 @@ public interface compositionmodelPackage extends EPackage {
 		EReference COMPONENT_PROPERTY__PROPERTIES = eINSTANCE.getComponentProperty_Properties();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.PropertyImpl <em>Property</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.PropertyImpl <em>Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.PropertyImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getProperty()
+		 * @see org.hyperflex.compositionmodel.impl.PropertyImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getProperty()
 		 * @generated
 		 */
 		EClass PROPERTY = eINSTANCE.getProperty();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.SystemCompositeProvidedInterfImpl <em>System Composite Provided Interf</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.SystemCompositeProvidedInterfImpl <em>System Composite Provided Interf</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.SystemCompositeProvidedInterfImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemCompositeProvidedInterf()
+		 * @see org.hyperflex.compositionmodel.impl.SystemCompositeProvidedInterfImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemCompositeProvidedInterf()
 		 * @generated
 		 */
 		EClass SYSTEM_COMPOSITE_PROVIDED_INTERF = eINSTANCE.getSystemCompositeProvidedInterf();
@@ -1503,11 +1503,11 @@ public interface compositionmodelPackage extends EPackage {
 		EReference SYSTEM_COMPOSITE_PROVIDED_INTERF__IMPL = eINSTANCE.getSystemCompositeProvidedInterf_Impl();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.SystemCompositeRequiredInterfImpl <em>System Composite Required Interf</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.SystemCompositeRequiredInterfImpl <em>System Composite Required Interf</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.SystemCompositeRequiredInterfImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemCompositeRequiredInterf()
+		 * @see org.hyperflex.compositionmodel.impl.SystemCompositeRequiredInterfImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemCompositeRequiredInterf()
 		 * @generated
 		 */
 		EClass SYSTEM_COMPOSITE_REQUIRED_INTERF = eINSTANCE.getSystemCompositeRequiredInterf();
@@ -1521,11 +1521,11 @@ public interface compositionmodelPackage extends EPackage {
 		EReference SYSTEM_COMPOSITE_REQUIRED_INTERF__IMPL = eINSTANCE.getSystemCompositeRequiredInterf_Impl();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.SystemPropertyImpl <em>System Property</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.SystemPropertyImpl <em>System Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.SystemPropertyImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemProperty()
+		 * @see org.hyperflex.compositionmodel.impl.SystemPropertyImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemProperty()
 		 * @generated
 		 */
 		EClass SYSTEM_PROPERTY = eINSTANCE.getSystemProperty();
@@ -1539,11 +1539,11 @@ public interface compositionmodelPackage extends EPackage {
 		EReference SYSTEM_PROPERTY__EXPOSED = eINSTANCE.getSystemProperty_Exposed();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.compositionmodel.impl.SystemCompositePropertyImpl <em>System Composite Property</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.compositionmodel.impl.SystemCompositePropertyImpl <em>System Composite Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.compositionmodel.impl.SystemCompositePropertyImpl
-		 * @see it.unibg.robotics.compositionmodel.impl.compositionmodelPackageImpl#getSystemCompositeProperty()
+		 * @see org.hyperflex.compositionmodel.impl.SystemCompositePropertyImpl
+		 * @see org.hyperflex.compositionmodel.impl.compositionmodelPackageImpl#getSystemCompositeProperty()
 		 * @generated
 		 */
 		EClass SYSTEM_COMPOSITE_PROPERTY = eINSTANCE.getSystemCompositeProperty();

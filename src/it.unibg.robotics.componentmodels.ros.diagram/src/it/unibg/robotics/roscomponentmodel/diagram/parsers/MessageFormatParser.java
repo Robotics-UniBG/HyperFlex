@@ -1,7 +1,7 @@
-package it.unibg.robotics.roscomponentmodel.diagram.parsers;
+package org.hyperflex.roscomponentmodel.diagram.parsers;
 
-import it.unibg.robotics.roscomponentmodel.diagram.part.Messages;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
+import org.hyperflex.roscomponentmodel.diagram.part.Messages;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
 
 import java.text.FieldPosition;
 import java.text.MessageFormat;

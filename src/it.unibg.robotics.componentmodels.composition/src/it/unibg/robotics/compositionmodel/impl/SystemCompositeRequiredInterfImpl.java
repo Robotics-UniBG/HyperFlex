@@ -24,11 +24,11 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.impl;
+package org.hyperflex.compositionmodel.impl;
 
-import it.unibg.robotics.compositionmodel.SystemCompositeRequiredInterf;
-import it.unibg.robotics.compositionmodel.SystemRequiredInterf;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.SystemCompositeRequiredInterf;
+import org.hyperflex.compositionmodel.SystemRequiredInterf;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -44,7 +44,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.SystemCompositeRequiredInterfImpl#getImpl <em>Impl</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.SystemCompositeRequiredInterfImpl#getImpl <em>Impl</em>}</li>
  * </ul>
  * </p>
  *

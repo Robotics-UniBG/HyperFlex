@@ -1,10 +1,10 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.policies;
+package org.hyperflex.compositionmodel.diagram.edit.policies;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramUpdater;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelNodeDescriptor;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramUpdater;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelNodeDescriptor;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -58,10 +58,10 @@ public class ROSCompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 		if (myFeaturesToSynchronize == null) {
 			myFeaturesToSynchronize = new HashSet<EStructuralFeature>();
 			myFeaturesToSynchronize
-					.add(it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+					.add(org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getComposite_ProvInterfaces());
 			myFeaturesToSynchronize
-					.add(it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+					.add(org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getComposite_ReqInterfaces());
 		}
 		return myFeaturesToSynchronize;

@@ -23,12 +23,12 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.diagram.edit.parts;
+package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import it.unibg.robotics.roscomponentmodel.diagram.edit.policies.RosComponentModelTextSelectionEditPolicy;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
-import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelParserProvider;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.RosComponentModelTextSelectionEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelParserProvider;
 
 import java.util.Collections;
 import java.util.List;
@@ -333,7 +333,7 @@ public class CompositeNameEditPart extends CompartmentEditPart implements
 							RosComponentModelElementTypes.Composite_2003,
 							getParserElement(),
 							RosComponentModelVisualIDRegistry
-									.getType(it.unibg.robotics.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart.VISUAL_ID));
+									.getType(org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart.VISUAL_ID));
 		}
 		return parser;
 	}

@@ -1,4 +1,4 @@
-package it.unibg.robotics.roscomponentmodel.diagram.part;
+package org.hyperflex.roscomponentmodel.diagram.part;
 
 import java.util.Iterator;
 import java.util.List;

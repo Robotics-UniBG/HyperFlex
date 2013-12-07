@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel.presentation;
+package org.hyperflex.roscompositionmodel.presentation;
 
 
 import java.io.IOException;
@@ -178,11 +178,11 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import it.unibg.robotics.roscompositionmodel.provider.roscompositionmodelItemProviderAdapterFactory;
+import org.hyperflex.roscompositionmodel.provider.roscompositionmodelItemProviderAdapterFactory;
 
-import it.unibg.robotics.compositionmodel.provider.compositionmodelItemProviderAdapterFactory;
+import org.hyperflex.compositionmodel.provider.compositionmodelItemProviderAdapterFactory;
 
-import it.unibg.robotics.roscomponentmodel.provider.roscomponentmodelItemProviderAdapterFactory;
+import org.hyperflex.roscomponentmodel.provider.roscomponentmodelItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
@@ -646,7 +646,7 @@ public class roscompositionmodelEditor
 			BasicDiagnostic diagnostic =
 				new BasicDiagnostic
 					(Diagnostic.OK,
-					 "it.unibg.robotics.compositionmodels.ros.model.editor",
+					 "org.hyperflex.compositionmodels.ros.model.editor",
 					 0,
 					 null,
 					 new Object [] { editingDomain.getResourceSet() });
@@ -1011,7 +1011,7 @@ public class roscompositionmodelEditor
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "it.unibg.robotics.compositionmodels.ros.model.editor",
+					 "org.hyperflex.compositionmodels.ros.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object [] { exception == null ? (Object)resource : exception });
@@ -1022,7 +1022,7 @@ public class roscompositionmodelEditor
 			return
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "it.unibg.robotics.compositionmodels.ros.model.editor",
+					 "org.hyperflex.compositionmodels.ros.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object[] { exception });

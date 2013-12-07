@@ -24,10 +24,10 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.impl;
+package org.hyperflex.compositionmodel.impl;
 
-import it.unibg.robotics.compositionmodel.SystemComposite;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.SystemComposite;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -43,7 +43,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.SystemCompositeImpl#getImpl <em>Impl</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.SystemCompositeImpl#getImpl <em>Impl</em>}</li>
  * </ul>
  * </p>
  *
@@ -58,7 +58,7 @@ public class SystemCompositeImpl extends CompositeImpl implements SystemComposit
 	 * @generated
 	 * @ordered
 	 */
-	protected it.unibg.robotics.compositionmodel.System impl;
+	protected org.hyperflex.compositionmodel.System impl;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -84,10 +84,10 @@ public class SystemCompositeImpl extends CompositeImpl implements SystemComposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public it.unibg.robotics.compositionmodel.System getImpl() {
+	public org.hyperflex.compositionmodel.System getImpl() {
 		if (impl != null && impl.eIsProxy()) {
 			InternalEObject oldImpl = (InternalEObject)impl;
-			impl = (it.unibg.robotics.compositionmodel.System)eResolveProxy(oldImpl);
+			impl = (org.hyperflex.compositionmodel.System)eResolveProxy(oldImpl);
 			if (impl != oldImpl) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, compositionmodelPackage.SYSTEM_COMPOSITE__IMPL, oldImpl, impl));
@@ -101,7 +101,7 @@ public class SystemCompositeImpl extends CompositeImpl implements SystemComposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public it.unibg.robotics.compositionmodel.System basicGetImpl() {
+	public org.hyperflex.compositionmodel.System basicGetImpl() {
 		return impl;
 	}
 
@@ -110,8 +110,8 @@ public class SystemCompositeImpl extends CompositeImpl implements SystemComposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setImpl(it.unibg.robotics.compositionmodel.System newImpl) {
-		it.unibg.robotics.compositionmodel.System oldImpl = impl;
+	public void setImpl(org.hyperflex.compositionmodel.System newImpl) {
+		org.hyperflex.compositionmodel.System oldImpl = impl;
 		impl = newImpl;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, compositionmodelPackage.SYSTEM_COMPOSITE__IMPL, oldImpl, impl));
@@ -141,7 +141,7 @@ public class SystemCompositeImpl extends CompositeImpl implements SystemComposit
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case compositionmodelPackage.SYSTEM_COMPOSITE__IMPL:
-				setImpl((it.unibg.robotics.compositionmodel.System)newValue);
+				setImpl((org.hyperflex.compositionmodel.System)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -156,7 +156,7 @@ public class SystemCompositeImpl extends CompositeImpl implements SystemComposit
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case compositionmodelPackage.SYSTEM_COMPOSITE__IMPL:
-				setImpl((it.unibg.robotics.compositionmodel.System)null);
+				setImpl((org.hyperflex.compositionmodel.System)null);
 				return;
 		}
 		super.eUnset(featureID);

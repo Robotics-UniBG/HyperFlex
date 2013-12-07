@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.helpers;
+package org.hyperflex.compositionmodel.diagram.edit.helpers;
 
 import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 

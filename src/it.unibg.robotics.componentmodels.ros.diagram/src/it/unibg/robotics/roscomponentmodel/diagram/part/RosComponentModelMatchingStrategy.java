@@ -1,4 +1,4 @@
-package it.unibg.robotics.roscomponentmodel.diagram.part;
+package org.hyperflex.roscomponentmodel.diagram.part;
 
 import org.eclipse.emf.common.ui.URIEditorInput;
 import org.eclipse.ui.IEditorInput;

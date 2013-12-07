@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.provider;
+package org.hyperflex.compositionmodel.provider;
 
 
 import java.util.Collection;
@@ -45,7 +45,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link it.unibg.robotics.compositionmodel.Property} object.
+ * This is the item provider adapter for a {@link org.hyperflex.compositionmodel.Property} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

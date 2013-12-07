@@ -23,11 +23,11 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.impl;
+package org.hyperflex.roscomponentmodel.impl;
 
-import it.unibg.robotics.roscomponentmodel.MsgInterface;
-import it.unibg.robotics.roscomponentmodel.Topic;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
+import org.hyperflex.roscomponentmodel.MsgInterface;
+import org.hyperflex.roscomponentmodel.Topic;
+import org.hyperflex.roscomponentmodel.roscomponentmodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -42,8 +42,8 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.MsgInterfaceImpl#getName <em>Name</em>}</li>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.MsgInterfaceImpl#getConnection <em>Connection</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.MsgInterfaceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.MsgInterfaceImpl#getConnection <em>Connection</em>}</li>
  * </ul>
  * </p>
  *

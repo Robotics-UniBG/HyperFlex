@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.sheet;
+package org.hyperflex.compositionmodel.diagram.sheet;
 
 import org.eclipse.gmf.tooling.runtime.sheet.DefaultPropertySection;
 import org.eclipse.ui.views.properties.IPropertySourceProvider;

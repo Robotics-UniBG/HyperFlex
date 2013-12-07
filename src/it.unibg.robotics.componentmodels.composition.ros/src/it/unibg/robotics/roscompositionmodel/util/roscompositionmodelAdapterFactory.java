@@ -24,18 +24,18 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel.util;
+package org.hyperflex.roscompositionmodel.util;
 
-import it.unibg.robotics.compositionmodel.CompProvidedInterf;
-import it.unibg.robotics.compositionmodel.CompRequiredInterf;
-import it.unibg.robotics.compositionmodel.Composite;
-import it.unibg.robotics.compositionmodel.Connection;
-import it.unibg.robotics.compositionmodel.Interface;
-import it.unibg.robotics.compositionmodel.Property;
-import it.unibg.robotics.compositionmodel.ProvidedInterface;
-import it.unibg.robotics.compositionmodel.RequiredInterface;
+import org.hyperflex.compositionmodel.CompProvidedInterf;
+import org.hyperflex.compositionmodel.CompRequiredInterf;
+import org.hyperflex.compositionmodel.Composite;
+import org.hyperflex.compositionmodel.Connection;
+import org.hyperflex.compositionmodel.Interface;
+import org.hyperflex.compositionmodel.Property;
+import org.hyperflex.compositionmodel.ProvidedInterface;
+import org.hyperflex.compositionmodel.RequiredInterface;
 
-import it.unibg.robotics.roscompositionmodel.*;
+import org.hyperflex.roscompositionmodel.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -49,7 +49,7 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage
+ * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage
  * @generated
  */
 public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
@@ -181,13 +181,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscompositionmodel.ROSComposite <em>ROS Composite</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.roscompositionmodel.ROSComposite <em>ROS Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSComposite
+	 * @see org.hyperflex.roscompositionmodel.ROSComposite
 	 * @generated
 	 */
 	public Adapter createROSCompositeAdapter() {
@@ -195,13 +195,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscompositionmodel.ROSMsgProducer <em>ROS Msg Producer</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.roscompositionmodel.ROSMsgProducer <em>ROS Msg Producer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSMsgProducer
+	 * @see org.hyperflex.roscompositionmodel.ROSMsgProducer
 	 * @generated
 	 */
 	public Adapter createROSMsgProducerAdapter() {
@@ -209,13 +209,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscompositionmodel.ROSMsgConsumer <em>ROS Msg Consumer</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.roscompositionmodel.ROSMsgConsumer <em>ROS Msg Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSMsgConsumer
+	 * @see org.hyperflex.roscompositionmodel.ROSMsgConsumer
 	 * @generated
 	 */
 	public Adapter createROSMsgConsumerAdapter() {
@@ -223,13 +223,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscompositionmodel.ROSSrvProducer <em>ROS Srv Producer</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.roscompositionmodel.ROSSrvProducer <em>ROS Srv Producer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSSrvProducer
+	 * @see org.hyperflex.roscompositionmodel.ROSSrvProducer
 	 * @generated
 	 */
 	public Adapter createROSSrvProducerAdapter() {
@@ -237,13 +237,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscompositionmodel.ROSSrvConsumer <em>ROS Srv Consumer</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.roscompositionmodel.ROSSrvConsumer <em>ROS Srv Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSSrvConsumer
+	 * @see org.hyperflex.roscompositionmodel.ROSSrvConsumer
 	 * @generated
 	 */
 	public Adapter createROSSrvConsumerAdapter() {
@@ -251,13 +251,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscompositionmodel.RosTopic <em>Ros Topic</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.roscompositionmodel.RosTopic <em>Ros Topic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscompositionmodel.RosTopic
+	 * @see org.hyperflex.roscompositionmodel.RosTopic
 	 * @generated
 	 */
 	public Adapter createRosTopicAdapter() {
@@ -265,13 +265,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.roscompositionmodel.ROSProperty <em>ROS Property</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.roscompositionmodel.ROSProperty <em>ROS Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSProperty
+	 * @see org.hyperflex.roscompositionmodel.ROSProperty
 	 * @generated
 	 */
 	public Adapter createROSPropertyAdapter() {
@@ -279,13 +279,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.Composite <em>Composite</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.Composite <em>Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.Composite
+	 * @see org.hyperflex.compositionmodel.Composite
 	 * @generated
 	 */
 	public Adapter createCompositeAdapter() {
@@ -293,13 +293,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.Interface <em>Interface</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.Interface <em>Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.Interface
+	 * @see org.hyperflex.compositionmodel.Interface
 	 * @generated
 	 */
 	public Adapter createInterfaceAdapter() {
@@ -307,13 +307,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.ProvidedInterface <em>Provided Interface</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.ProvidedInterface <em>Provided Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.ProvidedInterface
+	 * @see org.hyperflex.compositionmodel.ProvidedInterface
 	 * @generated
 	 */
 	public Adapter createProvidedInterfaceAdapter() {
@@ -321,13 +321,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.CompProvidedInterf <em>Comp Provided Interf</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.CompProvidedInterf <em>Comp Provided Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.CompProvidedInterf
+	 * @see org.hyperflex.compositionmodel.CompProvidedInterf
 	 * @generated
 	 */
 	public Adapter createCompProvidedInterfAdapter() {
@@ -335,13 +335,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.RequiredInterface <em>Required Interface</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.RequiredInterface <em>Required Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.RequiredInterface
+	 * @see org.hyperflex.compositionmodel.RequiredInterface
 	 * @generated
 	 */
 	public Adapter createRequiredInterfaceAdapter() {
@@ -349,13 +349,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.CompRequiredInterf <em>Comp Required Interf</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.CompRequiredInterf <em>Comp Required Interf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.CompRequiredInterf
+	 * @see org.hyperflex.compositionmodel.CompRequiredInterf
 	 * @generated
 	 */
 	public Adapter createCompRequiredInterfAdapter() {
@@ -363,13 +363,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.Connection <em>Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.Connection <em>Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.Connection
+	 * @see org.hyperflex.compositionmodel.Connection
 	 * @generated
 	 */
 	public Adapter createConnectionAdapter() {
@@ -377,13 +377,13 @@ public class roscompositionmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.compositionmodel.Property <em>Property</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.compositionmodel.Property <em>Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.compositionmodel.Property
+	 * @see org.hyperflex.compositionmodel.Property
 	 * @generated
 	 */
 	public Adapter createPropertyAdapter() {

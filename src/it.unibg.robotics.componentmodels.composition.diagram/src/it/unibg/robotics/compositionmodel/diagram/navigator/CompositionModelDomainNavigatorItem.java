@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.navigator;
+package org.hyperflex.compositionmodel.diagram.navigator;
 
 import org.eclipse.core.runtime.IAdapterFactory;
 import org.eclipse.core.runtime.Platform;
@@ -24,8 +24,8 @@ public class CompositionModelDomainNavigatorItem extends PlatformObject {
 
 					public Object getAdapter(Object adaptableObject,
 							Class adapterType) {
-						if (adaptableObject instanceof it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem) {
-							it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem domainNavigatorItem = (it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem) adaptableObject;
+						if (adaptableObject instanceof org.hyperflex.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem) {
+							org.hyperflex.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem domainNavigatorItem = (org.hyperflex.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem) adaptableObject;
 							EObject eObject = domainNavigatorItem.getEObject();
 							if (adapterType == EObject.class) {
 								return eObject;
@@ -44,7 +44,7 @@ public class CompositionModelDomainNavigatorItem extends PlatformObject {
 						return supportedTypes;
 					}
 				},
-				it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem.class);
+				org.hyperflex.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem.class);
 	}
 
 	/**
@@ -97,11 +97,11 @@ public class CompositionModelDomainNavigatorItem extends PlatformObject {
 	 * @generated
 	 */
 	public boolean equals(Object obj) {
-		if (obj instanceof it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem) {
+		if (obj instanceof org.hyperflex.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem) {
 			return EcoreUtil
 					.getURI(getEObject())
 					.equals(EcoreUtil
-							.getURI(((it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem) obj)
+							.getURI(((org.hyperflex.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem) obj)
 									.getEObject()));
 		}
 		return super.equals(obj);

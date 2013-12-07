@@ -1,4 +1,4 @@
-package it.unibg.robotics.roscomponentmodel.diagram.providers;
+package org.hyperflex.roscomponentmodel.diagram.providers;
 
 import org.eclipse.gmf.runtime.common.ui.services.icon.IIconProvider;
 import org.eclipse.gmf.tooling.runtime.providers.DefaultElementTypeIconProvider;

@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel;
+package org.hyperflex.compositionmodel;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -36,13 +36,13 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.Connection#getSource <em>Source</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.Connection#getTarget <em>Target</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.Connection#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.Connection#getSource <em>Source</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.Connection#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.Connection#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getConnection()
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage#getConnection()
  * @model
  * @generated
  */
@@ -57,14 +57,14 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(RequiredInterface)
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getConnection_Source()
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getConnection_Source()
 	 * @model required="true"
 	 * @generated
 	 */
 	RequiredInterface getSource();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.compositionmodel.Connection#getSource <em>Source</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.compositionmodel.Connection#getSource <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Source</em>' reference.
@@ -83,14 +83,14 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
 	 * @see #setTarget(ProvidedInterface)
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getConnection_Target()
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getConnection_Target()
 	 * @model required="true"
 	 * @generated
 	 */
 	ProvidedInterface getTarget();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.compositionmodel.Connection#getTarget <em>Target</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.compositionmodel.Connection#getTarget <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Target</em>' reference.
@@ -109,14 +109,14 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getConnection_Name()
+	 * @see org.hyperflex.compositionmodel.compositionmodelPackage#getConnection_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.compositionmodel.Connection#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.compositionmodel.Connection#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.

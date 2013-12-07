@@ -24,9 +24,9 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel;
+package org.hyperflex.roscompositionmodel;
 
-import it.unibg.robotics.compositionmodel.Composite;
+import org.hyperflex.compositionmodel.Composite;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,11 +36,11 @@ import it.unibg.robotics.compositionmodel.Composite;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscompositionmodel.ROSComposite#getComposite <em>Composite</em>}</li>
+ *   <li>{@link org.hyperflex.roscompositionmodel.ROSComposite#getComposite <em>Composite</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getROSComposite()
+ * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getROSComposite()
  * @model
  * @generated
  */
@@ -55,14 +55,14 @@ public interface ROSComposite extends Composite {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Composite</em>' reference.
 	 * @see #setComposite(Composite)
-	 * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getROSComposite_Composite()
+	 * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getROSComposite_Composite()
 	 * @model required="true"
 	 * @generated
 	 */
 	Composite getComposite();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscompositionmodel.ROSComposite#getComposite <em>Composite</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.roscompositionmodel.ROSComposite#getComposite <em>Composite</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Composite</em>' reference.

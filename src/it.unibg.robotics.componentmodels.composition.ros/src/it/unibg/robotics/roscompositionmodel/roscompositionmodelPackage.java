@@ -24,9 +24,9 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel;
+package org.hyperflex.roscompositionmodel;
 
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -43,7 +43,7 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelFactory
+ * @see org.hyperflex.roscompositionmodel.roscompositionmodelFactory
  * @model kind="package"
  * @generated
  */
@@ -78,14 +78,14 @@ public interface roscompositionmodelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	roscompositionmodelPackage eINSTANCE = it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl.init();
+	roscompositionmodelPackage eINSTANCE = org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscompositionmodel.impl.ROSCompositeImpl <em>ROS Composite</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.roscompositionmodel.impl.ROSCompositeImpl <em>ROS Composite</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscompositionmodel.impl.ROSCompositeImpl
-	 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSComposite()
+	 * @see org.hyperflex.roscompositionmodel.impl.ROSCompositeImpl
+	 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSComposite()
 	 * @generated
 	 */
 	int ROS_COMPOSITE = 0;
@@ -136,11 +136,11 @@ public interface roscompositionmodelPackage extends EPackage {
 	int ROS_COMPOSITE_FEATURE_COUNT = compositionmodelPackage.COMPOSITE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscompositionmodel.impl.ROSMsgProducerImpl <em>ROS Msg Producer</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.roscompositionmodel.impl.ROSMsgProducerImpl <em>ROS Msg Producer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscompositionmodel.impl.ROSMsgProducerImpl
-	 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSMsgProducer()
+	 * @see org.hyperflex.roscompositionmodel.impl.ROSMsgProducerImpl
+	 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSMsgProducer()
 	 * @generated
 	 */
 	int ROS_MSG_PRODUCER = 1;
@@ -173,11 +173,11 @@ public interface roscompositionmodelPackage extends EPackage {
 	int ROS_MSG_PRODUCER_FEATURE_COUNT = compositionmodelPackage.COMP_PROVIDED_INTERF_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscompositionmodel.impl.ROSMsgConsumerImpl <em>ROS Msg Consumer</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.roscompositionmodel.impl.ROSMsgConsumerImpl <em>ROS Msg Consumer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscompositionmodel.impl.ROSMsgConsumerImpl
-	 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSMsgConsumer()
+	 * @see org.hyperflex.roscompositionmodel.impl.ROSMsgConsumerImpl
+	 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSMsgConsumer()
 	 * @generated
 	 */
 	int ROS_MSG_CONSUMER = 2;
@@ -210,11 +210,11 @@ public interface roscompositionmodelPackage extends EPackage {
 	int ROS_MSG_CONSUMER_FEATURE_COUNT = compositionmodelPackage.COMP_REQUIRED_INTERF_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscompositionmodel.impl.ROSSrvProducerImpl <em>ROS Srv Producer</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.roscompositionmodel.impl.ROSSrvProducerImpl <em>ROS Srv Producer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscompositionmodel.impl.ROSSrvProducerImpl
-	 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSSrvProducer()
+	 * @see org.hyperflex.roscompositionmodel.impl.ROSSrvProducerImpl
+	 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSSrvProducer()
 	 * @generated
 	 */
 	int ROS_SRV_PRODUCER = 3;
@@ -247,11 +247,11 @@ public interface roscompositionmodelPackage extends EPackage {
 	int ROS_SRV_PRODUCER_FEATURE_COUNT = compositionmodelPackage.COMP_PROVIDED_INTERF_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscompositionmodel.impl.ROSSrvConsumerImpl <em>ROS Srv Consumer</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.roscompositionmodel.impl.ROSSrvConsumerImpl <em>ROS Srv Consumer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscompositionmodel.impl.ROSSrvConsumerImpl
-	 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSSrvConsumer()
+	 * @see org.hyperflex.roscompositionmodel.impl.ROSSrvConsumerImpl
+	 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSSrvConsumer()
 	 * @generated
 	 */
 	int ROS_SRV_CONSUMER = 4;
@@ -284,11 +284,11 @@ public interface roscompositionmodelPackage extends EPackage {
 	int ROS_SRV_CONSUMER_FEATURE_COUNT = compositionmodelPackage.COMP_REQUIRED_INTERF_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscompositionmodel.impl.RosTopicImpl <em>Ros Topic</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.roscompositionmodel.impl.RosTopicImpl <em>Ros Topic</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscompositionmodel.impl.RosTopicImpl
-	 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getRosTopic()
+	 * @see org.hyperflex.roscompositionmodel.impl.RosTopicImpl
+	 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getRosTopic()
 	 * @generated
 	 */
 	int ROS_TOPIC = 5;
@@ -330,11 +330,11 @@ public interface roscompositionmodelPackage extends EPackage {
 	int ROS_TOPIC_FEATURE_COUNT = compositionmodelPackage.CONNECTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.roscompositionmodel.impl.ROSPropertyImpl <em>ROS Property</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.roscompositionmodel.impl.ROSPropertyImpl <em>ROS Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.roscompositionmodel.impl.ROSPropertyImpl
-	 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSProperty()
+	 * @see org.hyperflex.roscompositionmodel.impl.ROSPropertyImpl
+	 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSProperty()
 	 * @generated
 	 */
 	int ROS_PROPERTY = 6;
@@ -359,136 +359,136 @@ public interface roscompositionmodelPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscompositionmodel.ROSComposite <em>ROS Composite</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.roscompositionmodel.ROSComposite <em>ROS Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Composite</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSComposite
+	 * @see org.hyperflex.roscompositionmodel.ROSComposite
 	 * @generated
 	 */
 	EClass getROSComposite();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscompositionmodel.ROSComposite#getComposite <em>Composite</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.roscompositionmodel.ROSComposite#getComposite <em>Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Composite</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSComposite#getComposite()
+	 * @see org.hyperflex.roscompositionmodel.ROSComposite#getComposite()
 	 * @see #getROSComposite()
 	 * @generated
 	 */
 	EReference getROSComposite_Composite();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscompositionmodel.ROSMsgProducer <em>ROS Msg Producer</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.roscompositionmodel.ROSMsgProducer <em>ROS Msg Producer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Msg Producer</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSMsgProducer
+	 * @see org.hyperflex.roscompositionmodel.ROSMsgProducer
 	 * @generated
 	 */
 	EClass getROSMsgProducer();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscompositionmodel.ROSMsgProducer#getMsgProducer <em>Msg Producer</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.roscompositionmodel.ROSMsgProducer#getMsgProducer <em>Msg Producer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Msg Producer</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSMsgProducer#getMsgProducer()
+	 * @see org.hyperflex.roscompositionmodel.ROSMsgProducer#getMsgProducer()
 	 * @see #getROSMsgProducer()
 	 * @generated
 	 */
 	EReference getROSMsgProducer_MsgProducer();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscompositionmodel.ROSMsgConsumer <em>ROS Msg Consumer</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.roscompositionmodel.ROSMsgConsumer <em>ROS Msg Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Msg Consumer</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSMsgConsumer
+	 * @see org.hyperflex.roscompositionmodel.ROSMsgConsumer
 	 * @generated
 	 */
 	EClass getROSMsgConsumer();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscompositionmodel.ROSMsgConsumer#getMsgConsumer <em>Msg Consumer</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.roscompositionmodel.ROSMsgConsumer#getMsgConsumer <em>Msg Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Msg Consumer</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSMsgConsumer#getMsgConsumer()
+	 * @see org.hyperflex.roscompositionmodel.ROSMsgConsumer#getMsgConsumer()
 	 * @see #getROSMsgConsumer()
 	 * @generated
 	 */
 	EReference getROSMsgConsumer_MsgConsumer();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscompositionmodel.ROSSrvProducer <em>ROS Srv Producer</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.roscompositionmodel.ROSSrvProducer <em>ROS Srv Producer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Srv Producer</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSSrvProducer
+	 * @see org.hyperflex.roscompositionmodel.ROSSrvProducer
 	 * @generated
 	 */
 	EClass getROSSrvProducer();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscompositionmodel.ROSSrvProducer#getSrvProducer <em>Srv Producer</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.roscompositionmodel.ROSSrvProducer#getSrvProducer <em>Srv Producer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Srv Producer</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSSrvProducer#getSrvProducer()
+	 * @see org.hyperflex.roscompositionmodel.ROSSrvProducer#getSrvProducer()
 	 * @see #getROSSrvProducer()
 	 * @generated
 	 */
 	EReference getROSSrvProducer_SrvProducer();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscompositionmodel.ROSSrvConsumer <em>ROS Srv Consumer</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.roscompositionmodel.ROSSrvConsumer <em>ROS Srv Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Srv Consumer</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSSrvConsumer
+	 * @see org.hyperflex.roscompositionmodel.ROSSrvConsumer
 	 * @generated
 	 */
 	EClass getROSSrvConsumer();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscompositionmodel.ROSSrvConsumer#getSrvConsumer <em>Srv Consumer</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.roscompositionmodel.ROSSrvConsumer#getSrvConsumer <em>Srv Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Srv Consumer</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSSrvConsumer#getSrvConsumer()
+	 * @see org.hyperflex.roscompositionmodel.ROSSrvConsumer#getSrvConsumer()
 	 * @see #getROSSrvConsumer()
 	 * @generated
 	 */
 	EReference getROSSrvConsumer_SrvConsumer();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscompositionmodel.RosTopic <em>Ros Topic</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.roscompositionmodel.RosTopic <em>Ros Topic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Ros Topic</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.RosTopic
+	 * @see org.hyperflex.roscompositionmodel.RosTopic
 	 * @generated
 	 */
 	EClass getRosTopic();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.roscompositionmodel.ROSProperty <em>ROS Property</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.roscompositionmodel.ROSProperty <em>ROS Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Property</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSProperty
+	 * @see org.hyperflex.roscompositionmodel.ROSProperty
 	 * @generated
 	 */
 	EClass getROSProperty();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.roscompositionmodel.ROSProperty#getProperty <em>Property</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.roscompositionmodel.ROSProperty#getProperty <em>Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Property</em>'.
-	 * @see it.unibg.robotics.roscompositionmodel.ROSProperty#getProperty()
+	 * @see org.hyperflex.roscompositionmodel.ROSProperty#getProperty()
 	 * @see #getROSProperty()
 	 * @generated
 	 */
@@ -517,11 +517,11 @@ public interface roscompositionmodelPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscompositionmodel.impl.ROSCompositeImpl <em>ROS Composite</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.roscompositionmodel.impl.ROSCompositeImpl <em>ROS Composite</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscompositionmodel.impl.ROSCompositeImpl
-		 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSComposite()
+		 * @see org.hyperflex.roscompositionmodel.impl.ROSCompositeImpl
+		 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSComposite()
 		 * @generated
 		 */
 		EClass ROS_COMPOSITE = eINSTANCE.getROSComposite();
@@ -535,11 +535,11 @@ public interface roscompositionmodelPackage extends EPackage {
 		EReference ROS_COMPOSITE__COMPOSITE = eINSTANCE.getROSComposite_Composite();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscompositionmodel.impl.ROSMsgProducerImpl <em>ROS Msg Producer</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.roscompositionmodel.impl.ROSMsgProducerImpl <em>ROS Msg Producer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscompositionmodel.impl.ROSMsgProducerImpl
-		 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSMsgProducer()
+		 * @see org.hyperflex.roscompositionmodel.impl.ROSMsgProducerImpl
+		 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSMsgProducer()
 		 * @generated
 		 */
 		EClass ROS_MSG_PRODUCER = eINSTANCE.getROSMsgProducer();
@@ -553,11 +553,11 @@ public interface roscompositionmodelPackage extends EPackage {
 		EReference ROS_MSG_PRODUCER__MSG_PRODUCER = eINSTANCE.getROSMsgProducer_MsgProducer();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscompositionmodel.impl.ROSMsgConsumerImpl <em>ROS Msg Consumer</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.roscompositionmodel.impl.ROSMsgConsumerImpl <em>ROS Msg Consumer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscompositionmodel.impl.ROSMsgConsumerImpl
-		 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSMsgConsumer()
+		 * @see org.hyperflex.roscompositionmodel.impl.ROSMsgConsumerImpl
+		 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSMsgConsumer()
 		 * @generated
 		 */
 		EClass ROS_MSG_CONSUMER = eINSTANCE.getROSMsgConsumer();
@@ -571,11 +571,11 @@ public interface roscompositionmodelPackage extends EPackage {
 		EReference ROS_MSG_CONSUMER__MSG_CONSUMER = eINSTANCE.getROSMsgConsumer_MsgConsumer();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscompositionmodel.impl.ROSSrvProducerImpl <em>ROS Srv Producer</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.roscompositionmodel.impl.ROSSrvProducerImpl <em>ROS Srv Producer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscompositionmodel.impl.ROSSrvProducerImpl
-		 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSSrvProducer()
+		 * @see org.hyperflex.roscompositionmodel.impl.ROSSrvProducerImpl
+		 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSSrvProducer()
 		 * @generated
 		 */
 		EClass ROS_SRV_PRODUCER = eINSTANCE.getROSSrvProducer();
@@ -589,11 +589,11 @@ public interface roscompositionmodelPackage extends EPackage {
 		EReference ROS_SRV_PRODUCER__SRV_PRODUCER = eINSTANCE.getROSSrvProducer_SrvProducer();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscompositionmodel.impl.ROSSrvConsumerImpl <em>ROS Srv Consumer</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.roscompositionmodel.impl.ROSSrvConsumerImpl <em>ROS Srv Consumer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscompositionmodel.impl.ROSSrvConsumerImpl
-		 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSSrvConsumer()
+		 * @see org.hyperflex.roscompositionmodel.impl.ROSSrvConsumerImpl
+		 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSSrvConsumer()
 		 * @generated
 		 */
 		EClass ROS_SRV_CONSUMER = eINSTANCE.getROSSrvConsumer();
@@ -607,21 +607,21 @@ public interface roscompositionmodelPackage extends EPackage {
 		EReference ROS_SRV_CONSUMER__SRV_CONSUMER = eINSTANCE.getROSSrvConsumer_SrvConsumer();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscompositionmodel.impl.RosTopicImpl <em>Ros Topic</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.roscompositionmodel.impl.RosTopicImpl <em>Ros Topic</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscompositionmodel.impl.RosTopicImpl
-		 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getRosTopic()
+		 * @see org.hyperflex.roscompositionmodel.impl.RosTopicImpl
+		 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getRosTopic()
 		 * @generated
 		 */
 		EClass ROS_TOPIC = eINSTANCE.getRosTopic();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.roscompositionmodel.impl.ROSPropertyImpl <em>ROS Property</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.roscompositionmodel.impl.ROSPropertyImpl <em>ROS Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.roscompositionmodel.impl.ROSPropertyImpl
-		 * @see it.unibg.robotics.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSProperty()
+		 * @see org.hyperflex.roscompositionmodel.impl.ROSPropertyImpl
+		 * @see org.hyperflex.roscompositionmodel.impl.roscompositionmodelPackageImpl#getROSProperty()
 		 * @generated
 		 */
 		EClass ROS_PROPERTY = eINSTANCE.getROSProperty();

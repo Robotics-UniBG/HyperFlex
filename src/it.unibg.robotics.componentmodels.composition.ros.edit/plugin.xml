@@ -34,7 +34,7 @@
       <!-- @generated rosCompositionModel -->
       <factory
             uri="http://robotics.unibg.it/compositionmodels.ros"
-            class="it.unibg.robotics.roscompositionmodel.provider.roscompositionmodelItemProviderAdapterFactory"
+            class="org.hyperflex.roscompositionmodel.provider.roscompositionmodelItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -47,7 +47,7 @@
       <!-- @generated rosCompositionModel -->
       <extender
             uri="http://robotics.unibg.it/compositionmodels"
-            class="it.unibg.robotics.roscompositionmodel.provider.roscompositionmodelItemProviderAdapterFactory$compositionmodelChildCreationExtender"/>
+            class="org.hyperflex.roscompositionmodel.provider.roscompositionmodelItemProviderAdapterFactory$compositionmodelChildCreationExtender"/>
    </extension>
 
 </plugin>

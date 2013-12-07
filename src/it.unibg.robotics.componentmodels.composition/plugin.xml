@@ -32,7 +32,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://robotics.unibg.it/compositionmodels"
-            class="it.unibg.robotics.compositionmodel.compositionmodelPackage"
+            class="org.hyperflex.compositionmodel.compositionmodelPackage"
             genModel="models/abstractCompositionModel.genmodel"/>
    </extension>
 

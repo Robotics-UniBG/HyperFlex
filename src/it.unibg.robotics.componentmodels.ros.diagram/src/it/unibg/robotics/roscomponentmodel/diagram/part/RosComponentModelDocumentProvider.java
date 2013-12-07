@@ -1,4 +1,4 @@
-package it.unibg.robotics.roscomponentmodel.diagram.part;
+package org.hyperflex.roscomponentmodel.diagram.part;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -161,7 +161,7 @@ public class RosComponentModelDocumentProvider extends AbstractDocumentProvider
 		TransactionalEditingDomain editingDomain = DiagramEditingDomainFactory
 				.getInstance().createEditingDomain();
 		editingDomain
-				.setID("it.unibg.robotics.componentmodels.ros.diagram.EditingDomain"); //$NON-NLS-1$
+				.setID("org.hyperflex.componentmodels.ros.diagram.EditingDomain"); //$NON-NLS-1$
 		final NotificationFilter diagramResourceModifiedFilter = NotificationFilter
 				.createNotifierFilter(editingDomain.getResourceSet())
 				.and(NotificationFilter.createEventTypeFilter(Notification.ADD))

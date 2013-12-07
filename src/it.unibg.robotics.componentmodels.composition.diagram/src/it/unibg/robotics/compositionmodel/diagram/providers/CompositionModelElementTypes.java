@@ -1,18 +1,18 @@
-package it.unibg.robotics.compositionmodel.diagram.providers;
+package org.hyperflex.compositionmodel.diagram.providers;
 
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ConnectionEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.System2EditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
-import it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
-import it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.System2EditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
+import org.hyperflex.roscompositionmodel.roscompositionmodelPackage;
 
 import java.util.HashSet;
 import java.util.IdentityHashMap;
@@ -59,51 +59,51 @@ public class CompositionModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType ArchitectureModel_1000 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.ArchitectureModel_1000"); //$NON-NLS-1$
+	public static final IElementType ArchitectureModel_1000 = getElementType("org.hyperflex.componentmodels.composition.diagram.ArchitectureModel_1000"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType System_2002 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.System_2002"); //$NON-NLS-1$
+	public static final IElementType System_2002 = getElementType("org.hyperflex.componentmodels.composition.diagram.System_2002"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType SystemProvidedInterf_3007 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.SystemProvidedInterf_3007"); //$NON-NLS-1$
+	public static final IElementType SystemProvidedInterf_3007 = getElementType("org.hyperflex.componentmodels.composition.diagram.SystemProvidedInterf_3007"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType SystemRequiredInterf_3008 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.SystemRequiredInterf_3008"); //$NON-NLS-1$
+	public static final IElementType SystemRequiredInterf_3008 = getElementType("org.hyperflex.componentmodels.composition.diagram.SystemRequiredInterf_3008"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType SystemComposite_3009 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.SystemComposite_3009"); //$NON-NLS-1$
+	public static final IElementType SystemComposite_3009 = getElementType("org.hyperflex.componentmodels.composition.diagram.SystemComposite_3009"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType SystemCompositeProvidedInterf_3010 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.SystemCompositeProvidedInterf_3010"); //$NON-NLS-1$
+	public static final IElementType SystemCompositeProvidedInterf_3010 = getElementType("org.hyperflex.componentmodels.composition.diagram.SystemCompositeProvidedInterf_3010"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType SystemCompositeRequiredInterf_3011 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.SystemCompositeRequiredInterf_3011"); //$NON-NLS-1$
+	public static final IElementType SystemCompositeRequiredInterf_3011 = getElementType("org.hyperflex.componentmodels.composition.diagram.SystemCompositeRequiredInterf_3011"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType ROSComposite_3012 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.ROSComposite_3012"); //$NON-NLS-1$
+	public static final IElementType ROSComposite_3012 = getElementType("org.hyperflex.componentmodels.composition.diagram.ROSComposite_3012"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType ROSMsgProducer_3013 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.ROSMsgProducer_3013"); //$NON-NLS-1$
+	public static final IElementType ROSMsgProducer_3013 = getElementType("org.hyperflex.componentmodels.composition.diagram.ROSMsgProducer_3013"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType ROSMsgConsumer_3014 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.ROSMsgConsumer_3014"); //$NON-NLS-1$
+	public static final IElementType ROSMsgConsumer_3014 = getElementType("org.hyperflex.componentmodels.composition.diagram.ROSMsgConsumer_3014"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType Connection_4002 = getElementType("it.unibg.robotics.componentmodels.composition.diagram.Connection_4002"); //$NON-NLS-1$
+	public static final IElementType Connection_4002 = getElementType("org.hyperflex.componentmodels.composition.diagram.Connection_4002"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -145,37 +145,37 @@ public class CompositionModelElementTypes {
 
 			elements.put(
 					ArchitectureModel_1000,
-					it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getArchitectureModel());
 
 			elements.put(
 					System_2002,
-					it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getSystem());
 
 			elements.put(
 					SystemProvidedInterf_3007,
-					it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getSystemProvidedInterf());
 
 			elements.put(
 					SystemRequiredInterf_3008,
-					it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getSystemRequiredInterf());
 
 			elements.put(
 					SystemComposite_3009,
-					it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getSystemComposite());
 
 			elements.put(
 					SystemCompositeProvidedInterf_3010,
-					it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getSystemCompositeProvidedInterf());
 
 			elements.put(
 					SystemCompositeRequiredInterf_3011,
-					it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getSystemCompositeRequiredInterf());
 
 			elements.put(
@@ -195,7 +195,7 @@ public class CompositionModelElementTypes {
 
 			elements.put(
 					Connection_4002,
-					it.unibg.robotics.compositionmodel.compositionmodelPackage.eINSTANCE
+					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getConnection());
 		}
 		return (ENamedElement) elements.get(type);
@@ -271,7 +271,7 @@ public class CompositionModelElementTypes {
 		 */
 		@Override
 		public boolean isKnownElementType(IElementType elementType) {
-			return it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes
+			return org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes
 					.isKnownElementType(elementType);
 		}
 
@@ -280,7 +280,7 @@ public class CompositionModelElementTypes {
 		 */
 		@Override
 		public IElementType getElementTypeForVisualId(int visualID) {
-			return it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes
+			return org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes
 					.getElementType(visualID);
 		}
 
@@ -290,7 +290,7 @@ public class CompositionModelElementTypes {
 		@Override
 		public ENamedElement getDefiningNamedElement(
 				IAdaptable elementTypeAdapter) {
-			return it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelElementTypes
+			return org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes
 					.getElement(elementTypeAdapter);
 		}
 	};

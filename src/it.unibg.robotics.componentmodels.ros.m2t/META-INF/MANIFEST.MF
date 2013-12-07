@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: it.unibg.robotics.componentmodels.ros.m2t;singleton:=true
+Bundle-SymbolicName: org.hyperflex.componentmodels.ros.m2t;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: it.unibg.robotics.componentmodels.ros.m2t.Activator
+Bundle-Activator: org.hyperflex.componentmodels.ros.m2t.Activator
 Bundle-Vendor: Luca Gherardi
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -17,8 +17,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.gmf.runtime.diagram.ui.resources.editor;bundle-version="1.4.1",
  org.eclipse.epsilon.common.dt;bundle-version="0.9.1",
  org.eclipse.epsilon.eol.dt;bundle-version="0.9.1",
- it.unibg.robotics.componentmodels.ros.diagram;bundle-version="1.0.0",
- it.unibg.robotics.componentmodels.ros.model;bundle-version="1.0.0",
+ org.hyperflex.componentmodels.ros.diagram;bundle-version="1.0.0",
+ org.hyperflex.componentmodels.ros.model;bundle-version="1.0.0",
  org.best_of_robotics.transform.service;bundle-version="1.0.0",
  org.hyperflex.componentmodels.ui;bundle-version="1.0.0",
  org.hyperflex.componentmodels.m2t;bundle-version="1.0.0"

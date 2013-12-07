@@ -28,7 +28,7 @@
 
 [%
 var orocosHelper =
-  new Native("it.unibg.robotics.componentmodels.orocos.m2t.tools.OrocosXmlTools");
+  new Native("org.hyperflex.componentmodels.orocos.m2t.tools.OrocosXmlTools");
   
 for(child in composite.components) {
 %]

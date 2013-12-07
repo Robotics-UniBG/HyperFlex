@@ -2,7 +2,7 @@
 <?eclipse version="3.0"?>
 
 <!--
- HyperFlex Plugins (VARP)
+ HyperFlex Plugins
  
  Copyright (c) 2013
  All rights reserved.
@@ -32,8 +32,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated orocosComponentModel -->
       <factory
-            uri="http://robotics.unibg.it/componentmodels.orocos"
-            class="it.unibg.robotics.orocoscomponentmodel.provider.orocoscomponentmodelItemProviderAdapterFactory"
+            uri="http://www.hyperflex.org/componentmodels.orocos"
+            class="org.hyperflex.orocoscomponentmodel.provider.orocoscomponentmodelItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

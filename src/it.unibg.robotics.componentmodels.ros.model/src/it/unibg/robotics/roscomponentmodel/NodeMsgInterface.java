@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 
 /**
@@ -34,11 +34,11 @@ package it.unibg.robotics.roscomponentmodel;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.NodeMsgInterface#getTopicName <em>Topic Name</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.NodeMsgInterface#getTopicName <em>Topic Name</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNodeMsgInterface()
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNodeMsgInterface()
  * @model
  * @generated
  */
@@ -53,14 +53,14 @@ public interface NodeMsgInterface extends MsgInterface {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Topic Name</em>' attribute.
 	 * @see #setTopicName(String)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getNodeMsgInterface_TopicName()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getNodeMsgInterface_TopicName()
 	 * @model
 	 * @generated
 	 */
 	String getTopicName();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.NodeMsgInterface#getTopicName <em>Topic Name</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.NodeMsgInterface#getTopicName <em>Topic Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Topic Name</em>' attribute.

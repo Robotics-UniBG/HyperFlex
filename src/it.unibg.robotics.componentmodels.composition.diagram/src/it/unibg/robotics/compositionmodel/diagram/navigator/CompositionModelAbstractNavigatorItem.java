@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.navigator;
+package org.hyperflex.compositionmodel.diagram.navigator;
 
 import org.eclipse.core.runtime.IAdapterFactory;
 import org.eclipse.core.runtime.Platform;
@@ -18,7 +18,7 @@ public abstract class CompositionModelAbstractNavigatorItem extends
 		final Class[] supportedTypes = new Class[] { ITabbedPropertySheetPageContributor.class };
 		final ITabbedPropertySheetPageContributor propertySheetPageContributor = new ITabbedPropertySheetPageContributor() {
 			public String getContributorId() {
-				return "it.unibg.robotics.componentmodels.composition.diagram"; //$NON-NLS-1$
+				return "org.hyperflex.componentmodels.composition.diagram"; //$NON-NLS-1$
 			}
 		};
 		Platform.getAdapterManager().registerAdapters(
@@ -26,7 +26,7 @@ public abstract class CompositionModelAbstractNavigatorItem extends
 
 					public Object getAdapter(Object adaptableObject,
 							Class adapterType) {
-						if (adaptableObject instanceof it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem
+						if (adaptableObject instanceof org.hyperflex.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem
 								&& adapterType == ITabbedPropertySheetPageContributor.class) {
 							return propertySheetPageContributor;
 						}
@@ -37,7 +37,7 @@ public abstract class CompositionModelAbstractNavigatorItem extends
 						return supportedTypes;
 					}
 				},
-				it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem.class);
+				org.hyperflex.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem.class);
 	}
 
 	/**

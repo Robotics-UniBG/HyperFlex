@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel;
+package org.hyperflex.compositionmodel;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage
  * @generated
  */
 public interface compositionmodelFactory extends EFactory {
@@ -43,7 +43,7 @@ public interface compositionmodelFactory extends EFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	compositionmodelFactory eINSTANCE = it.unibg.robotics.compositionmodel.impl.compositionmodelFactoryImpl.init();
+	compositionmodelFactory eINSTANCE = org.hyperflex.compositionmodel.impl.compositionmodelFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>System</em>'.

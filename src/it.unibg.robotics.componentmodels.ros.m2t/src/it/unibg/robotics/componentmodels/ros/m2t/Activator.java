@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.componentmodels.ros.m2t;
+package org.hyperflex.componentmodels.ros.m2t;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -35,7 +35,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "it.unibg.robotics.componentmodels.ros.m2t"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.hyperflex.componentmodels.ros.m2t"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

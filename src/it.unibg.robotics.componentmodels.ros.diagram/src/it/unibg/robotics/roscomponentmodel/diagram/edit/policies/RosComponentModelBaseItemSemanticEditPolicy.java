@@ -1,12 +1,12 @@
-package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
+package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import it.unibg.robotics.roscomponentmodel.CompositeMsgInterface;
-import it.unibg.robotics.roscomponentmodel.MsgInterface;
-import it.unibg.robotics.roscomponentmodel.Topic;
-import it.unibg.robotics.roscomponentmodel.diagram.expressions.RosComponentModelOCLFactory;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-import it.unibg.robotics.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
+import org.hyperflex.roscomponentmodel.CompositeMsgInterface;
+import org.hyperflex.roscomponentmodel.MsgInterface;
+import org.hyperflex.roscomponentmodel.Topic;
+import org.hyperflex.roscomponentmodel.diagram.expressions.RosComponentModelOCLFactory;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 import java.util.Collections;
 import java.util.Iterator;
@@ -396,11 +396,11 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE.getTopic()); //$NON-NLS-1$
+									"oppositeEnd", org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE.getTopic()); //$NON-NLS-1$
 					Object sourceVal = RosComponentModelOCLFactory
 							.getExpression(
 									0,
-									it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+									org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 											.getMsgInterface(), env).evaluate(
 									source,
 									Collections.singletonMap(
@@ -429,11 +429,11 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE.getTopic()); //$NON-NLS-1$
+									"oppositeEnd", org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE.getTopic()); //$NON-NLS-1$
 					Object sourceVal = RosComponentModelOCLFactory
 							.getExpression(
 									1,
-									it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+									org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 											.getMsgInterface(), env).evaluate(
 									source,
 									Collections.singletonMap(
@@ -462,11 +462,11 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE.getTopic()); //$NON-NLS-1$
+									"oppositeEnd", org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE.getTopic()); //$NON-NLS-1$
 					Object sourceVal = RosComponentModelOCLFactory
 							.getExpression(
 									2,
-									it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+									org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 											.getCompositeMsgInterface(), env)
 							.evaluate(
 									source,
@@ -496,11 +496,11 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 				} else {
 					Map<String, EClassifier> env = Collections
 							.<String, EClassifier> singletonMap(
-									"oppositeEnd", it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE.getTopic()); //$NON-NLS-1$
+									"oppositeEnd", org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE.getTopic()); //$NON-NLS-1$
 					Object sourceVal = RosComponentModelOCLFactory
 							.getExpression(
 									3,
-									it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+									org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 											.getCompositeMsgInterface(), env)
 							.evaluate(
 									source,

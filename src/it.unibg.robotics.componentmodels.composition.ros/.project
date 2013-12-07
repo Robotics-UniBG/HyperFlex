@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>it.unibg.robotics.compositionmodels.ros.model</name>
+	<name>org.hyperflex.compositionmodels.ros.model</name>
 	<comment></comment>
 	<projects>
 	</projects>

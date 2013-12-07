@@ -1,17 +1,17 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: it.unibg.robotics.componentmodels.ros.model.editor;singleton:=true
+Bundle-SymbolicName: org.hyperflex.componentmodels.ros.model.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: it.unibg.robotics.roscomponentmodel.presentation.RosComponentModelEditorPlugin$Implementation
+Bundle-Activator: org.hyperflex.roscomponentmodel.presentation.RosComponentModelEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: it.unibg.robotics.roscomponentmodel.presentation
+Export-Package: org.hyperflex.roscomponentmodel.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
- it.unibg.robotics.componentmodels.ros.model.edit;visibility:=reexport,
+ org.hyperflex.componentmodels.ros.model.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport

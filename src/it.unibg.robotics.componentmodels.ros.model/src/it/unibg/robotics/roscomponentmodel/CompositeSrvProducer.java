@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 
 /**
@@ -34,11 +34,11 @@ package it.unibg.robotics.roscomponentmodel;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.CompositeSrvProducer#getPromote <em>Promote</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.CompositeSrvProducer#getPromote <em>Promote</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getCompositeSrvProducer()
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getCompositeSrvProducer()
  * @model
  * @generated
  */
@@ -53,14 +53,14 @@ public interface CompositeSrvProducer extends SrvProducer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Promote</em>' reference.
 	 * @see #setPromote(SrvProducer)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getCompositeSrvProducer_Promote()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getCompositeSrvProducer_Promote()
 	 * @model
 	 * @generated
 	 */
 	SrvProducer getPromote();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.CompositeSrvProducer#getPromote <em>Promote</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.CompositeSrvProducer#getPromote <em>Promote</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Promote</em>' reference.

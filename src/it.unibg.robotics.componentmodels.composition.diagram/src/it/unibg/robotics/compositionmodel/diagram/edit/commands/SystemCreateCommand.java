@@ -1,7 +1,7 @@
-package it.unibg.robotics.compositionmodel.diagram.edit.commands;
+package org.hyperflex.compositionmodel.diagram.edit.commands;
 
-import it.unibg.robotics.compositionmodel.ArchitectureModel;
-import it.unibg.robotics.compositionmodel.System;
+import org.hyperflex.compositionmodel.ArchitectureModel;
+import org.hyperflex.compositionmodel.System;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
@@ -57,7 +57,7 @@ public class SystemCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		System newElement = it.unibg.robotics.compositionmodel.compositionmodelFactory.eINSTANCE
+		System newElement = org.hyperflex.compositionmodel.compositionmodelFactory.eINSTANCE
 				.createSystem();
 
 		ArchitectureModel owner = (ArchitectureModel) getElementToEdit();

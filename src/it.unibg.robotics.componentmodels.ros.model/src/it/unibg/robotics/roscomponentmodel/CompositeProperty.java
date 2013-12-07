@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel;
+package org.hyperflex.roscomponentmodel;
 
 
 /**
@@ -34,11 +34,11 @@ package it.unibg.robotics.roscomponentmodel;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.CompositeProperty#getExposed <em>Exposed</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.CompositeProperty#getExposed <em>Exposed</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getCompositeProperty()
+ * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getCompositeProperty()
  * @model
  * @generated
  */
@@ -53,14 +53,14 @@ public interface CompositeProperty extends Property {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exposed</em>' reference.
 	 * @see #setExposed(Property)
-	 * @see it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage#getCompositeProperty_Exposed()
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getCompositeProperty_Exposed()
 	 * @model required="true"
 	 * @generated
 	 */
 	Property getExposed();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscomponentmodel.CompositeProperty#getExposed <em>Exposed</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.CompositeProperty#getExposed <em>Exposed</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Exposed</em>' reference.

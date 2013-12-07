@@ -24,9 +24,9 @@
  * 
  * 
  */
-package it.unibg.robotics.componentmodels.ros.m2t.handler;
+package org.hyperflex.componentmodels.ros.m2t.handler;
 
-import it.unibg.robotics.componentmodels.ros.m2t.Activator;
+import org.hyperflex.componentmodels.ros.m2t.Activator;
 
 import java.io.IOException;
 import java.net.URL;
@@ -97,7 +97,7 @@ public class RosLaunchTransform extends AbstractHandler {
 		eglTransformParameter.setTransformName("ROS System to roslaunch implementation");
 		eglTransformParameter.setEglTransform(fileURL);
 		eglTransformParameter.setPluginID(Activator.PLUGIN_ID);
-		eglTransformParameter.setSourceMetaModelURI("http://robotics.unibg.it/componentmodels.ros");
+		eglTransformParameter.setSourceMetaModelURI("http://www.hyperflex.org/componentmodels.ros");
 		eglTransformParameter.setSourceModelFilePath(sourcefile.getLocation().removeFileExtension().toOSString() + ".roscomponentmodel");
 		eglTransformParameter.setSourceName("Source");
 		eglTransformParameter.setSourceReadOnLoad(true);

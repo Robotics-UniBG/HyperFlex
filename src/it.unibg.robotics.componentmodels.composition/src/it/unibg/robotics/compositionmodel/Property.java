@@ -24,7 +24,7 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel;
+package org.hyperflex.compositionmodel;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see it.unibg.robotics.compositionmodel.compositionmodelPackage#getProperty()
+ * @see org.hyperflex.compositionmodel.compositionmodelPackage#getProperty()
  * @model abstract="true"
  * @generated
  */

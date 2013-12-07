@@ -23,11 +23,11 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.impl;
+package org.hyperflex.roscomponentmodel.impl;
 
-import it.unibg.robotics.roscomponentmodel.CompositeSrvConsumer;
-import it.unibg.robotics.roscomponentmodel.SrvConsumer;
-import it.unibg.robotics.roscomponentmodel.roscomponentmodelPackage;
+import org.hyperflex.roscomponentmodel.CompositeSrvConsumer;
+import org.hyperflex.roscomponentmodel.SrvConsumer;
+import org.hyperflex.roscomponentmodel.roscomponentmodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -41,7 +41,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscomponentmodel.impl.CompositeSrvConsumerImpl#getPromote <em>Promote</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.CompositeSrvConsumerImpl#getPromote <em>Promote</em>}</li>
  * </ul>
  * </p>
  *

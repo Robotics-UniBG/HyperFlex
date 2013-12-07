@@ -24,11 +24,11 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel;
+package org.hyperflex.roscompositionmodel;
 
-import it.unibg.robotics.compositionmodel.Property;
+import org.hyperflex.compositionmodel.Property;
 
-import it.unibg.robotics.roscomponentmodel.CompositeProperty;
+import org.hyperflex.roscomponentmodel.CompositeProperty;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,11 +38,11 @@ import it.unibg.robotics.roscomponentmodel.CompositeProperty;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscompositionmodel.ROSProperty#getProperty <em>Property</em>}</li>
+ *   <li>{@link org.hyperflex.roscompositionmodel.ROSProperty#getProperty <em>Property</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getROSProperty()
+ * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getROSProperty()
  * @model
  * @generated
  */
@@ -57,14 +57,14 @@ public interface ROSProperty extends Property {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Property</em>' reference.
 	 * @see #setProperty(CompositeProperty)
-	 * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getROSProperty_Property()
+	 * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getROSProperty_Property()
 	 * @model
 	 * @generated
 	 */
 	CompositeProperty getProperty();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscompositionmodel.ROSProperty#getProperty <em>Property</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.roscompositionmodel.ROSProperty#getProperty <em>Property</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Property</em>' reference.

@@ -24,12 +24,12 @@
  * 
  * 
  */
-package it.unibg.robotics.compositionmodel.impl;
+package org.hyperflex.compositionmodel.impl;
 
-import it.unibg.robotics.compositionmodel.CompProvidedInterf;
-import it.unibg.robotics.compositionmodel.CompRequiredInterf;
-import it.unibg.robotics.compositionmodel.Composite;
-import it.unibg.robotics.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.CompProvidedInterf;
+import org.hyperflex.compositionmodel.CompRequiredInterf;
+import org.hyperflex.compositionmodel.Composite;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
 
 import java.util.Collection;
 
@@ -54,9 +54,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.CompositeImpl#getProvInterfaces <em>Prov Interfaces</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.CompositeImpl#getReqInterfaces <em>Req Interfaces</em>}</li>
- *   <li>{@link it.unibg.robotics.compositionmodel.impl.CompositeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.CompositeImpl#getProvInterfaces <em>Prov Interfaces</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.CompositeImpl#getReqInterfaces <em>Req Interfaces</em>}</li>
+ *   <li>{@link org.hyperflex.compositionmodel.impl.CompositeImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *

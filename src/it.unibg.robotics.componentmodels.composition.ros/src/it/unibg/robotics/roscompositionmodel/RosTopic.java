@@ -24,9 +24,9 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel;
+package org.hyperflex.roscompositionmodel;
 
-import it.unibg.robotics.compositionmodel.Connection;
+import org.hyperflex.compositionmodel.Connection;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ import it.unibg.robotics.compositionmodel.Connection;
  * <!-- end-user-doc -->
  *
  *
- * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getRosTopic()
+ * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getRosTopic()
  * @model
  * @generated
  */

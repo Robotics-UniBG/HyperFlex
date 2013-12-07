@@ -1,4 +1,4 @@
-package it.unibg.robotics.compositionmodel.diagram.part;
+package org.hyperflex.compositionmodel.diagram.part;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -161,7 +161,7 @@ public class CompositionModelDocumentProvider extends AbstractDocumentProvider
 		TransactionalEditingDomain editingDomain = DiagramEditingDomainFactory
 				.getInstance().createEditingDomain();
 		editingDomain
-				.setID("it.unibg.robotics.componentmodels.composition.diagram.EditingDomain"); //$NON-NLS-1$
+				.setID("org.hyperflex.componentmodels.composition.diagram.EditingDomain"); //$NON-NLS-1$
 		final NotificationFilter diagramResourceModifiedFilter = NotificationFilter
 				.createNotifierFilter(editingDomain.getResourceSet())
 				.and(NotificationFilter.createEventTypeFilter(Notification.ADD))

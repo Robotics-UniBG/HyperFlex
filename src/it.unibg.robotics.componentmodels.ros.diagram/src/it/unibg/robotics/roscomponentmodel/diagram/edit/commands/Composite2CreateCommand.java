@@ -23,9 +23,9 @@
  * 
  * 
  */
-package it.unibg.robotics.roscomponentmodel.diagram.edit.commands;
+package org.hyperflex.roscomponentmodel.diagram.edit.commands;
 
-import it.unibg.robotics.roscomponentmodel.Composite;
+import org.hyperflex.roscomponentmodel.Composite;
 
 import java.io.IOException;
 
@@ -125,7 +125,7 @@ public class Composite2CreateCommand extends EditElementCommand {
 							.newErrorCommandResult("File Selection Error");
 				}
 
-				it.unibg.robotics.roscomponentmodel.System ePackage = (it.unibg.robotics.roscomponentmodel.System) ecoreResource
+				org.hyperflex.roscomponentmodel.System ePackage = (org.hyperflex.roscomponentmodel.System) ecoreResource
 						.getContents().get(0);
 				Composite newElement = ePackage.getComposite();
 
@@ -144,7 +144,7 @@ public class Composite2CreateCommand extends EditElementCommand {
 			return CommandResult.newErrorCommandResult("File Selection Error");
 		}
 
-		//		Package newElement = it.unibg.robotics.roscomponentmodel.roscomponentmodelFactory.eINSTANCE
+		//		Package newElement = org.hyperflex.roscomponentmodel.roscomponentmodelFactory.eINSTANCE
 		//				.createPackage();
 
 		//		

@@ -1,6 +1,6 @@
-package it.unibg.robotics.roscomponentmodel.diagram.preferences;
+package org.hyperflex.roscomponentmodel.diagram.preferences;
 
-import it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
 
 import org.eclipse.gmf.runtime.diagram.ui.preferences.ConnectionsPreferencePage;
 

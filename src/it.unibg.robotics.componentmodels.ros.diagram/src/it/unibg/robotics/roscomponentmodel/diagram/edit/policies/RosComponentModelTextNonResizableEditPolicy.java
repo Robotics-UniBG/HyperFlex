@@ -1,4 +1,4 @@
-package it.unibg.robotics.roscomponentmodel.diagram.edit.policies;
+package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
 import java.util.Collections;
 import java.util.List;

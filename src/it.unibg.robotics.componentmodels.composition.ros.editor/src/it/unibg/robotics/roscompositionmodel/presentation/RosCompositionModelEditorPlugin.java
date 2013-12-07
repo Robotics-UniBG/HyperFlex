@@ -24,11 +24,11 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel.presentation;
+package org.hyperflex.roscompositionmodel.presentation;
 
-import it.unibg.robotics.compositionmodel.provider.CompositionModelEditPlugin;
+import org.hyperflex.compositionmodel.provider.CompositionModelEditPlugin;
 
-import it.unibg.robotics.roscomponentmodel.provider.RosComponentModelEditPlugin;
+import org.hyperflex.roscomponentmodel.provider.RosComponentModelEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
 

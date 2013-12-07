@@ -1,7 +1,7 @@
-package it.unibg.robotics.compositionmodel.diagram.part;
+package org.hyperflex.compositionmodel.diagram.part;
 
-import it.unibg.robotics.compositionmodel.ArchitectureModel;
-import it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart;
+import org.hyperflex.compositionmodel.ArchitectureModel;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -174,10 +174,10 @@ public class CompositionModelDiagramEditorUtil {
 
 				try {
 					modelResource
-							.save(it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorUtil
+							.save(org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorUtil
 									.getSaveOptions());
 					diagramResource
-							.save(it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorUtil
+							.save(org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorUtil
 									.getSaveOptions());
 				} catch (IOException e) {
 
@@ -206,7 +206,7 @@ public class CompositionModelDiagramEditorUtil {
 	 * @generated
 	 */
 	private static ArchitectureModel createInitialModel() {
-		return it.unibg.robotics.compositionmodel.compositionmodelFactory.eINSTANCE
+		return org.hyperflex.compositionmodel.compositionmodelFactory.eINSTANCE
 				.createArchitectureModel();
 	}
 

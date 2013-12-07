@@ -1,7 +1,7 @@
-package it.unibg.robotics.roscomponentmodel.diagram.part;
+package org.hyperflex.roscomponentmodel.diagram.part;
 
-import it.unibg.robotics.roscomponentmodel.System;
-import it.unibg.robotics.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import org.hyperflex.roscomponentmodel.System;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -174,10 +174,10 @@ public class RosComponentModelDiagramEditorUtil {
 
 				try {
 					modelResource
-							.save(it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorUtil
+							.save(org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorUtil
 									.getSaveOptions());
 					diagramResource
-							.save(it.unibg.robotics.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorUtil
+							.save(org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorUtil
 									.getSaveOptions());
 				} catch (IOException e) {
 
@@ -208,7 +208,7 @@ public class RosComponentModelDiagramEditorUtil {
 	 * @generated
 	 */
 	private static System createInitialModel() {
-		return it.unibg.robotics.roscomponentmodel.roscomponentmodelFactory.eINSTANCE
+		return org.hyperflex.roscomponentmodel.roscomponentmodelFactory.eINSTANCE
 				.createSystem();
 	}
 

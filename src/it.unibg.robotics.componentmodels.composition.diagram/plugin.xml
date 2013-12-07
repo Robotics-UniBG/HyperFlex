@@ -18,14 +18,14 @@
    <extension point="org.eclipse.ui.editors" id="gmf-editor">
       <?gmfgen generated="true"?>
       <editor
-         id="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorID"
+         id="org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorID"
          name="%editorName"
          icon="icons/obj16/compositionmodelDiagramFile.gif"
          extensions="compositionmodel_diagram"
          default="true"
-         class="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditor"
-         matchingStrategy="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelMatchingStrategy"
-         contributorClass="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramActionBarContributor">
+         class="org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditor"
+         matchingStrategy="org.hyperflex.compositionmodel.diagram.part.CompositionModelMatchingStrategy"
+         contributorClass="org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramActionBarContributor">
       </editor>
    </extension>
    
@@ -33,7 +33,7 @@
       <?gmfgen generated="true"?>
       <context
          description="%context.description"
-         id="it.unibg.robotics.compositionmodel.diagram.ui.diagramContext"
+         id="org.hyperflex.compositionmodel.diagram.ui.diagramContext"
          name="%context.name"
          parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
       </context>
@@ -45,8 +45,8 @@
   	     name="%newWizardName"
   	     icon="icons/obj16/compositionmodelDiagramFile.gif"
   	     category="it.robotics.unibg.hyperflex.wizard.category"
-  	     class="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelCreationWizard"
-  	     id="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelCreationWizardID">
+  	     class="org.hyperflex.compositionmodel.diagram.part.CompositionModelCreationWizard"
+  	     id="org.hyperflex.compositionmodel.diagram.part.CompositionModelCreationWizardID">
   	  	 <description>%newWizardDesc</description>  
       </wizard>
    </extension>
@@ -54,15 +54,15 @@
    <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
       <?gmfgen generated="true"?>
       <objectContribution
-            id="it.unibg.robotics.componentmodels.composition.diagram.InitDiagram"
+            id="org.hyperflex.componentmodels.composition.diagram.InitDiagram"
             nameFilter="*.compositionmodel"
             objectClass="org.eclipse.core.resources.IFile">
          <action
                label="%initDiagramActionLabel"
-               class="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelInitDiagramFileAction"
+               class="org.hyperflex.compositionmodel.diagram.part.CompositionModelInitDiagramFileAction"
                menubarPath="additions"
                enablesFor="1"
-               id="it.unibg.robotics.componentmodels.composition.diagram.InitDiagramAction">
+               id="org.hyperflex.componentmodels.composition.diagram.InitDiagramAction">
          </action>
       </objectContribution>
    </extension>
@@ -73,7 +73,7 @@
          class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
          id="CompositionModelPresentation">
          <Priority name="Lowest"/>
-         <ViewId id="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorID">
+         <ViewId id="org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="delete"/>
             </ElementType>
@@ -90,7 +90,7 @@
          class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
          id="CompositionModelPresentationIDE">
          <Priority name="Lowest"/>
-         <ViewId id="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorID">
+         <ViewId id="org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="bookmark"/>
             </ElementType>
@@ -100,7 +100,7 @@
             class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
             id="CompositionModelRender">
          <Priority name="Lowest"/>
-         <ViewId id="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorID">
+         <ViewId id="org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorID">
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
                <GlobalActionId actionId="cut"/>
                <GlobalActionId actionId="copy"/>
@@ -113,47 +113,47 @@
 
    <extension point="org.eclipse.core.runtime.preferences" id="prefs">
       <?gmfgen generated="true"?>
-      <initializer class="it.unibg.robotics.compositionmodel.diagram.preferences.DiagramPreferenceInitializer"/>
+      <initializer class="org.hyperflex.compositionmodel.diagram.preferences.DiagramPreferenceInitializer"/>
    </extension>
 
    <extension point="org.eclipse.ui.preferencePages" id="prefpages">
       <?gmfgen generated="true"?>
       <page
-            id="it.unibg.robotics.componentmodels.composition.diagram.general"
-            name="%prefpage.it.unibg.robotics.componentmodels.composition.diagram.general"
-            class="it.unibg.robotics.compositionmodel.diagram.preferences.DiagramGeneralPreferencePage">
+            id="org.hyperflex.componentmodels.composition.diagram.general"
+            name="%prefpage.org.hyperflex.componentmodels.composition.diagram.general"
+            class="org.hyperflex.compositionmodel.diagram.preferences.DiagramGeneralPreferencePage">
       </page>
       <page
-            id="it.unibg.robotics.componentmodels.composition.diagram.appearance"
-            name="%prefpage.it.unibg.robotics.componentmodels.composition.diagram.appearance"
-            category="it.unibg.robotics.componentmodels.composition.diagram.general"
-            class="it.unibg.robotics.compositionmodel.diagram.preferences.DiagramAppearancePreferencePage">
+            id="org.hyperflex.componentmodels.composition.diagram.appearance"
+            name="%prefpage.org.hyperflex.componentmodels.composition.diagram.appearance"
+            category="org.hyperflex.componentmodels.composition.diagram.general"
+            class="org.hyperflex.compositionmodel.diagram.preferences.DiagramAppearancePreferencePage">
       </page>
       <page
-            id="it.unibg.robotics.componentmodels.composition.diagram.connections"
-            name="%prefpage.it.unibg.robotics.componentmodels.composition.diagram.connections"
-            category="it.unibg.robotics.componentmodels.composition.diagram.general"
-            class="it.unibg.robotics.compositionmodel.diagram.preferences.DiagramConnectionsPreferencePage">
+            id="org.hyperflex.componentmodels.composition.diagram.connections"
+            name="%prefpage.org.hyperflex.componentmodels.composition.diagram.connections"
+            category="org.hyperflex.componentmodels.composition.diagram.general"
+            class="org.hyperflex.compositionmodel.diagram.preferences.DiagramConnectionsPreferencePage">
       </page>
       <page
-            id="it.unibg.robotics.componentmodels.composition.diagram.printing"
-            name="%prefpage.it.unibg.robotics.componentmodels.composition.diagram.printing"
-            category="it.unibg.robotics.componentmodels.composition.diagram.general"
-            class="it.unibg.robotics.compositionmodel.diagram.preferences.DiagramPrintingPreferencePage">
+            id="org.hyperflex.componentmodels.composition.diagram.printing"
+            name="%prefpage.org.hyperflex.componentmodels.composition.diagram.printing"
+            category="org.hyperflex.componentmodels.composition.diagram.general"
+            class="org.hyperflex.compositionmodel.diagram.preferences.DiagramPrintingPreferencePage">
       </page>
       <page
-            id="it.unibg.robotics.componentmodels.composition.diagram.rulersAndGrid"
-            name="%prefpage.it.unibg.robotics.componentmodels.composition.diagram.rulersAndGrid"
-            category="it.unibg.robotics.componentmodels.composition.diagram.general"
-            class="it.unibg.robotics.compositionmodel.diagram.preferences.DiagramRulersAndGridPreferencePage">
+            id="org.hyperflex.componentmodels.composition.diagram.rulersAndGrid"
+            name="%prefpage.org.hyperflex.componentmodels.composition.diagram.rulersAndGrid"
+            category="org.hyperflex.componentmodels.composition.diagram.general"
+            class="org.hyperflex.compositionmodel.diagram.preferences.DiagramRulersAndGridPreferencePage">
       </page>
    </extension>
 
    <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
       <?gmfgen generated="true"?>
       <propertyContributor
-            contributorId="it.unibg.robotics.componentmodels.composition.diagram"
-            labelProvider="it.unibg.robotics.compositionmodel.diagram.sheet.CompositionModelSheetLabelProvider">
+            contributorId="org.hyperflex.componentmodels.composition.diagram"
+            labelProvider="org.hyperflex.compositionmodel.diagram.sheet.CompositionModelSheetLabelProvider">
          <propertyCategory category="domain"/>
          <propertyCategory category="visual"/>
          <propertyCategory category="extra"/>
@@ -162,7 +162,7 @@
 
    <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
       <?gmfgen generated="true"?>   
-      <propertyTabs contributorId="it.unibg.robotics.componentmodels.composition.diagram">
+      <propertyTabs contributorId="org.hyperflex.componentmodels.composition.diagram">
          <propertyTab
              category="visual"
              id="property.tab.AppearancePropertySection"
@@ -180,7 +180,7 @@
 
    <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
       <?gmfgen generated="true"?>   
-      <propertySections contributorId="it.unibg.robotics.componentmodels.composition.diagram">
+      <propertySections contributorId="org.hyperflex.componentmodels.composition.diagram">
          <propertySection id="property.section.ConnectorAppearancePropertySection" 
             filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
             class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
@@ -204,17 +204,17 @@
          <propertySection
             id="property.section.domain" 
             tab="property.tab.domain"
-            class="it.unibg.robotics.compositionmodel.diagram.sheet.CompositionModelPropertySection">
+            class="org.hyperflex.compositionmodel.diagram.sheet.CompositionModelPropertySection">
             <input type="org.eclipse.gmf.runtime.notation.View"/>
             <input type="org.eclipse.gef.EditPart"/>
-            <input type="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem"/>
+            <input type="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem"/>
          </propertySection>
       </propertySections>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
       <?gmfgen generated="true"?>
-      <viewProvider class="it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelViewProvider">
+      <viewProvider class="org.hyperflex.compositionmodel.diagram.providers.CompositionModelViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="CompositionModel"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2002,3007,3008,3009,3010,3011,3012,3013,3014"/>
@@ -224,7 +224,7 @@
 
    <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
       <?gmfgen generated="true"?>
-      <editpartProvider class="it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelEditPartProvider">
+      <editpartProvider class="org.hyperflex.compositionmodel.diagram.providers.CompositionModelEditPartProvider">
          <Priority name="Lowest"/>
          <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
             <method name="getType()" value="CompositionModel"/>
@@ -247,25 +247,25 @@
 
    <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
       <?gmfgen generated="true"?>
-      <modelingAssistantProvider class="it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelModelingAssistantProvider">
+      <modelingAssistantProvider class="org.hyperflex.compositionmodel.diagram.providers.CompositionModelModelingAssistantProvider">
          <Priority name="Lowest"/>
-         <object class="it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart" id="ArchitectureModel_1000"/>
-         <object class="it.unibg.robotics.compositionmodel.diagram.edit.parts.System2EditPart" id="System_2002"/>
-         <object class="it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart" id="SystemProvidedInterf_3007"/>
-         <object class="it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart" id="SystemRequiredInterf_3008"/>
-         <object class="it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeEditPart" id="SystemComposite_3009"/>
-         <object class="it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart" id="SystemCompositeProvidedInterf_3010"/>
-         <object class="it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart" id="SystemCompositeRequiredInterf_3011"/>
-         <object class="it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSCompositeEditPart" id="ROSComposite_3012"/>
-         <object class="it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart" id="ROSMsgProducer_3013"/>
-         <object class="it.unibg.robotics.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart" id="ROSMsgConsumer_3014"/>
+         <object class="org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart" id="ArchitectureModel_1000"/>
+         <object class="org.hyperflex.compositionmodel.diagram.edit.parts.System2EditPart" id="System_2002"/>
+         <object class="org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart" id="SystemProvidedInterf_3007"/>
+         <object class="org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart" id="SystemRequiredInterf_3008"/>
+         <object class="org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeEditPart" id="SystemComposite_3009"/>
+         <object class="org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart" id="SystemCompositeProvidedInterf_3010"/>
+         <object class="org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart" id="SystemCompositeRequiredInterf_3011"/>
+         <object class="org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeEditPart" id="ROSComposite_3012"/>
+         <object class="org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart" id="ROSMsgProducer_3013"/>
+         <object class="org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart" id="ROSMsgConsumer_3014"/>
          <context elements="ArchitectureModel_1000,System_2002,SystemProvidedInterf_3007,SystemRequiredInterf_3008,SystemComposite_3009,SystemCompositeProvidedInterf_3010,SystemCompositeRequiredInterf_3011,ROSComposite_3012,ROSMsgProducer_3013,ROSMsgConsumer_3014"/>
       </modelingAssistantProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
       <?gmfgen generated="true"?>
-      <IconProvider class="it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelIconProvider">
+      <IconProvider class="org.hyperflex.compositionmodel.diagram.providers.CompositionModelIconProvider">
          <Priority name="Low"/>
       </IconProvider>
    </extension>
@@ -274,111 +274,111 @@
       <?gmfgen generated="true"?>
       <metamodel nsURI="http://robotics.unibg.it/compositionmodels">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.composition.diagram.ArchitectureModel_1000"
+               id="org.hyperflex.componentmodels.composition.diagram.ArchitectureModel_1000"
                name="%metatype.name.ArchitectureModel_1000"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="ArchitectureModel"
-               edithelper="it.unibg.robotics.compositionmodel.diagram.edit.helpers.SystemEditHelper">
+               edithelper="org.hyperflex.compositionmodel.diagram.edit.helpers.SystemEditHelper">
             <param name="semanticHint" value="1000"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/compositionmodels">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.composition.diagram.System_2002"
+               id="org.hyperflex.componentmodels.composition.diagram.System_2002"
                name="%metatype.name.System_2002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="System"
-               edithelper="it.unibg.robotics.compositionmodel.diagram.edit.helpers.System2EditHelper">
+               edithelper="org.hyperflex.compositionmodel.diagram.edit.helpers.System2EditHelper">
             <param name="semanticHint" value="2002"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/compositionmodels">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.composition.diagram.SystemProvidedInterf_3007"
+               id="org.hyperflex.componentmodels.composition.diagram.SystemProvidedInterf_3007"
                name="%metatype.name.SystemProvidedInterf_3007"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="SystemProvidedInterf"
-               edithelper="it.unibg.robotics.compositionmodel.diagram.edit.helpers.SystemProvidedInterfEditHelper">
+               edithelper="org.hyperflex.compositionmodel.diagram.edit.helpers.SystemProvidedInterfEditHelper">
             <param name="semanticHint" value="3007"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/compositionmodels">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.composition.diagram.SystemRequiredInterf_3008"
+               id="org.hyperflex.componentmodels.composition.diagram.SystemRequiredInterf_3008"
                name="%metatype.name.SystemRequiredInterf_3008"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="SystemRequiredInterf"
-               edithelper="it.unibg.robotics.compositionmodel.diagram.edit.helpers.SystemRequiredInterfEditHelper">
+               edithelper="org.hyperflex.compositionmodel.diagram.edit.helpers.SystemRequiredInterfEditHelper">
             <param name="semanticHint" value="3008"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/compositionmodels">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.composition.diagram.SystemComposite_3009"
+               id="org.hyperflex.componentmodels.composition.diagram.SystemComposite_3009"
                name="%metatype.name.SystemComposite_3009"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="SystemComposite"
-               edithelper="it.unibg.robotics.compositionmodel.diagram.edit.helpers.SystemCompositeEditHelper">
+               edithelper="org.hyperflex.compositionmodel.diagram.edit.helpers.SystemCompositeEditHelper">
             <param name="semanticHint" value="3009"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/compositionmodels">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.composition.diagram.SystemCompositeProvidedInterf_3010"
+               id="org.hyperflex.componentmodels.composition.diagram.SystemCompositeProvidedInterf_3010"
                name="%metatype.name.SystemCompositeProvidedInterf_3010"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="SystemCompositeProvidedInterf"
-               edithelper="it.unibg.robotics.compositionmodel.diagram.edit.helpers.SystemCompositeProvidedInterfEditHelper">
+               edithelper="org.hyperflex.compositionmodel.diagram.edit.helpers.SystemCompositeProvidedInterfEditHelper">
             <param name="semanticHint" value="3010"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/compositionmodels">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.composition.diagram.SystemCompositeRequiredInterf_3011"
+               id="org.hyperflex.componentmodels.composition.diagram.SystemCompositeRequiredInterf_3011"
                name="%metatype.name.SystemCompositeRequiredInterf_3011"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="SystemCompositeRequiredInterf"
-               edithelper="it.unibg.robotics.compositionmodel.diagram.edit.helpers.SystemCompositeRequiredInterfEditHelper">
+               edithelper="org.hyperflex.compositionmodel.diagram.edit.helpers.SystemCompositeRequiredInterfEditHelper">
             <param name="semanticHint" value="3011"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/compositionmodels.ros">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.composition.diagram.ROSComposite_3012"
+               id="org.hyperflex.componentmodels.composition.diagram.ROSComposite_3012"
                name="%metatype.name.ROSComposite_3012"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="ROSComposite"
-               edithelper="it.unibg.robotics.compositionmodel.diagram.edit.helpers.ROSCompositeEditHelper">
+               edithelper="org.hyperflex.compositionmodel.diagram.edit.helpers.ROSCompositeEditHelper">
             <param name="semanticHint" value="3012"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/compositionmodels.ros">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.composition.diagram.ROSMsgProducer_3013"
+               id="org.hyperflex.componentmodels.composition.diagram.ROSMsgProducer_3013"
                name="%metatype.name.ROSMsgProducer_3013"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="ROSMsgProducer"
-               edithelper="it.unibg.robotics.compositionmodel.diagram.edit.helpers.ROSMsgProducerEditHelper">
+               edithelper="org.hyperflex.compositionmodel.diagram.edit.helpers.ROSMsgProducerEditHelper">
             <param name="semanticHint" value="3013"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/compositionmodels.ros">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.composition.diagram.ROSMsgConsumer_3014"
+               id="org.hyperflex.componentmodels.composition.diagram.ROSMsgConsumer_3014"
                name="%metatype.name.ROSMsgConsumer_3014"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="ROSMsgConsumer"
-               edithelper="it.unibg.robotics.compositionmodel.diagram.edit.helpers.ROSMsgConsumerEditHelper">
+               edithelper="org.hyperflex.compositionmodel.diagram.edit.helpers.ROSMsgConsumerEditHelper">
             <param name="semanticHint" value="3014"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://robotics.unibg.it/compositionmodels">
          <metamodelType
-               id="it.unibg.robotics.componentmodels.composition.diagram.Connection_4002"
+               id="org.hyperflex.componentmodels.composition.diagram.Connection_4002"
                name="%metatype.name.Connection_4002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Connection"
-               edithelper="it.unibg.robotics.compositionmodel.diagram.edit.helpers.ConnectionEditHelper">
+               edithelper="org.hyperflex.compositionmodel.diagram.edit.helpers.ConnectionEditHelper">
             <param name="semanticHint" value="4002"/>
          </metamodelType>
       </metamodel>
@@ -386,36 +386,36 @@
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
       <?gmfgen generated="true"?>
-      <clientContext id="it.unibg.robotics.componentmodels.composition.diagram.TypeContext">
+      <clientContext id="org.hyperflex.componentmodels.composition.diagram.TypeContext">
          <enablement>
             <test
                property="org.eclipse.gmf.runtime.emf.core.editingDomain"
-               value="it.unibg.robotics.componentmodels.composition.diagram.EditingDomain"/>
+               value="org.hyperflex.componentmodels.composition.diagram.EditingDomain"/>
          </enablement>
       </clientContext> 
-      <binding context="it.unibg.robotics.componentmodels.composition.diagram.TypeContext">
-         <elementType ref="it.unibg.robotics.componentmodels.composition.diagram.ArchitectureModel_1000"/>
-         <elementType ref="it.unibg.robotics.componentmodels.composition.diagram.System_2002"/>
-         <elementType ref="it.unibg.robotics.componentmodels.composition.diagram.SystemProvidedInterf_3007"/>
-         <elementType ref="it.unibg.robotics.componentmodels.composition.diagram.SystemRequiredInterf_3008"/>
-         <elementType ref="it.unibg.robotics.componentmodels.composition.diagram.SystemComposite_3009"/>
-         <elementType ref="it.unibg.robotics.componentmodels.composition.diagram.SystemCompositeProvidedInterf_3010"/>
-         <elementType ref="it.unibg.robotics.componentmodels.composition.diagram.SystemCompositeRequiredInterf_3011"/>
-         <elementType ref="it.unibg.robotics.componentmodels.composition.diagram.ROSComposite_3012"/>
-         <elementType ref="it.unibg.robotics.componentmodels.composition.diagram.ROSMsgProducer_3013"/>
-         <elementType ref="it.unibg.robotics.componentmodels.composition.diagram.ROSMsgConsumer_3014"/>
-         <elementType ref="it.unibg.robotics.componentmodels.composition.diagram.Connection_4002"/>
+      <binding context="org.hyperflex.componentmodels.composition.diagram.TypeContext">
+         <elementType ref="org.hyperflex.componentmodels.composition.diagram.ArchitectureModel_1000"/>
+         <elementType ref="org.hyperflex.componentmodels.composition.diagram.System_2002"/>
+         <elementType ref="org.hyperflex.componentmodels.composition.diagram.SystemProvidedInterf_3007"/>
+         <elementType ref="org.hyperflex.componentmodels.composition.diagram.SystemRequiredInterf_3008"/>
+         <elementType ref="org.hyperflex.componentmodels.composition.diagram.SystemComposite_3009"/>
+         <elementType ref="org.hyperflex.componentmodels.composition.diagram.SystemCompositeProvidedInterf_3010"/>
+         <elementType ref="org.hyperflex.componentmodels.composition.diagram.SystemCompositeRequiredInterf_3011"/>
+         <elementType ref="org.hyperflex.componentmodels.composition.diagram.ROSComposite_3012"/>
+         <elementType ref="org.hyperflex.componentmodels.composition.diagram.ROSMsgProducer_3013"/>
+         <elementType ref="org.hyperflex.componentmodels.composition.diagram.ROSMsgConsumer_3014"/>
+         <elementType ref="org.hyperflex.componentmodels.composition.diagram.Connection_4002"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>
 	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
       <?gmfgen generated="true"?>
        <propertyTester
-           id="it.unibg.robotics.componentmodels.composition.diagram.URIEditorInputPropertyTester"
+           id="org.hyperflex.componentmodels.composition.diagram.URIEditorInputPropertyTester"
            type="org.eclipse.emf.common.ui.URIEditorInput"
-           namespace="it.unibg.robotics.componentmodels.composition.diagram"
+           namespace="org.hyperflex.componentmodels.composition.diagram"
            properties="isURIEditorInput"
-           class="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelUriEditorInputTester">
+           class="org.hyperflex.compositionmodel.diagram.part.CompositionModelUriEditorInputTester">
        </propertyTester>
    </extension>
 
@@ -423,14 +423,14 @@
       <?gmfgen generated="true"?>
       <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
          <includes>
-            <contentExtension pattern="it.unibg.robotics.componentmodels.composition.diagram.resourceContent"/>
-			<contentExtension pattern="it.unibg.robotics.componentmodels.composition.diagram.domainResourceContent"/>
-            <contentExtension pattern="it.unibg.robotics.componentmodels.composition.diagram.navigatorLinkHelper"/>
+            <contentExtension pattern="org.hyperflex.componentmodels.composition.diagram.resourceContent"/>
+			<contentExtension pattern="org.hyperflex.componentmodels.composition.diagram.domainResourceContent"/>
+            <contentExtension pattern="org.hyperflex.componentmodels.composition.diagram.navigatorLinkHelper"/>
          </includes>
       </viewerContentBinding>
       <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
          <includes>
-            <actionExtension pattern="it.unibg.robotics.componentmodels.composition.diagram.navigatorActionProvider"/>
+            <actionExtension pattern="org.hyperflex.componentmodels.composition.diagram.navigatorActionProvider"/>
          </includes>
       </viewerActionBinding>
    </extension>
@@ -438,11 +438,11 @@
    <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
       <?gmfgen generated="true"?>
       <navigatorContent
-            id="it.unibg.robotics.componentmodels.composition.diagram.resourceContent" 
+            id="org.hyperflex.componentmodels.composition.diagram.resourceContent" 
             name="%navigatorContentName" 
             priority="normal" 
-            contentProvider="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorContentProvider" 
-            labelProvider="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorLabelProvider"
+            contentProvider="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorContentProvider" 
+            labelProvider="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorLabelProvider"
             icon="icons/obj16/compositionmodelDiagramFile.gif"
             activeByDefault="true">
          <triggerPoints>
@@ -451,34 +451,34 @@
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
         	      <test property="org.eclipse.core.resources.extension" value="compositionmodel_diagram"/>
                </and>
-               <instanceof value="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem"/>
+               <instanceof value="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem"/>
             </or>
          </triggerPoints>
          <possibleChildren>
             <or>
-         	   <instanceof value="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem"/>
+         	   <instanceof value="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem"/>
             </or>
          </possibleChildren>
          <commonSorter 
-               id="it.unibg.robotics.componentmodels.composition.diagram.navigatorSorter" 
-               class="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorSorter">
+               id="org.hyperflex.componentmodels.composition.diagram.navigatorSorter" 
+               class="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorSorter">
             <parentExpression>
                <or>
 	              <and>
     	             <instanceof value="org.eclipse.core.resources.IFile"/>
         	         <test property="org.eclipse.core.resources.extension" value="compositionmodel_diagram"/>
                   </and>
-                  <instanceof value="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem"/>
+                  <instanceof value="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem"/>
                </or>
             </parentExpression>
          </commonSorter>
       </navigatorContent>
       <navigatorContent
-            id="it.unibg.robotics.componentmodels.composition.diagram.domainResourceContent" 
+            id="org.hyperflex.componentmodels.composition.diagram.domainResourceContent" 
             name="%domainNavigatorContentName" 
             priority="normal" 
-            contentProvider="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorContentProvider" 
-            labelProvider="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorLabelProvider"
+            contentProvider="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorContentProvider" 
+            labelProvider="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorLabelProvider"
             icon="icons/obj16/compositionmodelDiagramFile.gif"
             activeByDefault="true">
          <triggerPoints>
@@ -487,19 +487,19 @@
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
         	      <test property="org.eclipse.core.resources.extension" value="compositionmodel"/>
                </and>
-               <instanceof value="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem"/>
+               <instanceof value="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem"/>
             </or>
          </triggerPoints>
          <possibleChildren>
-            <instanceof value="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem"/>
+            <instanceof value="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelDomainNavigatorItem"/>
          </possibleChildren>
       </navigatorContent>
       <actionProvider
-            id="it.unibg.robotics.componentmodels.composition.diagram.navigatorActionProvider"
-            class="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorActionProvider">
+            id="org.hyperflex.componentmodels.composition.diagram.navigatorActionProvider"
+            class="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorActionProvider">
          <enablement>
             <or>
-               <instanceof value="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem"/>
+               <instanceof value="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem"/>
             </or>
          </enablement>
       </actionProvider>
@@ -508,16 +508,16 @@
 	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
       <?gmfgen generated="true"?>
       <linkHelper
-            id="it.unibg.robotics.componentmodels.composition.diagram.navigatorLinkHelper"
-            class="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelNavigatorLinkHelper">
+            id="org.hyperflex.componentmodels.composition.diagram.navigatorLinkHelper"
+            class="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelNavigatorLinkHelper">
          <editorInputEnablement>
             <and>
                <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
-               <test property="it.unibg.robotics.componentmodels.composition.diagram.isURIEditorInput"/>
+               <test property="org.hyperflex.componentmodels.composition.diagram.isURIEditorInput"/>
             </and>
          </editorInputEnablement>
          <selectionEnablement>
-            <instanceof value="it.unibg.robotics.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem"/>
+            <instanceof value="org.hyperflex.compositionmodel.diagram.navigator.CompositionModelAbstractNavigatorItem"/>
          </selectionEnablement>
       </linkHelper>
    </extension>
@@ -525,17 +525,17 @@
       <?gmfgen generated="true"?>
       <command
          categoryId="org.eclipse.ui.category.edit"
-         defaultHandler="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramUpdateCommand"
+         defaultHandler="org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramUpdateCommand"
          description="%update.diagram.description"
-         id="it.unibg.robotics.compositionmodel.diagram.updateDiagram"
+         id="org.hyperflex.compositionmodel.diagram.updateDiagram"
          name="%update.diagram.name"/>
    </extension>
    
    <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
       <?gmfgen generated="true"?>
       <key 
-         commandId="it.unibg.robotics.compositionmodel.diagram.updateDiagram"
-         contextId="it.unibg.robotics.compositionmodel.diagram.ui.diagramContext"
+         commandId="org.hyperflex.compositionmodel.diagram.updateDiagram"
+         contextId="org.hyperflex.compositionmodel.diagram.ui.diagramContext"
          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
          sequence="F5"/>
    </extension>
@@ -547,12 +547,12 @@
       <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
       </menuContribution -->
       <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
-         <command commandId="it.unibg.robotics.componentmodels.composition.diagram.LoadResourceAction">
+         <command commandId="org.hyperflex.componentmodels.composition.diagram.LoadResourceAction">
             <visibleWhen>
                <and>
-                  <with variable="activePartId"><equals value="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorID"/></with>
+                  <with variable="activePartId"><equals value="org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorID"/></with>
                   <with variable="selection"><iterate ifEmpty="false"> 
-                     <instanceof value="it.unibg.robotics.compositionmodel.diagram.edit.parts.SystemEditPart"/>
+                     <instanceof value="org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart"/>
                   </iterate></with>
                </and>
             </visibleWhen>
@@ -562,11 +562,11 @@
 
    <extension point="org.eclipse.ui.commands" id="menu-commands">
       <?gmfgen generated="true"?>
-      <category id="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
-      <command id="it.unibg.robotics.componentmodels.composition.diagram.LoadResourceAction"
+      <category id="org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="org.hyperflex.componentmodels.composition.diagram.LoadResourceAction"
          name="Load Resource"
-         categoryId="it.unibg.robotics.compositionmodel.diagram.part.CompositionModelDiagramEditorID"
-         defaultHandler="it.unibg.robotics.compositionmodel.diagram.part.LoadResourceAction"/>
+         categoryId="org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorID"
+         defaultHandler="org.hyperflex.compositionmodel.diagram.part.LoadResourceAction"/>
    </extension>
 
    <extension point="org.eclipse.ui.handlers" id="menu-handlers">
@@ -574,7 +574,7 @@
    </extension>
 <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
       <?gmfgen generated="true"?>
-      <ParserProvider class="it.unibg.robotics.compositionmodel.diagram.providers.CompositionModelParserProvider">
+      <ParserProvider class="org.hyperflex.compositionmodel.diagram.providers.CompositionModelParserProvider">
          <Priority name="Lowest"/>
       </ParserProvider>
    </extension>

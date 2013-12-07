@@ -24,11 +24,11 @@
  * 
  * 
  */
-package it.unibg.robotics.roscompositionmodel;
+package org.hyperflex.roscompositionmodel;
 
-import it.unibg.robotics.compositionmodel.CompProvidedInterf;
+import org.hyperflex.compositionmodel.CompProvidedInterf;
 
-import it.unibg.robotics.roscomponentmodel.CompositeSrvProducer;
+import org.hyperflex.roscomponentmodel.CompositeSrvProducer;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,11 +38,11 @@ import it.unibg.robotics.roscomponentmodel.CompositeSrvProducer;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.roscompositionmodel.ROSSrvProducer#getSrvProducer <em>Srv Producer</em>}</li>
+ *   <li>{@link org.hyperflex.roscompositionmodel.ROSSrvProducer#getSrvProducer <em>Srv Producer</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getROSSrvProducer()
+ * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getROSSrvProducer()
  * @model
  * @generated
  */
@@ -57,14 +57,14 @@ public interface ROSSrvProducer extends CompProvidedInterf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Srv Producer</em>' reference.
 	 * @see #setSrvProducer(CompositeSrvProducer)
-	 * @see it.unibg.robotics.roscompositionmodel.roscompositionmodelPackage#getROSSrvProducer_SrvProducer()
+	 * @see org.hyperflex.roscompositionmodel.roscompositionmodelPackage#getROSSrvProducer_SrvProducer()
 	 * @model required="true"
 	 * @generated
 	 */
 	CompositeSrvProducer getSrvProducer();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.roscompositionmodel.ROSSrvProducer#getSrvProducer <em>Srv Producer</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.roscompositionmodel.ROSSrvProducer#getSrvProducer <em>Srv Producer</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Srv Producer</em>' reference.
