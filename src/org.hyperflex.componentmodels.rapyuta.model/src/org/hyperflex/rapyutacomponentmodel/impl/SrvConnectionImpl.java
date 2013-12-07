@@ -45,6 +45,7 @@ import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
  * <ul>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SrvConnectionImpl#getServer <em>Server</em>}</li>
  *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SrvConnectionImpl#getClient <em>Client</em>}</li>
+ *   <li>{@link org.hyperflex.rapyutacomponentmodel.impl.SrvConnectionImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,6 +71,26 @@ public class SrvConnectionImpl extends EObjectImpl implements SrvConnection {
 	 * @ordered
 	 */
 	protected SrvClient client;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,6 +192,27 @@ public class SrvConnectionImpl extends EObjectImpl implements SrvConnection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, rapyutacomponentmodelPackage.SRV_CONNECTION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -180,6 +222,8 @@ public class SrvConnectionImpl extends EObjectImpl implements SrvConnection {
 			case rapyutacomponentmodelPackage.SRV_CONNECTION__CLIENT:
 				if (resolve) return getClient();
 				return basicGetClient();
+			case rapyutacomponentmodelPackage.SRV_CONNECTION__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -197,6 +241,9 @@ public class SrvConnectionImpl extends EObjectImpl implements SrvConnection {
 				return;
 			case rapyutacomponentmodelPackage.SRV_CONNECTION__CLIENT:
 				setClient((SrvClient)newValue);
+				return;
+			case rapyutacomponentmodelPackage.SRV_CONNECTION__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -216,6 +263,9 @@ public class SrvConnectionImpl extends EObjectImpl implements SrvConnection {
 			case rapyutacomponentmodelPackage.SRV_CONNECTION__CLIENT:
 				setClient((SrvClient)null);
 				return;
+			case rapyutacomponentmodelPackage.SRV_CONNECTION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -232,8 +282,26 @@ public class SrvConnectionImpl extends EObjectImpl implements SrvConnection {
 				return server != null;
 			case rapyutacomponentmodelPackage.SRV_CONNECTION__CLIENT:
 				return client != null;
+			case rapyutacomponentmodelPackage.SRV_CONNECTION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //SrvConnectionImpl

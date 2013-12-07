@@ -40,7 +40,10 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.hyperflex.rapyutacomponentmodel.EndPointSrvConnection;
 import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
 
 /**
@@ -80,6 +83,7 @@ public class EndPointSrvConnectionItemProvider
 
 			addServerPropertyDescriptor(object);
 			addClientPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -129,6 +133,28 @@ public class EndPointSrvConnectionItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EndPointSrvConnection_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EndPointSrvConnection_name_feature", "_UI_EndPointSrvConnection_type"),
+				 rapyutacomponentmodelPackage.Literals.END_POINT_SRV_CONNECTION__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns EndPointSrvConnection.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -147,7 +173,10 @@ public class EndPointSrvConnectionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_EndPointSrvConnection_type");
+		String label = ((EndPointSrvConnection)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_EndPointSrvConnection_type") :
+			getString("_UI_EndPointSrvConnection_type") + " " + label;
 	}
 
 	/**
@@ -160,6 +189,12 @@ public class EndPointSrvConnectionItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(EndPointSrvConnection.class)) {
+			case rapyutacomponentmodelPackage.END_POINT_SRV_CONNECTION__NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

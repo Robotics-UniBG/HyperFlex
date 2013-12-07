@@ -455,7 +455,7 @@ public class RobotEndPointEditPart extends AbstractBorderedShapeEditPart {
 
 			fFigureEndPointNameLabel = new WrappingLabel();
 
-			fFigureEndPointNameLabel.setText("<É>");
+			fFigureEndPointNameLabel.setText("<?>");
 
 			fFigureEndPointNameLabel.setFont(FFIGUREENDPOINTNAMELABEL_FONT);
 

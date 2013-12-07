@@ -1219,13 +1219,22 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int SRV_CONNECTION__CLIENT = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SRV_CONNECTION__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Srv Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SRV_CONNECTION_FEATURE_COUNT = 2;
+	int SRV_CONNECTION_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.EndPointImpl <em>End Point</em>}' class.
@@ -1751,13 +1760,22 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int END_POINT_SRV_CONNECTION__CLIENT = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_POINT_SRV_CONNECTION__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>End Point Srv Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int END_POINT_SRV_CONNECTION_FEATURE_COUNT = 2;
+	int END_POINT_SRV_CONNECTION_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.rapyutacomponentmodel.impl.EndPointParameterImpl <em>End Point Parameter</em>}' class.
@@ -1834,6 +1852,15 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	int CONTAINER_SRV_CONNECTION__CLIENT = SRV_CONNECTION__CLIENT;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER_SRV_CONNECTION__NAME = SRV_CONNECTION__NAME;
+
+	/**
 	 * The number of structural features of the '<em>Container Srv Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1869,6 +1896,15 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_SRV_CONNECTION__CLIENT = SRV_CONNECTION__CLIENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_SRV_CONNECTION__NAME = SRV_CONNECTION__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Composite Srv Connection</em>' class.
@@ -2628,6 +2664,17 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	EReference getSrvConnection_Client();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.rapyutacomponentmodel.SrvConnection#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.SrvConnection#getName()
+	 * @see #getSrvConnection()
+	 * @generated
+	 */
+	EAttribute getSrvConnection_Name();
+
+	/**
 	 * Returns the meta object for class '{@link org.hyperflex.rapyutacomponentmodel.EndPoint <em>End Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2869,6 +2916,17 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEndPointSrvConnection_Client();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.rapyutacomponentmodel.EndPointSrvConnection#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.hyperflex.rapyutacomponentmodel.EndPointSrvConnection#getName()
+	 * @see #getEndPointSrvConnection()
+	 * @generated
+	 */
+	EAttribute getEndPointSrvConnection_Name();
 
 	/**
 	 * Returns the meta object for class '{@link org.hyperflex.rapyutacomponentmodel.EndPointParameter <em>End Point Parameter</em>}'.
@@ -3551,6 +3609,14 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 		EReference SRV_CONNECTION__CLIENT = eINSTANCE.getSrvConnection_Client();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SRV_CONNECTION__NAME = eINSTANCE.getSrvConnection_Name();
+
+		/**
 		 * The meta object literal for the '{@link org.hyperflex.rapyutacomponentmodel.impl.EndPointImpl <em>End Point</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3753,6 +3819,14 @@ public interface rapyutacomponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference END_POINT_SRV_CONNECTION__CLIENT = eINSTANCE.getEndPointSrvConnection_Client();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute END_POINT_SRV_CONNECTION__NAME = eINSTANCE.getEndPointSrvConnection_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.hyperflex.rapyutacomponentmodel.impl.EndPointParameterImpl <em>End Point Parameter</em>}' class.

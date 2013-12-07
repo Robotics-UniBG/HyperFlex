@@ -298,7 +298,7 @@ public class EndPointParameterEditPart extends ShapeNodeEditPart {
 
 			fFigurePropertiesNameLabel = new WrappingLabel();
 
-			fFigurePropertiesNameLabel.setText("<É>");
+			fFigurePropertiesNameLabel.setText("<?>");
 
 			this.add(fFigurePropertiesNameLabel);
 

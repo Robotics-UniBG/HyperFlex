@@ -14,7 +14,7 @@
           href="../models/rapyutaComponentModel.ecore#//Composite"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping"
-          viewPattern="Composite - {0}">
+          viewPattern="">
         <diagramLabel
             href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainerName"/>
         <features
@@ -385,7 +385,7 @@
           href="../models/rapyutaComponentModel.ecore#//Container"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping"
-          viewPattern="Container - {0}">
+          viewPattern="">
         <diagramLabel
             href="rapyutaComponentModel.gmfgraph#ContainerName"/>
         <features
@@ -681,9 +681,12 @@
   <links>
     <domainMetaElement
         href="../models/rapyutaComponentModel.ecore#//EndPointSrvConnection"/>
-    <labelMappings>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
       <diagramLabel
-          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnectionName"/>
+          href="rapyutaComponentModel.gmfgraph#EndPointConnectionLabel"/>
+      <features
+          href="../models/rapyutaComponentModel.ecore#//EndPointSrvConnection/name"/>
     </labelMappings>
     <containmentFeature
         href="../models/rapyutaComponentModel.ecore#//System/endPointSrvConnections"/>
@@ -691,7 +694,7 @@
         xsi:type="gmftool:CreationTool"
         href="rapyutaComponentModel.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnection"/>
+        href="rapyutaComponentModel.gmfgraph#EndPointConnection"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
         href="../models/rapyutaComponentModel.ecore#//EndPointSrvConnection/client"/>
@@ -710,7 +713,7 @@
         href="../models/rapyutaComponentModel.ecore#//EndPointMsgConnection"/>
     <labelMappings>
       <diagramLabel
-          href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnectionName"/>
+          href="rapyutaComponentModel.gmfgraph#EndPointConnectionLabel"/>
     </labelMappings>
     <containmentFeature
         href="../models/rapyutaComponentModel.ecore#//System/endPointMsgConnections"/>
@@ -718,7 +721,7 @@
         xsi:type="gmftool:CreationTool"
         href="rapyutaComponentModel.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnection"/>
+        href="rapyutaComponentModel.gmfgraph#EndPointConnection"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
         href="../models/rapyutaComponentModel.ecore#//EndPointMsgConnection/publisher"/>
@@ -735,9 +738,12 @@
   <links>
     <domainMetaElement
         href="../models/rapyutaComponentModel.ecore#//CompositeSrvConnection"/>
-    <labelMappings>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
       <diagramLabel
           href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnectionName"/>
+      <features
+          href="../models/rapyutaComponentModel.ecore#//SrvConnection/name"/>
     </labelMappings>
     <containmentFeature
         href="../models/rapyutaComponentModel.ecore#//Composite/srvConnections"/>
@@ -762,9 +768,12 @@
   <links>
     <domainMetaElement
         href="../models/rapyutaComponentModel.ecore#//ContainerSrvConnection"/>
-    <labelMappings>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
       <diagramLabel
           href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnectionName"/>
+      <features
+          href="../models/rapyutaComponentModel.ecore#//SrvConnection/name"/>
     </labelMappings>
     <containmentFeature
         href="../models/rapyutaComponentModel.ecore#//Container/srvConnections"/>

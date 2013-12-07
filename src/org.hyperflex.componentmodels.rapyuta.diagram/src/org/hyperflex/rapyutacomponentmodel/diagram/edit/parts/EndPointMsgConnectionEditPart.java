@@ -26,6 +26,7 @@
  */
 package org.hyperflex.rapyutacomponentmodel.diagram.edit.parts;
 
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Connection;
 import org.eclipse.draw2d.PolylineDecoration;
 import org.eclipse.draw2d.RotatableDecoration;
@@ -74,7 +75,7 @@ public class EndPointMsgConnectionEditPart extends ConnectionNodeEditPart
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof WrappingLabel2EditPart) {
 			((WrappingLabel2EditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureSolidWireConnectionLabel());
+					.getFigureEndPointConnectionLabel());
 			return true;
 		}
 		return false;
@@ -120,30 +121,32 @@ public class EndPointMsgConnectionEditPart extends ConnectionNodeEditPart
 	 */
 
 	protected Connection createConnectionFigure() {
-		return new SolidWireConnectionFigure();
+		return new EndPointConnectionFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public SolidWireConnectionFigure getPrimaryShape() {
-		return (SolidWireConnectionFigure) getFigure();
+	public EndPointConnectionFigure getPrimaryShape() {
+		return (EndPointConnectionFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class SolidWireConnectionFigure extends PolylineConnectionEx {
+	public class EndPointConnectionFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureSolidWireConnectionLabel;
+		private WrappingLabel fFigureEndPointConnectionLabel;
 
 		/**
 		 * @generated
 		 */
-		public SolidWireConnectionFigure() {
+		public EndPointConnectionFigure() {
+			this.setLineWidth(2);
+			this.setForegroundColor(ColorConstants.red);
 
 			createContents();
 			setSourceDecoration(createSourceDecoration());
@@ -154,14 +157,14 @@ public class EndPointMsgConnectionEditPart extends ConnectionNodeEditPart
 		 */
 		private void createContents() {
 
-			fFigureSolidWireConnectionLabel = new WrappingLabel();
+			fFigureEndPointConnectionLabel = new WrappingLabel();
 
-			fFigureSolidWireConnectionLabel.setText("");
+			fFigureEndPointConnectionLabel.setText("");
 
-			fFigureSolidWireConnectionLabel
-					.setFont(FFIGURESOLIDWIRECONNECTIONLABEL_FONT);
+			fFigureEndPointConnectionLabel
+					.setFont(FFIGUREENDPOINTCONNECTIONLABEL_FONT);
 
-			this.add(fFigureSolidWireConnectionLabel);
+			this.add(fFigureEndPointConnectionLabel);
 
 		}
 
@@ -177,8 +180,8 @@ public class EndPointMsgConnectionEditPart extends ConnectionNodeEditPart
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureSolidWireConnectionLabel() {
-			return fFigureSolidWireConnectionLabel;
+		public WrappingLabel getFigureEndPointConnectionLabel() {
+			return fFigureEndPointConnectionLabel;
 		}
 
 	}
@@ -186,7 +189,7 @@ public class EndPointMsgConnectionEditPart extends ConnectionNodeEditPart
 	/**
 	 * @generated
 	 */
-	static final Font FFIGURESOLIDWIRECONNECTIONLABEL_FONT = new Font(
+	static final Font FFIGUREENDPOINTCONNECTIONLABEL_FONT = new Font(
 			Display.getCurrent(), Display.getDefault().getSystemFont()
 					.getFontData()[0].getName(), 15, SWT.NORMAL);
 

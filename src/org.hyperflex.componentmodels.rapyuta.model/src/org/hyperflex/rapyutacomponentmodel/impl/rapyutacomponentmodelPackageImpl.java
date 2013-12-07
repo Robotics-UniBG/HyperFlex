@@ -1024,6 +1024,15 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSrvConnection_Name() {
+		return (EAttribute)srvConnectionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEndPoint() {
 		return endPointEClass;
 	}
@@ -1231,6 +1240,15 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getEndPointSrvConnection_Name() {
+		return (EAttribute)endPointSrvConnectionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEndPointParameter() {
 		return endPointParameterEClass;
 	}
@@ -1391,6 +1409,7 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		srvConnectionEClass = createEClass(SRV_CONNECTION);
 		createEReference(srvConnectionEClass, SRV_CONNECTION__SERVER);
 		createEReference(srvConnectionEClass, SRV_CONNECTION__CLIENT);
+		createEAttribute(srvConnectionEClass, SRV_CONNECTION__NAME);
 
 		endPointEClass = createEClass(END_POINT);
 		createEReference(endPointEClass, END_POINT__PUBLISHERS);
@@ -1424,6 +1443,7 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		endPointSrvConnectionEClass = createEClass(END_POINT_SRV_CONNECTION);
 		createEReference(endPointSrvConnectionEClass, END_POINT_SRV_CONNECTION__SERVER);
 		createEReference(endPointSrvConnectionEClass, END_POINT_SRV_CONNECTION__CLIENT);
+		createEAttribute(endPointSrvConnectionEClass, END_POINT_SRV_CONNECTION__NAME);
 
 		endPointParameterEClass = createEClass(END_POINT_PARAMETER);
 		createEAttribute(endPointParameterEClass, END_POINT_PARAMETER__VALUE);
@@ -1581,6 +1601,7 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		initEClass(srvConnectionEClass, SrvConnection.class, "SrvConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSrvConnection_Server(), this.getSrvServer(), null, "server", null, 1, 1, SrvConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSrvConnection_Client(), this.getSrvClient(), null, "client", null, 1, 1, SrvConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSrvConnection_Name(), ecorePackage.getEString(), "name", null, 0, 1, SrvConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(endPointEClass, EndPoint.class, "EndPoint", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEndPoint_Publishers(), this.getEndPointPublisher(), null, "publishers", null, 0, -1, EndPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1614,6 +1635,7 @@ public class rapyutacomponentmodelPackageImpl extends EPackageImpl implements ra
 		initEClass(endPointSrvConnectionEClass, EndPointSrvConnection.class, "EndPointSrvConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEndPointSrvConnection_Server(), this.getEndPointSrvServer(), null, "server", null, 1, 1, EndPointSrvConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEndPointSrvConnection_Client(), this.getEndPointSrvClient(), null, "client", null, 1, 1, EndPointSrvConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEndPointSrvConnection_Name(), ecorePackage.getEString(), "name", null, 0, 1, EndPointSrvConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(endPointParameterEClass, EndPointParameter.class, "EndPointParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEndPointParameter_Value(), ecorePackage.getEString(), "value", null, 0, 1, EndPointParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

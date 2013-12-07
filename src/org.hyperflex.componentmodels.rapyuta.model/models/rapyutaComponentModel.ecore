@@ -115,6 +115,7 @@
         eType="#//SrvServer"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="client" lowerBound="1"
         eType="#//SrvClient"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EndPoint" abstract="true" eSuperTypes="#//AbstractComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="publishers" upperBound="-1"
@@ -155,6 +156,7 @@
         eType="#//EndPointSrvServer"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="client" lowerBound="1"
         eType="#//EndPointSrvClient"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EndPointParameter" eSuperTypes="#//Parameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
