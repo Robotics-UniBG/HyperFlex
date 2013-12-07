@@ -10,7 +10,7 @@
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
@@ -25,7 +25,6 @@
  */
 package it.unibg.robotics.roscomponentmodel.diagram.edit.commands;
 
-import it.unibg.robotics.componentmodels.shared.filters.ViewerFileFilter;
 import it.unibg.robotics.roscomponentmodel.Composite;
 
 import java.io.IOException;
@@ -51,6 +50,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.dialogs.ElementTreeSelectionDialog;
 import org.eclipse.ui.model.BaseWorkbenchContentProvider;
 import org.eclipse.ui.model.WorkbenchLabelProvider;
+import org.hyperflex.componentmodels.shared.filters.ViewerFileFilter;
 
 /**
  * @generated

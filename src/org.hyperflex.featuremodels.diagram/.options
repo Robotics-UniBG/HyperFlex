@@ -1,0 +1,7 @@
+# Tracing options for the org.hyperflex.featuremodels.diagram plug-in
+
+# Common issues
+org.hyperflex.featuremodels.diagram/debug=false
+
+# Visual IDs
+org.hyperflex.featuremodels.diagram/debug/visualID=false

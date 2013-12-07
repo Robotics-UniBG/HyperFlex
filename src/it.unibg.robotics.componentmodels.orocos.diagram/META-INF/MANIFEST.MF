@@ -38,6 +38,6 @@ Require-Bundle: org.eclipse.core.runtime,
  it.unibg.robotics.componentmodels.orocos.model.edit;visibility:=reexport,
  org.eclipse.gef;visibility:=reexport,
  org.eclipse.ocl.ecore;visibility:=reexport,
- it.unibg.robotics.componentmodels.shared;bundle-version="1.0.0"
+ org.hyperflex.componentmodels.shared;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

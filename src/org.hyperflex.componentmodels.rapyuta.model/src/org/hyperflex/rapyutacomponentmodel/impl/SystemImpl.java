@@ -38,8 +38,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.hyperflex.rapyutacomponentmodel.CloudContainer;
-import org.hyperflex.rapyutacomponentmodel.Composite;
-import org.hyperflex.rapyutacomponentmodel.Container;
 import org.hyperflex.rapyutacomponentmodel.EndPointMsgConnection;
 import org.hyperflex.rapyutacomponentmodel.EndPointSrvConnection;
 import org.hyperflex.rapyutacomponentmodel.RobotContainer;

@@ -28,12 +28,10 @@ package org.hyperflex.rapyutacomponentmodel.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.hyperflex.rapyutacomponentmodel.AbstractComponent;
@@ -44,7 +42,6 @@ import org.hyperflex.rapyutacomponentmodel.CompositeSrvClient;
 import org.hyperflex.rapyutacomponentmodel.CompositeSrvConnection;
 import org.hyperflex.rapyutacomponentmodel.CompositeSrvServer;
 import org.hyperflex.rapyutacomponentmodel.CompositeSubscriber;
-import org.hyperflex.rapyutacomponentmodel.RobotEndPoint;
 import org.hyperflex.rapyutacomponentmodel.Topic;
 import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
 

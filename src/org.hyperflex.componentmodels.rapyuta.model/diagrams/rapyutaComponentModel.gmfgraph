@@ -126,7 +126,7 @@
         </children>
         <sourceDecoration
             xsi:type="gmfgraph:PolylineDecoration"
-            href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#//@figures.0/@figures.0"/>
+            href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#//@figures.0/@figures.0"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>

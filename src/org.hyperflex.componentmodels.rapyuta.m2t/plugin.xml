@@ -25,7 +25,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:it.unibg.robotics.componentmodels.menu.m2t">
+            locationURI="menu:org.hyperflex.componentmodels.menu.m2t">
          <command
                commandId="org.hyperflex.componentmodels.rapyuta.m2t.rapyutaLaunch"
                label="Generate Rapyuta Launch File"

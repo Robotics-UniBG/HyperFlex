@@ -40,7 +40,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.hyperflex.rapyutacomponentmodel.AbstractComponent;
 import org.hyperflex.rapyutacomponentmodel.Container;
 import org.hyperflex.rapyutacomponentmodel.ContainerSrvConnection;
-import org.hyperflex.rapyutacomponentmodel.EnvironmentEndPoint;
 import org.hyperflex.rapyutacomponentmodel.Topic;
 import org.hyperflex.rapyutacomponentmodel.rapyutacomponentmodelPackage;
 

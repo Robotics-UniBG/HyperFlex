@@ -5,9 +5,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:it.unibg.robotics.componentmodels.menu">
+            locationURI="menu:org.hyperflex.componentmodels.menu">
          <menu
-               id="it.unibg.robotics.componentmodels.menu.m2t"
+               id="org.hyperflex.componentmodels.menu.m2t"
                label="Model-2-Texet">
          </menu>
       </menuContribution>

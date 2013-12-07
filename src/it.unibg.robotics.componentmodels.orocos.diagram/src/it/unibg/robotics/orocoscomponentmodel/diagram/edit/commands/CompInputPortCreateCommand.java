@@ -1,5 +1,5 @@
 /*
- * Variability Analysis And Resolution Plugins (VARP)
+ * HyperFlex Plugins (VARP)
  * 
  * Copyright (c) 2013
  * All rights reserved.
@@ -10,7 +10,7 @@
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 

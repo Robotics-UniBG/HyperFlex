@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="org.hyperflex.ui.views"
+            class="org.hyperflex.featuremodels.ui.views.InstanceView"
+            icon="icons/HF.gif"
+            id="org.hyperflex.featuremodels.ui.views.instanceview"
+            name="Instance View">
+      </view>
+      <view
+            allowMultiple="false"
+            category="org.hyperflex.ui.views"
+            class="org.hyperflex.featuremodels.ui.views.ConstraintView"
+            icon="icons/HF.gif"
+            id="org.hyperflex.featuremodels.ui.views.constraintview"
+            name="Constraint View">
+      </view>
+   </extension>
+
+</plugin>

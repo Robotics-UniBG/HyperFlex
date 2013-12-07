@@ -2,7 +2,6 @@ package it.unibg.robotics.compositionmodel.diagram.edit.commands;
 
 
 
-import it.unibg.robotics.componentmodels.shared.filters.ViewerFileFilter;
 import it.unibg.robotics.compositionmodel.Composite;
 import it.unibg.robotics.roscompositionmodel.ROSMsgConsumer;
 import it.unibg.robotics.roscompositionmodel.ROSMsgProducer;
@@ -31,6 +30,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.dialogs.ElementTreeSelectionDialog;
 import org.eclipse.ui.model.BaseWorkbenchContentProvider;
 import org.eclipse.ui.model.WorkbenchLabelProvider;
+import org.hyperflex.componentmodels.shared.filters.ViewerFileFilter;
 
 /**
  * @generated

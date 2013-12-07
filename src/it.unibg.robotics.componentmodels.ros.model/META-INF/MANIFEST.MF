@@ -12,5 +12,5 @@ Export-Package: it.unibg.robotics.roscomponentmodel,
  it.unibg.robotics.roscomponentmodel.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- it.unibg.robotics.componentmodels.shared;bundle-version="1.0.0"
+ org.hyperflex.componentmodels.shared;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

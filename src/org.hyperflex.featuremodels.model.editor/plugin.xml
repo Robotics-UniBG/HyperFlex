@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Feature Model Plugin
+ 
+ Copyright (c) 2013
+ All rights reserved.
+ 
+ Luca Gherardi
+ University of Bergamo
+ Dept. of Information Technology and Mathematics
+ 
+ ***********************************************************************************************
+ 
+ Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
+ 
+ In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ 
+ ***********************************************************************************************
+ 
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ 
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <wizard
+            id="org.hyperflex.featuremodels.presentation.featuremodelsModelWizardID"
+            name="%_UI_featuremodelsModelWizard_label"
+            class="org.hyperflex.featuremodels.presentation.featuremodelsModelWizard"
+            category="it.robotics.unibg.hyperflex.wizard.category"
+            icon="icons/fm.ico">
+         <description>%_UI_featuremodelsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.hyperflex.featuremodels.presentation.featuremodelsEditorID"
+            name="%_UI_featuremodelsEditor_label"
+            icon="icons/fm.ico"
+            extensions="featuremodel"
+            class="org.hyperflex.featuremodels.presentation.featuremodelsEditor"
+            contributorClass="org.hyperflex.featuremodels.presentation.featuremodelsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated featureModel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.hyperflex.featuremodels.presentation.featuremodelsModelWizardID"
+            name="%_UI_featuremodelsModelWizard_label"
+            class="org.hyperflex.featuremodels.presentation.featuremodelsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/featuremodelsModelFile.gif">
+         <description>%_UI_featuremodelsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated featureModel -->
+      <editor
+            id="org.hyperflex.featuremodels.presentation.featuremodelsEditorID"
+            name="%_UI_featuremodelsEditor_label"
+            icon="icons/full/obj16/featuremodelsModelFile.gif"
+            extensions="featuremodel"
+            class="org.hyperflex.featuremodels.presentation.featuremodelsEditor"
+            contributorClass="org.hyperflex.featuremodels.presentation.featuremodelsActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

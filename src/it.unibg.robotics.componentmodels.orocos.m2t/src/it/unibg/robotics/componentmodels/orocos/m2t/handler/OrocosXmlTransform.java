@@ -26,7 +26,6 @@
  */
 package it.unibg.robotics.componentmodels.orocos.m2t.handler;
 
-import it.unibg.robotics.componentmodels.m2t.EGLTransformer;
 import it.unibg.robotics.componentmodels.orocos.m2t.Activator;
 
 import java.io.IOException;
@@ -45,6 +44,7 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.PlatformUI;
+import org.hyperflex.componentmodels.m2t.EGLTransformer;
 
 public class OrocosXmlTransform extends AbstractHandler {
 	

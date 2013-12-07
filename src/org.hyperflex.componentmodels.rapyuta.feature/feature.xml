@@ -75,11 +75,11 @@ http://www.eclipse.org/legal/epl-v10.html
       <import plugin="org.eclipse.epsilon.common.dt" version="0.9.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.epsilon.eol.dt" version="0.9.1" match="greaterOrEqual"/>
       <import plugin="org.best_of_robotics.transform.service" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.componentmodels.ui" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.componentmodels.m2t" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.edit"/>
       <import plugin="org.hyperflex.componentmodels.rapyuta.diagram" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.hyperflex.componentmodels.rapyuta.model" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.hyperflex.componentmodels.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.componentmodels.m2t" version="1.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin

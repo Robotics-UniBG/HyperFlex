@@ -26,8 +26,6 @@
  */
 package org.hyperflex.componentmodels.rapyuta.m2t.handler;
 
-import it.unibg.robotics.componentmodels.m2t.EGLTransformer;
-
 import java.io.IOException;
 import java.net.URL;
 
@@ -44,6 +42,7 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.PlatformUI;
+import org.hyperflex.componentmodels.m2t.EGLTransformer;
 import org.hyperflex.componentmodels.rapyuta.m2t.Activator;
 
 public class RapyutaLaunchTransform extends AbstractHandler {

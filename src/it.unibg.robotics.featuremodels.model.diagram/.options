@@ -1,7 +1,0 @@
-# Tracing options for the it.unibg.robotics.featuremodels.diagram plug-in
-
-# Common issues
-it.unibg.robotics.featuremodels.diagram/debug=false
-
-# Visual IDs
-it.unibg.robotics.featuremodels.diagram/debug/visualID=false
