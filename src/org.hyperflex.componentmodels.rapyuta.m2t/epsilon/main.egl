@@ -9,7 +9,7 @@
 	for(container in RobotContainer.allInstances()) {
 		var launchTemplate := TemplateFactory.load('robotContainer.egl');
 		launchTemplate.populate('container', container);
-		var fileName := container.name + '_rapyuta.launch';
+		var fileName := container.name + '_rapyuta.cfg';
 		launchTemplate.generate(fileName);
 	}
 	

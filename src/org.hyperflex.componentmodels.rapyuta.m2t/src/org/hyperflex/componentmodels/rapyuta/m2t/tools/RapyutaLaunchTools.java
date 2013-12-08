@@ -150,7 +150,7 @@ public class RapyutaLaunchTools {
 	 */
 	public ArrayList<CloudContainer> getAssociatedCloudContainer(RobotEndPoint robotEndPoint){
 
-		ArrayList<CloudContainer> result = new ArrayList<>();
+		ArrayList<CloudContainer> result = new ArrayList<CloudContainer>();
 
 		System system = (System)robotEndPoint.eContainer().eContainer();
 
@@ -158,7 +158,7 @@ public class RapyutaLaunchTools {
 		for(EndPointMsgConnection connection : system.getEndPointMsgConnections()){
 
 			boolean connectEndPointPublisher = robotEndPoint.getPublishers().contains(connection.getPublisher());
-			boolean connectEndPointSubsriber = robotEndPoint.getPublishers().contains(connection.getSubscriber());
+			boolean connectEndPointSubsriber = robotEndPoint.getSubscribers().contains(connection.getSubscriber());
 
 			if(connectEndPointPublisher){
 
@@ -189,6 +189,62 @@ public class RapyutaLaunchTools {
 
 		}
 
+		return result;
+
+	}
+	
+	/**
+	 * Returns the list of all the the message connections which connect publishers and subscribers of a 
+	 * certain robot end point
+	 * @generated NOT
+	 */
+	public ArrayList<EndPointMsgConnection> getAssociatedEndPointMsgConnection(RobotEndPoint robotEndPoint){
+
+		ArrayList<EndPointMsgConnection> result = new ArrayList<EndPointMsgConnection>();
+
+		System system = (System)robotEndPoint.eContainer().eContainer();
+
+
+		for(EndPointMsgConnection connection : system.getEndPointMsgConnections()){
+
+			boolean connectEndPointPublisher = robotEndPoint.getPublishers().contains(connection.getPublisher());
+			boolean connectEndPointSubsriber = robotEndPoint.getSubscribers().contains(connection.getSubscriber());
+
+			if(connectEndPointPublisher || connectEndPointSubsriber){
+
+				result.add(connection);
+
+			}
+		}
+		
+		return result;
+		
+	}
+
+	/**
+	 * Returns the list of all the the service connections which connect service servers and clients of a 
+	 * certain robot end point
+	 * @generated NOT
+	 */
+	public ArrayList<EndPointSrvConnection> getAssociatedEndPointSrvConnection(RobotEndPoint robotEndPoint){	
+
+		ArrayList<EndPointSrvConnection> result = new ArrayList<EndPointSrvConnection>();
+
+		System system = (System)robotEndPoint.eContainer().eContainer();
+		
+		for(EndPointSrvConnection connection : system.getEndPointSrvConnections()){
+			
+			boolean connectEndPointServiceServer = robotEndPoint.getSrvServers().contains(connection.getServer());
+			boolean connectEndPointServiceClient = robotEndPoint.getSrvClients().contains(connection.getClient());
+
+			if(connectEndPointServiceServer || connectEndPointServiceClient){
+
+				result.add(connection);
+
+			}
+
+		}
+			
 		return result;
 
 	}

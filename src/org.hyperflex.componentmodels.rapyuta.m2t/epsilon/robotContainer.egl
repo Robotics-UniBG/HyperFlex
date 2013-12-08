@@ -70,6 +70,14 @@ out.print(interfacesTemplate.process());
 	
 	],
 
+	"connections" : [		
+[%
+var connectionsTemplate := TemplateFactory.load('connections.egl');
+connectionsTemplate.populate('robotEndPoint', container.endPoint);
+out.print(connectionsTemplate.process());
+%]
+	
+	]
 
 }
 
