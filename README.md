@@ -19,13 +19,19 @@ HyperFlex provides a tool for selecting the desired functionalties of an applica
 
 ## How to install the Plugin
 
+The easiest way to install the plugins is using the Makefile 
+* Download the [archive](http://lucagherardi.it/projects/HyperFlex/HyperFlexSetup.zip)
+* Unzip it in a folder called (e.g. `HyperFlex`)
+* From a shell access the folder (e.g. `HyperFlex`) and type `make`
+* The process installs Eclipse and all the required plugins
+* After that you can run it from the folder `eclipse` located in the same folder of the `Makefile`
+
 The plugin can be installed from source (by accessing the [github repository](https://github.com/Robotics-UniBG/HyperFlex) or by means of the [update site](http://lucagherardi.it/projects/HyperFlex/UpdateSite) (if no plugins are showed try to unflag `Groups item by category`).
 
 In order to install the plugin from source you need to setup the following environment:
 
 * Download Eclipse Modeling Tools version from [Eclipse website](http://www.eclipse.org/downloads/)
 * Install the Graphical Modeling Tooling plugin from this [update site](http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/)
-  *  
 * Install the Epsilon plugin from its update site ([Epsilon website](http://www.eclipse.org/epsilon/download/))
 
 ## Developers
