@@ -9,7 +9,7 @@ HyperFlex provides a tool for the analysis and the modeling of the variability i
 
 ### Product line Development
 
-HyperFlex provides tools for designing software product line architectures for ROS and Orocos.
+HyperFlex provides tools for designing software product line architectures for [ROS](http://www.ros.org), [Orocos](http://www.orocos.org) and [Rapyuta](http://www.rapyuta.org).
 
 HyperFlex provides tools for defining variability resolution patterns.
 
