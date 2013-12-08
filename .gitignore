@@ -6,10 +6,11 @@ bin/
 .metadata
 .svn
 .DS_Store
-src/it.unibg.robotics.hyperFlex.updatesite/features/
-src/it.unibg.robotics.hyperFlex.updatesite/plugins/
-src/it.unibg.robotics.hyperFlex.updatesite/artifacts.jar
-src/it.unibg.robotics.hyperFlex.updatesite/content.jar
+src/org.hyperFlex.updatesite/features/
+src/org.hyperFlex.updatesite/plugins/
+src/org.hyperFlex.updatesite/artifacts.jar
+src/org.hyperFlex.updatesite/content.jar
+src/org.hyperFlex.updatesite/logs.zip
 
 install/build
 install/eclipse
