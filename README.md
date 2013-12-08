@@ -23,7 +23,7 @@ The easiest way to install the plugins is using the Makefile
 * Open the shell
 * Download the [archive](http://lucagherardi.it/projects/HyperFlex/HyperFlexSetup.zip) (`wget http://lucagherardi.it/projects/HyperFlex/HyperFlexSetup.zip`)
 * Unzip it in a folder called `HyperFlex` (`unzip HyperFlexSetup.zip -d HyperFlex`)
-* From a shell access the folder (`cd HyperFlex`) and type `make`
+* Access the folder (`cd HyperFlex`) and type `make`
 * The process installs Eclipse and all the required plugins
 * After that you can run it from the folder `eclipse` located in the same folder of the `Makefile`
 
