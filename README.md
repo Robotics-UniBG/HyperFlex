@@ -26,9 +26,9 @@ The easiest way to install the plugins is using the Makefile
 * The process installs Eclipse and all the required plugins
 * After that you can run it from the folder `eclipse` located in the same folder of the `Makefile`
 
-The plugin can be installed from source (by accessing the [github repository](https://github.com/Robotics-UniBG/HyperFlex) or by means of the [update site](http://lucagherardi.it/projects/HyperFlex/UpdateSite) (if no plugins are showed try to unflag `Groups item by category`).
+Alternativelly the plugin can be installed from source, by accessing the [github repository](https://github.com/Robotics-UniBG/HyperFlex), or by means of the [update site](http://lucagherardi.it/projects/HyperFlex/UpdateSite) (if no plugins are showed try to unflag `Groups item by category`).
 
-In order to install the plugin from source you need to setup the following environment:
+These installations require to setup the following environment:
 
 * Download Eclipse Modeling Tools version from [Eclipse website](http://www.eclipse.org/downloads/)
 * Install the Graphical Modeling Tooling plugin from this [update site](http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/)
