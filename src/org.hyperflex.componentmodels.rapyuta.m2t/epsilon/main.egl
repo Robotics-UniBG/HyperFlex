@@ -2,22 +2,21 @@
 	
 	var rapyutaHelper = new Native("org.hyperflex.componentmodels.rapyuta.m2t.tools.RapyutaLaunchTools");
   
-    var composite : Composite := Composite.allInstances().at(0);
-  	var system : System := rapyutaHelper.getSystem(composite);
-	var seq : Sequence := rapyutaHelper.getSystemComposites(composite);
+    //var composite : Composite := Composite.allInstances().at(0);
+  	//var system : System := rapyutaHelper.getSystem(composite);
+	//var seq : Sequence := rapyutaHelper.getSystemComposites(composite);
 	
-	for(composite in system.composites) {
-		var launchTemplate := TemplateFactory.load('compositeLaunchFile.egl');
-		launchTemplate.populate('system', system);
-		launchTemplate.populate('composite', composite);
-		var fileName := composite.name + '_composite.launch';
+	for(container in RobotContainer.allInstances()) {
+		var launchTemplate := TemplateFactory.load('robotContainer.egl');
+		launchTemplate.populate('container', container);
+		var fileName := container.name + '_rapyuta.launch';
 		launchTemplate.generate(fileName);
 	}
 	
-	var launchTemplate := TemplateFactory.load('containerLaunchFile.egl');
-	launchTemplate.populate('system', system);
-	var fileName := system.name + '.launch';
-	launchTemplate.generate(fileName);
+	// var launchTemplate := TemplateFactory.load('containerLaunchFile.egl');
+	// launchTemplate.populate('system', system);
+	// var fileName := system.name + '.launch';
+	// launchTemplate.generate(fileName);
 	
 	
 	

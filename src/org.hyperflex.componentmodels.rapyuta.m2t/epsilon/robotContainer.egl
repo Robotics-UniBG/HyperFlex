@@ -24,28 +24,55 @@
  * 
  * 
  *]
+{
+
+	"url"		: "[%=container.endPoint.url%]"
+	"userID"	: "[%=container.endPoint.userID%]"
+	"password"	: "[%=container.endPoint.password%]"
+	"robotID"	: "[%=container.endPoint.robotID%]"
+
+	"containers" : [
 [%
+var containerCount : Integer := 0;
 var rapyutaHelper = new Native("org.hyperflex.componentmodels.rapyuta.m2t.tools.RapyutaLaunchTools");
-var nodeCount : Integer := 0;
-for(container in cloudContainers) {
-	var nodes : Sequence := rapyutaHelper.getAllNodes(container);
-	for(node in nodes){
-		if(nodeCount > 0){
+var cloudContainers : Sequence := rapyutaHelper.getAssociatedCloudContainer(container.endPoint);
+for(cloudContainer in cloudContainers) {
+	if(containerCount > 0){
 %]
  , {
 [%
-		}else{
+	}else{
 %]
 		{
 [%
-		}
-%]
-			"cTag"	:	"[%=container.name%]"
-			"nTag"	:	"[%=node.name%]"
-			"pkg"	:	"[%=node.packageName%]"
-			"exe"	:	"[%=node.type%]"
-		}[%
-	nodeCount = nodeCount + 1;
 	}
+%]
+			"cTag"	:	"[%=cloudContainer.name%]"
+		}  	
+[%
+containerCount = containerCount + 1;
 }
 %]
+	],
+	
+	"nodes : ["
+[%
+var nodesTemplate := TemplateFactory.load('nodes.egl');
+nodesTemplate.populate('cloudContainers', cloudContainers);
+out.print(nodesTemplate.process());
+%]
+	
+	],
+	
+	"interfaces" : [		
+[%
+//var interfacesTemplate := TemplateFactory.load('interfaces.egl');
+//interfacesTemplate.populate('system', system);
+//out.print(interfacesTemplate.process());
+%]
+	
+	],
+
+
+}
+

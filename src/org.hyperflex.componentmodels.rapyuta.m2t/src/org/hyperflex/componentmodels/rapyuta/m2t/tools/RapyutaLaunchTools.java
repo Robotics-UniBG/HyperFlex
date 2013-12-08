@@ -31,9 +31,14 @@ package org.hyperflex.componentmodels.rapyuta.m2t.tools;
 import java.util.ArrayList;
 
 import org.hyperflex.rapyutacomponentmodel.AbstractComponent;
+import org.hyperflex.rapyutacomponentmodel.CloudContainer;
 import org.hyperflex.rapyutacomponentmodel.Composite;
 import org.hyperflex.rapyutacomponentmodel.Container;
+import org.hyperflex.rapyutacomponentmodel.EndPointMsgConnection;
+import org.hyperflex.rapyutacomponentmodel.EndPointSrvConnection;
 import org.hyperflex.rapyutacomponentmodel.Node;
+import org.hyperflex.rapyutacomponentmodel.RobotEndPoint;
+import org.hyperflex.rapyutacomponentmodel.System;
 
 
 public class RapyutaLaunchTools {
@@ -133,6 +138,55 @@ public class RapyutaLaunchTools {
 			}else if(component instanceof Composite){
 				result.addAll(getAllNodes((Composite)component));
 			}
+		}
+
+		return result;
+
+	}
+
+	/**
+	 * Returns the list of all the cloud containers associated to a certain robot end point
+	 * @generated NOT
+	 */
+	public ArrayList<CloudContainer> getAssociatedCloudContainer(RobotEndPoint robotEndPoint){
+
+		ArrayList<CloudContainer> result = new ArrayList<>();
+
+		System system = (System)robotEndPoint.eContainer().eContainer();
+
+
+		for(EndPointMsgConnection connection : system.getEndPointMsgConnections()){
+
+			boolean connectEndPointPublisher = robotEndPoint.getPublishers().contains(connection.getPublisher());
+			boolean connectEndPointSubsriber = robotEndPoint.getPublishers().contains(connection.getSubscriber());
+
+			if(connectEndPointPublisher){
+
+				result.add((CloudContainer)connection.getSubscriber().eContainer().eContainer());
+
+			}else if(connectEndPointSubsriber){
+
+				result.add((CloudContainer)connection.getPublisher().eContainer().eContainer());
+
+			}
+
+		}
+
+		for(EndPointSrvConnection connection : system.getEndPointSrvConnections()){
+
+			boolean connectEndPointServiceServer = robotEndPoint.getSrvServers().contains(connection.getServer());
+			boolean connectEndPointServiceClient = robotEndPoint.getSrvClients().contains(connection.getClient());
+
+			if(connectEndPointServiceServer){
+
+				result.add((CloudContainer)connection.getClient().eContainer().eContainer());
+
+			}else if(connectEndPointServiceClient){
+
+				result.add((CloudContainer)connection.getServer().eContainer().eContainer());
+
+			}
+
 		}
 
 		return result;
