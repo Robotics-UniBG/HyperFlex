@@ -25,7 +25,6 @@
  * 
  *]
 {
-
 	"url"		: "[%=container.endPoint.url%]"
 	"userID"	: "[%=container.endPoint.userID%]"
 	"password"	: "[%=container.endPoint.password%]"
@@ -38,19 +37,16 @@ var rapyutaHelper = new Native("org.hyperflex.componentmodels.rapyuta.m2t.tools.
 var cloudContainers : Sequence := rapyutaHelper.getAssociatedCloudContainer(container.endPoint);
 for(cloudContainer in cloudContainers) {
 	if(containerCount > 0){
-%]
- , {
-[%
-	}else{
-%]
-		{
-[%
+	%]
+ , 
+	[%
 	}
-%]
+	%]
+		{
 			"cTag"	:	"[%=cloudContainer.name%]"
 		}  	
-[%
-containerCount = containerCount + 1;
+	[%
+	containerCount = containerCount + 1;
 }
 %]
 	],
@@ -66,9 +62,10 @@ out.print(nodesTemplate.process());
 	
 	"interfaces" : [		
 [%
-//var interfacesTemplate := TemplateFactory.load('interfaces.egl');
-//interfacesTemplate.populate('system', system);
-//out.print(interfacesTemplate.process());
+var interfacesTemplate := TemplateFactory.load('interfaces.egl');
+interfacesTemplate.populate('robotEndPoint', container.endPoint);
+interfacesTemplate.populate('cloudContainers', cloudContainers);
+out.print(interfacesTemplate.process());
 %]
 	
 	],

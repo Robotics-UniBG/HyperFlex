@@ -27,28 +27,147 @@
 [%
 var rapyutaHelper = new Native("org.hyperflex.componentmodels.rapyuta.m2t.tools.RapyutaLaunchTools");
 var interfCount : Integer := 0;
-for(container in system.containers) {
-	var nodes : Sequence := rapyutaHelper.getAllNodes(container);
-	for(node in nodes){
-		for(publisher in node.publishers){
-			if(interfCount > 0){
+// Serialize interfaces of the robot end point
+// Publishers
+for(publisher in robotEndPoint.publishers){
+	if(interfCount > 0){
 %]
- , {
+ , 
 [%
-			}else{
+	}
 %]
 		{
-[%
-			}
-%]
-			"eTag"	:	"[%=publisher.name%]"
+			"eTag"	:	"[%=publisher.eContainer.eContainer.name%]"
 			"iTag"	:	"[%=publisher.name%]"
-			"iType"	:	"PublisherInterface"
+			"iType"	:	"PublisherConverter"
 			"iCls"	:	"[%=publisher.connection.msg%]"
-			"exe"	:	"[%=publisher.connection.name%]"
+			"addr"	:	"[%=publisher.connection.name%]"
 		}[%
-			interfCount = interfCount + 1;
-		}
+	interfCount = interfCount + 1;
+}
+// Subscribers
+for(subscriber in robotEndPoint.subscribers){
+	if(interfCount > 0){
+%]
+ , 
+[%
 	}
+%]
+		{
+			"eTag"	:	"[%=subscriber.eContainer.eContainer.name%]"
+			"iTag"	:	"[%=subscriber.name%]"
+			"iType"	:	"PublisherConverter"
+			"iCls"	:	"[%=subscriber.connection.msg%]"
+			"addr"	:	"[%=subscriber.connection.name%]"
+		}[%
+	interfCount = interfCount + 1;
+}
+// Service Servers
+for(server in robotEndPoint.srvServers){
+	if(interfCount > 0){
+%]
+ , 
+[%
+	}
+%]
+		{
+			"eTag"	:	"[%=server.eContainer.eContainer.name%]"
+			"iTag"	:	"[%=server.name%]"
+			"iType"	:	"ServiceProviderConverter"
+			"iCls"	:	"[%=server.srv%]"
+			"addr"	:	"[%=server.srvName%]"
+		}[%
+	interfCount = interfCount + 1;
+}
+// Service Clients
+for(client in robotEndPoint.srvClients){
+	if(interfCount > 0){
+%]
+ , 
+[%
+	}
+%]
+		{
+			"eTag"	:	"[%=client.eContainer.eContainer.name%]"
+			"iTag"	:	"[%=client.name%]"
+			"iType"	:	"ServiceClientConverter"
+			"iCls"	:	"[%=client.srv%]"
+			"addr"	:	"[%=client.srvName%]"
+		}[%
+	interfCount = interfCount + 1;
+}
+// Serialize interfaces of the cloud containers
+for(container in cloudContainers) {
+	
+	// getEnd point and serializa interfaces
+	// Publishers
+	for(publisher in container.endPoint.publishers){
+		if(interfCount > 0){
+	%]
+ , 
+	[%
+		}
+	%]
+		{
+			"eTag"	:	"[%=publisher.eContainer.eContainer.name%]"
+			"iTag"	:	"[%=publisher.name%]"
+			"iType"	:	"PublisherConverter"
+			"iCls"	:	"[%=publisher.connection.msg%]"
+			"addr"	:	"[%=publisher.connection.name%]"
+		}[%
+	interfCount = interfCount + 1;
+	}
+	// Subscribers
+	for(subscriber in container.endPoint.subscribers){
+		if(interfCount > 0){
+	%]
+ , 
+	[%
+		}
+	%]
+		{
+			"eTag"	:	"[%=subscriber.eContainer.eContainer.name%]"
+			"iTag"	:	"[%=subscriber.name%]"
+			"iType"	:	"PublisherConverter"
+			"iCls"	:	"[%=subscriber.connection.msg%]"
+			"addr"	:	"[%=subscriber.connection.name%]"
+		}[%
+		interfCount = interfCount + 1;
+	}
+	// Service Servers
+	for(server in container.endPoint.srvServers){
+		if(interfCount > 0){
+	%]
+ , 
+ 	[%
+		}
+	%]
+		{
+			"eTag"	:	"[%=server.eContainer.eContainer.name%]"
+			"iTag"	:	"[%=server.name%]"
+			"iType"	:	"ServiceProviderConverter"
+			"iCls"	:	"[%=server.srv%]"
+			"addr"	:	"[%=server.srvName%]"
+		}[%
+		interfCount = interfCount + 1;
+	}
+// Service Clients
+	for(client in container.endPoint.srvClients){
+		if(interfCount > 0){
+	%]
+ , 
+	[%
+		}
+	%]
+		{
+			"eTag"	:	"[%=client.eContainer.eContainer.name%]"
+			"iTag"	:	"[%=client.name%]"
+			"iType"	:	"ServiceClientConverter"
+			"iCls"	:	"[%=client.srv%]"
+			"addr"	:	"[%=client.srvName%]"
+		}[%
+		interfCount = interfCount + 1;
+	}
+	
 }
 %]

@@ -21,7 +21,7 @@
   - "org.eclipse.epsilon.emc.emf"
   - "org.eclipse.epsilon.evl.emf.validation"
 "http://lucagherardi.it/projects/HyperFlex/UpdateSite":
- - "org.hyperflex.hyperflex.ui"
+ - "org.hyperflex.ui"
  - "org.best_of_robotics.transform.service"
  - "org.hyperflex.featuremodels.model"
  - "org.hyperflex.featuremodels.model.edit"

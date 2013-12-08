@@ -32,14 +32,11 @@ for(container in cloudContainers) {
 	for(node in nodes){
 		if(nodeCount > 0){
 %]
- , {
-[%
-		}else{
-%]
-		{
+ , 
 [%
 		}
 %]
+		{
 			"cTag"	:	"[%=container.name%]"
 			"nTag"	:	"[%=node.name%]"
 			"pkg"	:	"[%=node.packageName%]"

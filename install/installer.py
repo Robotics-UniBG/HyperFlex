@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 #based on script for SCALA see https://github.com/scala-ide/scala-ide
-#ported to python an adapted for BRIDE
+#ported to python an adapted for HyperFlex
 
 import os
 import sys

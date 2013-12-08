@@ -56,7 +56,7 @@ def main():
 
   fresh = False
   if not os.path.exists(dest):
-    sys.stdout.write('[rosbuild] Downloading %s to %s...'%(uri, dest))
+    sys.stdout.write('Downloading %s to %s...'%(uri, dest))
     sys.stdout.flush()
     urllib.urlretrieve(uri, dest)
     sys.stdout.write('Done\n')
@@ -66,11 +66,11 @@ def main():
     m = hashlib.md5(open(dest).read())
     d = m.hexdigest()
 
-    print '[rosbuild] Checking md5sum on %s'%(dest)
+    print 'Checking md5sum on %s'%(dest)
   
     if d != md5sum:
       if not fresh:
-        print '[rosbuild] WARNING: md5sum mismatch (%s != %s); re-downloading file %s'%(d, md5sum, dest)
+        print 'WARNING: md5sum mismatch (%s != %s); re-downloading file %s'%(d, md5sum, dest)
         os.remove(dest)
 
         # Try one more time
@@ -79,7 +79,7 @@ def main():
         d = m.hexdigest()
     
       if d != md5sum:
-        print '[rosbuild] ERROR: md5sum mismatch (%s != %s) on %s; aborting'%(d, md5sum, dest)
+        print 'ERROR: md5sum mismatch (%s != %s) on %s; aborting'%(d, md5sum, dest)
         return 1
 
   return 0
