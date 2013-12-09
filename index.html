@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Varp by Robotics-UniBG</title>
+    <title>HyperFlex by Robotics-UniBG</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -17,55 +17,80 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Varp</h1>
-        <p>Variability Analysis and Resolution Plugin</p>
-        <p class="view"><a href="https://github.com/Robotics-UniBG/VARP">View the Project on GitHub <small>Robotics-UniBG/VARP</small></a></p>
+        <h1>HyperFlex</h1>
+        <p>Variability Analysis, Composition and Resolution Plugins</p>
+        <p class="view"><a href="https://github.com/Robotics-UniBG/HyperFlex">View the Project on GitHub <small>Robotics-UniBG/HyperFlex</small></a></p>
         <ul>
-          <li><a href="https://github.com/Robotics-UniBG/VARP/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/Robotics-UniBG/VARP/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Robotics-UniBG/VARP">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/Robotics-UniBG/HyperFlex/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Robotics-UniBG/HyperFlex/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Robotics-UniBG/HyperFlex">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
-        <h2><a href="http://robotics-unibg.github.com/VARP/">Variability Analysis and Resolution Plugin (VARP)</a></h2>
+        <h2>
+<a name="hyperflex" class="anchor" href="#hyperflex"><span class="octicon octicon-link"></span></a><a href="http://robotics-unibg.github.com/HyperFlex/">HyperFlex</a>
+</h2>
 
-<p>VARP is a collection of Eclipse plugins that support the development of robotics software product lines, a family of similar applications that are built reusing a set of software components and share the same architecture. The SPL life cycle consists in three main phases: domain analysis, product line development, and product derivation.</p>
+<p><strong>HyperFlex</strong> is a collection of Eclipse plugins that support the development of robotics software product lines, a family of similar applications that are built reusing a set of software components and share the same architecture. The SPL life cycle consists in three main phases: domain analysis, product line development, and product derivation.</p>
 
-<h3>Domain Analysis</h3>
+<p>More information about HyperFlex and the development process can be found in [1].</p>
 
-<p>VARP provides a tool for the analysis and the modeling of the variability in terms of a Feature Model.</p>
+<h3>
+<a name="domain-analysis" class="anchor" href="#domain-analysis"><span class="octicon octicon-link"></span></a>Domain Analysis</h3>
 
-<h3>Product line Development</h3>
+<p>HyperFlex provides a graphical tool for the analysis and the modeling of the variability in terms of Feature Models.</p>
 
-<p>VARP has been integrated with <a href="http://www.best-of-robotics.org/bride/">BRIDE</a>, wihch allows the design of software product line architectures for ROS and Orocos.</p>
+<h3>
+<a name="product-line-development" class="anchor" href="#product-line-development"><span class="octicon octicon-link"></span></a>Product line Development</h3>
 
-<p>VARP provides a tool for defining variability resolution patterns.</p>
+<p>HyperFlex provides a set of graphical tools, which allow the design of software product line architectures (aka the Template System Model) for <a href="http://www.ros.org">ROS</a>, <a href="http://www.orocos.org">Orocos</a> and <a href="http://www.rapyuta.org">Rapyuta</a>. Additionally HyperFlex provides a tool for defining variability resolution patterns (aka the Resolution Model).</p>
 
-<h3>Product Derivation</h3>
+<p>HyperFlex is also integrated with <a href="http://www.best-of-robotics.org/bride/">BRIDE</a>, which can be used for designing the Template System Model. In order to use HyperFlex with BRIDE it is necessary to checkout the specific branch.</p>
 
-<p>VARP provides a tool for selecting the desired functionalities of an application and automatically generating its architectural model.</p>
+<h3>
+<a name="product-derivation" class="anchor" href="#product-derivation"><span class="octicon octicon-link"></span></a>Product Derivation</h3>
 
-<h2>How to install the Plugin</h2>
+<p>HyperFlex provides a tool for selecting the desired functionalities of an application and automatically generating its architectural model.</p>
 
-<p>The plugin can be installed from source (by accessing the <a href="https://github.com/Robotics-UniBG/VARP">github repository</a>) or by means of the <a href="http://www.best-of-robotics.org/varp/update_site/">update site</a>.</p>
+<h2>
+<a name="how-to-install-the-plugin" class="anchor" href="#how-to-install-the-plugin"><span class="octicon octicon-link"></span></a>How to install the Plugin</h2>
 
-<p>In order to install the plugin from source you need to setup the following environment:</p>
+<p>The easiest way to install the plugins is using the Makefile</p>
 
 <ul>
-<li><a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/junosr1">Eclipse Modeling Tools</a></li>
-<li>with the Graphical Modeling Tooling <a href="http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/">update site</a> </li>
-</ul><h2>Developers</h2>
+<li>Open the shell</li>
+<li>Download the <a href="http://lucagherardi.it/projects/HyperFlex/HyperFlexSetup.zip">archive</a> (<code>wget http://lucagherardi.it/projects/HyperFlex/HyperFlexSetup.zip</code>)</li>
+<li>Unzip it in a folder called <code>HyperFlex</code> (<code>unzip HyperFlexSetup.zip -d HyperFlex</code>)</li>
+<li>Access the folder (<code>cd HyperFlex</code>) and type <code>make</code>
+</li>
+<li>The process installs Eclipse and all the required plugins</li>
+<li>After that you can run it from the folder <code>eclipse</code> located in the same folder of the <code>Makefile</code>
+</li>
+</ul><p>Alternativelly the plugin can be installed from source, by accessing the <a href="https://github.com/Robotics-UniBG/HyperFlex">github repository</a>, or by means of the <a href="http://lucagherardi.it/projects/HyperFlex/UpdateSite">update site</a> (if no plugins are showed try to unflag <code>Groups item by category</code>).</p>
 
-<p>Luca Gherardi (luca dot gherardi at unibg dot it), University of Bergamo.</p>
+<p>These installations require to setup the following environment:</p>
 
-<p>Supervisor: Davide Brugali, University of Bergamo.</p>
+<ul>
+<li>Download Eclipse Modeling Tools version from <a href="http://www.eclipse.org/downloads/">Eclipse website</a>
+</li>
+<li>Install the Graphical Modeling Tooling plugin from this <a href="http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/">update site</a>
+</li>
+<li>Install the Epsilon plugin from its update site (<a href="http://www.eclipse.org/epsilon/download/">Epsilon website</a>)</li>
+</ul><h2>
+<a name="developers" class="anchor" href="#developers"><span class="octicon octicon-link"></span></a>Developers</h2>
 
-<h2>More information</h2>
+<p>Luca Gherardi (lucagh  at ethz dot ch), Institute for Dynamic Systems and Control, ETH Zurich.</p>
+
+<p>In collaboration with: Davide Brugali, University of Bergamo.</p>
+
+<h2>
+<a name="more-information" class="anchor" href="#more-information"><span class="octicon octicon-link"></span></a>More information</h2>
 
 <p>More information can be found on the following papers:</p>
 
 <ul>
-<li>L. Gherardi, D. Brugali. <a href="http://www.best-of-robotics.org/pages/publications/UniBergamo_EclipseIT2011.pdf">An eclipse-based Feature Models toolchain</a>. <em>In Proc. of the 6th Workshop of the Italian Eclipse Community (<a href="http://2011.eclipse-it.org/home/">Eclipse-IT 2011</a>)</em>, September 22-23, 2011, Milano, Italy.</li>
+<li>[1] L. Gherardi. <a href="http://lucagherardi.it/wp-content/papercite-data/pdf/gherardi2013variability.pdf">Variability modeling and resolution in component-based robotics systems</a>. PhD Thesis, April 2013.</li>
+<li>[2] L. Gherardi, D. Brugali. <a href="http://www.best-of-robotics.org/pages/publications/UniBergamo_EclipseIT2011.pdf">An eclipse-based Feature Models toolchain</a>. <em>In Proc. of the 6th Workshop of the Italian Eclipse Community (<a href="http://2011.eclipse-it.org/home/">Eclipse-IT 2011</a>)</em>, September 22-23, 2011, Milano, Italy.</li>
 </ul>
       </section>
     </div>
