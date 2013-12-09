@@ -36,7 +36,7 @@
             id="org.hyperflex.roscompositionmodel.presentation.roscompositionmodelModelWizardID"
             name="%_UI_roscompositionmodelModelWizard_label"
             class="org.hyperflex.roscompositionmodel.presentation.roscompositionmodelModelWizard"
-            category="it.robotics.unibg.hyperflex.wizard.category"
+            category="org.hyperflex.wizard.category"
             icon="icons/full/obj16/roscompositionmodelModelFile.gif">
          <description>%_UI_roscompositionmodelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
