@@ -50,8 +50,8 @@ for(srvConnection in rapyutaHelper.getAssociatedEndPointSrvConnection(robotEndPo
 	}
 %]
 		{
-			"tagA"	:	"[%=srvConnection.server.eContainer().eContainer().name%]/[%=msgConnection.server.name%]"
-			"tagB"	:	"[%=srvConnection.service.eContainer().eContainer().name%]/[%=msgConnection.service.name%]"
+			"tagA"	:	"[%=srvConnection.server.eContainer().eContainer().name%]/[%=srvConnection.server.name%]"
+			"tagB"	:	"[%=srvConnection.client.eContainer().eContainer().name%]/[%=srvConnection.client.name%]"
 		}[%
 	connCount = connCount + 1;
 }

@@ -44,11 +44,11 @@ for(cloudContainer in cloudContainers) {
 	%]
 		{
 			"cTag"	:	"[%=cloudContainer.name%]"
-		}  	
-	[%
+		}[%
 	containerCount = containerCount + 1;
 }
 %]
+	
 	],
 	
 	"nodes : ["

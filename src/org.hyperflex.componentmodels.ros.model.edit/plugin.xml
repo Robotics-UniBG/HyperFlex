@@ -31,7 +31,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http://robotics.unibg.it/componentmodels.ros"
+            uri="http://www.hyperflex.org/componentmodels.ros"
             class="org.hyperflex.roscomponentmodel.provider.roscomponentmodelItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
