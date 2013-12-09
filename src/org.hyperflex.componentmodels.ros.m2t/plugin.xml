@@ -34,5 +34,12 @@
       </menuContribution>
       
    </extension>
+   <extension
+         point="org.eclipse.epsilon.common.dt.tool">
+      <tool
+            class="org.hyperflex.componentmodels.ros.m2t.tools.ROSLaunchTools"
+            defaultName="org.hyperflex.componentmodels.ros.m2t.tools.ROSLaunchTools">
+      </tool>
+   </extension>
 
 </plugin>

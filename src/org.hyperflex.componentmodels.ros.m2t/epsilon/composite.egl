@@ -27,13 +27,31 @@
 <!-- Start composite "[%=composite.name%]" -->
 
 [%
+var rosHelper = new Native("org.hyperflex.componentmodels.ros.m2t.tools.ROSLaunchTools");
 for(child in composite.components) {
 %]
 	[%
 	if(child.isTypeOf(Node)){
 	%]
 		<node pkg="[%=child.packageName%]" type="[%=child.type%]" name="[%=child.name%]" output="screen">
-	
+		[%
+		for(msgProducer in child.msgProducers){
+			var actualTopicName : String := rosHelper.getActualTopicName(msgProducer);
+			if(actualTopicName <> msgProducer.topicName){
+				%]
+				<remap from="[%=msgProducer.topicName%]" to="[%=actualTopicName%]"/>
+				[%
+			}
+		}
+		for(msgConsumer in child.msgConsumers){
+			var actualTopicName : String := rosHelper.getActualTopicName(msgConsumer);
+			if(actualTopicName <> msgConsumer.topicName){
+				%]
+				<remap from="[%=msgConsumer.topicName%]" to="[%=actualTopicName%]"/>
+				[%
+			}
+		}
+		%]
 		</node>
 	[%
 	}else if(child.isTypeOf(Composite)){
