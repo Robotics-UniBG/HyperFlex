@@ -123,13 +123,12 @@ public class ROSLaunchTools {
 				// check if the topic is exposed
 				for(CompositeMsgInterface compositeMsgInterface : composite.getMsgConsumers()){
 					
-					if(compositeMsgInterface.getExposed().equals(topic)){
-						
+					if(compositeMsgInterface.getExposed() != null && compositeMsgInterface.getExposed().equals(topic)){
 						String name = getActualTopicName(compositeMsgInterface);
 						if(name.equals("")){
 							return topic.getName();
 						}
-						
+						return name;
 						
 					}
 					
@@ -137,13 +136,12 @@ public class ROSLaunchTools {
 				
 				for(CompositeMsgInterface compositeMsgInterface : composite.getMsgProducers()){
 					
-					if(compositeMsgInterface.getExposed().equals(topic)){
-						
+					if(compositeMsgInterface.getExposed() != null && compositeMsgInterface.getExposed().equals(topic)){
 						String name = getActualTopicName(compositeMsgInterface);
 						if(name.equals("")){
 							return topic.getName();
 						}
-						
+						return name;
 					}
 					
 				}
