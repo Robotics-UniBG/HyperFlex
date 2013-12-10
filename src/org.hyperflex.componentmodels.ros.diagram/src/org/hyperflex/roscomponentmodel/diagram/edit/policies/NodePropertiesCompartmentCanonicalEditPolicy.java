@@ -1,10 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -25,6 +20,10 @@ import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 /**
  * @generated
@@ -60,7 +59,7 @@ public class NodePropertiesCompartmentCanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RosComponentModelNodeDescriptor> childDescriptors = RosComponentModelDiagramUpdater
-				.getNodePropertiesCompartment_7005SemanticChildren(viewObject);
+				.getNodePropertiesCompartment_7002SemanticChildren(viewObject);
 		for (RosComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -93,7 +92,7 @@ public class NodePropertiesCompartmentCanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RosComponentModelNodeDescriptor> childDescriptors = RosComponentModelDiagramUpdater
-				.getNodePropertiesCompartment_7005SemanticChildren((View) getHost()
+				.getNodePropertiesCompartment_7002SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

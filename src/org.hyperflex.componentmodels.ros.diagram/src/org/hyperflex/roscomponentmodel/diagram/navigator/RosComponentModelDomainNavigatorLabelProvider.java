@@ -1,13 +1,12 @@
 package org.hyperflex.roscomponentmodel.diagram.navigator;
 
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
-
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.viewers.ILabelProviderListener;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
 
 /**
  * @generated

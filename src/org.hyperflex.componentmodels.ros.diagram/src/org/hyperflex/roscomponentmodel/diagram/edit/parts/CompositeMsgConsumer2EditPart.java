@@ -25,9 +25,6 @@
  */
 package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.CompositeMsgConsumer2ItemSemanticEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -55,6 +52,8 @@ import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.CompositeMsgConsumer2ItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 /**
  * @generated
@@ -64,7 +63,7 @@ public class CompositeMsgConsumer2EditPart extends AbstractBorderItemEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3018;
+	public static final int VISUAL_ID = 3013;
 
 	/**
 	 * @generated
@@ -226,10 +225,10 @@ public class CompositeMsgConsumer2EditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-		types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4010);
-		types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4011);
-		types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4007);
-		types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4012);
+		types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4001);
+		types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4002);
+		types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4003);
+		types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
 		return types;
 	}
 
@@ -240,16 +239,16 @@ public class CompositeMsgConsumer2EditPart extends AbstractBorderItemEditPart {
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4010);
+			types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4001);
 		}
 		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4011);
+			types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4002);
 		}
 		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4007);
+			types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4003);
 		}
 		if (targetEditPart instanceof TopicEditPart) {
-			types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4012);
+			types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
 		}
 		return types;
 	}
@@ -259,14 +258,14 @@ public class CompositeMsgConsumer2EditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == RosComponentModelElementTypes.MsgInterfaceConnection_4010) {
-			types.add(RosComponentModelElementTypes.Topic_3019);
-		} else if (relationshipType == RosComponentModelElementTypes.MsgInterfaceConnection_4011) {
-			types.add(RosComponentModelElementTypes.Topic_3019);
-		} else if (relationshipType == RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4007) {
-			types.add(RosComponentModelElementTypes.Topic_3019);
-		} else if (relationshipType == RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4012) {
-			types.add(RosComponentModelElementTypes.Topic_3019);
+		if (relationshipType == RosComponentModelElementTypes.MsgInterfaceConnection_4001) {
+			types.add(RosComponentModelElementTypes.Topic_3014);
+		} else if (relationshipType == RosComponentModelElementTypes.MsgInterfaceConnection_4002) {
+			types.add(RosComponentModelElementTypes.Topic_3014);
+		} else if (relationshipType == RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4003) {
+			types.add(RosComponentModelElementTypes.Topic_3014);
+		} else if (relationshipType == RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4004) {
+			types.add(RosComponentModelElementTypes.Topic_3014);
 		}
 		return types;
 	}

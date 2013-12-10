@@ -25,13 +25,12 @@
  */
 package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
+import org.eclipse.gef.commands.Command;
+import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.hyperflex.roscomponentmodel.diagram.edit.commands.Composite2CreateCommand;
 import org.hyperflex.roscomponentmodel.diagram.edit.commands.NodeCreateCommand;
 import org.hyperflex.roscomponentmodel.diagram.edit.commands.TopicCreateCommand;
 import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
-
-import org.eclipse.gef.commands.Command;
-import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 
 /**
  * @generated
@@ -43,21 +42,21 @@ public class CompositeCompositeContainerCompartmentItemSemanticEditPolicy
 	 * @generated
 	 */
 	public CompositeCompositeContainerCompartmentItemSemanticEditPolicy() {
-		super(RosComponentModelElementTypes.Composite_2003);
+		super(RosComponentModelElementTypes.Composite_2001);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RosComponentModelElementTypes.Node_3013 == req.getElementType()) {
+		if (RosComponentModelElementTypes.Node_3001 == req.getElementType()) {
 			return getGEFWrapper(new NodeCreateCommand(req));
 		}
-		if (RosComponentModelElementTypes.Composite_3014 == req
+		if (RosComponentModelElementTypes.Composite_3007 == req
 				.getElementType()) {
 			return getGEFWrapper(new Composite2CreateCommand(req));
 		}
-		if (RosComponentModelElementTypes.Topic_3019 == req.getElementType()) {
+		if (RosComponentModelElementTypes.Topic_3014 == req.getElementType()) {
 			return getGEFWrapper(new TopicCreateCommand(req));
 		}
 		return super.getCreateCommand(req);

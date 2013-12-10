@@ -1,13 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import org.hyperflex.roscomponentmodel.CompositeMsgInterface;
-import org.hyperflex.roscomponentmodel.MsgInterface;
-import org.hyperflex.roscomponentmodel.Topic;
-import org.hyperflex.roscomponentmodel.diagram.expressions.RosComponentModelOCLFactory;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
-
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.Map;
@@ -42,6 +34,18 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipReques
 import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
+import org.hyperflex.roscomponentmodel.Composite;
+import org.hyperflex.roscomponentmodel.CompositeMsgInterface;
+import org.hyperflex.roscomponentmodel.CompositeSrvProducer;
+import org.hyperflex.roscomponentmodel.MsgInterface;
+import org.hyperflex.roscomponentmodel.SrvConsumer;
+import org.hyperflex.roscomponentmodel.SrvProducer;
+import org.hyperflex.roscomponentmodel.Topic;
+import org.hyperflex.roscomponentmodel.Wire;
+import org.hyperflex.roscomponentmodel.diagram.expressions.RosComponentModelOCLFactory;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 /**
  * @generated
@@ -332,7 +336,7 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canCreateMsgInterfaceConnection_4010(
+		public boolean canCreateMsgInterfaceConnection_4001(
 				MsgInterface source, Topic target) {
 			if (source != null) {
 				if (source.getConnection() != null) {
@@ -340,13 +344,13 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 				}
 			}
 
-			return canExistMsgInterfaceConnection_4010(source, target);
+			return canExistMsgInterfaceConnection_4001(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateMsgInterfaceConnection_4011(
+		public boolean canCreateMsgInterfaceConnection_4002(
 				MsgInterface source, Topic target) {
 			if (source != null) {
 				if (source.getConnection() != null) {
@@ -354,13 +358,13 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 				}
 			}
 
-			return canExistMsgInterfaceConnection_4011(source, target);
+			return canExistMsgInterfaceConnection_4002(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateCompositeMsgInterfaceExposed_4007(
+		public boolean canCreateCompositeMsgInterfaceExposed_4003(
 				CompositeMsgInterface source, Topic target) {
 			if (source != null) {
 				if (source.getExposed() != null) {
@@ -368,13 +372,13 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 				}
 			}
 
-			return canExistCompositeMsgInterfaceExposed_4007(source, target);
+			return canExistCompositeMsgInterfaceExposed_4003(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateCompositeMsgInterfaceExposed_4012(
+		public boolean canCreateCompositeMsgInterfaceExposed_4004(
 				CompositeMsgInterface source, Topic target) {
 			if (source != null) {
 				if (source.getExposed() != null) {
@@ -382,13 +386,49 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 				}
 			}
 
-			return canExistCompositeMsgInterfaceExposed_4012(source, target);
+			return canExistCompositeMsgInterfaceExposed_4004(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canExistMsgInterfaceConnection_4010(MsgInterface source,
+		public boolean canCreateCompositeSrvProducerPromote_4005(
+				CompositeSrvProducer source, SrvProducer target) {
+			if (source != null) {
+				if (source.getPromote() != null) {
+					return false;
+				}
+			}
+
+			return canExistCompositeSrvProducerPromote_4005(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateCompositeSrvProducerPromote_4006(
+				CompositeSrvProducer source, SrvProducer target) {
+			if (source != null) {
+				if (source.getPromote() != null) {
+					return false;
+				}
+			}
+
+			return canExistCompositeSrvProducerPromote_4006(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateWire_4007(Composite container,
+				SrvConsumer source, SrvProducer target) {
+			return canExistWire_4007(container, null, source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistMsgInterfaceConnection_4001(MsgInterface source,
 				Topic target) {
 			try {
 				if (source == null) {
@@ -421,7 +461,7 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canExistMsgInterfaceConnection_4011(MsgInterface source,
+		public boolean canExistMsgInterfaceConnection_4002(MsgInterface source,
 				Topic target) {
 			try {
 				if (source == null) {
@@ -454,7 +494,7 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canExistCompositeMsgInterfaceExposed_4007(
+		public boolean canExistCompositeMsgInterfaceExposed_4003(
 				CompositeMsgInterface source, Topic target) {
 			try {
 				if (source == null) {
@@ -488,7 +528,7 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canExistCompositeMsgInterfaceExposed_4012(
+		public boolean canExistCompositeMsgInterfaceExposed_4004(
 				CompositeMsgInterface source, Topic target) {
 			try {
 				if (source == null) {
@@ -517,6 +557,82 @@ public class RosComponentModelBaseItemSemanticEditPolicy extends
 						"Link constraint evaluation error", e); //$NON-NLS-1$
 				return false;
 			}
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistCompositeSrvProducerPromote_4005(
+				CompositeSrvProducer source, SrvProducer target) {
+			try {
+				if (source == null) {
+					return true;
+				} else {
+					Map<String, EClassifier> env = Collections
+							.<String, EClassifier> singletonMap(
+									"oppositeEnd", org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE.getSrvProducer()); //$NON-NLS-1$
+					Object sourceVal = RosComponentModelOCLFactory
+							.getExpression(
+									4,
+									org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+											.getCompositeSrvProducer(), env)
+							.evaluate(
+									source,
+									Collections.singletonMap(
+											"oppositeEnd", target)); //$NON-NLS-1$
+					if (false == sourceVal instanceof Boolean
+							|| !((Boolean) sourceVal).booleanValue()) {
+						return false;
+					} // else fall-through
+				}
+				return true;
+			} catch (Exception e) {
+				RosComponentModelDiagramEditorPlugin.getInstance().logError(
+						"Link constraint evaluation error", e); //$NON-NLS-1$
+				return false;
+			}
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistCompositeSrvProducerPromote_4006(
+				CompositeSrvProducer source, SrvProducer target) {
+			try {
+				if (source == null) {
+					return true;
+				} else {
+					Map<String, EClassifier> env = Collections
+							.<String, EClassifier> singletonMap(
+									"oppositeEnd", org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE.getSrvProducer()); //$NON-NLS-1$
+					Object sourceVal = RosComponentModelOCLFactory
+							.getExpression(
+									5,
+									org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+											.getCompositeSrvProducer(), env)
+							.evaluate(
+									source,
+									Collections.singletonMap(
+											"oppositeEnd", target)); //$NON-NLS-1$
+					if (false == sourceVal instanceof Boolean
+							|| !((Boolean) sourceVal).booleanValue()) {
+						return false;
+					} // else fall-through
+				}
+				return true;
+			} catch (Exception e) {
+				RosComponentModelDiagramEditorPlugin.getInstance().logError(
+						"Link constraint evaluation error", e); //$NON-NLS-1$
+				return false;
+			}
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistWire_4007(Composite container,
+				Wire linkInstance, SrvConsumer source, SrvProducer target) {
+			return true;
 		}
 	}
 

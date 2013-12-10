@@ -1,8 +1,30 @@
+/*
+ * HyperFlex toolchain
+ * 
+ * Copyright (c) 2013
+ * All rights reserved.
+ * 
+ * Luca Gherardi
+ * ETH Zurich
+ * Institute for Dynamic Systems and Control
+ * 
+ * ***********************************************************************************************
+ * 
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
+ * 
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
+ * 
+ * ***********************************************************************************************
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * 
+ */
 package org.hyperflex.roscomponentmodel.diagram.edit.parts;
-
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.TopicItemSemanticEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -35,6 +57,9 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.TopicItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 /**
  * @generated
@@ -44,7 +69,7 @@ public class TopicEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3019;
+	public static final int VISUAL_ID = 3014;
 
 	/**
 	 * @generated
@@ -263,10 +288,10 @@ public class TopicEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnTarget() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-		types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4010);
-		types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4011);
-		types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4007);
-		types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4012);
+		types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4001);
+		types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4002);
+		types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4003);
+		types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
 		return types;
 	}
 
@@ -275,30 +300,30 @@ public class TopicEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == RosComponentModelElementTypes.MsgInterfaceConnection_4010) {
+		if (relationshipType == RosComponentModelElementTypes.MsgInterfaceConnection_4001) {
 			types.add(RosComponentModelElementTypes.NodeMsgProducer_3003);
 			types.add(RosComponentModelElementTypes.NodeMsgConsumer_3004);
-			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3015);
-			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3016);
-			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3017);
-			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3018);
-		} else if (relationshipType == RosComponentModelElementTypes.MsgInterfaceConnection_4011) {
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3008);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3009);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3012);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3013);
+		} else if (relationshipType == RosComponentModelElementTypes.MsgInterfaceConnection_4002) {
 			types.add(RosComponentModelElementTypes.NodeMsgProducer_3003);
 			types.add(RosComponentModelElementTypes.NodeMsgConsumer_3004);
-			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3015);
-			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3016);
-			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3017);
-			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3018);
-		} else if (relationshipType == RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4007) {
-			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3015);
-			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3016);
-			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3017);
-			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3018);
-		} else if (relationshipType == RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4012) {
-			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3015);
-			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3016);
-			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3017);
-			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3018);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3008);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3009);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3012);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3013);
+		} else if (relationshipType == RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4003) {
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3008);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3009);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3012);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3013);
+		} else if (relationshipType == RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4004) {
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3008);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3009);
+			types.add(RosComponentModelElementTypes.CompositeMsgProducer_3012);
+			types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3013);
 		}
 		return types;
 	}
@@ -339,7 +364,7 @@ public class TopicEditPart extends ShapeNodeEditPart {
 
 			fFigureChannel1NameLabel = new WrappingLabel();
 
-			fFigureChannel1NameLabel.setText("<?>");
+			fFigureChannel1NameLabel.setText("<É>");
 
 			fFigureChannel1NameLabel.setFont(FFIGURECHANNEL1NAMELABEL_FONT);
 

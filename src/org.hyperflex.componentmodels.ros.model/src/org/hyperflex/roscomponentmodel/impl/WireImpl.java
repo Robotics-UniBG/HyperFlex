@@ -45,6 +45,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link org.hyperflex.roscomponentmodel.impl.WireImpl#getSource <em>Source</em>}</li>
  *   <li>{@link org.hyperflex.roscomponentmodel.impl.WireImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.WireImpl#getSrvName <em>Srv Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,6 +71,26 @@ public class WireImpl extends EObjectImpl implements Wire {
 	 * @ordered
 	 */
 	protected SrvConsumer target;
+
+	/**
+	 * The default value of the '{@link #getSrvName() <em>Srv Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSrvName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SRV_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSrvName() <em>Srv Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSrvName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String srvName = SRV_NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,6 +192,27 @@ public class WireImpl extends EObjectImpl implements Wire {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getSrvName() {
+		return srvName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSrvName(String newSrvName) {
+		String oldSrvName = srvName;
+		srvName = newSrvName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, roscomponentmodelPackage.WIRE__SRV_NAME, oldSrvName, srvName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -180,6 +222,8 @@ public class WireImpl extends EObjectImpl implements Wire {
 			case roscomponentmodelPackage.WIRE__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
+			case roscomponentmodelPackage.WIRE__SRV_NAME:
+				return getSrvName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -197,6 +241,9 @@ public class WireImpl extends EObjectImpl implements Wire {
 				return;
 			case roscomponentmodelPackage.WIRE__TARGET:
 				setTarget((SrvConsumer)newValue);
+				return;
+			case roscomponentmodelPackage.WIRE__SRV_NAME:
+				setSrvName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -216,6 +263,9 @@ public class WireImpl extends EObjectImpl implements Wire {
 			case roscomponentmodelPackage.WIRE__TARGET:
 				setTarget((SrvConsumer)null);
 				return;
+			case roscomponentmodelPackage.WIRE__SRV_NAME:
+				setSrvName(SRV_NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -232,8 +282,26 @@ public class WireImpl extends EObjectImpl implements Wire {
 				return source != null;
 			case roscomponentmodelPackage.WIRE__TARGET:
 				return target != null;
+			case roscomponentmodelPackage.WIRE__SRV_NAME:
+				return SRV_NAME_EDEFAULT == null ? srvName != null : !SRV_NAME_EDEFAULT.equals(srvName);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (srvName: ");
+		result.append(srvName);
+		result.append(')');
+		return result.toString();
 	}
 
 } //WireImpl

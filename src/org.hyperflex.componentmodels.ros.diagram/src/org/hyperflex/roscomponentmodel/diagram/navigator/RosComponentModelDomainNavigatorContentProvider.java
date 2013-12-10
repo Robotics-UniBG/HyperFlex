@@ -1,7 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.navigator;
 
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -19,6 +17,7 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonContentProvider;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
 
 /**
  * @generated

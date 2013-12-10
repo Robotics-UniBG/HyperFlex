@@ -1,9 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.part;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.RosComponentModelBaseItemSemanticEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.expressions.RosComponentModelOCLFactory;
-import org.hyperflex.roscomponentmodel.diagram.providers.ElementInitializers;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +18,9 @@ import org.eclipse.gmf.runtime.diagram.core.preferences.PreferencesHint;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.RosComponentModelBaseItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.expressions.RosComponentModelOCLFactory;
+import org.hyperflex.roscomponentmodel.diagram.providers.ElementInitializers;
 import org.osgi.framework.BundleContext;
 
 /**

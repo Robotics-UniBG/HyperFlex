@@ -25,13 +25,6 @@
  */
 package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -54,6 +47,12 @@ import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 /**
  * @generated
@@ -102,7 +101,7 @@ public class CompositeCompositeContainerCompartmentCanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RosComponentModelNodeDescriptor> childDescriptors = RosComponentModelDiagramUpdater
-				.getCompositeCompositeContainerCompartment_7004SemanticChildren(viewObject);
+				.getCompositeCompositeContainerCompartment_7001SemanticChildren(viewObject);
 		for (RosComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -137,7 +136,7 @@ public class CompositeCompositeContainerCompartmentCanonicalEditPolicy extends
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RosComponentModelNodeDescriptor> childDescriptors = RosComponentModelDiagramUpdater
-				.getCompositeCompositeContainerCompartment_7004SemanticChildren((View) getHost()
+				.getCompositeCompositeContainerCompartment_7001SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

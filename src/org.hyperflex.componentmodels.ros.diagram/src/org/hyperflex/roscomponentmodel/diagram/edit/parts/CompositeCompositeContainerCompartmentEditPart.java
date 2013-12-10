@@ -25,11 +25,6 @@
  */
 package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.CompositeCompositeContainerCompartmentCanonicalEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.CompositeCompositeContainerCompartmentItemSemanticEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.part.Messages;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeCompartmentEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.DragDropEditPolicy;
@@ -38,6 +33,10 @@ import org.eclipse.gmf.runtime.diagram.ui.figures.ResizableCompartmentFigure;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.CompositeCompositeContainerCompartmentCanonicalEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.CompositeCompositeContainerCompartmentItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.Messages;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 /**
  * @generated
@@ -48,7 +47,7 @@ public class CompositeCompositeContainerCompartmentEditPart extends
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7004;
+	public static final int VISUAL_ID = 7001;
 
 	/**
 	 * @generated

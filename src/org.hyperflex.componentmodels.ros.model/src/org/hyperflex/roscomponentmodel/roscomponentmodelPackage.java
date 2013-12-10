@@ -899,13 +899,22 @@ public interface roscomponentmodelPackage extends EPackage {
 	int WIRE__TARGET = 1;
 
 	/**
+	 * The feature id for the '<em><b>Srv Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRE__SRV_NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Wire</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_FEATURE_COUNT = 2;
+	int WIRE_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.roscomponentmodel.impl.SystemImpl <em>System</em>}' class.
@@ -1443,6 +1452,17 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getWire_Target();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.roscomponentmodel.Wire#getSrvName <em>Srv Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Srv Name</em>'.
+	 * @see org.hyperflex.roscomponentmodel.Wire#getSrvName()
+	 * @see #getWire()
+	 * @generated
+	 */
+	EAttribute getWire_SrvName();
 
 	/**
 	 * Returns the meta object for class '{@link org.hyperflex.roscomponentmodel.System <em>System</em>}'.
@@ -1984,6 +2004,14 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference WIRE__TARGET = eINSTANCE.getWire_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Srv Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WIRE__SRV_NAME = eINSTANCE.getWire_SrvName();
 
 		/**
 		 * The meta object literal for the '{@link org.hyperflex.roscomponentmodel.impl.SystemImpl <em>System</em>}' class.

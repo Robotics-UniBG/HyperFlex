@@ -217,8 +217,8 @@
       <viewProvider class="org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="RosComponentModel"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2003,3013,3012,3003,3004,3014,3015,3016,3017,3018,3019"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4010,4011,4007,4012"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005,4006,4007"/>
       </viewProvider>
    </extension>
 
@@ -230,16 +230,16 @@
             <method name="getType()" value="RosComponentModel"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2003,3013,3012,3003,3004,3014,3015,3016,3017,3018,3019"/>
+            <method name="getType()" value="2001,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4010,4011,4007,4012"/>
+            <method name="getType()" value="4001,4002,4003,4004,4005,4006,4007"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5022,5019,5018,5020,5021"/>
+            <method name="getType()" value="5005,5002,5001,5003,5004"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value="7004,7005"/>
+            <method name="getType()" value="7001,7002"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -250,18 +250,24 @@
       <modelingAssistantProvider class="org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelModelingAssistantProvider">
          <Priority name="Lowest"/>
          <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart" id="System_1000"/>
-         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeEditPart" id="Composite_2003"/>
-         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart" id="Node_3013"/>
-         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart" id="NodeProperty_3012"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeEditPart" id="Composite_2001"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart" id="Node_3001"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart" id="NodeProperty_3002"/>
          <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart" id="NodeMsgProducer_3003"/>
          <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart" id="NodeMsgConsumer_3004"/>
-         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart" id="Composite_3014"/>
-         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart" id="CompositeMsgProducer_3015"/>
-         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart" id="CompositeMsgConsumer_3016"/>
-         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart" id="CompositeMsgProducer_3017"/>
-         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart" id="CompositeMsgConsumer_3018"/>
-         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart" id="Topic_3019"/>
-         <context elements="System_1000,Composite_2003,Node_3013,NodeProperty_3012,NodeMsgProducer_3003,NodeMsgConsumer_3004,Composite_3014,CompositeMsgProducer_3015,CompositeMsgConsumer_3016,CompositeMsgProducer_3017,CompositeMsgConsumer_3018,Topic_3019"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeSrvProducerEditPart" id="NodeSrvProducer_3005"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeSrvConsumerEditPart" id="NodeSrvConsumer_3006"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart" id="Composite_3007"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart" id="CompositeMsgProducer_3008"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart" id="CompositeMsgConsumer_3009"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducerEditPart" id="CompositeSrvProducer_3010"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvConsumerEditPart" id="CompositeSrvConsumer_3011"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart" id="CompositeMsgProducer_3012"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart" id="CompositeMsgConsumer_3013"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart" id="Topic_3014"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducer2EditPart" id="CompositeSrvProducer_3015"/>
+         <object class="org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvConsumer2EditPart" id="CompositeSrvConsumer_3016"/>
+         <context elements="System_1000,Composite_2001,Node_3001,NodeProperty_3002,NodeMsgProducer_3003,NodeMsgConsumer_3004,NodeSrvProducer_3005,NodeSrvConsumer_3006,Composite_3007,CompositeMsgProducer_3008,CompositeMsgConsumer_3009,CompositeSrvProducer_3010,CompositeSrvConsumer_3011,CompositeMsgProducer_3012,CompositeMsgConsumer_3013,Topic_3014,CompositeSrvProducer_3015,CompositeSrvConsumer_3016"/>
       </modelingAssistantProvider>
    </extension>
 
@@ -293,32 +299,32 @@
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
          <metamodelType
-               id="org.hyperflex.componentmodels.ros.diagram.Composite_2003"
-               name="%metatype.name.Composite_2003"
+               id="org.hyperflex.componentmodels.ros.diagram.Composite_2001"
+               name="%metatype.name.Composite_2001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Composite"
                edithelper="org.hyperflex.roscomponentmodel.diagram.edit.helpers.CompositeEditHelper">
-            <param name="semanticHint" value="2003"/>
+            <param name="semanticHint" value="2001"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
          <metamodelType
-               id="org.hyperflex.componentmodels.ros.diagram.Node_3013"
-               name="%metatype.name.Node_3013"
+               id="org.hyperflex.componentmodels.ros.diagram.Node_3001"
+               name="%metatype.name.Node_3001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Node"
                edithelper="org.hyperflex.roscomponentmodel.diagram.edit.helpers.NodeEditHelper">
-            <param name="semanticHint" value="3013"/>
+            <param name="semanticHint" value="3001"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
          <metamodelType
-               id="org.hyperflex.componentmodels.ros.diagram.NodeProperty_3012"
-               name="%metatype.name.NodeProperty_3012"
+               id="org.hyperflex.componentmodels.ros.diagram.NodeProperty_3002"
+               name="%metatype.name.NodeProperty_3002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="NodeProperty"
                edithelper="org.hyperflex.roscomponentmodel.diagram.edit.helpers.NodePropertyEditHelper">
-            <param name="semanticHint" value="3012"/>
+            <param name="semanticHint" value="3002"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
@@ -342,97 +348,183 @@
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
+         <metamodelType
+               id="org.hyperflex.componentmodels.ros.diagram.NodeSrvProducer_3005"
+               name="%metatype.name.NodeSrvProducer_3005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="NodeSrvProducer"
+               edithelper="org.hyperflex.roscomponentmodel.diagram.edit.helpers.NodeSrvProducerEditHelper">
+            <param name="semanticHint" value="3005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
+         <metamodelType
+               id="org.hyperflex.componentmodels.ros.diagram.NodeSrvConsumer_3006"
+               name="%metatype.name.NodeSrvConsumer_3006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="NodeSrvConsumer"
+               edithelper="org.hyperflex.roscomponentmodel.diagram.edit.helpers.NodeSrvConsumerEditHelper">
+            <param name="semanticHint" value="3006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
          <specializationType
-               id="org.hyperflex.componentmodels.ros.diagram.Composite_3014"
-               name="%metatype.name.Composite_3014"
+               id="org.hyperflex.componentmodels.ros.diagram.Composite_3007"
+               name="%metatype.name.Composite_3007"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.hyperflex.componentmodels.ros.diagram.Composite_2003"/>
-            <param name="semanticHint" value="3014"/>
+            <specializes id="org.hyperflex.componentmodels.ros.diagram.Composite_2001"/>
+            <param name="semanticHint" value="3007"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
          <metamodelType
-               id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgProducer_3015"
-               name="%metatype.name.CompositeMsgProducer_3015"
+               id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgProducer_3008"
+               name="%metatype.name.CompositeMsgProducer_3008"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="CompositeMsgProducer"
                edithelper="org.hyperflex.roscomponentmodel.diagram.edit.helpers.CompositeMsgProducerEditHelper">
-            <param name="semanticHint" value="3015"/>
+            <param name="semanticHint" value="3008"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
          <metamodelType
-               id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgConsumer_3016"
-               name="%metatype.name.CompositeMsgConsumer_3016"
+               id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgConsumer_3009"
+               name="%metatype.name.CompositeMsgConsumer_3009"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="CompositeMsgConsumer"
                edithelper="org.hyperflex.roscomponentmodel.diagram.edit.helpers.CompositeMsgConsumerEditHelper">
-            <param name="semanticHint" value="3016"/>
+            <param name="semanticHint" value="3009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
+         <metamodelType
+               id="org.hyperflex.componentmodels.ros.diagram.CompositeSrvProducer_3010"
+               name="%metatype.name.CompositeSrvProducer_3010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CompositeSrvProducer"
+               edithelper="org.hyperflex.roscomponentmodel.diagram.edit.helpers.CompositeSrvProducerEditHelper">
+            <param name="semanticHint" value="3010"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
+         <metamodelType
+               id="org.hyperflex.componentmodels.ros.diagram.CompositeSrvConsumer_3011"
+               name="%metatype.name.CompositeSrvConsumer_3011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CompositeSrvConsumer"
+               edithelper="org.hyperflex.roscomponentmodel.diagram.edit.helpers.CompositeSrvConsumerEditHelper">
+            <param name="semanticHint" value="3011"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
          <specializationType
-               id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgProducer_3017"
-               name="%metatype.name.CompositeMsgProducer_3017"
+               id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgProducer_3012"
+               name="%metatype.name.CompositeMsgProducer_3012"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgProducer_3015"/>
-            <param name="semanticHint" value="3017"/>
+            <specializes id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgProducer_3008"/>
+            <param name="semanticHint" value="3012"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
          <specializationType
-               id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgConsumer_3018"
-               name="%metatype.name.CompositeMsgConsumer_3018"
+               id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgConsumer_3013"
+               name="%metatype.name.CompositeMsgConsumer_3013"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgConsumer_3016"/>
-            <param name="semanticHint" value="3018"/>
+            <specializes id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgConsumer_3009"/>
+            <param name="semanticHint" value="3013"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
          <metamodelType
-               id="org.hyperflex.componentmodels.ros.diagram.Topic_3019"
-               name="%metatype.name.Topic_3019"
+               id="org.hyperflex.componentmodels.ros.diagram.Topic_3014"
+               name="%metatype.name.Topic_3014"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Topic"
                edithelper="org.hyperflex.roscomponentmodel.diagram.edit.helpers.TopicEditHelper">
-            <param name="semanticHint" value="3019"/>
+            <param name="semanticHint" value="3014"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
          <specializationType
-               id="org.hyperflex.componentmodels.ros.diagram.MsgInterfaceConnection_4010"
-               name="%metatype.name.MsgInterfaceConnection_4010"
+               id="org.hyperflex.componentmodels.ros.diagram.CompositeSrvProducer_3015"
+               name="%metatype.name.CompositeSrvProducer_3015"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4010"/>
+            <specializes id="org.hyperflex.componentmodels.ros.diagram.CompositeSrvProducer_3010"/>
+            <param name="semanticHint" value="3015"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
          <specializationType
-               id="org.hyperflex.componentmodels.ros.diagram.MsgInterfaceConnection_4011"
-               name="%metatype.name.MsgInterfaceConnection_4011"
+               id="org.hyperflex.componentmodels.ros.diagram.CompositeSrvConsumer_3016"
+               name="%metatype.name.CompositeSrvConsumer_3016"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4011"/>
+            <specializes id="org.hyperflex.componentmodels.ros.diagram.CompositeSrvConsumer_3011"/>
+            <param name="semanticHint" value="3016"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
          <specializationType
-               id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4007"
-               name="%metatype.name.CompositeMsgInterfaceExposed_4007"
+               id="org.hyperflex.componentmodels.ros.diagram.MsgInterfaceConnection_4001"
+               name="%metatype.name.MsgInterfaceConnection_4001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
+         <specializationType
+               id="org.hyperflex.componentmodels.ros.diagram.MsgInterfaceConnection_4002"
+               name="%metatype.name.MsgInterfaceConnection_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
+         <specializationType
+               id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4003"
+               name="%metatype.name.CompositeMsgInterfaceExposed_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
+         <specializationType
+               id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4004"
+               name="%metatype.name.CompositeMsgInterfaceExposed_4004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
+         <specializationType
+               id="org.hyperflex.componentmodels.ros.diagram.CompositeSrvProducerPromote_4005"
+               name="%metatype.name.CompositeSrvProducerPromote_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
+         <specializationType
+               id="org.hyperflex.componentmodels.ros.diagram.CompositeSrvProducerPromote_4006"
+               name="%metatype.name.CompositeSrvProducerPromote_4006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4006"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
+         <metamodelType
+               id="org.hyperflex.componentmodels.ros.diagram.Wire_4007"
+               name="%metatype.name.Wire_4007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Wire"
+               edithelper="org.hyperflex.roscomponentmodel.diagram.edit.helpers.WireEditHelper">
             <param name="semanticHint" value="4007"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://www.hyperflex.org/componentmodels.ros">
-         <specializationType
-               id="org.hyperflex.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4012"
-               name="%metatype.name.CompositeMsgInterfaceExposed_4012"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4012"/>
-         </specializationType>
+         </metamodelType>
       </metamodel>
    </extension>
 
@@ -447,21 +539,30 @@
       </clientContext> 
       <binding context="org.hyperflex.componentmodels.ros.diagram.TypeContext">
          <elementType ref="org.hyperflex.componentmodels.ros.diagram.System_1000"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.Composite_2003"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.Node_3013"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.NodeProperty_3012"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.Composite_2001"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.Node_3001"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.NodeProperty_3002"/>
          <elementType ref="org.hyperflex.componentmodels.ros.diagram.NodeMsgProducer_3003"/>
          <elementType ref="org.hyperflex.componentmodels.ros.diagram.NodeMsgConsumer_3004"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.Composite_3014"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeMsgProducer_3015"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeMsgConsumer_3016"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeMsgProducer_3017"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeMsgConsumer_3018"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.Topic_3019"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.MsgInterfaceConnection_4010"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.MsgInterfaceConnection_4011"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4007"/>
-         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4012"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.NodeSrvProducer_3005"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.NodeSrvConsumer_3006"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.Composite_3007"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeMsgProducer_3008"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeMsgConsumer_3009"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeSrvProducer_3010"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeSrvConsumer_3011"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeMsgProducer_3012"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeMsgConsumer_3013"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.Topic_3014"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeSrvProducer_3015"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeSrvConsumer_3016"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.MsgInterfaceConnection_4001"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.MsgInterfaceConnection_4002"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4003"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeMsgInterfaceExposed_4004"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeSrvProducerPromote_4005"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.CompositeSrvProducerPromote_4006"/>
+         <elementType ref="org.hyperflex.componentmodels.ros.diagram.Wire_4007"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

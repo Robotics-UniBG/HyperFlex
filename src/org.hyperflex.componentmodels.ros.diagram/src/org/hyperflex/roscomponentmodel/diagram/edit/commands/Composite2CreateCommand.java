@@ -5,14 +5,15 @@
  * All rights reserved.
  * 
  * Luca Gherardi
- * University of Bergamo
- * Dept. of Information Technology and Mathematics
+ * ETH Zurich
+ * Institute for Dynamic Systems and Control
  * 
  * ***********************************************************************************************
  * 
  * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
  * 
  * ***********************************************************************************************
  * 
@@ -24,8 +25,6 @@
  * 
  */
 package org.hyperflex.roscomponentmodel.diagram.edit.commands;
-
-import org.hyperflex.roscomponentmodel.Composite;
 
 import java.io.IOException;
 
@@ -51,6 +50,7 @@ import org.eclipse.ui.dialogs.ElementTreeSelectionDialog;
 import org.eclipse.ui.model.BaseWorkbenchContentProvider;
 import org.eclipse.ui.model.WorkbenchLabelProvider;
 import org.hyperflex.componentmodels.shared.filters.ViewerFileFilter;
+import org.hyperflex.roscomponentmodel.Composite;
 
 /**
  * @generated

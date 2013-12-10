@@ -1,7 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
-
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand;
@@ -9,6 +7,7 @@ import org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalC
 import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 /**
  * @generated
@@ -20,7 +19,7 @@ public class NodePropertyItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public NodePropertyItemSemanticEditPolicy() {
-		super(RosComponentModelElementTypes.NodeProperty_3012);
+		super(RosComponentModelElementTypes.NodeProperty_3002);
 	}
 
 	/**

@@ -1,8 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.parsers;
 
-import org.hyperflex.roscomponentmodel.diagram.part.Messages;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
-
 import java.text.FieldPosition;
 import java.text.MessageFormat;
 import java.text.ParsePosition;
@@ -15,6 +12,8 @@ import org.eclipse.gmf.runtime.common.ui.services.parser.IParserEditStatus;
 import org.eclipse.gmf.runtime.common.ui.services.parser.ParserEditStatus;
 import org.eclipse.gmf.tooling.runtime.parsers.AbstractAttributeParser;
 import org.eclipse.osgi.util.NLS;
+import org.hyperflex.roscomponentmodel.diagram.part.Messages;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
 
 /**
  * @generated

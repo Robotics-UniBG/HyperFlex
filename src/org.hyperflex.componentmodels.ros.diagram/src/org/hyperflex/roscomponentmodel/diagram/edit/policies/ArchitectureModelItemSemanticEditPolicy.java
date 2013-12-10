@@ -1,14 +1,13 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.commands.CompositeCreateCommand;
-import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
-
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.CompositeCreateCommand;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 /**
  * @generated
@@ -27,7 +26,7 @@ public class ArchitectureModelItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (RosComponentModelElementTypes.Composite_2003 == req
+		if (RosComponentModelElementTypes.Composite_2001 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeCreateCommand(req));
 		}

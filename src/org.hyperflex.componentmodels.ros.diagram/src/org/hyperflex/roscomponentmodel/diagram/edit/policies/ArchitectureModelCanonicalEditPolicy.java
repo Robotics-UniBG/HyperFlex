@@ -1,35 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import org.hyperflex.roscomponentmodel.AbstractComponent;
-import org.hyperflex.roscomponentmodel.CompositeMsgConsumer;
-import org.hyperflex.roscomponentmodel.CompositeMsgInterface;
-import org.hyperflex.roscomponentmodel.CompositeMsgProducer;
-import org.hyperflex.roscomponentmodel.MsgInterface;
-import org.hyperflex.roscomponentmodel.NodeMsgConsumer;
-import org.hyperflex.roscomponentmodel.NodeMsgInterface;
-import org.hyperflex.roscomponentmodel.NodeMsgProducer;
-import org.hyperflex.roscomponentmodel.Topic;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelLinkDescriptor;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -39,7 +9,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.emf.common.command.AbstractCommand;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.gef.EditPart;
@@ -59,6 +28,41 @@ import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.update.UpdaterLinkDescriptor;
+import org.hyperflex.roscomponentmodel.CompositeMsgConsumer;
+import org.hyperflex.roscomponentmodel.CompositeMsgInterface;
+import org.hyperflex.roscomponentmodel.CompositeMsgProducer;
+import org.hyperflex.roscomponentmodel.MsgInterface;
+import org.hyperflex.roscomponentmodel.NodeMsgConsumer;
+import org.hyperflex.roscomponentmodel.NodeMsgInterface;
+import org.hyperflex.roscomponentmodel.NodeMsgProducer;
+import org.hyperflex.roscomponentmodel.Topic;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvConsumer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeSrvConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeSrvProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.WireEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelLinkDescriptor;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 /**
  * @generated
@@ -355,7 +359,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getComposite_2003ContainedLinks(view));
+						.getComposite_2001ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -363,7 +367,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodeEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getNode_3013ContainedLinks(view));
+						.getNode_3001ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -371,7 +375,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case NodePropertyEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getNodeProperty_3012ContainedLinks(view));
+						.getNodeProperty_3002ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -392,10 +396,26 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
+		case NodeSrvProducerEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(RosComponentModelDiagramUpdater
+						.getNodeSrvProducer_3005ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case NodeSrvConsumerEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(RosComponentModelDiagramUpdater
+						.getNodeSrvConsumer_3006ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
 		case Composite2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getComposite_3014ContainedLinks(view));
+						.getComposite_3007ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -403,7 +423,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeMsgProducerEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getCompositeMsgProducer_3015ContainedLinks(view));
+						.getCompositeMsgProducer_3008ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -411,7 +431,23 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeMsgConsumerEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getCompositeMsgConsumer_3016ContainedLinks(view));
+						.getCompositeMsgConsumer_3009ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case CompositeSrvProducerEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(RosComponentModelDiagramUpdater
+						.getCompositeSrvProducer_3010ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case CompositeSrvConsumerEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(RosComponentModelDiagramUpdater
+						.getCompositeSrvConsumer_3011ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -419,7 +455,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeMsgProducer2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getCompositeMsgProducer_3017ContainedLinks(view));
+						.getCompositeMsgProducer_3012ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -427,7 +463,7 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CompositeMsgConsumer2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getCompositeMsgConsumer_3018ContainedLinks(view));
+						.getCompositeMsgConsumer_3013ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -435,7 +471,31 @@ public class ArchitectureModelCanonicalEditPolicy extends CanonicalEditPolicy {
 		case TopicEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(RosComponentModelDiagramUpdater
-						.getTopic_3019ContainedLinks(view));
+						.getTopic_3014ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case CompositeSrvProducer2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(RosComponentModelDiagramUpdater
+						.getCompositeSrvProducer_3015ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case CompositeSrvConsumer2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(RosComponentModelDiagramUpdater
+						.getCompositeSrvConsumer_3016ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case WireEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(RosComponentModelDiagramUpdater
+						.getWire_4007ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

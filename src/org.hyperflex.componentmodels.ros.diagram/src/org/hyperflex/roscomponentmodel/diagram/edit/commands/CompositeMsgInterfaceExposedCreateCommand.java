@@ -1,9 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.commands;
 
-import org.hyperflex.roscomponentmodel.CompositeMsgInterface;
-import org.hyperflex.roscomponentmodel.Topic;
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.RosComponentModelBaseItemSemanticEditPolicy;
-
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -11,6 +7,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
+import org.hyperflex.roscomponentmodel.CompositeMsgInterface;
+import org.hyperflex.roscomponentmodel.Topic;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.RosComponentModelBaseItemSemanticEditPolicy;
 
 /**
  * @generated
@@ -56,7 +55,7 @@ public class CompositeMsgInterfaceExposedCreateCommand extends
 		}
 		// target may be null here but it's possible to check constraint
 		return RosComponentModelBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateCompositeMsgInterfaceExposed_4007(getSource(),
+				.canCreateCompositeMsgInterfaceExposed_4003(getSource(),
 						getTarget());
 	}
 

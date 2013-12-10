@@ -25,12 +25,6 @@
  */
 package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -53,6 +47,13 @@ import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvConsumer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 /**
  * @generated
@@ -88,6 +89,12 @@ public class CompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 			myFeaturesToSynchronize
 					.add(org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getComposite_MsgConsumers());
+			myFeaturesToSynchronize
+					.add(org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+							.getComposite_SrvProducers());
+			myFeaturesToSynchronize
+					.add(org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+							.getComposite_SrvConsumers());
 		}
 		return myFeaturesToSynchronize;
 	}
@@ -100,7 +107,7 @@ public class CompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RosComponentModelNodeDescriptor> childDescriptors = RosComponentModelDiagramUpdater
-				.getComposite_2003SemanticChildren(viewObject);
+				.getComposite_2001SemanticChildren(viewObject);
 		for (RosComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -121,8 +128,14 @@ public class CompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 	 */
 	private boolean isMyDiagramElement(View view) {
 		int visualID = RosComponentModelVisualIDRegistry.getVisualID(view);
-		return visualID == CompositeMsgProducer2EditPart.VISUAL_ID
-				|| visualID == CompositeMsgConsumer2EditPart.VISUAL_ID;
+		switch (visualID) {
+		case CompositeMsgProducer2EditPart.VISUAL_ID:
+		case CompositeMsgConsumer2EditPart.VISUAL_ID:
+		case CompositeSrvProducer2EditPart.VISUAL_ID:
+		case CompositeSrvConsumer2EditPart.VISUAL_ID:
+			return true;
+		}
+		return false;
 	}
 
 	/**
@@ -134,7 +147,7 @@ public class CompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RosComponentModelNodeDescriptor> childDescriptors = RosComponentModelDiagramUpdater
-				.getComposite_2003SemanticChildren((View) getHost().getModel());
+				.getComposite_2001SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

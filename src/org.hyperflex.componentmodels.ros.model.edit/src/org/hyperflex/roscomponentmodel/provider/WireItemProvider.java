@@ -41,7 +41,10 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.hyperflex.roscomponentmodel.Wire;
 
 /**
  * This is the item provider adapter for a {@link org.hyperflex.roscomponentmodel.Wire} object.
@@ -80,6 +83,7 @@ public class WireItemProvider
 
 			addSourcePropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
+			addSrvNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -129,6 +133,28 @@ public class WireItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Srv Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSrvNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Wire_srvName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Wire_srvName_feature", "_UI_Wire_type"),
+				 roscomponentmodelPackage.Literals.WIRE__SRV_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Wire.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -147,7 +173,10 @@ public class WireItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Wire_type");
+		String label = ((Wire)object).getSrvName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Wire_type") :
+			getString("_UI_Wire_type") + " " + label;
 	}
 
 	/**
@@ -160,6 +189,12 @@ public class WireItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Wire.class)) {
+			case roscomponentmodelPackage.WIRE__SRV_NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

@@ -1,13 +1,12 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.ArchitectureModelCanonicalEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.ArchitectureModelItemSemanticEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-
 import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.ArchitectureModelCanonicalEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.ArchitectureModelItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 /**
  * @generated

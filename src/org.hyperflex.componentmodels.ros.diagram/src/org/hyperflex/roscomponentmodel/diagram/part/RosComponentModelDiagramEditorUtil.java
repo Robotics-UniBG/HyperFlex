@@ -1,8 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.part;
 
-import org.hyperflex.roscomponentmodel.System;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
-
 import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
@@ -52,6 +49,8 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
+import org.hyperflex.roscomponentmodel.System;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
 
 /**
  * @generated

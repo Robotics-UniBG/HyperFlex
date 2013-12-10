@@ -253,92 +253,112 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Component1CreationTool_title;
+	public static String Composite1CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Component1CreationTool_desc;
+	public static String Composite1CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Publisher2CreationTool_title;
+	public static String ImportComposite2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Publisher2CreationTool_desc;
+	public static String ImportComposite2CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Subscriber3CreationTool_title;
+	public static String Node3CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Subscriber3CreationTool_desc;
+	public static String Node3CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Properties4CreationTool_title;
+	public static String Publisher4CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Properties4CreationTool_desc;
+	public static String Publisher4CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Composite5CreationTool_title;
+	public static String Subscriber5CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Composite5CreationTool_desc;
+	public static String Subscriber5CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String ImportPackage6CreationTool_title;
+	public static String Topic6CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String ImportPackage6CreationTool_desc;
+	public static String Topic6CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Topic7CreationTool_title;
+	public static String ServiceServer7CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Topic7CreationTool_desc;
+	public static String ServiceServer7CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String PromoteConnection1CreationTool_title;
+	public static String ServiceClient8CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String PromoteConnection1CreationTool_desc;
+	public static String ServiceClient8CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Continueconnection2CreationTool_title;
+	public static String Parameter9CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Continueconnection2CreationTool_desc;
+	public static String Parameter9CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Connection1CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Connection1CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String PromoteConnection2CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String PromoteConnection2CreationTool_desc;
 
 	/**
 	 * @generated
@@ -363,26 +383,6 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4007_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4007_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_MsgInterfaceConnection_4010_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_MsgInterfaceConnection_4010_source;
-
-	/**
-	 * @generated
-	 */
 	public static String NavigatorGroupName_NodeMsgProducer_3003_outgoinglinks;
 
 	/**
@@ -393,47 +393,137 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeMsgProducer_3015_outgoinglinks;
+	public static String NavigatorGroupName_NodeSrvProducer_3005_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeMsgConsumer_3016_outgoinglinks;
+	public static String NavigatorGroupName_NodeSrvConsumer_3006_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeMsgProducer_3017_outgoinglinks;
+	public static String NavigatorGroupName_CompositeMsgProducer_3008_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeMsgConsumer_3018_outgoinglinks;
+	public static String NavigatorGroupName_CompositeMsgConsumer_3009_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Topic_3019_incominglinks;
+	public static String NavigatorGroupName_CompositeSrvProducer_3010_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_MsgInterfaceConnection_4011_target;
+	public static String NavigatorGroupName_CompositeSrvProducer_3010_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_MsgInterfaceConnection_4011_source;
+	public static String NavigatorGroupName_CompositeSrvConsumer_3011_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4012_target;
+	public static String NavigatorGroupName_CompositeMsgProducer_3012_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4012_source;
+	public static String NavigatorGroupName_CompositeMsgConsumer_3013_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Topic_3014_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeSrvProducer_3015_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeSrvProducer_3015_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeSrvConsumer_3016_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_MsgInterfaceConnection_4001_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_MsgInterfaceConnection_4001_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_MsgInterfaceConnection_4002_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_MsgInterfaceConnection_4002_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4003_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4003_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4004_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeMsgInterfaceExposed_4004_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeSrvProducerPromote_4005_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeSrvProducerPromote_4005_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeSrvProducerPromote_4006_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_CompositeSrvProducerPromote_4006_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Wire_4007_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Wire_4007_source;
 
 	/**
 	 * @generated

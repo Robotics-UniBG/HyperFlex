@@ -1,9 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.commands;
 
-import org.hyperflex.roscomponentmodel.MsgInterface;
-import org.hyperflex.roscomponentmodel.Topic;
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.RosComponentModelBaseItemSemanticEditPolicy;
-
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -12,6 +8,9 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
+import org.hyperflex.roscomponentmodel.MsgInterface;
+import org.hyperflex.roscomponentmodel.Topic;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.RosComponentModelBaseItemSemanticEditPolicy;
 
 /**
  * @generated
@@ -74,7 +73,7 @@ public class MsgInterfaceConnectionReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return RosComponentModelBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistMsgInterfaceConnection_4010(getNewSource(),
+				.canExistMsgInterfaceConnection_4001(getNewSource(),
 						getOldTarget());
 	}
 
@@ -86,7 +85,7 @@ public class MsgInterfaceConnectionReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return RosComponentModelBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistMsgInterfaceConnection_4010(getOldSource(),
+				.canExistMsgInterfaceConnection_4001(getOldSource(),
 						getNewTarget());
 	}
 

@@ -1,7 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.MsgInterfaceConnection2ItemSemanticEditPolicy;
-
 import org.eclipse.draw2d.Connection;
 import org.eclipse.draw2d.PolylineDecoration;
 import org.eclipse.draw2d.RotatableDecoration;
@@ -14,6 +12,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.MsgInterfaceConnection2ItemSemanticEditPolicy;
 
 /**
  * @generated
@@ -24,7 +23,7 @@ public class MsgInterfaceConnection2EditPart extends ConnectionNodeEditPart
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 4011;
+	public static final int VISUAL_ID = 4002;
 
 	/**
 	 * @generated

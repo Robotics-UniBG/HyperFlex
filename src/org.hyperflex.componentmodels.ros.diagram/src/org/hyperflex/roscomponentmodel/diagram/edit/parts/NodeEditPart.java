@@ -1,10 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.NodeCanonicalEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.NodeItemSemanticEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
-
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
@@ -43,6 +38,10 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.NodeCanonicalEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.NodeItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 /**
  * @generated
@@ -52,7 +51,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3013;
+	public static final int VISUAL_ID = 3001;
 
 	/**
 	 * @generated
@@ -102,6 +101,8 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 						.getVisualID(childView)) {
 				case NodeMsgProducerEditPart.VISUAL_ID:
 				case NodeMsgConsumerEditPart.VISUAL_ID:
+				case NodeSrvProducerEditPart.VISUAL_ID:
+				case NodeSrvConsumerEditPart.VISUAL_ID:
 					return new BorderItemSelectionEditPolicy();
 				}
 				EditPolicy result = child
@@ -169,6 +170,22 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 					locator);
 			return true;
 		}
+		if (childEditPart instanceof NodeSrvProducerEditPart) {
+			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
+					PositionConstants.WEST);
+			getBorderedFigure().getBorderItemContainer().add(
+					((NodeSrvProducerEditPart) childEditPart).getFigure(),
+					locator);
+			return true;
+		}
+		if (childEditPart instanceof NodeSrvConsumerEditPart) {
+			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
+					PositionConstants.EAST);
+			getBorderedFigure().getBorderItemContainer().add(
+					((NodeSrvConsumerEditPart) childEditPart).getFigure(),
+					locator);
+			return true;
+		}
 		return false;
 	}
 
@@ -193,6 +210,16 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 		if (childEditPart instanceof NodeMsgConsumerEditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
 					((NodeMsgConsumerEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof NodeSrvProducerEditPart) {
+			getBorderedFigure().getBorderItemContainer().remove(
+					((NodeSrvProducerEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof NodeSrvConsumerEditPart) {
+			getBorderedFigure().getBorderItemContainer().remove(
+					((NodeSrvConsumerEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -335,7 +362,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter
 					.getAdapter(IElementType.class);
-			if (type == RosComponentModelElementTypes.NodeProperty_3012) {
+			if (type == RosComponentModelElementTypes.NodeProperty_3002) {
 				return getChildBySemanticHint(RosComponentModelVisualIDRegistry
 						.getType(NodePropertiesCompartmentEditPart.VISUAL_ID));
 			}
@@ -402,7 +429,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 
 			fFigureComponentNameLabel = new WrappingLabel();
 
-			fFigureComponentNameLabel.setText("<?>");
+			fFigureComponentNameLabel.setText("<É>");
 
 			fFigureComponentNameLabel.setFont(FFIGURECOMPONENTNAMELABEL_FONT);
 

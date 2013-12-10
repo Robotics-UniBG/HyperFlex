@@ -1,10 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.NodePropertiesCompartmentCanonicalEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.NodePropertiesCompartmentItemSemanticEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.part.Messages;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ListCompartmentEditPart;
@@ -14,6 +9,10 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.ResizableCompartmentEditP
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.NodePropertiesCompartmentCanonicalEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.NodePropertiesCompartmentItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.Messages;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 /**
  * @generated
@@ -23,7 +22,7 @@ public class NodePropertiesCompartmentEditPart extends ListCompartmentEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 7005;
+	public static final int VISUAL_ID = 7002;
 
 	/**
 	 * @generated

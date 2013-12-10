@@ -1,14 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.commands.MsgInterfaceConnection2CreateCommand;
-import org.hyperflex.roscomponentmodel.diagram.edit.commands.MsgInterfaceConnection2ReorientCommand;
-import org.hyperflex.roscomponentmodel.diagram.edit.commands.MsgInterfaceConnectionCreateCommand;
-import org.hyperflex.roscomponentmodel.diagram.edit.commands.MsgInterfaceConnectionReorientCommand;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
-
 import java.util.Iterator;
 
 import org.eclipse.emf.ecore.EAnnotation;
@@ -23,6 +14,14 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.View;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.MsgInterfaceConnection2CreateCommand;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.MsgInterfaceConnection2ReorientCommand;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.MsgInterfaceConnectionCreateCommand;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.MsgInterfaceConnectionReorientCommand;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 /**
  * @generated
@@ -91,12 +90,12 @@ public class NodeMsgConsumerItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RosComponentModelElementTypes.MsgInterfaceConnection_4010 == req
+		if (RosComponentModelElementTypes.MsgInterfaceConnection_4001 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RosComponentModelElementTypes.MsgInterfaceConnection_4011 == req
+		if (RosComponentModelElementTypes.MsgInterfaceConnection_4002 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnection2CreateCommand(req,
 					req.getSource(), req.getTarget()));
@@ -109,11 +108,11 @@ public class NodeMsgConsumerItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RosComponentModelElementTypes.MsgInterfaceConnection_4010 == req
+		if (RosComponentModelElementTypes.MsgInterfaceConnection_4001 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RosComponentModelElementTypes.MsgInterfaceConnection_4011 == req
+		if (RosComponentModelElementTypes.MsgInterfaceConnection_4002 == req
 				.getElementType()) {
 			return null;
 		}

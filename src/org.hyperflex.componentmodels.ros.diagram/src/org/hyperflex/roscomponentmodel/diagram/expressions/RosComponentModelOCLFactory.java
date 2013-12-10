@@ -1,7 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.expressions;
 
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
-
 import java.util.Collections;
 import java.util.Map;
 
@@ -17,6 +15,7 @@ import org.eclipse.ocl.ecore.OCL.Helper;
 import org.eclipse.ocl.ecore.OCLExpression;
 import org.eclipse.ocl.ecore.Variable;
 import org.eclipse.ocl.options.ParsingOptions;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
 
 /**
  * @generated
@@ -37,12 +36,14 @@ public class RosComponentModelOCLFactory {
 	 * @generated
 	 */
 	protected RosComponentModelOCLFactory() {
-		this.expressions = new RosComponentModelAbstractExpression[4];
+		this.expressions = new RosComponentModelAbstractExpression[6];
 		this.expressionBodies = new String[] {
 				"oclIsKindOf(NodeMsgProducer) or oclIsKindOf(CompositeMsgProducer)", //$NON-NLS-1$
 				"oclIsKindOf(NodeMsgConsumer) or oclIsKindOf(CompositeMsgConsumer)", //$NON-NLS-1$
 				"oclIsKindOf(CompositeMsgProducer)", //$NON-NLS-1$
 				"oclIsKindOf(CompositeMsgConsumer)", //$NON-NLS-1$
+				"oclIsKindOf(CompositeSrvProducer)", //$NON-NLS-1$
+				"oclIsKindOf(CompositeSrvConsumer)", //$NON-NLS-1$
 		};
 	}
 

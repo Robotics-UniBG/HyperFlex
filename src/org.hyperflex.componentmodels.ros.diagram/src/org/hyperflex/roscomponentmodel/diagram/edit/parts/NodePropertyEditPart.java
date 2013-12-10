@@ -1,8 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.NodePropertyItemSemanticEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
@@ -23,6 +20,8 @@ import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.NodePropertyItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 /**
  * @generated
@@ -32,7 +31,7 @@ public class NodePropertyEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3012;
+	public static final int VISUAL_ID = 3002;
 
 	/**
 	 * @generated
@@ -273,7 +272,7 @@ public class NodePropertyEditPart extends ShapeNodeEditPart {
 
 			fFigurePropertiesNameLabel = new WrappingLabel();
 
-			fFigurePropertiesNameLabel.setText("<?>");
+			fFigurePropertiesNameLabel.setText("<É>");
 
 			this.add(fFigurePropertiesNameLabel);
 

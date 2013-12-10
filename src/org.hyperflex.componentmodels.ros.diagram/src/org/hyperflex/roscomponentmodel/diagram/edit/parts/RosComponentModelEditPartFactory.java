@@ -1,13 +1,12 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPartFactory;
 import org.eclipse.gef.tools.CellEditorLocator;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 /**
  * @generated
@@ -49,6 +48,12 @@ public class RosComponentModelEditPartFactory implements EditPartFactory {
 			case NodeMsgConsumerEditPart.VISUAL_ID:
 				return new NodeMsgConsumerEditPart(view);
 
+			case NodeSrvProducerEditPart.VISUAL_ID:
+				return new NodeSrvProducerEditPart(view);
+
+			case NodeSrvConsumerEditPart.VISUAL_ID:
+				return new NodeSrvConsumerEditPart(view);
+
 			case Composite2EditPart.VISUAL_ID:
 				return new Composite2EditPart(view);
 
@@ -61,6 +66,12 @@ public class RosComponentModelEditPartFactory implements EditPartFactory {
 			case CompositeMsgConsumerEditPart.VISUAL_ID:
 				return new CompositeMsgConsumerEditPart(view);
 
+			case CompositeSrvProducerEditPart.VISUAL_ID:
+				return new CompositeSrvProducerEditPart(view);
+
+			case CompositeSrvConsumerEditPart.VISUAL_ID:
+				return new CompositeSrvConsumerEditPart(view);
+
 			case CompositeMsgProducer2EditPart.VISUAL_ID:
 				return new CompositeMsgProducer2EditPart(view);
 
@@ -72,6 +83,12 @@ public class RosComponentModelEditPartFactory implements EditPartFactory {
 
 			case TopicNameEditPart.VISUAL_ID:
 				return new TopicNameEditPart(view);
+
+			case CompositeSrvProducer2EditPart.VISUAL_ID:
+				return new CompositeSrvProducer2EditPart(view);
+
+			case CompositeSrvConsumer2EditPart.VISUAL_ID:
+				return new CompositeSrvConsumer2EditPart(view);
 
 			case CompositeCompositeContainerCompartmentEditPart.VISUAL_ID:
 				return new CompositeCompositeContainerCompartmentEditPart(view);
@@ -90,6 +107,18 @@ public class RosComponentModelEditPartFactory implements EditPartFactory {
 
 			case CompositeMsgInterfaceExposed2EditPart.VISUAL_ID:
 				return new CompositeMsgInterfaceExposed2EditPart(view);
+
+			case CompositeSrvProducerPromoteEditPart.VISUAL_ID:
+				return new CompositeSrvProducerPromoteEditPart(view);
+
+			case CompositeSrvProducerPromote2EditPart.VISUAL_ID:
+				return new CompositeSrvProducerPromote2EditPart(view);
+
+			case WireEditPart.VISUAL_ID:
+				return new WireEditPart(view);
+
+			case WireSrvNameEditPart.VISUAL_ID:
+				return new WireSrvNameEditPart(view);
 
 			}
 		}

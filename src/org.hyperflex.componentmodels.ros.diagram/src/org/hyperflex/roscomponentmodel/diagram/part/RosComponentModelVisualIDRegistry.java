@@ -1,5 +1,11 @@
 package org.hyperflex.roscomponentmodel.diagram.part;
 
+import org.eclipse.core.runtime.Platform;
+import org.eclipse.emf.ecore.EAnnotation;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gmf.runtime.notation.Diagram;
+import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.structure.DiagramStructure;
 import org.hyperflex.roscomponentmodel.System;
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
@@ -11,6 +17,10 @@ import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2E
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeName2EditPart;
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvConsumer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducerEditPart;
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart;
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
@@ -18,15 +28,12 @@ import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeSrvConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeSrvProducerEditPart;
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart;
 import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
-
-import org.eclipse.core.runtime.Platform;
-import org.eclipse.emf.ecore.EAnnotation;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmf.runtime.notation.Diagram;
-import org.eclipse.gmf.runtime.notation.View;
-import org.eclipse.gmf.tooling.runtime.structure.DiagramStructure;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.WireEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.WireSrvNameEditPart;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -152,6 +159,16 @@ public class RosComponentModelVisualIDRegistry {
 							domainElement.eClass())) {
 				return CompositeMsgConsumer2EditPart.VISUAL_ID;
 			}
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					.getCompositeSrvProducer().isSuperTypeOf(
+							domainElement.eClass())) {
+				return CompositeSrvProducer2EditPart.VISUAL_ID;
+			}
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					.getCompositeSrvConsumer().isSuperTypeOf(
+							domainElement.eClass())) {
+				return CompositeSrvConsumer2EditPart.VISUAL_ID;
+			}
 			break;
 		case NodeEditPart.VISUAL_ID:
 			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
@@ -161,6 +178,14 @@ public class RosComponentModelVisualIDRegistry {
 			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 					.getNodeMsgConsumer().isSuperTypeOf(domainElement.eClass())) {
 				return NodeMsgConsumerEditPart.VISUAL_ID;
+			}
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					.getNodeSrvProducer().isSuperTypeOf(domainElement.eClass())) {
+				return NodeSrvProducerEditPart.VISUAL_ID;
+			}
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					.getNodeSrvConsumer().isSuperTypeOf(domainElement.eClass())) {
+				return NodeSrvConsumerEditPart.VISUAL_ID;
 			}
 			break;
 		case Composite2EditPart.VISUAL_ID:
@@ -173,6 +198,16 @@ public class RosComponentModelVisualIDRegistry {
 					.getCompositeMsgConsumer().isSuperTypeOf(
 							domainElement.eClass())) {
 				return CompositeMsgConsumerEditPart.VISUAL_ID;
+			}
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					.getCompositeSrvProducer().isSuperTypeOf(
+							domainElement.eClass())) {
+				return CompositeSrvProducerEditPart.VISUAL_ID;
+			}
+			if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+					.getCompositeSrvConsumer().isSuperTypeOf(
+							domainElement.eClass())) {
+				return CompositeSrvConsumerEditPart.VISUAL_ID;
 			}
 			break;
 		case CompositeCompositeContainerCompartmentEditPart.VISUAL_ID:
@@ -238,6 +273,12 @@ public class RosComponentModelVisualIDRegistry {
 			if (CompositeMsgConsumer2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (CompositeSrvProducer2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CompositeSrvConsumer2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case NodeEditPart.VISUAL_ID:
 			if (NodeNameEditPart.VISUAL_ID == nodeVisualID) {
@@ -250,6 +291,12 @@ public class RosComponentModelVisualIDRegistry {
 				return true;
 			}
 			if (NodeMsgConsumerEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (NodeSrvProducerEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (NodeSrvConsumerEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -266,6 +313,12 @@ public class RosComponentModelVisualIDRegistry {
 				return true;
 			}
 			if (CompositeMsgConsumerEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CompositeSrvProducerEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CompositeSrvConsumerEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -290,6 +343,11 @@ public class RosComponentModelVisualIDRegistry {
 				return true;
 			}
 			break;
+		case WireEditPart.VISUAL_ID:
+			if (WireSrvNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		}
 		return false;
 	}
@@ -300,6 +358,10 @@ public class RosComponentModelVisualIDRegistry {
 	public static int getLinkWithClassVisualID(EObject domainElement) {
 		if (domainElement == null) {
 			return -1;
+		}
+		if (org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+				.getWire().isSuperTypeOf(domainElement.eClass())) {
+			return WireEditPart.VISUAL_ID;
 		}
 		return -1;
 	}
@@ -348,14 +410,20 @@ public class RosComponentModelVisualIDRegistry {
 		switch (visualID) {
 		case ArchitectureModelEditPart.VISUAL_ID:
 			return false;
+		case NodePropertyEditPart.VISUAL_ID:
 		case NodeMsgProducerEditPart.VISUAL_ID:
 		case NodeMsgConsumerEditPart.VISUAL_ID:
-		case NodePropertyEditPart.VISUAL_ID:
+		case NodeSrvProducerEditPart.VISUAL_ID:
+		case NodeSrvConsumerEditPart.VISUAL_ID:
 		case CompositeMsgProducerEditPart.VISUAL_ID:
 		case CompositeMsgConsumerEditPart.VISUAL_ID:
+		case CompositeSrvProducerEditPart.VISUAL_ID:
+		case CompositeSrvConsumerEditPart.VISUAL_ID:
 		case CompositeMsgProducer2EditPart.VISUAL_ID:
 		case CompositeMsgConsumer2EditPart.VISUAL_ID:
 		case TopicEditPart.VISUAL_ID:
+		case CompositeSrvProducer2EditPart.VISUAL_ID:
+		case CompositeSrvConsumer2EditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

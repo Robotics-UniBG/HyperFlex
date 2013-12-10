@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.hyperflex.roscomponentmodel.Wire#getSource <em>Source</em>}</li>
  *   <li>{@link org.hyperflex.roscomponentmodel.Wire#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.Wire#getSrvName <em>Srv Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -96,5 +97,31 @@ public interface Wire extends EObject {
 	 * @generated
 	 */
 	void setTarget(SrvConsumer value);
+
+	/**
+	 * Returns the value of the '<em><b>Srv Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Srv Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Srv Name</em>' attribute.
+	 * @see #setSrvName(String)
+	 * @see org.hyperflex.roscomponentmodel.roscomponentmodelPackage#getWire_SrvName()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getSrvName();
+
+	/**
+	 * Sets the value of the '{@link org.hyperflex.roscomponentmodel.Wire#getSrvName <em>Srv Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Srv Name</em>' attribute.
+	 * @see #getSrvName()
+	 * @generated
+	 */
+	void setSrvName(String value);
 
 } // Wire

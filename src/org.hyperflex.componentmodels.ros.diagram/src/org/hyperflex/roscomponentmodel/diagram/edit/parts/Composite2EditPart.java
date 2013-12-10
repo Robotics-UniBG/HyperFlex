@@ -25,10 +25,6 @@
  */
 package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.Composite2CanonicalEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.Composite2ItemSemanticEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
@@ -64,6 +60,9 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.Composite2CanonicalEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.Composite2ItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 /**
  * @generated
@@ -73,7 +72,7 @@ public class Composite2EditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3014;
+	public static final int VISUAL_ID = 3007;
 
 	/**
 	 * @generated
@@ -123,6 +122,8 @@ public class Composite2EditPart extends AbstractBorderedShapeEditPart {
 						.getVisualID(childView)) {
 				case CompositeMsgProducerEditPart.VISUAL_ID:
 				case CompositeMsgConsumerEditPart.VISUAL_ID:
+				case CompositeSrvProducerEditPart.VISUAL_ID:
+				case CompositeSrvConsumerEditPart.VISUAL_ID:
 					return new BorderItemSelectionEditPolicy();
 				}
 				EditPolicy result = child
@@ -183,6 +184,22 @@ public class Composite2EditPart extends AbstractBorderedShapeEditPart {
 					locator);
 			return true;
 		}
+		if (childEditPart instanceof CompositeSrvProducerEditPart) {
+			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
+					PositionConstants.WEST);
+			getBorderedFigure().getBorderItemContainer().add(
+					((CompositeSrvProducerEditPart) childEditPart).getFigure(),
+					locator);
+			return true;
+		}
+		if (childEditPart instanceof CompositeSrvConsumerEditPart) {
+			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
+					PositionConstants.EAST);
+			getBorderedFigure().getBorderItemContainer().add(
+					((CompositeSrvConsumerEditPart) childEditPart).getFigure(),
+					locator);
+			return true;
+		}
 		return false;
 	}
 
@@ -201,6 +218,16 @@ public class Composite2EditPart extends AbstractBorderedShapeEditPart {
 		if (childEditPart instanceof CompositeMsgConsumerEditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
 					((CompositeMsgConsumerEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof CompositeSrvProducerEditPart) {
+			getBorderedFigure().getBorderItemContainer().remove(
+					((CompositeSrvProducerEditPart) childEditPart).getFigure());
+			return true;
+		}
+		if (childEditPart instanceof CompositeSrvConsumerEditPart) {
+			getBorderedFigure().getBorderItemContainer().remove(
+					((CompositeSrvConsumerEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -389,7 +416,7 @@ public class Composite2EditPart extends AbstractBorderedShapeEditPart {
 
 			fFigurePackageNameLabel = new WrappingLabel();
 
-			fFigurePackageNameLabel.setText("<?>");
+			fFigurePackageNameLabel.setText("<É>");
 
 			fFigurePackageNameLabel.setFont(FFIGUREPACKAGENAMELABEL_FONT);
 

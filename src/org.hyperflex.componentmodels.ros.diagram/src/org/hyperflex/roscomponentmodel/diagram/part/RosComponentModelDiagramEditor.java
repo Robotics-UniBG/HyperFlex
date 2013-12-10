@@ -1,7 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.part;
 
-import org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem;
-
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IWorkspaceRoot;
@@ -42,6 +40,7 @@ import org.eclipse.ui.navigator.resources.ProjectExplorer;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.IShowInTargetList;
 import org.eclipse.ui.part.ShowInContext;
+import org.hyperflex.roscomponentmodel.diagram.navigator.RosComponentModelNavigatorItem;
 
 /**
  * @generated

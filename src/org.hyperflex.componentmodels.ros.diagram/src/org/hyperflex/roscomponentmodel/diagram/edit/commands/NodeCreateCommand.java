@@ -1,8 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.commands;
 
-import org.hyperflex.roscomponentmodel.Composite;
-import org.hyperflex.roscomponentmodel.Node;
-
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -14,6 +11,8 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
+import org.hyperflex.roscomponentmodel.Composite;
+import org.hyperflex.roscomponentmodel.Node;
 
 /**
  * @generated

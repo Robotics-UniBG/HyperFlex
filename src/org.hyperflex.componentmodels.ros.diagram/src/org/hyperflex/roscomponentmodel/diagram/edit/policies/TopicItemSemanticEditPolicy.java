@@ -1,5 +1,19 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
+import java.util.Iterator;
+
+import org.eclipse.emf.ecore.EAnnotation;
+import org.eclipse.gef.commands.Command;
+import org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand;
+import org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand;
+import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand;
+import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand;
+import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
+import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
+import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
+import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
+import org.eclipse.gmf.runtime.notation.Edge;
+import org.eclipse.gmf.runtime.notation.View;
 import org.hyperflex.roscomponentmodel.diagram.edit.commands.CompositeMsgInterfaceExposed2CreateCommand;
 import org.hyperflex.roscomponentmodel.diagram.edit.commands.CompositeMsgInterfaceExposed2ReorientCommand;
 import org.hyperflex.roscomponentmodel.diagram.edit.commands.CompositeMsgInterfaceExposedCreateCommand;
@@ -15,21 +29,6 @@ import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection
 import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
-import java.util.Iterator;
-
-import org.eclipse.emf.ecore.EAnnotation;
-import org.eclipse.gef.commands.Command;
-import org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand;
-import org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand;
-import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand;
-import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand;
-import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
-import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
-import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
-import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
-import org.eclipse.gmf.runtime.notation.Edge;
-import org.eclipse.gmf.runtime.notation.View;
-
 /**
  * @generated
  */
@@ -40,7 +39,7 @@ public class TopicItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public TopicItemSemanticEditPolicy() {
-		super(RosComponentModelElementTypes.Topic_3019);
+		super(RosComponentModelElementTypes.Topic_3014);
 	}
 
 	/**
@@ -113,19 +112,19 @@ public class TopicItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RosComponentModelElementTypes.MsgInterfaceConnection_4010 == req
+		if (RosComponentModelElementTypes.MsgInterfaceConnection_4001 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RosComponentModelElementTypes.MsgInterfaceConnection_4011 == req
+		if (RosComponentModelElementTypes.MsgInterfaceConnection_4002 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4007 == req
+		if (RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4003 == req
 				.getElementType()) {
 			return null;
 		}
-		if (RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4012 == req
+		if (RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4004 == req
 				.getElementType()) {
 			return null;
 		}
@@ -137,22 +136,22 @@ public class TopicItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (RosComponentModelElementTypes.MsgInterfaceConnection_4010 == req
+		if (RosComponentModelElementTypes.MsgInterfaceConnection_4001 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnectionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RosComponentModelElementTypes.MsgInterfaceConnection_4011 == req
+		if (RosComponentModelElementTypes.MsgInterfaceConnection_4002 == req
 				.getElementType()) {
 			return getGEFWrapper(new MsgInterfaceConnection2CreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4007 == req
+		if (RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4003 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeMsgInterfaceExposedCreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4012 == req
+		if (RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4004 == req
 				.getElementType()) {
 			return getGEFWrapper(new CompositeMsgInterfaceExposed2CreateCommand(
 					req, req.getSource(), req.getTarget()));

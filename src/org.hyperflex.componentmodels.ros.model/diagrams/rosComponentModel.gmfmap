@@ -21,7 +21,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.4"/>
+          href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.0"/>
       <diagramNode
           href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#CompositeContainer"/>
       <children
@@ -40,7 +40,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.0"/>
+              href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
               href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Component"/>
           <children
@@ -59,7 +59,7 @@
               </labelMappings>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
+                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.8"/>
               <diagramNode
                   href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Properties"/>
             </ownedChild>
@@ -72,7 +72,7 @@
                   href="../models/rosComponentModel.ecore#//NodeMsgProducer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
+                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
               <diagramNode
                   href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
             </ownedChild>
@@ -85,9 +85,35 @@
                   href="../models/rosComponentModel.ecore#//NodeMsgConsumer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
+                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.4"/>
               <diagramNode
                   href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
+            </ownedChild>
+          </children>
+          <children>
+            <containmentFeature
+                href="../models/rosComponentModel.ecore#//Node/srvProducers"/>
+            <ownedChild>
+              <domainMetaElement
+                  href="../models/rosComponentModel.ecore#//NodeSrvProducer"/>
+              <tool
+                  xsi:type="gmftool:CreationTool"
+                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
+              <diagramNode
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
+            </ownedChild>
+          </children>
+          <children>
+            <containmentFeature
+                href="../models/rosComponentModel.ecore#//Node/srvConsumers"/>
+            <ownedChild>
+              <domainMetaElement
+                  href="../models/rosComponentModel.ecore#//NodeSrvConsumer"/>
+              <tool
+                  xsi:type="gmftool:CreationTool"
+                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
+              <diagramNode
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
             </ownedChild>
           </children>
           <compartments
@@ -113,7 +139,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.5"/>
+              href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
           <diagramNode
               href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Composite"/>
           <children>
@@ -124,7 +150,7 @@
                   href="../models/rosComponentModel.ecore#//CompositeMsgProducer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
+                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
               <diagramNode
                   href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
             </ownedChild>
@@ -137,9 +163,35 @@
                   href="../models/rosComponentModel.ecore#//CompositeMsgConsumer"/>
               <tool
                   xsi:type="gmftool:CreationTool"
-                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
+                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.4"/>
               <diagramNode
                   href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
+            </ownedChild>
+          </children>
+          <children>
+            <containmentFeature
+                href="../models/rosComponentModel.ecore#//Composite/srvProducers"/>
+            <ownedChild>
+              <domainMetaElement
+                  href="../models/rosComponentModel.ecore#//CompositeSrvProducer"/>
+              <tool
+                  xsi:type="gmftool:CreationTool"
+                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
+              <diagramNode
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
+            </ownedChild>
+          </children>
+          <children>
+            <containmentFeature
+                href="../models/rosComponentModel.ecore#//Composite/srvConsumers"/>
+            <ownedChild>
+              <domainMetaElement
+                  href="../models/rosComponentModel.ecore#//CompositeSrvConsumer"/>
+              <tool
+                  xsi:type="gmftool:CreationTool"
+                  href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
+              <diagramNode
+                  href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
             </ownedChild>
           </children>
         </ownedChild>
@@ -152,7 +204,7 @@
               href="../models/rosComponentModel.ecore#//CompositeMsgProducer"/>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.1"/>
+              href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.3"/>
           <diagramNode
               href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer1"/>
         </ownedChild>
@@ -165,7 +217,7 @@
               href="../models/rosComponentModel.ecore#//CompositeMsgConsumer"/>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.2"/>
+              href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.4"/>
           <diagramNode
               href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer1"/>
         </ownedChild>
@@ -186,9 +238,35 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
+              href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.5"/>
           <diagramNode
               href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Channel1"/>
+        </ownedChild>
+      </children>
+      <children>
+        <containmentFeature
+            href="../models/rosComponentModel.ecore#//Composite/srvProducers"/>
+        <ownedChild>
+          <domainMetaElement
+              href="../models/rosComponentModel.ecore#//CompositeSrvProducer"/>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.6"/>
+          <diagramNode
+              href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Producer2"/>
+        </ownedChild>
+      </children>
+      <children>
+        <containmentFeature
+            href="../models/rosComponentModel.ecore#//Composite/srvConsumers"/>
+        <ownedChild>
+          <domainMetaElement
+              href="../models/rosComponentModel.ecore#//CompositeSrvConsumer"/>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="rosComponentModel.gmftool#//@palette/@tools.0/@tools.7"/>
+          <diagramNode
+              href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#Consumer2"/>
         </ownedChild>
       </children>
       <compartments
@@ -201,7 +279,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.1"/>
+        href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
         href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ProducerChannelConnection"/>
     <linkMetaFeature
@@ -215,7 +293,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.1"/>
+        href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
         href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ConsumerChannelConnection"/>
     <linkMetaFeature
@@ -229,7 +307,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
+        href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
         href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeProducerConnection"/>
     <linkMetaFeature
@@ -243,7 +321,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
+        href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
         href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeConsumerConnection"/>
     <linkMetaFeature
@@ -253,6 +331,58 @@
       <sourceEnd
           body="oclIsKindOf(CompositeMsgConsumer)"/>
     </creationConstraints>
+  </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.1"/>
+    <diagramLink
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeProducerConnection"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="../models/rosComponentModel.ecore#//CompositeSrvProducer/promote"/>
+    <creationConstraints>
+      <sourceEnd
+          body="oclIsKindOf(CompositeSrvProducer)"/>
+    </creationConstraints>
+  </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.1"/>
+    <diagramLink
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeConsumerConnection"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="../models/rosComponentModel.ecore#//CompositeSrvProducer/promote"/>
+    <creationConstraints>
+      <sourceEnd
+          body="oclIsKindOf(CompositeSrvConsumer)"/>
+    </creationConstraints>
+  </links>
+  <links>
+    <domainMetaElement
+        href="../models/rosComponentModel.ecore#//Wire"/>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnectionName"/>
+      <features
+          href="../models/rosComponentModel.ecore#//Wire/srvName"/>
+    </labelMappings>
+    <containmentFeature
+        href="../models/rosComponentModel.ecore#//Composite/wires"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="rosComponentModel.gmftool#//@palette/@tools.1/@tools.0"/>
+    <diagramLink
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#SolidWireConnection"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="../models/rosComponentModel.ecore#//Wire/target"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="../models/rosComponentModel.ecore#//Wire/source"/>
   </links>
   <diagram>
     <diagramCanvas

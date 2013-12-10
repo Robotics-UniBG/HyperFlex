@@ -1,7 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.part;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
-
 import java.io.IOException;
 import java.util.LinkedList;
 
@@ -29,6 +27,7 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
 
 /**
  * @generated

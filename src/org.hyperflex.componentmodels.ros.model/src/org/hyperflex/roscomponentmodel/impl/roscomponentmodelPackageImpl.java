@@ -642,6 +642,15 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getWire_SrvName() {
+		return (EAttribute)wireEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSystem() {
 		return systemEClass;
 	}
@@ -863,6 +872,7 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 		wireEClass = createEClass(WIRE);
 		createEReference(wireEClass, WIRE__SOURCE);
 		createEReference(wireEClass, WIRE__TARGET);
+		createEAttribute(wireEClass, WIRE__SRV_NAME);
 
 		systemEClass = createEClass(SYSTEM);
 		createEReference(systemEClass, SYSTEM__COMPOSITE);
@@ -986,6 +996,7 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 		initEClass(wireEClass, Wire.class, "Wire", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWire_Source(), this.getSrvProducer(), null, "source", null, 1, 1, Wire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWire_Target(), this.getSrvConsumer(), null, "target", null, 1, 1, Wire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWire_SrvName(), ecorePackage.getEString(), "srvName", null, 1, 1, Wire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(systemEClass, org.hyperflex.roscomponentmodel.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSystem_Composite(), this.getComposite(), null, "composite", null, 1, 1, org.hyperflex.roscomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

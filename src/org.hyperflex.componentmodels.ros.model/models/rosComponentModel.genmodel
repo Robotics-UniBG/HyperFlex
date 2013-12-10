@@ -57,6 +57,7 @@
     <genClasses ecoreClass="rosComponentModel.ecore#//Wire">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Wire/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//Wire/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//Wire/srvName"/>
     </genClasses>
     <genClasses ecoreClass="rosComponentModel.ecore#//System">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//System/composite"/>

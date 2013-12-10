@@ -12,7 +12,23 @@
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Component"
+          title="Composite"
+          description="Create new Composite">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Composite.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Import Composite"
+          description="Import existing composite">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Package.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Node"
           description="Create new Node">
         <smallIcon
             xsi:type="gmftool:BundleImage"
@@ -36,35 +52,35 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Properties"
-          description="Create new Parameter">
-        <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="icons/Parameter.gif"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Composite"
-          description="Create new Composite">
-        <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="icons/Composite.gif"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Import Package"
-          description="Import existing package">
-        <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="icons/Package.gif"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
           title="Topic"
           description="Create new Topic">
         <smallIcon
             xsi:type="gmftool:BundleImage"
             path="icons/Topic.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Service Server"
+          description="Create new Service Server">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Topic.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Service Client"
+          description="Create new Service Client">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Topic.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Parameter"
+          description="Create new Parameter">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/Parameter.gif"/>
       </tools>
     </tools>
     <tools
@@ -73,19 +89,19 @@
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
+          title="Connection "
+          description="Create new Connection">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/ContinueConnection.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
           title="Promote Connection"
           description="Create new Promote Connection">
         <smallIcon
             xsi:type="gmftool:BundleImage"
             path="icons/PromoteConnection.gif"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Continue connection "
-          description="Create new Continue Connection">
-        <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="icons/ContinueConnection.gif"/>
       </tools>
     </tools>
   </palette>

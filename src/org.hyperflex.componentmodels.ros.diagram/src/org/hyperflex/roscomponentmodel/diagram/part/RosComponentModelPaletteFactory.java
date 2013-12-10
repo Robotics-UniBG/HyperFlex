@@ -1,7 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.part;
 
-import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,6 +12,7 @@ import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeConnectionTool;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 /**
  * @generated
@@ -36,13 +35,15 @@ public class RosComponentModelPaletteFactory {
 		PaletteDrawer paletteContainer = new PaletteDrawer(
 				Messages.Entities1Group_title);
 		paletteContainer.setId("createEntities1Group"); //$NON-NLS-1$
-		paletteContainer.add(createComponent1CreationTool());
-		paletteContainer.add(createPublisher2CreationTool());
-		paletteContainer.add(createSubscriber3CreationTool());
-		paletteContainer.add(createProperties4CreationTool());
-		paletteContainer.add(createComposite5CreationTool());
-		paletteContainer.add(createImportPackage6CreationTool());
-		paletteContainer.add(createTopic7CreationTool());
+		paletteContainer.add(createComposite1CreationTool());
+		paletteContainer.add(createImportComposite2CreationTool());
+		paletteContainer.add(createNode3CreationTool());
+		paletteContainer.add(createPublisher4CreationTool());
+		paletteContainer.add(createSubscriber5CreationTool());
+		paletteContainer.add(createTopic6CreationTool());
+		paletteContainer.add(createServiceServer7CreationTool());
+		paletteContainer.add(createServiceClient8CreationTool());
+		paletteContainer.add(createParameter9CreationTool());
 		return paletteContainer;
 	}
 
@@ -54,89 +55,21 @@ public class RosComponentModelPaletteFactory {
 		PaletteDrawer paletteContainer = new PaletteDrawer(
 				Messages.Connections2Group_title);
 		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
-		paletteContainer.add(createPromoteConnection1CreationTool());
-		paletteContainer.add(createContinueconnection2CreationTool());
+		paletteContainer.add(createConnection1CreationTool());
+		paletteContainer.add(createPromoteConnection2CreationTool());
 		return paletteContainer;
 	}
 
 	/**
 	 * @generated
 	 */
-	private ToolEntry createComponent1CreationTool() {
+	private ToolEntry createComposite1CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Component1CreationTool_title,
-				Messages.Component1CreationTool_desc,
+				Messages.Composite1CreationTool_title,
+				Messages.Composite1CreationTool_desc,
 				Collections
-						.singletonList(RosComponentModelElementTypes.Node_3013));
-		entry.setId("createComponent1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
-				.findImageDescriptor("icons/Node.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createPublisher2CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
-		types.add(RosComponentModelElementTypes.NodeMsgProducer_3003);
-		types.add(RosComponentModelElementTypes.CompositeMsgProducer_3015);
-		types.add(RosComponentModelElementTypes.CompositeMsgProducer_3017);
-		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Publisher2CreationTool_title,
-				Messages.Publisher2CreationTool_desc, types);
-		entry.setId("createPublisher2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
-				.findImageDescriptor("icons/Publisher.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createSubscriber3CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
-		types.add(RosComponentModelElementTypes.NodeMsgConsumer_3004);
-		types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3016);
-		types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3018);
-		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Subscriber3CreationTool_title,
-				Messages.Subscriber3CreationTool_desc, types);
-		entry.setId("createSubscriber3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
-				.findImageDescriptor("icons/Subscriber.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createProperties4CreationTool() {
-		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Properties4CreationTool_title,
-				Messages.Properties4CreationTool_desc,
-				Collections
-						.singletonList(RosComponentModelElementTypes.NodeProperty_3012));
-		entry.setId("createProperties4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
-				.findImageDescriptor("icons/Parameter.gif")); //$NON-NLS-1$
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createComposite5CreationTool() {
-		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Composite5CreationTool_title,
-				Messages.Composite5CreationTool_desc,
-				Collections
-						.singletonList(RosComponentModelElementTypes.Composite_2003));
-		entry.setId("createComposite5CreationTool"); //$NON-NLS-1$
+						.singletonList(RosComponentModelElementTypes.Composite_2001));
+		entry.setId("createComposite1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Composite.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -146,13 +79,13 @@ public class RosComponentModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createImportPackage6CreationTool() {
+	private ToolEntry createImportComposite2CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.ImportPackage6CreationTool_title,
-				Messages.ImportPackage6CreationTool_desc,
+				Messages.ImportComposite2CreationTool_title,
+				Messages.ImportComposite2CreationTool_desc,
 				Collections
-						.singletonList(RosComponentModelElementTypes.Composite_3014));
-		entry.setId("createImportPackage6CreationTool"); //$NON-NLS-1$
+						.singletonList(RosComponentModelElementTypes.Composite_3007));
+		entry.setId("createImportComposite2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Package.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -162,13 +95,65 @@ public class RosComponentModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createTopic7CreationTool() {
+	private ToolEntry createNode3CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				Messages.Topic7CreationTool_title,
-				Messages.Topic7CreationTool_desc,
+				Messages.Node3CreationTool_title,
+				Messages.Node3CreationTool_desc,
 				Collections
-						.singletonList(RosComponentModelElementTypes.Topic_3019));
-		entry.setId("createTopic7CreationTool"); //$NON-NLS-1$
+						.singletonList(RosComponentModelElementTypes.Node_3001));
+		entry.setId("createNode3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
+				.findImageDescriptor("icons/Node.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createPublisher4CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+		types.add(RosComponentModelElementTypes.NodeMsgProducer_3003);
+		types.add(RosComponentModelElementTypes.CompositeMsgProducer_3008);
+		types.add(RosComponentModelElementTypes.CompositeMsgProducer_3012);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Publisher4CreationTool_title,
+				Messages.Publisher4CreationTool_desc, types);
+		entry.setId("createPublisher4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
+				.findImageDescriptor("icons/Publisher.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createSubscriber5CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+		types.add(RosComponentModelElementTypes.NodeMsgConsumer_3004);
+		types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3009);
+		types.add(RosComponentModelElementTypes.CompositeMsgConsumer_3013);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Subscriber5CreationTool_title,
+				Messages.Subscriber5CreationTool_desc, types);
+		entry.setId("createSubscriber5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
+				.findImageDescriptor("icons/Subscriber.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createTopic6CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Topic6CreationTool_title,
+				Messages.Topic6CreationTool_desc,
+				Collections
+						.singletonList(RosComponentModelElementTypes.Topic_3014));
+		entry.setId("createTopic6CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Topic.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -178,16 +163,17 @@ public class RosComponentModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createPromoteConnection1CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4007);
-		types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4012);
-		LinkToolEntry entry = new LinkToolEntry(
-				Messages.PromoteConnection1CreationTool_title,
-				Messages.PromoteConnection1CreationTool_desc, types);
-		entry.setId("createPromoteConnection1CreationTool"); //$NON-NLS-1$
+	private ToolEntry createServiceServer7CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+		types.add(RosComponentModelElementTypes.NodeSrvProducer_3005);
+		types.add(RosComponentModelElementTypes.CompositeSrvProducer_3010);
+		types.add(RosComponentModelElementTypes.CompositeSrvProducer_3015);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.ServiceServer7CreationTool_title,
+				Messages.ServiceServer7CreationTool_desc, types);
+		entry.setId("createServiceServer7CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
-				.findImageDescriptor("icons/PromoteConnection.gif")); //$NON-NLS-1$
+				.findImageDescriptor("icons/Topic.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -195,16 +181,70 @@ public class RosComponentModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createContinueconnection2CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4010);
-		types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4011);
+	private ToolEntry createServiceClient8CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+		types.add(RosComponentModelElementTypes.NodeSrvConsumer_3006);
+		types.add(RosComponentModelElementTypes.CompositeSrvConsumer_3011);
+		types.add(RosComponentModelElementTypes.CompositeSrvConsumer_3016);
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.ServiceClient8CreationTool_title,
+				Messages.ServiceClient8CreationTool_desc, types);
+		entry.setId("createServiceClient8CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
+				.findImageDescriptor("icons/Topic.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createParameter9CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Parameter9CreationTool_title,
+				Messages.Parameter9CreationTool_desc,
+				Collections
+						.singletonList(RosComponentModelElementTypes.NodeProperty_3002));
+		entry.setId("createParameter9CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
+				.findImageDescriptor("icons/Parameter.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createConnection1CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+		types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4001);
+		types.add(RosComponentModelElementTypes.MsgInterfaceConnection_4002);
+		types.add(RosComponentModelElementTypes.Wire_4007);
 		LinkToolEntry entry = new LinkToolEntry(
-				Messages.Continueconnection2CreationTool_title,
-				Messages.Continueconnection2CreationTool_desc, types);
-		entry.setId("createContinueconnection2CreationTool"); //$NON-NLS-1$
+				Messages.Connection1CreationTool_title,
+				Messages.Connection1CreationTool_desc, types);
+		entry.setId("createConnection1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
 				.findImageDescriptor("icons/ContinueConnection.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createPromoteConnection2CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
+		types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4003);
+		types.add(RosComponentModelElementTypes.CompositeMsgInterfaceExposed_4004);
+		types.add(RosComponentModelElementTypes.CompositeSrvProducerPromote_4005);
+		types.add(RosComponentModelElementTypes.CompositeSrvProducerPromote_4006);
+		LinkToolEntry entry = new LinkToolEntry(
+				Messages.PromoteConnection2CreationTool_title,
+				Messages.PromoteConnection2CreationTool_desc, types);
+		entry.setId("createPromoteConnection2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(RosComponentModelDiagramEditorPlugin
+				.findImageDescriptor("icons/PromoteConnection.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

@@ -25,11 +25,6 @@
  */
 package org.hyperflex.roscomponentmodel.diagram.edit.parts;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.policies.RosComponentModelTextSelectionEditPolicy;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
-import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelParserProvider;
-
 import java.util.Collections;
 import java.util.List;
 
@@ -74,6 +69,10 @@ import org.eclipse.swt.accessibility.AccessibleEvent;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
+import org.hyperflex.roscomponentmodel.diagram.edit.policies.RosComponentModelTextSelectionEditPolicy;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelParserProvider;
 
 /**
  * @generated
@@ -84,7 +83,7 @@ public class CompositeNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5022;
+	public static final int VISUAL_ID = 5005;
 
 	/**
 	 * @generated
@@ -330,7 +329,7 @@ public class CompositeNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = RosComponentModelParserProvider
 					.getParser(
-							RosComponentModelElementTypes.Composite_2003,
+							RosComponentModelElementTypes.Composite_2001,
 							getParserElement(),
 							RosComponentModelVisualIDRegistry
 									.getType(org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart.VISUAL_ID));

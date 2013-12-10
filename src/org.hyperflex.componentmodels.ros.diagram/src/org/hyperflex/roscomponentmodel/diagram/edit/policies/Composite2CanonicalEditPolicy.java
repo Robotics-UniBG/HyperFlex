@@ -5,14 +5,15 @@
  * All rights reserved.
  * 
  * Luca Gherardi
- * University of Bergamo
- * Dept. of Information Technology and Mathematics
+ * ETH Zurich
+ * Institute for Dynamic Systems and Control
  * 
  * ***********************************************************************************************
  * 
  * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
  * 
  * ***********************************************************************************************
  * 
@@ -24,12 +25,6 @@
  * 
  */
 package org.hyperflex.roscomponentmodel.diagram.edit.policies;
-
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -53,6 +48,13 @@ import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramUpdater;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelNodeDescriptor;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 /**
  * @generated
@@ -88,6 +90,12 @@ public class Composite2CanonicalEditPolicy extends CanonicalEditPolicy {
 			myFeaturesToSynchronize
 					.add(org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
 							.getComposite_MsgConsumers());
+			myFeaturesToSynchronize
+					.add(org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+							.getComposite_SrvProducers());
+			myFeaturesToSynchronize
+					.add(org.hyperflex.roscomponentmodel.roscomponentmodelPackage.eINSTANCE
+							.getComposite_SrvConsumers());
 		}
 		return myFeaturesToSynchronize;
 	}
@@ -100,7 +108,7 @@ public class Composite2CanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<RosComponentModelNodeDescriptor> childDescriptors = RosComponentModelDiagramUpdater
-				.getComposite_3014SemanticChildren(viewObject);
+				.getComposite_3007SemanticChildren(viewObject);
 		for (RosComponentModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -121,8 +129,14 @@ public class Composite2CanonicalEditPolicy extends CanonicalEditPolicy {
 	 */
 	private boolean isMyDiagramElement(View view) {
 		int visualID = RosComponentModelVisualIDRegistry.getVisualID(view);
-		return visualID == CompositeMsgProducerEditPart.VISUAL_ID
-				|| visualID == CompositeMsgConsumerEditPart.VISUAL_ID;
+		switch (visualID) {
+		case CompositeMsgProducerEditPart.VISUAL_ID:
+		case CompositeMsgConsumerEditPart.VISUAL_ID:
+		case CompositeSrvProducerEditPart.VISUAL_ID:
+		case CompositeSrvConsumerEditPart.VISUAL_ID:
+			return true;
+		}
+		return false;
 	}
 
 	/**
@@ -134,7 +148,7 @@ public class Composite2CanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<RosComponentModelNodeDescriptor> childDescriptors = RosComponentModelDiagramUpdater
-				.getComposite_3014SemanticChildren((View) getHost().getModel());
+				.getComposite_3007SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

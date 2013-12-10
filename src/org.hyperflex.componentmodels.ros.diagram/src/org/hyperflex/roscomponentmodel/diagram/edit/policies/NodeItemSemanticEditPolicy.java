@@ -1,16 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.edit.policies;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.commands.NodeMsgConsumerCreateCommand;
-import org.hyperflex.roscomponentmodel.diagram.edit.commands.NodeMsgProducerCreateCommand;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
-
 import java.util.Iterator;
 
 import org.eclipse.emf.ecore.EAnnotation;
@@ -26,6 +15,23 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.NodeMsgConsumerCreateCommand;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.NodeMsgProducerCreateCommand;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.NodeSrvConsumerCreateCommand;
+import org.hyperflex.roscomponentmodel.diagram.edit.commands.NodeSrvProducerCreateCommand;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducerPromote2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducerPromoteEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeSrvConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeSrvProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.WireEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
+import org.hyperflex.roscomponentmodel.diagram.providers.RosComponentModelElementTypes;
 
 /**
  * @generated
@@ -37,7 +43,7 @@ public class NodeItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public NodeItemSemanticEditPolicy() {
-		super(RosComponentModelElementTypes.Node_3013);
+		super(RosComponentModelElementTypes.Node_3001);
 	}
 
 	/**
@@ -51,6 +57,14 @@ public class NodeItemSemanticEditPolicy extends
 		if (RosComponentModelElementTypes.NodeMsgConsumer_3004 == req
 				.getElementType()) {
 			return getGEFWrapper(new NodeMsgConsumerCreateCommand(req));
+		}
+		if (RosComponentModelElementTypes.NodeSrvProducer_3005 == req
+				.getElementType()) {
+			return getGEFWrapper(new NodeSrvProducerCreateCommand(req));
+		}
+		if (RosComponentModelElementTypes.NodeSrvConsumer_3006 == req
+				.getElementType()) {
+			return getGEFWrapper(new NodeSrvConsumerCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}
@@ -134,6 +148,64 @@ public class NodeItemSemanticEditPolicy extends
 								outgoingLink.getSource().getElement(), null,
 								outgoingLink.getTarget().getElement(), false);
 						cmd.add(new DestroyReferenceCommand(r));
+						cmd.add(new DeleteCommand(getEditingDomain(),
+								outgoingLink));
+						continue;
+					}
+				}
+				cmd.add(new DestroyElementCommand(new DestroyElementRequest(
+						getEditingDomain(), node.getElement(), false))); // directlyOwned: true
+				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
+				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
+				break;
+			case NodeSrvProducerEditPart.VISUAL_ID:
+				for (Iterator<?> it = node.getTargetEdges().iterator(); it
+						.hasNext();) {
+					Edge incomingLink = (Edge) it.next();
+					if (RosComponentModelVisualIDRegistry
+							.getVisualID(incomingLink) == CompositeSrvProducerPromoteEditPart.VISUAL_ID) {
+						DestroyReferenceRequest r = new DestroyReferenceRequest(
+								incomingLink.getSource().getElement(), null,
+								incomingLink.getTarget().getElement(), false);
+						cmd.add(new DestroyReferenceCommand(r));
+						cmd.add(new DeleteCommand(getEditingDomain(),
+								incomingLink));
+						continue;
+					}
+					if (RosComponentModelVisualIDRegistry
+							.getVisualID(incomingLink) == CompositeSrvProducerPromote2EditPart.VISUAL_ID) {
+						DestroyReferenceRequest r = new DestroyReferenceRequest(
+								incomingLink.getSource().getElement(), null,
+								incomingLink.getTarget().getElement(), false);
+						cmd.add(new DestroyReferenceCommand(r));
+						cmd.add(new DeleteCommand(getEditingDomain(),
+								incomingLink));
+						continue;
+					}
+					if (RosComponentModelVisualIDRegistry
+							.getVisualID(incomingLink) == WireEditPart.VISUAL_ID) {
+						DestroyElementRequest r = new DestroyElementRequest(
+								incomingLink.getElement(), false);
+						cmd.add(new DestroyElementCommand(r));
+						cmd.add(new DeleteCommand(getEditingDomain(),
+								incomingLink));
+						continue;
+					}
+				}
+				cmd.add(new DestroyElementCommand(new DestroyElementRequest(
+						getEditingDomain(), node.getElement(), false))); // directlyOwned: true
+				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
+				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
+				break;
+			case NodeSrvConsumerEditPart.VISUAL_ID:
+				for (Iterator<?> it = node.getSourceEdges().iterator(); it
+						.hasNext();) {
+					Edge outgoingLink = (Edge) it.next();
+					if (RosComponentModelVisualIDRegistry
+							.getVisualID(outgoingLink) == WireEditPart.VISUAL_ID) {
+						DestroyElementRequest r = new DestroyElementRequest(
+								outgoingLink.getElement(), false);
+						cmd.add(new DestroyElementCommand(r));
 						cmd.add(new DeleteCommand(getEditingDomain(),
 								outgoingLink));
 						continue;

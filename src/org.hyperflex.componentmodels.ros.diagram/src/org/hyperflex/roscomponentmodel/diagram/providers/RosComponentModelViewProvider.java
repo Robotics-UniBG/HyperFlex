@@ -1,30 +1,5 @@
 package org.hyperflex.roscomponentmodel.diagram.providers;
 
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeName2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart;
-import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
-import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
-
 import java.util.ArrayList;
 
 import org.eclipse.core.runtime.IAdaptable;
@@ -52,6 +27,7 @@ import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.FontStyle;
+import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
@@ -66,6 +42,40 @@ import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.Composite2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeCompositeContainerCompartmentEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposed2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgInterfaceExposedEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeName2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvConsumer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducer2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducerPromote2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.CompositeSrvProducerPromoteEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnection2EditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.MsgInterfaceConnectionEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeMsgProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertiesCompartmentEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodePropertyNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeSrvConsumerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.NodeSrvProducerEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.TopicNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.WireEditPart;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.WireSrvNameEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelVisualIDRegistry;
 
 /**
  * @generated
@@ -166,12 +176,18 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 				case NodePropertyEditPart.VISUAL_ID:
 				case NodeMsgProducerEditPart.VISUAL_ID:
 				case NodeMsgConsumerEditPart.VISUAL_ID:
+				case NodeSrvProducerEditPart.VISUAL_ID:
+				case NodeSrvConsumerEditPart.VISUAL_ID:
 				case CompositeMsgProducerEditPart.VISUAL_ID:
 				case CompositeMsgConsumerEditPart.VISUAL_ID:
+				case CompositeSrvProducerEditPart.VISUAL_ID:
+				case CompositeSrvConsumerEditPart.VISUAL_ID:
 				case TopicEditPart.VISUAL_ID:
 				case Composite2EditPart.VISUAL_ID:
 				case CompositeMsgProducer2EditPart.VISUAL_ID:
 				case CompositeMsgConsumer2EditPart.VISUAL_ID:
+				case CompositeSrvProducer2EditPart.VISUAL_ID:
+				case CompositeSrvConsumer2EditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != RosComponentModelVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -189,12 +205,18 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 				|| NodePropertyEditPart.VISUAL_ID == visualID
 				|| NodeMsgProducerEditPart.VISUAL_ID == visualID
 				|| NodeMsgConsumerEditPart.VISUAL_ID == visualID
+				|| NodeSrvProducerEditPart.VISUAL_ID == visualID
+				|| NodeSrvConsumerEditPart.VISUAL_ID == visualID
 				|| Composite2EditPart.VISUAL_ID == visualID
 				|| CompositeMsgProducerEditPart.VISUAL_ID == visualID
 				|| CompositeMsgConsumerEditPart.VISUAL_ID == visualID
+				|| CompositeSrvProducerEditPart.VISUAL_ID == visualID
+				|| CompositeSrvConsumerEditPart.VISUAL_ID == visualID
 				|| CompositeMsgProducer2EditPart.VISUAL_ID == visualID
 				|| CompositeMsgConsumer2EditPart.VISUAL_ID == visualID
-				|| TopicEditPart.VISUAL_ID == visualID;
+				|| TopicEditPart.VISUAL_ID == visualID
+				|| CompositeSrvProducer2EditPart.VISUAL_ID == visualID
+				|| CompositeSrvConsumer2EditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -254,13 +276,13 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		}
 		switch (visualID) {
 		case CompositeEditPart.VISUAL_ID:
-			return createComposite_2003(domainElement, containerView, index,
+			return createComposite_2001(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case NodeEditPart.VISUAL_ID:
-			return createNode_3013(domainElement, containerView, index,
+			return createNode_3001(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case NodePropertyEditPart.VISUAL_ID:
-			return createNodeProperty_3012(domainElement, containerView, index,
+			return createNodeProperty_3002(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case NodeMsgProducerEditPart.VISUAL_ID:
 			return createNodeMsgProducer_3003(domainElement, containerView,
@@ -268,24 +290,42 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		case NodeMsgConsumerEditPart.VISUAL_ID:
 			return createNodeMsgConsumer_3004(domainElement, containerView,
 					index, persisted, preferencesHint);
+		case NodeSrvProducerEditPart.VISUAL_ID:
+			return createNodeSrvProducer_3005(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case NodeSrvConsumerEditPart.VISUAL_ID:
+			return createNodeSrvConsumer_3006(domainElement, containerView,
+					index, persisted, preferencesHint);
 		case Composite2EditPart.VISUAL_ID:
-			return createComposite_3014(domainElement, containerView, index,
+			return createComposite_3007(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case CompositeMsgProducerEditPart.VISUAL_ID:
-			return createCompositeMsgProducer_3015(domainElement,
+			return createCompositeMsgProducer_3008(domainElement,
 					containerView, index, persisted, preferencesHint);
 		case CompositeMsgConsumerEditPart.VISUAL_ID:
-			return createCompositeMsgConsumer_3016(domainElement,
+			return createCompositeMsgConsumer_3009(domainElement,
+					containerView, index, persisted, preferencesHint);
+		case CompositeSrvProducerEditPart.VISUAL_ID:
+			return createCompositeSrvProducer_3010(domainElement,
+					containerView, index, persisted, preferencesHint);
+		case CompositeSrvConsumerEditPart.VISUAL_ID:
+			return createCompositeSrvConsumer_3011(domainElement,
 					containerView, index, persisted, preferencesHint);
 		case CompositeMsgProducer2EditPart.VISUAL_ID:
-			return createCompositeMsgProducer_3017(domainElement,
+			return createCompositeMsgProducer_3012(domainElement,
 					containerView, index, persisted, preferencesHint);
 		case CompositeMsgConsumer2EditPart.VISUAL_ID:
-			return createCompositeMsgConsumer_3018(domainElement,
+			return createCompositeMsgConsumer_3013(domainElement,
 					containerView, index, persisted, preferencesHint);
 		case TopicEditPart.VISUAL_ID:
-			return createTopic_3019(domainElement, containerView, index,
+			return createTopic_3014(domainElement, containerView, index,
 					persisted, preferencesHint);
+		case CompositeSrvProducer2EditPart.VISUAL_ID:
+			return createCompositeSrvProducer_3015(domainElement,
+					containerView, index, persisted, preferencesHint);
+		case CompositeSrvConsumer2EditPart.VISUAL_ID:
+			return createCompositeSrvConsumer_3016(domainElement,
+					containerView, index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -301,17 +341,26 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		String elementTypeHint = ((IHintedType) elementType).getSemanticHint();
 		switch (RosComponentModelVisualIDRegistry.getVisualID(elementTypeHint)) {
 		case MsgInterfaceConnectionEditPart.VISUAL_ID:
-			return createMsgInterfaceConnection_4010(containerView, index,
+			return createMsgInterfaceConnection_4001(containerView, index,
 					persisted, preferencesHint);
 		case MsgInterfaceConnection2EditPart.VISUAL_ID:
-			return createMsgInterfaceConnection_4011(containerView, index,
+			return createMsgInterfaceConnection_4002(containerView, index,
 					persisted, preferencesHint);
 		case CompositeMsgInterfaceExposedEditPart.VISUAL_ID:
-			return createCompositeMsgInterfaceExposed_4007(containerView,
+			return createCompositeMsgInterfaceExposed_4003(containerView,
 					index, persisted, preferencesHint);
 		case CompositeMsgInterfaceExposed2EditPart.VISUAL_ID:
-			return createCompositeMsgInterfaceExposed_4012(containerView,
+			return createCompositeMsgInterfaceExposed_4004(containerView,
 					index, persisted, preferencesHint);
+		case CompositeSrvProducerPromoteEditPart.VISUAL_ID:
+			return createCompositeSrvProducerPromote_4005(containerView, index,
+					persisted, preferencesHint);
+		case CompositeSrvProducerPromote2EditPart.VISUAL_ID:
+			return createCompositeSrvProducerPromote_4006(containerView, index,
+					persisted, preferencesHint);
+		case WireEditPart.VISUAL_ID:
+			return createWire_4007(getSemanticElement(semanticAdapter),
+					containerView, index, persisted, preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
 		return null;
@@ -320,7 +369,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createComposite_2003(EObject domainElement, View containerView,
+	public Node createComposite_2001(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -357,7 +406,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5022 = createLabel(node,
+		Node label5005 = createLabel(node,
 				RosComponentModelVisualIDRegistry
 						.getType(CompositeNameEditPart.VISUAL_ID));
 		createCompartment(
@@ -371,7 +420,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createNode_3013(EObject domainElement, View containerView,
+	public Node createNode_3001(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -407,7 +456,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5019 = createLabel(node,
+		Node label5002 = createLabel(node,
 				RosComponentModelVisualIDRegistry
 						.getType(NodeNameEditPart.VISUAL_ID));
 		createCompartment(node,
@@ -420,7 +469,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createNodeProperty_3012(EObject domainElement,
+	public Node createNodeProperty_3002(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
@@ -457,7 +506,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5018 = createLabel(node,
+		Node label5001 = createLabel(node,
 				RosComponentModelVisualIDRegistry
 						.getType(NodePropertyNameEditPart.VISUAL_ID));
 		return node;
@@ -550,7 +599,91 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createComposite_3014(EObject domainElement, View containerView,
+	public Node createNodeSrvProducer_3005(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(RosComponentModelVisualIDRegistry
+				.getType(NodeSrvProducerEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createNodeSrvConsumer_3006(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(RosComponentModelVisualIDRegistry
+				.getType(NodeSrvConsumerEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createComposite_3007(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -586,7 +719,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5020 = createLabel(node,
+		Node label5003 = createLabel(node,
 				RosComponentModelVisualIDRegistry
 						.getType(CompositeName2EditPart.VISUAL_ID));
 		return node;
@@ -595,7 +728,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createCompositeMsgProducer_3015(EObject domainElement,
+	public Node createCompositeMsgProducer_3008(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -637,7 +770,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createCompositeMsgConsumer_3016(EObject domainElement,
+	public Node createCompositeMsgConsumer_3009(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -679,7 +812,91 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createCompositeMsgProducer_3017(EObject domainElement,
+	public Node createCompositeSrvProducer_3010(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(RosComponentModelVisualIDRegistry
+				.getType(CompositeSrvProducerEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createCompositeSrvConsumer_3011(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(RosComponentModelVisualIDRegistry
+				.getType(CompositeSrvConsumerEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createCompositeMsgProducer_3012(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -721,7 +938,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createCompositeMsgConsumer_3018(EObject domainElement,
+	public Node createCompositeMsgConsumer_3013(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -763,7 +980,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createTopic_3019(EObject domainElement, View containerView,
+	public Node createTopic_3014(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
 		node.getStyles()
@@ -798,7 +1015,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5021 = createLabel(node,
+		Node label5004 = createLabel(node,
 				RosComponentModelVisualIDRegistry
 						.getType(TopicNameEditPart.VISUAL_ID));
 		return node;
@@ -807,7 +1024,91 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createMsgInterfaceConnection_4010(View containerView,
+	public Node createCompositeSrvProducer_3015(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(RosComponentModelVisualIDRegistry
+				.getType(CompositeSrvProducer2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createCompositeSrvConsumer_3016(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles()
+				.add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(RosComponentModelVisualIDRegistry
+				.getType(CompositeSrvConsumer2EditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Edge createMsgInterfaceConnection_4001(View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
@@ -859,7 +1160,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createMsgInterfaceConnection_4011(View containerView,
+	public Edge createMsgInterfaceConnection_4002(View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
@@ -911,7 +1212,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createCompositeMsgInterfaceExposed_4007(View containerView,
+	public Edge createCompositeMsgInterfaceExposed_4003(View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
@@ -963,7 +1264,7 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createCompositeMsgInterfaceExposed_4012(View containerView,
+	public Edge createCompositeMsgInterfaceExposed_4004(View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
@@ -1009,6 +1310,170 @@ public class RosComponentModelViewProvider extends AbstractProvider implements
 					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
 					routing);
 		}
+		return edge;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Edge createCompositeSrvProducerPromote_4005(View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
+				.createRelativeBendpoints();
+		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
+				2);
+		points.add(new RelativeBendpoint());
+		points.add(new RelativeBendpoint());
+		bendpoints.setPoints(points);
+		edge.setBendpoints(bendpoints);
+		ViewUtil.insertChildView(containerView, edge, index, persisted);
+		edge.setType(RosComponentModelVisualIDRegistry
+				.getType(CompositeSrvProducerPromoteEditPart.VISUAL_ID));
+		edge.setElement(null);
+		// initializePreferences
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(edge,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle edgeFontStyle = (FontStyle) edge
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (edgeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			edgeFontStyle.setFontName(fontData.getName());
+			edgeFontStyle.setFontHeight(fontData.getHeight());
+			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Routing routing = Routing.get(prefStore
+				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
+		if (routing != null) {
+			ViewUtil.setStructuralFeatureValue(edge,
+					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
+					routing);
+		}
+		return edge;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Edge createCompositeSrvProducerPromote_4006(View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
+				.createRelativeBendpoints();
+		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
+				2);
+		points.add(new RelativeBendpoint());
+		points.add(new RelativeBendpoint());
+		bendpoints.setPoints(points);
+		edge.setBendpoints(bendpoints);
+		ViewUtil.insertChildView(containerView, edge, index, persisted);
+		edge.setType(RosComponentModelVisualIDRegistry
+				.getType(CompositeSrvProducerPromote2EditPart.VISUAL_ID));
+		edge.setElement(null);
+		// initializePreferences
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(edge,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle edgeFontStyle = (FontStyle) edge
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (edgeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			edgeFontStyle.setFontName(fontData.getName());
+			edgeFontStyle.setFontHeight(fontData.getHeight());
+			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Routing routing = Routing.get(prefStore
+				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
+		if (routing != null) {
+			ViewUtil.setStructuralFeatureValue(edge,
+					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
+					routing);
+		}
+		return edge;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Edge createWire_4007(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
+				.createRelativeBendpoints();
+		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
+				2);
+		points.add(new RelativeBendpoint());
+		points.add(new RelativeBendpoint());
+		bendpoints.setPoints(points);
+		edge.setBendpoints(bendpoints);
+		ViewUtil.insertChildView(containerView, edge, index, persisted);
+		edge.setType(RosComponentModelVisualIDRegistry
+				.getType(WireEditPart.VISUAL_ID));
+		edge.setElement(domainElement);
+		// initializePreferences
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(edge,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle edgeFontStyle = (FontStyle) edge
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (edgeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			edgeFontStyle.setFontName(fontData.getName());
+			edgeFontStyle.setFontHeight(fontData.getHeight());
+			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Routing routing = Routing.get(prefStore
+				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
+		if (routing != null) {
+			ViewUtil.setStructuralFeatureValue(edge,
+					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
+					routing);
+		}
+		Node label6001 = createLabel(edge,
+				RosComponentModelVisualIDRegistry
+						.getType(WireSrvNameEditPart.VISUAL_ID));
+		label6001.setLayoutConstraint(NotationFactory.eINSTANCE
+				.createLocation());
+		Location location6001 = (Location) label6001.getLayoutConstraint();
+		location6001.setX(0);
+		location6001.setY(40);
 		return edge;
 	}
 
