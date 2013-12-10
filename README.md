@@ -1,6 +1,8 @@
 ## [HyperFlex Toolchain](http://robotics-unibg.github.com/HyperFlex/)
 
-HyperFlex is a collection of Eclipse plugins that support the development of robotics software product lines, a family of similar applications that are built reusing a set of software components and share the same architecture. The SPL life cycle consists in three main phases: domain analysis, product line development, and product derivation.
+HyperFlex is a collection of Eclipse plugins that support the development of robotics software product lines, a family of similar applications that are built reusing a set of software components and share the same architecture. 
+
+HyperFlex provides a set of tools for designing variability models and architectural models for the most spread Robotics Software Frameworks (ROS, Orocos and the cloud-based Rapyuta).
 
 
 More information on the plugins and the installation can be found on the [Wiki](https://github.com/Robotics-UniBG/HyperFlex/wiki)
