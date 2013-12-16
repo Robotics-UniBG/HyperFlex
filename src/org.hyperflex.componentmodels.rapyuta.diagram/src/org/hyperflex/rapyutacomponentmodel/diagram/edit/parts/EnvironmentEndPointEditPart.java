@@ -455,7 +455,7 @@ public class EnvironmentEndPointEditPart extends AbstractBorderedShapeEditPart {
 
 			fFigureEndPointNameLabel = new WrappingLabel();
 
-			fFigureEndPointNameLabel.setText("<?>");
+			fFigureEndPointNameLabel.setText("<É>");
 
 			fFigureEndPointNameLabel.setFont(FFIGUREENDPOINTNAMELABEL_FONT);
 

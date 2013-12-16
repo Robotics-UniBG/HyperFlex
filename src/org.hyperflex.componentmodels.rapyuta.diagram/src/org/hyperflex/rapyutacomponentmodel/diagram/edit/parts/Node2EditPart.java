@@ -455,7 +455,7 @@ public class Node2EditPart extends AbstractBorderedShapeEditPart {
 
 			fFigureComponentNameLabel = new WrappingLabel();
 
-			fFigureComponentNameLabel.setText("<?>");
+			fFigureComponentNameLabel.setText("<É>");
 
 			fFigureComponentNameLabel.setFont(FFIGURECOMPONENTNAMELABEL_FONT);
 

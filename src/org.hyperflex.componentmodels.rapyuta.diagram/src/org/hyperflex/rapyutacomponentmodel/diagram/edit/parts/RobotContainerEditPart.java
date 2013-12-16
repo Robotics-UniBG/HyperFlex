@@ -330,7 +330,7 @@ public class RobotContainerEditPart extends ShapeNodeEditPart {
 
 			fFigurePackageContainerNameLabel = new WrappingLabel();
 
-			fFigurePackageContainerNameLabel.setText("<?>");
+			fFigurePackageContainerNameLabel.setText("<É>");
 
 			fFigurePackageContainerNameLabel
 					.setFont(FFIGUREPACKAGECONTAINERNAMELABEL_FONT);

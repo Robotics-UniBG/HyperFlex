@@ -337,7 +337,7 @@ public class CloudContainerEditPart extends ShapeNodeEditPart {
 
 			fFigureContainerNameLabel = new WrappingLabel();
 
-			fFigureContainerNameLabel.setText("<?>");
+			fFigureContainerNameLabel.setText("<É>");
 			fFigureContainerNameLabel.setForegroundColor(ColorConstants.black);
 
 			fFigureContainerNameLabel.setFont(FFIGURECONTAINERNAMELABEL_FONT);
