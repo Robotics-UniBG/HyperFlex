@@ -1,37 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rttresolutionmodels" nsURI="http://robotics.unibg.it/resolutionmodels.rtt"
-    nsPrefix="Ns">
-  <eClassifiers xsi:type="ecore:EClass" name="RTTTransfImplementation" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMTransfImplementation">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rttresolutionmodels" nsURI="http://www.hyperflex.org/resolutionmodels.rtt"
+    nsPrefix="rttresolutionmodels">
+  <eClassifiers xsi:type="ecore:EClass" name="OrocosTransfImplementation" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMTransfImplementation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetTaskContext" lowerBound="1"
-        eType="ecore:EClass ../../org.orocos.model.rtt/model/rtt.ecore#//TaskContext"/>
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//TaskContext"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RTTTransfProperty" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMTransfProperty">
+  <eClassifiers xsi:type="ecore:EClass" name="OrocosTransfProperty" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMTransfProperty">
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetProperty" lowerBound="1"
-        eType="ecore:EClass ../../org.orocos.model.rtt/model/rtt.ecore#//Property"/>
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//Property"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RTTTransfConnection" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMTransfConnection">
+  <eClassifiers xsi:type="ecore:EClass" name="OrocosTransfConnection" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMTransfConnection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="newConnections" lowerBound="1"
-        upperBound="-1" eType="#//RTTConnection" containment="true"/>
+        upperBound="-1" eType="#//OrocosConnection" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RTTConnection">
+  <eClassifiers xsi:type="ecore:EClass" name="OrocosConnection" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EEnum ../../org.orocos.model.rtt/model/rtt.ecore#//ConnectionPolicyType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrocosConnectionPolicy" abstract="true"
+      eSuperTypes="#//OrocosConnection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EEnum ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//ConnectionType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lockPolicy" lowerBound="1"
-        eType="ecore:EEnum ../../org.orocos.model.rtt/model/rtt.ecore#//ConnectionPolicyLockPolicy"/>
+        eType="ecore:EEnum ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//LockPolicy"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bufferSize" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transport" lowerBound="1"
+        eType="ecore:EEnum ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//ConnectionTransport"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputPort" lowerBound="1"
-        eType="ecore:EClass ../../org.orocos.model.rtt/model/rtt.ecore#//InputPort"/>
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//InputDataPort"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputPort" lowerBound="1"
-        eType="ecore:EClass ../../org.orocos.model.rtt/model/rtt.ecore#//OutputPort"/>
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//OutputDataPort"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RTTRequiredComponents" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMRequiredComponents">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RTTTaskContexts" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass ../../org.orocos.model.rtt/model/rtt.ecore#//TaskContext"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrocosPeersConnection" eSuperTypes="#//OrocosConnection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" lowerBound="1"
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationCaller" lowerBound="1"
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//OperationCaller"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RTTRequiredConnections" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMRequiredConnections">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RTTConnectionPolicies"
-        lowerBound="1" upperBound="-1" eType="ecore:EClass ../../org.orocos.model.rtt/model/rtt.ecore#//ConnectionPolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrocosRequiredElements" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMRequiredElements">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredTaskContexts" upperBound="-1"
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//TaskContext"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredConnectionPolicies"
+        upperBound="-1" eType="ecore:EClass ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//ConnectionPolicy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredPeersConnection"
+        upperBound="-1" eType="ecore:EClass ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//PeersConnection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrocosTemplateSystemModel" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//TemplateSystemModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="system" lowerBound="1"
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//System"/>
   </eClassifiers>
 </ecore:EPackage>

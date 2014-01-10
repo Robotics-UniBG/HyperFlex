@@ -15,7 +15,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:org.hyperflex.resolutionmodels.ui.menuEntry">
+            locationURI="menu:org.hyperflex.resolutionmodels.menu">
          <command
                commandId="org.hyperflex.resolutionmodels.commands.resolution.rosResolution"
                icon="icons/start_task.gif"

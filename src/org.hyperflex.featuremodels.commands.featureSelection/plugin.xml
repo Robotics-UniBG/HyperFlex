@@ -68,7 +68,7 @@
             locationURI="menu:org.hyperflex.menu">
          <menu
                id="Feature Model"
-               label="FeatureModel">
+               label="Feature Models">
             <command
                   commandId="org.hyperflex.featuremodels.commands.featureSelection.selection"
                   icon="icons/signed_yes.gif"

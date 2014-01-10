@@ -31,7 +31,7 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://robotics.unibg.it/resolutionmodels.rtt"
+            uri="http://www.hyperflex.org/resolutionmodels.rtt"
             class="org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage"
             genModel="models/rttResolutionModel.genmodel"/>
    </extension>

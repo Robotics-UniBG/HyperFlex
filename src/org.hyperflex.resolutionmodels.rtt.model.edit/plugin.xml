@@ -4,7 +4,7 @@
 <!--
  HyperFlex Toolchain
  
- Copyright (c) 2011
+ Copyright (c) 2013
  All rights reserved.
  
  Luca Gherardi
@@ -31,7 +31,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http://robotics.unibg.it/resolutionmodels.rtt"
+            uri="http://www.hyperflex.org/resolutionmodels.rtt"
             class="org.hyperflex.resolutionmodels.rttresolutionmodels.provider.rttresolutionmodelsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -43,7 +43,7 @@
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
-            uri="http://robotics.unibg.it/resolutionmodels"
+            uri="http://www.hyperflex.org/resolutionmodels"
             class="org.hyperflex.resolutionmodels.rttresolutionmodels.provider.rttresolutionmodelsItemProviderAdapterFactory$resolutionmodelsChildCreationExtender"/>
    </extension>
 

@@ -12,9 +12,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:org.eclipse.ui.main.menu">
+            locationURI="menu:org.hyperflex.menu">
          <menu
-               id="org.hyperflex.resolutionmodels.ui.menuEntry"
+               id="org.hyperflex.resolutionmodels.menu"
                label="Variability Resolution">
          </menu>
       </menuContribution>
