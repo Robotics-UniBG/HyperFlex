@@ -52,4 +52,33 @@
       </editor>
    </extension>
 
+
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated rosResolutionModel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.hyperflex.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsModelWizardID"
+            name="%_UI_rosresolutionmodelsModelWizard_label"
+            class="org.hyperflex.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/rosresolutionmodelsModelFile.gif">
+         <description>%_UI_rosresolutionmodelsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated rosResolutionModel -->
+      <editor
+            id="org.hyperflex.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsEditorID"
+            name="%_UI_rosresolutionmodelsEditor_label"
+            icon="icons/full/obj16/rosresolutionmodelsModelFile.gif"
+            extensions="rosresolutionmodel"
+            class="org.hyperflex.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsEditor"
+            contributorClass="org.hyperflex.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsActionBarContributor">
+      </editor>
+   </extension>
 </plugin>

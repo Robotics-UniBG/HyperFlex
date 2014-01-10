@@ -31,7 +31,7 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://robotics.unibg.it/resolutionmodels.ros"
+            uri="http://www.hyperflex.org/resolutionmodels.ros"
             class="org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage"
             genModel="models/rosResolutionModel.genmodel"/>
    </extension>

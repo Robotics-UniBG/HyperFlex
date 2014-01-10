@@ -31,7 +31,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http://robotics.unibg.it/resolutionmodels"
+            uri="http://www.hyperflex.org/resolutionmodels"
             class="org.hyperflex.resolutionmodels.provider.resolutionmodelsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

@@ -5,8 +5,8 @@
       version="1.0.0.qualifier"
       provider-name="Luca Gherardi">
 
-   <description url="http://robotics-unibg.github.com/FeatureModels/">
-      The Variability Resolution plugin - ROS extension
+   <description url="http://robotics-unibg.github.com/HyperFlex/">
+      The HyperFlex HyperFlex Toolchain
    </description>
 
    <copyright>
@@ -36,30 +36,19 @@ http://www.eclipse.org/legal/epl-v10.html
    </url>
 
    <requires>
-      <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.core.runtime"/>
-      <import plugin="org.eclipse.core.expressions" version="3.4.200" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.ui.ide"/>
-      <import plugin="org.eclipse.gmf.runtime.emf.core"/>
-      <import plugin="org.eclipse.gmf.runtime.diagram.ui"/>
-      <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor"/>
-      <import plugin="org.hyperflex.featuremodels.constraints" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.hyperflex.featuremodels.model" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.hyperflex.featuremodels.model.diagram" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.hyperflex.resolutionmodels.model.editor" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.hyperflex.resolutionmodels.ui" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.hyperflex.resolutionmodels.ros.model" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.ros.model.ros" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.ros.model.ros.diagram" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.hyperflex.featuremodels.model" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.hyperflex.resolutionmodels.model" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.componentmodels.ros.model" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="org.hyperflex.featuremodels.model.edit"/>
       <import plugin="org.hyperflex.resolutionmodels.model.edit"/>
-      <import plugin="org.ros.model.ros.edit"/>
       <import plugin="org.eclipse.core.resources"/>
       <import plugin="org.eclipse.emf.ecore.xmi"/>
       <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.hyperflex.componentmodels.ros.model.edit"/>
    </requires>
 
    <plugin

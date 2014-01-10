@@ -5,8 +5,8 @@
       version="1.0.0.qualifier"
       provider-name="Luca Gherardi">
 
-   <description url="http://robotics-unibg.github.com/FeatureModels/">
-      The Variability Resolution plugin - Rtt extension
+   <description url="http://robotics-unibg.github.com/HyperFlex/">
+      The HyperFlex HyperFlex Toolchain
    </description>
 
    <copyright>

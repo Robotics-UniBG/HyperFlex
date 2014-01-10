@@ -16,6 +16,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.hyperflex.featuremodels.model.edit;visibility:=reexport,
  org.hyperflex.resolutionmodels.model;visibility:=reexport,
  org.hyperflex.resolutionmodels.model.edit;visibility:=reexport,
- org.ros.model.ros;visibility:=reexport,
- org.ros.model.ros.edit;visibility:=reexport
+ org.hyperflex.componentmodels.ros.model;visibility:=reexport,
+ org.hyperflex.componentmodels.ros.model.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

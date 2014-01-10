@@ -1,76 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rosresolutionmodels" nsURI="http://robotics.unibg.it/resolutionmodels.ros"
-    nsPrefix="Ns">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rosresolutionmodels" nsURI="http://www.hyperflex.org/resolutionmodels.ros"
+    nsPrefix="rosresolutionmodels">
   <eClassifiers xsi:type="ecore:EClass" name="ROSTransfImplementation" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMTransfImplementation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetNode" lowerBound="1"
-        eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//Node"/>
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//Node"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ROSTransfProperty" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMTransfProperty">
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetProperty" lowerBound="1"
-        eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//Parameter"/>
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//Property"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ROSTransfConnection" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMTransfConnection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="newConnections" lowerBound="1"
-        upperBound="-1" eType="#//ROSAbstractConnection" containment="true"/>
+        upperBound="-1" eType="#//ROSConnection" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSAbstractConnection" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="ROSConnection" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSTopicConnection" abstract="true"
-      eSuperTypes="#//ROSAbstractConnection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="publisher" lowerBound="1"
-        eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//Publisher"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subscriber" lowerBound="1"
-        eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//Subscriber"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ROSTopicConnection" eSuperTypes="#//ROSConnection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" lowerBound="1" eType="ecore:EClass ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//Topic"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messageInterface" lowerBound="1"
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//MsgInterface"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSNewTopicConnection" eSuperTypes="#//ROSTopicConnection">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="topicName" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ROSServiceConnection" eSuperTypes="#//ROSConnection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceProducer" lowerBound="1"
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//SrvProducer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceConsumer" lowerBound="1"
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//SrvConsumer"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSExistingTopicConnection" eSuperTypes="#//ROSTopicConnection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" lowerBound="1" eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//Topic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ROSRequiredElements" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMRequiredElements">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredNodes" upperBound="-1"
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredTopicConnections"
+        upperBound="-1" eType="#//ROSTopicConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredServiceConnections"
+        upperBound="-1" eType="ecore:EClass ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//Wire"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSServiceConnection" abstract="true"
-      eSuperTypes="#//ROSAbstractConnection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceServer" lowerBound="1"
-        eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//ServiceServer"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceClient" lowerBound="1"
-        eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//ServiceClient"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSNewServiceConnection" eSuperTypes="#//ROSServiceConnection">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceName" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSExistingServiceConnection" eSuperTypes="#//ROSServiceConnection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="service" lowerBound="1"
-        eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//Service"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSActionConnection" abstract="true"
-      eSuperTypes="#//ROSAbstractConnection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actionServer" lowerBound="1"
-        eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//ActionServer"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actionClient" lowerBound="1"
-        eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//ActionClient"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSNewActionConnection" eSuperTypes="#//ROSActionConnection">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionName" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSExistingActionConnection" eSuperTypes="#//ROSActionConnection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
-        eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//Action"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSRequiredComponents" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMRequiredComponents">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ROSNodes" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass ../../org.ros.model.ros/model/ros.ecore#//Node"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSRequiredConnections" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//RMRequiredConnections">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredExistingTopicConnections"
-        upperBound="-1" eType="#//ROSExistingTopicConnection" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredExistingServiceConnections"
-        upperBound="-1" eType="#//ROSExistingServiceConnection" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredExistingActionConnections"
-        upperBound="-1" eType="#//ROSExistingActionConnection" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ROSTemplateSystemModel" eSuperTypes="../../org.hyperflex.resolutionmodels.model/models/resolutionModel.ecore#//TemplateSystemModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="system" lowerBound="1"
+        eType="ecore:EClass ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//System"/>
   </eClassifiers>
 </ecore:EPackage>

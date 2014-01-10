@@ -34,7 +34,7 @@
             id="org.hyperflex.resolutionmodels.presentation.resolutionmodelModelWizardID"
             name="%_UI_resolutionmodelsModelWizard_label"
             class="org.hyperflex.resolutionmodels.presentation.resolutionmodelsModelWizard"
-            category="org.hyperflex.varp.wizard.category"
+            category="org.hyperflex.wizard.category"
             icon="icons/rm.ico">
          <description>%_UI_resolutionmodelsModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
@@ -50,23 +50,6 @@
             class="org.hyperflex.resolutionmodels.presentation.resolutionmodelsEditor"
             contributorClass="org.hyperflex.resolutionmodels.presentation.resolutionmodelsActionBarContributor">
       </editor>
-   </extension>
-   <extension
-         point="org.eclipse.ui.menus">
-      <menuContribution
-            allPopups="false"
-            locationURI="popup:common.new.menu?after=org.hyperflex.varp.menu.new.separatorModels">
-         <command
-               commandId="org.eclipse.ui.newWizard"
-               icon="icons/rm.ico"
-               label="Resolution Model"
-               style="push">
-            <parameter
-                  name="newWizardId"
-                  value="org.hyperflex.resolutionmodels.presentation.resolutionmodelModelWizardID">
-            </parameter>
-         </command>
-      </menuContribution>
    </extension>
 
    <extension point="org.eclipse.ui.newWizards">

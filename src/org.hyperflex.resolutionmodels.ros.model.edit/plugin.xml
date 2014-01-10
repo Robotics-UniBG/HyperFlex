@@ -31,7 +31,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http://robotics.unibg.it/resolutionmodels.ros"
+            uri="http://www.hyperflex.org/resolutionmodels.ros"
             class="org.hyperflex.resolutionmodels.rosresolutionmodels.provider.rosresolutionmodelsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -43,7 +43,7 @@
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
-            uri="http://robotics.unibg.it/resolutionmodels"
+            uri="http://www.hyperflex.org/resolutionmodels"
             class="org.hyperflex.resolutionmodels.rosresolutionmodels.provider.rosresolutionmodelsItemProviderAdapterFactory$resolutionmodelsChildCreationExtender"/>
    </extension>
 
