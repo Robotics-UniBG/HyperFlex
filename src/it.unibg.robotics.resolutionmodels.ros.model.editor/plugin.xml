@@ -2,20 +2,20 @@
 <?eclipse version="3.0"?>
 
 <!--
- Feature Model Plugin
+ HyperFlex Toolchain
  
  Copyright (c) 2011
  All rights reserved.
  
  Luca Gherardi
+ Department of Engineering
  University of Bergamo
- Dept. of Information Technology and Mathematics
  
  ***********************************************************************************************
  
- Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  
- Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  
  ***********************************************************************************************
  
@@ -31,10 +31,10 @@
 
    <extension point="org.eclipse.ui.newWizards">
       <wizard
-            id="it.unibg.robotics.resolutionmodels.ros.presentation.rosModelWizardID"
+            id="org.hyperflex.resolutionmodels.ros.presentation.rosModelWizardID"
             name="%_UI_rosModelWizard_label"
-            class="it.unibg.robotics.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsModelWizard"
-            category="it.robotics.unibg.varp.wizard.category"
+            class="org.hyperflex.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsModelWizard"
+            category="org.hyperflex.varp.wizard.category"
             icon="icons/full/obj16/rosModelFile.gif">
          <description>%_UI_rosModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
@@ -43,12 +43,12 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="it.unibg.robotics.resolutionmodels.ros.presentation.rosEditorID"
+            id="org.hyperflex.resolutionmodels.ros.presentation.rosEditorID"
             name="%_UI_rosEditor_label"
             icon="icons/full/obj16/rosModelFile.gif"
             extensions="rosresolutionmodel"
-            class="it.unibg.robotics.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsEditor"
-            contributorClass="it.unibg.robotics.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsActionBarContributor">
+            class="org.hyperflex.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsEditor"
+            contributorClass="org.hyperflex.resolutionmodels.rosresolutionmodels.presentation.rosresolutionmodelsActionBarContributor">
       </editor>
    </extension>
 

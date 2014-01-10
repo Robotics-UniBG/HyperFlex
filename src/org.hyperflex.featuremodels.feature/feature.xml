@@ -6,7 +6,7 @@
       provider-name="Luca Gherardi">
 
    <description url="http://robotics-unibg.github.com/HyperFlex/">
-      The HyperFlex Feature Model plugin
+      The HyperFlex HyperFlex Toolchain
    </description>
 
    <copyright>
@@ -14,8 +14,8 @@
 Copyright (c) 2013
 All rights reserved.
 Luca Gherardi
+Department of Engineering
 University of Bergamo
-Dept. of Information Technology and Mathematics
 _____________________________________________________________________________
 Author: &lt;A HREF=&quot;mailto:lucagh@ethz.ch&quot;&gt;Luca Gherardi&lt;/A&gt;
 In collaboration with: &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;&gt;Davide Brugali&lt;/A&gt;

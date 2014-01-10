@@ -1,16 +1,16 @@
 /**
- * HyperFlex toolchain
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
@@ -23,9 +23,9 @@
  * 
  * 
  */
-package it.unibg.robotics.tcacomponentmodel.util;
+package org.hyperflex.tcacomponentmodel.util;
 
-import it.unibg.robotics.tcacomponentmodel.tcacomponentmodelPackage;
+import org.hyperflex.tcacomponentmodel.tcacomponentmodelPackage;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -41,7 +41,7 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.tcacomponentmodel.tcacomponentmodelPackage
+ * @see org.hyperflex.tcacomponentmodel.tcacomponentmodelPackage
  * @generated
  */
 public class tcacomponentmodelSwitch<T> extends Switch<T> {
@@ -89,7 +89,7 @@ public class tcacomponentmodelSwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case tcacomponentmodelPackage.SYSTEM: {
-				it.unibg.robotics.tcacomponentmodel.System system = (it.unibg.robotics.tcacomponentmodel.System)theEObject;
+				org.hyperflex.tcacomponentmodel.System system = (org.hyperflex.tcacomponentmodel.System)theEObject;
 				T result = caseSystem(system);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -109,7 +109,7 @@ public class tcacomponentmodelSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSystem(it.unibg.robotics.tcacomponentmodel.System object) {
+	public T caseSystem(org.hyperflex.tcacomponentmodel.System object) {
 		return null;
 	}
 

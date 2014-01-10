@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,23 +23,23 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rtt.commands.resolution.handlers;
+package org.hyperflex.resolutionmodels.rtt.commands.resolution.handlers;
 
-import it.unibg.robotics.featuremodels.Feature;
-import it.unibg.robotics.featuremodels.FeatureModel;
-import it.unibg.robotics.featuremodels.Instance;
-import it.unibg.robotics.featuremodels.featuremodelsPackage;
-import it.unibg.robotics.featuremodels.constraints.utility.ConstraintChecker;
-import it.unibg.robotics.resolutionmodels.RMAbstractTransformation;
-import it.unibg.robotics.resolutionmodels.RMResolutionElement;
-import it.unibg.robotics.resolutionmodels.ResolutionModel;
-import it.unibg.robotics.resolutionmodels.presentation.resolutionmodelsEditor;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredComponents;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredConnections;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfConnection;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfImplementation;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfProperty;
+import org.hyperflex.featuremodels.Feature;
+import org.hyperflex.featuremodels.FeatureModel;
+import org.hyperflex.featuremodels.Instance;
+import org.hyperflex.featuremodels.featuremodelsPackage;
+import org.hyperflex.featuremodels.constraints.utility.ConstraintChecker;
+import org.hyperflex.resolutionmodels.RMAbstractTransformation;
+import org.hyperflex.resolutionmodels.RMResolutionElement;
+import org.hyperflex.resolutionmodels.ResolutionModel;
+import org.hyperflex.resolutionmodels.presentation.resolutionmodelsEditor;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredComponents;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredConnections;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfConnection;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfImplementation;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfProperty;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

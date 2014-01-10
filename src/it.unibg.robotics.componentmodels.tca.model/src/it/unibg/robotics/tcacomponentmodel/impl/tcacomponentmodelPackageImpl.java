@@ -1,16 +1,16 @@
 /**
- * HyperFlex toolchain
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
@@ -23,10 +23,10 @@
  * 
  * 
  */
-package it.unibg.robotics.tcacomponentmodel.impl;
+package org.hyperflex.tcacomponentmodel.impl;
 
-import it.unibg.robotics.tcacomponentmodel.tcacomponentmodelFactory;
-import it.unibg.robotics.tcacomponentmodel.tcacomponentmodelPackage;
+import org.hyperflex.tcacomponentmodel.tcacomponentmodelFactory;
+import org.hyperflex.tcacomponentmodel.tcacomponentmodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -57,7 +57,7 @@ public class tcacomponentmodelPackageImpl extends EPackageImpl implements tcacom
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see it.unibg.robotics.tcacomponentmodel.tcacomponentmodelPackage#eNS_URI
+	 * @see org.hyperflex.tcacomponentmodel.tcacomponentmodelPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
@@ -177,7 +177,7 @@ public class tcacomponentmodelPackageImpl extends EPackageImpl implements tcacom
 		// Add supertypes to classes
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(systemEClass, it.unibg.robotics.tcacomponentmodel.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(systemEClass, org.hyperflex.tcacomponentmodel.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

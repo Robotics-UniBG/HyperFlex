@@ -2,20 +2,20 @@
 <?eclipse version="3.0"?>
 
 <!--
- Feature Model Plugin
+ HyperFlex Toolchain
  
  Copyright (c) 2011
  All rights reserved.
  
  Luca Gherardi
+ Department of Engineering
  University of Bergamo
- Dept. of Information Technology and Mathematics
  
  ***********************************************************************************************
  
- Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  
- Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  
  ***********************************************************************************************
  
@@ -31,10 +31,10 @@
 
    <extension point="org.eclipse.ui.newWizards">
       <wizard
-            id="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelModelWizardID"
+            id="org.hyperflex.resolutionmodels.presentation.resolutionmodelModelWizardID"
             name="%_UI_resolutionmodelsModelWizard_label"
             class="org.hyperflex.resolutionmodels.presentation.resolutionmodelsModelWizard"
-            category="it.robotics.unibg.varp.wizard.category"
+            category="org.hyperflex.varp.wizard.category"
             icon="icons/rm.ico">
          <description>%_UI_resolutionmodelsModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
@@ -43,7 +43,7 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelEditorID"
+            id="org.hyperflex.resolutionmodels.presentation.resolutionmodelEditorID"
             name="%_UI_resolutionmodelsEditor_label"
             icon="icons/rm.ico"
             extensions="resolutionmodel"
@@ -55,7 +55,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="popup:common.new.menu?after=it.unibg.robotics.varp.menu.new.separatorModels">
+            locationURI="popup:common.new.menu?after=org.hyperflex.varp.menu.new.separatorModels">
          <command
                commandId="org.eclipse.ui.newWizard"
                icon="icons/rm.ico"
@@ -63,10 +63,37 @@
                style="push">
             <parameter
                   name="newWizardId"
-                  value="it.unibg.robotics.resolutionmodels.presentation.resolutionmodelModelWizardID">
+                  value="org.hyperflex.resolutionmodels.presentation.resolutionmodelModelWizardID">
             </parameter>
          </command>
       </menuContribution>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated resolutionModel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.hyperflex.resolutionmodels.presentation.resolutionmodelsModelWizardID"
+            name="%_UI_resolutionmodelsModelWizard_label"
+            class="org.hyperflex.resolutionmodels.presentation.resolutionmodelsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/resolutionmodelsModelFile.gif">
+         <description>%_UI_resolutionmodelsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated resolutionModel -->
+      <editor
+            id="org.hyperflex.resolutionmodels.presentation.resolutionmodelsEditorID"
+            name="%_UI_resolutionmodelsEditor_label"
+            icon="icons/full/obj16/resolutionmodelsModelFile.gif"
+            extensions="resolutionmodels"
+            class="org.hyperflex.resolutionmodels.presentation.resolutionmodelsEditor"
+            contributorClass="org.hyperflex.resolutionmodels.presentation.resolutionmodelsActionBarContributor">
+      </editor>
+   </extension>
 </plugin>

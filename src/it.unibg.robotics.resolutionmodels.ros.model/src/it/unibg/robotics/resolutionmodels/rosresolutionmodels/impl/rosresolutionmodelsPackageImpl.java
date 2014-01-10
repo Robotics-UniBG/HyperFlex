@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,26 +23,26 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl;
+package org.hyperflex.resolutionmodels.rosresolutionmodels.impl;
 
-import it.unibg.robotics.resolutionmodels.resolutionmodelsPackage;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsFactory;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.resolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsFactory;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -173,7 +173,7 @@ public class rosresolutionmodelsPackageImpl extends EPackageImpl implements rosr
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#eNS_URI
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */

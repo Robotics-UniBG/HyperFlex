@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Rtt Resolution Transformations
-Bundle-SymbolicName: it.unibg.robotics.resolutionmodels.rtt.commands.resolution;singleton:=true
+Bundle-SymbolicName: org.hyperflex.resolutionmodels.rtt.commands.resolution;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: it.unibg.robotics.resolutionmodels.rtt.commands.resolution.Activator
+Bundle-Activator: org.hyperflex.resolutionmodels.rtt.commands.resolution.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.core.expressions;bundle-version="3.4.200",
@@ -13,12 +13,12 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.gmf.runtime.diagram.ui.resources.editor,
  org.orocos.model.rtt;bundle-version="1.0.0",
  org.orocos.model.rtt.diagram;bundle-version="1.0.0",
- it.unibg.robotics.featuremodels.constraints;bundle-version="1.0.0",
- it.unibg.robotics.featuremodels.model;bundle-version="1.0.0",
- it.unibg.robotics.resolutionmodels.rtt.model;bundle-version="1.0.0",
- it.unibg.robotics.featuremodels.model.diagram;bundle-version="1.0.0",
- it.unibg.robotics.resolutionmodels.model.editor;bundle-version="1.0.0",
- it.unibg.robotics.resolutionmodels.ui;bundle-version="1.0.0"
+ org.hyperflex.featuremodels.constraints;bundle-version="1.0.0",
+ org.hyperflex.featuremodels.model;bundle-version="1.0.0",
+ org.hyperflex.resolutionmodels.rtt.model;bundle-version="1.0.0",
+ org.hyperflex.featuremodels.model.diagram;bundle-version="1.0.0",
+ org.hyperflex.resolutionmodels.model.editor;bundle-version="1.0.0",
+ org.hyperflex.resolutionmodels.ui;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: Luca Gherardi

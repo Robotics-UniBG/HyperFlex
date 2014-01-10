@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,30 +23,30 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels.util;
+package org.hyperflex.resolutionmodels.rosresolutionmodels.util;
 
-import it.unibg.robotics.resolutionmodels.RMAbstractTransformation;
-import it.unibg.robotics.resolutionmodels.RMRequiredComponents;
-import it.unibg.robotics.resolutionmodels.RMRequiredConnections;
-import it.unibg.robotics.resolutionmodels.RMTransfConnection;
-import it.unibg.robotics.resolutionmodels.RMTransfImplementation;
-import it.unibg.robotics.resolutionmodels.RMTransfProperty;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.RMAbstractTransformation;
+import org.hyperflex.resolutionmodels.RMRequiredComponents;
+import org.hyperflex.resolutionmodels.RMRequiredConnections;
+import org.hyperflex.resolutionmodels.RMTransfConnection;
+import org.hyperflex.resolutionmodels.RMTransfImplementation;
+import org.hyperflex.resolutionmodels.RMTransfProperty;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -58,7 +58,7 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage
+ * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage
  * @generated
  */
 public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
@@ -214,13 +214,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation <em>ROS Transf Implementation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation <em>ROS Transf Implementation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation
 	 * @generated
 	 */
 	public Adapter createROSTransfImplementationAdapter() {
@@ -228,13 +228,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty <em>ROS Transf Property</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty <em>ROS Transf Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty
 	 * @generated
 	 */
 	public Adapter createROSTransfPropertyAdapter() {
@@ -242,13 +242,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection <em>ROS Transf Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection <em>ROS Transf Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection
 	 * @generated
 	 */
 	public Adapter createROSTransfConnectionAdapter() {
@@ -256,13 +256,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection <em>ROS Abstract Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSAbstractConnection <em>ROS Abstract Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSAbstractConnection
 	 * @generated
 	 */
 	public Adapter createROSAbstractConnectionAdapter() {
@@ -270,13 +270,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection <em>ROS Topic Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection <em>ROS Topic Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection
 	 * @generated
 	 */
 	public Adapter createROSTopicConnectionAdapter() {
@@ -284,13 +284,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection <em>ROS New Topic Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection <em>ROS New Topic Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection
 	 * @generated
 	 */
 	public Adapter createROSNewTopicConnectionAdapter() {
@@ -298,13 +298,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection <em>ROS Existing Topic Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection <em>ROS Existing Topic Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection
 	 * @generated
 	 */
 	public Adapter createROSExistingTopicConnectionAdapter() {
@@ -312,13 +312,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection <em>ROS Service Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection <em>ROS Service Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection
 	 * @generated
 	 */
 	public Adapter createROSServiceConnectionAdapter() {
@@ -326,13 +326,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection <em>ROS New Service Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection <em>ROS New Service Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection
 	 * @generated
 	 */
 	public Adapter createROSNewServiceConnectionAdapter() {
@@ -340,13 +340,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection <em>ROS Existing Service Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection <em>ROS Existing Service Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection
 	 * @generated
 	 */
 	public Adapter createROSExistingServiceConnectionAdapter() {
@@ -354,13 +354,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection <em>ROS Action Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSActionConnection <em>ROS Action Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSActionConnection
 	 * @generated
 	 */
 	public Adapter createROSActionConnectionAdapter() {
@@ -368,13 +368,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection <em>ROS New Action Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection <em>ROS New Action Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection
 	 * @generated
 	 */
 	public Adapter createROSNewActionConnectionAdapter() {
@@ -382,13 +382,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection <em>ROS Existing Action Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection <em>ROS Existing Action Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection
 	 * @generated
 	 */
 	public Adapter createROSExistingActionConnectionAdapter() {
@@ -396,13 +396,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents <em>ROS Required Components</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents <em>ROS Required Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents
 	 * @generated
 	 */
 	public Adapter createROSRequiredComponentsAdapter() {
@@ -410,13 +410,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections <em>ROS Required Connections</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections <em>ROS Required Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections
 	 * @generated
 	 */
 	public Adapter createROSRequiredConnectionsAdapter() {
@@ -424,13 +424,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.RMAbstractTransformation <em>RM Abstract Transformation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.RMAbstractTransformation <em>RM Abstract Transformation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.RMAbstractTransformation
+	 * @see org.hyperflex.resolutionmodels.RMAbstractTransformation
 	 * @generated
 	 */
 	public Adapter createRMAbstractTransformationAdapter() {
@@ -438,13 +438,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.RMTransfImplementation <em>RM Transf Implementation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.RMTransfImplementation <em>RM Transf Implementation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.RMTransfImplementation
+	 * @see org.hyperflex.resolutionmodels.RMTransfImplementation
 	 * @generated
 	 */
 	public Adapter createRMTransfImplementationAdapter() {
@@ -452,13 +452,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.RMTransfProperty <em>RM Transf Property</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.RMTransfProperty <em>RM Transf Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.RMTransfProperty
+	 * @see org.hyperflex.resolutionmodels.RMTransfProperty
 	 * @generated
 	 */
 	public Adapter createRMTransfPropertyAdapter() {
@@ -466,13 +466,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.RMTransfConnection <em>RM Transf Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.RMTransfConnection <em>RM Transf Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.RMTransfConnection
+	 * @see org.hyperflex.resolutionmodels.RMTransfConnection
 	 * @generated
 	 */
 	public Adapter createRMTransfConnectionAdapter() {
@@ -480,13 +480,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.RMRequiredComponents <em>RM Required Components</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.RMRequiredComponents <em>RM Required Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.RMRequiredComponents
+	 * @see org.hyperflex.resolutionmodels.RMRequiredComponents
 	 * @generated
 	 */
 	public Adapter createRMRequiredComponentsAdapter() {
@@ -494,13 +494,13 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.resolutionmodels.RMRequiredConnections <em>RM Required Connections</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.RMRequiredConnections <em>RM Required Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.resolutionmodels.RMRequiredConnections
+	 * @see org.hyperflex.resolutionmodels.RMRequiredConnections
 	 * @generated
 	 */
 	public Adapter createRMRequiredConnectionsAdapter() {

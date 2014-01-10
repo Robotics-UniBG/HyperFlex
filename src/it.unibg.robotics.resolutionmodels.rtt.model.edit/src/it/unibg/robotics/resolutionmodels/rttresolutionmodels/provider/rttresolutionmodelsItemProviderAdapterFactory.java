@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,13 +23,13 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rttresolutionmodels.provider;
+package org.hyperflex.resolutionmodels.rttresolutionmodels.provider;
 
-import it.unibg.robotics.resolutionmodels.RMResolutionElement;
-import it.unibg.robotics.resolutionmodels.resolutionmodelsPackage;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsFactory;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.util.rttresolutionmodelsAdapterFactory;
-import it.unibg.robotics.resolutionmodels.util.resolutionmodelsSwitch;
+import org.hyperflex.resolutionmodels.RMResolutionElement;
+import org.hyperflex.resolutionmodels.resolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsFactory;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.util.rttresolutionmodelsAdapterFactory;
+import org.hyperflex.resolutionmodels.util.resolutionmodelsSwitch;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -104,7 +104,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfImplementation} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfImplementation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -112,7 +112,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	protected RTTTransfImplementationItemProvider rttTransfImplementationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfImplementation}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfImplementation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -127,7 +127,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfProperty} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfProperty} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -135,7 +135,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	protected RTTTransfPropertyItemProvider rttTransfPropertyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfProperty}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfProperty}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -150,7 +150,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfConnection} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -158,7 +158,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	protected RTTTransfConnectionItemProvider rttTransfConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfConnection}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -173,7 +173,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -181,7 +181,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	protected RTTConnectionItemProvider rttConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -196,7 +196,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredComponents} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredComponents} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -204,7 +204,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	protected RTTRequiredComponentsItemProvider rttRequiredComponentsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredComponents}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredComponents}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -219,7 +219,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredConnections} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredConnections} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -227,7 +227,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	protected RTTRequiredConnectionsItemProvider rttRequiredConnectionsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredConnections}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredConnections}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

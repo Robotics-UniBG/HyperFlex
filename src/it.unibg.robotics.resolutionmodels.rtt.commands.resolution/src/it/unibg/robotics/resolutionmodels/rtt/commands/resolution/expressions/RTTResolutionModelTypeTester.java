@@ -1,13 +1,13 @@
-package it.unibg.robotics.resolutionmodels.rtt.commands.resolution.expressions;
+package org.hyperflex.resolutionmodels.rtt.commands.resolution.expressions;
 
-import it.unibg.robotics.resolutionmodels.RMAbstractTransformation;
-import it.unibg.robotics.resolutionmodels.RMResolutionElement;
-import it.unibg.robotics.resolutionmodels.ResolutionModel;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredComponents;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredConnections;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfConnection;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfImplementation;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfProperty;
+import org.hyperflex.resolutionmodels.RMAbstractTransformation;
+import org.hyperflex.resolutionmodels.RMResolutionElement;
+import org.hyperflex.resolutionmodels.ResolutionModel;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredComponents;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredConnections;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfConnection;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfImplementation;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfProperty;
 
 import org.eclipse.core.expressions.PropertyTester;
 

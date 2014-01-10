@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,11 +23,11 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl;
+package org.hyperflex.resolutionmodels.rosresolutionmodels.impl;
 
-import it.unibg.robotics.resolutionmodels.impl.RMTransfImplementationImpl;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.impl.RMTransfImplementationImpl;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -41,7 +41,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfImplementationImpl#getTargetNode <em>Target Node</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfImplementationImpl#getTargetNode <em>Target Node</em>}</li>
  * </ul>
  * </p>
  *

@@ -1,16 +1,16 @@
 /**
- * HyperFlex toolchain
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.tcacomponentmodel.provider;
+package org.hyperflex.tcacomponentmodel.provider;
 
 
 import java.util.Collection;
@@ -43,7 +43,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link it.unibg.robotics.tcacomponentmodel.System} object.
+ * This is the item provider adapter for a {@link org.hyperflex.tcacomponentmodel.System} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

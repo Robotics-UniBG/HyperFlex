@@ -2,18 +2,18 @@
 <?eclipse version="3.0"?>
 
 <!--
- HyperFlex toolchain
+ HyperFlex Toolchain
  
  Copyright (c) 2013
  All rights reserved.
  
  Luca Gherardi
+ Department of Engineering
  University of Bergamo
- Dept. of Information Technology and Mathematics
  
  ***********************************************************************************************
  
- Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  
  In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  
@@ -32,10 +32,10 @@
    <extension point="org.eclipse.ui.newWizards">
       <!-- @generated tcaComponentModel -->
       <wizard
-            id="it.unibg.robotics.tcacomponentmodel.presentation.tcacomponentmodelModelWizardID"
+            id="org.hyperflex.tcacomponentmodel.presentation.tcacomponentmodelModelWizardID"
             name="%_UI_tcacomponentmodelModelWizard_label"
-            class="it.unibg.robotics.tcacomponentmodel.presentation.tcacomponentmodelModelWizard"
-            category="it.robotics.unibg.hyperflex.wizard.category"
+            class="org.hyperflex.tcacomponentmodel.presentation.tcacomponentmodelModelWizard"
+            category="org.hyperflex.hyperflex.wizard.category"
             icon="icons/full/obj16/tcacomponentmodelModelFile.gif">
          <description>%_UI_tcacomponentmodelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
@@ -45,12 +45,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated tcaComponentModel -->
       <editor
-            id="it.unibg.robotics.tcacomponentmodel.presentation.tcacomponentmodelEditorID"
+            id="org.hyperflex.tcacomponentmodel.presentation.tcacomponentmodelEditorID"
             name="%_UI_tcacomponentmodelEditor_label"
             icon="icons/full/obj16/tcacomponentmodelModelFile.gif"
             extensions="tcacomponentmodel"
-            class="it.unibg.robotics.tcacomponentmodel.presentation.tcacomponentmodelEditor"
-            contributorClass="it.unibg.robotics.tcacomponentmodel.presentation.tcacomponentmodelActionBarContributor">
+            class="org.hyperflex.tcacomponentmodel.presentation.tcacomponentmodelEditor"
+            contributorClass="org.hyperflex.tcacomponentmodel.presentation.tcacomponentmodelActionBarContributor">
       </editor>
    </extension>
 

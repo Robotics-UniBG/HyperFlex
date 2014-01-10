@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="it.unibg.robotics.resolutionmodels.ros.feature"
+      id="org.hyperflex.resolutionmodels.ros.feature"
       label="Variability Resolution Plugin - ROS extension"
       version="1.0.0.qualifier"
       provider-name="Luca Gherardi">
@@ -14,8 +14,8 @@
 Copyright (c) 2011
 All rights reserved.
 Luca Gherardi
+Department of Engineering
 University of Bergamo
-Dept. of Information Technology and Mathematics
 _____________________________________________________________________________
 Author: &lt;A HREF=&quot;mailto:luca.gherardi@unibg.it&quot;&gt;Luca Gherardi&lt;/A&gt;
 Supervised by: &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;&gt;Davide Brugali&lt;/A&gt;
@@ -43,19 +43,19 @@ http://www.eclipse.org/legal/epl-v10.html
       <import plugin="org.eclipse.gmf.runtime.emf.core"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor"/>
-      <import plugin="it.unibg.robotics.featuremodels.constraints" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.featuremodels.model" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.featuremodels.model.diagram" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.resolutionmodels.model.editor" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.resolutionmodels.ui" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.resolutionmodels.ros.model" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.featuremodels.constraints" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.featuremodels.model" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.featuremodels.model.diagram" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.resolutionmodels.model.editor" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.resolutionmodels.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.resolutionmodels.ros.model" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.ros.model.ros" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.ros.model.ros.diagram" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="it.unibg.robotics.resolutionmodels.model" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.resolutionmodels.model" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit"/>
-      <import plugin="it.unibg.robotics.featuremodels.model.edit"/>
-      <import plugin="it.unibg.robotics.resolutionmodels.model.edit"/>
+      <import plugin="org.hyperflex.featuremodels.model.edit"/>
+      <import plugin="org.hyperflex.resolutionmodels.model.edit"/>
       <import plugin="org.ros.model.ros.edit"/>
       <import plugin="org.eclipse.core.resources"/>
       <import plugin="org.eclipse.emf.ecore.xmi"/>
@@ -63,28 +63,28 @@ http://www.eclipse.org/legal/epl-v10.html
    </requires>
 
    <plugin
-         id="it.unibg.robotics.resolutionmodels.ros.commands.resolution"
+         id="org.hyperflex.resolutionmodels.ros.commands.resolution"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.resolutionmodels.ros.model"
+         id="org.hyperflex.resolutionmodels.ros.model"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.resolutionmodels.ros.model.edit"
+         id="org.hyperflex.resolutionmodels.ros.model.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.resolutionmodels.ros.model.editor"
+         id="org.hyperflex.resolutionmodels.ros.model.editor"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Feature Model Plugin Selection
+Bundle-Name: HyperFlex Toolchain Selection
 Bundle-SymbolicName: org.hyperflex.featuremodels.commands.featureSelection;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.hyperflex.featuremodels.commands.featureselection.Activator

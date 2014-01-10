@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,9 +23,9 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rttresolutionmodels;
+package org.hyperflex.resolutionmodels.rttresolutionmodels;
 
-import it.unibg.robotics.resolutionmodels.RMTransfConnection;
+import org.hyperflex.resolutionmodels.RMTransfConnection;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -37,18 +37,18 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfConnection#getNewConnections <em>New Connections</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfConnection#getNewConnections <em>New Connections</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTTransfConnection()
+ * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTTransfConnection()
  * @model
  * @generated
  */
 public interface RTTTransfConnection extends RMTransfConnection {
 	/**
 	 * Returns the value of the '<em><b>New Connections</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection}.
+	 * The list contents are of type {@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>New Connections</em>' containment reference list isn't clear,
@@ -56,7 +56,7 @@ public interface RTTTransfConnection extends RMTransfConnection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>New Connections</em>' containment reference list.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTTransfConnection_NewConnections()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTTransfConnection_NewConnections()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

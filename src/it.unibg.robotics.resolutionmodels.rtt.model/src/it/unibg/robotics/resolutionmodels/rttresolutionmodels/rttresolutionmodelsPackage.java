@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,9 +23,9 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rttresolutionmodels;
+package org.hyperflex.resolutionmodels.rttresolutionmodels;
 
-import it.unibg.robotics.resolutionmodels.resolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.resolutionmodelsPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -43,7 +43,7 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsFactory
+ * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsFactory
  * @model kind="package"
  * @generated
  */
@@ -78,14 +78,14 @@ public interface rttresolutionmodelsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	rttresolutionmodelsPackage eINSTANCE = it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl.init();
+	rttresolutionmodelsPackage eINSTANCE = org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTTransfImplementationImpl <em>RTT Transf Implementation</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTTransfImplementationImpl <em>RTT Transf Implementation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTTransfImplementationImpl
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTTransfImplementation()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTTransfImplementationImpl
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTTransfImplementation()
 	 * @generated
 	 */
 	int RTT_TRANSF_IMPLEMENTATION = 0;
@@ -145,11 +145,11 @@ public interface rttresolutionmodelsPackage extends EPackage {
 	int RTT_TRANSF_IMPLEMENTATION_FEATURE_COUNT = resolutionmodelsPackage.RM_TRANSF_IMPLEMENTATION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTTransfPropertyImpl <em>RTT Transf Property</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTTransfPropertyImpl <em>RTT Transf Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTTransfPropertyImpl
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTTransfProperty()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTTransfPropertyImpl
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTTransfProperty()
 	 * @generated
 	 */
 	int RTT_TRANSF_PROPERTY = 1;
@@ -200,11 +200,11 @@ public interface rttresolutionmodelsPackage extends EPackage {
 	int RTT_TRANSF_PROPERTY_FEATURE_COUNT = resolutionmodelsPackage.RM_TRANSF_PROPERTY_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTTransfConnectionImpl <em>RTT Transf Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTTransfConnectionImpl <em>RTT Transf Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTTransfConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTTransfConnection()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTTransfConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTTransfConnection()
 	 * @generated
 	 */
 	int RTT_TRANSF_CONNECTION = 2;
@@ -246,11 +246,11 @@ public interface rttresolutionmodelsPackage extends EPackage {
 	int RTT_TRANSF_CONNECTION_FEATURE_COUNT = resolutionmodelsPackage.RM_TRANSF_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl <em>RTT Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl <em>RTT Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTConnection()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTConnection()
 	 * @generated
 	 */
 	int RTT_CONNECTION = 3;
@@ -319,11 +319,11 @@ public interface rttresolutionmodelsPackage extends EPackage {
 	int RTT_CONNECTION_FEATURE_COUNT = 6;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTRequiredComponentsImpl <em>RTT Required Components</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTRequiredComponentsImpl <em>RTT Required Components</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTRequiredComponentsImpl
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTRequiredComponents()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTRequiredComponentsImpl
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTRequiredComponents()
 	 * @generated
 	 */
 	int RTT_REQUIRED_COMPONENTS = 4;
@@ -347,11 +347,11 @@ public interface rttresolutionmodelsPackage extends EPackage {
 	int RTT_REQUIRED_COMPONENTS_FEATURE_COUNT = resolutionmodelsPackage.RM_REQUIRED_COMPONENTS_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTRequiredConnectionsImpl <em>RTT Required Connections</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTRequiredConnectionsImpl <em>RTT Required Connections</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTRequiredConnectionsImpl
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTRequiredConnections()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTRequiredConnectionsImpl
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTRequiredConnections()
 	 * @generated
 	 */
 	int RTT_REQUIRED_CONNECTIONS = 5;
@@ -376,181 +376,181 @@ public interface rttresolutionmodelsPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfImplementation <em>RTT Transf Implementation</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfImplementation <em>RTT Transf Implementation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>RTT Transf Implementation</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfImplementation
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfImplementation
 	 * @generated
 	 */
 	EClass getRTTTransfImplementation();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfImplementation#getTargetTaskContext <em>Target Task Context</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfImplementation#getTargetTaskContext <em>Target Task Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target Task Context</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfImplementation#getTargetTaskContext()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfImplementation#getTargetTaskContext()
 	 * @see #getRTTTransfImplementation()
 	 * @generated
 	 */
 	EReference getRTTTransfImplementation_TargetTaskContext();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfProperty <em>RTT Transf Property</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfProperty <em>RTT Transf Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>RTT Transf Property</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfProperty
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfProperty
 	 * @generated
 	 */
 	EClass getRTTTransfProperty();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfProperty#getTargetProperty <em>Target Property</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfProperty#getTargetProperty <em>Target Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target Property</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfProperty#getTargetProperty()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfProperty#getTargetProperty()
 	 * @see #getRTTTransfProperty()
 	 * @generated
 	 */
 	EReference getRTTTransfProperty_TargetProperty();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfConnection <em>RTT Transf Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfConnection <em>RTT Transf Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>RTT Transf Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfConnection
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfConnection
 	 * @generated
 	 */
 	EClass getRTTTransfConnection();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfConnection#getNewConnections <em>New Connections</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfConnection#getNewConnections <em>New Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>New Connections</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfConnection#getNewConnections()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfConnection#getNewConnections()
 	 * @see #getRTTTransfConnection()
 	 * @generated
 	 */
 	EReference getRTTTransfConnection_NewConnections();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection <em>RTT Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection <em>RTT Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>RTT Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection
 	 * @generated
 	 */
 	EClass getRTTConnection();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getName()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getName()
 	 * @see #getRTTConnection()
 	 * @generated
 	 */
 	EAttribute getRTTConnection_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getType()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getType()
 	 * @see #getRTTConnection()
 	 * @generated
 	 */
 	EAttribute getRTTConnection_Type();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getLockPolicy <em>Lock Policy</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getLockPolicy <em>Lock Policy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Lock Policy</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getLockPolicy()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getLockPolicy()
 	 * @see #getRTTConnection()
 	 * @generated
 	 */
 	EAttribute getRTTConnection_LockPolicy();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getBufferSize <em>Buffer Size</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getBufferSize <em>Buffer Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Buffer Size</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getBufferSize()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getBufferSize()
 	 * @see #getRTTConnection()
 	 * @generated
 	 */
 	EAttribute getRTTConnection_BufferSize();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getInputPort <em>Input Port</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getInputPort <em>Input Port</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Input Port</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getInputPort()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getInputPort()
 	 * @see #getRTTConnection()
 	 * @generated
 	 */
 	EReference getRTTConnection_InputPort();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getOutputPort <em>Output Port</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getOutputPort <em>Output Port</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Output Port</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getOutputPort()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getOutputPort()
 	 * @see #getRTTConnection()
 	 * @generated
 	 */
 	EReference getRTTConnection_OutputPort();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredComponents <em>RTT Required Components</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredComponents <em>RTT Required Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>RTT Required Components</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredComponents
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredComponents
 	 * @generated
 	 */
 	EClass getRTTRequiredComponents();
 
 	/**
-	 * Returns the meta object for the reference list '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredComponents#getRTTTaskContexts <em>RTT Task Contexts</em>}'.
+	 * Returns the meta object for the reference list '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredComponents#getRTTTaskContexts <em>RTT Task Contexts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>RTT Task Contexts</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredComponents#getRTTTaskContexts()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredComponents#getRTTTaskContexts()
 	 * @see #getRTTRequiredComponents()
 	 * @generated
 	 */
 	EReference getRTTRequiredComponents_RTTTaskContexts();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredConnections <em>RTT Required Connections</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredConnections <em>RTT Required Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>RTT Required Connections</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredConnections
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredConnections
 	 * @generated
 	 */
 	EClass getRTTRequiredConnections();
 
 	/**
-	 * Returns the meta object for the reference list '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredConnections#getRTTConnectionPolicies <em>RTT Connection Policies</em>}'.
+	 * Returns the meta object for the reference list '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredConnections#getRTTConnectionPolicies <em>RTT Connection Policies</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>RTT Connection Policies</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredConnections#getRTTConnectionPolicies()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredConnections#getRTTConnectionPolicies()
 	 * @see #getRTTRequiredConnections()
 	 * @generated
 	 */
@@ -579,11 +579,11 @@ public interface rttresolutionmodelsPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTTransfImplementationImpl <em>RTT Transf Implementation</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTTransfImplementationImpl <em>RTT Transf Implementation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTTransfImplementationImpl
-		 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTTransfImplementation()
+		 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTTransfImplementationImpl
+		 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTTransfImplementation()
 		 * @generated
 		 */
 		EClass RTT_TRANSF_IMPLEMENTATION = eINSTANCE.getRTTTransfImplementation();
@@ -597,11 +597,11 @@ public interface rttresolutionmodelsPackage extends EPackage {
 		EReference RTT_TRANSF_IMPLEMENTATION__TARGET_TASK_CONTEXT = eINSTANCE.getRTTTransfImplementation_TargetTaskContext();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTTransfPropertyImpl <em>RTT Transf Property</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTTransfPropertyImpl <em>RTT Transf Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTTransfPropertyImpl
-		 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTTransfProperty()
+		 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTTransfPropertyImpl
+		 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTTransfProperty()
 		 * @generated
 		 */
 		EClass RTT_TRANSF_PROPERTY = eINSTANCE.getRTTTransfProperty();
@@ -615,11 +615,11 @@ public interface rttresolutionmodelsPackage extends EPackage {
 		EReference RTT_TRANSF_PROPERTY__TARGET_PROPERTY = eINSTANCE.getRTTTransfProperty_TargetProperty();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTTransfConnectionImpl <em>RTT Transf Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTTransfConnectionImpl <em>RTT Transf Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTTransfConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTTransfConnection()
+		 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTTransfConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTTransfConnection()
 		 * @generated
 		 */
 		EClass RTT_TRANSF_CONNECTION = eINSTANCE.getRTTTransfConnection();
@@ -633,11 +633,11 @@ public interface rttresolutionmodelsPackage extends EPackage {
 		EReference RTT_TRANSF_CONNECTION__NEW_CONNECTIONS = eINSTANCE.getRTTTransfConnection_NewConnections();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl <em>RTT Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl <em>RTT Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTConnection()
+		 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTConnection()
 		 * @generated
 		 */
 		EClass RTT_CONNECTION = eINSTANCE.getRTTConnection();
@@ -691,11 +691,11 @@ public interface rttresolutionmodelsPackage extends EPackage {
 		EReference RTT_CONNECTION__OUTPUT_PORT = eINSTANCE.getRTTConnection_OutputPort();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTRequiredComponentsImpl <em>RTT Required Components</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTRequiredComponentsImpl <em>RTT Required Components</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTRequiredComponentsImpl
-		 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTRequiredComponents()
+		 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTRequiredComponentsImpl
+		 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTRequiredComponents()
 		 * @generated
 		 */
 		EClass RTT_REQUIRED_COMPONENTS = eINSTANCE.getRTTRequiredComponents();
@@ -709,11 +709,11 @@ public interface rttresolutionmodelsPackage extends EPackage {
 		EReference RTT_REQUIRED_COMPONENTS__RTT_TASK_CONTEXTS = eINSTANCE.getRTTRequiredComponents_RTTTaskContexts();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTRequiredConnectionsImpl <em>RTT Required Connections</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTRequiredConnectionsImpl <em>RTT Required Connections</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTRequiredConnectionsImpl
-		 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTRequiredConnections()
+		 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTRequiredConnectionsImpl
+		 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsPackageImpl#getRTTRequiredConnections()
 		 * @generated
 		 */
 		EClass RTT_REQUIRED_CONNECTIONS = eINSTANCE.getRTTRequiredConnections();

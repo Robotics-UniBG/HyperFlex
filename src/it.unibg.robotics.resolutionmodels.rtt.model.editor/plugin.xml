@@ -2,20 +2,20 @@
 <?eclipse version="3.0"?>
 
 <!--
- Feature Model Plugin
+ HyperFlex Toolchain
  
  Copyright (c) 2011
  All rights reserved.
  
  Luca Gherardi
+ Department of Engineering
  University of Bergamo
- Dept. of Information Technology and Mathematics
  
  ***********************************************************************************************
  
- Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  
- Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  
  ***********************************************************************************************
  
@@ -31,10 +31,10 @@
 
    <extension point="org.eclipse.ui.newWizards">
       <wizard
-            id="it.unibg.robotics.resolutionmodels.rtt.presentation.rttModelWizardID"
+            id="org.hyperflex.resolutionmodels.rtt.presentation.rttModelWizardID"
             name="%_UI_rttModelWizard_label"
-            class="it.unibg.robotics.resolutionmodels.rttresolutionmodels.presentation.rttresolutionmodelsModelWizard"
-            category="it.robotics.unibg.varp.wizard.category"
+            class="org.hyperflex.resolutionmodels.rttresolutionmodels.presentation.rttresolutionmodelsModelWizard"
+            category="org.hyperflex.varp.wizard.category"
             icon="icons/full/obj16/rttModelFile.gif">
          <description>%_UI_rttModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
@@ -43,12 +43,12 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="it.unibg.robotics.resolutionmodels.rtt.presentation.rttEditorID"
+            id="org.hyperflex.resolutionmodels.rtt.presentation.rttEditorID"
             name="%_UI_rttEditor_label"
             icon="icons/full/obj16/rttModelFile.gif"
             extensions="rttresolutionmodel"
-            class="it.unibg.robotics.resolutionmodels.rttresolutionmodels.presentation.rttresolutionmodelsEditor"
-            contributorClass="it.unibg.robotics.resolutionmodels.rttresolutionmodels.presentation.rttresolutionmodelsActionBarContributor">
+            class="org.hyperflex.resolutionmodels.rttresolutionmodels.presentation.rttresolutionmodelsEditor"
+            contributorClass="org.hyperflex.resolutionmodels.rttresolutionmodels.presentation.rttresolutionmodelsActionBarContributor">
       </editor>
    </extension>
 

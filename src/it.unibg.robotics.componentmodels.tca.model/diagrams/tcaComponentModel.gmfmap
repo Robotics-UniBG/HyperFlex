@@ -5,7 +5,7 @@
     xmlns:gmfmap="http://www.eclipse.org/gmf/2008/mappings">
   <diagram>
     <diagramCanvas
-        href="../../it.unibg.robotics.componentmodels.shared/diagrams/componentModels.gmfgraph#componentDiagram"/>
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#componentDiagram"/>
     <domainModel
         href="../models/tcaComponentModel.ecore#/"/>
     <domainMetaElement

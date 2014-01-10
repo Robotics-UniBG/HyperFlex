@@ -2,18 +2,18 @@
 <?eclipse version="3.0"?>
 
 <!--
- HyperFlex toolchain
+ HyperFlex Toolchain
  
  Copyright (c) 2013
  All rights reserved.
  
  Luca Gherardi
+ Department of Engineering
  University of Bergamo
- Dept. of Information Technology and Mathematics
  
  ***********************************************************************************************
  
- Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  
  In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  
@@ -33,7 +33,7 @@
       <!-- @generated tcaComponentModel -->
       <factory
             uri="http://robotics.unibg.it/componentmodels.tca"
-            class="it.unibg.robotics.tcacomponentmodel.provider.tcacomponentmodelItemProviderAdapterFactory"
+            class="org.hyperflex.tcacomponentmodel.provider.tcacomponentmodelItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

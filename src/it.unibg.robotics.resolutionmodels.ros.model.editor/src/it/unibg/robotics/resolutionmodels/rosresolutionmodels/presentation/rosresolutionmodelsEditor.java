@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,12 +23,12 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels.presentation;
+package org.hyperflex.resolutionmodels.rosresolutionmodels.presentation;
 
 
-import it.unibg.robotics.featuremodels.provider.featuremodelsItemProviderAdapterFactory;
-import it.unibg.robotics.resolutionmodels.provider.resolutionmodelsItemProviderAdapterFactory;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.provider.rosresolutionmodelsItemProviderAdapterFactory;
+import org.hyperflex.featuremodels.provider.featuremodelsItemProviderAdapterFactory;
+import org.hyperflex.resolutionmodels.provider.resolutionmodelsItemProviderAdapterFactory;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.provider.rosresolutionmodelsItemProviderAdapterFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -595,7 +595,7 @@ public class rosresolutionmodelsEditor
 			BasicDiagnostic diagnostic =
 				new BasicDiagnostic
 					(Diagnostic.OK,
-					 "it.unibg.robotics.resolutionmodels.ros.model.editor",
+					 "org.hyperflex.resolutionmodels.ros.model.editor",
 					 0,
 					 null,
 					 new Object [] { editingDomain.getResourceSet() });
@@ -956,7 +956,7 @@ public class rosresolutionmodelsEditor
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "it.unibg.robotics.resolutionmodels.ros.model.editor",
+					 "org.hyperflex.resolutionmodels.ros.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object [] { exception == null ? (Object)resource : exception });
@@ -967,7 +967,7 @@ public class rosresolutionmodelsEditor
 			return
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "it.unibg.robotics.resolutionmodels.ros.model.editor",
+					 "org.hyperflex.resolutionmodels.ros.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object[] { exception });

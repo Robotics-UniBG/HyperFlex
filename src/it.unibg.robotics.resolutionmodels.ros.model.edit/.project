@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>it.unibg.robotics.resolutionmodels.ros.model.edit</name>
+	<name>org.hyperflex.resolutionmodels.ros.model.edit</name>
 	<comment></comment>
 	<projects>
 	</projects>

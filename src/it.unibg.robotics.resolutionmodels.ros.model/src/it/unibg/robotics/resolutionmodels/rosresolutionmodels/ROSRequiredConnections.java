@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,9 +23,9 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
+package org.hyperflex.resolutionmodels.rosresolutionmodels;
 
-import it.unibg.robotics.resolutionmodels.RMRequiredConnections;
+import org.hyperflex.resolutionmodels.RMRequiredConnections;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -37,20 +37,20 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingTopicConnections <em>Required Existing Topic Connections</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingServiceConnections <em>Required Existing Service Connections</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingActionConnections <em>Required Existing Action Connections</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingTopicConnections <em>Required Existing Topic Connections</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingServiceConnections <em>Required Existing Service Connections</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingActionConnections <em>Required Existing Action Connections</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections()
+ * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections()
  * @model
  * @generated
  */
 public interface ROSRequiredConnections extends RMRequiredConnections {
 	/**
 	 * Returns the value of the '<em><b>Required Existing Topic Connections</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection}.
+	 * The list contents are of type {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Required Existing Topic Connections</em>' containment reference list isn't clear,
@@ -58,7 +58,7 @@ public interface ROSRequiredConnections extends RMRequiredConnections {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Required Existing Topic Connections</em>' containment reference list.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections_RequiredExistingTopicConnections()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections_RequiredExistingTopicConnections()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface ROSRequiredConnections extends RMRequiredConnections {
 
 	/**
 	 * Returns the value of the '<em><b>Required Existing Service Connections</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection}.
+	 * The list contents are of type {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Required Existing Service Connections</em>' containment reference list isn't clear,
@@ -74,7 +74,7 @@ public interface ROSRequiredConnections extends RMRequiredConnections {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Required Existing Service Connections</em>' containment reference list.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections_RequiredExistingServiceConnections()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections_RequiredExistingServiceConnections()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -82,7 +82,7 @@ public interface ROSRequiredConnections extends RMRequiredConnections {
 
 	/**
 	 * Returns the value of the '<em><b>Required Existing Action Connections</b></em>' containment reference list.
-	 * The list contents are of type {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection}.
+	 * The list contents are of type {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Required Existing Action Connections</em>' containment reference list isn't clear,
@@ -90,7 +90,7 @@ public interface ROSRequiredConnections extends RMRequiredConnections {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Required Existing Action Connections</em>' containment reference list.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections_RequiredExistingActionConnections()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSRequiredConnections_RequiredExistingActionConnections()
 	 * @model containment="true"
 	 * @generated
 	 */

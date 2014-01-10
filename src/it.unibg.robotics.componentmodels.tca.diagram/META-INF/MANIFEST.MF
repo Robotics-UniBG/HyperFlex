@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: it.unibg.robotics.componentmodels.tca.diagram; singleton:=true
+Bundle-SymbolicName: org.hyperflex.componentmodels.tca.diagram; singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: it.unibg.robotics.tcacomponentmodel.diagram.part.TCAComponentModelDiagramEditorPlugin
+Bundle-Activator: org.hyperflex.tcacomponentmodel.diagram.part.TCAComponentModelDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: it.unibg.robotics.tcacomponentmodel.diagram.edit.parts, 
- it.unibg.robotics.tcacomponentmodel.diagram.part,
- it.unibg.robotics.tcacomponentmodel.diagram.providers
+Export-Package: org.hyperflex.tcacomponentmodel.diagram.edit.parts, 
+ org.hyperflex.tcacomponentmodel.diagram.part,
+ org.hyperflex.tcacomponentmodel.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.core.expressions,
@@ -33,8 +33,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide,
  org.eclipse.gmf.tooling.runtime;visibility:=reexport,
  org.eclipse.draw2d;visibility:=reexport,
- it.unibg.robotics.componentmodels.tca.model;visibility:=reexport,
- it.unibg.robotics.componentmodels.tca.model.edit;visibility:=reexport,
+ org.hyperflex.componentmodels.tca.model;visibility:=reexport,
+ org.hyperflex.componentmodels.tca.model.edit;visibility:=reexport,
  org.eclipse.gef;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

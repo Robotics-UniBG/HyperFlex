@@ -1,16 +1,16 @@
 /**
- * HyperFlex toolchain
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.tcacomponentmodel.presentation;
+package org.hyperflex.tcacomponentmodel.presentation;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -201,7 +201,7 @@ public class tcacomponentmodelActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(TCAComponentModelEditorPlugin.INSTANCE.getString("_UI_tcacomponentmodelEditor_menu"), "it.unibg.robotics.tcacomponentmodelMenuID");
+		IMenuManager submenuManager = new MenuManager(TCAComponentModelEditorPlugin.INSTANCE.getString("_UI_tcacomponentmodelEditor_menu"), "org.hyperflex.tcacomponentmodelMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));

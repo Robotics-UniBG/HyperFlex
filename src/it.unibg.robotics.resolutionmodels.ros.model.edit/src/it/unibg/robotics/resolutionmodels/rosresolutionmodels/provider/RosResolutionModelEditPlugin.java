@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,10 +23,10 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels.provider;
+package org.hyperflex.resolutionmodels.rosresolutionmodels.provider;
 
-import it.unibg.robotics.featuremodels.provider.FeatureModelEditPlugin;
-import it.unibg.robotics.resolutionmodels.provider.ResolutionModelEditPlugin;
+import org.hyperflex.featuremodels.provider.FeatureModelEditPlugin;
+import org.hyperflex.resolutionmodels.provider.ResolutionModelEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;

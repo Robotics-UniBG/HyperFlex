@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -25,8 +25,8 @@
  */
 package org.hyperflex.resolutionmodels.provider;
 
-import it.unibg.robotics.resolutionmodels.resolutionmodelsPackage;
-import it.unibg.robotics.resolutionmodels.util.resolutionmodelsAdapterFactory;
+import org.hyperflex.resolutionmodels.resolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.util.resolutionmodelsAdapterFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -108,7 +108,7 @@ public class resolutionmodelsItemProviderAdapterFactory extends resolutionmodels
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.ResolutionModel} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.ResolutionModel} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,7 +116,7 @@ public class resolutionmodelsItemProviderAdapterFactory extends resolutionmodels
 	protected ResolutionModelItemProvider resolutionModelItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.ResolutionModel}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.ResolutionModel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -131,7 +131,7 @@ public class resolutionmodelsItemProviderAdapterFactory extends resolutionmodels
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.RMResolutionElement} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.RMResolutionElement} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -139,7 +139,7 @@ public class resolutionmodelsItemProviderAdapterFactory extends resolutionmodels
 	protected RMResolutionElementItemProvider rmResolutionElementItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.RMResolutionElement}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.RMResolutionElement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

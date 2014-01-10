@@ -1,16 +1,16 @@
 /**
- * HyperFlex toolchain
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.tcacomponentmodel.presentation;
+package org.hyperflex.tcacomponentmodel.presentation;
 
 
 import java.io.IOException;
@@ -177,7 +177,7 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import it.unibg.robotics.tcacomponentmodel.provider.tcacomponentmodelItemProviderAdapterFactory;
+import org.hyperflex.tcacomponentmodel.provider.tcacomponentmodelItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
@@ -641,7 +641,7 @@ public class tcacomponentmodelEditor
 			BasicDiagnostic diagnostic =
 				new BasicDiagnostic
 					(Diagnostic.OK,
-					 "it.unibg.robotics.componentmodels.tca.model.editor",
+					 "org.hyperflex.componentmodels.tca.model.editor",
 					 0,
 					 null,
 					 new Object [] { editingDomain.getResourceSet() });
@@ -1004,7 +1004,7 @@ public class tcacomponentmodelEditor
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "it.unibg.robotics.componentmodels.tca.model.editor",
+					 "org.hyperflex.componentmodels.tca.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object [] { exception == null ? (Object)resource : exception });
@@ -1015,7 +1015,7 @@ public class tcacomponentmodelEditor
 			return
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "it.unibg.robotics.componentmodels.tca.model.editor",
+					 "org.hyperflex.componentmodels.tca.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object[] { exception });

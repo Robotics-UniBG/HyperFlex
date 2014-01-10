@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: it.unibg.robotics.componentmodels.tca.m2t;singleton:=true
+Bundle-SymbolicName: org.hyperflex.componentmodels.tca.m2t;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: it.unibg.robotics.componentmodels.tca.m2t.Activator
+Bundle-Activator: org.hyperflex.componentmodels.tca.m2t.Activator
 Bundle-Vendor: Luca Gherardi
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -18,9 +18,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.epsilon.common.dt;bundle-version="0.9.1",
  org.eclipse.epsilon.eol.dt;bundle-version="0.9.1",
  org.best_of_robotics.transform.service;bundle-version="1.0.0",
- it.unibg.robotics.componentmodels.ui;bundle-version="1.0.0",
- it.unibg.robotics.componentmodels.m2t;bundle-version="1.0.0",
- it.unibg.robotics.componentmodels.orocos.diagram;bundle-version="1.0.0",
- it.unibg.robotics.componentmodels.orocos.model;bundle-version="1.0.0"
+ org.hyperflex.componentmodels.ui;bundle-version="1.0.0",
+ org.hyperflex.componentmodels.m2t;bundle-version="1.0.0",
+ org.hyperflex.componentmodels.orocos.diagram;bundle-version="1.0.0",
+ org.hyperflex.componentmodels.orocos.model;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy

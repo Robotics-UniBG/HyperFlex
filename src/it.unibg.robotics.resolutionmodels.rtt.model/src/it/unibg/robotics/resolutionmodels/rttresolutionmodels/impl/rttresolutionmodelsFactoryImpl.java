@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,16 +23,16 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl;
+package org.hyperflex.resolutionmodels.rttresolutionmodels.impl;
 
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredComponents;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredConnections;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfConnection;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfImplementation;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfProperty;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsFactory;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredComponents;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredConnections;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfConnection;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfImplementation;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfProperty;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsFactory;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;

@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,10 +23,10 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl;
+package org.hyperflex.resolutionmodels.rttresolutionmodels.impl;
 
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -41,12 +41,12 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl#getName <em>Name</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl#getType <em>Type</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl#getLockPolicy <em>Lock Policy</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl#getBufferSize <em>Buffer Size</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl#getInputPort <em>Input Port</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl#getOutputPort <em>Output Port</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl#getLockPolicy <em>Lock Policy</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl#getBufferSize <em>Buffer Size</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl#getInputPort <em>Input Port</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.impl.RTTConnectionImpl#getOutputPort <em>Output Port</em>}</li>
  * </ul>
  * </p>
  *

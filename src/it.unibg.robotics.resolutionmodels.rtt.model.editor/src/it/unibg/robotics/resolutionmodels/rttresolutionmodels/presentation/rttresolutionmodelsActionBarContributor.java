@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rttresolutionmodels.presentation;
+package org.hyperflex.resolutionmodels.rttresolutionmodels.presentation;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -196,7 +196,7 @@ public class rttresolutionmodelsActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(RttResolutionModelEditorPlugin.INSTANCE.getString("_UI_rttresolutionmodelsEditor_menu"), "it.unibg.robotics.resolutionmodels.rttresolutionmodelsMenuID");
+		IMenuManager submenuManager = new MenuManager(RttResolutionModelEditorPlugin.INSTANCE.getString("_UI_rttresolutionmodelsEditor_menu"), "org.hyperflex.resolutionmodels.rttresolutionmodelsMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));

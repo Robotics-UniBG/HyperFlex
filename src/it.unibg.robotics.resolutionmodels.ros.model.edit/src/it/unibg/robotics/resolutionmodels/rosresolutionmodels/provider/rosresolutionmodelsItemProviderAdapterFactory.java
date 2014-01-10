@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,13 +23,13 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels.provider;
+package org.hyperflex.resolutionmodels.rosresolutionmodels.provider;
 
-import it.unibg.robotics.resolutionmodels.RMResolutionElement;
-import it.unibg.robotics.resolutionmodels.resolutionmodelsPackage;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsFactory;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.util.rosresolutionmodelsAdapterFactory;
-import it.unibg.robotics.resolutionmodels.util.resolutionmodelsSwitch;
+import org.hyperflex.resolutionmodels.RMResolutionElement;
+import org.hyperflex.resolutionmodels.resolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsFactory;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.util.rosresolutionmodelsAdapterFactory;
+import org.hyperflex.resolutionmodels.util.resolutionmodelsSwitch;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -104,7 +104,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -112,7 +112,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	protected ROSTransfImplementationItemProvider rosTransfImplementationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -127,7 +127,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -135,7 +135,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	protected ROSTransfPropertyItemProvider rosTransfPropertyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -150,7 +150,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -158,7 +158,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	protected ROSTransfConnectionItemProvider rosTransfConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -173,7 +173,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -181,7 +181,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	protected ROSNewTopicConnectionItemProvider rosNewTopicConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -196,7 +196,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -204,7 +204,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	protected ROSExistingTopicConnectionItemProvider rosExistingTopicConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -219,7 +219,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -227,7 +227,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	protected ROSNewServiceConnectionItemProvider rosNewServiceConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -242,7 +242,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -250,7 +250,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	protected ROSExistingServiceConnectionItemProvider rosExistingServiceConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -265,7 +265,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -273,7 +273,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	protected ROSNewActionConnectionItemProvider rosNewActionConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -288,7 +288,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -296,7 +296,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	protected ROSExistingActionConnectionItemProvider rosExistingActionConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -311,7 +311,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -319,7 +319,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	protected ROSRequiredComponentsItemProvider rosRequiredComponentsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -334,7 +334,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -342,7 +342,7 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	protected ROSRequiredConnectionsItemProvider rosRequiredConnectionsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

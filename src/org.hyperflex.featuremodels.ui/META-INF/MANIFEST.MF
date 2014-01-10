@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Feature Model Plugin Ui
+Bundle-Name: HyperFlex Toolchain Ui
 Bundle-SymbolicName: org.hyperflex.featuremodels.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .

@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,9 +23,9 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rttresolutionmodels;
+package org.hyperflex.resolutionmodels.rttresolutionmodels;
 
-import it.unibg.robotics.resolutionmodels.RMRequiredConnections;
+import org.hyperflex.resolutionmodels.RMRequiredConnections;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -37,11 +37,11 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredConnections#getRTTConnectionPolicies <em>RTT Connection Policies</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredConnections#getRTTConnectionPolicies <em>RTT Connection Policies</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTRequiredConnections()
+ * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTRequiredConnections()
  * @model
  * @generated
  */
@@ -56,7 +56,7 @@ public interface RTTRequiredConnections extends RMRequiredConnections {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>RTT Connection Policies</em>' reference list.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTRequiredConnections_RTTConnectionPolicies()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTRequiredConnections_RTTConnectionPolicies()
 	 * @model required="true"
 	 * @generated
 	 */

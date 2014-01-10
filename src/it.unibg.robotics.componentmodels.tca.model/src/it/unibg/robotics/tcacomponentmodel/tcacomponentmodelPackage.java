@@ -1,16 +1,16 @@
 /**
- * HyperFlex toolchain
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.tcacomponentmodel;
+package org.hyperflex.tcacomponentmodel;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.tcacomponentmodel.tcacomponentmodelFactory
+ * @see org.hyperflex.tcacomponentmodel.tcacomponentmodelFactory
  * @model kind="package"
  * @generated
  */
@@ -74,14 +74,14 @@ public interface tcacomponentmodelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	tcacomponentmodelPackage eINSTANCE = it.unibg.robotics.tcacomponentmodel.impl.tcacomponentmodelPackageImpl.init();
+	tcacomponentmodelPackage eINSTANCE = org.hyperflex.tcacomponentmodel.impl.tcacomponentmodelPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.tcacomponentmodel.impl.SystemImpl <em>System</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.tcacomponentmodel.impl.SystemImpl <em>System</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.tcacomponentmodel.impl.SystemImpl
-	 * @see it.unibg.robotics.tcacomponentmodel.impl.tcacomponentmodelPackageImpl#getSystem()
+	 * @see org.hyperflex.tcacomponentmodel.impl.SystemImpl
+	 * @see org.hyperflex.tcacomponentmodel.impl.tcacomponentmodelPackageImpl#getSystem()
 	 * @generated
 	 */
 	int SYSTEM = 0;
@@ -97,11 +97,11 @@ public interface tcacomponentmodelPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.tcacomponentmodel.System <em>System</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.tcacomponentmodel.System <em>System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>System</em>'.
-	 * @see it.unibg.robotics.tcacomponentmodel.System
+	 * @see org.hyperflex.tcacomponentmodel.System
 	 * @generated
 	 */
 	EClass getSystem();
@@ -129,11 +129,11 @@ public interface tcacomponentmodelPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.tcacomponentmodel.impl.SystemImpl <em>System</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.tcacomponentmodel.impl.SystemImpl <em>System</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.tcacomponentmodel.impl.SystemImpl
-		 * @see it.unibg.robotics.tcacomponentmodel.impl.tcacomponentmodelPackageImpl#getSystem()
+		 * @see org.hyperflex.tcacomponentmodel.impl.SystemImpl
+		 * @see org.hyperflex.tcacomponentmodel.impl.tcacomponentmodelPackageImpl#getSystem()
 		 * @generated
 		 */
 		EClass SYSTEM = eINSTANCE.getSystem();

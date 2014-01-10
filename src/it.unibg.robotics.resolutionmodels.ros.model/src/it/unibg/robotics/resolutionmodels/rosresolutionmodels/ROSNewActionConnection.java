@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
+package org.hyperflex.resolutionmodels.rosresolutionmodels;
 
 
 /**
@@ -34,11 +34,11 @@ package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionName <em>Action Name</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionName <em>Action Name</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSNewActionConnection()
+ * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSNewActionConnection()
  * @model
  * @generated
  */
@@ -53,14 +53,14 @@ public interface ROSNewActionConnection extends ROSActionConnection {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Action Name</em>' attribute.
 	 * @see #setActionName(String)
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSNewActionConnection_ActionName()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSNewActionConnection_ActionName()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getActionName();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionName <em>Action Name</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionName <em>Action Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Action Name</em>' attribute.

@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
+package org.hyperflex.resolutionmodels.rosresolutionmodels;
 
 
 /**
@@ -34,11 +34,11 @@ package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection#getAction <em>Action</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection#getAction <em>Action</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSExistingActionConnection()
+ * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSExistingActionConnection()
  * @model
  * @generated
  */
@@ -53,14 +53,14 @@ public interface ROSExistingActionConnection extends ROSActionConnection {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Action</em>' reference.
 	 * @see #setAction(Action)
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSExistingActionConnection_Action()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSExistingActionConnection_Action()
 	 * @model required="true"
 	 * @generated
 	 */
 	Action getAction();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection#getAction <em>Action</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection#getAction <em>Action</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Action</em>' reference.

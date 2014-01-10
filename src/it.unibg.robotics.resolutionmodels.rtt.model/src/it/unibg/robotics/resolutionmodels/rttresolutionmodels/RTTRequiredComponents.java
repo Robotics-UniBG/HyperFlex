@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,9 +23,9 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rttresolutionmodels;
+package org.hyperflex.resolutionmodels.rttresolutionmodels;
 
-import it.unibg.robotics.resolutionmodels.RMRequiredComponents;
+import org.hyperflex.resolutionmodels.RMRequiredComponents;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -37,11 +37,11 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredComponents#getRTTTaskContexts <em>RTT Task Contexts</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredComponents#getRTTTaskContexts <em>RTT Task Contexts</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTRequiredComponents()
+ * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTRequiredComponents()
  * @model
  * @generated
  */
@@ -56,7 +56,7 @@ public interface RTTRequiredComponents extends RMRequiredComponents {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>RTT Task Contexts</em>' reference list.
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTRequiredComponents_RTTTaskContexts()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTRequiredComponents_RTTTaskContexts()
 	 * @model required="true"
 	 * @generated
 	 */

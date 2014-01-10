@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,9 +23,9 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
+package org.hyperflex.resolutionmodels.rosresolutionmodels;
 
-import it.unibg.robotics.resolutionmodels.resolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.resolutionmodelsPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -43,7 +43,7 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsFactory
+ * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsFactory
  * @model kind="package"
  * @generated
  */
@@ -78,14 +78,14 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	rosresolutionmodelsPackage eINSTANCE = it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl.init();
+	rosresolutionmodelsPackage eINSTANCE = org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfImplementationImpl <em>ROS Transf Implementation</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfImplementationImpl <em>ROS Transf Implementation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfImplementationImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTransfImplementation()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfImplementationImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTransfImplementation()
 	 * @generated
 	 */
 	int ROS_TRANSF_IMPLEMENTATION = 0;
@@ -145,11 +145,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_TRANSF_IMPLEMENTATION_FEATURE_COUNT = resolutionmodelsPackage.RM_TRANSF_IMPLEMENTATION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfPropertyImpl <em>ROS Transf Property</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfPropertyImpl <em>ROS Transf Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfPropertyImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTransfProperty()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfPropertyImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTransfProperty()
 	 * @generated
 	 */
 	int ROS_TRANSF_PROPERTY = 1;
@@ -200,11 +200,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_TRANSF_PROPERTY_FEATURE_COUNT = resolutionmodelsPackage.RM_TRANSF_PROPERTY_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfConnectionImpl <em>ROS Transf Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfConnectionImpl <em>ROS Transf Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTransfConnection()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTransfConnection()
 	 * @generated
 	 */
 	int ROS_TRANSF_CONNECTION = 2;
@@ -246,11 +246,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_TRANSF_CONNECTION_FEATURE_COUNT = resolutionmodelsPackage.RM_TRANSF_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSAbstractConnectionImpl <em>ROS Abstract Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSAbstractConnectionImpl <em>ROS Abstract Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSAbstractConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSAbstractConnection()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSAbstractConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSAbstractConnection()
 	 * @generated
 	 */
 	int ROS_ABSTRACT_CONNECTION = 3;
@@ -274,11 +274,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_ABSTRACT_CONNECTION_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl <em>ROS Topic Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl <em>ROS Topic Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTopicConnection()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTopicConnection()
 	 * @generated
 	 */
 	int ROS_TOPIC_CONNECTION = 4;
@@ -320,11 +320,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_TOPIC_CONNECTION_FEATURE_COUNT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl <em>ROS New Topic Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl <em>ROS New Topic Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewTopicConnection()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewTopicConnection()
 	 * @generated
 	 */
 	int ROS_NEW_TOPIC_CONNECTION = 5;
@@ -375,11 +375,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_NEW_TOPIC_CONNECTION_FEATURE_COUNT = ROS_TOPIC_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl <em>ROS Existing Topic Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl <em>ROS Existing Topic Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingTopicConnection()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingTopicConnection()
 	 * @generated
 	 */
 	int ROS_EXISTING_TOPIC_CONNECTION = 6;
@@ -430,11 +430,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_EXISTING_TOPIC_CONNECTION_FEATURE_COUNT = ROS_TOPIC_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSServiceConnectionImpl <em>ROS Service Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSServiceConnectionImpl <em>ROS Service Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSServiceConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSServiceConnection()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSServiceConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSServiceConnection()
 	 * @generated
 	 */
 	int ROS_SERVICE_CONNECTION = 7;
@@ -476,11 +476,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_SERVICE_CONNECTION_FEATURE_COUNT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl <em>ROS New Service Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl <em>ROS New Service Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewServiceConnection()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewServiceConnection()
 	 * @generated
 	 */
 	int ROS_NEW_SERVICE_CONNECTION = 8;
@@ -531,11 +531,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_NEW_SERVICE_CONNECTION_FEATURE_COUNT = ROS_SERVICE_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingServiceConnectionImpl <em>ROS Existing Service Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingServiceConnectionImpl <em>ROS Existing Service Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingServiceConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingServiceConnection()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingServiceConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingServiceConnection()
 	 * @generated
 	 */
 	int ROS_EXISTING_SERVICE_CONNECTION = 9;
@@ -586,11 +586,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_EXISTING_SERVICE_CONNECTION_FEATURE_COUNT = ROS_SERVICE_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl <em>ROS Action Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl <em>ROS Action Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSActionConnection()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSActionConnection()
 	 * @generated
 	 */
 	int ROS_ACTION_CONNECTION = 10;
@@ -632,11 +632,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_ACTION_CONNECTION_FEATURE_COUNT = ROS_ABSTRACT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewActionConnectionImpl <em>ROS New Action Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewActionConnectionImpl <em>ROS New Action Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewActionConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewActionConnection()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewActionConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewActionConnection()
 	 * @generated
 	 */
 	int ROS_NEW_ACTION_CONNECTION = 11;
@@ -687,11 +687,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_NEW_ACTION_CONNECTION_FEATURE_COUNT = ROS_ACTION_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl <em>ROS Existing Action Connection</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl <em>ROS Existing Action Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingActionConnection()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingActionConnection()
 	 * @generated
 	 */
 	int ROS_EXISTING_ACTION_CONNECTION = 12;
@@ -742,11 +742,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_EXISTING_ACTION_CONNECTION_FEATURE_COUNT = ROS_ACTION_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredComponentsImpl <em>ROS Required Components</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSRequiredComponentsImpl <em>ROS Required Components</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredComponentsImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSRequiredComponents()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSRequiredComponentsImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSRequiredComponents()
 	 * @generated
 	 */
 	int ROS_REQUIRED_COMPONENTS = 13;
@@ -770,11 +770,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_REQUIRED_COMPONENTS_FEATURE_COUNT = resolutionmodelsPackage.RM_REQUIRED_COMPONENTS_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl <em>ROS Required Connections</em>}' class.
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl <em>ROS Required Connections</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSRequiredConnections()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSRequiredConnections()
 	 * @generated
 	 */
 	int ROS_REQUIRED_CONNECTIONS = 14;
@@ -817,370 +817,370 @@ public interface rosresolutionmodelsPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation <em>ROS Transf Implementation</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation <em>ROS Transf Implementation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Transf Implementation</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation
 	 * @generated
 	 */
 	EClass getROSTransfImplementation();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation#getTargetNode <em>Target Node</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation#getTargetNode <em>Target Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target Node</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation#getTargetNode()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation#getTargetNode()
 	 * @see #getROSTransfImplementation()
 	 * @generated
 	 */
 	EReference getROSTransfImplementation_TargetNode();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty <em>ROS Transf Property</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty <em>ROS Transf Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Transf Property</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty
 	 * @generated
 	 */
 	EClass getROSTransfProperty();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty#getTargetProperty <em>Target Property</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty#getTargetProperty <em>Target Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target Property</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty#getTargetProperty()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty#getTargetProperty()
 	 * @see #getROSTransfProperty()
 	 * @generated
 	 */
 	EReference getROSTransfProperty_TargetProperty();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection <em>ROS Transf Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection <em>ROS Transf Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Transf Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection
 	 * @generated
 	 */
 	EClass getROSTransfConnection();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection#getNewConnections <em>New Connections</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection#getNewConnections <em>New Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>New Connections</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection#getNewConnections()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection#getNewConnections()
 	 * @see #getROSTransfConnection()
 	 * @generated
 	 */
 	EReference getROSTransfConnection_NewConnections();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection <em>ROS Abstract Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSAbstractConnection <em>ROS Abstract Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Abstract Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSAbstractConnection
 	 * @generated
 	 */
 	EClass getROSAbstractConnection();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSAbstractConnection#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection#getName()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSAbstractConnection#getName()
 	 * @see #getROSAbstractConnection()
 	 * @generated
 	 */
 	EAttribute getROSAbstractConnection_Name();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection <em>ROS Topic Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection <em>ROS Topic Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Topic Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection
 	 * @generated
 	 */
 	EClass getROSTopicConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getPublisher <em>Publisher</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getPublisher <em>Publisher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Publisher</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getPublisher()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getPublisher()
 	 * @see #getROSTopicConnection()
 	 * @generated
 	 */
 	EReference getROSTopicConnection_Publisher();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getSubscriber <em>Subscriber</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getSubscriber <em>Subscriber</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Subscriber</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getSubscriber()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getSubscriber()
 	 * @see #getROSTopicConnection()
 	 * @generated
 	 */
 	EReference getROSTopicConnection_Subscriber();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection <em>ROS New Topic Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection <em>ROS New Topic Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS New Topic Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection
 	 * @generated
 	 */
 	EClass getROSNewTopicConnection();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getTopicName <em>Topic Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getTopicName <em>Topic Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Topic Name</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getTopicName()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getTopicName()
 	 * @see #getROSNewTopicConnection()
 	 * @generated
 	 */
 	EAttribute getROSNewTopicConnection_TopicName();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection <em>ROS Existing Topic Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection <em>ROS Existing Topic Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Existing Topic Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection
 	 * @generated
 	 */
 	EClass getROSExistingTopicConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection#getTopic <em>Topic</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection#getTopic <em>Topic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Topic</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection#getTopic()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection#getTopic()
 	 * @see #getROSExistingTopicConnection()
 	 * @generated
 	 */
 	EReference getROSExistingTopicConnection_Topic();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection <em>ROS Service Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection <em>ROS Service Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Service Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection
 	 * @generated
 	 */
 	EClass getROSServiceConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getServiceServer <em>Service Server</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getServiceServer <em>Service Server</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Service Server</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getServiceServer()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getServiceServer()
 	 * @see #getROSServiceConnection()
 	 * @generated
 	 */
 	EReference getROSServiceConnection_ServiceServer();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getServiceClient <em>Service Client</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getServiceClient <em>Service Client</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Service Client</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getServiceClient()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection#getServiceClient()
 	 * @see #getROSServiceConnection()
 	 * @generated
 	 */
 	EReference getROSServiceConnection_ServiceClient();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection <em>ROS New Service Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection <em>ROS New Service Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS New Service Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection
 	 * @generated
 	 */
 	EClass getROSNewServiceConnection();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceName <em>Service Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceName <em>Service Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Service Name</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceName()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection#getServiceName()
 	 * @see #getROSNewServiceConnection()
 	 * @generated
 	 */
 	EAttribute getROSNewServiceConnection_ServiceName();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection <em>ROS Existing Service Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection <em>ROS Existing Service Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Existing Service Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection
 	 * @generated
 	 */
 	EClass getROSExistingServiceConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection#getService <em>Service</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection#getService <em>Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Service</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection#getService()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection#getService()
 	 * @see #getROSExistingServiceConnection()
 	 * @generated
 	 */
 	EReference getROSExistingServiceConnection_Service();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection <em>ROS Action Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSActionConnection <em>ROS Action Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Action Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSActionConnection
 	 * @generated
 	 */
 	EClass getROSActionConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection#getActionServer <em>Action Server</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSActionConnection#getActionServer <em>Action Server</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Action Server</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection#getActionServer()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSActionConnection#getActionServer()
 	 * @see #getROSActionConnection()
 	 * @generated
 	 */
 	EReference getROSActionConnection_ActionServer();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection#getActionClient <em>Action Client</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSActionConnection#getActionClient <em>Action Client</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Action Client</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection#getActionClient()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSActionConnection#getActionClient()
 	 * @see #getROSActionConnection()
 	 * @generated
 	 */
 	EReference getROSActionConnection_ActionClient();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection <em>ROS New Action Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection <em>ROS New Action Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS New Action Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection
 	 * @generated
 	 */
 	EClass getROSNewActionConnection();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionName <em>Action Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionName <em>Action Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Action Name</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionName()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection#getActionName()
 	 * @see #getROSNewActionConnection()
 	 * @generated
 	 */
 	EAttribute getROSNewActionConnection_ActionName();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection <em>ROS Existing Action Connection</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection <em>ROS Existing Action Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Existing Action Connection</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection
 	 * @generated
 	 */
 	EClass getROSExistingActionConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection#getAction <em>Action</em>}'.
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection#getAction <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Action</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection#getAction()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection#getAction()
 	 * @see #getROSExistingActionConnection()
 	 * @generated
 	 */
 	EReference getROSExistingActionConnection_Action();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents <em>ROS Required Components</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents <em>ROS Required Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Required Components</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents
 	 * @generated
 	 */
 	EClass getROSRequiredComponents();
 
 	/**
-	 * Returns the meta object for the reference list '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents#getROSNodes <em>ROS Nodes</em>}'.
+	 * Returns the meta object for the reference list '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents#getROSNodes <em>ROS Nodes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>ROS Nodes</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents#getROSNodes()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents#getROSNodes()
 	 * @see #getROSRequiredComponents()
 	 * @generated
 	 */
 	EReference getROSRequiredComponents_ROSNodes();
 
 	/**
-	 * Returns the meta object for class '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections <em>ROS Required Connections</em>}'.
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections <em>ROS Required Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>ROS Required Connections</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections
 	 * @generated
 	 */
 	EClass getROSRequiredConnections();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingTopicConnections <em>Required Existing Topic Connections</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingTopicConnections <em>Required Existing Topic Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Required Existing Topic Connections</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingTopicConnections()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingTopicConnections()
 	 * @see #getROSRequiredConnections()
 	 * @generated
 	 */
 	EReference getROSRequiredConnections_RequiredExistingTopicConnections();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingServiceConnections <em>Required Existing Service Connections</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingServiceConnections <em>Required Existing Service Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Required Existing Service Connections</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingServiceConnections()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingServiceConnections()
 	 * @see #getROSRequiredConnections()
 	 * @generated
 	 */
 	EReference getROSRequiredConnections_RequiredExistingServiceConnections();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingActionConnections <em>Required Existing Action Connections</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingActionConnections <em>Required Existing Action Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Required Existing Action Connections</em>'.
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingActionConnections()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections#getRequiredExistingActionConnections()
 	 * @see #getROSRequiredConnections()
 	 * @generated
 	 */
@@ -1209,11 +1209,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfImplementationImpl <em>ROS Transf Implementation</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfImplementationImpl <em>ROS Transf Implementation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfImplementationImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTransfImplementation()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfImplementationImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTransfImplementation()
 		 * @generated
 		 */
 		EClass ROS_TRANSF_IMPLEMENTATION = eINSTANCE.getROSTransfImplementation();
@@ -1227,11 +1227,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_TRANSF_IMPLEMENTATION__TARGET_NODE = eINSTANCE.getROSTransfImplementation_TargetNode();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfPropertyImpl <em>ROS Transf Property</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfPropertyImpl <em>ROS Transf Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfPropertyImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTransfProperty()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfPropertyImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTransfProperty()
 		 * @generated
 		 */
 		EClass ROS_TRANSF_PROPERTY = eINSTANCE.getROSTransfProperty();
@@ -1245,11 +1245,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_TRANSF_PROPERTY__TARGET_PROPERTY = eINSTANCE.getROSTransfProperty_TargetProperty();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfConnectionImpl <em>ROS Transf Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfConnectionImpl <em>ROS Transf Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTransfConnection()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTransfConnection()
 		 * @generated
 		 */
 		EClass ROS_TRANSF_CONNECTION = eINSTANCE.getROSTransfConnection();
@@ -1263,11 +1263,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_TRANSF_CONNECTION__NEW_CONNECTIONS = eINSTANCE.getROSTransfConnection_NewConnections();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSAbstractConnectionImpl <em>ROS Abstract Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSAbstractConnectionImpl <em>ROS Abstract Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSAbstractConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSAbstractConnection()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSAbstractConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSAbstractConnection()
 		 * @generated
 		 */
 		EClass ROS_ABSTRACT_CONNECTION = eINSTANCE.getROSAbstractConnection();
@@ -1281,11 +1281,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EAttribute ROS_ABSTRACT_CONNECTION__NAME = eINSTANCE.getROSAbstractConnection_Name();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl <em>ROS Topic Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl <em>ROS Topic Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTopicConnection()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTopicConnection()
 		 * @generated
 		 */
 		EClass ROS_TOPIC_CONNECTION = eINSTANCE.getROSTopicConnection();
@@ -1307,11 +1307,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_TOPIC_CONNECTION__SUBSCRIBER = eINSTANCE.getROSTopicConnection_Subscriber();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl <em>ROS New Topic Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl <em>ROS New Topic Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewTopicConnection()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewTopicConnection()
 		 * @generated
 		 */
 		EClass ROS_NEW_TOPIC_CONNECTION = eINSTANCE.getROSNewTopicConnection();
@@ -1325,11 +1325,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EAttribute ROS_NEW_TOPIC_CONNECTION__TOPIC_NAME = eINSTANCE.getROSNewTopicConnection_TopicName();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl <em>ROS Existing Topic Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl <em>ROS Existing Topic Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingTopicConnection()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingTopicConnection()
 		 * @generated
 		 */
 		EClass ROS_EXISTING_TOPIC_CONNECTION = eINSTANCE.getROSExistingTopicConnection();
@@ -1343,11 +1343,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_EXISTING_TOPIC_CONNECTION__TOPIC = eINSTANCE.getROSExistingTopicConnection_Topic();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSServiceConnectionImpl <em>ROS Service Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSServiceConnectionImpl <em>ROS Service Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSServiceConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSServiceConnection()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSServiceConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSServiceConnection()
 		 * @generated
 		 */
 		EClass ROS_SERVICE_CONNECTION = eINSTANCE.getROSServiceConnection();
@@ -1369,11 +1369,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_SERVICE_CONNECTION__SERVICE_CLIENT = eINSTANCE.getROSServiceConnection_ServiceClient();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl <em>ROS New Service Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl <em>ROS New Service Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewServiceConnection()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewServiceConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewServiceConnection()
 		 * @generated
 		 */
 		EClass ROS_NEW_SERVICE_CONNECTION = eINSTANCE.getROSNewServiceConnection();
@@ -1387,11 +1387,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EAttribute ROS_NEW_SERVICE_CONNECTION__SERVICE_NAME = eINSTANCE.getROSNewServiceConnection_ServiceName();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingServiceConnectionImpl <em>ROS Existing Service Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingServiceConnectionImpl <em>ROS Existing Service Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingServiceConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingServiceConnection()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingServiceConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingServiceConnection()
 		 * @generated
 		 */
 		EClass ROS_EXISTING_SERVICE_CONNECTION = eINSTANCE.getROSExistingServiceConnection();
@@ -1405,11 +1405,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_EXISTING_SERVICE_CONNECTION__SERVICE = eINSTANCE.getROSExistingServiceConnection_Service();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl <em>ROS Action Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl <em>ROS Action Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSActionConnection()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSActionConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSActionConnection()
 		 * @generated
 		 */
 		EClass ROS_ACTION_CONNECTION = eINSTANCE.getROSActionConnection();
@@ -1431,11 +1431,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_ACTION_CONNECTION__ACTION_CLIENT = eINSTANCE.getROSActionConnection_ActionClient();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewActionConnectionImpl <em>ROS New Action Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewActionConnectionImpl <em>ROS New Action Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSNewActionConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewActionConnection()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewActionConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewActionConnection()
 		 * @generated
 		 */
 		EClass ROS_NEW_ACTION_CONNECTION = eINSTANCE.getROSNewActionConnection();
@@ -1449,11 +1449,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EAttribute ROS_NEW_ACTION_CONNECTION__ACTION_NAME = eINSTANCE.getROSNewActionConnection_ActionName();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl <em>ROS Existing Action Connection</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl <em>ROS Existing Action Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingActionConnection()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingActionConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingActionConnection()
 		 * @generated
 		 */
 		EClass ROS_EXISTING_ACTION_CONNECTION = eINSTANCE.getROSExistingActionConnection();
@@ -1467,11 +1467,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_EXISTING_ACTION_CONNECTION__ACTION = eINSTANCE.getROSExistingActionConnection_Action();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredComponentsImpl <em>ROS Required Components</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSRequiredComponentsImpl <em>ROS Required Components</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredComponentsImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSRequiredComponents()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSRequiredComponentsImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSRequiredComponents()
 		 * @generated
 		 */
 		EClass ROS_REQUIRED_COMPONENTS = eINSTANCE.getROSRequiredComponents();
@@ -1485,11 +1485,11 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EReference ROS_REQUIRED_COMPONENTS__ROS_NODES = eINSTANCE.getROSRequiredComponents_ROSNodes();
 
 		/**
-		 * The meta object literal for the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl <em>ROS Required Connections</em>}' class.
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl <em>ROS Required Connections</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl
-		 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSRequiredConnections()
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSRequiredConnections()
 		 * @generated
 		 */
 		EClass ROS_REQUIRED_CONNECTIONS = eINSTANCE.getROSRequiredConnections();

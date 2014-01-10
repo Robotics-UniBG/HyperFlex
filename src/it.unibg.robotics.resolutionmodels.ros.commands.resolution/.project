@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>it.unibg.robotics.resolutionmodels.ros.commands.resolution</name>
+	<name>org.hyperflex.resolutionmodels.ros.commands.resolution</name>
 	<comment></comment>
 	<projects>
 	</projects>

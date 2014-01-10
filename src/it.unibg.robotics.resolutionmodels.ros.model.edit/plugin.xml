@@ -2,20 +2,20 @@
 <?eclipse version="3.0"?>
 
 <!--
- Feature Model Plugin
+ HyperFlex Toolchain
  
  Copyright (c) 2011
  All rights reserved.
  
  Luca Gherardi
+ Department of Engineering
  University of Bergamo
- Dept. of Information Technology and Mathematics
  
  ***********************************************************************************************
  
- Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  
- Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  
  ***********************************************************************************************
  
@@ -32,7 +32,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http://robotics.unibg.it/resolutionmodels.ros"
-            class="it.unibg.robotics.resolutionmodels.rosresolutionmodels.provider.rosresolutionmodelsItemProviderAdapterFactory"
+            class="org.hyperflex.resolutionmodels.rosresolutionmodels.provider.rosresolutionmodelsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -44,7 +44,7 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
             uri="http://robotics.unibg.it/resolutionmodels"
-            class="it.unibg.robotics.resolutionmodels.rosresolutionmodels.provider.rosresolutionmodelsItemProviderAdapterFactory$resolutionmodelsChildCreationExtender"/>
+            class="org.hyperflex.resolutionmodels.rosresolutionmodels.provider.rosresolutionmodelsItemProviderAdapterFactory$resolutionmodelsChildCreationExtender"/>
    </extension>
 
 </plugin>

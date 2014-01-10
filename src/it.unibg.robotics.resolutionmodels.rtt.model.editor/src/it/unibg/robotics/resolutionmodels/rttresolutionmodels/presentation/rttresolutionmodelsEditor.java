@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,12 +23,12 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rttresolutionmodels.presentation;
+package org.hyperflex.resolutionmodels.rttresolutionmodels.presentation;
 
 
-import it.unibg.robotics.featuremodels.provider.featuremodelsItemProviderAdapterFactory;
-import it.unibg.robotics.resolutionmodels.provider.resolutionmodelsItemProviderAdapterFactory;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.provider.rttresolutionmodelsItemProviderAdapterFactory;
+import org.hyperflex.featuremodels.provider.featuremodelsItemProviderAdapterFactory;
+import org.hyperflex.resolutionmodels.provider.resolutionmodelsItemProviderAdapterFactory;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.provider.rttresolutionmodelsItemProviderAdapterFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -595,7 +595,7 @@ public class rttresolutionmodelsEditor
 			BasicDiagnostic diagnostic =
 				new BasicDiagnostic
 					(Diagnostic.OK,
-					 "it.unibg.robotics.resolutionmodels.rtt.model.editor",
+					 "org.hyperflex.resolutionmodels.rtt.model.editor",
 					 0,
 					 null,
 					 new Object [] { editingDomain.getResourceSet() });
@@ -955,7 +955,7 @@ public class rttresolutionmodelsEditor
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "it.unibg.robotics.resolutionmodels.rtt.model.editor",
+					 "org.hyperflex.resolutionmodels.rtt.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object [] { exception == null ? (Object)resource : exception });
@@ -966,7 +966,7 @@ public class rttresolutionmodelsEditor
 			return
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "it.unibg.robotics.resolutionmodels.rtt.model.editor",
+					 "org.hyperflex.resolutionmodels.rtt.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object[] { exception });

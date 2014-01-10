@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,33 +23,33 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.ros.commands.resolution.handlers;
+package org.hyperflex.resolutionmodels.ros.commands.resolution.handlers;
 
-import it.unibg.robotics.featuremodels.Feature;
-import it.unibg.robotics.featuremodels.FeatureModel;
-import it.unibg.robotics.featuremodels.Instance;
-import it.unibg.robotics.featuremodels.featuremodelsPackage;
-import it.unibg.robotics.featuremodels.constraints.utility.ConstraintChecker;
-import it.unibg.robotics.resolutionmodels.RMAbstractTransformation;
-import it.unibg.robotics.resolutionmodels.RMResolutionElement;
-import it.unibg.robotics.resolutionmodels.ResolutionModel;
-import it.unibg.robotics.resolutionmodels.presentation.resolutionmodelsEditor;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsFactoryImpl;
+import org.hyperflex.featuremodels.Feature;
+import org.hyperflex.featuremodels.FeatureModel;
+import org.hyperflex.featuremodels.Instance;
+import org.hyperflex.featuremodels.featuremodelsPackage;
+import org.hyperflex.featuremodels.constraints.utility.ConstraintChecker;
+import org.hyperflex.resolutionmodels.RMAbstractTransformation;
+import org.hyperflex.resolutionmodels.RMResolutionElement;
+import org.hyperflex.resolutionmodels.ResolutionModel;
+import org.hyperflex.resolutionmodels.presentation.resolutionmodelsEditor;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsFactoryImpl;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

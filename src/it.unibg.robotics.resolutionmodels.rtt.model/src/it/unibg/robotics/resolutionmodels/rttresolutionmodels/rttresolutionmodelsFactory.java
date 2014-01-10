@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rttresolutionmodels;
+package org.hyperflex.resolutionmodels.rttresolutionmodels;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage
+ * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage
  * @generated
  */
 public interface rttresolutionmodelsFactory extends EFactory {
@@ -42,7 +42,7 @@ public interface rttresolutionmodelsFactory extends EFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	rttresolutionmodelsFactory eINSTANCE = it.unibg.robotics.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsFactoryImpl.init();
+	rttresolutionmodelsFactory eINSTANCE = org.hyperflex.resolutionmodels.rttresolutionmodels.impl.rttresolutionmodelsFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>RTT Transf Implementation</em>'.

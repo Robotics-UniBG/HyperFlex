@@ -1,16 +1,16 @@
 /**
- * HyperFlex toolchain
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.tcacomponentmodel.presentation;
+package org.hyperflex.tcacomponentmodel.presentation;
 
 
 import java.util.ArrayList;
@@ -92,9 +92,9 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import it.unibg.robotics.tcacomponentmodel.tcacomponentmodelFactory;
-import it.unibg.robotics.tcacomponentmodel.tcacomponentmodelPackage;
-import it.unibg.robotics.tcacomponentmodel.provider.TCAComponentModelEditPlugin;
+import org.hyperflex.tcacomponentmodel.tcacomponentmodelFactory;
+import org.hyperflex.tcacomponentmodel.tcacomponentmodelPackage;
+import org.hyperflex.tcacomponentmodel.provider.TCAComponentModelEditPlugin;
 
 
 import org.eclipse.core.runtime.Path;

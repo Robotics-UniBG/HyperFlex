@@ -7,9 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: it.unibg.robotics.resolutionmodels,
- it.unibg.robotics.resolutionmodels.impl,
- it.unibg.robotics.resolutionmodels.util
+Export-Package: org.hyperflex.resolutionmodels,
+ org.hyperflex.resolutionmodels.impl,
+ org.hyperflex.resolutionmodels.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.hyperflex.featuremodels.model;bundle-version="1.0.0"

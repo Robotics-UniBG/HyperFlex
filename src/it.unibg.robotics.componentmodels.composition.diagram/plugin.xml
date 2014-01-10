@@ -44,7 +44,7 @@
   	  <wizard
   	     name="%newWizardName"
   	     icon="icons/obj16/compositionmodelDiagramFile.gif"
-  	     category="it.robotics.unibg.hyperflex.wizard.category"
+  	     category="org.hyperflex.hyperflex.wizard.category"
   	     class="org.hyperflex.compositionmodel.diagram.part.CompositionModelCreationWizard"
   	     id="org.hyperflex.compositionmodel.diagram.part.CompositionModelCreationWizardID">
   	  	 <description>%newWizardDesc</description>  

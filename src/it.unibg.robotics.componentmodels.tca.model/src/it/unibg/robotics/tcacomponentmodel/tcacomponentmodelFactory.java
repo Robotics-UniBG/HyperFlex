@@ -1,16 +1,16 @@
 /**
- * HyperFlex toolchain
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.tcacomponentmodel;
+package org.hyperflex.tcacomponentmodel;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.tcacomponentmodel.tcacomponentmodelPackage
+ * @see org.hyperflex.tcacomponentmodel.tcacomponentmodelPackage
  * @generated
  */
 public interface tcacomponentmodelFactory extends EFactory {
@@ -42,7 +42,7 @@ public interface tcacomponentmodelFactory extends EFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	tcacomponentmodelFactory eINSTANCE = it.unibg.robotics.tcacomponentmodel.impl.tcacomponentmodelFactoryImpl.init();
+	tcacomponentmodelFactory eINSTANCE = org.hyperflex.tcacomponentmodel.impl.tcacomponentmodelFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>System</em>'.

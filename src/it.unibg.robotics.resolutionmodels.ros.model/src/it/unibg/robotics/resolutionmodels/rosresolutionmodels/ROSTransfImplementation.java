@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,9 +23,9 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
+package org.hyperflex.resolutionmodels.rosresolutionmodels;
 
-import it.unibg.robotics.resolutionmodels.RMTransfImplementation;
+import org.hyperflex.resolutionmodels.RMTransfImplementation;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,11 +35,11 @@ import it.unibg.robotics.resolutionmodels.RMTransfImplementation;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation#getTargetNode <em>Target Node</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation#getTargetNode <em>Target Node</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSTransfImplementation()
+ * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSTransfImplementation()
  * @model
  * @generated
  */
@@ -54,14 +54,14 @@ public interface ROSTransfImplementation extends RMTransfImplementation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Node</em>' reference.
 	 * @see #setTargetNode(Node)
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSTransfImplementation_TargetNode()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSTransfImplementation_TargetNode()
 	 * @model required="true"
 	 * @generated
 	 */
 	Node getTargetNode();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation#getTargetNode <em>Target Node</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation#getTargetNode <em>Target Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Target Node</em>' reference.

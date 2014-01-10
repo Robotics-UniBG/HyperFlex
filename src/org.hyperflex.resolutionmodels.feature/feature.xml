@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="it.unibg.robotics.resolutionmodels.feature"
+      id="org.hyperflex.resolutionmodels.feature"
       label="Variability Resolution Plugin"
       version="1.0.0.qualifier"
       provider-name="Luca Gherardi">
 
-   <description url="http://robotics-unibg.github.com/FeatureModels/">
-      The Variability Resolution plugin
+   <description url="http://robotics-unibg.github.com/HyperFlex/">
+      The HyperFlex HyperFlex Toolchain
    </description>
 
    <copyright>
@@ -14,8 +14,8 @@
 Copyright (c) 2011
 All rights reserved.
 Luca Gherardi
+Department of Engineering
 University of Bergamo
-Dept. of Information Technology and Mathematics
 _____________________________________________________________________________
 Author: &lt;A HREF=&quot;mailto:luca.gherardi@unibg.it&quot;&gt;Luca Gherardi&lt;/A&gt;
 Supervised by: &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;&gt;Davide Brugali&lt;/A&gt;
@@ -38,41 +38,41 @@ http://www.eclipse.org/legal/epl-v10.html
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="it.unibg.robotics.featuremodels.model" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.featuremodels.model" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="org.eclipse.core.resources"/>
       <import plugin="org.eclipse.emf.ecore.xmi"/>
       <import plugin="org.eclipse.emf.edit.ui"/>
       <import plugin="org.eclipse.ui.ide"/>
       <import plugin="org.eclipse.ui"/>
-      <import plugin="it.unibg.robotics.featuremodels.model.edit"/>
+      <import plugin="org.hyperflex.featuremodels.model.edit"/>
       <import plugin="org.eclipse.core.expressions" version="3.4.401" match="greaterOrEqual"/>
-      <import plugin="it.unibg.robotics.resolutionmodels.model" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.hyperflex.resolutionmodels.model" version="1.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
-         id="it.unibg.robotics.resolutionmodels.model"
+         id="org.hyperflex.resolutionmodels.model"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.resolutionmodels.model.edit"
+         id="org.hyperflex.resolutionmodels.model.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.resolutionmodels.model.editor"
+         id="org.hyperflex.resolutionmodels.model.editor"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="it.unibg.robotics.resolutionmodels.ui"
+         id="org.hyperflex.resolutionmodels.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -1,16 +1,16 @@
 /**
- * HyperFlex toolchain
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
@@ -23,9 +23,9 @@
  * 
  * 
  */
-package it.unibg.robotics.tcacomponentmodel.util;
+package org.hyperflex.tcacomponentmodel.util;
 
-import it.unibg.robotics.tcacomponentmodel.tcacomponentmodelPackage;
+import org.hyperflex.tcacomponentmodel.tcacomponentmodelPackage;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -37,7 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.tcacomponentmodel.tcacomponentmodelPackage
+ * @see org.hyperflex.tcacomponentmodel.tcacomponentmodelPackage
  * @generated
  */
 public class tcacomponentmodelAdapterFactory extends AdapterFactoryImpl {
@@ -89,7 +89,7 @@ public class tcacomponentmodelAdapterFactory extends AdapterFactoryImpl {
 	protected tcacomponentmodelSwitch<Adapter> modelSwitch =
 		new tcacomponentmodelSwitch<Adapter>() {
 			@Override
-			public Adapter caseSystem(it.unibg.robotics.tcacomponentmodel.System object) {
+			public Adapter caseSystem(org.hyperflex.tcacomponentmodel.System object) {
 				return createSystemAdapter();
 			}
 			@Override
@@ -113,13 +113,13 @@ public class tcacomponentmodelAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link it.unibg.robotics.tcacomponentmodel.System <em>System</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.tcacomponentmodel.System <em>System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see it.unibg.robotics.tcacomponentmodel.System
+	 * @see org.hyperflex.tcacomponentmodel.System
 	 * @generated
 	 */
 	public Adapter createSystemAdapter() {

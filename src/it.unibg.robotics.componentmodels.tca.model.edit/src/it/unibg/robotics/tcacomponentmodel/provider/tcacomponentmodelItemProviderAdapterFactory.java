@@ -1,16 +1,16 @@
 /**
- * HyperFlex toolchain
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
@@ -23,9 +23,9 @@
  * 
  * 
  */
-package it.unibg.robotics.tcacomponentmodel.provider;
+package org.hyperflex.tcacomponentmodel.provider;
 
-import it.unibg.robotics.tcacomponentmodel.util.tcacomponentmodelAdapterFactory;
+import org.hyperflex.tcacomponentmodel.util.tcacomponentmodelAdapterFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -95,7 +95,7 @@ public class tcacomponentmodelItemProviderAdapterFactory extends tcacomponentmod
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link it.unibg.robotics.tcacomponentmodel.System} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.tcacomponentmodel.System} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -103,7 +103,7 @@ public class tcacomponentmodelItemProviderAdapterFactory extends tcacomponentmod
 	protected SystemItemProvider systemItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link it.unibg.robotics.tcacomponentmodel.System}.
+	 * This creates an adapter for a {@link org.hyperflex.tcacomponentmodel.System}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

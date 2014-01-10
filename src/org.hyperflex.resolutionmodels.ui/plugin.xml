@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="org.hyperflex.resolutionmodels.commands.resolution.category"
+            name="Resolution Model Commands">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="org.hyperflex.resolutionmodels.ui.menuEntry"
+               label="Variability Resolution">
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="org.hyperflex.featuremodels.commands.resolution.toolbar1">
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="org.hyperflex.resolutionmodels.expressions.resolutionModelSelected">
+         <with
+               variable="selection">
+            <and>
+               <count
+                     value="1">
+               </count>
+               <iterate
+                     ifEmpty="false"
+                     operator="or">
+                  <instanceof
+                        value="org.hyperflex.resolutionmodels.ResolutionModel">
+                  </instanceof>
+               </iterate>
+            </and>
+         </with>
+      </definition>
+   </extension>
+
+</plugin>

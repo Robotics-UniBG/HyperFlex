@@ -1,19 +1,19 @@
 /**
- * HyperFlex toolchain
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
- * ETH Zurich
- * Institute for Dynamic Systems and Control
+ * University of Bergamo
+ * Department of Engineering
  * 
  * ***********************************************************************************************
  * 
  * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: 
- *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, University of Bergamo
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, Department of Engineering
  * 
  * ***********************************************************************************************
  * 
@@ -24,10 +24,10 @@
  * 
  * 
  */
-package it.unibg.robotics.componentmodels.tca.m2t.handler;
+package org.hyperflex.componentmodels.tca.m2t.handler;
 
-import it.unibg.robotics.componentmodels.m2t.EGLTransformer;
-import it.unibg.robotics.componentmodels.tca.m2t.Activator;
+import org.hyperflex.componentmodels.m2t.EGLTransformer;
+import org.hyperflex.componentmodels.tca.m2t.Activator;
 
 import java.io.IOException;
 import java.net.URL;

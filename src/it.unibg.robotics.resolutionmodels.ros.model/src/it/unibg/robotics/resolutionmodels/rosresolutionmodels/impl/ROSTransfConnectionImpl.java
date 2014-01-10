@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,12 +23,12 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl;
+package org.hyperflex.resolutionmodels.rosresolutionmodels.impl;
 
-import it.unibg.robotics.resolutionmodels.impl.RMTransfConnectionImpl;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.impl.RMTransfConnectionImpl;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
 
 import java.util.Collection;
 
@@ -47,7 +47,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSTransfConnectionImpl#getNewConnections <em>New Connections</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTransfConnectionImpl#getNewConnections <em>New Connections</em>}</li>
  * </ul>
  * </p>
  *

@@ -1,13 +1,13 @@
-package it.unibg.robotics.resolutionmodels.ros.commands.resolution.expressions;
+package org.hyperflex.resolutionmodels.ros.commands.resolution.expressions;
 
-import it.unibg.robotics.resolutionmodels.RMAbstractTransformation;
-import it.unibg.robotics.resolutionmodels.RMResolutionElement;
-import it.unibg.robotics.resolutionmodels.ResolutionModel;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty;
+import org.hyperflex.resolutionmodels.RMAbstractTransformation;
+import org.hyperflex.resolutionmodels.RMResolutionElement;
+import org.hyperflex.resolutionmodels.ResolutionModel;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty;
 
 import org.eclipse.core.expressions.PropertyTester;
 

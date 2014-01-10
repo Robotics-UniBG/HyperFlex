@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: it.unibg.robotics.resolutionmodels.ros.model;singleton:=true
+Bundle-SymbolicName: org.hyperflex.resolutionmodels.ros.model;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -9,10 +9,10 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- it.unibg.robotics.featuremodels.model;visibility:=reexport,
- it.unibg.robotics.resolutionmodels.model;visibility:=reexport,
+ org.hyperflex.featuremodels.model;visibility:=reexport,
+ org.hyperflex.resolutionmodels.model;visibility:=reexport,
  org.ros.model.ros;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
-Export-Package: it.unibg.robotics.resolutionmodels.rosresolutionmodels,
- it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl,
- it.unibg.robotics.resolutionmodels.rosresolutionmodels.util
+Export-Package: org.hyperflex.resolutionmodels.rosresolutionmodels,
+ org.hyperflex.resolutionmodels.rosresolutionmodels.impl,
+ org.hyperflex.resolutionmodels.rosresolutionmodels.util

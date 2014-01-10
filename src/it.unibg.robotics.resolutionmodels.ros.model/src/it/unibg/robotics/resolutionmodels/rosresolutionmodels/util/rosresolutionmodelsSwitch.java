@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,30 +23,30 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels.util;
+package org.hyperflex.resolutionmodels.rosresolutionmodels.util;
 
-import it.unibg.robotics.resolutionmodels.RMAbstractTransformation;
-import it.unibg.robotics.resolutionmodels.RMRequiredComponents;
-import it.unibg.robotics.resolutionmodels.RMRequiredConnections;
-import it.unibg.robotics.resolutionmodels.RMTransfConnection;
-import it.unibg.robotics.resolutionmodels.RMTransfImplementation;
-import it.unibg.robotics.resolutionmodels.RMTransfProperty;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredComponents;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTransfProperty;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.RMAbstractTransformation;
+import org.hyperflex.resolutionmodels.RMRequiredComponents;
+import org.hyperflex.resolutionmodels.RMRequiredConnections;
+import org.hyperflex.resolutionmodels.RMTransfConnection;
+import org.hyperflex.resolutionmodels.RMTransfImplementation;
+import org.hyperflex.resolutionmodels.RMTransfProperty;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSAbstractConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredComponents;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -62,7 +62,7 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage
+ * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage
  * @generated
  */
 public class rosresolutionmodelsSwitch<T> extends Switch<T> {

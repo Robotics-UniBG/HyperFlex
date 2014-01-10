@@ -1,21 +1,21 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: it.unibg.robotics.resolutionmodels.ros.model.edit;singleton:=true
+Bundle-SymbolicName: org.hyperflex.resolutionmodels.ros.model.edit;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: it.unibg.robotics.resolutionmodels.rosresolutionmodels.provider.RosResolutionModelEditPlugin$Implementation
+Bundle-Activator: org.hyperflex.resolutionmodels.rosresolutionmodels.provider.RosResolutionModelEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: it.unibg.robotics.resolutionmodels.rosresolutionmodels.provider
+Export-Package: org.hyperflex.resolutionmodels.rosresolutionmodels.provider
 Require-Bundle: org.eclipse.core.runtime,
- it.unibg.robotics.resolutionmodels.ros.model;visibility:=reexport,
+ org.hyperflex.resolutionmodels.ros.model;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
- it.unibg.robotics.featuremodels.model;visibility:=reexport,
- it.unibg.robotics.featuremodels.model.edit;visibility:=reexport,
- it.unibg.robotics.resolutionmodels.model;visibility:=reexport,
- it.unibg.robotics.resolutionmodels.model.edit;visibility:=reexport,
+ org.hyperflex.featuremodels.model;visibility:=reexport,
+ org.hyperflex.featuremodels.model.edit;visibility:=reexport,
+ org.hyperflex.resolutionmodels.model;visibility:=reexport,
+ org.hyperflex.resolutionmodels.model.edit;visibility:=reexport,
  org.ros.model.ros;visibility:=reexport,
  org.ros.model.ros.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
+package org.hyperflex.resolutionmodels.rosresolutionmodels;
 
 
 /**
@@ -34,12 +34,12 @@ package it.unibg.robotics.resolutionmodels.rosresolutionmodels;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getPublisher <em>Publisher</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getSubscriber <em>Subscriber</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getPublisher <em>Publisher</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getSubscriber <em>Subscriber</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSTopicConnection()
+ * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSTopicConnection()
  * @model abstract="true"
  * @generated
  */
@@ -54,14 +54,14 @@ public interface ROSTopicConnection extends ROSAbstractConnection {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Publisher</em>' reference.
 	 * @see #setPublisher(Publisher)
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSTopicConnection_Publisher()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSTopicConnection_Publisher()
 	 * @model required="true"
 	 * @generated
 	 */
 	Publisher getPublisher();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getPublisher <em>Publisher</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getPublisher <em>Publisher</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Publisher</em>' reference.
@@ -80,14 +80,14 @@ public interface ROSTopicConnection extends ROSAbstractConnection {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Subscriber</em>' reference.
 	 * @see #setSubscriber(Subscriber)
-	 * @see it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSTopicConnection_Subscriber()
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage#getROSTopicConnection_Subscriber()
 	 * @model required="true"
 	 * @generated
 	 */
 	Subscriber getSubscriber();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getSubscriber <em>Subscriber</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getSubscriber <em>Subscriber</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Subscriber</em>' reference.

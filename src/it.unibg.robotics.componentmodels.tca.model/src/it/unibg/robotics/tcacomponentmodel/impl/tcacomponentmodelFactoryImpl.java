@@ -1,16 +1,16 @@
 /**
- * HyperFlex toolchain
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2013
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
  * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
@@ -23,10 +23,10 @@
  * 
  * 
  */
-package it.unibg.robotics.tcacomponentmodel.impl;
+package org.hyperflex.tcacomponentmodel.impl;
 
-import it.unibg.robotics.tcacomponentmodel.tcacomponentmodelFactory;
-import it.unibg.robotics.tcacomponentmodel.tcacomponentmodelPackage;
+import org.hyperflex.tcacomponentmodel.tcacomponentmodelFactory;
+import org.hyperflex.tcacomponentmodel.tcacomponentmodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -89,7 +89,7 @@ public class tcacomponentmodelFactoryImpl extends EFactoryImpl implements tcacom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public it.unibg.robotics.tcacomponentmodel.System createSystem() {
+	public org.hyperflex.tcacomponentmodel.System createSystem() {
 		SystemImpl system = new SystemImpl();
 		return system;
 	}

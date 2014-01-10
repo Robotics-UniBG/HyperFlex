@@ -5,7 +5,7 @@
    <extension
          point="org.eclipse.ui.bindings">
       <key
-            commandId="it.unibg.robotics.resolutionmodels.commands.resolution.rttResolution"
+            commandId="org.hyperflex.resolutionmodels.commands.resolution.rttResolution"
             contextId="org.eclipse.ui.contexts.window"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
             sequence="M1+9">
@@ -15,9 +15,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="menu:it.unibg.robotics.resolutionmodels.ui.menuEntry">
+            locationURI="menu:org.hyperflex.resolutionmodels.ui.menuEntry">
          <command
-               commandId="it.unibg.robotics.resolutionmodels.commands.resolution.rttResolution"
+               commandId="org.hyperflex.resolutionmodels.commands.resolution.rttResolution"
                icon="icons/start_task.gif"
                id="ResolveRTTsModelButton"
                label="Resolve RTT Model"
@@ -27,9 +27,9 @@
       </menuContribution>
       <menuContribution
             allPopups="false"
-            locationURI="toolbar:it.robotics.unibg.featuremodels.commands.resolution.toolbar1">
+            locationURI="toolbar:org.hyperflex.featuremodels.commands.resolution.toolbar1">
          <command
-               commandId="it.unibg.robotics.resolutionmodels.commands.resolution.rttResolution"
+               commandId="org.hyperflex.resolutionmodels.commands.resolution.rttResolution"
                icon="icons/start_task.gif"
                id="ResolveRTTModelButton"
                label="Resolve RTT Model"
@@ -41,19 +41,19 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            categoryId="it.unibg.robotics.resolutionmodels.commands.resolution.category"
-            id="it.unibg.robotics.resolutionmodels.commands.resolution.rttResolution"
+            categoryId="org.hyperflex.resolutionmodels.commands.resolution.category"
+            id="org.hyperflex.resolutionmodels.commands.resolution.rttResolution"
             name="RTT Resolution Command">
       </command>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="it.unibg.robotics.resolutionmodels.rtt.commands.resolution.handlers.RTTResolutionHandler"
-            commandId="it.unibg.robotics.resolutionmodels.commands.resolution.rttResolution">
+            class="org.hyperflex.resolutionmodels.rtt.commands.resolution.handlers.RTTResolutionHandler"
+            commandId="org.hyperflex.resolutionmodels.commands.resolution.rttResolution">
          <enabledWhen>
             <reference
-                  definitionId="it.unibg.robotics.resolutionmodels.rtt.commands.resolution.isRTTResModelSelected">
+                  definitionId="org.hyperflex.resolutionmodels.rtt.commands.resolution.isRTTResModelSelected">
             </reference>
          </enabledWhen>
       </handler>
@@ -61,7 +61,7 @@
    <extension
          point="org.eclipse.core.expressions.definitions">
       <definition
-            id="it.unibg.robotics.resolutionmodels.rtt.commands.resolution.isRTTResModelSelected">
+            id="org.hyperflex.resolutionmodels.rtt.commands.resolution.isRTTResModelSelected">
          <with
                variable="selection">
             <and>
@@ -73,11 +73,11 @@
                      operator="and">
                   
                      <instanceof
-                           value="it.unibg.robotics.resolutionmodels.ResolutionModel">
+                           value="org.hyperflex.resolutionmodels.ResolutionModel">
                      </instanceof>
                      <test
                         forcePluginActivation="true"
-                        property="it.unibg.robotics.resolutionmodels.rtt.expressions.resolutionModelType.is_a_RTT_resolution_model">
+                        property="org.hyperflex.resolutionmodels.rtt.expressions.resolutionModelType.is_a_RTT_resolution_model">
                   </test>
                </iterate> </and>
          </with>
@@ -86,11 +86,11 @@
    <extension
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
-            class="it.unibg.robotics.resolutionmodels.rtt.commands.resolution.expressions.RTTResolutionModelTypeTester"
-            id="it.unibg.robotics.resolutionmodels.rtt.expressions.resolutionModelPropertyTester"
-            namespace="it.unibg.robotics.resolutionmodels.rtt.expressions.resolutionModelType"
+            class="org.hyperflex.resolutionmodels.rtt.commands.resolution.expressions.RTTResolutionModelTypeTester"
+            id="org.hyperflex.resolutionmodels.rtt.expressions.resolutionModelPropertyTester"
+            namespace="org.hyperflex.resolutionmodels.rtt.expressions.resolutionModelType"
             properties="is_a_RTT_resolution_model"
-            type="it.unibg.robotics.resolutionmodels.ResolutionModel">
+            type="org.hyperflex.resolutionmodels.ResolutionModel">
       </propertyTester>
    </extension>
 

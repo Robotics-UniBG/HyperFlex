@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rttresolutionmodels;
+package org.hyperflex.resolutionmodels.rttresolutionmodels;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -35,16 +35,16 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getName <em>Name</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getType <em>Type</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getLockPolicy <em>Lock Policy</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getBufferSize <em>Buffer Size</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getInputPort <em>Input Port</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getOutputPort <em>Output Port</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getName <em>Name</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getType <em>Type</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getLockPolicy <em>Lock Policy</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getBufferSize <em>Buffer Size</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getInputPort <em>Input Port</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getOutputPort <em>Output Port</em>}</li>
  * </ul>
  * </p>
  *
- * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection()
+ * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection()
  * @model
  * @generated
  */
@@ -59,14 +59,14 @@ public interface RTTConnection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection_Name()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection_Name()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -87,14 +87,14 @@ public interface RTTConnection extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see org.orocos.model.rtt.ConnectionPolicyType
 	 * @see #setType(ConnectionPolicyType)
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection_Type()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection_Type()
 	 * @model required="true"
 	 * @generated
 	 */
 	ConnectionPolicyType getType();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
@@ -116,14 +116,14 @@ public interface RTTConnection extends EObject {
 	 * @return the value of the '<em>Lock Policy</em>' attribute.
 	 * @see org.orocos.model.rtt.ConnectionPolicyLockPolicy
 	 * @see #setLockPolicy(ConnectionPolicyLockPolicy)
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection_LockPolicy()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection_LockPolicy()
 	 * @model required="true"
 	 * @generated
 	 */
 	ConnectionPolicyLockPolicy getLockPolicy();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getLockPolicy <em>Lock Policy</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getLockPolicy <em>Lock Policy</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Lock Policy</em>' attribute.
@@ -143,14 +143,14 @@ public interface RTTConnection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Buffer Size</em>' attribute.
 	 * @see #setBufferSize(short)
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection_BufferSize()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection_BufferSize()
 	 * @model required="true"
 	 * @generated
 	 */
 	short getBufferSize();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getBufferSize <em>Buffer Size</em>}' attribute.
+	 * Sets the value of the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getBufferSize <em>Buffer Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Buffer Size</em>' attribute.
@@ -169,14 +169,14 @@ public interface RTTConnection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input Port</em>' reference.
 	 * @see #setInputPort(InputPort)
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection_InputPort()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection_InputPort()
 	 * @model required="true"
 	 * @generated
 	 */
 	InputPort getInputPort();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getInputPort <em>Input Port</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getInputPort <em>Input Port</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Input Port</em>' reference.
@@ -195,14 +195,14 @@ public interface RTTConnection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output Port</em>' reference.
 	 * @see #setOutputPort(OutputPort)
-	 * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection_OutputPort()
+	 * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getRTTConnection_OutputPort()
 	 * @model required="true"
 	 * @generated
 	 */
 	OutputPort getOutputPort();
 
 	/**
-	 * Sets the value of the '{@link it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection#getOutputPort <em>Output Port</em>}' reference.
+	 * Sets the value of the '{@link org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection#getOutputPort <em>Output Port</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Output Port</em>' reference.

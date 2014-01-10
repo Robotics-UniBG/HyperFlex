@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,14 +23,14 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl;
+package org.hyperflex.resolutionmodels.rosresolutionmodels.impl;
 
-import it.unibg.robotics.resolutionmodels.impl.RMRequiredConnectionsImpl;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
-import it.unibg.robotics.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.impl.RMRequiredConnectionsImpl;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingActionConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredConnections;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;
 
 import java.util.Collection;
 
@@ -48,9 +48,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl#getRequiredExistingTopicConnections <em>Required Existing Topic Connections</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl#getRequiredExistingServiceConnections <em>Required Existing Service Connections</em>}</li>
- *   <li>{@link it.unibg.robotics.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl#getRequiredExistingActionConnections <em>Required Existing Action Connections</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl#getRequiredExistingTopicConnections <em>Required Existing Topic Connections</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl#getRequiredExistingServiceConnections <em>Required Existing Service Connections</em>}</li>
+ *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSRequiredConnectionsImpl#getRequiredExistingActionConnections <em>Required Existing Action Connections</em>}</li>
  * </ul>
  * </p>
  *

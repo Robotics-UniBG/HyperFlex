@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Feature Model Plugin&#xA;&#xA;Copyright (c) 2011&#xA;All rights reserved.&#xA;&#xA;Luca Gherardi&#xA;University of Bergamo&#xA;Dept. of Information Technology and Mathematics&#xA;&#xA;***********************************************************************************************&#xA;&#xA;Author: &lt;A HREF=&quot;mailto:luca.gherardi@unibg.it&quot;>Luca Gherardi&lt;/A>&#xA;&#xA;Supervised by: &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;>Davide Brugali&lt;/A>&#xA;&#xA;***********************************************************************************************&#xA;&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;"
-    modelDirectory="/it.unibg.robotics.resolutionmodels.ros.model/src" editDirectory="/it.unibg.robotics.resolutionmodels.ros.model.edit/src"
-    editorDirectory="/it.unibg.robotics.resolutionmodels.ros.model.editor/src" modelPluginID="it.unibg.robotics.resolutionmodels.ros.model"
-    modelName="RosResolutionModel" editPluginClass="it.unibg.robotics.resolutionmodels.rosresolutionmodels.provider.RosResolutionModelEditPlugin"
-    editorPluginClass="it.unibg.robotics.resolutionmodels.rosresolutionmodels.presentation.RosResolutionModelEditorPlugin"
-    testSuiteClass="it.unibg.robotics.resolutionmodels.rosresolutionmodels.tests.RosResolutionModelAllTests"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="HyperFlex Toolchain&#xA;&#xA;Copyright (c) 2011&#xA;All rights reserved.&#xA;&#xA;Luca Gherardi&#xA;Department of Engineering&#xA;University of Bergamo&#xA;&#xA;***********************************************************************************************&#xA;&#xA;Author: &lt;A HREF=&quot;mailto:luca.gherardi@unibg.it&quot;>Luca Gherardi&lt;/A>&#xA;&#xA;Supervised by: &lt;A HREF=&quot;mailto:brugali@unibg.it&quot;>Davide Brugali&lt;/A>&#xA;&#xA;***********************************************************************************************&#xA;&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;"
+    modelDirectory="/org.hyperflex.resolutionmodels.ros.model/src" editDirectory="/org.hyperflex.resolutionmodels.ros.model.edit/src"
+    editorDirectory="/org.hyperflex.resolutionmodels.ros.model.editor/src" modelPluginID="org.hyperflex.resolutionmodels.ros.model"
+    modelName="RosResolutionModel" editPluginClass="org.hyperflex.resolutionmodels.rosresolutionmodels.provider.RosResolutionModelEditPlugin"
+    editorPluginClass="org.hyperflex.resolutionmodels.rosresolutionmodels.presentation.RosResolutionModelEditorPlugin"
+    testSuiteClass="org.hyperflex.resolutionmodels.rosresolutionmodels.tests.RosResolutionModelAllTests"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
-    editPluginID="it.unibg.robotics.resolutionmodels.ros.model.edit" editorPluginID="it.unibg.robotics.resolutionmodels.ros.model.editor"
-    language="English" usedGenPackages="../../it.unibg.robotics.featuremodels.model/models/featureModel.genmodel#//featuremodels ../../it.unibg.robotics.resolutionmodels.model/models/resolutionModel.genmodel#//resolutionmodels ../../org.ros.model.ros/model/ros.genmodel#//ros ../../org.ros.model.ros/model/ros.genmodel#//smach">
+    editPluginID="org.hyperflex.resolutionmodels.ros.model.edit" editorPluginID="org.hyperflex.resolutionmodels.ros.model.editor"
+    language="English" usedGenPackages="../../org.hyperflex.featuremodels.model/models/featureModel.genmodel#//featuremodels ../../org.hyperflex.resolutionmodels.model/models/resolutionModel.genmodel#//resolutionmodels ../../org.ros.model.ros/model/ros.genmodel#//ros ../../org.ros.model.ros/model/ros.genmodel#//smach">
   <foreignModel>rosResolutionModel.ecore</foreignModel>
-  <genPackages prefix="rosresolutionmodels" basePackage="it.unibg.robotics.resolutionmodels"
+  <genPackages prefix="rosresolutionmodels" basePackage="org.hyperflex.resolutionmodels"
       disposableProviderFactory="true" childCreationExtenders="true" fileExtensions="rosresolutionmodel"
       ecorePackage="rosResolutionModel.ecore#/">
     <genClasses ecoreClass="rosResolutionModel.ecore#//ROSTransfImplementation">

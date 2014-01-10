@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -23,21 +23,21 @@
  * 
  * 
  */
-package it.unibg.robotics.resolutionmodels.rttresolutionmodels.util;
+package org.hyperflex.resolutionmodels.rttresolutionmodels.util;
 
-import it.unibg.robotics.resolutionmodels.RMAbstractTransformation;
-import it.unibg.robotics.resolutionmodels.RMRequiredComponents;
-import it.unibg.robotics.resolutionmodels.RMRequiredConnections;
-import it.unibg.robotics.resolutionmodels.RMTransfConnection;
-import it.unibg.robotics.resolutionmodels.RMTransfImplementation;
-import it.unibg.robotics.resolutionmodels.RMTransfProperty;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTConnection;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredComponents;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTRequiredConnections;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfConnection;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfImplementation;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.RTTTransfProperty;
-import it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage;
+import org.hyperflex.resolutionmodels.RMAbstractTransformation;
+import org.hyperflex.resolutionmodels.RMRequiredComponents;
+import org.hyperflex.resolutionmodels.RMRequiredConnections;
+import org.hyperflex.resolutionmodels.RMTransfConnection;
+import org.hyperflex.resolutionmodels.RMTransfImplementation;
+import org.hyperflex.resolutionmodels.RMTransfProperty;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTConnection;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredComponents;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTRequiredConnections;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfConnection;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfImplementation;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.RTTTransfProperty;
+import org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -53,7 +53,7 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see it.unibg.robotics.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage
+ * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage
  * @generated
  */
 public class rttresolutionmodelsSwitch<T> extends Switch<T> {

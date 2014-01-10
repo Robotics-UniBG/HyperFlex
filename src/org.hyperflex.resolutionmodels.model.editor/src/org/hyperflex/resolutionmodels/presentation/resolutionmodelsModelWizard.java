@@ -1,18 +1,18 @@
 /**
- * Feature Model Plugin
+ * HyperFlex Toolchain
  * 
  * Copyright (c) 2011
  * All rights reserved.
  * 
  * Luca Gherardi
+ * Department of Engineering
  * University of Bergamo
- * Dept. of Information Technology and Mathematics
  * 
  * ***********************************************************************************************
  * 
- * Author: <A HREF="mailto:luca.gherardi@unibg.it">Luca Gherardi</A>
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
  * 
- * Supervised by: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
+ * In collaboration with: <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>
  * 
  * ***********************************************************************************************
  * 
@@ -25,9 +25,6 @@
  */
 package org.hyperflex.resolutionmodels.presentation;
 
-
-import it.unibg.robotics.resolutionmodels.resolutionmodelsFactory;
-import it.unibg.robotics.resolutionmodels.resolutionmodelsPackage;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -81,6 +78,8 @@ import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
+import org.hyperflex.resolutionmodels.resolutionmodelsFactory;
+import org.hyperflex.resolutionmodels.resolutionmodelsPackage;
 import org.hyperflex.resolutionmodels.provider.ResolutionModelEditPlugin;
 
 
