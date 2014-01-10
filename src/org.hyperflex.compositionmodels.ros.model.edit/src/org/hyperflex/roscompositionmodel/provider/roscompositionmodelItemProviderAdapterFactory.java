@@ -26,16 +26,6 @@
  */
 package org.hyperflex.roscompositionmodel.provider;
 
-import org.hyperflex.compositionmodel.ComponentProperty;
-import org.hyperflex.compositionmodel.Composite;
-import org.hyperflex.compositionmodel.compositionmodelPackage;
-
-import org.hyperflex.compositionmodel.util.compositionmodelSwitch;
-
-import org.hyperflex.roscompositionmodel.roscompositionmodelFactory;
-
-import org.hyperflex.roscompositionmodel.util.roscompositionmodelAdapterFactory;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -43,15 +33,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.emf.edit.command.CommandParameter;
-
 import org.eclipse.emf.edit.domain.EditingDomain;
-
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -64,6 +49,11 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.hyperflex.compositionmodel.Composite;
+import org.hyperflex.compositionmodel.compositionmodelPackage;
+import org.hyperflex.compositionmodel.util.compositionmodelSwitch;
+import org.hyperflex.roscompositionmodel.roscompositionmodelFactory;
+import org.hyperflex.roscompositionmodel.util.roscompositionmodelAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

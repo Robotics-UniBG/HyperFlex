@@ -26,13 +26,10 @@
  */
 package org.hyperflex.roscompositionmodel.provider;
 
-import org.hyperflex.compositionmodel.provider.CompositionModelEditPlugin;
-
-import org.hyperflex.roscomponentmodel.provider.RosComponentModelEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.hyperflex.compositionmodel.provider.CompositionModelEditPlugin;
+import org.hyperflex.roscomponentmodel.provider.RosComponentModelEditPlugin;
 
 /**
  * This is the central singleton for the RosCompositionModel edit plugin.
