@@ -17,8 +17,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="OrocosConnection" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OrocosConnectionPolicy" abstract="true"
-      eSuperTypes="#//OrocosConnection">
+  <eClassifiers xsi:type="ecore:EClass" name="OrocosConnectionPolicy" eSuperTypes="#//OrocosConnection">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EEnum ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//ConnectionType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lockPolicy" lowerBound="1"
         eType="ecore:EEnum ../../org.hyperflex.componentmodels.orocos.model/models/orocosComponentModel.ecore#//LockPolicy"/>

@@ -82,6 +82,7 @@ public class rttresolutionmodelsFactoryImpl extends EFactoryImpl implements rttr
 			case rttresolutionmodelsPackage.OROCOS_TRANSF_IMPLEMENTATION: return createOrocosTransfImplementation();
 			case rttresolutionmodelsPackage.OROCOS_TRANSF_PROPERTY: return createOrocosTransfProperty();
 			case rttresolutionmodelsPackage.OROCOS_TRANSF_CONNECTION: return createOrocosTransfConnection();
+			case rttresolutionmodelsPackage.OROCOS_CONNECTION_POLICY: return createOrocosConnectionPolicy();
 			case rttresolutionmodelsPackage.OROCOS_PEERS_CONNECTION: return createOrocosPeersConnection();
 			case rttresolutionmodelsPackage.OROCOS_REQUIRED_ELEMENTS: return createOrocosRequiredElements();
 			case rttresolutionmodelsPackage.OROCOS_TEMPLATE_SYSTEM_MODEL: return createOrocosTemplateSystemModel();
@@ -118,6 +119,16 @@ public class rttresolutionmodelsFactoryImpl extends EFactoryImpl implements rttr
 	public OrocosTransfConnection createOrocosTransfConnection() {
 		OrocosTransfConnectionImpl orocosTransfConnection = new OrocosTransfConnectionImpl();
 		return orocosTransfConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OrocosConnectionPolicy createOrocosConnectionPolicy() {
+		OrocosConnectionPolicyImpl orocosConnectionPolicy = new OrocosConnectionPolicyImpl();
+		return orocosConnectionPolicy;
 	}
 
 	/**

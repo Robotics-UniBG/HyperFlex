@@ -505,7 +505,7 @@ public class rttresolutionmodelsPackageImpl extends EPackageImpl implements rttr
 		initEClass(orocosConnectionEClass, OrocosConnection.class, "OrocosConnection", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOrocosConnection_Name(), ecorePackage.getEString(), "name", null, 1, 1, OrocosConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(orocosConnectionPolicyEClass, OrocosConnectionPolicy.class, "OrocosConnectionPolicy", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(orocosConnectionPolicyEClass, OrocosConnectionPolicy.class, "OrocosConnectionPolicy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOrocosConnectionPolicy_Type(), theorocoscomponentmodelPackage.getConnectionType(), "type", null, 1, 1, OrocosConnectionPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrocosConnectionPolicy_LockPolicy(), theorocoscomponentmodelPackage.getLockPolicy(), "lockPolicy", null, 1, 1, OrocosConnectionPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrocosConnectionPolicy_BufferSize(), ecorePackage.getEShort(), "bufferSize", null, 1, 1, OrocosConnectionPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

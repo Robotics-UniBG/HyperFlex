@@ -49,7 +49,7 @@ import org.hyperflex.orocoscomponentmodel.OutputDataPort;
  * </p>
  *
  * @see org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPackage#getOrocosConnectionPolicy()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface OrocosConnectionPolicy extends OrocosConnection {

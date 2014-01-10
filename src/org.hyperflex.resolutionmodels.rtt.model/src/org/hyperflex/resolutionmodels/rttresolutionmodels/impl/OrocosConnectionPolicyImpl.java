@@ -59,7 +59,7 @@ import org.hyperflex.resolutionmodels.rttresolutionmodels.rttresolutionmodelsPac
  *
  * @generated
  */
-public abstract class OrocosConnectionPolicyImpl extends OrocosConnectionImpl implements OrocosConnectionPolicy {
+public class OrocosConnectionPolicyImpl extends OrocosConnectionImpl implements OrocosConnectionPolicy {
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->

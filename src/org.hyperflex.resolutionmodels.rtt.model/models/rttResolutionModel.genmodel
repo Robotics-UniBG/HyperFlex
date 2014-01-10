@@ -24,7 +24,7 @@
     <genClasses image="false" ecoreClass="rttResolutionModel.ecore#//OrocosConnection">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rttResolutionModel.ecore#//OrocosConnection/name"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="rttResolutionModel.ecore#//OrocosConnectionPolicy">
+    <genClasses ecoreClass="rttResolutionModel.ecore#//OrocosConnectionPolicy">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rttResolutionModel.ecore#//OrocosConnectionPolicy/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rttResolutionModel.ecore#//OrocosConnectionPolicy/lockPolicy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rttResolutionModel.ecore#//OrocosConnectionPolicy/bufferSize"/>

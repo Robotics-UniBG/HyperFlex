@@ -72,6 +72,15 @@ public interface rttresolutionmodelsFactory extends EFactory {
 	OrocosTransfConnection createOrocosTransfConnection();
 
 	/**
+	 * Returns a new object of class '<em>Orocos Connection Policy</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Orocos Connection Policy</em>'.
+	 * @generated
+	 */
+	OrocosConnectionPolicy createOrocosConnectionPolicy();
+
+	/**
 	 * Returns a new object of class '<em>Orocos Peers Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

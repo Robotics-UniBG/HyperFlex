@@ -53,4 +53,31 @@
    </extension>
 
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated rttResolutionModel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.hyperflex.resolutionmodels.rttresolutionmodels.presentation.rttresolutionmodelsModelWizardID"
+            name="%_UI_rttresolutionmodelsModelWizard_label"
+            class="org.hyperflex.resolutionmodels.rttresolutionmodels.presentation.rttresolutionmodelsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/rttresolutionmodelsModelFile.gif">
+         <description>%_UI_rttresolutionmodelsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated rttResolutionModel -->
+      <editor
+            id="org.hyperflex.resolutionmodels.rttresolutionmodels.presentation.rttresolutionmodelsEditorID"
+            name="%_UI_rttresolutionmodelsEditor_label"
+            icon="icons/full/obj16/rttresolutionmodelsModelFile.gif"
+            extensions="rttresolutionmodel"
+            class="org.hyperflex.resolutionmodels.rttresolutionmodels.presentation.rttresolutionmodelsEditor"
+            contributorClass="org.hyperflex.resolutionmodels.rttresolutionmodels.presentation.rttresolutionmodelsActionBarContributor">
+      </editor>
+   </extension>
 </plugin>

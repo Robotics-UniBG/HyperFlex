@@ -182,6 +182,29 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rttresolutionmodels.OrocosConnectionPolicy} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OrocosConnectionPolicyItemProvider orocosConnectionPolicyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rttresolutionmodels.OrocosConnectionPolicy}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOrocosConnectionPolicyAdapter() {
+		if (orocosConnectionPolicyItemProvider == null) {
+			orocosConnectionPolicyItemProvider = new OrocosConnectionPolicyItemProvider(this);
+		}
+
+		return orocosConnectionPolicyItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rttresolutionmodels.OrocosPeersConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -352,6 +375,7 @@ public class rttresolutionmodelsItemProviderAdapterFactory extends rttresolution
 		if (orocosTransfImplementationItemProvider != null) orocosTransfImplementationItemProvider.dispose();
 		if (orocosTransfPropertyItemProvider != null) orocosTransfPropertyItemProvider.dispose();
 		if (orocosTransfConnectionItemProvider != null) orocosTransfConnectionItemProvider.dispose();
+		if (orocosConnectionPolicyItemProvider != null) orocosConnectionPolicyItemProvider.dispose();
 		if (orocosPeersConnectionItemProvider != null) orocosPeersConnectionItemProvider.dispose();
 		if (orocosRequiredElementsItemProvider != null) orocosRequiredElementsItemProvider.dispose();
 		if (orocosTemplateSystemModelItemProvider != null) orocosTemplateSystemModelItemProvider.dispose();

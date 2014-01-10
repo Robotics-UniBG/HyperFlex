@@ -177,6 +177,11 @@ public class OrocosTransfConnectionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(rttresolutionmodelsPackage.Literals.OROCOS_TRANSF_CONNECTION__NEW_CONNECTIONS,
+				 rttresolutionmodelsFactory.eINSTANCE.createOrocosConnectionPolicy()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(rttresolutionmodelsPackage.Literals.OROCOS_TRANSF_CONNECTION__NEW_CONNECTIONS,
 				 rttresolutionmodelsFactory.eINSTANCE.createOrocosPeersConnection()));
 	}
 
