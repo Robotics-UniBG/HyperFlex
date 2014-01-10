@@ -464,11 +464,11 @@
   <nodes
       name="Producer1"
       figure="Producer1Figure"
-      affixedParentSide="WEST"/>
+      affixedParentSide="EAST"/>
   <nodes
       name="Consumer1"
       figure="Consumer1Figure"
-      affixedParentSide="EAST"/>
+      affixedParentSide="WEST"/>
   <nodes
       name="Channel1"
       figure="Channel1Figure"/>
@@ -478,11 +478,11 @@
   <nodes
       name="Producer2"
       figure="Producer2Figure"
-      affixedParentSide="WEST"/>
+      affixedParentSide="EAST"/>
   <nodes
       name="Consumer2"
       figure="Consumer2Figure"
-      affixedParentSide="EAST"/>
+      affixedParentSide="WEST"/>
   <connections
       name="ConsumerChannelConnection"
       figure="ConsumerChannelConnectionFigure"/>

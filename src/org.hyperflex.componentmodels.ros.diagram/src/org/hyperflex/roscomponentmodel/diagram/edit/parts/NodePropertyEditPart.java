@@ -4,6 +4,7 @@ import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -273,6 +274,12 @@ public class NodePropertyEditPart extends ShapeNodeEditPart {
 			fFigurePropertiesNameLabel = new WrappingLabel();
 
 			fFigurePropertiesNameLabel.setText("<É>");
+			fFigurePropertiesNameLabel.setPreferredSize(new Dimension(
+					getMapMode().DPtoLP(100), getMapMode().DPtoLP(20)));
+			fFigurePropertiesNameLabel.setMaximumSize(new Dimension(
+					getMapMode().DPtoLP(1000), getMapMode().DPtoLP(20)));
+			fFigurePropertiesNameLabel.setMinimumSize(new Dimension(
+					getMapMode().DPtoLP(100), getMapMode().DPtoLP(20)));
 
 			this.add(fFigurePropertiesNameLabel);
 

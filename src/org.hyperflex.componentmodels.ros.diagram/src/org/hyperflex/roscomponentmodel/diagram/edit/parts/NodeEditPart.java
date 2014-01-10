@@ -156,7 +156,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 		}
 		if (childEditPart instanceof NodeMsgProducerEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.WEST);
+					PositionConstants.EAST);
 			getBorderedFigure().getBorderItemContainer().add(
 					((NodeMsgProducerEditPart) childEditPart).getFigure(),
 					locator);
@@ -164,7 +164,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 		}
 		if (childEditPart instanceof NodeMsgConsumerEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.EAST);
+					PositionConstants.WEST);
 			getBorderedFigure().getBorderItemContainer().add(
 					((NodeMsgConsumerEditPart) childEditPart).getFigure(),
 					locator);
@@ -172,7 +172,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 		}
 		if (childEditPart instanceof NodeSrvProducerEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.WEST);
+					PositionConstants.EAST);
 			getBorderedFigure().getBorderItemContainer().add(
 					((NodeSrvProducerEditPart) childEditPart).getFigure(),
 					locator);
@@ -180,7 +180,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 		}
 		if (childEditPart instanceof NodeSrvConsumerEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.EAST);
+					PositionConstants.WEST);
 			getBorderedFigure().getBorderItemContainer().add(
 					((NodeSrvConsumerEditPart) childEditPart).getFigure(),
 					locator);

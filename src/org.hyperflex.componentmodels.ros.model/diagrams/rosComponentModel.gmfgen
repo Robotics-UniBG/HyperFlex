@@ -91,7 +91,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="PropertiesFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PropertiesFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePropertiesNameLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PropertiesFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setOutline(false);&#xA;this.setFill(false);&#xA;this.setOpaque(false);&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigurePropertiesNameLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigurePropertiesNameLabel.setText(&quot;&lt;…>&quot;);&#xA;&#xA;this.add(fFigurePropertiesNameLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePropertiesNameLabel() {&#xA;&#x9;&#x9;return fFigurePropertiesNameLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PropertiesFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigurePropertiesNameLabel; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PropertiesFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setOutline(false);&#xA;this.setFill(false);&#xA;this.setOpaque(false);&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigurePropertiesNameLabel = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigurePropertiesNameLabel.setText(&quot;&lt;…>&quot;);&#xA;fFigurePropertiesNameLabel.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(100)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;fFigurePropertiesNameLabel.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(1000)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;fFigurePropertiesNameLabel.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(100)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#xA;this.add(fFigurePropertiesNameLabel);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigurePropertiesNameLabel() {&#xA;&#x9;&#x9;return fFigurePropertiesNameLabel;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet>
         <metaClass
             href="../models/rosComponentModel.genmodel#//roscomponentmodel/NodeProperty"/>
@@ -129,7 +129,7 @@
         graphicalNodeEditPolicyClassName="NodeMsgProducerGraphicalNodeEditPolicy"
         createCommandClassName="NodeMsgProducerCreateCommand"
         containers="//@diagram/@childNodes.0"
-        preferredSideName="WEST">
+        preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -146,6 +146,9 @@
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="20"
             height="20"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"
+            resizeHandles="16"/>
       </viewmap>
       <modelFacet>
         <metaClass
@@ -166,7 +169,7 @@
         graphicalNodeEditPolicyClassName="NodeMsgConsumerGraphicalNodeEditPolicy"
         createCommandClassName="NodeMsgConsumerCreateCommand"
         containers="//@diagram/@childNodes.0"
-        preferredSideName="EAST">
+        preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -183,6 +186,9 @@
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="20"
             height="20"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"
+            resizeHandles="8"/>
       </viewmap>
       <modelFacet>
         <metaClass
@@ -203,7 +209,7 @@
         graphicalNodeEditPolicyClassName="NodeSrvProducerGraphicalNodeEditPolicy"
         createCommandClassName="NodeSrvProducerCreateCommand"
         containers="//@diagram/@childNodes.0"
-        preferredSideName="WEST">
+        preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -220,6 +226,9 @@
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="20"
             height="20"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"
+            resizeHandles="16"/>
       </viewmap>
       <modelFacet>
         <metaClass
@@ -240,7 +249,7 @@
         graphicalNodeEditPolicyClassName="NodeSrvConsumerGraphicalNodeEditPolicy"
         createCommandClassName="NodeSrvConsumerCreateCommand"
         containers="//@diagram/@childNodes.0"
-        preferredSideName="EAST">
+        preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -257,6 +266,9 @@
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="20"
             height="20"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"
+            resizeHandles="8"/>
       </viewmap>
       <modelFacet>
         <metaClass
@@ -327,7 +339,7 @@
         graphicalNodeEditPolicyClassName="CompositeMsgProducerGraphicalNodeEditPolicy"
         createCommandClassName="CompositeMsgProducerCreateCommand"
         containers="//@diagram/@childNodes.6"
-        preferredSideName="WEST">
+        preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -344,6 +356,9 @@
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="20"
             height="20"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"
+            resizeHandles="16"/>
       </viewmap>
       <modelFacet>
         <metaClass
@@ -364,7 +379,7 @@
         graphicalNodeEditPolicyClassName="CompositeMsgConsumerGraphicalNodeEditPolicy"
         createCommandClassName="CompositeMsgConsumerCreateCommand"
         containers="//@diagram/@childNodes.6"
-        preferredSideName="EAST">
+        preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -381,6 +396,9 @@
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="20"
             height="20"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"
+            resizeHandles="8"/>
       </viewmap>
       <modelFacet>
         <metaClass
@@ -401,7 +419,7 @@
         graphicalNodeEditPolicyClassName="CompositeSrvProducerGraphicalNodeEditPolicy"
         createCommandClassName="CompositeSrvProducerCreateCommand"
         containers="//@diagram/@childNodes.6"
-        preferredSideName="WEST">
+        preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -418,6 +436,9 @@
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="20"
             height="20"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"
+            resizeHandles="16"/>
       </viewmap>
       <modelFacet>
         <metaClass
@@ -438,7 +459,7 @@
         graphicalNodeEditPolicyClassName="CompositeSrvConsumerGraphicalNodeEditPolicy"
         createCommandClassName="CompositeSrvConsumerCreateCommand"
         containers="//@diagram/@childNodes.6"
-        preferredSideName="EAST">
+        preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -455,6 +476,9 @@
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="20"
             height="20"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"
+            resizeHandles="8"/>
       </viewmap>
       <modelFacet>
         <metaClass
@@ -475,7 +499,7 @@
         graphicalNodeEditPolicyClassName="CompositeMsgProducer2GraphicalNodeEditPolicy"
         createCommandClassName="CompositeMsgProducer2CreateCommand"
         containers="//@diagram/@topLevelNodes.0"
-        preferredSideName="WEST">
+        preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -492,6 +516,9 @@
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="20"
             height="20"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"
+            resizeHandles="16"/>
       </viewmap>
       <modelFacet>
         <metaClass
@@ -512,7 +539,7 @@
         graphicalNodeEditPolicyClassName="CompositeMsgConsumer2GraphicalNodeEditPolicy"
         createCommandClassName="CompositeMsgConsumer2CreateCommand"
         containers="//@diagram/@topLevelNodes.0"
-        preferredSideName="EAST">
+        preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -529,6 +556,9 @@
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="20"
             height="20"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"
+            resizeHandles="8"/>
       </viewmap>
       <modelFacet>
         <metaClass
@@ -602,7 +632,7 @@
         graphicalNodeEditPolicyClassName="CompositeSrvProducer2GraphicalNodeEditPolicy"
         createCommandClassName="CompositeSrvProducer2CreateCommand"
         containers="//@diagram/@topLevelNodes.0"
-        preferredSideName="WEST">
+        preferredSideName="EAST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -619,6 +649,9 @@
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="20"
             height="20"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"
+            resizeHandles="16"/>
       </viewmap>
       <modelFacet>
         <metaClass
@@ -639,7 +672,7 @@
         graphicalNodeEditPolicyClassName="CompositeSrvConsumer2GraphicalNodeEditPolicy"
         createCommandClassName="CompositeSrvConsumer2CreateCommand"
         containers="//@diagram/@topLevelNodes.0"
-        preferredSideName="EAST">
+        preferredSideName="WEST">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -656,6 +689,9 @@
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="20"
             height="20"/>
+        <attributes
+            xsi:type="gmfgen:ResizeConstraints"
+            resizeHandles="8"/>
       </viewmap>
       <modelFacet>
         <metaClass

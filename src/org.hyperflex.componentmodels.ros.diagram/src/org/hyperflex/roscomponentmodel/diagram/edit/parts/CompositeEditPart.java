@@ -175,7 +175,7 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 		}
 		if (childEditPart instanceof CompositeMsgProducer2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.WEST);
+					PositionConstants.EAST);
 			getBorderedFigure()
 					.getBorderItemContainer()
 					.add(((CompositeMsgProducer2EditPart) childEditPart)
@@ -185,7 +185,7 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 		}
 		if (childEditPart instanceof CompositeMsgConsumer2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.EAST);
+					PositionConstants.WEST);
 			getBorderedFigure()
 					.getBorderItemContainer()
 					.add(((CompositeMsgConsumer2EditPart) childEditPart)
@@ -195,7 +195,7 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 		}
 		if (childEditPart instanceof CompositeSrvProducer2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.WEST);
+					PositionConstants.EAST);
 			getBorderedFigure()
 					.getBorderItemContainer()
 					.add(((CompositeSrvProducer2EditPart) childEditPart)
@@ -205,7 +205,7 @@ public class CompositeEditPart extends AbstractBorderedShapeEditPart {
 		}
 		if (childEditPart instanceof CompositeSrvConsumer2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.EAST);
+					PositionConstants.WEST);
 			getBorderedFigure()
 					.getBorderItemContainer()
 					.add(((CompositeSrvConsumer2EditPart) childEditPart)

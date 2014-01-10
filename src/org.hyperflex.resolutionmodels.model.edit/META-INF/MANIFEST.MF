@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.hyperflex.resolutionmodels.model.edit;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: org.hyperflex.resolutionmodels.provider.ResolutionModelEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.hyperflex.resolutionmodels.provider
+Require-Bundle: org.eclipse.core.runtime,
+ org.hyperflex.resolutionmodels.model;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport,
+ org.hyperflex.featuremodels.model;bundle-version="1.0.0",
+ org.hyperflex.featuremodels.model.edit;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
