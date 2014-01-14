@@ -1,3 +1,29 @@
+/*
+ * HyperFlex Toolchain
+ * 
+ * Copyright (c) 2013
+ * All rights reserved.
+ * 
+ * Luca Gherardi
+ * University of Bergamo
+ * Department of Engineering
+ * 
+ * ***********************************************************************************************
+ * 
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
+ * 
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, Department of Engineering
+ * 
+ * ***********************************************************************************************
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * 
+ */
 package org.hyperflex.compositionmodel.diagram.edit.parts;
 
 import java.util.ArrayList;
@@ -27,18 +53,18 @@ import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
-import org.hyperflex.compositionmodel.diagram.edit.policies.ROSMsgConsumerItemSemanticEditPolicy;
+import org.hyperflex.compositionmodel.diagram.edit.policies.SystemRequiredInterf2ItemSemanticEditPolicy;
 import org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes;
 
 /**
  * @generated
  */
-public class ROSMsgConsumerEditPart extends AbstractBorderItemEditPart {
+public class SystemRequiredInterf2EditPart extends AbstractBorderItemEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3014;
+	public static final int VISUAL_ID = 3002;
 
 	/**
 	 * @generated
@@ -53,7 +79,7 @@ public class ROSMsgConsumerEditPart extends AbstractBorderItemEditPart {
 	/**
 	 * @generated
 	 */
-	public ROSMsgConsumerEditPart(View view) {
+	public SystemRequiredInterf2EditPart(View view) {
 		super(view);
 	}
 
@@ -65,7 +91,7 @@ public class ROSMsgConsumerEditPart extends AbstractBorderItemEditPart {
 		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE,
 				getPrimaryDragEditPolicy());
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new ROSMsgConsumerItemSemanticEditPolicy());
+				new SystemRequiredInterf2ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -199,8 +225,9 @@ public class ROSMsgConsumerEditPart extends AbstractBorderItemEditPart {
 	 * @generated
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(CompositionModelElementTypes.Connection_4002);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(CompositionModelElementTypes.Connection_4001);
+		types.add(CompositionModelElementTypes.SystemRequiredInterfExposed_4002);
 		return types;
 	}
 
@@ -210,14 +237,23 @@ public class ROSMsgConsumerEditPart extends AbstractBorderItemEditPart {
 	public List<IElementType> getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof SystemProvidedInterfEditPart) {
-			types.add(CompositionModelElementTypes.Connection_4002);
+		if (targetEditPart instanceof SystemProvidedInterf2EditPart) {
+			types.add(CompositionModelElementTypes.Connection_4001);
 		}
 		if (targetEditPart instanceof SystemCompositeProvidedInterfEditPart) {
-			types.add(CompositionModelElementTypes.Connection_4002);
+			types.add(CompositionModelElementTypes.Connection_4001);
 		}
-		if (targetEditPart instanceof ROSMsgProducerEditPart) {
-			types.add(CompositionModelElementTypes.Connection_4002);
+		if (targetEditPart instanceof SystemProvidedInterfEditPart) {
+			types.add(CompositionModelElementTypes.Connection_4001);
+		}
+		if (targetEditPart instanceof org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterf2EditPart) {
+			types.add(CompositionModelElementTypes.SystemRequiredInterfExposed_4002);
+		}
+		if (targetEditPart instanceof SystemCompositeRequiredInterfEditPart) {
+			types.add(CompositionModelElementTypes.SystemRequiredInterfExposed_4002);
+		}
+		if (targetEditPart instanceof SystemRequiredInterfEditPart) {
+			types.add(CompositionModelElementTypes.SystemRequiredInterfExposed_4002);
 		}
 		return types;
 	}
@@ -227,10 +263,34 @@ public class ROSMsgConsumerEditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == CompositionModelElementTypes.Connection_4002) {
-			types.add(CompositionModelElementTypes.SystemProvidedInterf_3007);
-			types.add(CompositionModelElementTypes.SystemCompositeProvidedInterf_3010);
-			types.add(CompositionModelElementTypes.ROSMsgProducer_3013);
+		if (relationshipType == CompositionModelElementTypes.Connection_4001) {
+			types.add(CompositionModelElementTypes.SystemProvidedInterf_3001);
+			types.add(CompositionModelElementTypes.SystemCompositeProvidedInterf_3004);
+			types.add(CompositionModelElementTypes.ROSMsgProducer_3007);
+		} else if (relationshipType == CompositionModelElementTypes.SystemRequiredInterfExposed_4002) {
+			types.add(CompositionModelElementTypes.SystemRequiredInterf_3002);
+			types.add(CompositionModelElementTypes.SystemCompositeRequiredInterf_3005);
+			types.add(CompositionModelElementTypes.ROSMsgConsumer_3008);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMARelTypesOnTarget() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+		types.add(CompositionModelElementTypes.SystemRequiredInterfExposed_4002);
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
+		if (relationshipType == CompositionModelElementTypes.SystemRequiredInterfExposed_4002) {
+			types.add(CompositionModelElementTypes.SystemRequiredInterf_3002);
 		}
 		return types;
 	}

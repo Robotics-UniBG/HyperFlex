@@ -161,7 +161,7 @@ public class CompositionModelDocumentProvider extends AbstractDocumentProvider
 		TransactionalEditingDomain editingDomain = DiagramEditingDomainFactory
 				.getInstance().createEditingDomain();
 		editingDomain
-				.setID("org.hyperflex.componentmodels.composition.diagram.EditingDomain"); //$NON-NLS-1$
+				.setID("org.hyperflex.compositionmodels.diagram.EditingDomain"); //$NON-NLS-1$
 		final NotificationFilter diagramResourceModifiedFilter = NotificationFilter
 				.createNotifierFilter(editingDomain.getResourceSet())
 				.and(NotificationFilter.createEventTypeFilter(Notification.ADD))

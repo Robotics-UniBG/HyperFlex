@@ -1,3 +1,29 @@
+/*
+ * HyperFlex Toolchain
+ * 
+ * Copyright (c) 2013
+ * All rights reserved.
+ * 
+ * Luca Gherardi
+ * University of Bergamo
+ * Department of Engineering
+ * 
+ * ***********************************************************************************************
+ * 
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
+ * 
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, Department of Engineering
+ * 
+ * ***********************************************************************************************
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * 
+ */
 package org.hyperflex.compositionmodel.diagram.edit.commands;
 
 import org.eclipse.core.commands.ExecutionException;
@@ -11,18 +37,18 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.compositionmodel.Composite;
-import org.hyperflex.roscompositionmodel.ROSMsgProducer;
+import org.hyperflex.compositionmodel.System;
+import org.hyperflex.compositionmodel.SystemProvidedInterf;
 
 /**
  * @generated
  */
-public class SystemProvidedInterfCreateCommand extends EditElementCommand {
+public class SystemProvidedInterf2CreateCommand extends EditElementCommand {
 
 	/**
 	 * @generated
 	 */
-	public SystemProvidedInterfCreateCommand(CreateElementRequest req) {
+	public SystemProvidedInterf2CreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
@@ -52,10 +78,10 @@ public class SystemProvidedInterfCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		ROSMsgProducer newElement = org.hyperflex.roscompositionmodel.roscompositionmodelFactory.eINSTANCE
-				.createROSMsgProducer();
+		SystemProvidedInterf newElement = org.hyperflex.compositionmodel.compositionmodelFactory.eINSTANCE
+				.createSystemProvidedInterf();
 
-		Composite owner = (Composite) getElementToEdit();
+		System owner = (System) getElementToEdit();
 		owner.getProvInterfaces().add(newElement);
 
 		doConfigure(newElement, monitor, info);
@@ -67,7 +93,7 @@ public class SystemProvidedInterfCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(ROSMsgProducer newElement,
+	protected void doConfigure(SystemProvidedInterf newElement,
 			IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())

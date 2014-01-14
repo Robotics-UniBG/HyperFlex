@@ -28,55 +28,55 @@ public class CompositionModelParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser systemName_5006Parser;
+	private IParser systemName_5003Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getSystemName_5006Parser() {
-		if (systemName_5006Parser == null) {
+	private IParser getSystemName_5003Parser() {
+		if (systemName_5003Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getSystem_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			systemName_5006Parser = parser;
+			systemName_5003Parser = parser;
 		}
-		return systemName_5006Parser;
+		return systemName_5003Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser systemCompositeName_5007Parser;
+	private IParser systemCompositeName_5001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getSystemCompositeName_5007Parser() {
-		if (systemCompositeName_5007Parser == null) {
+	private IParser getSystemCompositeName_5001Parser() {
+		if (systemCompositeName_5001Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getComposite_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			systemCompositeName_5007Parser = parser;
+			systemCompositeName_5001Parser = parser;
 		}
-		return systemCompositeName_5007Parser;
+		return systemCompositeName_5001Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser rOSCompositeName_5008Parser;
+	private IParser rOSCompositeName_5002Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getROSCompositeName_5008Parser() {
-		if (rOSCompositeName_5008Parser == null) {
+	private IParser getROSCompositeName_5002Parser() {
+		if (rOSCompositeName_5002Parser == null) {
 			EAttribute[] features = new EAttribute[] { org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getComposite_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			rOSCompositeName_5008Parser = parser;
+			rOSCompositeName_5002Parser = parser;
 		}
-		return rOSCompositeName_5008Parser;
+		return rOSCompositeName_5002Parser;
 	}
 
 	/**
@@ -103,11 +103,11 @@ public class CompositionModelParserProvider extends AbstractProvider implements
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case SystemNameEditPart.VISUAL_ID:
-			return getSystemName_5006Parser();
+			return getSystemName_5003Parser();
 		case SystemCompositeNameEditPart.VISUAL_ID:
-			return getSystemCompositeName_5007Parser();
+			return getSystemCompositeName_5001Parser();
 		case ROSCompositeNameEditPart.VISUAL_ID:
-			return getROSCompositeName_5008Parser();
+			return getROSCompositeName_5002Parser();
 		case ConnectionNameEditPart.VISUAL_ID:
 			return getConnectionName_6001Parser();
 		}

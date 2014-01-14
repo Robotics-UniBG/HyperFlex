@@ -26,7 +26,7 @@ public class SystemItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (CompositionModelElementTypes.System_2002 == req.getElementType()) {
+		if (CompositionModelElementTypes.System_2001 == req.getElementType()) {
 			return getGEFWrapper(new SystemCreateCommand(req));
 		}
 		return super.getCreateCommand(req);

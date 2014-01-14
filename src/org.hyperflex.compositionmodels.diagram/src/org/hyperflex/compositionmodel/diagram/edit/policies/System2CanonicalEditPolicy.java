@@ -22,8 +22,8 @@ import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
-import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterf2EditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterf2EditPart;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramUpdater;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelNodeDescriptor;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
@@ -74,7 +74,7 @@ public class System2CanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CompositionModelNodeDescriptor> childDescriptors = CompositionModelDiagramUpdater
-				.getSystem_2002SemanticChildren(viewObject);
+				.getSystem_2001SemanticChildren(viewObject);
 		for (CompositionModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -95,8 +95,8 @@ public class System2CanonicalEditPolicy extends CanonicalEditPolicy {
 	 */
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CompositionModelVisualIDRegistry.getVisualID(view);
-		return visualID == SystemProvidedInterfEditPart.VISUAL_ID
-				|| visualID == SystemRequiredInterfEditPart.VISUAL_ID;
+		return visualID == SystemProvidedInterf2EditPart.VISUAL_ID
+				|| visualID == SystemRequiredInterf2EditPart.VISUAL_ID;
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class System2CanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CompositionModelNodeDescriptor> childDescriptors = CompositionModelDiagramUpdater
-				.getSystem_2002SemanticChildren((View) getHost().getModel());
+				.getSystem_2001SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

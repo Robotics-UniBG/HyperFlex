@@ -18,7 +18,7 @@ public abstract class CompositionModelAbstractNavigatorItem extends
 		final Class[] supportedTypes = new Class[] { ITabbedPropertySheetPageContributor.class };
 		final ITabbedPropertySheetPageContributor propertySheetPageContributor = new ITabbedPropertySheetPageContributor() {
 			public String getContributorId() {
-				return "org.hyperflex.componentmodels.composition.diagram"; //$NON-NLS-1$
+				return "org.hyperflex.compositionmodels.diagram"; //$NON-NLS-1$
 			}
 		};
 		Platform.getAdapterManager().registerAdapters(

@@ -30,11 +30,11 @@ public class CompositionModelEditPartFactory implements EditPartFactory {
 			case SystemNameEditPart.VISUAL_ID:
 				return new SystemNameEditPart(view);
 
-			case SystemProvidedInterfEditPart.VISUAL_ID:
-				return new SystemProvidedInterfEditPart(view);
+			case SystemProvidedInterf2EditPart.VISUAL_ID:
+				return new SystemProvidedInterf2EditPart(view);
 
-			case SystemRequiredInterfEditPart.VISUAL_ID:
-				return new SystemRequiredInterfEditPart(view);
+			case SystemRequiredInterf2EditPart.VISUAL_ID:
+				return new SystemRequiredInterf2EditPart(view);
 
 			case SystemCompositeEditPart.VISUAL_ID:
 				return new SystemCompositeEditPart(view);
@@ -54,11 +54,11 @@ public class CompositionModelEditPartFactory implements EditPartFactory {
 			case ROSCompositeNameEditPart.VISUAL_ID:
 				return new ROSCompositeNameEditPart(view);
 
-			case ROSMsgProducerEditPart.VISUAL_ID:
-				return new ROSMsgProducerEditPart(view);
+			case SystemProvidedInterfEditPart.VISUAL_ID:
+				return new SystemProvidedInterfEditPart(view);
 
-			case ROSMsgConsumerEditPart.VISUAL_ID:
-				return new ROSMsgConsumerEditPart(view);
+			case SystemRequiredInterfEditPart.VISUAL_ID:
+				return new SystemRequiredInterfEditPart(view);
 
 			case SystemCompositeContainerCompartmentEditPart.VISUAL_ID:
 				return new SystemCompositeContainerCompartmentEditPart(view);
@@ -68,6 +68,12 @@ public class CompositionModelEditPartFactory implements EditPartFactory {
 
 			case ConnectionNameEditPart.VISUAL_ID:
 				return new ConnectionNameEditPart(view);
+
+			case CompositeSrvConsumerPromoteEditPart.VISUAL_ID:
+				return new CompositeSrvConsumerPromoteEditPart(view);
+
+			case CompositeSrvProducerPromoteEditPart.VISUAL_ID:
+				return new CompositeSrvProducerPromoteEditPart(view);
 
 			}
 		}

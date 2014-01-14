@@ -20,12 +20,12 @@ import org.hyperflex.compositionmodel.SystemCompositeProvidedInterf;
 import org.hyperflex.compositionmodel.SystemCompositeRequiredInterf;
 import org.hyperflex.compositionmodel.SystemProvidedInterf;
 import org.hyperflex.compositionmodel.SystemRequiredInterf;
+import org.hyperflex.compositionmodel.diagram.edit.parts.CompositeSrvConsumerPromoteEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.CompositeSrvProducerPromoteEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionNameEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeNameEditPart;
-import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
-import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.System2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeNameEditPart;
@@ -33,7 +33,9 @@ import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeProvided
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemNameEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterf2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterf2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
@@ -104,37 +106,43 @@ public class CompositionModelNavigatorLabelProvider extends LabelProvider
 		switch (CompositionModelVisualIDRegistry.getVisualID(view)) {
 		case SystemEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Diagram?http://robotics.unibg.it/compositionmodels?ArchitectureModel", CompositionModelElementTypes.ArchitectureModel_1000); //$NON-NLS-1$
+					"Navigator?Diagram?http://www.hyperflex.org/compositionmodels?ArchitectureModel", CompositionModelElementTypes.ArchitectureModel_1000); //$NON-NLS-1$
 		case System2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://robotics.unibg.it/compositionmodels?System", CompositionModelElementTypes.System_2002); //$NON-NLS-1$
-		case SystemProvidedInterfEditPart.VISUAL_ID:
+					"Navigator?TopLevelNode?http://www.hyperflex.org/compositionmodels?System", CompositionModelElementTypes.System_2001); //$NON-NLS-1$
+		case SystemProvidedInterf2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemProvidedInterf", CompositionModelElementTypes.SystemProvidedInterf_3007); //$NON-NLS-1$
-		case SystemRequiredInterfEditPart.VISUAL_ID:
+					"Navigator?Node?http://www.hyperflex.org/compositionmodels?SystemProvidedInterf", CompositionModelElementTypes.SystemProvidedInterf_3001); //$NON-NLS-1$
+		case SystemRequiredInterf2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemRequiredInterf", CompositionModelElementTypes.SystemRequiredInterf_3008); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/compositionmodels?SystemRequiredInterf", CompositionModelElementTypes.SystemRequiredInterf_3002); //$NON-NLS-1$
 		case SystemCompositeEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemComposite", CompositionModelElementTypes.SystemComposite_3009); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/compositionmodels?SystemComposite", CompositionModelElementTypes.SystemComposite_3003); //$NON-NLS-1$
 		case SystemCompositeProvidedInterfEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemCompositeProvidedInterf", CompositionModelElementTypes.SystemCompositeProvidedInterf_3010); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/compositionmodels?SystemCompositeProvidedInterf", CompositionModelElementTypes.SystemCompositeProvidedInterf_3004); //$NON-NLS-1$
 		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels?SystemCompositeRequiredInterf", CompositionModelElementTypes.SystemCompositeRequiredInterf_3011); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/compositionmodels?SystemCompositeRequiredInterf", CompositionModelElementTypes.SystemCompositeRequiredInterf_3005); //$NON-NLS-1$
 		case ROSCompositeEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels.ros?ROSComposite", CompositionModelElementTypes.ROSComposite_3012); //$NON-NLS-1$
-		case ROSMsgProducerEditPart.VISUAL_ID:
+					"Navigator?Node?http://www.hyperflex.org/compositionmodels.ros?ROSComposite", CompositionModelElementTypes.ROSComposite_3006); //$NON-NLS-1$
+		case SystemProvidedInterfEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels.ros?ROSMsgProducer", CompositionModelElementTypes.ROSMsgProducer_3013); //$NON-NLS-1$
-		case ROSMsgConsumerEditPart.VISUAL_ID:
+					"Navigator?Node?http://www.hyperflex.org/compositionmodels.ros?ROSMsgProducer", CompositionModelElementTypes.ROSMsgProducer_3007); //$NON-NLS-1$
+		case SystemRequiredInterfEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://robotics.unibg.it/compositionmodels.ros?ROSMsgConsumer", CompositionModelElementTypes.ROSMsgConsumer_3014); //$NON-NLS-1$
+					"Navigator?Node?http://www.hyperflex.org/compositionmodels.ros?ROSMsgConsumer", CompositionModelElementTypes.ROSMsgConsumer_3008); //$NON-NLS-1$
 		case ConnectionEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://robotics.unibg.it/compositionmodels?Connection", CompositionModelElementTypes.Connection_4002); //$NON-NLS-1$
+					"Navigator?Link?http://www.hyperflex.org/compositionmodels?Connection", CompositionModelElementTypes.Connection_4001); //$NON-NLS-1$
+		case CompositeSrvConsumerPromoteEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://www.hyperflex.org/compositionmodels?SystemRequiredInterf?exposed", CompositionModelElementTypes.SystemRequiredInterfExposed_4002); //$NON-NLS-1$
+		case CompositeSrvProducerPromoteEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://www.hyperflex.org/compositionmodels?SystemProvidedInterf?exposed", CompositionModelElementTypes.SystemProvidedInterfExposed_4003); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -190,25 +198,29 @@ public class CompositionModelNavigatorLabelProvider extends LabelProvider
 		case SystemEditPart.VISUAL_ID:
 			return getArchitectureModel_1000Text(view);
 		case System2EditPart.VISUAL_ID:
-			return getSystem_2002Text(view);
-		case SystemProvidedInterfEditPart.VISUAL_ID:
-			return getSystemProvidedInterf_3007Text(view);
-		case SystemRequiredInterfEditPart.VISUAL_ID:
-			return getSystemRequiredInterf_3008Text(view);
+			return getSystem_2001Text(view);
+		case SystemProvidedInterf2EditPart.VISUAL_ID:
+			return getSystemProvidedInterf_3001Text(view);
+		case SystemRequiredInterf2EditPart.VISUAL_ID:
+			return getSystemRequiredInterf_3002Text(view);
 		case SystemCompositeEditPart.VISUAL_ID:
-			return getSystemComposite_3009Text(view);
+			return getSystemComposite_3003Text(view);
 		case SystemCompositeProvidedInterfEditPart.VISUAL_ID:
-			return getSystemCompositeProvidedInterf_3010Text(view);
+			return getSystemCompositeProvidedInterf_3004Text(view);
 		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
-			return getSystemCompositeRequiredInterf_3011Text(view);
+			return getSystemCompositeRequiredInterf_3005Text(view);
 		case ROSCompositeEditPart.VISUAL_ID:
-			return getROSComposite_3012Text(view);
-		case ROSMsgProducerEditPart.VISUAL_ID:
-			return getROSMsgProducer_3013Text(view);
-		case ROSMsgConsumerEditPart.VISUAL_ID:
-			return getROSMsgConsumer_3014Text(view);
+			return getROSComposite_3006Text(view);
+		case SystemProvidedInterfEditPart.VISUAL_ID:
+			return getROSMsgProducer_3007Text(view);
+		case SystemRequiredInterfEditPart.VISUAL_ID:
+			return getROSMsgConsumer_3008Text(view);
 		case ConnectionEditPart.VISUAL_ID:
-			return getConnection_4002Text(view);
+			return getConnection_4001Text(view);
+		case CompositeSrvConsumerPromoteEditPart.VISUAL_ID:
+			return getSystemRequiredInterfExposed_4002Text(view);
+		case CompositeSrvProducerPromoteEditPart.VISUAL_ID:
+			return getSystemProvidedInterfExposed_4003Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -231,9 +243,9 @@ public class CompositionModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getSystem_2002Text(View view) {
+	private String getSystem_2001Text(View view) {
 		IParser parser = CompositionModelParserProvider.getParser(
-				CompositionModelElementTypes.System_2002,
+				CompositionModelElementTypes.System_2001,
 				view.getElement() != null ? view.getElement() : view,
 				CompositionModelVisualIDRegistry
 						.getType(SystemNameEditPart.VISUAL_ID));
@@ -243,7 +255,7 @@ public class CompositionModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			CompositionModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5006); //$NON-NLS-1$
+					"Parser was not found for label " + 5003); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -251,9 +263,108 @@ public class CompositionModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getSystemProvidedInterf_3007Text(View view) {
+	private String getSystemProvidedInterf_3001Text(View view) {
 		SystemProvidedInterf domainModelElement = (SystemProvidedInterf) view
 				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			CompositionModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getSystemRequiredInterf_3002Text(View view) {
+		SystemRequiredInterf domainModelElement = (SystemRequiredInterf) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			CompositionModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getSystemComposite_3003Text(View view) {
+		IParser parser = CompositionModelParserProvider.getParser(
+				CompositionModelElementTypes.SystemComposite_3003, view
+						.getElement() != null ? view.getElement() : view,
+				CompositionModelVisualIDRegistry
+						.getType(SystemCompositeNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			CompositionModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getSystemCompositeProvidedInterf_3004Text(View view) {
+		SystemCompositeProvidedInterf domainModelElement = (SystemCompositeProvidedInterf) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			CompositionModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3004); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getSystemCompositeRequiredInterf_3005Text(View view) {
+		SystemCompositeRequiredInterf domainModelElement = (SystemCompositeRequiredInterf) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			CompositionModelDiagramEditorPlugin.getInstance().logError(
+					"No domain element for view with visualID = " + 3005); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getROSComposite_3006Text(View view) {
+		IParser parser = CompositionModelParserProvider.getParser(
+				CompositionModelElementTypes.ROSComposite_3006, view
+						.getElement() != null ? view.getElement() : view,
+				CompositionModelVisualIDRegistry
+						.getType(ROSCompositeNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			CompositionModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getROSMsgProducer_3007Text(View view) {
+		ROSMsgProducer domainModelElement = (ROSMsgProducer) view.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
@@ -266,37 +377,8 @@ public class CompositionModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getROSMsgConsumer_3014Text(View view) {
+	private String getROSMsgConsumer_3008Text(View view) {
 		ROSMsgConsumer domainModelElement = (ROSMsgConsumer) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			CompositionModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3014); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getROSMsgProducer_3013Text(View view) {
-		ROSMsgProducer domainModelElement = (ROSMsgProducer) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			CompositionModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3013); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getSystemRequiredInterf_3008Text(View view) {
-		SystemRequiredInterf domainModelElement = (SystemRequiredInterf) view
-				.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getName();
 		} else {
@@ -309,29 +391,9 @@ public class CompositionModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getROSComposite_3012Text(View view) {
+	private String getConnection_4001Text(View view) {
 		IParser parser = CompositionModelParserProvider.getParser(
-				CompositionModelElementTypes.ROSComposite_3012, view
-						.getElement() != null ? view.getElement() : view,
-				CompositionModelVisualIDRegistry
-						.getType(ROSCompositeNameEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			CompositionModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5008); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getConnection_4002Text(View view) {
-		IParser parser = CompositionModelParserProvider.getParser(
-				CompositionModelElementTypes.Connection_4002,
+				CompositionModelElementTypes.Connection_4001,
 				view.getElement() != null ? view.getElement() : view,
 				CompositionModelVisualIDRegistry
 						.getType(ConnectionNameEditPart.VISUAL_ID));
@@ -349,51 +411,15 @@ public class CompositionModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getSystemComposite_3009Text(View view) {
-		IParser parser = CompositionModelParserProvider.getParser(
-				CompositionModelElementTypes.SystemComposite_3009, view
-						.getElement() != null ? view.getElement() : view,
-				CompositionModelVisualIDRegistry
-						.getType(SystemCompositeNameEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			CompositionModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5007); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
+	private String getSystemRequiredInterfExposed_4002Text(View view) {
+		return ""; //$NON-NLS-1$
 	}
 
 	/**
 	 * @generated
 	 */
-	private String getSystemCompositeProvidedInterf_3010Text(View view) {
-		SystemCompositeProvidedInterf domainModelElement = (SystemCompositeProvidedInterf) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			CompositionModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3010); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getSystemCompositeRequiredInterf_3011Text(View view) {
-		SystemCompositeRequiredInterf domainModelElement = (SystemCompositeRequiredInterf) view
-				.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getName();
-		} else {
-			CompositionModelDiagramEditorPlugin.getInstance().logError(
-					"No domain element for view with visualID = " + 3011); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
+	private String getSystemProvidedInterfExposed_4003Text(View view) {
+		return ""; //$NON-NLS-1$
 	}
 
 	/**

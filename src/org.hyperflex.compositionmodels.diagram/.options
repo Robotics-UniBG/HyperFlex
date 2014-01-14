@@ -1,7 +1,7 @@
-# Tracing options for the org.hyperflex.componentmodels.composition.diagram plug-in
+# Tracing options for the org.hyperflex.compositionmodels.diagram plug-in
 
 # Common issues
-org.hyperflex.componentmodels.composition.diagram/debug=false
+org.hyperflex.compositionmodels.diagram/debug=false
 
 # Visual IDs
-org.hyperflex.componentmodels.composition.diagram/debug/visualID=false
+org.hyperflex.compositionmodels.diagram/debug/visualID=false

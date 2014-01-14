@@ -322,7 +322,7 @@ public class ConnectionNameEditPart extends LabelEditPart implements
 		if (parser == null) {
 			parser = CompositionModelParserProvider
 					.getParser(
-							CompositionModelElementTypes.Connection_4002,
+							CompositionModelElementTypes.Connection_4001,
 							getParserElement(),
 							CompositionModelVisualIDRegistry
 									.getType(org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionNameEditPart.VISUAL_ID));

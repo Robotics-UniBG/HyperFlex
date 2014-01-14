@@ -15,7 +15,7 @@ public class ConnectionItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public ConnectionItemSemanticEditPolicy() {
-		super(CompositionModelElementTypes.Connection_4002);
+		super(CompositionModelElementTypes.Connection_4001);
 	}
 
 	/**

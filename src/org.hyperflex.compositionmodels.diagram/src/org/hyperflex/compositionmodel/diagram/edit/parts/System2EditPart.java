@@ -44,7 +44,7 @@ public class System2EditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2002;
+	public static final int VISUAL_ID = 2001;
 
 	/**
 	 * @generated
@@ -91,8 +91,8 @@ public class System2EditPart extends AbstractBorderedShapeEditPart {
 			protected EditPolicy createChildEditPolicy(EditPart child) {
 				View childView = (View) child.getModel();
 				switch (CompositionModelVisualIDRegistry.getVisualID(childView)) {
-				case SystemProvidedInterfEditPart.VISUAL_ID:
-				case SystemRequiredInterfEditPart.VISUAL_ID:
+				case SystemProvidedInterf2EditPart.VISUAL_ID:
+				case SystemRequiredInterf2EditPart.VISUAL_ID:
 					return new BorderItemSelectionEditPolicy();
 				}
 				EditPolicy result = child
@@ -145,20 +145,24 @@ public class System2EditPart extends AbstractBorderedShapeEditPart {
 					.getFigure());
 			return true;
 		}
-		if (childEditPart instanceof SystemProvidedInterfEditPart) {
-			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.WEST);
-			getBorderedFigure().getBorderItemContainer().add(
-					((SystemProvidedInterfEditPart) childEditPart).getFigure(),
-					locator);
-			return true;
-		}
-		if (childEditPart instanceof SystemRequiredInterfEditPart) {
+		if (childEditPart instanceof SystemProvidedInterf2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.EAST);
-			getBorderedFigure().getBorderItemContainer().add(
-					((SystemRequiredInterfEditPart) childEditPart).getFigure(),
-					locator);
+			getBorderedFigure()
+					.getBorderItemContainer()
+					.add(((SystemProvidedInterf2EditPart) childEditPart)
+							.getFigure(),
+							locator);
+			return true;
+		}
+		if (childEditPart instanceof SystemRequiredInterf2EditPart) {
+			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
+					PositionConstants.WEST);
+			getBorderedFigure()
+					.getBorderItemContainer()
+					.add(((SystemRequiredInterf2EditPart) childEditPart)
+							.getFigure(),
+							locator);
 			return true;
 		}
 		return false;
@@ -178,14 +182,16 @@ public class System2EditPart extends AbstractBorderedShapeEditPart {
 					.getFigure());
 			return true;
 		}
-		if (childEditPart instanceof SystemProvidedInterfEditPart) {
-			getBorderedFigure().getBorderItemContainer().remove(
-					((SystemProvidedInterfEditPart) childEditPart).getFigure());
+		if (childEditPart instanceof SystemProvidedInterf2EditPart) {
+			getBorderedFigure().getBorderItemContainer()
+					.remove(((SystemProvidedInterf2EditPart) childEditPart)
+							.getFigure());
 			return true;
 		}
-		if (childEditPart instanceof SystemRequiredInterfEditPart) {
-			getBorderedFigure().getBorderItemContainer().remove(
-					((SystemRequiredInterfEditPart) childEditPart).getFigure());
+		if (childEditPart instanceof SystemRequiredInterf2EditPart) {
+			getBorderedFigure().getBorderItemContainer()
+					.remove(((SystemRequiredInterf2EditPart) childEditPart)
+							.getFigure());
 			return true;
 		}
 		return false;
@@ -352,7 +358,7 @@ public class System2EditPart extends AbstractBorderedShapeEditPart {
 
 			fFigurePackageContainerNameLabel = new WrappingLabel();
 
-			fFigurePackageContainerNameLabel.setText("<?>");
+			fFigurePackageContainerNameLabel.setText("<É>");
 
 			fFigurePackageContainerNameLabel
 					.setFont(FFIGUREPACKAGECONTAINERNAMELABEL_FONT);

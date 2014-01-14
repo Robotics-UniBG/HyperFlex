@@ -32,6 +32,9 @@
 
    <extension point="org.eclipse.ui.newWizards">
       <!-- @generated rosCompositionModel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
       <wizard
             id="org.hyperflex.roscompositionmodel.presentation.roscompositionmodelModelWizardID"
             name="%_UI_roscompositionmodelModelWizard_label"

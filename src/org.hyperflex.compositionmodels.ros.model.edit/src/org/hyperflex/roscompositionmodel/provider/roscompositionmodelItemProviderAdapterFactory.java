@@ -467,21 +467,6 @@ public class roscompositionmodelItemProviderAdapterFactory extends roscompositio
 			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-			@Override
-			public Object caseComponentProperty(ComponentProperty object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(compositionmodelPackage.Literals.COMPONENT_PROPERTY__PROPERTIES,
-						 roscompositionmodelFactory.eINSTANCE.createROSComposite()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
 			protected CommandParameter createChildParameter(Object feature, Object child) {
 				return new CommandParameter(null, feature, child);
 			}

@@ -47,7 +47,7 @@ public class ROSCompositeEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3012;
+	public static final int VISUAL_ID = 3006;
 
 	/**
 	 * @generated
@@ -94,8 +94,8 @@ public class ROSCompositeEditPart extends AbstractBorderedShapeEditPart {
 			protected EditPolicy createChildEditPolicy(EditPart child) {
 				View childView = (View) child.getModel();
 				switch (CompositionModelVisualIDRegistry.getVisualID(childView)) {
-				case ROSMsgProducerEditPart.VISUAL_ID:
-				case ROSMsgConsumerEditPart.VISUAL_ID:
+				case SystemProvidedInterfEditPart.VISUAL_ID:
+				case SystemRequiredInterfEditPart.VISUAL_ID:
 					return new BorderItemSelectionEditPolicy();
 				}
 				EditPolicy result = child
@@ -140,19 +140,19 @@ public class ROSCompositeEditPart extends AbstractBorderedShapeEditPart {
 					.setLabel(getPrimaryShape().getFigurePackageNameLabel());
 			return true;
 		}
-		if (childEditPart instanceof ROSMsgProducerEditPart) {
-			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.WEST);
-			getBorderedFigure().getBorderItemContainer().add(
-					((ROSMsgProducerEditPart) childEditPart).getFigure(),
-					locator);
-			return true;
-		}
-		if (childEditPart instanceof ROSMsgConsumerEditPart) {
+		if (childEditPart instanceof SystemProvidedInterfEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.EAST);
 			getBorderedFigure().getBorderItemContainer().add(
-					((ROSMsgConsumerEditPart) childEditPart).getFigure(),
+					((SystemProvidedInterfEditPart) childEditPart).getFigure(),
+					locator);
+			return true;
+		}
+		if (childEditPart instanceof SystemRequiredInterfEditPart) {
+			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
+					PositionConstants.WEST);
+			getBorderedFigure().getBorderItemContainer().add(
+					((SystemRequiredInterfEditPart) childEditPart).getFigure(),
 					locator);
 			return true;
 		}
@@ -166,14 +166,14 @@ public class ROSCompositeEditPart extends AbstractBorderedShapeEditPart {
 		if (childEditPart instanceof ROSCompositeNameEditPart) {
 			return true;
 		}
-		if (childEditPart instanceof ROSMsgProducerEditPart) {
+		if (childEditPart instanceof SystemProvidedInterfEditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((ROSMsgProducerEditPart) childEditPart).getFigure());
+					((SystemProvidedInterfEditPart) childEditPart).getFigure());
 			return true;
 		}
-		if (childEditPart instanceof ROSMsgConsumerEditPart) {
+		if (childEditPart instanceof SystemRequiredInterfEditPart) {
 			getBorderedFigure().getBorderItemContainer().remove(
-					((ROSMsgConsumerEditPart) childEditPart).getFigure());
+					((SystemRequiredInterfEditPart) childEditPart).getFigure());
 			return true;
 		}
 		return false;
@@ -362,7 +362,7 @@ public class ROSCompositeEditPart extends AbstractBorderedShapeEditPart {
 
 			fFigurePackageNameLabel = new WrappingLabel();
 
-			fFigurePackageNameLabel.setText("<?>");
+			fFigurePackageNameLabel.setText("<É>");
 
 			fFigurePackageNameLabel.setFont(FFIGUREPACKAGENAMELABEL_FONT);
 

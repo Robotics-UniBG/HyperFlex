@@ -16,18 +16,18 @@ public class SystemCompositeContainerCompartmentItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public SystemCompositeContainerCompartmentItemSemanticEditPolicy() {
-		super(CompositionModelElementTypes.System_2002);
+		super(CompositionModelElementTypes.System_2001);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (CompositionModelElementTypes.SystemComposite_3009 == req
+		if (CompositionModelElementTypes.SystemComposite_3003 == req
 				.getElementType()) {
 			return getGEFWrapper(new SystemCompositeCreateCommand(req));
 		}
-		if (CompositionModelElementTypes.ROSComposite_3012 == req
+		if (CompositionModelElementTypes.ROSComposite_3006 == req
 				.getElementType()) {
 			return getGEFWrapper(new ROSCompositeCreateCommand(req));
 		}

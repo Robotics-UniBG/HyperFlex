@@ -13,19 +13,20 @@ import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages;
 import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
+import org.hyperflex.compositionmodel.diagram.edit.parts.CompositeSrvConsumerPromoteEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.CompositeSrvProducerPromoteEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
-import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
-import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.System2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterf2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterf2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
-import org.hyperflex.roscompositionmodel.roscompositionmodelPackage;
 
 /**
  * @generated
@@ -58,51 +59,66 @@ public class CompositionModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType ArchitectureModel_1000 = getElementType("org.hyperflex.componentmodels.composition.diagram.ArchitectureModel_1000"); //$NON-NLS-1$
+	public static final IElementType ArchitectureModel_1000 = getElementType("org.hyperflex.compositionmodels.diagram.ArchitectureModel_1000"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType System_2002 = getElementType("org.hyperflex.componentmodels.composition.diagram.System_2002"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType SystemProvidedInterf_3007 = getElementType("org.hyperflex.componentmodels.composition.diagram.SystemProvidedInterf_3007"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType SystemRequiredInterf_3008 = getElementType("org.hyperflex.componentmodels.composition.diagram.SystemRequiredInterf_3008"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType SystemComposite_3009 = getElementType("org.hyperflex.componentmodels.composition.diagram.SystemComposite_3009"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType SystemCompositeProvidedInterf_3010 = getElementType("org.hyperflex.componentmodels.composition.diagram.SystemCompositeProvidedInterf_3010"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType SystemCompositeRequiredInterf_3011 = getElementType("org.hyperflex.componentmodels.composition.diagram.SystemCompositeRequiredInterf_3011"); //$NON-NLS-1$
+	public static final IElementType System_2001 = getElementType("org.hyperflex.compositionmodels.diagram.System_2001"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType ROSComposite_3012 = getElementType("org.hyperflex.componentmodels.composition.diagram.ROSComposite_3012"); //$NON-NLS-1$
+	public static final IElementType SystemProvidedInterf_3001 = getElementType("org.hyperflex.compositionmodels.diagram.SystemProvidedInterf_3001"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType ROSMsgProducer_3013 = getElementType("org.hyperflex.componentmodels.composition.diagram.ROSMsgProducer_3013"); //$NON-NLS-1$
+	public static final IElementType SystemRequiredInterf_3002 = getElementType("org.hyperflex.compositionmodels.diagram.SystemRequiredInterf_3002"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType ROSMsgConsumer_3014 = getElementType("org.hyperflex.componentmodels.composition.diagram.ROSMsgConsumer_3014"); //$NON-NLS-1$
+	public static final IElementType SystemComposite_3003 = getElementType("org.hyperflex.compositionmodels.diagram.SystemComposite_3003"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType Connection_4002 = getElementType("org.hyperflex.componentmodels.composition.diagram.Connection_4002"); //$NON-NLS-1$
+	public static final IElementType SystemCompositeProvidedInterf_3004 = getElementType("org.hyperflex.compositionmodels.diagram.SystemCompositeProvidedInterf_3004"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType SystemCompositeRequiredInterf_3005 = getElementType("org.hyperflex.compositionmodels.diagram.SystemCompositeRequiredInterf_3005"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType ROSComposite_3006 = getElementType("org.hyperflex.compositionmodels.diagram.ROSComposite_3006"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType ROSMsgProducer_3007 = getElementType("org.hyperflex.compositionmodels.diagram.ROSMsgProducer_3007"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType ROSMsgConsumer_3008 = getElementType("org.hyperflex.compositionmodels.diagram.ROSMsgConsumer_3008"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Connection_4001 = getElementType("org.hyperflex.compositionmodels.diagram.Connection_4001"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType SystemRequiredInterfExposed_4002 = getElementType("org.hyperflex.compositionmodels.diagram.SystemRequiredInterfExposed_4002"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType SystemProvidedInterfExposed_4003 = getElementType("org.hyperflex.compositionmodels.diagram.SystemProvidedInterfExposed_4003"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -148,54 +164,64 @@ public class CompositionModelElementTypes {
 							.getArchitectureModel());
 
 			elements.put(
-					System_2002,
+					System_2001,
 					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getSystem());
 
 			elements.put(
-					SystemProvidedInterf_3007,
+					SystemProvidedInterf_3001,
 					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getSystemProvidedInterf());
 
 			elements.put(
-					SystemRequiredInterf_3008,
+					SystemRequiredInterf_3002,
 					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getSystemRequiredInterf());
 
 			elements.put(
-					SystemComposite_3009,
+					SystemComposite_3003,
 					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getSystemComposite());
 
 			elements.put(
-					SystemCompositeProvidedInterf_3010,
+					SystemCompositeProvidedInterf_3004,
 					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getSystemCompositeProvidedInterf());
 
 			elements.put(
-					SystemCompositeRequiredInterf_3011,
+					SystemCompositeRequiredInterf_3005,
 					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getSystemCompositeRequiredInterf());
 
 			elements.put(
-					ROSComposite_3012,
-					roscompositionmodelPackage.eINSTANCE
+					ROSComposite_3006,
+					org.hyperflex.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
 							.getROSComposite());
 
 			elements.put(
-					ROSMsgProducer_3013,
-					roscompositionmodelPackage.eINSTANCE
+					ROSMsgProducer_3007,
+					org.hyperflex.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
 							.getROSMsgProducer());
 
 			elements.put(
-					ROSMsgConsumer_3014,
-					roscompositionmodelPackage.eINSTANCE
+					ROSMsgConsumer_3008,
+					org.hyperflex.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
 							.getROSMsgConsumer());
 
 			elements.put(
-					Connection_4002,
+					Connection_4001,
 					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 							.getConnection());
+
+			elements.put(
+					SystemRequiredInterfExposed_4002,
+					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
+							.getSystemRequiredInterf_Exposed());
+
+			elements.put(
+					SystemProvidedInterfExposed_4003,
+					org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
+							.getSystemProvidedInterf_Exposed());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -214,16 +240,18 @@ public class CompositionModelElementTypes {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(ArchitectureModel_1000);
-			KNOWN_ELEMENT_TYPES.add(System_2002);
-			KNOWN_ELEMENT_TYPES.add(SystemProvidedInterf_3007);
-			KNOWN_ELEMENT_TYPES.add(SystemRequiredInterf_3008);
-			KNOWN_ELEMENT_TYPES.add(SystemComposite_3009);
-			KNOWN_ELEMENT_TYPES.add(SystemCompositeProvidedInterf_3010);
-			KNOWN_ELEMENT_TYPES.add(SystemCompositeRequiredInterf_3011);
-			KNOWN_ELEMENT_TYPES.add(ROSComposite_3012);
-			KNOWN_ELEMENT_TYPES.add(ROSMsgProducer_3013);
-			KNOWN_ELEMENT_TYPES.add(ROSMsgConsumer_3014);
-			KNOWN_ELEMENT_TYPES.add(Connection_4002);
+			KNOWN_ELEMENT_TYPES.add(System_2001);
+			KNOWN_ELEMENT_TYPES.add(SystemProvidedInterf_3001);
+			KNOWN_ELEMENT_TYPES.add(SystemRequiredInterf_3002);
+			KNOWN_ELEMENT_TYPES.add(SystemComposite_3003);
+			KNOWN_ELEMENT_TYPES.add(SystemCompositeProvidedInterf_3004);
+			KNOWN_ELEMENT_TYPES.add(SystemCompositeRequiredInterf_3005);
+			KNOWN_ELEMENT_TYPES.add(ROSComposite_3006);
+			KNOWN_ELEMENT_TYPES.add(ROSMsgProducer_3007);
+			KNOWN_ELEMENT_TYPES.add(ROSMsgConsumer_3008);
+			KNOWN_ELEMENT_TYPES.add(Connection_4001);
+			KNOWN_ELEMENT_TYPES.add(SystemRequiredInterfExposed_4002);
+			KNOWN_ELEMENT_TYPES.add(SystemProvidedInterfExposed_4003);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -236,25 +264,29 @@ public class CompositionModelElementTypes {
 		case SystemEditPart.VISUAL_ID:
 			return ArchitectureModel_1000;
 		case System2EditPart.VISUAL_ID:
-			return System_2002;
-		case SystemProvidedInterfEditPart.VISUAL_ID:
-			return SystemProvidedInterf_3007;
-		case SystemRequiredInterfEditPart.VISUAL_ID:
-			return SystemRequiredInterf_3008;
+			return System_2001;
+		case SystemProvidedInterf2EditPart.VISUAL_ID:
+			return SystemProvidedInterf_3001;
+		case SystemRequiredInterf2EditPart.VISUAL_ID:
+			return SystemRequiredInterf_3002;
 		case SystemCompositeEditPart.VISUAL_ID:
-			return SystemComposite_3009;
+			return SystemComposite_3003;
 		case SystemCompositeProvidedInterfEditPart.VISUAL_ID:
-			return SystemCompositeProvidedInterf_3010;
+			return SystemCompositeProvidedInterf_3004;
 		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
-			return SystemCompositeRequiredInterf_3011;
+			return SystemCompositeRequiredInterf_3005;
 		case ROSCompositeEditPart.VISUAL_ID:
-			return ROSComposite_3012;
-		case ROSMsgProducerEditPart.VISUAL_ID:
-			return ROSMsgProducer_3013;
-		case ROSMsgConsumerEditPart.VISUAL_ID:
-			return ROSMsgConsumer_3014;
+			return ROSComposite_3006;
+		case SystemProvidedInterfEditPart.VISUAL_ID:
+			return ROSMsgProducer_3007;
+		case SystemRequiredInterfEditPart.VISUAL_ID:
+			return ROSMsgConsumer_3008;
 		case ConnectionEditPart.VISUAL_ID:
-			return Connection_4002;
+			return Connection_4001;
+		case CompositeSrvConsumerPromoteEditPart.VISUAL_ID:
+			return SystemRequiredInterfExposed_4002;
+		case CompositeSrvProducerPromoteEditPart.VISUAL_ID:
+			return SystemProvidedInterfExposed_4003;
 		}
 		return null;
 	}

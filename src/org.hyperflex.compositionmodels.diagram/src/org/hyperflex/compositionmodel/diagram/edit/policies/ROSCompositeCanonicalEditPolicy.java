@@ -22,8 +22,8 @@ import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
-import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramUpdater;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelNodeDescriptor;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
@@ -74,7 +74,7 @@ public class ROSCompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CompositionModelNodeDescriptor> childDescriptors = CompositionModelDiagramUpdater
-				.getROSComposite_3012SemanticChildren(viewObject);
+				.getROSComposite_3006SemanticChildren(viewObject);
 		for (CompositionModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -95,8 +95,8 @@ public class ROSCompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 	 */
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CompositionModelVisualIDRegistry.getVisualID(view);
-		return visualID == ROSMsgProducerEditPart.VISUAL_ID
-				|| visualID == ROSMsgConsumerEditPart.VISUAL_ID;
+		return visualID == SystemProvidedInterfEditPart.VISUAL_ID
+				|| visualID == SystemRequiredInterfEditPart.VISUAL_ID;
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class ROSCompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CompositionModelNodeDescriptor> childDescriptors = CompositionModelDiagramUpdater
-				.getROSComposite_3012SemanticChildren((View) getHost()
+				.getROSComposite_3006SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

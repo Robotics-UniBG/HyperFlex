@@ -11,8 +11,6 @@ import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionNameEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeNameEditPart;
-import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
-import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.System2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
@@ -21,9 +19,10 @@ import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeProvided
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemNameEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterf2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterf2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
-import org.hyperflex.roscompositionmodel.roscompositionmodelPackage;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -37,7 +36,7 @@ public class CompositionModelVisualIDRegistry {
 	/**
 	 * @generated
 	 */
-	private static final String DEBUG_KEY = "org.hyperflex.componentmodels.composition.diagram/debug/visualID"; //$NON-NLS-1$
+	private static final String DEBUG_KEY = "org.hyperflex.compositionmodels.diagram/debug/visualID"; //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -142,12 +141,12 @@ public class CompositionModelVisualIDRegistry {
 			if (org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getSystemProvidedInterf().isSuperTypeOf(
 							domainElement.eClass())) {
-				return SystemProvidedInterfEditPart.VISUAL_ID;
+				return SystemProvidedInterf2EditPart.VISUAL_ID;
 			}
 			if (org.hyperflex.compositionmodel.compositionmodelPackage.eINSTANCE
 					.getSystemRequiredInterf().isSuperTypeOf(
 							domainElement.eClass())) {
-				return SystemRequiredInterfEditPart.VISUAL_ID;
+				return SystemRequiredInterf2EditPart.VISUAL_ID;
 			}
 			break;
 		case SystemCompositeEditPart.VISUAL_ID:
@@ -163,13 +162,13 @@ public class CompositionModelVisualIDRegistry {
 			}
 			break;
 		case ROSCompositeEditPart.VISUAL_ID:
-			if (roscompositionmodelPackage.eINSTANCE
+			if (org.hyperflex.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
 					.getROSMsgProducer().isSuperTypeOf(domainElement.eClass())) {
-				return ROSMsgProducerEditPart.VISUAL_ID;
+				return SystemProvidedInterfEditPart.VISUAL_ID;
 			}
-			if (roscompositionmodelPackage.eINSTANCE
+			if (org.hyperflex.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
 					.getROSMsgConsumer().isSuperTypeOf(domainElement.eClass())) {
-				return ROSMsgConsumerEditPart.VISUAL_ID;
+				return SystemRequiredInterfEditPart.VISUAL_ID;
 			}
 			break;
 		case SystemCompositeContainerCompartmentEditPart.VISUAL_ID:
@@ -177,7 +176,7 @@ public class CompositionModelVisualIDRegistry {
 					.getSystemComposite().isSuperTypeOf(domainElement.eClass())) {
 				return SystemCompositeEditPart.VISUAL_ID;
 			}
-			if (roscompositionmodelPackage.eINSTANCE
+			if (org.hyperflex.roscompositionmodel.roscompositionmodelPackage.eINSTANCE
 					.getROSComposite().isSuperTypeOf(domainElement.eClass())) {
 				return ROSCompositeEditPart.VISUAL_ID;
 			}
@@ -219,10 +218,10 @@ public class CompositionModelVisualIDRegistry {
 			if (SystemCompositeContainerCompartmentEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (SystemProvidedInterfEditPart.VISUAL_ID == nodeVisualID) {
+			if (SystemProvidedInterf2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (SystemRequiredInterfEditPart.VISUAL_ID == nodeVisualID) {
+			if (SystemRequiredInterf2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -241,10 +240,10 @@ public class CompositionModelVisualIDRegistry {
 			if (ROSCompositeNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (ROSMsgProducerEditPart.VISUAL_ID == nodeVisualID) {
+			if (SystemProvidedInterfEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (ROSMsgConsumerEditPart.VISUAL_ID == nodeVisualID) {
+			if (SystemRequiredInterfEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -322,12 +321,12 @@ public class CompositionModelVisualIDRegistry {
 		switch (visualID) {
 		case SystemEditPart.VISUAL_ID:
 			return false;
-		case SystemProvidedInterfEditPart.VISUAL_ID:
-		case SystemRequiredInterfEditPart.VISUAL_ID:
+		case SystemProvidedInterf2EditPart.VISUAL_ID:
+		case SystemRequiredInterf2EditPart.VISUAL_ID:
 		case SystemCompositeProvidedInterfEditPart.VISUAL_ID:
 		case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
-		case ROSMsgProducerEditPart.VISUAL_ID:
-		case ROSMsgConsumerEditPart.VISUAL_ID:
+		case SystemProvidedInterfEditPart.VISUAL_ID:
+		case SystemRequiredInterfEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

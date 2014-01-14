@@ -11,8 +11,8 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
-import org.hyperflex.compositionmodel.System;
-import org.hyperflex.compositionmodel.SystemRequiredInterf;
+import org.hyperflex.compositionmodel.Composite;
+import org.hyperflex.roscompositionmodel.ROSMsgConsumer;
 
 /**
  * @generated
@@ -52,10 +52,10 @@ public class SystemRequiredInterfCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		SystemRequiredInterf newElement = org.hyperflex.compositionmodel.compositionmodelFactory.eINSTANCE
-				.createSystemRequiredInterf();
+		ROSMsgConsumer newElement = org.hyperflex.roscompositionmodel.roscompositionmodelFactory.eINSTANCE
+				.createROSMsgConsumer();
 
-		System owner = (System) getElementToEdit();
+		Composite owner = (Composite) getElementToEdit();
 		owner.getReqInterfaces().add(newElement);
 
 		doConfigure(newElement, monitor, info);
@@ -67,7 +67,7 @@ public class SystemRequiredInterfCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(SystemRequiredInterf newElement,
+	protected void doConfigure(ROSMsgConsumer newElement,
 			IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())

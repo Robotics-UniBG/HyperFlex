@@ -118,6 +118,15 @@ public interface roscompositionmodelPackage extends EPackage {
 	int ROS_COMPOSITE__NAME = compositionmodelPackage.COMPOSITE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_COMPOSITE__PROPERTIES = compositionmodelPackage.COMPOSITE__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Composite</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

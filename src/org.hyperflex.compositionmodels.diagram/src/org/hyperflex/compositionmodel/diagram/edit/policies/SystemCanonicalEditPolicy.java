@@ -30,14 +30,14 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.update.UpdaterLinkDescriptor;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
-import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
-import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.System2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterf2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterf2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramUpdater;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelLinkDescriptor;
@@ -260,23 +260,23 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case System2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CompositionModelDiagramUpdater
-						.getSystem_2002ContainedLinks(view));
+						.getSystem_2001ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case SystemProvidedInterfEditPart.VISUAL_ID: {
+		case SystemProvidedInterf2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CompositionModelDiagramUpdater
-						.getSystemProvidedInterf_3007ContainedLinks(view));
+						.getSystemProvidedInterf_3001ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case SystemRequiredInterfEditPart.VISUAL_ID: {
+		case SystemRequiredInterf2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CompositionModelDiagramUpdater
-						.getSystemRequiredInterf_3008ContainedLinks(view));
+						.getSystemRequiredInterf_3002ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -284,7 +284,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case SystemCompositeEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CompositionModelDiagramUpdater
-						.getSystemComposite_3009ContainedLinks(view));
+						.getSystemComposite_3003ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -292,7 +292,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case SystemCompositeProvidedInterfEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CompositionModelDiagramUpdater
-						.getSystemCompositeProvidedInterf_3010ContainedLinks(view));
+						.getSystemCompositeProvidedInterf_3004ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -300,7 +300,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case SystemCompositeRequiredInterfEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CompositionModelDiagramUpdater
-						.getSystemCompositeRequiredInterf_3011ContainedLinks(view));
+						.getSystemCompositeRequiredInterf_3005ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -308,23 +308,23 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case ROSCompositeEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CompositionModelDiagramUpdater
-						.getROSComposite_3012ContainedLinks(view));
+						.getROSComposite_3006ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case ROSMsgProducerEditPart.VISUAL_ID: {
+		case SystemProvidedInterfEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CompositionModelDiagramUpdater
-						.getROSMsgProducer_3013ContainedLinks(view));
+						.getROSMsgProducer_3007ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case ROSMsgConsumerEditPart.VISUAL_ID: {
+		case SystemRequiredInterfEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CompositionModelDiagramUpdater
-						.getROSMsgConsumer_3014ContainedLinks(view));
+						.getROSMsgConsumer_3008ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -332,7 +332,7 @@ public class SystemCanonicalEditPolicy extends CanonicalEditPolicy {
 		case ConnectionEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(CompositionModelDiagramUpdater
-						.getConnection_4002ContainedLinks(view));
+						.getConnection_4001ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

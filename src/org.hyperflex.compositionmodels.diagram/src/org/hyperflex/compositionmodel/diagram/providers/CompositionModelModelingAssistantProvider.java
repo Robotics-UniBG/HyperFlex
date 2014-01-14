@@ -21,15 +21,15 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeEditPart;
-import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgConsumerEditPart;
-import org.hyperflex.compositionmodel.diagram.edit.parts.ROSMsgProducerEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.System2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeContainerCompartmentEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterf2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterfEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterf2EditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemRequiredInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
 import org.hyperflex.compositionmodel.diagram.part.Messages;
@@ -48,31 +48,31 @@ public class CompositionModelModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof SystemEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-			types.add(CompositionModelElementTypes.System_2002);
+			types.add(CompositionModelElementTypes.System_2001);
 			return types;
 		}
 		if (editPart instanceof System2EditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-			types.add(CompositionModelElementTypes.SystemProvidedInterf_3007);
-			types.add(CompositionModelElementTypes.SystemRequiredInterf_3008);
+			types.add(CompositionModelElementTypes.SystemProvidedInterf_3001);
+			types.add(CompositionModelElementTypes.SystemRequiredInterf_3002);
 			return types;
 		}
 		if (editPart instanceof SystemCompositeEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-			types.add(CompositionModelElementTypes.SystemCompositeProvidedInterf_3010);
-			types.add(CompositionModelElementTypes.SystemCompositeRequiredInterf_3011);
+			types.add(CompositionModelElementTypes.SystemCompositeProvidedInterf_3004);
+			types.add(CompositionModelElementTypes.SystemCompositeRequiredInterf_3005);
 			return types;
 		}
 		if (editPart instanceof ROSCompositeEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-			types.add(CompositionModelElementTypes.ROSMsgProducer_3013);
-			types.add(CompositionModelElementTypes.ROSMsgConsumer_3014);
+			types.add(CompositionModelElementTypes.ROSMsgProducer_3007);
+			types.add(CompositionModelElementTypes.ROSMsgConsumer_3008);
 			return types;
 		}
 		if (editPart instanceof SystemCompositeContainerCompartmentEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-			types.add(CompositionModelElementTypes.SystemComposite_3009);
-			types.add(CompositionModelElementTypes.ROSComposite_3012);
+			types.add(CompositionModelElementTypes.SystemComposite_3003);
+			types.add(CompositionModelElementTypes.ROSComposite_3006);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -84,16 +84,20 @@ public class CompositionModelModelingAssistantProvider extends
 	public List getRelTypesOnSource(IAdaptable source) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
-		if (sourceEditPart instanceof SystemRequiredInterfEditPart) {
-			return ((SystemRequiredInterfEditPart) sourceEditPart)
+		if (sourceEditPart instanceof SystemProvidedInterf2EditPart) {
+			return ((SystemProvidedInterf2EditPart) sourceEditPart)
+					.getMARelTypesOnSource();
+		}
+		if (sourceEditPart instanceof SystemRequiredInterf2EditPart) {
+			return ((SystemRequiredInterf2EditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
 		if (sourceEditPart instanceof SystemCompositeRequiredInterfEditPart) {
 			return ((SystemCompositeRequiredInterfEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
-		if (sourceEditPart instanceof ROSMsgConsumerEditPart) {
-			return ((ROSMsgConsumerEditPart) sourceEditPart)
+		if (sourceEditPart instanceof SystemRequiredInterfEditPart) {
+			return ((SystemRequiredInterfEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
 		return Collections.EMPTY_LIST;
@@ -105,16 +109,28 @@ public class CompositionModelModelingAssistantProvider extends
 	public List getRelTypesOnTarget(IAdaptable target) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
-		if (targetEditPart instanceof SystemProvidedInterfEditPart) {
-			return ((SystemProvidedInterfEditPart) targetEditPart)
+		if (targetEditPart instanceof SystemProvidedInterf2EditPart) {
+			return ((SystemProvidedInterf2EditPart) targetEditPart)
+					.getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof SystemRequiredInterf2EditPart) {
+			return ((SystemRequiredInterf2EditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
 		if (targetEditPart instanceof SystemCompositeProvidedInterfEditPart) {
 			return ((SystemCompositeProvidedInterfEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
-		if (targetEditPart instanceof ROSMsgProducerEditPart) {
-			return ((ROSMsgProducerEditPart) targetEditPart)
+		if (targetEditPart instanceof SystemCompositeRequiredInterfEditPart) {
+			return ((SystemCompositeRequiredInterfEditPart) targetEditPart)
+					.getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof SystemProvidedInterfEditPart) {
+			return ((SystemProvidedInterfEditPart) targetEditPart)
+					.getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof SystemRequiredInterfEditPart) {
+			return ((SystemRequiredInterfEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
 		return Collections.EMPTY_LIST;
@@ -129,16 +145,20 @@ public class CompositionModelModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
-		if (sourceEditPart instanceof SystemRequiredInterfEditPart) {
-			return ((SystemRequiredInterfEditPart) sourceEditPart)
+		if (sourceEditPart instanceof SystemProvidedInterf2EditPart) {
+			return ((SystemProvidedInterf2EditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+		if (sourceEditPart instanceof SystemRequiredInterf2EditPart) {
+			return ((SystemRequiredInterf2EditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
 		if (sourceEditPart instanceof SystemCompositeRequiredInterfEditPart) {
 			return ((SystemCompositeRequiredInterfEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
-		if (sourceEditPart instanceof ROSMsgConsumerEditPart) {
-			return ((ROSMsgConsumerEditPart) sourceEditPart)
+		if (sourceEditPart instanceof SystemRequiredInterfEditPart) {
+			return ((SystemRequiredInterfEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
 		return Collections.EMPTY_LIST;
@@ -151,16 +171,28 @@ public class CompositionModelModelingAssistantProvider extends
 			IElementType relationshipType) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
-		if (targetEditPart instanceof SystemProvidedInterfEditPart) {
-			return ((SystemProvidedInterfEditPart) targetEditPart)
+		if (targetEditPart instanceof SystemProvidedInterf2EditPart) {
+			return ((SystemProvidedInterf2EditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
+		if (targetEditPart instanceof SystemRequiredInterf2EditPart) {
+			return ((SystemRequiredInterf2EditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
 		if (targetEditPart instanceof SystemCompositeProvidedInterfEditPart) {
 			return ((SystemCompositeProvidedInterfEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
-		if (targetEditPart instanceof ROSMsgProducerEditPart) {
-			return ((ROSMsgProducerEditPart) targetEditPart)
+		if (targetEditPart instanceof SystemCompositeRequiredInterfEditPart) {
+			return ((SystemCompositeRequiredInterfEditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
+		if (targetEditPart instanceof SystemProvidedInterfEditPart) {
+			return ((SystemProvidedInterfEditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
+		if (targetEditPart instanceof SystemRequiredInterfEditPart) {
+			return ((SystemRequiredInterfEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
 		return Collections.EMPTY_LIST;
@@ -173,16 +205,20 @@ public class CompositionModelModelingAssistantProvider extends
 			IElementType relationshipType) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
-		if (sourceEditPart instanceof SystemRequiredInterfEditPart) {
-			return ((SystemRequiredInterfEditPart) sourceEditPart)
+		if (sourceEditPart instanceof SystemProvidedInterf2EditPart) {
+			return ((SystemProvidedInterf2EditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof SystemRequiredInterf2EditPart) {
+			return ((SystemRequiredInterf2EditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		if (sourceEditPart instanceof SystemCompositeRequiredInterfEditPart) {
 			return ((SystemCompositeRequiredInterfEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
-		if (sourceEditPart instanceof ROSMsgConsumerEditPart) {
-			return ((ROSMsgConsumerEditPart) sourceEditPart)
+		if (sourceEditPart instanceof SystemRequiredInterfEditPart) {
+			return ((SystemRequiredInterfEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		return Collections.EMPTY_LIST;

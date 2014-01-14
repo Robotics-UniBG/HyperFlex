@@ -175,6 +175,26 @@
         xsi:type="ecore:EReference"
         href="../models/compositionModel.ecore#//Connection/target"/>
   </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="abstractCompositionModel.gmftool#//@palette/@tools.1/@tools.1"/>
+    <diagramLink
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeConsumerConnection"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="../models/compositionModel.ecore#//SystemRequiredInterf/exposed"/>
+  </links>
+  <links>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="abstractCompositionModel.gmftool#//@palette/@tools.1/@tools.1"/>
+    <diagramLink
+        href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#ExposeProducerConnection"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="../models/compositionModel.ecore#//SystemProvidedInterf/exposed"/>
+  </links>
   <diagram>
     <diagramCanvas
         href="../../org.hyperflex.componentmodels.shared/diagrams/componentModels.gmfgraph#componentDiagram"/>

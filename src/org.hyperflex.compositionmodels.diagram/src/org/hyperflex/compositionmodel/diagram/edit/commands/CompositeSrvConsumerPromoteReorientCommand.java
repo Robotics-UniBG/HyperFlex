@@ -1,3 +1,29 @@
+/*
+ * HyperFlex Toolchain
+ * 
+ * Copyright (c) 2013
+ * All rights reserved.
+ * 
+ * Luca Gherardi
+ * University of Bergamo
+ * Department of Engineering
+ * 
+ * ***********************************************************************************************
+ * 
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
+ * 
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, Department of Engineering
+ * 
+ * ***********************************************************************************************
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * 
+ */
 package org.hyperflex.compositionmodel.diagram.edit.commands;
 
 import org.eclipse.core.commands.ExecutionException;
@@ -6,22 +32,29 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
+import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
-import org.hyperflex.compositionmodel.Connection;
-import org.hyperflex.compositionmodel.ProvidedInterface;
 import org.hyperflex.compositionmodel.RequiredInterface;
-import org.hyperflex.compositionmodel.System;
+import org.hyperflex.compositionmodel.SystemRequiredInterf;
 import org.hyperflex.compositionmodel.diagram.edit.policies.CompositionModelBaseItemSemanticEditPolicy;
+import org.hyperflex.roscomponentmodel.CompositeSrvConsumer;
+import org.hyperflex.roscomponentmodel.SrvConsumer;
 
 /**
  * @generated
  */
-public class ConnectionReorientCommand extends EditElementCommand {
+public class CompositeSrvConsumerPromoteReorientCommand extends
+		EditElementCommand {
 
 	/**
 	 * @generated
 	 */
 	private final int reorientDirection;
+
+	/**
+	 * @generated
+	 */
+	private final EObject referenceOwner;
 
 	/**
 	 * @generated
@@ -36,9 +69,11 @@ public class ConnectionReorientCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	public ConnectionReorientCommand(ReorientRelationshipRequest request) {
-		super(request.getLabel(), request.getRelationship(), request);
+	public CompositeSrvConsumerPromoteReorientCommand(
+			ReorientReferenceRelationshipRequest request) {
+		super(request.getLabel(), null, request);
 		reorientDirection = request.getDirection();
+		referenceOwner = request.getReferenceOwner();
 		oldEnd = request.getOldRelationshipEnd();
 		newEnd = request.getNewRelationshipEnd();
 	}
@@ -47,7 +82,7 @@ public class ConnectionReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	public boolean canExecute() {
-		if (false == getElementToEdit() instanceof Connection) {
+		if (false == referenceOwner instanceof SystemRequiredInterf) {
 			return false;
 		}
 		if (reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
@@ -63,33 +98,23 @@ public class ConnectionReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof RequiredInterface && newEnd instanceof RequiredInterface)) {
+		if (!(oldEnd instanceof RequiredInterface && newEnd instanceof SystemRequiredInterf)) {
 			return false;
 		}
-		ProvidedInterface target = getLink().getTarget();
-		if (!(getLink().eContainer() instanceof System)) {
-			return false;
-		}
-		System container = (System) getLink().eContainer();
 		return CompositionModelBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistConnection_4001(container, getLink(), getNewSource(),
-						target);
+				.canExistSystemRequiredInterfExposed_4002(getNewSource(),
+						getOldTarget());
 	}
 
 	/**
 	 * @generated
 	 */
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof ProvidedInterface && newEnd instanceof ProvidedInterface)) {
+		if (!(oldEnd instanceof RequiredInterface && newEnd instanceof RequiredInterface)) {
 			return false;
 		}
-		RequiredInterface source = getLink().getSource();
-		if (!(getLink().eContainer() instanceof System)) {
-			return false;
-		}
-		System container = (System) getLink().eContainer();
 		return CompositionModelBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistConnection_4001(container, getLink(), source,
+				.canExistSystemRequiredInterfExposed_4002(getOldSource(),
 						getNewTarget());
 	}
 
@@ -115,50 +140,44 @@ public class ConnectionReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected CommandResult reorientSource() throws ExecutionException {
-		getLink().setSource(getNewSource());
-		return CommandResult.newOKCommandResult(getLink());
+		getOldSource().setExposed(null);
+		getNewSource().setExposed(getOldTarget());
+		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected CommandResult reorientTarget() throws ExecutionException {
-		getLink().setTarget(getNewTarget());
-		return CommandResult.newOKCommandResult(getLink());
+		getOldSource().setExposed(getNewTarget());
+		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Connection getLink() {
-		return (Connection) getElementToEdit();
+	protected SystemRequiredInterf getOldSource() {
+		return (SystemRequiredInterf) referenceOwner;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected RequiredInterface getOldSource() {
+	protected SystemRequiredInterf getNewSource() {
+		return (SystemRequiredInterf) newEnd;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected RequiredInterface getOldTarget() {
 		return (RequiredInterface) oldEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected RequiredInterface getNewSource() {
+	protected RequiredInterface getNewTarget() {
 		return (RequiredInterface) newEnd;
-	}
-
-	/**
-	 * @generated
-	 */
-	protected ProvidedInterface getOldTarget() {
-		return (ProvidedInterface) oldEnd;
-	}
-
-	/**
-	 * @generated
-	 */
-	protected ProvidedInterface getNewTarget() {
-		return (ProvidedInterface) newEnd;
 	}
 }

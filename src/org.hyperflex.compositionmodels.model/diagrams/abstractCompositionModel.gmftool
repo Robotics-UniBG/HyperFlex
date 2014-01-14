@@ -42,11 +42,19 @@
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Continue connection "
-          description="Create new Continue Connection">
+          title="Interface connection "
+          description="Create new Interface Connection">
         <smallIcon
             xsi:type="gmftool:BundleImage"
-            path="icons/ContinueConnection.gif"/>
+            path="icons/InterfaceConnection.gif"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Promote connection "
+          description="Create new Promote Connection">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/PromoteConnection.gif"/>
       </tools>
     </tools>
   </palette>

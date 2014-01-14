@@ -69,7 +69,7 @@ public class ConnectionCreateCommand extends EditElementCommand {
 			return false;
 		}
 		return CompositionModelBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateConnection_4002(getContainer(), getSource(),
+				.canCreateConnection_4001(getContainer(), getSource(),
 						getTarget());
 	}
 

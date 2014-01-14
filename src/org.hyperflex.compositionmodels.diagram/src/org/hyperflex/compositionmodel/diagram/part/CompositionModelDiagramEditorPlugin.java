@@ -30,7 +30,7 @@ public class CompositionModelDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
-	public static final String ID = "org.hyperflex.componentmodels.composition.diagram"; //$NON-NLS-1$
+	public static final String ID = "org.hyperflex.compositionmodels.diagram"; //$NON-NLS-1$
 
 	/**
 	 * @generated

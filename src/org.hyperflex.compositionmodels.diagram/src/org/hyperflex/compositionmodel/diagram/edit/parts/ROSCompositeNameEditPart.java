@@ -58,7 +58,7 @@ public class ROSCompositeNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5008;
+	public static final int VISUAL_ID = 5002;
 
 	/**
 	 * @generated
@@ -304,7 +304,7 @@ public class ROSCompositeNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = CompositionModelParserProvider
 					.getParser(
-							CompositionModelElementTypes.ROSComposite_3012,
+							CompositionModelElementTypes.ROSComposite_3006,
 							getParserElement(),
 							CompositionModelVisualIDRegistry
 									.getType(org.hyperflex.compositionmodel.diagram.edit.parts.ROSCompositeNameEditPart.VISUAL_ID));

@@ -35,9 +35,15 @@ import org.hyperflex.compositionmodel.Connection;
 import org.hyperflex.compositionmodel.ProvidedInterface;
 import org.hyperflex.compositionmodel.RequiredInterface;
 import org.hyperflex.compositionmodel.System;
+import org.hyperflex.compositionmodel.SystemProvidedInterf;
+import org.hyperflex.compositionmodel.SystemRequiredInterf;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelDiagramEditorPlugin;
 import org.hyperflex.compositionmodel.diagram.part.CompositionModelVisualIDRegistry;
 import org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes;
+import org.hyperflex.roscomponentmodel.CompositeSrvConsumer;
+import org.hyperflex.roscomponentmodel.CompositeSrvProducer;
+import org.hyperflex.roscomponentmodel.SrvConsumer;
+import org.hyperflex.roscomponentmodel.SrvProducer;
 
 /**
  * @generated
@@ -328,17 +334,61 @@ public class CompositionModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canCreateConnection_4002(System container,
+		public boolean canCreateConnection_4001(System container,
 				RequiredInterface source, ProvidedInterface target) {
-			return canExistConnection_4002(container, null, source, target);
+			return canExistConnection_4001(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canExistConnection_4002(System container,
+		public boolean canCreateSystemRequiredInterfExposed_4002(
+				SystemRequiredInterf source, RequiredInterface target) {
+			if (source != null) {
+				if (source.getExposed() != null) {
+					return false;
+				}
+			}
+
+			return canExistSystemRequiredInterfExposed_4002(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateSystemProvidedInterfExposed_4003(
+				SystemProvidedInterf source, ProvidedInterface target) {
+			if (source != null) {
+				if (source.getExposed() != null) {
+					return false;
+				}
+			}
+
+			return canExistSystemProvidedInterfExposed_4003(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistConnection_4001(System container,
 				Connection linkInstance, RequiredInterface source,
 				ProvidedInterface target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistSystemRequiredInterfExposed_4002(
+				SystemRequiredInterf source, RequiredInterface target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistSystemProvidedInterfExposed_4003(
+				SystemProvidedInterf source, ProvidedInterface target) {
 			return true;
 		}
 	}

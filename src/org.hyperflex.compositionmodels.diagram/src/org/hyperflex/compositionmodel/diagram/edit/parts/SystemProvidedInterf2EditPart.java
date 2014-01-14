@@ -1,3 +1,29 @@
+/*
+ * HyperFlex Toolchain
+ * 
+ * Copyright (c) 2013
+ * All rights reserved.
+ * 
+ * Luca Gherardi
+ * University of Bergamo
+ * Department of Engineering
+ * 
+ * ***********************************************************************************************
+ * 
+ * Author: <A HREF="mailto:lucagh@ethz.ch">Luca Gherardi</A>
+ * 
+ * In collaboration with: 
+ *   <A HREF="mailto:brugali@unibg.it">Davide Brugali</A>, Department of Engineering
+ * 
+ * ***********************************************************************************************
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * 
+ */
 package org.hyperflex.compositionmodel.diagram.edit.parts;
 
 import java.util.ArrayList;
@@ -20,24 +46,25 @@ import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderItemEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
-import org.hyperflex.compositionmodel.diagram.edit.policies.ROSMsgProducerItemSemanticEditPolicy;
+import org.hyperflex.compositionmodel.diagram.edit.policies.SystemProvidedInterf2ItemSemanticEditPolicy;
 import org.hyperflex.compositionmodel.diagram.providers.CompositionModelElementTypes;
 
 /**
  * @generated
  */
-public class ROSMsgProducerEditPart extends AbstractBorderItemEditPart {
+public class SystemProvidedInterf2EditPart extends AbstractBorderItemEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3013;
+	public static final int VISUAL_ID = 3001;
 
 	/**
 	 * @generated
@@ -52,7 +79,7 @@ public class ROSMsgProducerEditPart extends AbstractBorderItemEditPart {
 	/**
 	 * @generated
 	 */
-	public ROSMsgProducerEditPart(View view) {
+	public SystemProvidedInterf2EditPart(View view) {
 		super(view);
 	}
 
@@ -64,7 +91,7 @@ public class ROSMsgProducerEditPart extends AbstractBorderItemEditPart {
 		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE,
 				getPrimaryDragEditPolicy());
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new ROSMsgProducerItemSemanticEditPolicy());
+				new SystemProvidedInterf2ItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -197,9 +224,50 @@ public class ROSMsgProducerEditPart extends AbstractBorderItemEditPart {
 	/**
 	 * @generated
 	 */
-	public List<IElementType> getMARelTypesOnTarget() {
+	public List<IElementType> getMARelTypesOnSource() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(CompositionModelElementTypes.Connection_4002);
+		types.add(CompositionModelElementTypes.SystemProvidedInterfExposed_4003);
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMARelTypesOnSourceAndTarget(
+			IGraphicalEditPart targetEditPart) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
+		if (targetEditPart instanceof org.hyperflex.compositionmodel.diagram.edit.parts.SystemProvidedInterf2EditPart) {
+			types.add(CompositionModelElementTypes.SystemProvidedInterfExposed_4003);
+		}
+		if (targetEditPart instanceof SystemCompositeProvidedInterfEditPart) {
+			types.add(CompositionModelElementTypes.SystemProvidedInterfExposed_4003);
+		}
+		if (targetEditPart instanceof SystemProvidedInterfEditPart) {
+			types.add(CompositionModelElementTypes.SystemProvidedInterfExposed_4003);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
+		if (relationshipType == CompositionModelElementTypes.SystemProvidedInterfExposed_4003) {
+			types.add(CompositionModelElementTypes.SystemProvidedInterf_3001);
+			types.add(CompositionModelElementTypes.SystemCompositeProvidedInterf_3004);
+			types.add(CompositionModelElementTypes.ROSMsgProducer_3007);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMARelTypesOnTarget() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(CompositionModelElementTypes.Connection_4001);
+		types.add(CompositionModelElementTypes.SystemProvidedInterfExposed_4003);
 		return types;
 	}
 
@@ -208,10 +276,12 @@ public class ROSMsgProducerEditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == CompositionModelElementTypes.Connection_4002) {
-			types.add(CompositionModelElementTypes.SystemRequiredInterf_3008);
-			types.add(CompositionModelElementTypes.SystemCompositeRequiredInterf_3011);
-			types.add(CompositionModelElementTypes.ROSMsgConsumer_3014);
+		if (relationshipType == CompositionModelElementTypes.Connection_4001) {
+			types.add(CompositionModelElementTypes.SystemRequiredInterf_3002);
+			types.add(CompositionModelElementTypes.SystemCompositeRequiredInterf_3005);
+			types.add(CompositionModelElementTypes.ROSMsgConsumer_3008);
+		} else if (relationshipType == CompositionModelElementTypes.SystemProvidedInterfExposed_4003) {
+			types.add(CompositionModelElementTypes.SystemProvidedInterf_3001);
 		}
 		return types;
 	}

@@ -200,7 +200,7 @@ public class SystemRequiredInterfEditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(CompositionModelElementTypes.Connection_4002);
+		types.add(CompositionModelElementTypes.Connection_4001);
 		return types;
 	}
 
@@ -210,14 +210,14 @@ public class SystemRequiredInterfEditPart extends AbstractBorderItemEditPart {
 	public List<IElementType> getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof SystemProvidedInterfEditPart) {
-			types.add(CompositionModelElementTypes.Connection_4002);
+		if (targetEditPart instanceof SystemProvidedInterf2EditPart) {
+			types.add(CompositionModelElementTypes.Connection_4001);
 		}
 		if (targetEditPart instanceof SystemCompositeProvidedInterfEditPart) {
-			types.add(CompositionModelElementTypes.Connection_4002);
+			types.add(CompositionModelElementTypes.Connection_4001);
 		}
-		if (targetEditPart instanceof ROSMsgProducerEditPart) {
-			types.add(CompositionModelElementTypes.Connection_4002);
+		if (targetEditPart instanceof SystemProvidedInterfEditPart) {
+			types.add(CompositionModelElementTypes.Connection_4001);
 		}
 		return types;
 	}
@@ -227,10 +227,30 @@ public class SystemRequiredInterfEditPart extends AbstractBorderItemEditPart {
 	 */
 	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == CompositionModelElementTypes.Connection_4002) {
-			types.add(CompositionModelElementTypes.SystemProvidedInterf_3007);
-			types.add(CompositionModelElementTypes.SystemCompositeProvidedInterf_3010);
-			types.add(CompositionModelElementTypes.ROSMsgProducer_3013);
+		if (relationshipType == CompositionModelElementTypes.Connection_4001) {
+			types.add(CompositionModelElementTypes.SystemProvidedInterf_3001);
+			types.add(CompositionModelElementTypes.SystemCompositeProvidedInterf_3004);
+			types.add(CompositionModelElementTypes.ROSMsgProducer_3007);
+		}
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMARelTypesOnTarget() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+		types.add(CompositionModelElementTypes.SystemRequiredInterfExposed_4002);
+		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
+		if (relationshipType == CompositionModelElementTypes.SystemRequiredInterfExposed_4002) {
+			types.add(CompositionModelElementTypes.SystemRequiredInterf_3002);
 		}
 		return types;
 	}

@@ -51,7 +51,8 @@ public class CompositionModelPaletteFactory {
 		PaletteDrawer paletteContainer = new PaletteDrawer(
 				Messages.Connections2Group_title);
 		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
-		paletteContainer.add(createContinueconnection1CreationTool());
+		paletteContainer.add(createInterfaceconnection1CreationTool());
+		paletteContainer.add(createPromoteconnection2CreationTool());
 		return paletteContainer;
 	}
 
@@ -63,7 +64,7 @@ public class CompositionModelPaletteFactory {
 				Messages.ImportROSComposite1CreationTool_title,
 				Messages.ImportROSComposite1CreationTool_desc,
 				Collections
-						.singletonList(CompositionModelElementTypes.ROSComposite_3012));
+						.singletonList(CompositionModelElementTypes.ROSComposite_3006));
 		entry.setId("createImportROSComposite1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(CompositionModelDiagramEditorPlugin
 				.findImageDescriptor("icons/Composite.gif")); //$NON-NLS-1$
@@ -89,13 +90,13 @@ public class CompositionModelPaletteFactory {
 	 */
 	private ToolEntry createComposite3CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(CompositionModelElementTypes.System_2002);
-		types.add(CompositionModelElementTypes.SystemComposite_3009);
+		types.add(CompositionModelElementTypes.System_2001);
+		types.add(CompositionModelElementTypes.SystemComposite_3003);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Composite3CreationTool_title, null, types);
 		entry.setId("createComposite3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(CompositionModelElementTypes
-				.getImageDescriptor(CompositionModelElementTypes.System_2002));
+				.getImageDescriptor(CompositionModelElementTypes.System_2001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -105,14 +106,14 @@ public class CompositionModelPaletteFactory {
 	 */
 	private ToolEntry createProvidedInterface4CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
-		types.add(CompositionModelElementTypes.SystemProvidedInterf_3007);
-		types.add(CompositionModelElementTypes.SystemCompositeProvidedInterf_3010);
-		types.add(CompositionModelElementTypes.ROSMsgProducer_3013);
+		types.add(CompositionModelElementTypes.SystemProvidedInterf_3001);
+		types.add(CompositionModelElementTypes.SystemCompositeProvidedInterf_3004);
+		types.add(CompositionModelElementTypes.ROSMsgProducer_3007);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.ProvidedInterface4CreationTool_title, null, types);
 		entry.setId("createProvidedInterface4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(CompositionModelElementTypes
-				.getImageDescriptor(CompositionModelElementTypes.SystemProvidedInterf_3007));
+				.getImageDescriptor(CompositionModelElementTypes.SystemProvidedInterf_3001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -122,14 +123,14 @@ public class CompositionModelPaletteFactory {
 	 */
 	private ToolEntry createRequiredInterface5CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
-		types.add(CompositionModelElementTypes.SystemRequiredInterf_3008);
-		types.add(CompositionModelElementTypes.SystemCompositeRequiredInterf_3011);
-		types.add(CompositionModelElementTypes.ROSMsgConsumer_3014);
+		types.add(CompositionModelElementTypes.SystemRequiredInterf_3002);
+		types.add(CompositionModelElementTypes.SystemCompositeRequiredInterf_3005);
+		types.add(CompositionModelElementTypes.ROSMsgConsumer_3008);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.RequiredInterface5CreationTool_title, null, types);
 		entry.setId("createRequiredInterface5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(CompositionModelElementTypes
-				.getImageDescriptor(CompositionModelElementTypes.SystemRequiredInterf_3008));
+				.getImageDescriptor(CompositionModelElementTypes.SystemRequiredInterf_3002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -137,15 +138,32 @@ public class CompositionModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createContinueconnection1CreationTool() {
+	private ToolEntry createInterfaceconnection1CreationTool() {
 		LinkToolEntry entry = new LinkToolEntry(
-				Messages.Continueconnection1CreationTool_title,
-				Messages.Continueconnection1CreationTool_desc,
+				Messages.Interfaceconnection1CreationTool_title,
+				Messages.Interfaceconnection1CreationTool_desc,
 				Collections
-						.singletonList(CompositionModelElementTypes.Connection_4002));
-		entry.setId("createContinueconnection1CreationTool"); //$NON-NLS-1$
+						.singletonList(CompositionModelElementTypes.Connection_4001));
+		entry.setId("createInterfaceconnection1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(CompositionModelDiagramEditorPlugin
-				.findImageDescriptor("icons/ContinueConnection.gif")); //$NON-NLS-1$
+				.findImageDescriptor("icons/InterfaceConnection.gif")); //$NON-NLS-1$
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createPromoteconnection2CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(CompositionModelElementTypes.SystemRequiredInterfExposed_4002);
+		types.add(CompositionModelElementTypes.SystemProvidedInterfExposed_4003);
+		LinkToolEntry entry = new LinkToolEntry(
+				Messages.Promoteconnection2CreationTool_title,
+				Messages.Promoteconnection2CreationTool_desc, types);
+		entry.setId("createPromoteconnection2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CompositionModelDiagramEditorPlugin
+				.findImageDescriptor("icons/PromoteConnection.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

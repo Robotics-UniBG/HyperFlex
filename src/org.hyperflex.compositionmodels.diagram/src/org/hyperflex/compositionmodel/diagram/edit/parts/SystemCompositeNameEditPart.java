@@ -58,7 +58,7 @@ public class SystemCompositeNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5007;
+	public static final int VISUAL_ID = 5001;
 
 	/**
 	 * @generated
@@ -304,7 +304,7 @@ public class SystemCompositeNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = CompositionModelParserProvider
 					.getParser(
-							CompositionModelElementTypes.SystemComposite_3009,
+							CompositionModelElementTypes.SystemComposite_3003,
 							getParserElement(),
 							CompositionModelVisualIDRegistry
 									.getType(org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeNameEditPart.VISUAL_ID));

@@ -38,7 +38,7 @@ public class SystemCompositeProvidedInterfEditPart extends
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3010;
+	public static final int VISUAL_ID = 3004;
 
 	/**
 	 * @generated
@@ -199,8 +199,9 @@ public class SystemCompositeProvidedInterfEditPart extends
 	 * @generated
 	 */
 	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(CompositionModelElementTypes.Connection_4002);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(CompositionModelElementTypes.Connection_4001);
+		types.add(CompositionModelElementTypes.SystemProvidedInterfExposed_4003);
 		return types;
 	}
 
@@ -209,10 +210,12 @@ public class SystemCompositeProvidedInterfEditPart extends
 	 */
 	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == CompositionModelElementTypes.Connection_4002) {
-			types.add(CompositionModelElementTypes.SystemRequiredInterf_3008);
-			types.add(CompositionModelElementTypes.SystemCompositeRequiredInterf_3011);
-			types.add(CompositionModelElementTypes.ROSMsgConsumer_3014);
+		if (relationshipType == CompositionModelElementTypes.Connection_4001) {
+			types.add(CompositionModelElementTypes.SystemRequiredInterf_3002);
+			types.add(CompositionModelElementTypes.SystemCompositeRequiredInterf_3005);
+			types.add(CompositionModelElementTypes.ROSMsgConsumer_3008);
+		} else if (relationshipType == CompositionModelElementTypes.SystemProvidedInterfExposed_4003) {
+			types.add(CompositionModelElementTypes.SystemProvidedInterf_3001);
 		}
 		return types;
 	}

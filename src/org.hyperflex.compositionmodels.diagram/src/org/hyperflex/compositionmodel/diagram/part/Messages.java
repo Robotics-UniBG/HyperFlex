@@ -288,12 +288,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Continueconnection1CreationTool_title;
+	public static String Interfaceconnection1CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Continueconnection1CreationTool_desc;
+	public static String Interfaceconnection1CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Promoteconnection2CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Promoteconnection2CreationTool_desc;
 
 	/**
 	 * @generated
@@ -308,47 +318,87 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Connection_4002_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Connection_4002_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SystemRequiredInterf_3008_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SystemProvidedInterf_3007_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_ROSMsgConsumer_3014_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_ROSMsgProducer_3013_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SystemCompositeProvidedInterf_3010_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SystemCompositeRequiredInterf_3011_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
 	public static String NavigatorGroupName_ArchitectureModel_1000_links;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SystemProvidedInterf_3001_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SystemProvidedInterf_3001_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SystemRequiredInterf_3002_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SystemRequiredInterf_3002_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SystemCompositeProvidedInterf_3004_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SystemCompositeRequiredInterf_3005_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SystemCompositeRequiredInterf_3005_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ROSMsgProducer_3007_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ROSMsgConsumer_3008_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ROSMsgConsumer_3008_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Connection_4001_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Connection_4001_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SystemRequiredInterfExposed_4002_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SystemRequiredInterfExposed_4002_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SystemProvidedInterfExposed_4003_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SystemProvidedInterfExposed_4003_source;
 
 	/**
 	 * @generated

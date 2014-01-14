@@ -74,7 +74,7 @@ public class SystemCompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CompositionModelNodeDescriptor> childDescriptors = CompositionModelDiagramUpdater
-				.getSystemComposite_3009SemanticChildren(viewObject);
+				.getSystemComposite_3003SemanticChildren(viewObject);
 		for (CompositionModelNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -108,7 +108,7 @@ public class SystemCompositeCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CompositionModelNodeDescriptor> childDescriptors = CompositionModelDiagramUpdater
-				.getSystemComposite_3009SemanticChildren((View) getHost()
+				.getSystemComposite_3003SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

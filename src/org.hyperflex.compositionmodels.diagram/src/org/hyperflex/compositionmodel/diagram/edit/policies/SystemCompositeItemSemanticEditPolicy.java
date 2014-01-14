@@ -8,13 +8,17 @@ import org.eclipse.gmf.runtime.common.core.command.ICompositeCommand;
 import org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand;
 import org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand;
 import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand;
+import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
+import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.hyperflex.compositionmodel.diagram.edit.commands.SystemCompositeProvidedInterfCreateCommand;
 import org.hyperflex.compositionmodel.diagram.edit.commands.SystemCompositeRequiredInterfCreateCommand;
+import org.hyperflex.compositionmodel.diagram.edit.parts.CompositeSrvConsumerPromoteEditPart;
+import org.hyperflex.compositionmodel.diagram.edit.parts.CompositeSrvProducerPromoteEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.ConnectionEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeProvidedInterfEditPart;
 import org.hyperflex.compositionmodel.diagram.edit.parts.SystemCompositeRequiredInterfEditPart;
@@ -31,19 +35,19 @@ public class SystemCompositeItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public SystemCompositeItemSemanticEditPolicy() {
-		super(CompositionModelElementTypes.SystemComposite_3009);
+		super(CompositionModelElementTypes.SystemComposite_3003);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (CompositionModelElementTypes.SystemCompositeProvidedInterf_3010 == req
+		if (CompositionModelElementTypes.SystemCompositeProvidedInterf_3004 == req
 				.getElementType()) {
 			return getGEFWrapper(new SystemCompositeProvidedInterfCreateCommand(
 					req));
 		}
-		if (CompositionModelElementTypes.SystemCompositeRequiredInterf_3011 == req
+		if (CompositionModelElementTypes.SystemCompositeRequiredInterf_3005 == req
 				.getElementType()) {
 			return getGEFWrapper(new SystemCompositeRequiredInterfCreateCommand(
 					req));
@@ -93,6 +97,16 @@ public class SystemCompositeItemSemanticEditPolicy extends
 								incomingLink));
 						continue;
 					}
+					if (CompositionModelVisualIDRegistry
+							.getVisualID(incomingLink) == CompositeSrvProducerPromoteEditPart.VISUAL_ID) {
+						DestroyReferenceRequest r = new DestroyReferenceRequest(
+								incomingLink.getSource().getElement(), null,
+								incomingLink.getTarget().getElement(), false);
+						cmd.add(new DestroyReferenceCommand(r));
+						cmd.add(new DeleteCommand(getEditingDomain(),
+								incomingLink));
+						continue;
+					}
 				}
 				cmd.add(new DestroyElementCommand(new DestroyElementRequest(
 						getEditingDomain(), node.getElement(), false))); // directlyOwned: true
@@ -100,6 +114,20 @@ public class SystemCompositeItemSemanticEditPolicy extends
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
 			case SystemCompositeRequiredInterfEditPart.VISUAL_ID:
+				for (Iterator<?> it = node.getTargetEdges().iterator(); it
+						.hasNext();) {
+					Edge incomingLink = (Edge) it.next();
+					if (CompositionModelVisualIDRegistry
+							.getVisualID(incomingLink) == CompositeSrvConsumerPromoteEditPart.VISUAL_ID) {
+						DestroyReferenceRequest r = new DestroyReferenceRequest(
+								incomingLink.getSource().getElement(), null,
+								incomingLink.getTarget().getElement(), false);
+						cmd.add(new DestroyReferenceCommand(r));
+						cmd.add(new DeleteCommand(getEditingDomain(),
+								incomingLink));
+						continue;
+					}
+				}
 				for (Iterator<?> it = node.getSourceEdges().iterator(); it
 						.hasNext();) {
 					Edge outgoingLink = (Edge) it.next();

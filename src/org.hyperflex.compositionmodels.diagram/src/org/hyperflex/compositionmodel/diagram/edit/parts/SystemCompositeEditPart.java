@@ -47,7 +47,7 @@ public class SystemCompositeEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3009;
+	public static final int VISUAL_ID = 3003;
 
 	/**
 	 * @generated
@@ -142,7 +142,7 @@ public class SystemCompositeEditPart extends AbstractBorderedShapeEditPart {
 		}
 		if (childEditPart instanceof SystemCompositeProvidedInterfEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.WEST);
+					PositionConstants.EAST);
 			getBorderedFigure()
 					.getBorderItemContainer()
 					.add(((SystemCompositeProvidedInterfEditPart) childEditPart)
@@ -151,7 +151,7 @@ public class SystemCompositeEditPart extends AbstractBorderedShapeEditPart {
 		}
 		if (childEditPart instanceof SystemCompositeRequiredInterfEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.EAST);
+					PositionConstants.WEST);
 			getBorderedFigure()
 					.getBorderItemContainer()
 					.add(((SystemCompositeRequiredInterfEditPart) childEditPart)
@@ -366,7 +366,7 @@ public class SystemCompositeEditPart extends AbstractBorderedShapeEditPart {
 
 			fFigurePackageNameLabel = new WrappingLabel();
 
-			fFigurePackageNameLabel.setText("<?>");
+			fFigurePackageNameLabel.setText("<É>");
 
 			fFigurePackageNameLabel.setFont(FFIGUREPACKAGENAMELABEL_FONT);
 
