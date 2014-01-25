@@ -189,6 +189,15 @@ public interface featuremodelsPackage extends EPackage {
 	int FEATURE_FEATURE_COUNT = 10;
 
 	/**
+	 * The number of operations of the '<em>Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.hyperflex.featuremodels.impl.ContainmentAssociationImpl <em>Containment Association</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -242,6 +251,15 @@ public interface featuremodelsPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTAINMENT_ASSOCIATION_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Containment Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINMENT_ASSOCIATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.featuremodels.impl.FeatureModelImpl <em>Feature Model</em>}' class.
@@ -299,6 +317,15 @@ public interface featuremodelsPackage extends EPackage {
 	int FEATURE_MODEL_FEATURE_COUNT = 4;
 
 	/**
+	 * The number of operations of the '<em>Feature Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_MODEL_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.hyperflex.featuremodels.impl.ConstraintImpl <em>Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -343,6 +370,15 @@ public interface featuremodelsPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONSTRAINT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Constraint</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.featuremodels.impl.InstanceImpl <em>Instance</em>}' class.
@@ -391,6 +427,15 @@ public interface featuremodelsPackage extends EPackage {
 	int INSTANCE_FEATURE_COUNT = 3;
 
 	/**
+	 * The number of operations of the '<em>Instance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.hyperflex.featuremodels.impl.AttributeImpl <em>Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -417,6 +462,15 @@ public interface featuremodelsPackage extends EPackage {
 	 * @ordered
 	 */
 	int ATTRIBUTE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.featuremodels.impl.SimpleAttributeImpl <em>Simple Attribute</em>}' class.
@@ -463,6 +517,15 @@ public interface featuremodelsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_ATTRIBUTE_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Simple Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_ATTRIBUTE_OPERATION_COUNT = ATTRIBUTE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.featuremodels.ConstraintType <em>Constraint Type</em>}' enum.

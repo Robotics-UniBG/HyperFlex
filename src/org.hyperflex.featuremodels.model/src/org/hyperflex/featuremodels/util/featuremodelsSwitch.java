@@ -28,6 +28,7 @@ package org.hyperflex.featuremodels.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.hyperflex.featuremodels.*;
 import org.hyperflex.featuremodels.Attribute;
 import org.hyperflex.featuremodels.Constraint;
 import org.hyperflex.featuremodels.ContainmentAssociation;

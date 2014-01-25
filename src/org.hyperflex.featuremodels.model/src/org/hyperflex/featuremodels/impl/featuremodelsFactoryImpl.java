@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.hyperflex.featuremodels.*;
 import org.hyperflex.featuremodels.Constraint;
 import org.hyperflex.featuremodels.ConstraintType;
 import org.hyperflex.featuremodels.ContainmentAssociation;

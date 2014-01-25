@@ -5,10 +5,10 @@
     editorDirectory="/org.hyperflex.featuremodels.model.editor/src" modelPluginID="org.hyperflex.featuremodels.model"
     modelName="FeatureModel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
     copyrightFields="false" editPluginID="org.hyperflex.featuremodels.model.edit"
-    editorPluginID="org.hyperflex.featuremodels.model.editor" language="English">
+    editorPluginID="org.hyperflex.featuremodels.model.editor" language="English" operationReflection="true">
   <foreignModel>featureModel.ecore</foreignModel>
   <genPackages prefix="featuremodels" basePackage="org.hyperflex" disposableProviderFactory="true"
-      fileExtensions="featuremodel" ecorePackage="featureModel.ecore#/">
+      extensibleProviderFactory="true" fileExtensions="featuremodel" ecorePackage="featureModel.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="featureModel.ecore#//ConstraintType">
       <genEnumLiterals ecoreEnumLiteral="featureModel.ecore#//ConstraintType/EXCLUDES"/>
       <genEnumLiterals ecoreEnumLiteral="featureModel.ecore#//ConstraintType/REQUIRES"/>
