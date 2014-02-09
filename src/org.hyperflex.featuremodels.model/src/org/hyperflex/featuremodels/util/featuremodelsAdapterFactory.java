@@ -29,7 +29,6 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.hyperflex.featuremodels.*;
 import org.hyperflex.featuremodels.Attribute;
 import org.hyperflex.featuremodels.Constraint;
 import org.hyperflex.featuremodels.ContainmentAssociation;

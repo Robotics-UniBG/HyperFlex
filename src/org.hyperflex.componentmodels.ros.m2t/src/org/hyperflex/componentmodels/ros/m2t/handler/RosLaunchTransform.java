@@ -26,8 +26,6 @@
  */
 package org.hyperflex.componentmodels.ros.m2t.handler;
 
-import org.hyperflex.componentmodels.ros.m2t.Activator;
-
 import java.io.IOException;
 import java.net.URL;
 
@@ -44,7 +42,8 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.PlatformUI;
-import org.hyperflex.componentmodels.m2t.EGLTransformer;
+import org.hyperflex.componentmodels.ros.m2t.Activator;
+import org.hyperflex.m2t.EGLTransformer;
 
 public class RosLaunchTransform extends AbstractHandler {
 	

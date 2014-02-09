@@ -21,6 +21,7 @@ Require-Bundle: org.eclipse.ui,
  org.hyperflex.componentmodels.ui;bundle-version="1.0.0",
  org.hyperflex.componentmodels.m2t;bundle-version="1.0.0",
  org.hyperflex.componentmodels.rapyuta.diagram;bundle-version="1.0.0",
- org.hyperflex.componentmodels.rapyuta.model;bundle-version="1.0.0"
+ org.hyperflex.componentmodels.rapyuta.model;bundle-version="1.0.0",
+ org.hyperflex.m2t;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy

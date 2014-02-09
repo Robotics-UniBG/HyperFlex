@@ -24,7 +24,7 @@
  * 
  * 
  */
-package org.hyperflex.componentmodels.m2t;
+package org.hyperflex.m2t;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
