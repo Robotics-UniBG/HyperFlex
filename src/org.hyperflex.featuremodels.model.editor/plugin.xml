@@ -42,21 +42,6 @@
    </extension>
 
 
-   <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated featureModel -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="org.hyperflex.featuremodels.presentation.featuremodelsModelWizardID"
-            name="%_UI_featuremodelsModelWizard_label"
-            class="org.hyperflex.featuremodels.presentation.featuremodelsModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/featuremodelsModelFile.gif">
-         <description>%_UI_featuremodelsModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
 
    <extension point="org.eclipse.ui.editors">
       <editor
