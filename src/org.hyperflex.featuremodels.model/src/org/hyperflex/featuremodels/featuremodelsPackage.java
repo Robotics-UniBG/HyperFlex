@@ -69,7 +69,7 @@ public interface featuremodelsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "Ns";
+	String eNS_PREFIX = "featuremodels";
 
 	/**
 	 * The singleton instance of the package.
