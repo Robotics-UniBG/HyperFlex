@@ -25,18 +25,24 @@
  */
 package org.hyperflex.featuremodels.diagram.edit.parts;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.Iterator;
+
+import org.eclipse.gef.EditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
+import org.hyperflex.featuremodels.FeatureModel;
 import org.hyperflex.featuremodels.diagram.edit.policies.FeatureModelCanonicalEditPolicy;
 import org.hyperflex.featuremodels.diagram.edit.policies.FeatureModelItemSemanticEditPolicy;
 import org.hyperflex.featuremodels.diagram.part.FeatureModelVisualIDRegistry;
 
 /**
- * @generated
+ * @generated NOT
  */
-public class FeatureModelEditPart extends DiagramEditPart {
+public class FeatureModelEditPart extends DiagramEditPart implements PropertyChangeListener {
 
 	/**
 	 * @generated
@@ -49,10 +55,19 @@ public class FeatureModelEditPart extends DiagramEditPart {
 	public static final int VISUAL_ID = 1000;
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	public FeatureModelEditPart(View view) {
 		super(view);
+		FeatureModel model = (FeatureModel)resolveSemanticElement();
+		
+		if(model != null){
+			model.removePropertyChangeListener(this);
+
+		}
+		System.out.println("Listener registered");
+		model.addPropertyChangeListener(this);
+		
 	}
 
 	/**
@@ -68,6 +83,27 @@ public class FeatureModelEditPart extends DiagramEditPart {
 				new CreationEditPolicyWithCustomReparent(
 						FeatureModelVisualIDRegistry.TYPED_INSTANCE));
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.POPUPBAR_ROLE);
+	}
+
+	@Override
+	public void propertyChange(PropertyChangeEvent event) {
+		
+		System.out.println("Event Received");
+		
+		String propertyName = event.getPropertyName();
+		if(propertyName.equals(FeatureModel.INSTANCE_SELECTED_PROPERTY) || propertyName.equals(FeatureModel.INSTANCE_UPDATED_PROPERTY)){
+			
+			@SuppressWarnings("unchecked")
+			Iterator<EditPart> it = getChildren().iterator();
+			while(it.hasNext()){
+				EditPart ep = it.next();
+				if(ep instanceof Feature2EditPart){
+					((Feature2EditPart)ep).getPrimaryShape().updateColor();
+				}
+			}
+			
+		}
+		
 	}
 
 }

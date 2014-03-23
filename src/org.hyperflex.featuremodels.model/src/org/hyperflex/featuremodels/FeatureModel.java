@@ -194,5 +194,16 @@ public interface FeatureModel extends EObject {
 	 * @generated NOT
 	 */
 	public void removeFeatureFromInstance(Instance instance, Feature feature);
+	
+	/**
+	 * @generated NOT
+	 */
+	public void removeSubFeatureFromInstance(Instance instance, Feature feature);
+	
+	/**
+	 * @generated NOT
+	 */
+	public void removeSubFeatureFromInstance(Instance instance, 
+			ContainmentAssociation containmentAssociation);
 
 } // FeatureModel

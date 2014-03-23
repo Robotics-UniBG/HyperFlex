@@ -547,6 +547,7 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 	 */
 	protected void firePropertyChange(String prop, Object old, Object
 			newValue){
+		
 		if (this.listeners.hasListeners(prop)) {
 			this.listeners.firePropertyChange(prop, old, newValue);
 		}
@@ -575,6 +576,69 @@ public class FeatureModelImpl extends EObjectImpl implements FeatureModel {
 		}
 		instance.getSelectedFeatures().remove(feature);
 		firePropertyChange(INSTANCE_UPDATED_PROPERTY, null, instance);
+		
+	}
+	
+	/**
+	 * @generated NOT
+	 */
+	public void removeSubFeatureFromInstance(Instance instance, Feature feature){
+		if(!instances.contains(instance)){
+			throw new IllegalArgumentException("The list of instances doesn't contain the instance passed as argument");
+		}
+		removeSubFeatureFromInstanceWithoutNotification(instance, feature);
+		firePropertyChange(INSTANCE_UPDATED_PROPERTY, null, instance);
+		
+	}
+	
+	/**
+	 * @generated NOT
+	 */
+	private void removeSubFeatureFromInstanceWithoutNotification(Instance instance,
+			Feature feature){
+		
+		instance.getSelectedFeatures().remove(feature);
+		
+		for(Feature f : feature.getSubFeatures()){
+			
+			removeSubFeatureFromInstanceWithoutNotification(instance, f);
+			
+		}
+		for(ContainmentAssociation ca : feature.getContainers()){
+			
+			removeSubFeatureFromInstanceWithoutNotification(instance, ca);
+			
+		}
+		
+	}
+	
+	/**
+	 * @generated NOT
+	 */
+	public void removeSubFeatureFromInstance(Instance instance, 
+			ContainmentAssociation containmentAssociation){
+	
+		if(!instances.contains(instance)){
+			throw new IllegalArgumentException("The list of instances doesn't contain the instance passed as argument");
+		}
+		removeSubFeatureFromInstanceWithoutNotification(instance, containmentAssociation);
+		firePropertyChange(INSTANCE_UPDATED_PROPERTY, null, instance);
+	
+	}
+	
+	/**
+	 * @generated NOT
+	 */
+	private void removeSubFeatureFromInstanceWithoutNotification(Instance instance,
+			ContainmentAssociation containmentAssociation){
+		
+		
+		
+		for(Feature f : containmentAssociation.getSubFeatures()){
+			
+			removeSubFeatureFromInstanceWithoutNotification(instance, f);
+			
+		}
 		
 	}
 

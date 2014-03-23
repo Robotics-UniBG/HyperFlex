@@ -89,7 +89,7 @@ public class FeatureDeselectionHandler extends AbstractHandler {
 					protected void doExecute() {
 						//instance.getSelectedFeatures().remove(feature);
 						featureEditPart.getFeatureModel().removeFeatureFromInstance(instance, feature);
-						featureEditPart.getPrimaryShape().updateColor();
+						//featureEditPart.getPrimaryShape().updateColor();
 					}
 				});
 

@@ -89,7 +89,7 @@ public class FeatureSelectionHandler extends AbstractHandler {
 					protected void doExecute() {
 //						instance.getSelectedFeatures().add(feature);
 						featureEditPart.getFeatureModel().addFeatureToInstance(instance, feature);
-						featureEditPart.getPrimaryShape().updateColor();
+						//featureEditPart.getPrimaryShape().updateColor();
 					}
 				});
 
