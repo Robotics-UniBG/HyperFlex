@@ -17,10 +17,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="ROSConnection" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ROSTopicConnection" eSuperTypes="#//ROSConnection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" lowerBound="1" eType="ecore:EClass ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//Topic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ROSTopicConnection" abstract="true"
+      eSuperTypes="#//ROSConnection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="messageInterface" lowerBound="1"
         eType="ecore:EClass ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//MsgInterface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ROSExistingTopicConnection" eSuperTypes="#//ROSTopicConnection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" lowerBound="1" eType="ecore:EClass ../../org.hyperflex.componentmodels.ros.model/models/rosComponentModel.ecore#//Topic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ROSNewTopicConnection" eSuperTypes="#//ROSTopicConnection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="topicName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ROSServiceConnection" eSuperTypes="#//ROSConnection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="serviceProducer" lowerBound="1"

@@ -78,32 +78,9 @@ public class ROSTopicConnectionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTopicPropertyDescriptor(object);
 			addMessageInterfacePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Topic feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTopicPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ROSTopicConnection_topic_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ROSTopicConnection_topic_feature", "_UI_ROSTopicConnection_type"),
-				 rosresolutionmodelsPackage.Literals.ROS_TOPIC_CONNECTION__TOPIC,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

@@ -293,22 +293,13 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	int ROS_TOPIC_CONNECTION__NAME = ROS_CONNECTION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Topic</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROS_TOPIC_CONNECTION__TOPIC = ROS_CONNECTION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Message Interface</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_TOPIC_CONNECTION__MESSAGE_INTERFACE = ROS_CONNECTION_FEATURE_COUNT + 1;
+	int ROS_TOPIC_CONNECTION__MESSAGE_INTERFACE = ROS_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>ROS Topic Connection</em>' class.
@@ -317,7 +308,99 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROS_TOPIC_CONNECTION_FEATURE_COUNT = ROS_CONNECTION_FEATURE_COUNT + 2;
+	int ROS_TOPIC_CONNECTION_FEATURE_COUNT = ROS_CONNECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl <em>ROS Existing Topic Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingTopicConnection()
+	 * @generated
+	 */
+	int ROS_EXISTING_TOPIC_CONNECTION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_TOPIC_CONNECTION__NAME = ROS_TOPIC_CONNECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Message Interface</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_TOPIC_CONNECTION__MESSAGE_INTERFACE = ROS_TOPIC_CONNECTION__MESSAGE_INTERFACE;
+
+	/**
+	 * The feature id for the '<em><b>Topic</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_TOPIC_CONNECTION__TOPIC = ROS_TOPIC_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>ROS Existing Topic Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_EXISTING_TOPIC_CONNECTION_FEATURE_COUNT = ROS_TOPIC_CONNECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl <em>ROS New Topic Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewTopicConnection()
+	 * @generated
+	 */
+	int ROS_NEW_TOPIC_CONNECTION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_NEW_TOPIC_CONNECTION__NAME = ROS_TOPIC_CONNECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Message Interface</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_NEW_TOPIC_CONNECTION__MESSAGE_INTERFACE = ROS_TOPIC_CONNECTION__MESSAGE_INTERFACE;
+
+	/**
+	 * The feature id for the '<em><b>Topic Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_NEW_TOPIC_CONNECTION__TOPIC_NAME = ROS_TOPIC_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>ROS New Topic Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROS_NEW_TOPIC_CONNECTION_FEATURE_COUNT = ROS_TOPIC_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSServiceConnectionImpl <em>ROS Service Connection</em>}' class.
@@ -327,7 +410,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSServiceConnection()
 	 * @generated
 	 */
-	int ROS_SERVICE_CONNECTION = 5;
+	int ROS_SERVICE_CONNECTION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -373,7 +456,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSRequiredElements()
 	 * @generated
 	 */
-	int ROS_REQUIRED_ELEMENTS = 6;
+	int ROS_REQUIRED_ELEMENTS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Required Nodes</b></em>' reference list.
@@ -419,7 +502,7 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSTemplateSystemModel()
 	 * @generated
 	 */
-	int ROS_TEMPLATE_SYSTEM_MODEL = 7;
+	int ROS_TEMPLATE_SYSTEM_MODEL = 9;
 
 	/**
 	 * The feature id for the '<em><b>System</b></em>' reference.
@@ -535,17 +618,6 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	EClass getROSTopicConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getTopic <em>Topic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Topic</em>'.
-	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getTopic()
-	 * @see #getROSTopicConnection()
-	 * @generated
-	 */
-	EReference getROSTopicConnection_Topic();
-
-	/**
 	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection#getMessageInterface <em>Message Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -555,6 +627,48 @@ public interface rosresolutionmodelsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getROSTopicConnection_MessageInterface();
+
+	/**
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection <em>ROS Existing Topic Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ROS Existing Topic Connection</em>'.
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection
+	 * @generated
+	 */
+	EClass getROSExistingTopicConnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection#getTopic <em>Topic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Topic</em>'.
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection#getTopic()
+	 * @see #getROSExistingTopicConnection()
+	 * @generated
+	 */
+	EReference getROSExistingTopicConnection_Topic();
+
+	/**
+	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection <em>ROS New Topic Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ROS New Topic Connection</em>'.
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection
+	 * @generated
+	 */
+	EClass getROSNewTopicConnection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getTopicName <em>Topic Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Topic Name</em>'.
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection#getTopicName()
+	 * @see #getROSNewTopicConnection()
+	 * @generated
+	 */
+	EAttribute getROSNewTopicConnection_TopicName();
 
 	/**
 	 * Returns the meta object for class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection <em>ROS Service Connection</em>}'.
@@ -757,20 +871,48 @@ public interface rosresolutionmodelsPackage extends EPackage {
 		EClass ROS_TOPIC_CONNECTION = eINSTANCE.getROSTopicConnection();
 
 		/**
-		 * The meta object literal for the '<em><b>Topic</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROS_TOPIC_CONNECTION__TOPIC = eINSTANCE.getROSTopicConnection_Topic();
-
-		/**
 		 * The meta object literal for the '<em><b>Message Interface</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference ROS_TOPIC_CONNECTION__MESSAGE_INTERFACE = eINSTANCE.getROSTopicConnection_MessageInterface();
+
+		/**
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl <em>ROS Existing Topic Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSExistingTopicConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSExistingTopicConnection()
+		 * @generated
+		 */
+		EClass ROS_EXISTING_TOPIC_CONNECTION = eINSTANCE.getROSExistingTopicConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Topic</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROS_EXISTING_TOPIC_CONNECTION__TOPIC = eINSTANCE.getROSExistingTopicConnection_Topic();
+
+		/**
+		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl <em>ROS New Topic Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSNewTopicConnectionImpl
+		 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsPackageImpl#getROSNewTopicConnection()
+		 * @generated
+		 */
+		EClass ROS_NEW_TOPIC_CONNECTION = eINSTANCE.getROSNewTopicConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Topic Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROS_NEW_TOPIC_CONNECTION__TOPIC_NAME = eINSTANCE.getROSNewTopicConnection_TopicName();
 
 		/**
 		 * The meta object literal for the '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSServiceConnectionImpl <em>ROS Service Connection</em>}' class.

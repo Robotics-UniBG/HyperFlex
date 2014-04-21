@@ -133,6 +133,22 @@ public class rosresolutionmodelsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case rosresolutionmodelsPackage.ROS_EXISTING_TOPIC_CONNECTION: {
+				ROSExistingTopicConnection rosExistingTopicConnection = (ROSExistingTopicConnection)theEObject;
+				T result = caseROSExistingTopicConnection(rosExistingTopicConnection);
+				if (result == null) result = caseROSTopicConnection(rosExistingTopicConnection);
+				if (result == null) result = caseROSConnection(rosExistingTopicConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION: {
+				ROSNewTopicConnection rosNewTopicConnection = (ROSNewTopicConnection)theEObject;
+				T result = caseROSNewTopicConnection(rosNewTopicConnection);
+				if (result == null) result = caseROSTopicConnection(rosNewTopicConnection);
+				if (result == null) result = caseROSConnection(rosNewTopicConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case rosresolutionmodelsPackage.ROS_SERVICE_CONNECTION: {
 				ROSServiceConnection rosServiceConnection = (ROSServiceConnection)theEObject;
 				T result = caseROSServiceConnection(rosServiceConnection);
@@ -230,6 +246,36 @@ public class rosresolutionmodelsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseROSTopicConnection(ROSTopicConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ROS Existing Topic Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ROS Existing Topic Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseROSExistingTopicConnection(ROSExistingTopicConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ROS New Topic Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ROS New Topic Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseROSNewTopicConnection(ROSNewTopicConnection object) {
 		return null;
 	}
 

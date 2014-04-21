@@ -53,7 +53,6 @@ import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.team.core.subscribers.Subscriber;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IFileEditorInput;
@@ -62,20 +61,51 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.ui.part.FileEditorInput;
-import org.hyperflex.featuremodels.Feature;
 import org.hyperflex.featuremodels.FeatureModel;
 import org.hyperflex.featuremodels.Instance;
 import org.hyperflex.featuremodels.featuremodelsPackage;
 import org.hyperflex.featuremodels.constraints.utility.ConstraintChecker;
 import org.hyperflex.resolutionmodels.RMResolutionElement;
+import org.hyperflex.resolutionmodels.RMTransformation;
 import org.hyperflex.resolutionmodels.ResolutionModel;
 import org.hyperflex.resolutionmodels.presentation.resolutionmodelsEditor;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredElements;
 import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTemplateSystemModel;
 import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection;
 import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfConnection;
 import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfImplementation;
 import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTransfProperty;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsFactory;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.impl.rosresolutionmodelsFactoryImpl;
+import org.hyperflex.roscomponentmodel.AbstractComponent;
+import org.hyperflex.roscomponentmodel.Composite;
+import org.hyperflex.roscomponentmodel.CompositeMsgConsumer;
+import org.hyperflex.roscomponentmodel.CompositeMsgInterface;
+import org.hyperflex.roscomponentmodel.CompositeMsgProducer;
+import org.hyperflex.roscomponentmodel.CompositeProperty;
+import org.hyperflex.roscomponentmodel.CompositeSrvConsumer;
+import org.hyperflex.roscomponentmodel.CompositeSrvProducer;
+import org.hyperflex.roscomponentmodel.MsgInterface;
+import org.hyperflex.roscomponentmodel.Node;
+import org.hyperflex.roscomponentmodel.NodeMsgConsumer;
+import org.hyperflex.roscomponentmodel.NodeMsgProducer;
+import org.hyperflex.roscomponentmodel.NodeProperty;
+import org.hyperflex.roscomponentmodel.NodeSrvConsumer;
+import org.hyperflex.roscomponentmodel.NodeSrvProducer;
+import org.hyperflex.roscomponentmodel.Property;
+import org.hyperflex.roscomponentmodel.SrvConsumer;
+import org.hyperflex.roscomponentmodel.SrvProducer;
+import org.hyperflex.roscomponentmodel.System;
 import org.hyperflex.roscomponentmodel.Topic;
+import org.hyperflex.roscomponentmodel.Wire;
+import org.hyperflex.roscomponentmodel.roscomponentmodelFactory;
+import org.hyperflex.roscomponentmodel.diagram.edit.parts.ArchitectureModelEditPart;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditor;
+import org.hyperflex.roscomponentmodel.diagram.part.RosComponentModelDiagramEditorPlugin;
 
 
 
@@ -86,26 +116,29 @@ import org.hyperflex.roscomponentmodel.Topic;
  */
 public class ROSResolutionHandler extends AbstractHandler {
 
-	private Hashtable<Package, Package> packageHashTable;
-	private Hashtable<Publisher, Publisher> publisherHashTable;
-	private Hashtable<Subscriber, Subscriber> subscriberHashTable;
+	private Hashtable<AbstractComponent, AbstractComponent> abstractComponentHashTable;
+	private Hashtable<MsgInterface, MsgInterface> msgInterfaceHashTable;
 	private Hashtable<Topic, Topic> topicHashTable;
-	private Hashtable<ServiceServer, ServiceServer> serviceServerHashTable;
-	private Hashtable<ServiceClient, ServiceClient> serviceClientHashTable;
-	private Hashtable<Service, Service> serviceHashTable;
-	private Hashtable<ActionServer, ActionServer> actionServerHashTable;
-	private Hashtable<ActionClient, ActionClient> actionClientHashTable;
-	private Hashtable<Action, Action> actionHashTable;
-	private Hashtable<Node, Node> nodeHashTable;
-	private Hashtable<Parameter, Parameter> parameterHashTable;
+	private Hashtable<SrvProducer, SrvProducer> srvProducerHashTable;
+	private Hashtable<SrvConsumer, SrvConsumer> srvConsumerHashTable;
+	private Hashtable<Wire, Wire> wireHashTable;
+	private Hashtable<Property, Property> propertyHashTable;
+	//	private Hashtable<Publisher, Publisher> publisherHashTable;
+	//	private Hashtable<Subscriber, Subscriber> subscriberHashTable;
+	//	private Hashtable<ServiceServer, ServiceServer> serviceServerHashTable;
+	//	private Hashtable<ServiceClient, ServiceClient> serviceClientHashTable;
+
+	//	private Hashtable<ActionServer, ActionServer> actionServerHashTable;
+	//	private Hashtable<ActionClient, ActionClient> actionClientHashTable;
+	//	private Hashtable<Action, Action> actionHashTable;
+	//	private Hashtable<Node, Node> nodeHashTable;
 	//private Hashtable<ROSTopicConnection, ROSTopicConnection> topicConnectionHashTable;
 	//private Hashtable<ROSServiceConnection, ROSServiceConnection> serviceConnectionHashTable;
 	//private Hashtable<ROSActionConnection, ROSActionConnection> actionConnectionHashTable;
-	private Hashtable<SMACHStateMachine, SMACHStateMachine> stateMachineHashTable;
+	//	private Hashtable<SMACHStateMachine, SMACHStateMachine> stateMachineHashTable;
 
-	private Architecture targetRosArchModel = null;
-	private Architecture sourceRosArchModel = null;
-	private ArrayList<Package> sourceRosPackModels = null;
+	private System targetRosArchModel = null;
+	private System sourceRosArchModel = null;
 	private FeatureModel sourceFeatureModel = null;
 	private ResolutionModel resolutionModel = null;
 
@@ -114,9 +147,9 @@ public class ROSResolutionHandler extends AbstractHandler {
 	 * doesn't implement comparable
 	 */
 	private ArrayList<Node> requiredComponents;
-	private ArrayList<ROSExistingTopicConnection> requiredExistingTopicConnections;
-	private ArrayList<ROSExistingServiceConnection> requiredExistingServiceConnections;
-	private ArrayList<ROSExistingActionConnection> requiredExistingActionConnections;
+	private ArrayList<ROSTopicConnection> requiredTopicConnections;
+	private ArrayList<Wire> requiredServiceConnections;
+	//	private ArrayList<ROSExistingActionConnection> requiredExistingActionConnections;
 
 
 	/**
@@ -143,19 +176,31 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 			if(structSelect.getFirstElement() instanceof ResolutionModel){
 
+				// Find and set the resolution model
+
 				resolutionModel = (ResolutionModel)structSelect.getFirstElement();
 
-				if(! setSourceFeatureModel()){
+				// Find and set the feature model
+
+				if(resolutionModel.getFeatureModel() != null){
+
+					sourceFeatureModel = resolutionModel.getFeatureModel();
+
+				}else{
 					MessageDialog.openError(null, "Error", 
 							"It wasn't possible to find the Feature Model !!!");
 					return null;
 				}
 
-				setSourceRosModel();
+				// Find and set the template system model
 
-				if(sourceRosArchModel == null && sourceRosPackModels.size() == 0){
+				if(resolutionModel.getTemplateSystemModel() instanceof ROSTemplateSystemModel){
+
+					sourceRosArchModel = ((ROSTemplateSystemModel)resolutionModel.getTemplateSystemModel()).getSystem();
+
+				}else{
 					MessageDialog.openError(null, "Error", 
-							"It wasn't possible to find the Template System Model(s) !!!");
+							"It wasn't possible to find the Template System Model !!!");
 					return null;
 				}
 
@@ -178,7 +223,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 				}
 				instance = (Instance)instanceDialog.getResult()[0];
 				sourceFeatureModel.setSelectedInstance(instance);
-				
+
 				ConstraintChecker cc = new ConstraintChecker(sourceFeatureModel);
 				if(cc.checkConstraints()){
 					MessageDialog.openInformation(null, "Selection validation", 
@@ -186,8 +231,8 @@ public class ROSResolutionHandler extends AbstractHandler {
 				}else{
 					return null;
 				}
-				
-				cloneRosArchitecture(sourceRosArchModel, sourceRosPackModels);
+
+				cloneRosArchitecture(sourceRosArchModel);
 
 				/* 
 				 * Creating a copy is not enough
@@ -223,14 +268,14 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 					String tmp = fileEditorInput.getFile().getLocation().toOSString();
 					tmp = tmp.substring(0,modelfilePath.lastIndexOf('/')+1) + instance.getId();
-					modelfilePath = tmp + "-configured.ros_system";
-					diagramfilePath = tmp + "-configured.ros_system_diagram";
+					modelfilePath = tmp + "-configured.roscomponentmodel";
+					diagramfilePath = tmp + "-configured.roscomponentmodel_diagram";
 					IPath modelLocation = new Path(modelfilePath);
 					IFile modelfile = currentProject.getFile(modelLocation.lastSegment());
 					if(modelfile.exists()){
 						FileDialog fileDialog = new FileDialog(new Shell(), SWT.SAVE);
-						fileDialog.setFilterNames(new String[]{"RTT","All files"});
-						fileDialog.setFilterExtensions(new String[]{"*.rtt","*.*"});
+						fileDialog.setFilterNames(new String[]{"ROS","All files"});
+						fileDialog.setFilterExtensions(new String[]{"*.roscomponentmodel","*.*"});
 						modelfilePath = fileDialog.open();
 						if(modelfilePath == null){
 							return null;
@@ -260,8 +305,8 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 					// create the new diagram and save it
 					Diagram diagram = ViewService.createDiagram(targetRosArchModel,
-							ArchitectureEditPart.MODEL_ID,
-							RosDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
+							ArchitectureModelEditPart.MODEL_ID,
+							RosComponentModelDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
 					if (diagram != null) {
 						diagramResource.getContents().add(diagram);
 						diagram.setName(modelLocation.lastSegment());
@@ -280,7 +325,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 					IWorkbenchPage page = PlatformUI.getWorkbench()
 							.getActiveWorkbenchWindow().getActivePage();
-					page.openEditor(new FileEditorInput(diagramFile), RosDiagramEditor.ID);
+					page.openEditor(new FileEditorInput(diagramFile), RosComponentModelDiagramEditor.ID);
 
 
 				}
@@ -305,21 +350,23 @@ public class ROSResolutionHandler extends AbstractHandler {
 	private void doTransformation(Instance featureModelInstance){
 
 		requiredComponents = new ArrayList<Node>();
-		requiredExistingTopicConnections = new ArrayList<ROSExistingTopicConnection>();
-		requiredExistingServiceConnections = new ArrayList<ROSExistingServiceConnection>();
-		requiredExistingActionConnections = new ArrayList<ROSExistingActionConnection>();
+		requiredTopicConnections = new ArrayList<ROSTopicConnection>();
+		requiredServiceConnections = new ArrayList<Wire>();
+
+		//		requiredComponents = new ArrayList<Node>();
+		//		requiredTopicConnections = new ArrayList<ROSExistingTopicConnection>();
+		//		requiredServiceConnections = new ArrayList<ROSExistingServiceConnection>();
+		//		requiredExistingActionConnections = new ArrayList<ROSExistingActionConnection>();
 
 		//topicConnectionHashTable = new Hashtable<ROSTopicConnection, ROSTopicConnection>();
 		//serviceConnectionHashTable = new Hashtable<ROSServiceConnection, ROSServiceConnection>();
 		//actionConnectionHashTable = new Hashtable<ROSActionConnection, ROSActionConnection>();
 
-
-
 		for(RMResolutionElement currentResElem : resolutionModel.getResolutionElements()){
 
 			boolean isActive = featureModelInstance.getSelectedFeatures().contains(currentResElem.getFeature()) ==
-					currentResElem.isExecutedWhenFeatureIsSelected();
-			
+					currentResElem.isActiveIfSelected();
+
 			if( ! isActive ){
 
 				// The feature associated to the resolution element is not selected
@@ -327,87 +374,77 @@ public class ROSResolutionHandler extends AbstractHandler {
 				continue;
 
 			}
-			
-			if(currentResElem.getRequiredComponents() != null){ 
-				if(currentResElem.getRequiredComponents() instanceof ROSRequiredComponents){
-					ROSRequiredComponents requiredTaskContextsTmp = (ROSRequiredComponents)currentResElem.getRequiredComponents();
-					for(Node node : requiredTaskContextsTmp.getROSNodes()){
-						if(! requiredComponents.contains(node)){
-							requiredComponents.add(nodeHashTable.get(node));
-						}
-					}
-				}else{
-					MessageDialog.openError(null, "Error", 
-							"The ROS resolution element " + currentResElem.getName() + 
-							" contains a " + currentResElem.getRequiredComponents().getClass()
-							+ "instance!!!");
-					return;
-				}
-			}
 
-			if(currentResElem.getRequiredConnections() != null){
-				if(currentResElem.getRequiredConnections() instanceof ROSRequiredConnections){
-					ROSRequiredConnections requiredConnectionsTmp = (ROSRequiredConnections)currentResElem.getRequiredConnections();
-					
-					for(ROSExistingTopicConnection conn : requiredConnectionsTmp.getRequiredExistingTopicConnections()){
-						
-						ROSExistingTopicConnection newConnection = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingTopicConnection();
-						newConnection.setPublisher(publisherHashTable.get(conn.getPublisher()));
-						newConnection.setSubscriber(subscriberHashTable.get(conn.getSubscriber()));
-						newConnection.setTopic(topicHashTable.get(conn.getTopic()));
-						if(! requiredExistingTopicConnections.contains(newConnection)){
-							requiredExistingTopicConnections.add(newConnection);
+			if(currentResElem.getRequiredElements() != null){ 
+
+				if(currentResElem.getRequiredElements() instanceof ROSRequiredElements){
+
+					ROSRequiredElements reqElements = (ROSRequiredElements)currentResElem.getRequiredElements();
+
+					for(Node node : reqElements.getRequiredNodes()){
+						if(requiredComponents.contains((Node)abstractComponentHashTable.get(node)) == false){
+							requiredComponents.add((Node)abstractComponentHashTable.get(node));
 						}
-						
+
 					}
-					
-					for(ROSExistingServiceConnection conn : requiredConnectionsTmp.getRequiredExistingServiceConnections()){
-						
-						ROSExistingServiceConnection newConnection = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingServiceConnection();
-						newConnection.setServiceServer(serviceServerHashTable.get(conn.getServiceServer()));
-						newConnection.setServiceClient(serviceClientHashTable.get(conn.getServiceClient()));
-						newConnection.setService(serviceHashTable.get(conn.getService()));
-						if(! requiredExistingServiceConnections.contains(newConnection)){
-							requiredExistingServiceConnections.add(newConnection);
+
+					for(ROSTopicConnection topicConn : reqElements.getRequiredTopicConnections()){
+
+						if(topicConn instanceof ROSExistingTopicConnection == false){
+							continue;
+						}
+
+						ROSExistingTopicConnection existingConn = (ROSExistingTopicConnection)topicConn;
+
+						if(requiredTopicConnections.contains(existingConn) == false){
+							ROSExistingTopicConnection newTopicConnection = rosresolutionmodelsFactoryImpl.eINSTANCE.
+									createROSExistingTopicConnection();
+
+							newTopicConnection.setName(existingConn.getName());
+							newTopicConnection.setTopic(topicHashTable.get(existingConn.getTopic()));
+							newTopicConnection.setMessageInterface(msgInterfaceHashTable.get(existingConn.getMessageInterface()));
+
+							if(requiredTopicConnections.contains(newTopicConnection)==false){
+								requiredTopicConnections.add(newTopicConnection);
+							}
 						}
 					}
-					
-					for(ROSExistingActionConnection conn : requiredConnectionsTmp.getRequiredExistingActionConnections()){
-					
-						ROSExistingActionConnection newConnection = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingActionConnection();
-						newConnection.setActionServer(actionServerHashTable.get(conn.getActionServer()));
-						newConnection.setActionClient(actionClientHashTable.get(conn.getActionClient()));
-						newConnection.setAction(actionHashTable.get(conn.getAction()));
-						if(! requiredExistingActionConnections.contains(newConnection)){
-							requiredExistingActionConnections.add(newConnection);
+
+					for(Wire wire : reqElements.getRequiredServiceConnections()){
+						if(requiredServiceConnections.contains(wireHashTable.get(wire))==false){
+							requiredServiceConnections.add(wireHashTable.get(wire));
 						}
 					}
 
 				}else{
+
 					MessageDialog.openError(null, "Error", 
-							"The RTT resolution element " + currentResElem.getName() + 
-							" contains a " + currentResElem.getRequiredConnections().getClass()
-							+ "instance!!!");
+							"The ROS resolution model contains a RMRequiredElements that is instance of " +
+									currentResElem.getName() +
+							" !!!");
 					return;
+
 				}
+
 
 			}
 
-			for(RMAbstractTransformation currentTransf : currentResElem.getTransformations()){
+			for(RMTransformation currentTransf : currentResElem.getTransformations()){
 
 				if(currentTransf instanceof ROSTransfImplementation){
 
 					ROSTransfImplementation transf = (ROSTransfImplementation)currentTransf;
 
-					Node targetNode = nodeHashTable.get(transf.getTargetNode());
+					Node targetNode = (Node)abstractComponentHashTable.get(transf.getTargetNode());
 
-					((Package)targetNode.eContainer()).setName(transf.getClassNamespace());
-					targetNode.setName(transf.getClassName());
+					targetNode.setPackageName(transf.getClassNamespace());
+					targetNode.setType(transf.getClassName());
 
-					// add the target task context to the required components list
+
+					// add the target nod to the required components list
 					// it should be already there,
 					// This is done for the case in which the user forget to add it
-					if(! requiredComponents.contains(targetNode)){
+					if(requiredComponents.contains(targetNode) == false){
 						requiredComponents.add(targetNode);
 					}
 
@@ -416,565 +453,711 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 					ROSTransfConnection transf = (ROSTransfConnection)currentTransf;
 
-					for(ROSAbstractConnection newRosConnection : transf.getNewConnections()){
+					for(ROSConnection newRosConnection : transf.getNewConnections()){
 
 						if(newRosConnection instanceof ROSTopicConnection){
 
-							Topic targetTopic;
-							Publisher pub;
-							Subscriber sub;
+							ROSTopicConnection conn = (ROSTopicConnection)newRosConnection;
+
+							MsgInterface msgInterface = msgInterfaceHashTable.get(conn.getMessageInterface());
+							Topic topic = null;
+							ROSExistingTopicConnection newRequiredConn = rosresolutionmodelsFactory.eINSTANCE.createROSExistingTopicConnection();
 
 							if(newRosConnection instanceof ROSExistingTopicConnection){
+								topic = topicHashTable.get(((ROSExistingTopicConnection)conn).getTopic());
+								newRequiredConn.setTopic(topic);
+							}else if(newRosConnection instanceof ROSNewTopicConnection){
 
-								ROSExistingTopicConnection currentConn = (ROSExistingTopicConnection)newRosConnection;
-								targetTopic = topicHashTable.get(currentConn.getTopic());
 
-								pub = publisherHashTable.get(currentConn.getPublisher());
-								sub = subscriberHashTable.get(currentConn.getSubscriber());
-
-								// update the topic source and target
-								targetTopic.setPublisher(pub);
-								targetTopic.setSubscriber(sub);
-
-							}else{
-
-								ROSNewTopicConnection currentConn = (ROSNewTopicConnection)newRosConnection;
-								targetTopic = getTopicFromName(currentConn.getTopicName());
-
-								pub = publisherHashTable.get(currentConn.getPublisher());
-								sub = subscriberHashTable.get(currentConn.getSubscriber());
-
-								// create the new topic connection
-								targetTopic.setPublisher(pub);
-								targetTopic.setSubscriber(sub);
-
-								if(! targetRosArchModel.getTopic().contains(targetTopic)){
-									targetRosArchModel.getTopic().add(targetTopic);
+								ROSNewTopicConnection newConn = (ROSNewTopicConnection)conn;
+								Composite composite = ((Composite)newConn.getMessageInterface().eContainer().eContainer());
+								if(composite == null){
+									MessageDialog.openError(null, "Error", 
+											"The ROS resolution model contains a RMTransfConnection that is related to "
+													+ "a msg interface the parent of which is not cotained in a composite "
+													+ "(Resolution Element name:" +
+													currentResElem.getName() +
+											" ) !!!");
+									return;
+								}
+								for(Topic existingTopic : ((Composite)abstractComponentHashTable.get(composite)).getTopics()){
+									if(existingTopic.getName().equals(newConn.getTopicName())){
+										topic = existingTopic;
+										break;
+									}
 								}
 
+								if(topic == null){
+									topic = roscomponentmodelFactory.eINSTANCE.createTopic();
+									topic.setName(newConn.getTopicName());
+									((Composite)abstractComponentHashTable.get(composite)).getTopics().add(topic);
+
+								}
+								newRequiredConn.setTopic(topic);
+
+							}else{
+								continue;
 							}
+
+							msgInterface.setConnection(topic);
+							newRequiredConn.setMessageInterface(msgInterface);
 
 							// add the new connection to the required connections list
-							ROSExistingTopicConnection newRequiredConn = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingTopicConnection();
-							newRequiredConn.setTopic(targetTopic);
-							newRequiredConn.setPublisher(pub);
-							newRequiredConn.setSubscriber(sub);
-
-							if(! requiredExistingTopicConnections.contains(newRequiredConn)){
-								requiredExistingTopicConnections.add(newRequiredConn);
+							if(requiredTopicConnections.contains(newRequiredConn)==false){
+								requiredTopicConnections.add(newRequiredConn);
 							}
 
-							// we add also the connected components
-							if(! requiredComponents.contains((Node)pub.eContainer())){
-								requiredComponents.add((Node)pub.eContainer());
+							// we add also the connected component
+							if(msgInterface.eContainer() instanceof Node){
+								Node node = (Node)abstractComponentHashTable.get((Node)msgInterface.eContainer());
+								if(requiredComponents.contains(node)==false){
+									requiredComponents.add(node);
+								}
 							}
-							if(! requiredComponents.contains((Node)sub.eContainer())){
-								requiredComponents.add((Node)sub.eContainer());
-							}
+
+							//							Topic targetTopic;
+							//							Publisher pub;
+							//							Subscriber sub;
+							//
+							//							if(newRosConnection instanceof ROSExistingTopicConnection){
+							//
+							//								ROSExistingTopicConnection currentConn = (ROSExistingTopicConnection)newRosConnection;
+							//								targetTopic = topicHashTable.get(currentConn.getTopic());
+							//
+							//								pub = publisherHashTable.get(currentConn.getPublisher());
+							//								sub = subscriberHashTable.get(currentConn.getSubscriber());
+							//
+							//								// update the topic source and target
+							//								targetTopic.setPublisher(pub);
+							//								targetTopic.setSubscriber(sub);
+							//
+							//							}else{
+							//
+							//								ROSNewTopicConnection currentConn = (ROSNewTopicConnection)newRosConnection;
+							//								targetTopic = getTopicFromName(currentConn.getTopicName());
+							//
+							//								pub = publisherHashTable.get(currentConn.getPublisher());
+							//								sub = subscriberHashTable.get(currentConn.getSubscriber());
+							//
+							//								// create the new topic connection
+							//								targetTopic.setPublisher(pub);
+							//								targetTopic.setSubscriber(sub);
+							//
+							//								if(! targetRosArchModel.getTopic().contains(targetTopic)){
+							//									targetRosArchModel.getTopic().add(targetTopic);
+							//								}
+							//
+							//							}
+							//
+							//							// add the new connection to the required connections list
+							//							ROSExistingTopicConnection newRequiredConn = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingTopicConnection();
+							//							newRequiredConn.setTopic(targetTopic);
+							//							newRequiredConn.setPublisher(pub);
+							//							newRequiredConn.setSubscriber(sub);
+							//
+							//							if(! requiredTopicConnections.contains(newRequiredConn)){
+							//								requiredTopicConnections.add(newRequiredConn);
+							//							}
+							//
+							//							// we add also the connected components
+							//							if(! requiredComponents.contains((Node)pub.eContainer())){
+							//								requiredComponents.add((Node)pub.eContainer());
+							//							}
+							//							if(! requiredComponents.contains((Node)sub.eContainer())){
+							//								requiredComponents.add((Node)sub.eContainer());
+							//							}
 
 						}else if(newRosConnection instanceof ROSServiceConnection){
 
-							Service targetService;
-							ServiceServer ss;
-							ServiceClient sc;
+							ROSServiceConnection conn = (ROSServiceConnection)newRosConnection;
 
-							if(newRosConnection instanceof ROSExistingServiceConnection){
+							SrvProducer srvProducer = srvProducerHashTable.get(conn.getServiceProducer());
+							SrvConsumer srvConsumer = srvConsumerHashTable.get(conn.getServiceConsumer());
 
-								ROSExistingServiceConnection currentConn = (ROSExistingServiceConnection)newRosConnection;
-								targetService = serviceHashTable.get(currentConn.getService());
+							Wire wire = roscomponentmodelFactory.eINSTANCE.createWire();
+							wire.setSource(srvProducer);
+							wire.setTarget(srvConsumer);
 
-								ss = serviceServerHashTable.get(currentConn.getServiceServer());
-								sc = serviceClientHashTable.get(currentConn.getServiceClient());
+							boolean autoConnection = srvProducer.eContainer() == srvConsumer.eContainer();
+							boolean sameComposite = srvProducer.eContainer().eContainer() == srvConsumer.eContainer().eContainer();
 
-								// update the service server and client
-								if(! targetService.getServiceserver().contains(ss)){
-									targetService.getServiceserver().add(ss);
-								}
-								if(! targetService.getServiceclient().contains(sc)){
-									targetService.getServiceclient().add(sc);
-								}
-
-							}else{
-
-								ROSNewServiceConnection currentConn = (ROSNewServiceConnection)newRosConnection;
-								targetService = getServiceFromName(currentConn.getServiceName());
-
-								ss = serviceServerHashTable.get(currentConn.getServiceServer());
-								sc = serviceClientHashTable.get(currentConn.getServiceClient());
-
-								// create the new service connection
-								if(! targetService.getServiceserver().contains(ss)){
-									targetService.getServiceserver().add(ss);
-								}
-								if(! targetService.getServiceclient().contains(sc)){
-									targetService.getServiceclient().add(sc);
-								}
-
-								if(! targetRosArchModel.getService().contains(targetService)){
-									targetRosArchModel.getService().add(targetService);
+							if(autoConnection == false && sameComposite == true){
+								if(((Composite)srvProducer.eContainer().eContainer()).getWires().contains(wire)==false){
+									((Composite)srvProducer.eContainer().eContainer()).getWires().add(wire);
 								}
 
 							}
 
 							// add the new connection to the required connections list
-							ROSExistingServiceConnection newRequiredConn = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingServiceConnection();
-							newRequiredConn.setService(targetService);
-							newRequiredConn.setServiceServer(ss);
-							newRequiredConn.setServiceClient(sc);
-							if(! requiredExistingServiceConnections.contains(newRequiredConn)){
-								requiredExistingServiceConnections.add(newRequiredConn);
+							if(requiredServiceConnections.contains(wire)==false){
+								requiredServiceConnections.add(wire);
 							}
 
-							// we add also the connected components
-							if(! requiredComponents.contains((Node)ss.eContainer())){
-								requiredComponents.add((Node)ss.eContainer());
-							}
-							if(! requiredComponents.contains((Node)sc.eContainer())){
-								requiredComponents.add((Node)sc.eContainer());
-							}
-
-						}else if(newRosConnection instanceof ROSActionConnection){
-
-							Action targetAction;
-							ActionServer as;
-							ActionClient ac;
-
-							if(newRosConnection instanceof ROSExistingActionConnection){
-
-								ROSExistingActionConnection currentConn = (ROSExistingActionConnection)newRosConnection;
-								targetAction = actionHashTable.get(currentConn.getAction());
-
-								as = actionServerHashTable.get(currentConn.getActionServer());
-								ac = actionClientHashTable.get(currentConn.getActionClient());
-
-								// update the service server and client
-								targetAction.setActionserver(as);
-								targetAction.setActionclient(ac);
-
-							}else{
-
-								ROSNewActionConnection currentConn = (ROSNewActionConnection)newRosConnection;
-								targetAction = getActionFromName(currentConn.getActionName());
-
-								as = actionServerHashTable.get(currentConn.getActionServer());
-								ac = actionClientHashTable.get(currentConn.getActionClient());
-
-								// create the new service connection
-								targetAction.setActionserver(as);
-								targetAction.setActionclient(ac);
-								
-								if(! targetRosArchModel.getAction().contains(targetAction)){
-									targetRosArchModel.getAction().add(targetAction);
+							// we add also the connected component
+							// we add also the connected component
+							if(srvProducer.eContainer() instanceof Node){
+								Node node = (Node)abstractComponentHashTable.get((Node)srvProducer.eContainer());
+								if(requiredComponents.contains(node) == false){
+									requiredComponents.add(node);
 								}
-
 							}
 
-							// add the new connection to the required connections list
-							ROSExistingActionConnection newRequiredConn = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingActionConnection();
-							newRequiredConn.setAction(targetAction);
-							newRequiredConn.setActionServer(as);
-							newRequiredConn.setActionClient(ac);
-							if(! requiredExistingActionConnections.contains(newRequiredConn)){
-								requiredExistingActionConnections.add(newRequiredConn);
+							if(srvConsumer.eContainer() instanceof Node){
+								Node node = (Node)abstractComponentHashTable.get((Node)srvConsumer.eContainer());
+								if(requiredComponents.contains(node) == false){
+									requiredComponents.add(node);
+								}
 							}
 
-							// we add also the connected components
-							if(! requiredComponents.contains((Node)as.eContainer())){
-								requiredComponents.add((Node)as.eContainer());
-							}
-							
-							if(! requiredComponents.contains((Node)ac.eContainer())){
-								requiredComponents.add((Node)ac.eContainer());
-							}
+							//							Service targetService;
+							//							ServiceServer ss;
+							//							ServiceClient sc;
+							//
+							//							if(newRosConnection instanceof ROSExistingServiceConnection){
+							//
+							//								ROSExistingServiceConnection currentConn = (ROSExistingServiceConnection)newRosConnection;
+							//								targetService = serviceHashTable.get(currentConn.getService());
+							//
+							//								ss = serviceServerHashTable.get(currentConn.getServiceServer());
+							//								sc = serviceClientHashTable.get(currentConn.getServiceClient());
+							//
+							//								// update the service server and client
+							//								if(! targetService.getServiceserver().contains(ss)){
+							//									targetService.getServiceserver().add(ss);
+							//								}
+							//								if(! targetService.getServiceclient().contains(sc)){
+							//									targetService.getServiceclient().add(sc);
+							//								}
+							//
+							//							}else{
+							//
+							//								ROSNewServiceConnection currentConn = (ROSNewServiceConnection)newRosConnection;
+							//								targetService = getServiceFromName(currentConn.getServiceName());
+							//
+							//								ss = serviceServerHashTable.get(currentConn.getServiceServer());
+							//								sc = serviceClientHashTable.get(currentConn.getServiceClient());
+							//
+							//								// create the new service connection
+							//								if(! targetService.getServiceserver().contains(ss)){
+							//									targetService.getServiceserver().add(ss);
+							//								}
+							//								if(! targetService.getServiceclient().contains(sc)){
+							//									targetService.getServiceclient().add(sc);
+							//								}
+							//
+							//								if(! targetRosArchModel.getService().contains(targetService)){
+							//									targetRosArchModel.getService().add(targetService);
+							//								}
+							//
+							//							}
+							//
+							//							// add the new connection to the required connections list
+							//							ROSExistingServiceConnection newRequiredConn = rosresolutionmodelsFactoryImpl.eINSTANCE.createROSExistingServiceConnection();
+							//							newRequiredConn.setService(targetService);
+							//							newRequiredConn.setServiceServer(ss);
+							//							newRequiredConn.setServiceClient(sc);
+							//							if(! requiredServiceConnections.contains(newRequiredConn)){
+							//								requiredServiceConnections.add(newRequiredConn);
+							//							}
+							//
+							//							// we add also the connected components
+							//							if(! requiredComponents.contains((Node)ss.eContainer())){
+							//								requiredComponents.add((Node)ss.eContainer());
+							//							}
+							//							if(! requiredComponents.contains((Node)sc.eContainer())){
+							//								requiredComponents.add((Node)sc.eContainer());
+							//							}
 
 						}
-
-
-
-
-
 					}
 
 				}else if(currentTransf instanceof ROSTransfProperty){
 
-
 					ROSTransfProperty transf = (ROSTransfProperty)currentTransf;
-
-					Parameter targetProperty = parameterHashTable.get(transf.getTargetProperty());
-					targetProperty.setValue(transf.getValue());
-
-					// add the target task context to the required components list
-					// it should be already there,
-					// This is done for the case in which the user forget to add it
-					if(! requiredComponents.contains((Node)targetProperty.eContainer())){
-						requiredComponents.add((Node)targetProperty.eContainer());
-					}
+					Property targetProperty = propertyHashTable.get(transf.getTargetProperty());
+					setTargetProperty(targetProperty, transf.getValue());
 
 				}
 
 			}
 		}
+
+		removeUnusedArchitecturalElements(targetRosArchModel.getComposite());
+
+
+
+	}
+
+	private void removeUnusedArchitecturalElements(Composite composite){
 
 		/*
 		 *  Here we check and remove connections and components that are not anymore used
 		 *  We first create an array of the elements that have to be removed, than we remove them
 		 *  If we directly remove during the iteration an exception is thrown
 		 */
-		
+
 		// Remove unused topics
-		
 		ArrayList<Topic> usedTopics = new ArrayList<Topic>();
-		for(Topic topic : targetRosArchModel.getTopic()){
+		//		for(Topic topic : composite.getTopics()){
+		//
+		//			for(ROSTopicConnection conn : requiredTopicConnections){
+		//
+		//				if(conn.getTopic().equals(topic)){
+		//					
+		//					usedTopics.add(topic);
+		//					
+		//				}
+		//
+		//			}
+		//
+		//		}
 
-			for(ROSExistingTopicConnection conn : requiredExistingTopicConnections){
+		for(ROSTopicConnection conn : requiredTopicConnections){
 
-				if(conn.getTopic().equals(topic)){
-					usedTopics.add(topic);
+			Topic topic;
+			if(conn instanceof ROSExistingTopicConnection){
+				topic = ((ROSExistingTopicConnection)conn).getTopic();
+				//}else if(conn instanceof ROSNewTopicConnection){
+				//	topic = ((ROSNewTopicConnection)conn).getTopic();
+			}else{
+				continue;
+			}
+
+			if(usedTopics.contains(topic)==false){
+				usedTopics.add(topic);
+			}
+		}
+
+		ArrayList<CompositeMsgInterface> msgInterfaces = new ArrayList<CompositeMsgInterface>();
+
+		msgInterfaces.addAll(composite.getMsgConsumers());
+		msgInterfaces.addAll(composite.getMsgProducers());
+
+		for(CompositeMsgInterface msgInterface : msgInterfaces){
+
+			boolean preserveConnection = false;
+
+			for(ROSTopicConnection conn : requiredTopicConnections){
+
+				if(conn.getMessageInterface().equals(msgInterface)){
+					preserveConnection = true;
 					break;
 				}
 
 			}
 
+			if(preserveConnection == false){
+				msgInterface.setConnection(null);
+
+			}
+
 		}
 
-		targetRosArchModel.getTopic().retainAll(usedTopics);
+		//composite.getTopics().retainAll(usedTopics);
 
 		// Remove unused services
 
-		ArrayList<Service> unusedServices = new ArrayList<Service>();
+		ArrayList<Wire> unusedWires = new ArrayList<Wire>();
 
-		for(Service service : targetRosArchModel.getService()){
+		for(Wire wire : composite.getWires()){
 
-			boolean used = false;
-			ArrayList<ServiceServer> connectedServiceServers = new ArrayList<ServiceServer>();
-			ArrayList<ServiceClient> connectedServiceClients = new ArrayList<ServiceClient>();
-
-			for(ROSExistingServiceConnection conn : requiredExistingServiceConnections){
-
-				if(conn.getService().equals(service)){
-					used = true;
-					connectedServiceServers.add(conn.getServiceServer());
-					connectedServiceClients.add(conn.getServiceClient());
-
-				}
-
+			if(requiredServiceConnections.contains(wire)){
+				continue;
 			}
 
-			if(used){
-
-				service.getServiceserver().retainAll(connectedServiceServers);
-				service.getServiceclient().retainAll(connectedServiceClients);
-
-			}else{
-				unusedServices.add(service);
+			if(unusedWires.contains(wire)==false){
+				unusedWires.add(wire);
 			}
-
-
 		}
 
-		targetRosArchModel.getService().removeAll(unusedServices);
+		composite.getWires().removeAll(unusedWires);
 
-		// Remove unused actions
+		ArrayList<Node> usedNodes = new ArrayList<Node>();
 
-		ArrayList<Action> usedActions = new ArrayList<Action>();
-		for(Action action : targetRosArchModel.getAction()){
+		for(AbstractComponent component : composite.getComponents()){
 
-			for(ROSExistingActionConnection conn : requiredExistingActionConnections){
+			if(component instanceof Node){
 
-				if(conn.getAction().equals(action)){
-					usedActions.add(action);
-					break;
+				if(requiredComponents.contains(component) == false){
+					continue;
 				}
+
+				if(usedNodes.contains((Node)component)==false){
+					usedNodes.add((Node)component);
+				}
+
+			}else if(component instanceof Composite){
+
+				removeUnusedArchitecturalElements((Composite)component);
 
 			}
 
 		}
 
-		targetRosArchModel.getAction().retainAll(usedActions);
+		composite.getComponents().retainAll(usedNodes);
 
-
-		ArrayList<Package> emptyPackages = new ArrayList<Package>();
-
-		for(Package pack : targetRosArchModel.getPackages()){
-
-			ArrayList<Node> unusedNode = new ArrayList<Node>();
-
-			for(Node node : pack.getNode()){
-
-				if(! requiredComponents.contains(node)){
-					unusedNode.add(node);
-				}
-
-			}
-
-			for(Node node : unusedNode){
-				pack.getNode().remove(node);
-			}
-			
-			if(pack.getNode().size() == 0){
-				emptyPackages.add(pack);
-			}
-
-		}
-		
-		// Remove empty packages from system model
-		targetRosArchModel.getPackages().removeAll(emptyPackages);
-
-
+		//		ArrayList<Package> emptyPackages = new ArrayList<Package>();
+		//
+		//		for(Package pack : targetRosArchModel.getPackages()){
+		//
+		//			ArrayList<Node> unusedNode = new ArrayList<Node>();
+		//
+		//			for(Node node : pack.getNode()){
+		//
+		//				if(! requiredComponents.contains(node)){
+		//					unusedNode.add(node);
+		//				}
+		//
+		//			}
+		//
+		//			for(Node node : unusedNode){
+		//				pack.getNode().remove(node);
+		//			}
+		//
+		//			if(pack.getNode().size() == 0){
+		//				emptyPackages.add(pack);
+		//			}
+		//
+		//		}
+		//
+		//		// Remove empty packages from system model
+		//		targetRosArchModel.getPackages().removeAll(emptyPackages);
 
 	}
 
+	private void setTargetProperty(Property targetProperty, String value){
 
-	private void cloneRosArchitecture(Architecture sourceArch, ArrayList<Package> sourcePackages){
+		if(targetProperty instanceof NodeProperty){
 
-		targetRosArchModel = RosFactoryImpl.eINSTANCE.createArchitecture();
+			((NodeProperty)targetProperty).setValue(value);
+			// add the target task context to the required components list
+			// it should be already there,
+			// This is done for the case in which the user forget to add it
+			Node node = (Node)targetProperty.eContainer();
+			if(requiredComponents.contains(node) == false){
+				requiredComponents.add(node);
+			}
 
-		packageHashTable = new Hashtable<Package, Package>();
-		publisherHashTable = new Hashtable<Publisher, Publisher>();
-		subscriberHashTable = new Hashtable<Subscriber, Subscriber>();
-		topicHashTable = new Hashtable<Topic, Topic>();
-		serviceServerHashTable = new Hashtable<ServiceServer, ServiceServer>();
-		serviceClientHashTable = new Hashtable<ServiceClient, ServiceClient>();
-		serviceHashTable = new Hashtable<Service, Service>();
-		actionServerHashTable = new Hashtable<ActionServer, ActionServer>();
-		actionClientHashTable = new Hashtable<ActionClient, ActionClient>();
-		actionHashTable = new Hashtable<Action, Action>();
-		nodeHashTable = new Hashtable<Node, Node>();
-		parameterHashTable = new Hashtable<Parameter, Parameter>();
-		stateMachineHashTable = new Hashtable<SMACHStateMachine, SMACHStateMachine>();
+		}else if(targetProperty instanceof CompositeProperty){
 
-		// here we clone the packages indirectly defined in the system model
-		for(Package sourcePackage : sourcePackages){
-			targetRosArchModel.getPackages().add(cloneRosPackage(sourcePackage));
+			setTargetProperty(((CompositeProperty)targetProperty).getExposed(), value);
+
 		}
 
-		// here we clone the information directly defined in the system model
-		// to be noted that the system model could be null, in the case the user
-		// defines only package models
+	}
+
+	private void cloneRosArchitecture(System sourceArch){
+
+		targetRosArchModel = roscomponentmodelFactory.eINSTANCE.createSystem();
+
+		abstractComponentHashTable = new Hashtable<AbstractComponent, AbstractComponent>();
+		msgInterfaceHashTable = new Hashtable<MsgInterface, MsgInterface>();
+		topicHashTable = new Hashtable<Topic, Topic>();
+		srvProducerHashTable = new Hashtable<SrvProducer, SrvProducer>();
+		srvConsumerHashTable = new Hashtable<SrvConsumer, SrvConsumer>();
+		wireHashTable = new Hashtable<Wire, Wire>();
+		propertyHashTable = new Hashtable<Property, Property>();
+
 
 		if(sourceArch != null){
 
-			targetRosArchModel.setName(sourceArch.getName());
+			targetRosArchModel.setComposite(cloneComposite(sourceArch.getComposite()));
+
+		}
+
+	}
+
+	private Composite cloneComposite(Composite source){
 
 
-			for(Package sourcePackage : sourceArch.getPackages()){
-				targetRosArchModel.getPackages().add(cloneRosPackage(sourcePackage));
+		Composite target = roscomponentmodelFactory.eINSTANCE.createComposite();
+
+		target.setName(source.getName());
+
+		for(Topic topic : source.getTopics()){
+
+			target.getTopics().add(cloneTopic(topic));
+
+		}
+
+		for(AbstractComponent sourceAbstractComponent : source.getComponents()) {
+
+			if(sourceAbstractComponent instanceof Composite){
+
+				target.getComponents().add(cloneComposite((Composite)sourceAbstractComponent));
+
+			}else if(sourceAbstractComponent instanceof Node){
+
+				target.getComponents().add(cloneNode((Node)sourceAbstractComponent));
+
 			}
-
-			for(Topic sourceTopic : sourceArch.getTopic()){
-				targetRosArchModel.getTopic().add(cloneRosTopic(sourceTopic));
-			}
-
-			for(Service sourceService : sourceArch.getService()){
-				targetRosArchModel.getService().add(cloneRosService(sourceService));
-			}
-
-			for(Action sourceAction : sourceArch.getAction()){
-				targetRosArchModel.getAction().add(cloneRosAction(sourceAction));
-			}
-			
 		}
 
-	}
+		for(Wire wire : source.getWires()){
 
-	private Package cloneRosPackage(Package source){
+			target.getWires().add(cloneWire(wire));
 
-		Package target = RosFactoryImpl.eINSTANCE.createPackage();
-
-		target.setName(source.getName());
-		target.setAuthor(source.getAuthor());
-		target.setDescription(source.getDescription());
-		target.setLicense(source.getLicense());
-		target.setUrl(source.getUrl());
-		target.setRosdep(source.getRosdep());
-
-		for(String depend : source.getDepend()){
-			target.getDepend().add(depend);
 		}
 
-		for(Node sourceNode : source.getNode()) {
-			target.getNode().add(cloneRosNode(sourceNode));
+		for(CompositeMsgProducer sourcePublisher : source.getMsgProducers()){
+			target.getMsgProducers().add(cloneCompositeMsgProducer(sourcePublisher));
 		}
 
-		for(SMACHStateMachine sourceCoordinator : source.getCoordinators()){
-			target.getCoordinators().add(cloneRosSMACHStateMachine(sourceCoordinator));
+		for(CompositeMsgConsumer sourceSubscriber : source.getMsgConsumers()){
+			target.getMsgConsumers().add(cloneCompositeMsgConsumer(sourceSubscriber));
 		}
 
-		packageHashTable.put(source, target);
-
-		return target;
-
-	}
-
-	private Node cloneRosNode(Node source){
-
-		Node target = RosFactoryImpl.eINSTANCE.createNode();
-
-		target.setName(source.getName());
-		target.setLoopRate(source.getLoopRate());
-		target.setArgs(source.getArgs());
-		target.setParamSource(source.getParamSource());
-		target.setNamespace(source.getNamespace());
-
-		for(Publisher sourcePublisher : source.getPublisher()){
-			target.getPublisher().add(cloneRosPublisher(sourcePublisher));
+		for(CompositeSrvProducer sourceServiceServer : source.getSrvProducers()){
+			target.getSrvProducers().add(cloneCompositeSrvProducer(sourceServiceServer));
 		}
 
-		for(Subscriber sourceSubscriber : source.getSubscriber()){
-			target.getSubscriber().add(cloneRosSubscriber(sourceSubscriber));
+		for(CompositeSrvConsumer sourceServiceClient : source.getSrvConsumers()){
+			target.getSrvConsumers().add(cloneCompositeSrvConsumer(sourceServiceClient));
 		}
 
-		for(ServiceServer sourceServiceServer : source.getServiceServer()){
-			target.getServiceServer().add(cloneRosServiceServer(sourceServiceServer));
+		for(CompositeProperty sourceParameter : source.getProperties()){
+			target.getProperties().add(cloneCompositeProperty(sourceParameter));
 		}
 
-		for(ServiceClient sourceServiceClient : source.getServiceClient()){
-			target.getServiceClient().add(cloneRosServiceClient(sourceServiceClient));
-		}
-
-		for(ActionServer sourceActionServer : source.getActionserver()){
-			target.getActionserver().add(cloneRosActionServer(sourceActionServer));
-		}
-
-		for(ActionClient sourceActionClient : source.getActionclient()){
-			target.getActionclient().add(cloneRosActionClient(sourceActionClient));
-		}
-
-		for(Parameter sourceParameter : source.getParameter()){
-			target.getParameter().add(cloneRosParameter(sourceParameter));
-		}
-
-		nodeHashTable.put(source, target);
-
-		return target;
-
-	}
-
-	private Publisher cloneRosPublisher(Publisher source){
-
-		Publisher target = RosFactoryImpl.eINSTANCE.createPublisher();
-
-		target.setName(source.getName());
-		target.setQueueSize(source.getQueueSize());
-		target.setLatch(source.isLatch());
-		target.setEventHandler(source.getEventHandler());
-		target.setMsg(source.getMsg());
-
-		publisherHashTable.put(source, target);
+		abstractComponentHashTable.put(source, target);
 
 		return target;
 
 
 	}
 
-	private Subscriber cloneRosSubscriber(Subscriber source){
+	private Node cloneNode(Node source){
 
-		Subscriber target = RosFactoryImpl.eINSTANCE.createSubscriber();
+		Node target = roscomponentmodelFactory.eINSTANCE.createNode();
 
 		target.setName(source.getName());
-		target.setQueueSize(source.getQueueSize());
-		target.setEventPort(source.isEventPort());
-		target.setEventHandler(source.getEventHandler());
-		target.setMsg(source.getMsg());
+		target.setPackageName(source.getPackageName());
+		target.setType(source.getType());
 
-		subscriberHashTable.put(source, target);
+
+		for(NodeMsgProducer sourcePublisher : source.getMsgProducers()){
+			target.getMsgProducers().add(cloneNodeMsgProducer(sourcePublisher));
+		}
+
+		for(NodeMsgConsumer sourceSubscriber : source.getMsgConsumers()){
+			target.getMsgConsumers().add(cloneNodeMsgConsumer(sourceSubscriber));
+		}
+
+		for(NodeSrvProducer sourceServiceServer : source.getSrvProducers()){
+			target.getSrvProducers().add(cloneNodeSrvProducer(sourceServiceServer));
+		}
+
+		for(NodeSrvConsumer sourceServiceClient : source.getSrvConsumers()){
+			target.getSrvConsumers().add(cloneNodeSrvConsumer(sourceServiceClient));
+		}
+
+		for(NodeProperty sourceParameter : source.getParameters()){
+			target.getParameters().add(cloneNodeProperty(sourceParameter));
+		}
+
+		abstractComponentHashTable.put(source, target);
+
+		return target;
+
+	}
+
+	private NodeMsgProducer cloneNodeMsgProducer(NodeMsgProducer source){
+
+		NodeMsgProducer target = roscomponentmodelFactory.eINSTANCE.createNodeMsgProducer();
+
+		// MsgInterface fields
+		target.setName(source.getName());
+		if(source.getConnection() != null){
+			target.setConnection(topicHashTable.get(source.getConnection()));
+		}
+		// NodeMsgInterface fields
+		target.setTopicName(source.getTopicName());
+
+		// nodeMsgProducer fields
+
+		// none
+
+		msgInterfaceHashTable.put(source, target);
 
 		return target;
 
 
 	}
 
-	private ServiceServer cloneRosServiceServer(ServiceServer source){
+	private NodeMsgConsumer cloneNodeMsgConsumer(NodeMsgConsumer source){
 
-		ServiceServer target = RosFactoryImpl.eINSTANCE.createServiceServer();
+		NodeMsgConsumer target = roscomponentmodelFactory.eINSTANCE.createNodeMsgConsumer();
 
+		// MsgInterface fields
 		target.setName(source.getName());
-		target.setMsg(source.getMsg());
+		if(source.getConnection() != null){
+			target.setConnection(topicHashTable.get(source.getConnection()));
+		}
+		// NodeMsgInterface fields
+		target.setTopicName(source.getTopicName());
 
-		serviceServerHashTable.put(source, target);
+		// nodeMsgConsumer fields
+
+		// none
+
+		msgInterfaceHashTable.put(source, target);
 
 		return target;
 
 
 	}
 
-	private ServiceClient cloneRosServiceClient(ServiceClient source){
+	private CompositeMsgProducer cloneCompositeMsgProducer(CompositeMsgProducer source){
 
-		ServiceClient target = RosFactoryImpl.eINSTANCE.createServiceClient();
+		CompositeMsgProducer target = roscomponentmodelFactory.eINSTANCE.createCompositeMsgProducer();
 
+		// MsgInterface fields
 		target.setName(source.getName());
-		target.setMsg(source.getMsg());
+		if(source.getConnection() != null){
+			target.setConnection(topicHashTable.get(source.getConnection()));
+		}
+		// CompositeMsgInterface fields
+		if(source.getExposed() != null){
+			target.setExposed(topicHashTable.get(source.getExposed()));
+		}
+		// compositeMsgProducer fields
 
-		serviceClientHashTable.put(source, target);
+		// none
+
+		msgInterfaceHashTable.put(source, target);
 
 		return target;
 
 
 	}
 
-	private ActionServer cloneRosActionServer(ActionServer source){
+	private CompositeMsgConsumer cloneCompositeMsgConsumer(CompositeMsgConsumer source){
 
-		ActionServer target = RosFactoryImpl.eINSTANCE.createActionServer();
+		CompositeMsgConsumer target = roscomponentmodelFactory.eINSTANCE.createCompositeMsgConsumer();
 
+		// MsgInterface fields
 		target.setName(source.getName());
-		target.setActionType(source.getActionType());
+		if(source.getConnection() != null){
+			target.setConnection(topicHashTable.get(source.getConnection()));
+		}
+		// CompositeMsgInterface fields
+		if(source.getExposed() != null){
+			target.setExposed(topicHashTable.get(source.getExposed()));
+		}
+		// compositeMsgConsumer fields
 
-		actionServerHashTable.put(source, target);
+		// none
+
+		msgInterfaceHashTable.put(source, target);
 
 		return target;
 
 
 	}
 
-	private ActionClient cloneRosActionClient(ActionClient source){
+	private NodeSrvProducer cloneNodeSrvProducer(NodeSrvProducer source){
 
-		ActionClient target = RosFactoryImpl.eINSTANCE.createActionClient();
+		NodeSrvProducer target = roscomponentmodelFactory.eINSTANCE.createNodeSrvProducer();
 
+		// SrvProducer fields
 		target.setName(source.getName());
-		target.setActionType(source.getActionType());
 
-		actionClientHashTable.put(source, target);
+		// NodeSrvProducer fields
+		target.setSrvName(source.getSrvName());
+
+		srvProducerHashTable.put(source, target);
 
 		return target;
 
+	}
+
+	private NodeSrvConsumer cloneNodeSrvConsumer(NodeSrvConsumer source){
+
+		NodeSrvConsumer target = roscomponentmodelFactory.eINSTANCE.createNodeSrvConsumer();
+
+		// SrvProducer fields
+		target.setName(source.getName());
+
+		// NodeSrvConsumer fields
+		target.setSrvName(source.getSrvName());
+
+		srvConsumerHashTable.put(source, target);
+
+		return target;
 
 	}
 
-	private Parameter cloneRosParameter(Parameter source){
+	private CompositeSrvProducer cloneCompositeSrvProducer(CompositeSrvProducer source){
 
-		Parameter target = RosFactoryImpl.eINSTANCE.createParameter();
+		CompositeSrvProducer target = roscomponentmodelFactory.eINSTANCE.createCompositeSrvProducer();
 
+		// SrvProducer fields
 		target.setName(source.getName());
+
+		// CompositeSrvProducer fields
+		target.setPromote(srvProducerHashTable.get(source.getPromote()));
+
+		srvProducerHashTable.put(source, target);
+
+		return target;
+
+	}
+
+	private CompositeSrvConsumer cloneCompositeSrvConsumer(CompositeSrvConsumer source){
+
+		CompositeSrvConsumer target = roscomponentmodelFactory.eINSTANCE.createCompositeSrvConsumer();
+
+		// SrvProducer fields
+		target.setName(source.getName());
+
+		// CompositeSrvConsumer fields
+		target.setPromote(srvConsumerHashTable.get(source.getPromote()));
+
+		srvConsumerHashTable.put(source, target);
+
+		return target;
+
+	}
+
+	private NodeProperty cloneNodeProperty(NodeProperty source){
+
+		NodeProperty target = roscomponentmodelFactory.eINSTANCE.createNodeProperty();
+
+		// Property fields
+		target.setName(source.getName());
+
+		// NodeProperty fields
+
 		target.setValue(source.getValue());
 		target.setType(source.getType());
 
-		parameterHashTable.put(source, target);
+		propertyHashTable.put(source, target);
 
 		return target;
 
-
 	}
 
-	private SMACHStateMachine cloneRosSMACHStateMachine(SMACHStateMachine source){
+	private CompositeProperty cloneCompositeProperty(CompositeProperty source){
 
-		//TODO
+		CompositeProperty target = roscomponentmodelFactory.eINSTANCE.createCompositeProperty();
 
-		SMACHStateMachine target = null;
+		// Property fields
+		target.setName(source.getName());
 
-		stateMachineHashTable.put(source, target);
+		// CompositeProperty fields
+		target.setExposed(propertyHashTable.get(source.getExposed()));
+
+		propertyHashTable.put(source, target);
 
 		return target;
 
-
 	}
 
-	private Topic cloneRosTopic(Topic source){
+	private Topic cloneTopic(Topic source){
 
-		Topic target = RosFactoryImpl.eINSTANCE.createTopic();
+		Topic target = roscomponentmodelFactory.eINSTANCE.createTopic();
 
 		target.setName(source.getName());
-		target.setPublisher(publisherHashTable.get(source.getPublisher()));
-		target.setSubscriber(subscriberHashTable.get(source.getSubscriber()));
 
 		topicHashTable.put(source, target);
 
@@ -982,294 +1165,277 @@ public class ROSResolutionHandler extends AbstractHandler {
 
 	}
 
-	private Service cloneRosService(Service source){
+	private Wire cloneWire(Wire source){
 
-		Service target = RosFactoryImpl.eINSTANCE.createService();
+		Wire target = roscomponentmodelFactory.eINSTANCE.createWire();
 
-		target.setName(source.getName());
-		for(ServiceServer serviceServer : source.getServiceserver()){
-			target.getServiceserver().add(serviceServerHashTable.get(serviceServer));
-		}
-		for(ServiceClient serviceClient : source.getServiceclient()){
-			target.getServiceclient().add(serviceClientHashTable.get(serviceClient));
-		}
+		target.setSrvName(source.getSrvName());
 
-		serviceHashTable.put(source, target);
+		target.setSource(srvProducerHashTable.get(source.getSource()));
+		target.setTarget(srvConsumerHashTable.get(source.getTarget()));
+
+		wireHashTable.put(source, target);
 
 		return target;
 
 	}
 
-	private Action cloneRosAction(Action source){
-
-		Action target = RosFactoryImpl.eINSTANCE.createAction();
-
-		target.setName(source.getName());
-		target.setActionserver(actionServerHashTable.get(source.getActionserver()));
-		target.setActionclient(actionClientHashTable.get(source.getActionclient()));
-
-		actionHashTable.put(source, target);
-
-		return target;
-
-	}
-
-	private boolean setSourceFeatureModel(){
-
-		Feature currentFeature;
-
-		for(RMResolutionElement currentResElem : resolutionModel.getResolutionElements()){
-
-			currentFeature = currentResElem.getFeature();
-
-			if(currentFeature != null){
-
-				sourceFeatureModel = currentFeature.getFeatureModel();
-				return true;
-
-			}
-
-		}
-
-		return false;
-
-
-	}
-
-	private void setSourceRosModel(){
-
-		sourceRosPackModels = new ArrayList<Package>();
-
-		for(RMResolutionElement currentResElem : resolutionModel.getResolutionElements()){
-
-			for(RMAbstractTransformation currentTransf : currentResElem.getTransformations()){
-
-				Package pack = null;
-				Architecture arch = null;
-
-				if(currentTransf instanceof ROSTransfImplementation){
-
-					ROSTransfImplementation transfImpl = (ROSTransfImplementation) currentTransf;
-					pack = (Package)transfImpl.getTargetNode().eContainer();
-					arch = (Architecture)pack.eContainer();
-
-
-				}else if(currentTransf instanceof ROSTransfProperty){
-
-					ROSTransfProperty transfProperty = (ROSTransfProperty) currentTransf;
-					Node node = (Node)transfProperty.getTargetProperty().eContainer();
-					pack = (Package)node.eContainer();
-					arch = (Architecture)pack.eContainer();
-
-
-				}else if(currentTransf instanceof ROSTransfConnection){
-
-					ROSTransfConnection transfConn = (ROSTransfConnection) currentTransf;
-					ROSAbstractConnection connection = transfConn.getNewConnections().get(0);
-					arch = getArchitectureFromROSAbstractConnection(connection);
-
-				}
-
-				if(pack != null && arch == null){ // this should be the case of impl and prop transf
-					if(! sourceRosPackModels.contains(pack)){
-						sourceRosPackModels.add(pack);
-						continue;
-					}
-				}else{ // this should be the case of connection transf
-//					MessageDialog.openError(null, "Error",currentTransf.getName() + " Transform!!! \n" + arch);
-					setTargetArchitectureModelIfNotNullAndDuplicated(arch);
-				}
-
-			}
-
-			if(currentResElem.getRequiredComponents() instanceof ROSRequiredComponents){
-
-				ROSRequiredComponents rosReqComponenents = (ROSRequiredComponents)currentResElem.getRequiredComponents();
-				for(Node currentReqComp : rosReqComponenents.getROSNodes()){
-
-					Package pack = (Package)currentReqComp.eContainer();
-					if(pack != null && pack.eContainer() == null){
-						if(! sourceRosPackModels.contains(pack)){
-							sourceRosPackModels.add(pack);
-							continue;
-						}
-					}else{
-
-						Architecture arch = (Architecture)pack.eContainer();
-//						MessageDialog.openError(null, "Error", "Req Component!!! \n" + arch);
-						setTargetArchitectureModelIfNotNullAndDuplicated(arch);
-
-					}
-
-				}
-
-			}
-
-			if(currentResElem.getRequiredConnections() instanceof ROSRequiredConnections){
-
-				ROSRequiredConnections rosReqConnections = (ROSRequiredConnections)currentResElem.getRequiredConnections();
-
-				setArchitectureFromROSRequiredConnections(rosReqConnections);
-				
-			}
-
-
-		}
-
-	}
-
-	private Architecture getArchitectureFromROSAbstractConnection(ROSAbstractConnection connection){
-
-		Node node = null;
-		Architecture arch = null;
-
-		if(connection instanceof ROSExistingTopicConnection){
-
-			arch = (Architecture)((ROSExistingTopicConnection)connection).getTopic().eContainer();
-
-		}else if(connection instanceof ROSNewTopicConnection){
-
-			node = (Node)((ROSNewTopicConnection)connection).getPublisher().eContainer();
-			arch = (Architecture)node.eContainer().eContainer();
-
-		}else if(connection instanceof ROSExistingServiceConnection){
-
-			arch = (Architecture)((ROSExistingServiceConnection)connection).getService().eContainer();
-
-		}else if(connection instanceof ROSNewServiceConnection){
-
-			node = (Node)((ROSNewServiceConnection)connection).getServiceServer().eContainer();
-			arch = (Architecture)node.eContainer().eContainer();
-
-		}else if(connection instanceof ROSExistingActionConnection){
-
-			arch = (Architecture)((ROSExistingActionConnection)connection).getAction().eContainer();
-
-		}else if(connection instanceof ROSNewActionConnection){
-
-			node = (Node)((ROSNewActionConnection)connection).getActionServer().eContainer();
-			arch = (Architecture)node.eContainer().eContainer();
-
-		}
-
-		return arch;
-
-	}
-
-	/*
-	 * Returns the architecture model starting from a set of required connections
-	 * It also sets the target model, and checks if more than one system model as been defined as source.
-	 */
-	private boolean setArchitectureFromROSRequiredConnections(ROSRequiredConnections requiredConnection){
-
-		Architecture arch = null;
-
-		for(ROSExistingTopicConnection conn : requiredConnection.getRequiredExistingTopicConnections()){
-			arch = (Architecture)conn.getTopic().eContainer();
-//			MessageDialog.openError(null, "Error", "Req Topic Conn!!! \n" + arch);
-			setTargetArchitectureModelIfNotNullAndDuplicated(arch);
-		}
-
-		for(ROSExistingServiceConnection conn : requiredConnection.getRequiredExistingServiceConnections()){
-			arch = (Architecture)conn.getService().eContainer();
-//			MessageDialog.openError(null, "Error", "Req Service Conn!!! \n" + arch);
-			setTargetArchitectureModelIfNotNullAndDuplicated(arch);
-		}
-
-		for(ROSExistingActionConnection conn : requiredConnection.getRequiredExistingActionConnections()){
-			arch = (Architecture)conn.getAction().eContainer();
-//			MessageDialog.openError(null, "Error", "Req Action Conn!!! \n" + arch);
-			setTargetArchitectureModelIfNotNullAndDuplicated(arch);
-		}
-
-		if(arch != null)
-			return true;
-		else
-			return false;
-
-	}
-	
-	/*
-	 * Set the target architecture model starting from a possible target
-	 * It checks if the possible target is not null and if more than one system model as been defined as source.
-	 */
-	private boolean setTargetArchitectureModelIfNotNullAndDuplicated(Architecture arch){
-		
-		if(arch != null){
-			if(sourceRosArchModel != null && arch != sourceRosArchModel){
-
-//				MessageDialog.openError(null, "Error", 
-//						"You are using at least two system models!!!");
-				return false;
-
-			}else{
-				sourceRosArchModel = arch;
-				return true;
-			}
-		}
-		return false;
-		
-	}
-
-	/*
-	 * If exists, returns the topic with the requested name.
-	 * Otherwise it creates a new topic with the requested name;
-	 */
-	private Topic getTopicFromName(String topicName){
-
-		for(Topic topic : targetRosArchModel.getTopic()){
-
-			if(topic.getName().equals(topicName)){
-				return topic;
-			}
-
-
-		}
-		Topic result = RosFactoryImpl.eINSTANCE.createTopic();
-		result.setName(topicName);
-		return result;
-
-	}
-
-	/*
-	 * If exists, returns the service with the requested name.
-	 * Otherwise it creates a new service with the requested name;
-	 */
-	private Service getServiceFromName(String serviceName){
-
-		for(Service service : targetRosArchModel.getService()){
-
-			if(service.getName().equals(serviceName)){
-				return service;
-			}
-
-
-		}
-		Service result = RosFactoryImpl.eINSTANCE.createService();
-		result.setName(serviceName);
-		return result;
-
-	}
-
-	/*
-	 * If exists, returns the action with the requested name.
-	 * Otherwise it creates a new action with the requested name;
-	 */
-	private Action getActionFromName(String actionName){
-
-		for(Action action : targetRosArchModel.getAction()){
-
-			if(action.getName().equals(actionName)){
-				return action;
-			}
-
-
-		}
-		Action result = RosFactoryImpl.eINSTANCE.createAction();
-		result.setName(actionName);
-		return result;
-
-	}
+	//	private boolean setSourceFeatureModel(){
+	//
+	//		Feature currentFeature;
+	//
+	//		for(RMResolutionElement currentResElem : resolutionModel.getResolutionElements()){
+	//
+	//			currentFeature = currentResElem.getFeature();
+	//
+	//			if(currentFeature != null){
+	//
+	//				sourceFeatureModel = currentFeature.getFeatureModel();
+	//				return true;
+	//
+	//			}
+	//
+	//		}
+	//
+	//		return false;
+	//
+	//
+	//	}
+
+	//	private void setSourceRosModel(){
+	//
+	//		sourceRosPackModels = new ArrayList<Package>();
+	//
+	//		for(RMResolutionElement currentResElem : resolutionModel.getResolutionElements()){
+	//
+	//			for(RMAbstractTransformation currentTransf : currentResElem.getTransformations()){
+	//
+	//				Package pack = null;
+	//				Architecture arch = null;
+	//
+	//				if(currentTransf instanceof ROSTransfImplementation){
+	//
+	//					ROSTransfImplementation transfImpl = (ROSTransfImplementation) currentTransf;
+	//					pack = (Package)transfImpl.getTargetNode().eContainer();
+	//					arch = (Architecture)pack.eContainer();
+	//
+	//
+	//				}else if(currentTransf instanceof ROSTransfProperty){
+	//
+	//					ROSTransfProperty transfProperty = (ROSTransfProperty) currentTransf;
+	//					Node node = (Node)transfProperty.getTargetProperty().eContainer();
+	//					pack = (Package)node.eContainer();
+	//					arch = (Architecture)pack.eContainer();
+	//
+	//
+	//				}else if(currentTransf instanceof ROSTransfConnection){
+	//
+	//					ROSTransfConnection transfConn = (ROSTransfConnection) currentTransf;
+	//					ROSAbstractConnection connection = transfConn.getNewConnections().get(0);
+	//					arch = getArchitectureFromROSAbstractConnection(connection);
+	//
+	//				}
+	//
+	//				if(pack != null && arch == null){ // this should be the case of impl and prop transf
+	//					if(! sourceRosPackModels.contains(pack)){
+	//						sourceRosPackModels.add(pack);
+	//						continue;
+	//					}
+	//				}else{ // this should be the case of connection transf
+	//					//					MessageDialog.openError(null, "Error",currentTransf.getName() + " Transform!!! \n" + arch);
+	//					setTargetArchitectureModelIfNotNullAndDuplicated(arch);
+	//				}
+	//
+	//			}
+	//
+	//			if(currentResElem.getRequiredComponents() instanceof ROSRequiredComponents){
+	//
+	//				ROSRequiredComponents rosReqComponenents = (ROSRequiredComponents)currentResElem.getRequiredComponents();
+	//				for(Node currentReqComp : rosReqComponenents.getROSNodes()){
+	//
+	//					Package pack = (Package)currentReqComp.eContainer();
+	//					if(pack != null && pack.eContainer() == null){
+	//						if(! sourceRosPackModels.contains(pack)){
+	//							sourceRosPackModels.add(pack);
+	//							continue;
+	//						}
+	//					}else{
+	//
+	//						Architecture arch = (Architecture)pack.eContainer();
+	//						//						MessageDialog.openError(null, "Error", "Req Component!!! \n" + arch);
+	//						setTargetArchitectureModelIfNotNullAndDuplicated(arch);
+	//
+	//					}
+	//
+	//				}
+	//
+	//			}
+	//
+	//			if(currentResElem.getRequiredConnections() instanceof ROSRequiredConnections){
+	//
+	//				ROSRequiredConnections rosReqConnections = (ROSRequiredConnections)currentResElem.getRequiredConnections();
+	//
+	//				setArchitectureFromROSRequiredConnections(rosReqConnections);
+	//
+	//			}
+	//
+	//
+	//		}
+	//
+	//	}
+
+	//	private Architecture getArchitectureFromROSAbstractConnection(ROSAbstractConnection connection){
+	//
+	//		Node node = null;
+	//		Architecture arch = null;
+	//
+	//		if(connection instanceof ROSExistingTopicConnection){
+	//
+	//			arch = (Architecture)((ROSExistingTopicConnection)connection).getTopic().eContainer();
+	//
+	//		}else if(connection instanceof ROSNewTopicConnection){
+	//
+	//			node = (Node)((ROSNewTopicConnection)connection).getPublisher().eContainer();
+	//			arch = (Architecture)node.eContainer().eContainer();
+	//
+	//		}else if(connection instanceof ROSExistingServiceConnection){
+	//
+	//			arch = (Architecture)((ROSExistingServiceConnection)connection).getService().eContainer();
+	//
+	//		}else if(connection instanceof ROSNewServiceConnection){
+	//
+	//			node = (Node)((ROSNewServiceConnection)connection).getServiceServer().eContainer();
+	//			arch = (Architecture)node.eContainer().eContainer();
+	//
+	//		}else if(connection instanceof ROSExistingActionConnection){
+	//
+	//			arch = (Architecture)((ROSExistingActionConnection)connection).getAction().eContainer();
+	//
+	//		}else if(connection instanceof ROSNewActionConnection){
+	//
+	//			node = (Node)((ROSNewActionConnection)connection).getActionServer().eContainer();
+	//			arch = (Architecture)node.eContainer().eContainer();
+	//
+	//		}
+	//
+	//		return arch;
+	//
+	//	}
+	//
+	//	/*
+	//	 * Returns the architecture model starting from a set of required connections
+	//	 * It also sets the target model, and checks if more than one system model as been defined as source.
+	//	 */
+	//	private boolean setArchitectureFromROSRequiredConnections(ROSRequiredConnections requiredConnection){
+	//
+	//		Architecture arch = null;
+	//
+	//		for(ROSExistingTopicConnection conn : requiredConnection.getRequiredExistingTopicConnections()){
+	//			arch = (Architecture)conn.getTopic().eContainer();
+	//			//			MessageDialog.openError(null, "Error", "Req Topic Conn!!! \n" + arch);
+	//			setTargetArchitectureModelIfNotNullAndDuplicated(arch);
+	//		}
+	//
+	//		for(ROSExistingServiceConnection conn : requiredConnection.getRequiredExistingServiceConnections()){
+	//			arch = (Architecture)conn.getService().eContainer();
+	//			//			MessageDialog.openError(null, "Error", "Req Service Conn!!! \n" + arch);
+	//			setTargetArchitectureModelIfNotNullAndDuplicated(arch);
+	//		}
+	//
+	//		for(ROSExistingActionConnection conn : requiredConnection.getRequiredExistingActionConnections()){
+	//			arch = (Architecture)conn.getAction().eContainer();
+	//			//			MessageDialog.openError(null, "Error", "Req Action Conn!!! \n" + arch);
+	//			setTargetArchitectureModelIfNotNullAndDuplicated(arch);
+	//		}
+	//
+	//		if(arch != null)
+	//			return true;
+	//		else
+	//			return false;
+	//
+	//	}
+	//
+	//	/*
+	//	 * Set the target architecture model starting from a possible target
+	//	 * It checks if the possible target is not null and if more than one system model as been defined as source.
+	//	 */
+	//	private boolean setTargetArchitectureModelIfNotNullAndDuplicated(Architecture arch){
+	//
+	//		if(arch != null){
+	//			if(sourceRosArchModel != null && arch != sourceRosArchModel){
+	//
+	//				//				MessageDialog.openError(null, "Error", 
+	//				//						"You are using at least two system models!!!");
+	//				return false;
+	//
+	//			}else{
+	//				sourceRosArchModel = arch;
+	//				return true;
+	//			}
+	//		}
+	//		return false;
+	//
+	//	}
+
+	//	/*
+	//	 * If exists, returns the topic with the requested name.
+	//	 * Otherwise it creates a new topic with the requested name;
+	//	 */
+	//	private Topic getTopicFromName(String topicName){
+	//
+	//		for(Topic topic : targetRosArchModel.getTopic()){
+	//
+	//			if(topic.getName().equals(topicName)){
+	//				return topic;
+	//			}
+	//
+	//
+	//		}
+	//		Topic result = RosFactoryImpl.eINSTANCE.createTopic();
+	//		result.setName(topicName);
+	//		return result;
+	//
+	//	}
+	//
+	//	/*
+	//	 * If exists, returns the service with the requested name.
+	//	 * Otherwise it creates a new service with the requested name;
+	//	 */
+	//	private Service getServiceFromName(String serviceName){
+	//
+	//		for(Service service : targetRosArchModel.getService()){
+	//
+	//			if(service.getName().equals(serviceName)){
+	//				return service;
+	//			}
+	//
+	//
+	//		}
+	//		Service result = RosFactoryImpl.eINSTANCE.createService();
+	//		result.setName(serviceName);
+	//		return result;
+	//
+	//	}
+	//
+	//	/*
+	//	 * If exists, returns the action with the requested name.
+	//	 * Otherwise it creates a new action with the requested name;
+	//	 */
+	//	private Action getActionFromName(String actionName){
+	//
+	//		for(Action action : targetRosArchModel.getAction()){
+	//
+	//			if(action.getName().equals(actionName)){
+	//				return action;
+	//			}
+	//
+	//
+	//		}
+	//		Action result = RosFactoryImpl.eINSTANCE.createAction();
+	//		result.setName(actionName);
+	//		return result;
+	//
+	//	}
 
 	//	// Check if the input connection is already defined in the list of required connections
 	//	private boolean isExistingTargetConnectionAlreadyRequired(ROSExistingTargetConnection connection){

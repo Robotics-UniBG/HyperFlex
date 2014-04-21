@@ -45,24 +45,13 @@ import org.hyperflex.roscomponentmodel.Topic;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl#getTopic <em>Topic</em>}</li>
  *   <li>{@link org.hyperflex.resolutionmodels.rosresolutionmodels.impl.ROSTopicConnectionImpl#getMessageInterface <em>Message Interface</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ROSTopicConnectionImpl extends ROSConnectionImpl implements ROSTopicConnection {
-	/**
-	 * The cached value of the '{@link #getTopic() <em>Topic</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTopic()
-	 * @generated
-	 * @ordered
-	 */
-	protected Topic topic;
-
+public abstract class ROSTopicConnectionImpl extends ROSConnectionImpl implements ROSTopicConnection {
 	/**
 	 * The cached value of the '{@link #getMessageInterface() <em>Message Interface</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -90,44 +79,6 @@ public class ROSTopicConnectionImpl extends ROSConnectionImpl implements ROSTopi
 	@Override
 	protected EClass eStaticClass() {
 		return rosresolutionmodelsPackage.Literals.ROS_TOPIC_CONNECTION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Topic getTopic() {
-		if (topic != null && topic.eIsProxy()) {
-			InternalEObject oldTopic = (InternalEObject)topic;
-			topic = (Topic)eResolveProxy(oldTopic);
-			if (topic != oldTopic) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__TOPIC, oldTopic, topic));
-			}
-		}
-		return topic;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Topic basicGetTopic() {
-		return topic;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTopic(Topic newTopic) {
-		Topic oldTopic = topic;
-		topic = newTopic;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__TOPIC, oldTopic, topic));
 	}
 
 	/**
@@ -176,9 +127,6 @@ public class ROSTopicConnectionImpl extends ROSConnectionImpl implements ROSTopi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__TOPIC:
-				if (resolve) return getTopic();
-				return basicGetTopic();
 			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__MESSAGE_INTERFACE:
 				if (resolve) return getMessageInterface();
 				return basicGetMessageInterface();
@@ -194,9 +142,6 @@ public class ROSTopicConnectionImpl extends ROSConnectionImpl implements ROSTopi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__TOPIC:
-				setTopic((Topic)newValue);
-				return;
 			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__MESSAGE_INTERFACE:
 				setMessageInterface((MsgInterface)newValue);
 				return;
@@ -212,9 +157,6 @@ public class ROSTopicConnectionImpl extends ROSConnectionImpl implements ROSTopi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__TOPIC:
-				setTopic((Topic)null);
-				return;
 			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__MESSAGE_INTERFACE:
 				setMessageInterface((MsgInterface)null);
 				return;
@@ -230,8 +172,6 @@ public class ROSTopicConnectionImpl extends ROSConnectionImpl implements ROSTopi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__TOPIC:
-				return topic != null;
 			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION__MESSAGE_INTERFACE:
 				return messageInterface != null;
 		}

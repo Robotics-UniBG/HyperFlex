@@ -72,13 +72,22 @@ public interface rosresolutionmodelsFactory extends EFactory {
 	ROSTransfConnection createROSTransfConnection();
 
 	/**
-	 * Returns a new object of class '<em>ROS Topic Connection</em>'.
+	 * Returns a new object of class '<em>ROS Existing Topic Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ROS Topic Connection</em>'.
+	 * @return a new object of class '<em>ROS Existing Topic Connection</em>'.
 	 * @generated
 	 */
-	ROSTopicConnection createROSTopicConnection();
+	ROSExistingTopicConnection createROSExistingTopicConnection();
+
+	/**
+	 * Returns a new object of class '<em>ROS New Topic Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ROS New Topic Connection</em>'.
+	 * @generated
+	 */
+	ROSNewTopicConnection createROSNewTopicConnection();
 
 	/**
 	 * Returns a new object of class '<em>ROS Service Connection</em>'.

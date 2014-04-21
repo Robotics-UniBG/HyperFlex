@@ -26,8 +26,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosResolutionModel.ecore#//ROSConnection/name"/>
     </genClasses>
     <genClasses ecoreClass="rosResolutionModel.ecore#//ROSTopicConnection">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosResolutionModel.ecore#//ROSTopicConnection/topic"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosResolutionModel.ecore#//ROSTopicConnection/messageInterface"/>
+    </genClasses>
+    <genClasses ecoreClass="rosResolutionModel.ecore#//ROSExistingTopicConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosResolutionModel.ecore#//ROSExistingTopicConnection/topic"/>
+    </genClasses>
+    <genClasses ecoreClass="rosResolutionModel.ecore#//ROSNewTopicConnection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosResolutionModel.ecore#//ROSNewTopicConnection/topicName"/>
     </genClasses>
     <genClasses ecoreClass="rosResolutionModel.ecore#//ROSServiceConnection">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rosResolutionModel.ecore#//ROSServiceConnection/serviceProducer"/>

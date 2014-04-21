@@ -82,7 +82,8 @@ public class rosresolutionmodelsFactoryImpl extends EFactoryImpl implements rosr
 			case rosresolutionmodelsPackage.ROS_TRANSF_IMPLEMENTATION: return createROSTransfImplementation();
 			case rosresolutionmodelsPackage.ROS_TRANSF_PROPERTY: return createROSTransfProperty();
 			case rosresolutionmodelsPackage.ROS_TRANSF_CONNECTION: return createROSTransfConnection();
-			case rosresolutionmodelsPackage.ROS_TOPIC_CONNECTION: return createROSTopicConnection();
+			case rosresolutionmodelsPackage.ROS_EXISTING_TOPIC_CONNECTION: return createROSExistingTopicConnection();
+			case rosresolutionmodelsPackage.ROS_NEW_TOPIC_CONNECTION: return createROSNewTopicConnection();
 			case rosresolutionmodelsPackage.ROS_SERVICE_CONNECTION: return createROSServiceConnection();
 			case rosresolutionmodelsPackage.ROS_REQUIRED_ELEMENTS: return createROSRequiredElements();
 			case rosresolutionmodelsPackage.ROS_TEMPLATE_SYSTEM_MODEL: return createROSTemplateSystemModel();
@@ -126,9 +127,19 @@ public class rosresolutionmodelsFactoryImpl extends EFactoryImpl implements rosr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ROSTopicConnection createROSTopicConnection() {
-		ROSTopicConnectionImpl rosTopicConnection = new ROSTopicConnectionImpl();
-		return rosTopicConnection;
+	public ROSExistingTopicConnection createROSExistingTopicConnection() {
+		ROSExistingTopicConnectionImpl rosExistingTopicConnection = new ROSExistingTopicConnectionImpl();
+		return rosExistingTopicConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ROSNewTopicConnection createROSNewTopicConnection() {
+		ROSNewTopicConnectionImpl rosNewTopicConnection = new ROSNewTopicConnectionImpl();
+		return rosNewTopicConnection;
 	}
 
 	/**

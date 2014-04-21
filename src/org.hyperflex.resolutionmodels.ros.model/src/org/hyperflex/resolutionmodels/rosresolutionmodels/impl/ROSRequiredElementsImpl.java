@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.hyperflex.resolutionmodels.impl.RMRequiredElementsImpl;
 
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
 import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredElements;
 import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection;
 import org.hyperflex.resolutionmodels.rosresolutionmodels.rosresolutionmodelsPackage;

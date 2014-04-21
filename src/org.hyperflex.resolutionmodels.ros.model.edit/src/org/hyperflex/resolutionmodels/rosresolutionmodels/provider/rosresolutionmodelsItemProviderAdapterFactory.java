@@ -182,26 +182,49 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection} instances.
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ROSTopicConnectionItemProvider rosTopicConnectionItemProvider;
+	protected ROSExistingTopicConnectionItemProvider rosExistingTopicConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTopicConnection}.
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createROSTopicConnectionAdapter() {
-		if (rosTopicConnectionItemProvider == null) {
-			rosTopicConnectionItemProvider = new ROSTopicConnectionItemProvider(this);
+	public Adapter createROSExistingTopicConnectionAdapter() {
+		if (rosExistingTopicConnectionItemProvider == null) {
+			rosExistingTopicConnectionItemProvider = new ROSExistingTopicConnectionItemProvider(this);
 		}
 
-		return rosTopicConnectionItemProvider;
+		return rosExistingTopicConnectionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ROSNewTopicConnectionItemProvider rosNewTopicConnectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createROSNewTopicConnectionAdapter() {
+		if (rosNewTopicConnectionItemProvider == null) {
+			rosNewTopicConnectionItemProvider = new ROSNewTopicConnectionItemProvider(this);
+		}
+
+		return rosNewTopicConnectionItemProvider;
 	}
 
 	/**
@@ -375,7 +398,8 @@ public class rosresolutionmodelsItemProviderAdapterFactory extends rosresolution
 		if (rosTransfImplementationItemProvider != null) rosTransfImplementationItemProvider.dispose();
 		if (rosTransfPropertyItemProvider != null) rosTransfPropertyItemProvider.dispose();
 		if (rosTransfConnectionItemProvider != null) rosTransfConnectionItemProvider.dispose();
-		if (rosTopicConnectionItemProvider != null) rosTopicConnectionItemProvider.dispose();
+		if (rosExistingTopicConnectionItemProvider != null) rosExistingTopicConnectionItemProvider.dispose();
+		if (rosNewTopicConnectionItemProvider != null) rosNewTopicConnectionItemProvider.dispose();
 		if (rosServiceConnectionItemProvider != null) rosServiceConnectionItemProvider.dispose();
 		if (rosRequiredElementsItemProvider != null) rosRequiredElementsItemProvider.dispose();
 		if (rosTemplateSystemModelItemProvider != null) rosTemplateSystemModelItemProvider.dispose();

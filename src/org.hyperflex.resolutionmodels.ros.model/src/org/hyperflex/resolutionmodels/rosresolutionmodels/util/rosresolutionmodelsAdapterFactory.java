@@ -118,6 +118,14 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 				return createROSTopicConnectionAdapter();
 			}
 			@Override
+			public Adapter caseROSExistingTopicConnection(ROSExistingTopicConnection object) {
+				return createROSExistingTopicConnectionAdapter();
+			}
+			@Override
+			public Adapter caseROSNewTopicConnection(ROSNewTopicConnection object) {
+				return createROSNewTopicConnectionAdapter();
+			}
+			@Override
 			public Adapter caseROSServiceConnection(ROSServiceConnection object) {
 				return createROSServiceConnectionAdapter();
 			}
@@ -240,6 +248,34 @@ public class rosresolutionmodelsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createROSTopicConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection <em>ROS Existing Topic Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection
+	 * @generated
+	 */
+	public Adapter createROSExistingTopicConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection <em>ROS New Topic Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection
+	 * @generated
+	 */
+	public Adapter createROSNewTopicConnectionAdapter() {
 		return null;
 	}
 

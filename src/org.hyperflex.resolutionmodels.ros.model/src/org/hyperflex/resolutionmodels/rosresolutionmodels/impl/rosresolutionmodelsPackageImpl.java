@@ -35,6 +35,8 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.hyperflex.resolutionmodels.resolutionmodelsPackage;
 
 import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSExistingTopicConnection;
+import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSNewTopicConnection;
 import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSRequiredElements;
 import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSServiceConnection;
 import org.hyperflex.resolutionmodels.rosresolutionmodels.ROSTemplateSystemModel;
@@ -88,6 +90,20 @@ public class rosresolutionmodelsPackageImpl extends EPackageImpl implements rosr
 	 * @generated
 	 */
 	private EClass rosTopicConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rosExistingTopicConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rosNewTopicConnectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -261,7 +277,7 @@ public class rosresolutionmodelsPackageImpl extends EPackageImpl implements rosr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getROSTopicConnection_Topic() {
+	public EReference getROSTopicConnection_MessageInterface() {
 		return (EReference)rosTopicConnectionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -270,8 +286,35 @@ public class rosresolutionmodelsPackageImpl extends EPackageImpl implements rosr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getROSTopicConnection_MessageInterface() {
-		return (EReference)rosTopicConnectionEClass.getEStructuralFeatures().get(1);
+	public EClass getROSExistingTopicConnection() {
+		return rosExistingTopicConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getROSExistingTopicConnection_Topic() {
+		return (EReference)rosExistingTopicConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getROSNewTopicConnection() {
+		return rosNewTopicConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getROSNewTopicConnection_TopicName() {
+		return (EAttribute)rosNewTopicConnectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -396,8 +439,13 @@ public class rosresolutionmodelsPackageImpl extends EPackageImpl implements rosr
 		createEAttribute(rosConnectionEClass, ROS_CONNECTION__NAME);
 
 		rosTopicConnectionEClass = createEClass(ROS_TOPIC_CONNECTION);
-		createEReference(rosTopicConnectionEClass, ROS_TOPIC_CONNECTION__TOPIC);
 		createEReference(rosTopicConnectionEClass, ROS_TOPIC_CONNECTION__MESSAGE_INTERFACE);
+
+		rosExistingTopicConnectionEClass = createEClass(ROS_EXISTING_TOPIC_CONNECTION);
+		createEReference(rosExistingTopicConnectionEClass, ROS_EXISTING_TOPIC_CONNECTION__TOPIC);
+
+		rosNewTopicConnectionEClass = createEClass(ROS_NEW_TOPIC_CONNECTION);
+		createEAttribute(rosNewTopicConnectionEClass, ROS_NEW_TOPIC_CONNECTION__TOPIC_NAME);
 
 		rosServiceConnectionEClass = createEClass(ROS_SERVICE_CONNECTION);
 		createEReference(rosServiceConnectionEClass, ROS_SERVICE_CONNECTION__SERVICE_PRODUCER);
@@ -448,6 +496,8 @@ public class rosresolutionmodelsPackageImpl extends EPackageImpl implements rosr
 		rosTransfPropertyEClass.getESuperTypes().add(theresolutionmodelsPackage.getRMTransfProperty());
 		rosTransfConnectionEClass.getESuperTypes().add(theresolutionmodelsPackage.getRMTransfConnection());
 		rosTopicConnectionEClass.getESuperTypes().add(this.getROSConnection());
+		rosExistingTopicConnectionEClass.getESuperTypes().add(this.getROSTopicConnection());
+		rosNewTopicConnectionEClass.getESuperTypes().add(this.getROSTopicConnection());
 		rosServiceConnectionEClass.getESuperTypes().add(this.getROSConnection());
 		rosRequiredElementsEClass.getESuperTypes().add(theresolutionmodelsPackage.getRMRequiredElements());
 		rosTemplateSystemModelEClass.getESuperTypes().add(theresolutionmodelsPackage.getTemplateSystemModel());
@@ -465,9 +515,14 @@ public class rosresolutionmodelsPackageImpl extends EPackageImpl implements rosr
 		initEClass(rosConnectionEClass, ROSConnection.class, "ROSConnection", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getROSConnection_Name(), ecorePackage.getEString(), "name", null, 1, 1, ROSConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(rosTopicConnectionEClass, ROSTopicConnection.class, "ROSTopicConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getROSTopicConnection_Topic(), theroscomponentmodelPackage.getTopic(), null, "topic", null, 1, 1, ROSTopicConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(rosTopicConnectionEClass, ROSTopicConnection.class, "ROSTopicConnection", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getROSTopicConnection_MessageInterface(), theroscomponentmodelPackage.getMsgInterface(), null, "messageInterface", null, 1, 1, ROSTopicConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(rosExistingTopicConnectionEClass, ROSExistingTopicConnection.class, "ROSExistingTopicConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getROSExistingTopicConnection_Topic(), theroscomponentmodelPackage.getTopic(), null, "topic", null, 1, 1, ROSExistingTopicConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(rosNewTopicConnectionEClass, ROSNewTopicConnection.class, "ROSNewTopicConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getROSNewTopicConnection_TopicName(), ecorePackage.getEString(), "topicName", null, 1, 1, ROSNewTopicConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rosServiceConnectionEClass, ROSServiceConnection.class, "ROSServiceConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getROSServiceConnection_ServiceProducer(), theroscomponentmodelPackage.getSrvProducer(), null, "serviceProducer", null, 1, 1, ROSServiceConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

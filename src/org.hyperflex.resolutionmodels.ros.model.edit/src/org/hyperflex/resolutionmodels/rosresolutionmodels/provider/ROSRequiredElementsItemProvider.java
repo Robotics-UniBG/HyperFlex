@@ -243,7 +243,12 @@ public class ROSRequiredElementsItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_ELEMENTS__REQUIRED_TOPIC_CONNECTIONS,
-				 rosresolutionmodelsFactory.eINSTANCE.createROSTopicConnection()));
+				 rosresolutionmodelsFactory.eINSTANCE.createROSExistingTopicConnection()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(rosresolutionmodelsPackage.Literals.ROS_REQUIRED_ELEMENTS__REQUIRED_TOPIC_CONNECTIONS,
+				 rosresolutionmodelsFactory.eINSTANCE.createROSNewTopicConnection()));
 	}
 
 	/**

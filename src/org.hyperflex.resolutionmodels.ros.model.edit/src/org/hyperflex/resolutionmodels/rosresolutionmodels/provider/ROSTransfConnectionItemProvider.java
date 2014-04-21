@@ -177,7 +177,12 @@ public class ROSTransfConnectionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(rosresolutionmodelsPackage.Literals.ROS_TRANSF_CONNECTION__NEW_CONNECTIONS,
-				 rosresolutionmodelsFactory.eINSTANCE.createROSTopicConnection()));
+				 rosresolutionmodelsFactory.eINSTANCE.createROSExistingTopicConnection()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(rosresolutionmodelsPackage.Literals.ROS_TRANSF_CONNECTION__NEW_CONNECTIONS,
+				 rosresolutionmodelsFactory.eINSTANCE.createROSNewTopicConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter
