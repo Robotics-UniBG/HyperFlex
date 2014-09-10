@@ -936,13 +936,22 @@ public interface roscomponentmodelPackage extends EPackage {
 	int SYSTEM__COMPOSITE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_FEATURE_COUNT = 1;
+	int SYSTEM_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.hyperflex.roscomponentmodel.impl.NodePropertyImpl <em>Node Property</em>}' class.
@@ -1484,6 +1493,17 @@ public interface roscomponentmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSystem_Composite();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.hyperflex.roscomponentmodel.System#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.hyperflex.roscomponentmodel.System#getName()
+	 * @see #getSystem()
+	 * @generated
+	 */
+	EAttribute getSystem_Name();
 
 	/**
 	 * Returns the meta object for class '{@link org.hyperflex.roscomponentmodel.MsgInterface <em>Msg Interface</em>}'.
@@ -2030,6 +2050,14 @@ public interface roscomponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SYSTEM__COMPOSITE = eINSTANCE.getSystem_Composite();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SYSTEM__NAME = eINSTANCE.getSystem_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.hyperflex.roscomponentmodel.impl.MsgInterfaceImpl <em>Msg Interface</em>}' class.

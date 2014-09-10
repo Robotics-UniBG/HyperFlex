@@ -669,6 +669,15 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSystem_Name() {
+		return (EAttribute)systemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMsgInterface() {
 		return msgInterfaceEClass;
 	}
@@ -876,6 +885,7 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 
 		systemEClass = createEClass(SYSTEM);
 		createEReference(systemEClass, SYSTEM__COMPOSITE);
+		createEAttribute(systemEClass, SYSTEM__NAME);
 
 		msgInterfaceEClass = createEClass(MSG_INTERFACE);
 		createEAttribute(msgInterfaceEClass, MSG_INTERFACE__NAME);
@@ -1000,6 +1010,7 @@ public class roscomponentmodelPackageImpl extends EPackageImpl implements roscom
 
 		initEClass(systemEClass, org.hyperflex.roscomponentmodel.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSystem_Composite(), this.getComposite(), null, "composite", null, 1, 1, org.hyperflex.roscomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSystem_Name(), ecorePackage.getEString(), "name", null, 1, 1, org.hyperflex.roscomponentmodel.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(msgInterfaceEClass, MsgInterface.class, "MsgInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMsgInterface_Name(), ecorePackage.getEString(), "name", null, 0, 1, MsgInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

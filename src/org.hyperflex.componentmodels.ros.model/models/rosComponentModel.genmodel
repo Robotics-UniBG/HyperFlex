@@ -61,6 +61,7 @@
     </genClasses>
     <genClasses ecoreClass="rosComponentModel.ecore#//System">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rosComponentModel.ecore#//System/composite"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//System/name"/>
     </genClasses>
     <genClasses ecoreClass="rosComponentModel.ecore#//MsgInterface">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rosComponentModel.ecore#//MsgInterface/name"/>

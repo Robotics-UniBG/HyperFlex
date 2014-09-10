@@ -43,6 +43,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.hyperflex.roscomponentmodel.impl.SystemImpl#getComposite <em>Composite</em>}</li>
+ *   <li>{@link org.hyperflex.roscomponentmodel.impl.SystemImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -58,6 +59,24 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.roscomponen
 	 * @ordered
 	 */
 	protected Composite composite;
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -125,6 +144,27 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.roscomponen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, roscomponentmodelPackage.SYSTEM__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -144,6 +184,8 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.roscomponen
 		switch (featureID) {
 			case roscomponentmodelPackage.SYSTEM__COMPOSITE:
 				return getComposite();
+			case roscomponentmodelPackage.SYSTEM__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,6 +200,9 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.roscomponen
 		switch (featureID) {
 			case roscomponentmodelPackage.SYSTEM__COMPOSITE:
 				setComposite((Composite)newValue);
+				return;
+			case roscomponentmodelPackage.SYSTEM__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -174,6 +219,9 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.roscomponen
 			case roscomponentmodelPackage.SYSTEM__COMPOSITE:
 				setComposite((Composite)null);
 				return;
+			case roscomponentmodelPackage.SYSTEM__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -188,8 +236,26 @@ public class SystemImpl extends EObjectImpl implements org.hyperflex.roscomponen
 		switch (featureID) {
 			case roscomponentmodelPackage.SYSTEM__COMPOSITE:
 				return composite != null;
+			case roscomponentmodelPackage.SYSTEM__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //SystemImpl
