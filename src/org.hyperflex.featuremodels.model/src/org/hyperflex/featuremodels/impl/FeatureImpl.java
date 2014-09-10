@@ -690,10 +690,11 @@ public class FeatureImpl extends EObjectImpl implements Feature {
 		if(this.eContainer instanceof FeatureModel){
 			return (FeatureModel)this.eContainer;
 		}else if(this.eContainer instanceof Feature){
-			if(((Feature)this.eContainer).getFeatureModel() != null)
+			if(this.eContainer != null){
 				return ((Feature)this.eContainer).getFeatureModel();
+			}
 		}else if(this.eContainer instanceof ContainmentAssociation){
-			if(((Feature)this.eContainer.eContainer()).getFeatureModel() != null)
+			if(this.eContainer.eContainer() != null)
 				return ((Feature)this.eContainer.eContainer()).getFeatureModel();
 		}
 		return null;
