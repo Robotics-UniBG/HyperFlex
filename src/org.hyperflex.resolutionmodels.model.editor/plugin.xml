@@ -52,31 +52,5 @@
       </editor>
    </extension>
 
-   <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated resolutionModel -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="org.hyperflex.resolutionmodels.presentation.resolutionmodelsModelWizardID"
-            name="%_UI_resolutionmodelsModelWizard_label"
-            class="org.hyperflex.resolutionmodels.presentation.resolutionmodelsModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/resolutionmodelsModelFile.gif">
-         <description>%_UI_resolutionmodelsModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
 
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated resolutionModel -->
-      <editor
-            id="org.hyperflex.resolutionmodels.presentation.resolutionmodelsEditorID"
-            name="%_UI_resolutionmodelsEditor_label"
-            icon="icons/full/obj16/resolutionmodelsModelFile.gif"
-            extensions="resolutionmodels"
-            class="org.hyperflex.resolutionmodels.presentation.resolutionmodelsEditor"
-            contributorClass="org.hyperflex.resolutionmodels.presentation.resolutionmodelsActionBarContributor">
-      </editor>
-   </extension>
 </plugin>

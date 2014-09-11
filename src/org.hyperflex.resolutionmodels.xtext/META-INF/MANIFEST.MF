@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.hyperflex.resolutionmodels.xtext
+Bundle-SymbolicName: org.hyperflex.resolutionmodels.xtext
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.xtext;bundle-version="2.5.1",
+ org.hyperflex.resolutionmodels.model;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.hyperflex.resolutionmodels.xtext.utils
