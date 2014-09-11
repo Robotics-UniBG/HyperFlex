@@ -150,8 +150,7 @@ public class ROSResolutionHandler extends AbstractHandler {
 	private ArrayList<ROSTopicConnection> requiredTopicConnections;
 	private ArrayList<Wire> requiredServiceConnections;
 	//	private ArrayList<ROSExistingActionConnection> requiredExistingActionConnections;
-
-
+	
 	/**
 	 * The constructor.
 	 */
